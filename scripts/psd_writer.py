@@ -14,11 +14,12 @@ def layer_name(name):
     val = bytes([len(b)]) + b
     return val + b"\x00" * (-len(val) % 4)
 
-def write_psd(path, composite, layers):
+def write_psd(path, composite, layers, *, hidden_names=()):
     """RGBA uint8 canvas plus (name, RGBA uint8 canvas) layers, top first."""
     h, w, channel_count = composite.shape
     if channel_count != 4 or composite.dtype != np.uint8:
         raise ValueError("Expected uint8 RGBA composite")
+    hidden = set(hidden_names)
     records, payloads = [], []
     for name, layer in layers:
         if layer.shape != composite.shape or layer.dtype != np.uint8:
@@ -35,7 +36,7 @@ def write_psd(path, composite, layers):
         rect = b"".join(map(i32, (top, left, bottom, right)))
         channels = u16(4) + b"".join(i16(i) + u32(len(d)) for i, d in zip((0, 1, 2, -1), data))
         extra = u32(0) + u32(0) + layer_name(name)
-        records.append(rect + channels + b"8BIMnorm" + bytes((255, 0, 0, 0)) + u32(len(extra)) + extra)
+        records.append(rect + channels + b"8BIMnorm" + bytes((255, 0, 2 if name in hidden else 0, 0)) + u32(len(extra)) + extra)
         payloads.extend(data)
     layer_info = i16(len(layers)) + b"".join(records) + b"".join(payloads)
     if len(layer_info) % 2:
