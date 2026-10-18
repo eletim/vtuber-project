@@ -1,36 +1,42 @@
 # VTuber Project — 羽月こま
 
-将棋をテーマにしたLive2D VTuber制作プロジェクトです。将来は人間操作とAI操作を切り替えられる構成を目指します。
+確定した将棋VTuberキャラクターをLive2D化するプロジェクトです。将来的に人間モードとAIモードを切り替えられるようにします。
 
-## 現状（PSD v0）
+## 現在の成果（PSD v1）
 
-確定済みのキャラクター画像（1086×1448）を、顔・髪・目・口・衣装などの **26レイヤー** に大まかに分割し、読み込み確認済みのPSD初稿を作成しました。画像の見た目を保ったままレイヤーごとに分けられています。
+- キャラクターデザイン確定（1086×1448 px）。デザイン変更・追加画像生成はしません。
+- 26レイヤーの初期PSD（v0）を作成。
+- **v1では左右の目と口の開閉用レイヤーを追加**。計32レイヤーのPSDと12フレームの簡易まばたき・口パクGIFを生成しました。
+- v1のPSDはPhotoshop形式として再読み込みでき、初期表示が確定画像とピクセル単位で一致することを検証しています。
 
-**注意:** 現在のPSDは大まかなポリゴン分割です。パーツ境界に周辺部位の画素が混ざる箇所があります。隠れた部位の描き足し、まぶた・口の差分、変形用メッシュは未作成のため、**Cubismで自然に動く完成モデルではありません**。
+**制作ステータス：表情素材の初稿。** 閉じ目と閉じ口は画像処理で合成した暫定描画で、精度改善が必要です。パーツ分割もまだ粗く、隠れた髪・顔の描き足しや、Cubismのメッシュ・デフォーマ・パラメータ・書き出しは未実施です。GIFは画像レイヤーの切り替えテストであり、Live2Dモデルの動作ではありません。
 
 ## 再生成
 
-Python 3.10以降で、以下のコマンドを実行します。
+Python 3.10以降で実行します。
 
 ```bash
 python -m pip install -r requirements.txt
 # 確定画像を assets/original/koma_confirmed.png に配置
-python scripts/build_psd.py
+python scripts/build_psd.py assets/original/koma_confirmed.png
+python scripts/build_expression_psd.py assets/original/koma_confirmed.png
 ```
 
-出力先は `assets/parts/v0/` です。
+v1の出力は `assets/parts/v1/` です。
 
-- `koma_parts_draft.psd` — 名前付き編集可能レイヤー
-- `flattened_transparent.png` — 背景透過した合成画像
-- `part_manifest.csv` — 各パーツの画素数
-- `build_info.json` — 生成条件と現在の制約
+- `koma_expression_draft.psd` — 開閉レイヤーを含むPSD
+- `initial_open_preview.png` — 初期状態
+- `blink_closed_preview.png` — 閉じ目・閉じ口の仮描画
+- `blink_talk_preview.gif` — 表情切り替えテスト
+- `build_info.json` — 生成情報と限界
 
-GitHubには分割座標 `config/koma_regions.json` と再生成プログラムを保存しています。PSD本体と確定画像は別途提供する制作成果物です。大容量バイナリをGitに保存する場合はGit LFSなどを使用します。
+素材画像・PSDなどのバイナリはチャット側で制作データとして渡しています。現在、リポジトリに入れているのはスクリプト・設定と文書です。画像ファイルをGitで追跡する場合はGit LFSなどを検討します。
 
-## 今後
+## 次の工程
 
-1. 不正確な境界の修正と隠れた部位の描き足し
-2. まばたき・口パクの表情差分とLive2D Cubismのメッシュ作成
-3. 人間モード・AIモードの制御系を接続
+1. 目・口の閉じた形の自然さ、色と輪郭の継ぎ目を改善する
+2. 顔・髪・衣装の分割境界を整え、隠れた部分を補完する
+3. Live2D CubismでArtMesh・デフォーマ・顔の回転、まばたきと口パクを作る
+4. 人間・AIの制御接続を作る
 
-方針：無料ツールとAI支援を優先。確定デザインについて追加の画像生成はしません。
+作業の方針は無料ツールとAI主体です。
