@@ -6,5 +6,9 @@ __pycache__/
 assets/parts/**/parts/
 assets/parts/**/flattened_transparent.png
 assets/parts/**/koma_parts_draft.psd
+assets/parts/**/koma_expression_draft.psd
+assets/parts/**/initial_open_preview.png
+assets/parts/**/blink_closed_preview.png
+assets/parts/**/blink_talk_preview.gif
 # Local scratch outputs
 *.tmp
