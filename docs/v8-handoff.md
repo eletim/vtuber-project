@@ -8,10 +8,10 @@ asset archive was created because the required approved binaries, completed
 region artwork, integrated PSD, and visual-audit evidence do not exist in this
 checkout.
 
-This status was consolidated on 2026-10-19 from `dev/v0.3.0` at
-`be8f713c7903f8c4c1c8421e2204da60a9dfc418`. That baseline includes the input,
-artwork, integration, and visual-audit gate records. Its tracked tree contains
-no `assets/` directory and no PSD, PNG, GIF, or ZIP artifact.
+This status was consolidated on 2026-10-19 on `dev/v0.3.0`. The release head
+includes the input, artwork, integration, visual-audit, and handoff gate
+records. Its tracked tree contains no `assets/` directory and no PSD, PNG, GIF,
+or ZIP artifact.
 
 ## Verified reusable materials
 
@@ -24,10 +24,11 @@ no `assets/` directory and no PSD, PNG, GIF, or ZIP artifact.
 | [`v8-input-baseline.md`](v8-input-baseline.md) and the region, integration, and visual-audit worklogs | Current gate evidence and fail-closed continuation requirements. These records describe missing deliverables; they are not those deliverables. |
 | [`tests/test_psd_writer.py`](../tests/test_psd_writer.py) | Source-only PSD writer regression check. Passing it does not validate the absent v8 PSD or artwork. |
 
-The repository at the commit above is therefore the only truthful reusable
-package at this stage. Creating an empty ZIP, generated replacement images, or
-a manifest that presents missing files as delivered would produce a substitute
-bundle rather than the requested handoff.
+The source and documentation listed above are the reusable materials currently
+available in the release head; they are not a completed asset package. Creating
+an empty ZIP, generated replacement images, or a manifest that presents missing
+files as delivered would produce a substitute bundle rather than the requested
+handoff.
 
 ## Owner-supplied unblock requirements
 
