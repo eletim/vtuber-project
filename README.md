@@ -1,40 +1,37 @@
 # VTuber Project — 羽月こま
 
-確定済みの将棋VTuberキャラクターを、なるべく無料・AI主体でLive2D化するためのリポジトリです。人間モードとAIモードは後続工程です。
+将棋VTuberキャラクターをLive2D化し、将来的に人間/AIモード両方で操作できるようにするプロジェクトです。
 
-## PSD v2：閉じ目・閉じ口を改善
+## 現在の工程：PSD v3（顔の肌レイヤー修正）
 
-- 確定したキャラクター画像（1086×1448）は変更していません。
-- **左右の閉じ目と閉じ口だけを描画し直しました。** その他の口形や表情は今回追加していません。
-- 顔周辺の色を参照して、目と口の下に隠れている肌を近似的に補完しています。
-- **33レイヤー** の編集可能なPSDを生成します。
-- 初期表示は開いた目と口で、元画像の不透明領域とピクセル単位で一致することを確認しています。
-- `.closed` レイヤーはPSD上で非表示、`.open` レイヤーは表示です。閉じた表情を見るときは該当部位の `.open` を隠し、`.closed` を表示してください。
+**v1とv2の顔パーツ構造には問題がありました。** 目や口の下に、顔全体へ連続した肌色レイヤーがなかったためです。
 
-閉じ目・口の描画と肌の補完はまだ試作段階です。Live2D CubismのArtMesh、パラメータ、変形や隠れた部位の清書は未実施です。
+v3で、以下の構造に修正しました（上から表示順）：
 
-## 生成手順
+1. `eye_screen_left.open/.closed` — 左目
+2. `eye_screen_right.open/.closed` — 右目
+3. `mouth.open/.closed` — 口
+4. `skin_shading_under_expressions` — 表情部位の肌色・陰影
+5. `face_details_and_front_hair` — 目・口以外の顔・前髪の描画
+6. **`face_skin_FULL_beneath_eyes_mouth` — 顔全体を覆う肌レイヤー**
+7. 残りの髪・服・身体（顔の目口は下層から除外）
 
-Python 3.10以降を利用します。
+閉じた目・口はレイヤーとして独立し、初期状態では非表示です。開いた目・口の表示が元画像の前景と一致すること、目と口の下に肌レイヤーが存在することを確認しています。
+
+**PSD v3はレイヤー修正版の試作です。** 表情部分の肌やまつ毛の清書、Live2Dのメッシュ・パラメータ・モデリングはまだ残っています。
+
+## ローカル再生成
 
 ```bash
 python -m pip install -r requirements.txt
-# 確定画像を assets/original/koma_confirmed.png に置く
-python scripts/build_expression_v2.py assets/original/koma_confirmed.png
+# 確定済み画像を assets/original/koma_confirmed.png に保存する
+python scripts/build_expression_v3.py assets/original/koma_confirmed.png
 ```
 
-出力先 `assets/parts/v2/`：
+生成場所：`assets/parts/v3/koma_expression_skin_base_corrected.psd`
 
-- `koma_expression_refined.psd` — 編集可能な表情レイヤーPSD
-- `initial_open_preview.png` — 元の初期表情
-- `closed_eyes_preview.png` — 両目を閉じた状態
-- `closed_mouth_preview.png` — 口を閉じた状態
-- `closed_both_preview.png` — 両方を閉じた状態
-- `expression_comparison.png` — 四状態の比較
-- `build_info.json` — 現在の制約・レイヤー数
+元画像、修正PSD、画像プレビューなどのバイナリ成果物は制作ZIPにまとめて渡しています。GitHubにはスクリプトと文書を保存しています。
 
-確定画像とPSD等のバイナリは会話内のZIPに収録し、GitHubには生成コード・設定・ドキュメントをコミットしています。
+## 次工程
 
-## 次の工程
-
-表情レイヤーの品質確認後、元画像のパーツ境界と隠れた部分を補修し、Live2D Cubismでモデル化します。
+顔のベースの清書・目口の境界修正後、Live2D CubismでArtMesh・デフォーマ・まばたき・口パクを設定します。デザインの再生成は行いません。
