@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+# Generated binary artwork: store intentionally with Git LFS when adding to GitHub
+assets/parts/**/parts/
+assets/parts/**/flattened_transparent.png
+assets/parts/**/koma_parts_draft.psd
+# Local scratch outputs
+*.tmp
