@@ -31,8 +31,9 @@ def write_psd(path, composite, layers, *, hidden_names=()):
             small = np.zeros((1, 1, 4), dtype=np.uint8)
         else:
             top, left, bottom, right = int(ys.min()), int(xs.min()), int(ys.max()+1), int(xs.max()+1)
-            small = np.ascontiguousarray(layer[top:bottom, left:right])
-        data = [u16(2) + zlib.compress(small[:, :, c].tobytes(), 6) for c in range(4)]
+            small = np.ascontiguousarray(layer[top:bottom, left:right]).copy()
+            small[small[:, :, 3] == 0, :3] = 0
+        data = [u16(2) + zlib.compress(small[:, :, c].tobytes(), 1) for c in range(4)]
         rect = b"".join(map(i32, (top, left, bottom, right)))
         channels = u16(4) + b"".join(i16(i) + u32(len(d)) for i, d in zip((0, 1, 2, -1), data))
         extra = u32(0) + u32(0) + layer_name(name)

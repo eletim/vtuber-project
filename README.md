@@ -1,37 +1,38 @@
 # VTuber Project — 羽月こま
 
-将棋VTuberキャラクターをLive2D化し、将来的に人間/AIモード両方で操作できるようにするプロジェクトです。
+将棋VTuberキャラクターをLive2D化する制作プロジェクトです。人間モードとAIモードの両方に対応させる予定です。
 
-## 現在の工程：PSD v3（顔の肌レイヤー修正）
+## 現在の工程
 
-**v1とv2の顔パーツ構造には問題がありました。** 目や口の下に、顔全体へ連続した肌色レイヤーがなかったためです。
+確定したキャラクター画像をPSDとしてレイヤー分割しています。**v6 は生成速度とPSD構造監査の改善版**です。
 
-v3で、以下の構造に修正しました（上から表示順）：
+- 35レイヤー。開いた顔の合成は元画像と一致（0画素差分）
+- 目、口、髪、衣装、腕、首などの下地を持つ
+- PSD書き出しは従来のタイムアウトを解消
+- 独立したPSDデコーダによるレイヤー表示・非表示テストを実施
 
-1. `eye_screen_left.open/.closed` — 左目
-2. `eye_screen_right.open/.closed` — 右目
-3. `mouth.open/.closed` — 口
-4. `skin_shading_under_expressions` — 表情部位の肌色・陰影
-5. `face_details_and_front_hair` — 目・口以外の顔・前髪の描画
-6. **`face_skin_FULL_beneath_eyes_mouth` — 顔全体を覆う肌レイヤー**
-7. 残りの髪・服・身体（顔の目口は下層から除外）
+**注意**: 現状の下地画像は自動補完した試作です。レイヤーを非表示にすると色面状の不自然な部分が出るため、Live2D用アートとして完成したわけではありません。Cubismモデリング・リギングは未実施です。
 
-閉じた目・口はレイヤーとして独立し、初期状態では非表示です。開いた目・口の表示が元画像の前景と一致すること、目と口の下に肌レイヤーが存在することを確認しています。
+## 再生成・監査
 
-**PSD v3はレイヤー修正版の試作です。** 表情部分の肌やまつ毛の清書、Live2Dのメッシュ・パラメータ・モデリングはまだ残っています。
-
-## ローカル再生成
+Python 3.10以降。無料のオープンソースライブラリを利用します。
 
 ```bash
 python -m pip install -r requirements.txt
-# 確定済み画像を assets/original/koma_confirmed.png に保存する
-python scripts/build_expression_v3.py assets/original/koma_confirmed.png
+
+# チャットで確定したキャラクター画像を以下に保存してから実行
+# assets/original/koma_confirmed.png
+python scripts/build_psd_v6.py
+
+# PSD本体を再読み込みして初期画像と差分、部位の非表示時の穴を検査
+python scripts/audit_psd.py assets/parts/v6/koma_structure_v6.psd
+
+# 元画像がなくても動くPSDエクスポート回帰テスト
+python tests/test_psd_writer.py
 ```
 
-生成場所：`assets/parts/v3/koma_expression_skin_base_corrected.psd`
+出力：`assets/parts/v6/koma_structure_v6.psd` と監査レポート、比較用画像。
 
-元画像、修正PSD、画像プレビューなどのバイナリ成果物は制作ZIPにまとめて渡しています。GitHubにはスクリプトと文書を保存しています。
+性能の原因、改善策、検証の範囲は [PSD生成の性能レビュー](docs/psd_performance_review_20261018.md) を参照してください。
 
-## 次工程
-
-顔のベースの清書・目口の境界修正後、Live2D CubismでArtMesh・デフォーマ・まばたき・口パクを設定します。デザインの再生成は行いません。
+確定PNGとPSDバイナリは会話内の制作データに同梱しています。GitHubではスクリプト・設定・テストを管理します。

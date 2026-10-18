@@ -15,3 +15,9 @@ assets/parts/**/blink_talk_preview.gif
 assets/parts/**/koma_expression_refined.psd
 assets/parts/**/closed_*_preview.png
 assets/parts/**/expression_comparison.png
+
+# Optimized builder output
+assets/parts/**/koma_structure_v6.psd
+assets/parts/**/01_open_actual_layers.png
+assets/parts/**/audit/
+assets/parts/**/mismatch_map.png
