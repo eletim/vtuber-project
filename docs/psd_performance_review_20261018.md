@@ -27,4 +27,4 @@
 
 上記は**生成性能および機械的なレイヤー構造**の確認結果。髪・服の下地補完は見た目が未完成であり、Cubism向けの清書・リギング完了を意味しない。
 
-再生成可能なv6スクリプト、PSD本体、監査結果は会話内の `koma_psd_v6_performance_review.zip` に同梱している。v6スクリプトはこのPRに含まれていない。
+再生成スクリプト `scripts/build_psd_v6.py`、補助コード `scripts/koma_v6_support.py`、PSDの独立監査 `scripts/audit_psd.py` とオフライン回帰テストをこのPRに含む。確定PNGとPSD本体は会話内の `koma_psd_v6_performance_review.zip` に収録し、GitHubにはバイナリを追加しない。
