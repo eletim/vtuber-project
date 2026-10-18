@@ -25,7 +25,7 @@ python tests/test_psd_writer.py
 
 素材の供給後も、次のゲートを順番に満たす必要があります。
 
-1. [input baseline](docs/v8-input-baseline.md) に従って入力を検証し、`python scripts/repair_expressions_v8.py` で表情修正を再生成・確認する
+1. [input baseline](docs/v8-input-baseline.md) に従って入力を検証し、`python scripts/repair_expressions_v8.py` で表情修正を別の候補PSDへ再生成して、承認済みPSDを上書きせずに比較・確認する
 2. 髪・頭部、首・衣装、袖・腕・手・隠れた肌の各領域の素材を完成させ、レビューする
 3. [integration worklog](docs/v8-integration-worklog.md) に従って編集可能なPSDへ統合し、初期画像と表情を維持できていることを確認する
 4. [visual audit worklog](docs/v8-visual-audit-worklog.md) に定めた全成果物を生成し、視覚監査する

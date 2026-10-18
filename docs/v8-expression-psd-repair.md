@@ -35,7 +35,7 @@ assets/expression_references/eyes_closed_mouth_open.png
 assets/expression_references/eyes_open_mouth_closed.png
 ```
 
-想定出力：`assets/parts/v8/koma_expression_repaired_v8.psd`、`koma_expression_v8.gif`、4状態のPNGと監査JSON。これらは現在のチェックアウトにはありません。
+現在の再生成先：`assets/parts/v8/koma_expression_repaired_v8_candidate.psd`、`koma_expression_v8.gif`、4状態のPNGと監査JSON。候補PSDは、入力として供給される承認済みの `assets/parts/v8/koma_expression_repaired_v8.psd` を上書きせず、比較検証するための別ファイルです。これらは現在のチェックアウトにはありません。
 
 ## 未実施
 

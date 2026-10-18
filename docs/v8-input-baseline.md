@@ -23,7 +23,7 @@ this checkout.
 | Closed-eye expression reference | `assets/expression_references/eyes_closed_mouth_open.png` in the same bundle | **Missing.** Its approval and relationship to the confirmed image cannot be validated. |
 | Closed-mouth expression reference | `assets/expression_references/eyes_open_mouth_closed.png` in the same bundle | **Missing.** Its approval and relationship to the confirmed image cannot be validated. |
 | Illustrated v7 underpainting | `assets/parts/v7/koma_illustrated_underlayers_v7.psd` in the same bundle | **Missing.** Its reported 49-layer structure and underpainting cannot be reloaded or visually validated. |
-| Regeneration path | `python3 scripts/repair_expressions_v8.py` | **Located but blocked.** The script resolves the four input paths above and writes the expected v8 PSD, previews, GIF, and audit JSON, but it cannot run without those inputs. A successful regeneration would not by itself prove owner approval. |
+| Regeneration path | `python3 scripts/repair_expressions_v8.py` | **Located but blocked.** The script resolves the four regeneration inputs above and writes `assets/parts/v8/koma_expression_repaired_v8_candidate.psd`, previews, a GIF, and audit JSON. The candidate path is separate from the owner-supplied approved PSD, but the script cannot run without the inputs. A successful regeneration would not by itself prove owner approval. |
 
 The expected paths and bundle name come from
 `docs/v8-expression-psd-repair.md`; the v7 provenance and unresolved art-review
@@ -44,8 +44,9 @@ following:
    which PSD v8 and reference files are approved.
 
 After controlled retrieval, validate checksums before opening the assets, then
-reload and inspect both PSDs, compare the initial v8 composite with the
-confirmed image, inspect the expression states visually, and run the existing
-regeneration and audit path. Until then, do not infer design principles, create
+reload and inspect the supplied PSDs, run the existing regeneration path, and
+compare the regenerated candidate PSD with the approved PSD without replacing
+it. Compare the initial composites with the confirmed image and inspect the
+expression states visually. Until then, do not infer design principles, create
 replacement inputs, begin hidden-artwork changes, claim input readiness, or
 publish the assets to GitHub or another broader audience.

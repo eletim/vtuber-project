@@ -21,6 +21,7 @@ V7=ROOT/"assets/parts/v7/koma_illustrated_underlayers_v7.psd"
 EYES=ROOT/"assets/expression_references/eyes_closed_mouth_open.png"
 MOUTH=ROOT/"assets/expression_references/eyes_open_mouth_closed.png"
 DEST=ROOT/"assets/parts/v8"
+CANDIDATE_PSD=DEST/"koma_expression_repaired_v8_candidate.psd"
 AREAS={
   "eye_screen_left":(EYES,(365,238,525,345),12,10),
   "eye_screen_right":(EYES,(546,212,678,316),11,10),
@@ -70,7 +71,7 @@ def main():
     baseline_alpha=np.asarray(Image.open(V7).convert("RGBA"))[:,:,3]
     assert np.array_equal(flattened[:,:,3],baseline_alpha)
     assert np.array_equal(flattened[:,:,:3][baseline_alpha>0],original[baseline_alpha>0])
-    path=DEST/"koma_expression_repaired_v8.psd"
+    path=CANDIDATE_PSD
     write_psd(path,flattened,[(r["name"],r["data"]) for r in layers],
               hidden_names=[r["name"] for r in layers if not r["visible"]])
     check,_=parse_psd(path)
