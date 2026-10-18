@@ -12,3 +12,6 @@ assets/parts/**/blink_closed_preview.png
 assets/parts/**/blink_talk_preview.gif
 # Local scratch outputs
 *.tmp
+assets/parts/**/koma_expression_refined.psd
+assets/parts/**/closed_*_preview.png
+assets/parts/**/expression_comparison.png
