@@ -18,7 +18,7 @@ v7 の PSD 49レイヤーをそのまま継承し、承認済みの表情イラ�
 - 初期表情と確定画像との差分：RGB 0画素、アルファ0画素
 - 4状態：通常／閉じ目／閉じ口／両方閉じ
 - 各状態で変更範囲外の画素変化0、透明穴0
-- PSDから再合成したGIFプレビューを生成
+- PSDから再合成したGIFプレビューを生成したとの報告
 
 ## 再生成
 
@@ -35,8 +35,8 @@ assets/expression_references/eyes_closed_mouth_open.png
 assets/expression_references/eyes_open_mouth_closed.png
 ```
 
-出力：`assets/parts/v8/koma_expression_repaired_v8.psd`、`koma_expression_v8.gif`、4状態のPNGと監査JSON。
+想定出力：`assets/parts/v8/koma_expression_repaired_v8.psd`、`koma_expression_v8.gif`、4状態のPNGと監査JSON。これらは現在のチェックアウトにはありません。
 
 ## 未実施
 
-Live2D Cubismのモデリング・変形パラメータ設定は未実施です。現在のGIFは表情差分レイヤーの切り替えプレビューです。髪・衣装の美術的な下地修正は別途残っています。
+Live2D Cubismのモデリング・変形パラメータ設定は未実施です。過去に生成したと報告されたGIFは、表情差分レイヤーの切り替えプレビューであり、現在は入手できません。髪・衣装の美術的な下地修正は別途残っています。
