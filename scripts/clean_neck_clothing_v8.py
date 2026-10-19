@@ -30,7 +30,7 @@ OUTPUT_PREVIEW = OUTPUT_DIR / "neck_clothing_comparison_v8.png"
 OUTPUT_AUDIT = OUTPUT_DIR / "neck_clothing_audit_v8.json"
 PAINTED_UNDERLAYER = OUTPUT_DIR / "neck_clothing_underpainting_v8.png"
 PAINTED_UNDERLAYER_SHA256 = (
-    "4d6207cfb35dfa11888c417a87c9445fe7483802abd4fcd0a750715bb197a4cb"
+    "3174385adfe6022629874272d31a46261c7d9ec1ef14bbfed75fe9009d294c59"
 )
 
 NECK = ("neck", "neck.illustrated_underpaint")
@@ -43,7 +43,9 @@ OLD_REVEAL = "blouse_reveal_when_vest_moves"
 NECK_BASE = "neck_base_FULL_beneath_neck"
 TORSO_BASE = "torso_clothing_base_FULL_beneath_torso_parts"
 NECK_UNDERLAYER_NAME = "neck_collar_fixed_painted_underlayer"
-TORSO_UNDERLAYER_NAME = "torso_clothing_fixed_painted_underlayer"
+VEST_UNDERLAYER_NAME = "vest_occluded_fixed_painted_underlayer"
+BLOUSE_UNDERLAYER_NAME = "blouse_fixed_painted_underlayer"
+WAIST_UNDERLAYER_NAME = "waist_fixed_painted_underlayer"
 
 
 def _record(layers, name):
@@ -89,6 +91,8 @@ def _load_painted_underlayer(shape):
     painted = np.asarray(Image.open(PAINTED_UNDERLAYER).convert("RGBA"), dtype=np.uint8)
     if painted.shape != shape:
         raise AssertionError("painted neck/clothing underlayer has the wrong size")
+    if np.any((painted[:, :, 3] == 0) & np.any(painted[:, :, :3] != 0, axis=2)):
+        raise AssertionError("painted underlayer stores RGB outside consumed pixels")
     return painted, digest
 
 
@@ -98,52 +102,48 @@ def clean_layers(source_layers):
     approved = composite(source_layers)
     changed = {}
 
-    reveal_record = _record(layers, OLD_REVEAL)
-    if reveal_record["visible"]:
+    obsolete_reveal = _record(layers, OLD_REVEAL)
+    if obsolete_reveal["visible"]:
         raise AssertionError("obsolete approximate reveal unexpectedly visible")
     changed["removed_approximate_reveal_pixels"] = int(
-        np.count_nonzero(reveal_record["data"][:, :, 3])
+        np.count_nonzero(obsolete_reveal["data"][:, :, 3])
     )
-    layers.remove(reveal_record)
+    layers.remove(obsolete_reveal)
 
     painted, digest = _load_painted_underlayer(approved.shape)
     if np.any((painted[:, :, 3] > 0) & (approved[:, :, 3] == 0)):
         raise AssertionError("painted neck/clothing underlayer exceeds silhouette")
 
+    # Partition the paint by the movable part that consumes it.  Precedence
+    # removes overlap so vest reveal, blouse, and waist remain independent
+    # responsibilities instead of one broad torso overlay.
     neck_mask = _group_opacity(source_layers, NECK) == 255
-    torso_base_index = next(
-        index
-        for index, record in enumerate(source_layers)
-        if record["name"] == TORSO_BASE
+    vest_mask = (_group_opacity(source_layers, VEST) == 255) & ~neck_mask
+    blouse_mask = (
+        (_group_opacity(source_layers, BLOUSE) == 255)
+        & ~neck_mask
+        & ~vest_mask
     )
-    torso_cover_names = tuple(
-        record["name"]
-        for record in source_layers[:torso_base_index]
-        if record["visible"]
+    waist_mask = (
+        (_group_opacity(source_layers, WAIST) == 255)
+        & ~neck_mask
+        & ~vest_mask
+        & ~blouse_mask
     )
-    torso_mask = _group_opacity(source_layers, torso_cover_names) == 255
-    allowed_paint = neck_mask | torso_mask
-    if np.any((painted[:, :, 3] > 0) & ~allowed_paint):
-        raise AssertionError("painted underlayer is not fully occluded in approved pose")
+    consumed_mask = neck_mask | vest_mask | blouse_mask | waist_mask
+    painted_mask = painted[:, :, 3] > 0
+    if not np.array_equal(painted_mask, consumed_mask):
+        raise AssertionError("painted underlayer contains unconsumed pixels")
 
-    neck_paint = painted.copy()
-    neck_paint[:, :, 3][~neck_mask] = 0
-    torso_paint = painted.copy()
-    torso_paint[:, :, 3][neck_mask] = 0
+    def painted_part(mask):
+        part = np.zeros_like(painted)
+        part[mask] = painted[mask]
+        return part
 
-    # Replace the old white/gray wedge with a coherent, normally hidden reveal
-    # layer.  It is enabled only while the vest is moved or hidden, allowing
-    # the completed blouse and corset to meet the existing skin and sleeves at
-    # their natural contours instead of at the extracted vest silhouette.
-    height, width = approved.shape[:2]
-    yy, xx = np.indices((height, width))
-    reveal_region = (xx >= 220) & (xx <= 880) & (yy >= 350)
-    reveal = painted.copy()
-    reveal[:, :, 3] = np.where(
-        reveal_region, approved[:, :, 3], 0
-    ).astype(np.uint8)
-    reveal_record["data"] = reveal
-    reveal_record["visible"] = False
+    neck_paint = painted_part(neck_mask)
+    vest_paint = painted_part(vest_mask)
+    blouse_paint = painted_part(blouse_mask)
+    waist_paint = painted_part(waist_mask)
 
     neck_base_index = next(
         index for index, record in enumerate(layers) if record["name"] == NECK_BASE
@@ -152,25 +152,31 @@ def clean_layers(source_layers):
         neck_base_index,
         {"name": NECK_UNDERLAYER_NAME, "data": neck_paint, "visible": True},
     )
-    torso_base_index = next(
-        index for index, record in enumerate(layers) if record["name"] == TORSO_BASE
-    )
-    layers.insert(
-        torso_base_index,
-        {"name": TORSO_UNDERLAYER_NAME, "data": torso_paint, "visible": True},
-    )
-    reveal_index = next(
-        index for index, record in enumerate(layers) if record["name"] == "hair_side_left"
-    )
-    layers.insert(reveal_index, reveal_record)
+    for name, data in (
+        (VEST_UNDERLAYER_NAME, vest_paint),
+        (BLOUSE_UNDERLAYER_NAME, blouse_paint),
+        (WAIST_UNDERLAYER_NAME, waist_paint),
+    ):
+        torso_base_index = next(
+            index
+            for index, record in enumerate(layers)
+            if record["name"] == TORSO_BASE
+        )
+        layers.insert(
+            torso_base_index,
+            {"name": name, "data": data, "visible": True},
+        )
     changed["painted_neck_collar_pixels"] = int(
         np.count_nonzero(neck_paint[:, :, 3])
     )
-    changed["painted_torso_clothing_pixels"] = int(
-        np.count_nonzero(torso_paint[:, :, 3])
+    changed["painted_vest_occluded_pixels"] = int(
+        np.count_nonzero(vest_paint[:, :, 3])
     )
-    changed["painted_vest_reveal_pixels"] = int(
-        np.count_nonzero(reveal[:, :, 3])
+    changed["painted_blouse_pixels"] = int(
+        np.count_nonzero(blouse_paint[:, :, 3])
+    )
+    changed["painted_waist_pixels"] = int(
+        np.count_nonzero(waist_paint[:, :, 3])
     )
     changed["painted_underlayer_sha256"] = digest
 
@@ -199,8 +205,7 @@ def _audit_scenes(layers, default):
     }
     scenes = {}
     for name, names in hidden_groups.items():
-        show = (OLD_REVEAL,) if name == "vest_hidden" else ()
-        scenes[name] = composite(layers, hide=names, show=show)
+        scenes[name] = composite(layers, hide=names)
     moved_layer_sets = {name: _moved_layers(layers, move) for name, move in moves.items()}
     scenes.update(
         {
@@ -231,11 +236,7 @@ def _audit_scenes(layers, default):
         original_opacity = _group_opacity(layers, names)
         moved_opacity = _group_opacity(moved_layer_sets[scene_name], names)
         vacated = (original_opacity == 255) & (moved_opacity == 0)
-        hidden = (
-            composite(layers, hide=VEST)
-            if scene_name == "vest_displaced"
-            else scenes[scene_name.replace("displaced", "hidden")]
-        )
+        hidden = scenes[scene_name.replace("displaced", "hidden")]
         moved = scenes[scene_name]
         matches_hidden = np.all(moved == hidden, axis=2)
         matches_default = np.all(moved == default, axis=2)
@@ -301,7 +302,7 @@ def build_candidate(
         hidden_names=[record["name"] for record in layers if not record["visible"]],
     )
     reloaded, reloaded_size = parse_psd(output_psd)
-    if reloaded_size != size or len(reloaded) != 53:
+    if reloaded_size != size or len(reloaded) != 54:
         raise AssertionError("candidate PSD did not reload with expected structure")
     if not np.array_equal(composite(reloaded), cleaned):
         raise AssertionError("reloaded candidate changed the cleaned appearance")
