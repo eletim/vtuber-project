@@ -22,6 +22,7 @@ from clean_neck_clothing_v8 import (
     PAINTED_UNDERLAYER,
     PAINTED_UNDERLAYER_SHA256,
     SOURCE,
+    SIDE_HAIR_UNDERLAYER,
     TORSO_BASE,
     VEST,
     WAIST,
@@ -66,6 +67,7 @@ def main():
 
         changed = report["changed_painted_pixels"]
         assert changed["removed_approximate_reveal_pixels"] == 166699
+        assert changed["removed_vest_occluded_side_hair_residual_pixels"] == 10877
         assert changed["painted_neck_collar_pixels"] > 0
         assert changed["painted_blouse_pixels"] > 0
         assert changed["painted_waist_pixels"] > 0
@@ -111,6 +113,26 @@ def main():
             assert not np.any(alpha & (_group_opacity(source, source_names) != 255))
             consumed |= alpha
         assert np.array_equal(consumed, painted[:, :, 3] > 0)
+
+        hair_boundary = _semantic_region_mask(
+            painted.shape[:2],
+            (
+                "hair_side_left",
+                "hair_side_right",
+                "hair_back_left",
+                "hair_back_right",
+            ),
+        )
+        vest_occluded = _group_opacity(source, VEST) == 255
+        source_side_hair = next(
+            record for record in source if record["name"] == SIDE_HAIR_UNDERLAYER
+        )["data"]
+        cleaned_side_hair = records[SIDE_HAIR_UNDERLAYER]["data"]
+        residual = vest_occluded & ~hair_boundary
+        assert not np.any(cleaned_side_hair[residual, 3])
+        assert np.array_equal(
+            cleaned_side_hair[~residual], source_side_hair[~residual]
+        )
 
         for label in ("neck", "vest", "blouse", "waist"):
             hidden = report["scene_checks"][f"{label}_hidden"]

@@ -7,6 +7,7 @@
   "initial_alpha_pixel_diff": 0,
   "changed_painted_pixels": {
     "removed_approximate_reveal_pixels": 166699,
+    "removed_vest_occluded_side_hair_residual_pixels": 10877,
     "painted_neck_collar_pixels": 3928,
     "painted_blouse_pixels": 93448,
     "painted_waist_pixels": 206250,
@@ -26,7 +27,7 @@
     },
     "vest_hidden": {
       "lost_alpha_pixels": 0,
-      "changed_rgb_pixels_vs_default": 89018,
+      "changed_rgb_pixels_vs_default": 87322,
       "pass": true
     },
     "blouse_hidden": {
@@ -50,12 +51,12 @@
     },
     "vest_displaced": {
       "lost_alpha_pixels": 0,
-      "changed_rgb_pixels_vs_default": 132393,
+      "changed_rgb_pixels_vs_default": 132395,
       "pass": true,
       "vacated_original_silhouette_pixels": 10235,
       "vacated_pixels_matching_hidden_underpainting": 10235,
-      "vacated_pixels_still_matching_default": 368,
-      "retained_default_fraction": 0.035955056179775284
+      "vacated_pixels_still_matching_default": 366,
+      "retained_default_fraction": 0.03575964826575476
     },
     "blouse_displaced": {
       "lost_alpha_pixels": 0,

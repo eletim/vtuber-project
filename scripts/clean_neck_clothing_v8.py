@@ -46,6 +46,7 @@ TORSO_BASE = "torso_clothing_base_FULL_beneath_torso_parts"
 NECK_UNDERLAYER_NAME = "neck_collar_fixed_painted_underlayer"
 BLOUSE_UNDERLAYER_NAME = "blouse_fixed_painted_underlayer"
 WAIST_UNDERLAYER_NAME = "waist_fixed_painted_underlayer"
+SIDE_HAIR_UNDERLAYER = "side_hair_fixed_painted_underlayer"
 
 
 def _record(layers, name):
@@ -125,6 +126,25 @@ def _ownership_masks(source_layers):
     }
 
 
+def _trim_vest_occluded_residuals(layers, source_layers):
+    """Remove non-hair extraction pixels that the approved vest conceals."""
+    shape = source_layers[0]["data"].shape[:2]
+    hair_boundary = _semantic_region_mask(
+        shape,
+        (
+            "hair_side_left",
+            "hair_side_right",
+            "hair_back_left",
+            "hair_back_right",
+        ),
+    )
+    vest_occluded = _group_opacity(source_layers, VEST) == 255
+    residual = _record(layers, SIDE_HAIR_UNDERLAYER)["data"]
+    trim = vest_occluded & ~hair_boundary & (residual[:, :, 3] > 0)
+    residual[trim] = 0
+    return int(np.count_nonzero(trim))
+
+
 def _shift(image, dx, dy):
     shifted = np.zeros_like(image)
     height, width = image.shape[:2]
@@ -171,6 +191,14 @@ def clean_layers(source_layers):
         np.count_nonzero(obsolete_reveal["data"][:, :, 3])
     )
     layers.remove(obsolete_reveal)
+
+    # The inherited side-hair repair was extracted as a broad rectangle.  Its
+    # garment-colored remainder is invisible in the approved pose, but becomes
+    # a hard shoulder/torso seam when the vest moves.  Trim only those fully
+    # vest-occluded pixels that fall outside the authored hair boundaries.
+    changed["removed_vest_occluded_side_hair_residual_pixels"] = (
+        _trim_vest_occluded_residuals(layers, source_layers)
+    )
 
     painted, digest = _load_painted_underlayer(approved.shape)
     if np.any((painted[:, :, 3] > 0) & (approved[:, :, 3] == 0)):
