@@ -30,8 +30,9 @@ regeneration is used.
 6. Side-hair and accessory reveal states no longer expose the bright green and
    yellow boundary remnants visible in the v7 work layer.
 7. Side and rear hair use their v7 hidden-state underdrawing rather than a copy
-   of the visible hair. The remaining v7 marker-colored boundary pixels are
-   replaced with nearby painted pixels from the same illustrated hair base.
+   of the visible hair. Fragmented outlines, ragged halos, and marker-colored
+   pixels are repaired with four-pixel-offset painted hair from the same v7
+   illustration, preserving texture without blur or flat fill.
 
 ## Reproduction and review
 
@@ -50,6 +51,8 @@ initial comparison, and lost-alpha checks for every review state.
 The audit also requires side/rear hidden states to differ from the default and
 requires every vacated displaced-silhouette pixel to match the hidden
 underdrawing rather than the original visible silhouette.
+The full-resolution side-hair hidden and displaced scenes must also match the
+visually reviewed PNG references in `assets/parts/v8/review_references/`.
 
 This is artwork preparation, not Cubism rigging. It does not claim that the
 candidate is already a rigged or Cubism-ready model.

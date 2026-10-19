@@ -55,6 +55,10 @@ def main():
                 == check["vacated_original_silhouette_pixels"]
             )
             assert check["retained_default_fraction"] < 0.01
+        for name in ("side_hair_hidden", "side_hair_displaced"):
+            check = report["scene_checks"][name]
+            assert check["review_reference"].endswith("_v8.png")
+            assert check["review_reference_pixel_diff"] == 0
         assert all(check["pass"] for check in report["scene_checks"].values())
 
         committed, _ = parse_psd(OUTPUT_PSD)

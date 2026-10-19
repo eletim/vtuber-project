@@ -21,14 +21,14 @@
     "accessory": 0,
     "crown": 0,
     "rear_hair": 0,
-    "v7_side_underlayer_boundary": 1227,
+    "v7_side_underlayer_boundary": 78397,
     "hairline_underpainting": 59752
   },
   "pixel_sources": [
     "approved v8 composite",
     "illustrated v7 scalp reveal",
     "illustrated v7 hair-underlayer composites",
-    "nearest painted pixels in the illustrated v7 hair base"
+    "four-pixel-offset painted hair from the illustrated v7 composite"
   ],
   "flat_fill_or_blur_used": false,
   "scene_checks": {
@@ -39,7 +39,9 @@
     "side_hair_hidden": {
       "lost_alpha_pixels": 0,
       "pass": true,
-      "changed_rgb_pixels_vs_default": 110134
+      "changed_rgb_pixels_vs_default": 108381,
+      "review_reference": "assets/parts/v8/review_references/side_hair_hidden_v8.png",
+      "review_reference_pixel_diff": 0
     },
     "accessory_hidden": {
       "lost_alpha_pixels": 0,
@@ -61,10 +63,12 @@
     "side_hair_displaced": {
       "lost_alpha_pixels": 0,
       "pass": true,
-      "vacated_original_silhouette_pixels": 18140,
-      "vacated_pixels_matching_hidden_underpainting": 18140,
-      "vacated_pixels_still_matching_default": 20,
-      "retained_default_fraction": 0.0011025358324145535
+      "vacated_original_silhouette_pixels": 12760,
+      "vacated_pixels_matching_hidden_underpainting": 12760,
+      "vacated_pixels_still_matching_default": 114,
+      "retained_default_fraction": 0.008934169278996866,
+      "review_reference": "assets/parts/v8/review_references/side_hair_displaced_v8.png",
+      "review_reference_pixel_diff": 0
     },
     "rear_hair_displaced": {
       "lost_alpha_pixels": 0,
