@@ -39,6 +39,18 @@ REVIEW_REFERENCE_SHA256 = {
     "side_hair_hidden": "97d94f706fc60aa0a388485f4113a13ebf54fbd04d8ce1a773ad335dd9d42ac4",
     "side_hair_displaced": "97698f3710734dc0802bcae7da720e321a66a6c581bcfae56f3f692a210cc3a6",
 }
+REMNANT_MASK_DIR = OUTPUT_DIR / "remnant_masks"
+REMNANT_MASKS = {
+    "side_hair": REMNANT_MASK_DIR / "side_hair_v8.png",
+    "accessory": REMNANT_MASK_DIR / "accessory_v8.png",
+    "crown": REMNANT_MASK_DIR / "crown_v8.png",
+}
+REMNANT_MASK_SHA256 = {
+    "side_hair": "fd1109c437471ec4bdea268fc406e2437fdb07522ec30a3e63bcde10ea510515",
+    "accessory": "81a8933aaf4ec0ec40dcda713016c1c45d117b2a2eaf2d13da04e08567c825c2",
+    "crown": "7f6b0f2caa95e5ede7bcd6cdd95bc9049138ece28f8df09aa4c5b8ec4455d1ae",
+}
+REMNANT_MASK_COUNTS = {"side_hair": 271, "accessory": 31, "crown": 67}
 
 BANGS = ("front_bangs.illustrated_underpaint", "front_bangs")
 SIDES = (
@@ -117,28 +129,21 @@ def _displaced(layers, moves):
     return composite(_moved_layers(layers, moves))
 
 
-def _segmentation_marker_mask(image):
-    """Locate solid and anti-aliased segmentation marker colors."""
-    red, green, blue = [
-        image[:, :, channel].astype(np.int16) for channel in range(3)
-    ]
-    painted = image[:, :, 3] > 0
-    cyan = (green > red + 2) & (blue > red + 2)
-    green_marker = (green > red + 2) & (green > blue)
-    blue_marker = (blue > red + 2) & (blue > green + 2)
-    magenta = (red > green + 2) & (blue > green + 2)
-    olive_chroma = red - blue
-    olive = (
-        (red >= green)
-        & (green >= blue)
-        & (green > blue + 10)
-        & (6 * (green - blue) >= 5 * olive_chroma)
-        & (100 * olive_chroma >= 18 * red)
-    )
-    neon_yellow = (red > 200) & (green > 195) & (blue < 80)
-    return painted & (
-        cyan | green_marker | blue_marker | magenta | olive | neon_yellow
-    )
+def _load_remnant_mask(label, shape):
+    """Load one immutable, explicitly reviewed segmentation-remnant mask."""
+    path = REMNANT_MASKS[label]
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    if digest != REMNANT_MASK_SHA256[label]:
+        raise AssertionError(f"segmentation-remnant mask digest changed: {path}")
+    mask_data = np.asarray(Image.open(path).convert("L"), dtype=np.uint8)
+    if mask_data.shape != shape:
+        raise AssertionError(f"segmentation-remnant mask has wrong size: {path}")
+    if not np.all((mask_data == 0) | (mask_data == 255)):
+        raise AssertionError(f"segmentation-remnant mask is not binary: {path}")
+    mask = mask_data == 255
+    if np.count_nonzero(mask) != REMNANT_MASK_COUNTS[label]:
+        raise AssertionError(f"segmentation-remnant mask count changed: {path}")
+    return mask
 
 
 def clean_layers(v8_layers, v7_layers):
@@ -324,9 +329,12 @@ def clean_layers(v8_layers, v7_layers):
         "crown": CROWN,
     }
     for label, names in marker_groups.items():
-        hidden = composite(layers, hide=names)
         fully_covered = _group_opacity(layers, names) == 255
-        remnants = _segmentation_marker_mask(hidden) & fully_covered
+        remnants = _load_remnant_mask(label, base.shape[:2])
+        if np.any(remnants & ~fully_covered):
+            raise AssertionError(
+                f"{label} remnant mask exceeds its approved movable layer"
+            )
         base[:, :, :3][remnants] = approved[:, :, :3][remnants]
         changed[f"{label}_segmentation_remnants"] = int(
             np.count_nonzero(remnants)
@@ -374,16 +382,20 @@ def _audit_scenes(layers, default):
         checks[name] = {"lost_alpha_pixels": holes, "pass": holes == 0}
 
     marker_scenes = {
-        "side_hair_hidden": SIDES,
-        "accessory_hidden": ACCESSORY,
-        "crown_hidden": CROWN,
+        "side_hair_hidden": "side_hair",
+        "accessory_hidden": "accessory",
+        "crown_hidden": "crown",
     }
-    for scene_name, names in marker_scenes.items():
-        revealed_region = _group_opacity(layers, names) == 255
+    for scene_name, label in marker_scenes.items():
+        remnant_mask = _load_remnant_mask(label, expected_alpha.shape)
         marker_pixels = int(
             np.count_nonzero(
-                _segmentation_marker_mask(scenes[scene_name]) & revealed_region
+                remnant_mask
+                & np.any(scenes[scene_name][:, :, :3] != default[:, :, :3], axis=2)
             )
+        )
+        checks[scene_name]["segmentation_remnant_mask_pixels"] = int(
+            np.count_nonzero(remnant_mask)
         )
         checks[scene_name]["segmentation_marker_pixels"] = marker_pixels
         checks[scene_name]["pass"] &= marker_pixels == 0

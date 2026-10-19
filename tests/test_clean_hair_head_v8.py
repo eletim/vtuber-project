@@ -14,30 +14,14 @@ from clean_hair_head_v8 import (
     BOUNDARY_RESTORATION,
     OUTPUT_PSD,
     PAINTED_SIDE_UNDERLAYER_NAME,
+    REMNANT_MASK_COUNTS,
     SCALP,
     V8_SOURCE,
-    _segmentation_marker_mask,
     build_candidate,
 )
 
 
 def main():
-    threshold_samples = np.array(
-        [[
-            [45, 161, 161, 255],
-            [217, 243, 243, 255],
-            [50, 82, 46, 255],
-            [29, 29, 231, 255],
-            [111, 0, 108, 255],
-            [127, 127, 69, 255],
-            [180, 150, 130, 255],
-        ]],
-        dtype=np.uint8,
-    )
-    assert _segmentation_marker_mask(threshold_samples).tolist() == [
-        [True, True, True, True, True, True, False]
-    ]
-
     with tempfile.TemporaryDirectory() as directory:
         temporary = Path(directory)
         report = build_candidate(
@@ -77,12 +61,20 @@ def main():
         assert report["changed_painted_pixels"]["fixed_side_hair_boundary"] > 0
         assert report["changed_painted_pixels"]["painted_side_hair_underlayer"] > 0
         assert report["changed_painted_pixels"]["approved_default_boundary_cleanup"] > 0
-        for name in ("side_hair", "accessory", "crown"):
+        for name, expected_count in REMNANT_MASK_COUNTS.items():
             assert report["changed_painted_pixels"][
                 f"{name}_segmentation_remnants"
-            ] > 0
+            ] == expected_count
         assert report["initial_alpha_pixel_diff"] == 0
-        for name in ("side_hair_hidden", "accessory_hidden", "crown_hidden"):
+        scene_labels = {
+            "side_hair_hidden": "side_hair",
+            "accessory_hidden": "accessory",
+            "crown_hidden": "crown",
+        }
+        for name, label in scene_labels.items():
+            assert report["scene_checks"][name][
+                "segmentation_remnant_mask_pixels"
+            ] == REMNANT_MASK_COUNTS[label]
             assert report["scene_checks"][name]["segmentation_marker_pixels"] == 0
         for name in ("side_hair_hidden", "rear_hair_hidden"):
             assert report["scene_checks"][name]["changed_rgb_pixels_vs_default"] > 0

@@ -43,6 +43,7 @@
     "side_hair_hidden": {
       "lost_alpha_pixels": 0,
       "pass": true,
+      "segmentation_remnant_mask_pixels": 271,
       "segmentation_marker_pixels": 0,
       "changed_rgb_pixels_vs_default": 109893,
       "review_reference": "assets/parts/v8/review_references/side_hair_hidden_v8.png",
@@ -52,11 +53,13 @@
     "accessory_hidden": {
       "lost_alpha_pixels": 0,
       "pass": true,
+      "segmentation_remnant_mask_pixels": 31,
       "segmentation_marker_pixels": 0
     },
     "crown_hidden": {
       "lost_alpha_pixels": 0,
       "pass": true,
+      "segmentation_remnant_mask_pixels": 67,
       "segmentation_marker_pixels": 0
     },
     "rear_hair_hidden": {

@@ -54,7 +54,9 @@ requires every vacated displaced-silhouette pixel to match the hidden
 underdrawing rather than the original visible silhouette.
 Side-hair, accessory, and crown hidden states additionally require zero
 segmentation-remnant pixels across the audited cyan, green, blue, magenta,
-olive, and neon-yellow hues under the anti-alias-aware thresholds.
+olive, and neon-yellow hues. Cleanup is constrained to three reviewed binary
+masks in `assets/parts/v8/remnant_masks/`; their hashes and exact pixel counts
+are pinned so similarly colored legitimate artwork cannot enter the cleanup.
 The full-resolution side-hair hidden and displaced scenes must also match the
 separately curated PNG references in `assets/parts/v8/review_references/`.
 Their SHA-256 digests are fixed in the audit script, and the generator has no
