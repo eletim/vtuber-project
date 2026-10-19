@@ -1,0 +1,51 @@
+{
+  "source_v7": "koma_illustrated_underlayers_v7.psd",
+  "layers": 49,
+  "approved_art_sources": {
+    "eyes": "eyes_closed_mouth_open.png",
+    "mouth": "eyes_open_mouth_closed.png"
+  },
+  "initial_pixel_difference": 0,
+  "initial_alpha_difference": 0,
+  "seams": {
+    "open": {
+      "changed_pixels": 0,
+      "outside_sprite_changes": 0,
+      "lost_alpha_pixels": 0
+    },
+    "eyes_closed": {
+      "changed_pixels": 50858,
+      "outside_sprite_changes": 0,
+      "lost_alpha_pixels": 0
+    },
+    "mouth_closed": {
+      "changed_pixels": 15769,
+      "outside_sprite_changes": 0,
+      "lost_alpha_pixels": 0
+    },
+    "both_closed": {
+      "changed_pixels": 61682,
+      "outside_sprite_changes": 0,
+      "lost_alpha_pixels": 0
+    }
+  },
+  "color_drift_adjustment": {
+    "eye_screen_left": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "eye_screen_right": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mouth": [
+      0.0,
+      2.0,
+      2.0
+    ]
+  },
+  "review_scope": "expression sprite substitution; no Cubism mesh deformation",
+  "method": "closed sprites above open originals; local cropped and feathered artist-approved alternate pixels"
+}

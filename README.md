@@ -1,17 +1,21 @@
 # VTuber Project — 羽月こま
 
+## 2026-10-19 更新：制作素材をGitに登録済み
+
+PSD v7/v8・確定画像・表情参照画像は、PR #13により `dev/v0.3.0` に登録済みです。PSD本体を含め、素材は通常のGitで管理します。新規ワークツリーでは追加操作なしで取得でき、`sha256sum -c docs/v8-approved-assets.sha256` で確認できます。以前の「素材不足によるブロック」はこの登録以前の状況です。現行の制作原則は `docs/design-principles.md` を参照してください。次の実制作は Issue #15 で進めます。
+
+
 将棋VTuberキャラクターをLive2D化する制作プロジェクトです。人間モードとAIモードの両方に対応させる予定です。
 
 ## 現在の工程
 
-確定したキャラクター画像をPSDとしてレイヤー分割しています。**v6 は生成速度とPSD構造監査の改善版**です。
+PSD v8 のリリース作業は**入力素材不足のためブロック中**です。リポジトリには再生成・監査用のソースと、確認できている不足事項だけがあり、承認済みPSD、元画像、表情参照画像などのバイナリはありません。必要な入力と再開時の検証手順は [PSD v8 input baseline](docs/v8-input-baseline.md)、引き継ぎ状況は [PSD v8 reusable handoff](docs/v8-handoff.md) を参照してください。
 
-- 35レイヤー。開いた顔の合成は元画像と一致（0画素差分）
-- 目、口、髪、衣装、腕、首などの下地を持つ
-- PSD書き出しは従来のタイムアウトを解消
-- 独立したPSDデコーダによるレイヤー表示・非表示テストを実施
+- v8 の表情修正スクリプトはありますが、必要な入力素材がないため現状では実行・再検証できません
+- 髪・頭部、首・衣装、袖・腕・手などの美術修正、統合、視覚監査は未完了です
+- Live2D Cubismのモデリング・リギングも未実施です
 
-**注意**: 現状の下地画像は自動補完した試作です。レイヤーを非表示にすると色面状の不自然な部分が出るため、Live2D用アートとして完成したわけではありません。Cubismモデリング・リギングは未実施です。
+過去の v6 の性能改善と検証範囲は [PSD生成の性能レビュー](docs/psd_performance_review_20261018.md)、v8 表情修正の過去の報告は [履歴資料](docs/v8-expression-psd-repair.md) として残しています。どちらも現在の v8 リリースが検証済みであることを示すものではありません。
 
 ## 再生成・監査
 
@@ -20,19 +24,15 @@ Python 3.10以降。無料のオープンソースライブラリを利用しま
 ```bash
 python -m pip install -r requirements.txt
 
-# チャットで確定したキャラクター画像を以下に保存してから実行
-# assets/original/koma_confirmed.png
-python scripts/build_psd_v6.py
-
-# PSD本体を再読み込みして初期画像と差分、部位の非表示時の穴を検査
-python scripts/audit_psd.py assets/parts/v6/koma_structure_v6.psd
-
 # 元画像がなくても動くPSDエクスポート回帰テスト
 python tests/test_psd_writer.py
 ```
 
-出力：`assets/parts/v6/koma_structure_v6.psd` と監査レポート、比較用画像。
+素材の供給後も、次のゲートを順番に満たす必要があります。
 
-性能の原因、改善策、検証の範囲は [PSD生成の性能レビュー](docs/psd_performance_review_20261018.md) を参照してください。
+1. [input baseline](docs/v8-input-baseline.md) に従って入力を検証し、`python scripts/repair_expressions_v8.py` で表情修正を別の候補PSDへ再生成して、承認済みPSDを上書きせずに比較・確認する
+2. 髪・頭部、首・衣装、袖・腕・手・隠れた肌の各領域の素材を完成させ、レビューする
+3. [integration worklog](docs/v8-integration-worklog.md) に従って編集可能なPSDへ統合し、初期画像と表情を維持できていることを確認する
+4. [visual audit worklog](docs/v8-visual-audit-worklog.md) に定めた全成果物を生成し、視覚監査する
 
-確定PNGとPSDバイナリは会話内の制作データに同梱しています。GitHubではスクリプト・設定・テストを管理します。
+入力がない現状では最初のゲートを通過できず、表情修正コマンドを正常完了させることも v8 の出力を保証することもできません。
