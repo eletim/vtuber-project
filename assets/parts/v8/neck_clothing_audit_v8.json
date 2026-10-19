@@ -2,16 +2,15 @@
   "source_psd": "assets/parts/v8/koma_hair_head_cleaned_v8.psd",
   "painted_underlayer": "assets/parts/v8/neck_clothing_underpainting_v8.png",
   "output_psd": "assets/parts/v8/koma_neck_clothing_cleaned_v8.psd",
-  "layer_count": 54,
+  "layer_count": 53,
   "initial_rgb_pixel_diff": 0,
   "initial_alpha_pixel_diff": 0,
   "changed_painted_pixels": {
     "removed_approximate_reveal_pixels": 166699,
-    "painted_neck_collar_pixels": 5055,
-    "painted_vest_occluded_pixels": 131073,
-    "painted_blouse_pixels": 86710,
-    "painted_waist_pixels": 197682,
-    "painted_underlayer_sha256": "3174385adfe6022629874272d31a46261c7d9ec1ef14bbfed75fe9009d294c59"
+    "painted_neck_collar_pixels": 3928,
+    "painted_blouse_pixels": 93448,
+    "painted_waist_pixels": 206250,
+    "painted_underlayer_sha256": "56f2597ec839b80436587226aca335bce376af03220dbca382b74fa707aeb1dc"
   },
   "pixel_sources": [
     "approved v8 hair/head-cleaned candidate",

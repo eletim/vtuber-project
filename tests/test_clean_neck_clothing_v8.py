@@ -24,10 +24,11 @@ from clean_neck_clothing_v8 import (
     SOURCE,
     TORSO_BASE,
     VEST,
-    VEST_UNDERLAYER_NAME,
     WAIST,
     WAIST_UNDERLAYER_NAME,
     _group_opacity,
+    _ownership_masks,
+    _semantic_region_mask,
     build_candidate,
 )
 
@@ -44,7 +45,7 @@ def main():
         source, source_size = parse_psd(SOURCE)
 
         assert size == source_size == (1086, 1448)
-        assert len(generated) == 54
+        assert len(generated) == 53
         assert len(source) == 51
         assert np.array_equal(composite(generated), composite(source))
         assert report["initial_rgb_pixel_diff"] == 0
@@ -55,9 +56,9 @@ def main():
         names = [record["name"] for record in generated]
         records = {record["name"]: record for record in generated}
         assert OLD_REVEAL not in names
+        assert "vest_occluded_fixed_painted_underlayer" not in names
         assert names.index(NECK_UNDERLAYER_NAME) < names.index(NECK_BASE)
         for underlayer_name in (
-            VEST_UNDERLAYER_NAME,
             BLOUSE_UNDERLAYER_NAME,
             WAIST_UNDERLAYER_NAME,
         ):
@@ -66,7 +67,6 @@ def main():
         changed = report["changed_painted_pixels"]
         assert changed["removed_approximate_reveal_pixels"] == 166699
         assert changed["painted_neck_collar_pixels"] > 0
-        assert changed["painted_vest_occluded_pixels"] > 0
         assert changed["painted_blouse_pixels"] > 0
         assert changed["painted_waist_pixels"] > 0
         assert changed["painted_underlayer_sha256"] == PAINTED_UNDERLAYER_SHA256
@@ -76,15 +76,37 @@ def main():
             (painted[:, :, 3] == 0)
             & np.any(painted[:, :, :3] != 0, axis=2)
         )
+        assert not np.any(
+            (painted[:, :, 3] > 0)
+            & np.all(painted[:, :, :3] == 0, axis=2)
+        )
+        ownership = _ownership_masks(source)
+        non_clothing = _semantic_region_mask(
+            painted.shape[:2],
+            (
+                "left_arm_sleeve",
+                "right_arm_sleeve",
+                "left_hand",
+                "right_hand",
+                "hair_side_left",
+                "hair_side_right",
+                "hair_back_left",
+                "hair_back_right",
+                "face_base",
+            ),
+        )
+        assert not np.any(ownership["neck"] & non_clothing)
+        assert not np.any(ownership["blouse"] & non_clothing)
+        assert not np.any(ownership["waist"] & non_clothing)
         underlayer_groups = (
-            (NECK_UNDERLAYER_NAME, NECK),
-            (VEST_UNDERLAYER_NAME, VEST),
-            (BLOUSE_UNDERLAYER_NAME, BLOUSE),
-            (WAIST_UNDERLAYER_NAME, WAIST),
+            (NECK_UNDERLAYER_NAME, "neck", NECK),
+            (BLOUSE_UNDERLAYER_NAME, "blouse", BLOUSE + VEST),
+            (WAIST_UNDERLAYER_NAME, "waist", WAIST + VEST),
         )
         consumed = np.zeros(painted.shape[:2], dtype=bool)
-        for underlayer_name, source_names in underlayer_groups:
+        for underlayer_name, owner, source_names in underlayer_groups:
             alpha = records[underlayer_name]["data"][:, :, 3] > 0
+            assert np.array_equal(alpha, ownership[owner])
             assert not np.any(alpha & consumed)
             assert not np.any(alpha & (_group_opacity(source, source_names) != 255))
             consumed |= alpha

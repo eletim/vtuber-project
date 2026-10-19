@@ -6,30 +6,32 @@ The neck and clothing artwork task is **completed as a cleaned PSD candidate**
 at `assets/parts/v8/koma_neck_clothing_cleaned_v8.psd`. The approved source and
 the preceding hair/head candidate remain unchanged.
 
-The 54-layer candidate retains the approved visible costume pixel-for-pixel.
-Its four narrowly scoped painted underlayers complete the occluded neck,
+The 53-layer candidate retains the approved visible costume pixel-for-pixel.
+Its three narrowly scoped painted underlayers complete the occluded neck,
 collar, blouse, vest-edge, corset, belt, and waist artwork. They are separate
 editable layers rather than approximate white/gray fill patches.
 
 ## Artwork changes
 
-1. The 166,699-pixel white/gray vest reveal is removed. Its replacement is
-   clipped strictly to pixels occluded by the vest and contains continuous
-   pin-tucked blouse and shaded corset artwork in the approved palette.
+1. The 166,699-pixel white/gray vest reveal is removed. Vest movement now
+   reveals the blouse or waist underlayer only inside that garment's authored
+   semantic boundary; hair, skin, and sleeves remain owned by their bases.
 2. A fixed neck/collar underlayer supplies painted skin, ruffle, linework, and
    shading when the neck part is hidden or displaced.
-3. Separate fixed vest, blouse, and waist underlayers supply continuous fabric
-   during modest translation without mixing sleeve, body, or other part
-   responsibilities.
+3. Separate fixed blouse and waist underlayers supply continuous fabric during
+   modest translation without mixing vest extraction rectangles, sleeves,
+   body, or other part responsibilities.
 4. The default candidate remains pixel-identical to the hair/head-cleaned
    input: RGB difference 0 and alpha difference 0.
 
 The painted source is stored at
 `assets/parts/v8/neck_clothing_underpainting_v8.png`. It was produced as a
 precise edit of the approved illustration, then reduced to the exact union of
-consumed neck, vest-occluded, blouse, and waist pixels. Transparent pixels also
+consumed neck, blouse, and waist semantic regions. Transparent pixels also
 store zero RGB, so the asset contains no latent hair, face, arms, or hands. It
 does not replace or redesign the approved visible costume.
+The ownership polygons come from `config/koma_regions.json`; source-layer
+opacity is used only to confirm that each owned pixel is fully occluded.
 
 ## Reproduction and review
 

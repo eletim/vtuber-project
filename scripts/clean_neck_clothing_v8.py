@@ -29,8 +29,9 @@ OUTPUT_PSD = OUTPUT_DIR / "koma_neck_clothing_cleaned_v8.psd"
 OUTPUT_PREVIEW = OUTPUT_DIR / "neck_clothing_comparison_v8.png"
 OUTPUT_AUDIT = OUTPUT_DIR / "neck_clothing_audit_v8.json"
 PAINTED_UNDERLAYER = OUTPUT_DIR / "neck_clothing_underpainting_v8.png"
+REGION_CONFIG = ROOT / "config/koma_regions.json"
 PAINTED_UNDERLAYER_SHA256 = (
-    "3174385adfe6022629874272d31a46261c7d9ec1ef14bbfed75fe9009d294c59"
+    "56f2597ec839b80436587226aca335bce376af03220dbca382b74fa707aeb1dc"
 )
 
 NECK = ("neck", "neck.illustrated_underpaint")
@@ -43,7 +44,6 @@ OLD_REVEAL = "blouse_reveal_when_vest_moves"
 NECK_BASE = "neck_base_FULL_beneath_neck"
 TORSO_BASE = "torso_clothing_base_FULL_beneath_torso_parts"
 NECK_UNDERLAYER_NAME = "neck_collar_fixed_painted_underlayer"
-VEST_UNDERLAYER_NAME = "vest_occluded_fixed_painted_underlayer"
 BLOUSE_UNDERLAYER_NAME = "blouse_fixed_painted_underlayer"
 WAIST_UNDERLAYER_NAME = "waist_fixed_painted_underlayer"
 
@@ -61,6 +61,68 @@ def _group_opacity(layers, names):
             source + (alpha.astype(np.uint16) * (255 - source) + 127) // 255
         )
     return alpha
+
+
+def _semantic_region_mask(shape, names):
+    """Rasterize authored garment boundaries from the region configuration."""
+    config = json.loads(REGION_CONFIG.read_text())
+    height, width = shape
+    if config["reference_size"] != [width, height]:
+        raise AssertionError("semantic region configuration has the wrong size")
+    regions = {name: points for name, points in config["regions"]}
+    canvas = Image.new("L", (width, height), 0)
+    draw = ImageDraw.Draw(canvas)
+    for name in names:
+        if name not in regions:
+            raise AssertionError(f"missing semantic garment region: {name}")
+        draw.polygon(tuple(map(tuple, regions[name])), fill=255)
+    return np.asarray(canvas, dtype=np.uint8) == 255
+
+
+def _ownership_masks(source_layers):
+    """Return disjoint paint ownership from semantic garment boundaries."""
+    shape = source_layers[0]["data"].shape[:2]
+    non_clothing_parts = _semantic_region_mask(
+        shape,
+        (
+            "left_arm_sleeve",
+            "right_arm_sleeve",
+            "left_hand",
+            "right_hand",
+            "hair_side_left",
+            "hair_side_right",
+            "hair_back_left",
+            "hair_back_right",
+            "face_base",
+        ),
+    )
+    neck_mask = (
+        (_group_opacity(source_layers, NECK) == 255)
+        & _semantic_region_mask(shape, ("neck",))
+        & ~non_clothing_parts
+    )
+    foreign_parts = non_clothing_parts | _semantic_region_mask(shape, ("neck",))
+    # A moved vest reveals the blouse or waist beneath it; it does not own a
+    # rectangular copy of every source pixel extracted with the vest.  Include
+    # vest opacity only as occlusion coverage for those two semantic garments.
+    blouse_mask = (
+        (_group_opacity(source_layers, BLOUSE + VEST) == 255)
+        & _semantic_region_mask(shape, ("blouse",))
+        & ~foreign_parts
+        & ~neck_mask
+    )
+    waist_mask = (
+        (_group_opacity(source_layers, WAIST + VEST) == 255)
+        & _semantic_region_mask(shape, ("skirt_and_belt",))
+        & ~foreign_parts
+        & ~neck_mask
+        & ~blouse_mask
+    )
+    return {
+        "neck": neck_mask,
+        "blouse": blouse_mask,
+        "waist": waist_mask,
+    }
 
 
 def _shift(image, dx, dy):
@@ -114,23 +176,14 @@ def clean_layers(source_layers):
     if np.any((painted[:, :, 3] > 0) & (approved[:, :, 3] == 0)):
         raise AssertionError("painted neck/clothing underlayer exceeds silhouette")
 
-    # Partition the paint by the movable part that consumes it.  Precedence
-    # removes overlap so vest reveal, blouse, and waist remain independent
-    # responsibilities instead of one broad torso overlay.
-    neck_mask = _group_opacity(source_layers, NECK) == 255
-    vest_mask = (_group_opacity(source_layers, VEST) == 255) & ~neck_mask
-    blouse_mask = (
-        (_group_opacity(source_layers, BLOUSE) == 255)
-        & ~neck_mask
-        & ~vest_mask
-    )
-    waist_mask = (
-        (_group_opacity(source_layers, WAIST) == 255)
-        & ~neck_mask
-        & ~vest_mask
-        & ~blouse_mask
-    )
-    consumed_mask = neck_mask | vest_mask | blouse_mask | waist_mask
+    # Intersect opaque coverage with the authored garment polygons.  This
+    # rejects rectangular extraction areas that happen to live in a source
+    # layer but semantically belong to hair, skin, blouse, or sleeves.
+    ownership = _ownership_masks(source_layers)
+    neck_mask = ownership["neck"]
+    blouse_mask = ownership["blouse"]
+    waist_mask = ownership["waist"]
+    consumed_mask = neck_mask | blouse_mask | waist_mask
     painted_mask = painted[:, :, 3] > 0
     if not np.array_equal(painted_mask, consumed_mask):
         raise AssertionError("painted underlayer contains unconsumed pixels")
@@ -141,7 +194,6 @@ def clean_layers(source_layers):
         return part
 
     neck_paint = painted_part(neck_mask)
-    vest_paint = painted_part(vest_mask)
     blouse_paint = painted_part(blouse_mask)
     waist_paint = painted_part(waist_mask)
 
@@ -153,7 +205,6 @@ def clean_layers(source_layers):
         {"name": NECK_UNDERLAYER_NAME, "data": neck_paint, "visible": True},
     )
     for name, data in (
-        (VEST_UNDERLAYER_NAME, vest_paint),
         (BLOUSE_UNDERLAYER_NAME, blouse_paint),
         (WAIST_UNDERLAYER_NAME, waist_paint),
     ):
@@ -168,9 +219,6 @@ def clean_layers(source_layers):
         )
     changed["painted_neck_collar_pixels"] = int(
         np.count_nonzero(neck_paint[:, :, 3])
-    )
-    changed["painted_vest_occluded_pixels"] = int(
-        np.count_nonzero(vest_paint[:, :, 3])
     )
     changed["painted_blouse_pixels"] = int(
         np.count_nonzero(blouse_paint[:, :, 3])
@@ -302,7 +350,7 @@ def build_candidate(
         hidden_names=[record["name"] for record in layers if not record["visible"]],
     )
     reloaded, reloaded_size = parse_psd(output_psd)
-    if reloaded_size != size or len(reloaded) != 54:
+    if reloaded_size != size or len(reloaded) != 53:
         raise AssertionError("candidate PSD did not reload with expected structure")
     if not np.array_equal(composite(reloaded), cleaned):
         raise AssertionError("reloaded candidate changed the cleaned appearance")
