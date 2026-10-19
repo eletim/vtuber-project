@@ -1,6 +1,6 @@
 # PSD v8 reusable handoff status
 
-> **2026-10-19 現況更新：** この文書は前回AWM実行時の引き継ぎ記録です。PR #13でv7/v8素材を `dev/v0.3.0` へ追加し、PR #14で現行制作原則を整理しました。旧「素材不足」「承認記録不足」は当時の状態です。現在は `git lfs pull` と `sha256sum -c docs/v8-approved-assets.sha256` で登録済み素材を検証し、Issue #15 の制作を開始してください。実際の新しいPSD清書・視覚レビューはこれからです。
+> **2026-10-19 現況更新：** この文書は前回AWM実行時の引き継ぎ記録です。PR #13でv7/v8素材を `dev/v0.3.0` へ追加し、PR #14で現行制作原則を整理しました。旧「素材不足」「承認記録不足」は当時の状態です。現在はGit LFSを使わず、通常のGit checkoutと `sha256sum -c docs/v8-approved-assets.sha256` で登録済み素材を検証し、Issue #15 の制作を開始してください。実際の新しいPSD清書・視覚レビューはこれからです。
 
 
 ## Handoff result

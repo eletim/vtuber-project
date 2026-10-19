@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Import the approved VTuber artwork, validating every file before Git LFS push.
+# Import the approved VTuber artwork, validating every file before a normal Git push.
 set -euo pipefail
 if [[ $# -ne 2 ]]; then
   echo "Usage: bash scripts/import_v8_assets.sh /path/to/vtuber-project /path/to/koma_v8_psd_expression_fix_bundle.zip" >&2
@@ -14,20 +14,9 @@ fi
 if [[ -n "$(git status --porcelain)" ]]; then
   echo "ERROR: working tree has changes; commit/stash them before importing" >&2; exit 2
 fi
-if ! git lfs version >/dev/null 2>&1; then
-  echo "ERROR: Git LFS not installed. On Ubuntu: sudo apt install git-lfs" >&2; exit 2
-fi
 if [[ ! -f "$archive" ]]; then
   echo "ERROR: archive does not exist" >&2; exit 2
 fi
-git fetch origin assets/import-v8
-if git show-ref --verify --quiet refs/heads/assets/import-v8; then
-  git switch assets/import-v8
-  git pull --ff-only origin assets/import-v8
-else
-  git switch --track -c assets/import-v8 origin/assets/import-v8
-fi
-git lfs install --local
 python3 - "$archive" <<'PY'
 from pathlib import Path
 from zipfile import ZipFile
@@ -69,13 +58,8 @@ git add -- assets/original/koma_confirmed.png \
   assets/parts/v8/expression_comparison_v8.png \
   assets/parts/v8/audit_report.json \
   assets/parts/v8/README.md
-if [[ "$(git check-attr filter -- assets/parts/v8/koma_expression_repaired_v8.psd)" != *"filter: lfs" ]]; then
-  echo "ERROR: PSD is not tracked with Git LFS" >&2; exit 1
+if [[ "$(git check-attr filter -- assets/parts/v8/koma_expression_repaired_v8.psd)" != *"filter: unspecified" ]]; then
+  echo "ERROR: PSD must be stored as a normal Git blob" >&2; exit 1
 fi
-if ! git diff --cached --quiet; then
-  git commit -m "assets: import approved PSD v7/v8 and expression artwork"
-  git push -u origin assets/import-v8
-fi
-git lfs ls-files
 git status --short
-echo "DONE: uploaded to assets/import-v8. Check the PR before merging."
+echo "DONE: verified artwork is staged on the current branch. Review and commit it before opening a PR."
