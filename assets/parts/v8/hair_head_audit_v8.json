@@ -2,8 +2,8 @@
   "source_v8": "assets/parts/v8/koma_expression_repaired_v8.psd",
   "underpainting_v7": "assets/parts/v7/koma_illustrated_underlayers_v7.psd",
   "output_psd": "assets/parts/v8/koma_hair_head_cleaned_v8.psd",
-  "layer_count": 50,
-  "initial_rgb_pixel_diff": 0,
+  "layer_count": 51,
+  "initial_rgb_pixel_diff": 25541,
   "initial_alpha_pixel_diff": 0,
   "changed_painted_pixels": {
     "side_hair_redundant_boundary": 43811,
@@ -21,14 +21,15 @@
     "accessory": 0,
     "crown": 0,
     "rear_hair": 0,
-    "v7_side_underlayer_boundary": 78397,
-    "hairline_underpainting": 59752
+    "painted_side_hair_underlayer": 194322,
+    "hairline_underpainting": 59752,
+    "approved_default_boundary_cleanup": 25541
   },
   "pixel_sources": [
     "approved v8 composite",
     "illustrated v7 scalp reveal",
     "illustrated v7 hair-underlayer composites",
-    "four-pixel-offset painted hair from the illustrated v7 composite"
+    "separately reviewed painted side-hair underlayer"
   ],
   "flat_fill_or_blur_used": false,
   "scene_checks": {
@@ -39,8 +40,9 @@
     "side_hair_hidden": {
       "lost_alpha_pixels": 0,
       "pass": true,
-      "changed_rgb_pixels_vs_default": 108381,
+      "changed_rgb_pixels_vs_default": 110164,
       "review_reference": "assets/parts/v8/review_references/side_hair_hidden_v8.png",
+      "review_reference_sha256": "ba6d8d0eed59098568134c2355815dec3e439e2ff1c8987de972f36bdf2c0998",
       "review_reference_pixel_diff": 0
     },
     "accessory_hidden": {
@@ -54,7 +56,7 @@
     "rear_hair_hidden": {
       "lost_alpha_pixels": 0,
       "pass": true,
-      "changed_rgb_pixels_vs_default": 4775
+      "changed_rgb_pixels_vs_default": 4772
     },
     "bangs_displaced": {
       "lost_alpha_pixels": 0,
@@ -65,9 +67,10 @@
       "pass": true,
       "vacated_original_silhouette_pixels": 12760,
       "vacated_pixels_matching_hidden_underpainting": 12760,
-      "vacated_pixels_still_matching_default": 114,
-      "retained_default_fraction": 0.008934169278996866,
+      "vacated_pixels_still_matching_default": 2,
+      "retained_default_fraction": 0.00015673981191222572,
       "review_reference": "assets/parts/v8/review_references/side_hair_displaced_v8.png",
+      "review_reference_sha256": "1c5702e8df631eb195a39cc152b640ad8cbbfcd6da1dae3d601a313e7842c391",
       "review_reference_pixel_diff": 0
     },
     "rear_hair_displaced": {
@@ -75,8 +78,8 @@
       "pass": true,
       "vacated_original_silhouette_pixels": 2134,
       "vacated_pixels_matching_hidden_underpainting": 2134,
-      "vacated_pixels_still_matching_default": 0,
-      "retained_default_fraction": 0.0
+      "vacated_pixels_still_matching_default": 2,
+      "retained_default_fraction": 0.0009372071227741331
     },
     "accessory_displaced": {
       "lost_alpha_pixels": 0,

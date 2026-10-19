@@ -6,11 +6,11 @@ The hair and head artwork task is **completed as a cleaned PSD candidate** at
 `assets/parts/v8/koma_hair_head_cleaned_v8.psd`. The approved v8 source remains
 unchanged.
 
-The candidate keeps the 49 source layers plus one fixed boundary-underpainting
-layer, and its initial composite is pixel-for-pixel identical to the approved
-v8 appearance. The repaired artwork comes only from the approved v8 rendering
-and the illustrated v7 underlayers; no flat fill, blur, or whole-character
-regeneration is used.
+The candidate keeps the 49 source layers plus separate fixed boundary and
+painted side-hair underlayers. Its silhouette is pixel-for-pixel identical to
+the approved v8 appearance; the only default-pose RGB changes are reviewed
+side-boundary cleanup within the painted underlayer. No flat fill or blur is
+used.
 
 ## Artwork changes
 
@@ -30,9 +30,9 @@ regeneration is used.
 6. Side-hair and accessory reveal states no longer expose the bright green and
    yellow boundary remnants visible in the v7 work layer.
 7. Side and rear hair use their v7 hidden-state underdrawing rather than a copy
-   of the visible hair. Fragmented outlines, ragged halos, and marker-colored
-   pixels are repaired with four-pixel-offset painted hair from the same v7
-   illustration, preserving texture without blur or flat fill.
+   of the visible hair. A separate painted rear-hair underlayer replaces the
+   unfinished pale cutouts and marker-colored gaps without modifying the v7
+   base or baking shifted movable-hair pixels into it.
 
 ## Reproduction and review
 
@@ -52,7 +52,9 @@ The audit also requires side/rear hidden states to differ from the default and
 requires every vacated displaced-silhouette pixel to match the hidden
 underdrawing rather than the original visible silhouette.
 The full-resolution side-hair hidden and displaced scenes must also match the
-visually reviewed PNG references in `assets/parts/v8/review_references/`.
+separately curated PNG references in `assets/parts/v8/review_references/`.
+Their SHA-256 digests are fixed in the audit script, and the generator has no
+mode that can overwrite them.
 
 This is artwork preparation, not Cubism rigging. It does not claim that the
 candidate is already a rigged or Cubism-ready model.

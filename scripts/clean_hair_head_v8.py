@@ -8,14 +8,13 @@ hidden artwork.
 from __future__ import annotations
 
 import copy
-import argparse
+import hashlib
 import json
 import sys
 from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw
-from scipy.ndimage import binary_dilation
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -30,10 +29,15 @@ OUTPUT_DIR = ROOT / "assets/parts/v8"
 OUTPUT_PSD = OUTPUT_DIR / "koma_hair_head_cleaned_v8.psd"
 OUTPUT_PREVIEW = OUTPUT_DIR / "hair_head_comparison_v8.png"
 OUTPUT_AUDIT = OUTPUT_DIR / "hair_head_audit_v8.json"
+PAINTED_SIDE_UNDERLAYER = OUTPUT_DIR / "side_hair_underlayer_paint_v8.png"
 REVIEW_REFERENCE_DIR = OUTPUT_DIR / "review_references"
 REVIEW_REFERENCES = {
     "side_hair_hidden": REVIEW_REFERENCE_DIR / "side_hair_hidden_v8.png",
     "side_hair_displaced": REVIEW_REFERENCE_DIR / "side_hair_displaced_v8.png",
+}
+REVIEW_REFERENCE_SHA256 = {
+    "side_hair_hidden": "ba6d8d0eed59098568134c2355815dec3e439e2ff1c8987de972f36bdf2c0998",
+    "side_hair_displaced": "1c5702e8df631eb195a39cc152b640ad8cbbfcd6da1dae3d601a313e7842c391",
 }
 
 BANGS = ("front_bangs.illustrated_underpaint", "front_bangs")
@@ -49,6 +53,7 @@ REAR = ("hair_back_left", "hair_back_right")
 HAIR_BASE = "hair_base_FULL_beneath_hair_parts"
 SCALP = "scalp_reveal_when_bangs_move"
 BOUNDARY_RESTORATION = "hair_boundary_fixed_underpainting"
+PAINTED_SIDE_UNDERLAYER_NAME = "side_hair_fixed_painted_underlayer"
 
 NON_HAIR_UNDERLAYERS = (
     "neck",
@@ -110,41 +115,6 @@ def _moved_layers(layers, moves):
 
 def _displaced(layers, moves):
     return composite(_moved_layers(layers, moves))
-
-
-def _repair_v7_boundary_remnants(base, occluded, painted_v7):
-    """Patch ragged v7 boundary neighborhoods with offset painted v7 hair."""
-    red, green, blue = [base[:, :, channel].astype(np.int16) for channel in range(3)]
-    spread = np.maximum.reduce((red, green, blue)) - np.minimum.reduce(
-        (red, green, blue)
-    )
-    light_halo = (red > 190) & (green > 185) & (blue > 175) & (spread < 60)
-    dark_fragment = (red < 110) & (green < 100) & (blue < 95)
-    gray_fragment = (spread < 28) & (red < 200)
-    yellow_remnant = (red > 170) & (green > 165) & (blue < 120)
-    green_remnant = (green > 120) & (green > red + 3) & (green > blue + 15)
-    seeds = (
-        occluded
-        & (base[:, :, 3] > 0)
-        & (light_halo | dark_fragment | gray_fragment | yellow_remnant | green_remnant)
-    )
-    repair = binary_dilation(seeds, iterations=8) & occluded & (base[:, :, 3] > 0)
-    if not np.any(repair):
-        return 0
-
-    # Sample the same v7 painting four pixels toward the character center. The
-    # offset keeps detailed strand texture while ensuring the hidden artwork is
-    # not a fixed copy of the visible side-hair silhouette.
-    offset = 4
-    height, width = repair.shape
-    shifted = np.zeros_like(painted_v7)
-    shifted[:, : width - offset] = painted_v7[:, offset:]
-    shifted_right = np.zeros_like(painted_v7)
-    shifted_right[:, offset:] = painted_v7[:, : width - offset]
-    right_half = np.broadcast_to(np.arange(width)[None, :] >= width // 2, (height, width))
-    shifted[right_half] = shifted_right[right_half]
-    base[:, :, :3][repair] = shifted[:, :, :3][repair]
-    return int(np.count_nonzero(repair))
 
 
 def clean_layers(v8_layers, v7_layers):
@@ -271,14 +241,30 @@ def clean_layers(v8_layers, v7_layers):
         base[:, :, :3][mask] = sources[label][:, :, :3][mask]
         changed[label] = int(np.count_nonzero(np.any(before != base[:, :, :3], axis=2)))
 
-    # The v7 hidden side-hair state is the authoritative underdrawing, but its
-    # old extraction boundary contains neon marker remnants. Replace only the
-    # fully occluded remnants with nearby pixels from the same painted v7 hair
-    # base; no synthesized color, flat fill, or blur is introduced.
-    changed["v7_side_underlayer_boundary"] = _repair_v7_boundary_remnants(
-        base,
-        _group_opacity(layers, SIDES) == 255,
-        composite(v7_layers),
+    # Add the separately painted side-hair reveal beneath all movable/facial
+    # parts and above the coarse v7 base. It contains only accepted rear-hair
+    # artwork inside the approved silhouette; it is not derived from a shifted
+    # visible composite and does not modify the v7 base pixels.
+    painted_side = np.asarray(
+        Image.open(PAINTED_SIDE_UNDERLAYER).convert("RGBA"), dtype=np.uint8
+    )
+    if painted_side.shape != approved.shape:
+        raise AssertionError("painted side-hair underlayer has the wrong size")
+    if np.any((painted_side[:, :, 3] > 0) & (approved[:, :, 3] == 0)):
+        raise AssertionError("painted side-hair underlayer exceeds approved silhouette")
+    base_index = next(
+        index for index, record in enumerate(layers) if record["name"] == HAIR_BASE
+    )
+    layers.insert(
+        base_index,
+        {
+            "name": PAINTED_SIDE_UNDERLAYER_NAME,
+            "data": painted_side.copy(),
+            "visible": True,
+        },
+    )
+    changed["painted_side_hair_underlayer"] = int(
+        np.count_nonzero(painted_side[:, :, 3])
     )
 
     # The v7 scalp reveal is genuine illustrated hairline/forehead artwork.
@@ -305,13 +291,19 @@ def clean_layers(v8_layers, v7_layers):
     layers.insert(insert_at, scalp)
 
     cleaned = composite(layers)
-    if not np.array_equal(cleaned, approved):
-        raise AssertionError("cleaned initial composite differs from approved v8")
+    if not np.array_equal(cleaned[:, :, 3], approved[:, :, 3]):
+        raise AssertionError("cleaned initial silhouette differs from approved v8")
+    default_difference = np.any(cleaned[:, :, :3] != approved[:, :, :3], axis=2)
+    if np.any(default_difference & (painted_side[:, :, 3] == 0)):
+        raise AssertionError("default cleanup changed pixels outside painted underlayer")
+    changed["approved_default_boundary_cleanup"] = int(
+        np.count_nonzero(default_difference)
+    )
     return layers, changed
 
 
-def _audit_scenes(layers, approved, *, accept_review_references=False):
-    expected_alpha = approved[:, :, 3]
+def _audit_scenes(layers, default):
+    expected_alpha = default[:, :, 3]
     side_moves = {
         "hair_side_left": (-4, 0),
         "hair_side_left.illustrated_underpaint": (-4, 0),
@@ -342,7 +334,7 @@ def _audit_scenes(layers, approved, *, accept_review_references=False):
     for scene_name in ("side_hair_hidden", "rear_hair_hidden"):
         changed_pixels = int(
             np.count_nonzero(
-                np.any(scenes[scene_name][:, :, :3] != approved[:, :, :3], axis=2)
+                np.any(scenes[scene_name][:, :, :3] != default[:, :, :3], axis=2)
             )
         )
         checks[scene_name]["changed_rgb_pixels_vs_default"] = changed_pixels
@@ -358,7 +350,7 @@ def _audit_scenes(layers, approved, *, accept_review_references=False):
         vacated = (original_opacity > 0) & (moved_opacity == 0)
         moved = scenes[scene_name]
         matches_hidden = np.all(moved == hidden, axis=2)
-        matches_default = np.all(moved == approved, axis=2)
+        matches_default = np.all(moved == default, axis=2)
         vacated_pixels = int(np.count_nonzero(vacated))
         matching_underpainting = int(np.count_nonzero(vacated & matches_hidden))
         retained_default = int(np.count_nonzero(vacated & matches_default))
@@ -377,13 +369,12 @@ def _audit_scenes(layers, approved, *, accept_review_references=False):
             and retained_fraction < 0.01
         )
 
-    if accept_review_references:
-        REVIEW_REFERENCE_DIR.mkdir(parents=True, exist_ok=True)
-        for scene_name, path in REVIEW_REFERENCES.items():
-            Image.fromarray(scenes[scene_name], "RGBA").save(path)
     for scene_name, path in REVIEW_REFERENCES.items():
         if not path.is_file():
             raise AssertionError(f"missing reviewed image reference: {path}")
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        if digest != REVIEW_REFERENCE_SHA256[scene_name]:
+            raise AssertionError(f"reviewed image reference digest changed: {path}")
         reference = np.asarray(Image.open(path).convert("RGBA"), dtype=np.uint8)
         if reference.shape != scenes[scene_name].shape:
             raise AssertionError(f"reviewed image reference has wrong size: {path}")
@@ -391,13 +382,14 @@ def _audit_scenes(layers, approved, *, accept_review_references=False):
             np.count_nonzero(np.any(reference != scenes[scene_name], axis=2))
         )
         checks[scene_name]["review_reference"] = str(path.relative_to(ROOT))
+        checks[scene_name]["review_reference_sha256"] = digest
         checks[scene_name]["review_reference_pixel_diff"] = differing_pixels
         checks[scene_name]["pass"] &= differing_pixels == 0
     return scenes, checks
 
 
-def _write_preview(approved, scenes, destination):
-    entries = [("approved default", approved)] + list(scenes.items())
+def _write_preview(default, scenes, destination):
+    entries = [("cleaned default", default)] + list(scenes.items())
     tile_width, tile_height = 320, 410
     columns = 3
     rows = (len(entries) + columns - 1) // columns
@@ -419,8 +411,6 @@ def build_candidate(
     output_psd=OUTPUT_PSD,
     preview=OUTPUT_PREVIEW,
     audit_path=OUTPUT_AUDIT,
-    *,
-    accept_review_references=False,
 ):
     v8_layers, size = parse_psd(V8_SOURCE)
     v7_layers, v7_size = parse_psd(V7_UNDERLAYERS)
@@ -443,17 +433,15 @@ def build_candidate(
         hidden_names=[record["name"] for record in layers if not record["visible"]],
     )
     reloaded, reloaded_size = parse_psd(output_psd)
-    if reloaded_size != size or len(reloaded) != 50:
+    if reloaded_size != size or len(reloaded) != 51:
         raise AssertionError("candidate PSD did not reload with the expected structure")
-    if not np.array_equal(composite(reloaded), approved):
-        raise AssertionError("reloaded candidate does not match approved appearance")
+    if not np.array_equal(composite(reloaded), cleaned):
+        raise AssertionError("reloaded candidate does not match cleaned appearance")
 
-    scenes, scene_checks = _audit_scenes(
-        reloaded, approved, accept_review_references=accept_review_references
-    )
+    scenes, scene_checks = _audit_scenes(reloaded, cleaned)
     if not all(check["pass"] for check in scene_checks.values()):
         raise AssertionError("a hidden/displaced hair scene failed its audit")
-    _write_preview(approved, scenes, preview)
+    _write_preview(cleaned, scenes, preview)
 
     report = {
         "source_v8": str(V8_SOURCE.relative_to(ROOT)),
@@ -464,30 +452,30 @@ def build_candidate(
             else str(output_psd)
         ),
         "layer_count": len(reloaded),
-        "initial_rgb_pixel_diff": 0,
-        "initial_alpha_pixel_diff": 0,
+        "initial_rgb_pixel_diff": int(
+            np.count_nonzero(np.any(cleaned[:, :, :3] != approved[:, :, :3], axis=2))
+        ),
+        "initial_alpha_pixel_diff": int(
+            np.count_nonzero(cleaned[:, :, 3] != approved[:, :, 3])
+        ),
         "changed_painted_pixels": changed,
         "pixel_sources": [
             "approved v8 composite",
             "illustrated v7 scalp reveal",
             "illustrated v7 hair-underlayer composites",
-            "four-pixel-offset painted hair from the illustrated v7 composite",
+            "separately reviewed painted side-hair underlayer",
         ],
         "flat_fill_or_blur_used": False,
         "scene_checks": scene_checks,
         "art_ready_for_cubism": False,
     }
     audit_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
-    print(f"PASS: {output_psd} ({len(reloaded)} layers; approved default preserved)")
+    print(
+        f"PASS: {output_psd} "
+        f"({len(reloaded)} layers; approved silhouette preserved)"
+    )
     return report
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--accept-review-references",
-        action="store_true",
-        help="replace side-hair visual baselines after explicit artwork review",
-    )
-    arguments = parser.parse_args()
-    build_candidate(accept_review_references=arguments.accept_review_references)
+    build_candidate()
