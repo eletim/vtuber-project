@@ -16,7 +16,7 @@
 - 正式な外見・衣装・初期表情は `assets/original/koma_confirmed.png` を基準とする。
 - 自然な閉じ目・閉じ口は `assets/parts/v8/koma_expression_repaired_v8.psd` と `assets/expression_references/` の2枚を基準とする。
 - `assets/parts/v7/` は過去の下描き・隠れ部分を参照するために保持する。
-- 上記は `docs/v8-approved-assets.sha256` にSHA-256を記録している。実データはGitとGit LFSで取得する。
+- 上記は `docs/v8-approved-assets.sha256` にSHA-256を記録している。実データは通常のGit checkoutで取得する。
 - キャラクター全身の再生成や衣装のデザイン変更はしない。必要な修正は既存PSDのパーツに対して行う。
 - 確定済みの公開範囲を勝手に変更しない。
 
