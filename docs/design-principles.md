@@ -1,36 +1,43 @@
-# Design principles recovery status
+# VTuber Project — 制作の設計原則
 
-## Status
+## 文書の位置づけ
 
-The authoritative design principles could not be recovered. This file records
-that blocker only; it is not a replacement design-principles specification and
-must not be used to infer or approve artwork decisions.
+この文書は、VTuber制作の会話で直接決定された方針と、Issue #3および承認済み素材から**新たに整理した現行の制作原則**です。存在しなかった旧 `docs/design-principles.md` の原文を「復元した」と主張するものではありません。過去の調査はGit履歴に残します。
 
-## Recovery evidence
+## プロジェクトの目標
 
-As of 2026-10-19, `docs/design-principles.md` is absent from:
+- Live2Dを用いた「羽月こま」を作る。
+- 人間操作とAI操作を切り替えられる設計にする。
+- 無料ツールとAIエージェントをできるだけ活用し、人間の手作業を最小限にする。
+- AI側の完全自律行動は当面の必須要件にしない。
 
-- the complete reachable Git history and all local and remote branches;
-- GitHub's `dev/v0.3.0` tree, commit history for this path, and repository code
-  search;
-- all GitHub pull-request refs, issues, and issue comments; and
-- the local repository's reflogs and unreachable Git objects.
+## 承認済みキャラクター素材の扱い
 
-The `dev/v0.3.0` baseline inspected for recovery is commit
-`ae355f4c8b9bb3a7b91ca9ab907a02a43d3d52cf`. The only GitHub pull-request heads
-available at inspection time were commits
-`6aafc2835987b73680dddbee0d00aa71ca2ce246` (PR #1) and
-`ae355f4c8b9bb3a7b91ca9ab907a02a43d3d52cf` (PR #2); neither contains the file.
+- 正式な外見・衣装・初期表情は `assets/original/koma_confirmed.png` を基準とする。
+- 自然な閉じ目・閉じ口は `assets/parts/v8/koma_expression_repaired_v8.psd` と `assets/expression_references/` の2枚を基準とする。
+- `assets/parts/v7/` は過去の下描き・隠れ部分を参照するために保持する。
+- 上記は `docs/v8-approved-assets.sha256` にSHA-256を記録している。実データはGitとGit LFSで取得する。
+- キャラクター全身の再生成や衣装のデザイン変更はしない。必要な修正は既存PSDのパーツに対して行う。
+- 確定済みの公開範囲を勝手に変更しない。
 
-## Precise blocker
+## Live2D用PSDの原則
 
-No authoritative content, commit or blob identifier, retained branch, pull
-request, issue attachment, or repository-local copy containing the missing
-principles is available. Existing README, v7/v8 worklogs, scripts, and Issue #3
-describe implementation history or individual artwork constraints, but none is
-identified as the authoritative design-principles source. Converting those
-materials into principles would therefore invent the missing baseline.
+- 目、口、眉、前髪、横髪、後ろ髪、髪飾り、顔・首、上着、袖、腕・手などを動かせる単位で独立させる。
+- 上のレイヤーを非表示または移動するとき、下に見える**実際の描画**が自然な状態で存在すること。
+- 肌、髪、服の下地を単色・ぼかしなどの近似補完だけで合格としない。
+- 初期合成画像の外見を、承認済み立ち絵から変えない。
+- PSDは編集できるレイヤーを保持し、単なるフラット画像を成果としない。
+- PSDができても、Cubismで動くモデルが完成したとは判定しない。
 
-Recovery requires the original document or an immutable identifier for an
-authoritative copy to be supplied by its owner. Until then, design decisions
-that depend on these principles remain blocked.
+## 実装・監査
+
+- 素材取得後、必要なハッシュを照合してから作業する。PSDのLFSポインタだけをPSD本体と誤認しない。
+- PSDを読み込み、初期合成のRGB・アルファ差分を確認する。
+- 目・口の開閉、前髪・横髪、襟・ベスト・ブラウス、袖・手など、実際に動かした表示画像やGIFを作って目視で評価する。
+- RGB差分0、透明な穴0、コードテスト合格だけでは美術レビューに合格しない。
+- 不自然な線、布の途切れ、変な塗り、重複したパーツは修正し、再レビューする。未完了の場合、未解決点を残して完了と称しない。
+- レビューAgentは実際の画像とPSDのレイヤー構造を確認する。
+
+## 開発の次の段階
+
+`dev/v0.3.0` に登録済みの素材を入力として、髪→首・衣装→袖・腕・手の描画を改善して統合PSDを生成し、実画像で監査する。その後、Cubismモデリングに進む。
