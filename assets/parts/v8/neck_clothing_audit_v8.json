@@ -1,0 +1,80 @@
+{
+  "source_psd": "assets/parts/v8/koma_hair_head_cleaned_v8.psd",
+  "painted_underlayer": "assets/parts/v8/neck_clothing_underpainting_v8.png",
+  "output_psd": "assets/parts/v8/koma_neck_clothing_cleaned_v8.psd",
+  "layer_count": 53,
+  "initial_rgb_pixel_diff": 0,
+  "initial_alpha_pixel_diff": 0,
+  "changed_painted_pixels": {
+    "removed_approximate_reveal_pixels": 166699,
+    "painted_neck_collar_pixels": 5055,
+    "painted_torso_clothing_pixels": 668118,
+    "painted_vest_reveal_pixels": 649392,
+    "painted_underlayer_sha256": "4d6207cfb35dfa11888c417a87c9445fe7483802abd4fcd0a750715bb197a4cb"
+  },
+  "pixel_sources": [
+    "approved v8 hair/head-cleaned candidate",
+    "separately painted neck/clothing underlayer"
+  ],
+  "flat_fill_or_blur_used": false,
+  "approved_costume_redesigned": false,
+  "scene_checks": {
+    "neck_hidden": {
+      "lost_alpha_pixels": 0,
+      "changed_rgb_pixels_vs_default": 3043,
+      "pass": true
+    },
+    "vest_hidden": {
+      "lost_alpha_pixels": 0,
+      "changed_rgb_pixels_vs_default": 639730,
+      "pass": true
+    },
+    "blouse_hidden": {
+      "lost_alpha_pixels": 0,
+      "changed_rgb_pixels_vs_default": 84455,
+      "pass": true
+    },
+    "waist_hidden": {
+      "lost_alpha_pixels": 0,
+      "changed_rgb_pixels_vs_default": 175023,
+      "pass": true
+    },
+    "neck_displaced": {
+      "lost_alpha_pixels": 0,
+      "changed_rgb_pixels_vs_default": 3146,
+      "pass": true,
+      "vacated_original_silhouette_pixels": 636,
+      "vacated_pixels_matching_hidden_underpainting": 636,
+      "vacated_pixels_still_matching_default": 395,
+      "retained_default_fraction": 0.6210691823899371
+    },
+    "vest_displaced": {
+      "lost_alpha_pixels": 0,
+      "changed_rgb_pixels_vs_default": 132386,
+      "pass": true,
+      "vacated_original_silhouette_pixels": 10235,
+      "vacated_pixels_matching_hidden_underpainting": 10235,
+      "vacated_pixels_still_matching_default": 375,
+      "retained_default_fraction": 0.03663898387884709
+    },
+    "blouse_displaced": {
+      "lost_alpha_pixels": 0,
+      "changed_rgb_pixels_vs_default": 84064,
+      "pass": true,
+      "vacated_original_silhouette_pixels": 1610,
+      "vacated_pixels_matching_hidden_underpainting": 1610,
+      "vacated_pixels_still_matching_default": 0,
+      "retained_default_fraction": 0.0
+    },
+    "waist_displaced": {
+      "lost_alpha_pixels": 0,
+      "changed_rgb_pixels_vs_default": 197830,
+      "pass": true,
+      "vacated_original_silhouette_pixels": 5318,
+      "vacated_pixels_matching_hidden_underpainting": 5318,
+      "vacated_pixels_still_matching_default": 1300,
+      "retained_default_fraction": 0.2444528018051899
+    }
+  },
+  "art_ready_for_cubism": false
+}
