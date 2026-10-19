@@ -22,10 +22,5 @@ assets/parts/**/01_open_actual_layers.png
 assets/parts/**/audit/
 assets/parts/**/mismatch_map.png
 
-# PSD v7/v8 visual assets and approved artwork references (delivered in ZIP)
-assets/expression_references/
-assets/parts/v7/*.psd
-assets/parts/v8/*.psd
-assets/parts/v8/*.png
-assets/parts/v8/*.gif
-assets/parts/v8/*.json
+# The approved v7/v8 artwork binaries are tracked in Git / Git LFS.
+# Do not ignore assets/original, assets/expression_references, or assets/parts/v7-v8.
