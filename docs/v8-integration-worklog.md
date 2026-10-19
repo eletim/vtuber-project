@@ -2,10 +2,11 @@
 
 ## Result
 
-The editable, Cubism-oriented PSD integration remains **blocked on completed
-region artwork**. The mandatory input gate in
+The editable, Cubism-oriented PSD integration remains **blocked on the
+remaining completed region artwork**. The mandatory input gate in
 [`v8-input-baseline.md`](v8-input-baseline.md) is now satisfied, but the
-required completed region artwork does not exist in this checkout.
+neck/clothing and sleeves/arms/hands region artwork does not exist in this
+checkout. The completed hair/head candidate is available for integration.
 
 The input status was rechecked on 2026-10-19 against `dev/v0.4.0`. The approved
 source assets are ordinary Git blobs, their hashes match the immutable approval
@@ -18,7 +19,7 @@ blocker without changing the separate region-artwork and integration gates.
 | --- | --- |
 | Every requirement in the input baseline | **PASS.** The five approved source assets match the manifest; both PSDs reload, and v8 has 49 layers. |
 | Approved PSD v8 and expression references | **Available.** These inputs are ready for the later integration and visual-review gates. |
-| Completed hair and head artwork | **Missing.** [`v8-hair-head-worklog.md`](v8-hair-head-worklog.md) records that no region artwork was created. |
+| Completed hair and head artwork | **Available.** [`koma_hair_head_cleaned_v8.psd`](../assets/parts/v8/koma_hair_head_cleaned_v8.psd) is the reproducible 51-layer candidate documented and audited in [`v8-hair-head-worklog.md`](v8-hair-head-worklog.md). |
 | Completed neck and clothing artwork | **Missing.** [`v8-neck-clothing-worklog.md`](v8-neck-clothing-worklog.md) records that no region artwork was created. |
 | Completed sleeves, arms, hands, and hidden-skin artwork | **Missing.** [`v8-sleeves-arms-hands-worklog.md`](v8-sleeves-arms-hands-worklog.md) records that no region artwork was created. |
 
