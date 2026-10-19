@@ -2,32 +2,29 @@
 
 ## Result
 
-The editable, Cubism-oriented PSD integration is **blocked**. No PSD was
-created or modified because the mandatory input gate in
-[`v8-input-baseline.md`](v8-input-baseline.md) is not satisfied and the
+The editable, Cubism-oriented PSD integration remains **blocked on completed
+region artwork**. The mandatory input gate in
+[`v8-input-baseline.md`](v8-input-baseline.md) is now satisfied, but the
 required completed region artwork does not exist in this checkout.
 
-This status was rechecked on 2026-10-19 against `dev/v0.3.0` at
-`9e2783f771e1f8279a23f1017fb7fe3ce70ac0c6`. The worktree, reachable Git
-history and remote branches, GitHub issue and pull-request records, and GitHub
-releases contain no owner-supplied artwork bundle, authoritative design
-principles, or immutable approval record. Pull request #2 only records that the
-binary inputs were delivered in a conversation ZIP; it does not make those
-inputs available from this checkout.
+The input status was rechecked on 2026-10-19 against `dev/v0.4.0`. The approved
+source assets are ordinary Git blobs, their hashes match the immutable approval
+manifest, and the v8 PSD reloads with 49 layers. This resolves the former input
+blocker without changing the separate region-artwork and integration gates.
 
 ## Integration gate
 
 | Requirement | Status |
 | --- | --- |
-| Every unblock requirement in the input baseline | **Blocked.** The authoritative design principles, approved artwork inputs, and owner-supplied checksum or equivalent approval record remain missing. |
-| Approved PSD v8 and expression references | **Missing.** The initial composite, editability, natural closed-eye state, and natural closed-mouth state cannot be reloaded or visually verified. |
+| Every requirement in the input baseline | **PASS.** The five approved source assets match the manifest; both PSDs reload, and v8 has 49 layers. |
+| Approved PSD v8 and expression references | **Available.** These inputs are ready for the later integration and visual-review gates. |
 | Completed hair and head artwork | **Missing.** [`v8-hair-head-worklog.md`](v8-hair-head-worklog.md) records that no region artwork was created. |
 | Completed neck and clothing artwork | **Missing.** [`v8-neck-clothing-worklog.md`](v8-neck-clothing-worklog.md) records that no region artwork was created. |
 | Completed sleeves, arms, hands, and hidden-skin artwork | **Missing.** [`v8-sleeves-arms-hands-worklog.md`](v8-sleeves-arms-hands-worklog.md) records that no region artwork was created. |
 
-The existing expression-regeneration script cannot resolve the absent source
-paths. Running it without the approved sources, or manufacturing substitutes,
-would not satisfy the artwork, approval, or visual-review requirements.
+The existing expression-regeneration script resolves the approved source
+paths and writes a separate candidate. Its output must be compared without
+overwriting the approved PSD and does not replace artwork or visual review.
 
 ## Work required after unblocking
 
@@ -55,7 +52,7 @@ moving model.
 
 ## Scope preserved
 
-No placeholder art, inferred design principle, replacement expression,
-whole-character generation, hidden-artwork edit, binary publication, or
-Cubism rig was produced. Consequently, no integration PSD, preview, GIF, or
-audit report can be validly delivered until the recorded gates are resolved.
+No placeholder art, replacement expression, whole-character generation,
+hidden-artwork edit, or Cubism rig was produced by this integration task.
+Consequently, no new integration PSD, preview, GIF, or audit report can be
+validly delivered until the remaining recorded gates are resolved.
