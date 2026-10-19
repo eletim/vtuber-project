@@ -42,9 +42,19 @@ def main():
         assert names.index(SCALP) < names.index("face_details_without_expression")
         assert report["flat_fill_or_blur_used"] is False
         assert report["changed_painted_pixels"]["hairline_underpainting"] > 0
-        assert report["changed_painted_pixels"]["side_hair"] > 0
         assert report["changed_painted_pixels"]["accessory_boundary"] > 0
         assert report["changed_painted_pixels"]["fixed_side_hair_boundary"] > 0
+        assert report["changed_painted_pixels"]["v7_side_underlayer_boundary"] > 0
+        for name in ("side_hair_hidden", "rear_hair_hidden"):
+            assert report["scene_checks"][name]["changed_rgb_pixels_vs_default"] > 0
+        for name in ("side_hair_displaced", "rear_hair_displaced"):
+            check = report["scene_checks"][name]
+            assert check["vacated_original_silhouette_pixels"] > 0
+            assert (
+                check["vacated_pixels_matching_hidden_underpainting"]
+                == check["vacated_original_silhouette_pixels"]
+            )
+            assert check["retained_default_fraction"] < 0.01
         assert all(check["pass"] for check in report["scene_checks"].values())
 
         committed, _ = parse_psd(OUTPUT_PSD)

@@ -14,6 +14,7 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw
+from scipy.ndimage import binary_dilation, distance_transform_edt
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -93,12 +94,36 @@ def _shift(image, dx, dy):
     return shifted
 
 
-def _displaced(layers, moves):
+def _moved_layers(layers, moves):
     result = copy.deepcopy(layers)
     for name, (dx, dy) in moves.items():
         record = _record(result, name)
         record["data"] = _shift(record["data"], dx, dy)
-    return composite(result)
+    return result
+
+
+def _displaced(layers, moves):
+    return composite(_moved_layers(layers, moves))
+
+
+def _repair_v7_boundary_remnants(base, occluded):
+    """Replace neon segmentation remnants with nearby painted v7 hair pixels."""
+    red, green, blue = [base[:, :, channel].astype(np.int16) for channel in range(3)]
+    yellow = (red > 190) & (green > 185) & (blue < 80)
+    green_remnant = (green > 140) & (green > red + 8) & (green > blue + 30)
+    remnants = (base[:, :, 3] > 0) & (yellow | green_remnant)
+    repair = (
+        binary_dilation(remnants, iterations=2)
+        & occluded
+        & (base[:, :, 3] > 0)
+    )
+    valid_source = (base[:, :, 3] > 0) & ~binary_dilation(remnants, iterations=3)
+    if not np.any(repair) or not np.any(valid_source):
+        return 0
+    _, nearest = distance_transform_edt(~valid_source, return_indices=True)
+    y, x = np.where(repair)
+    base[y, x, :3] = base[nearest[0, y, x], nearest[1, y, x], :3]
+    return int(len(y))
 
 
 def clean_layers(v8_layers, v7_layers):
@@ -214,16 +239,24 @@ def clean_layers(v8_layers, v7_layers):
     # the approved pose exact while leaving detailed, painted hair beneath.
     sources = {
         "bangs": approved,
-        "side_hair": approved,
+        "side_hair": composite(v7_layers, hide=SIDES),
         "accessory": composite(v7_layers, hide=ACCESSORY),
         "crown": composite(v7_layers, hide=CROWN),
-        "rear_hair": approved,
+        "rear_hair": composite(v7_layers, hide=REAR),
     }
     for label, names in groups.items():
         mask = (_group_opacity(layers, names) == 255) & (base[:, :, 3] > 0)
         before = base[:, :, :3].copy()
         base[:, :, :3][mask] = sources[label][:, :, :3][mask]
         changed[label] = int(np.count_nonzero(np.any(before != base[:, :, :3], axis=2)))
+
+    # The v7 hidden side-hair state is the authoritative underdrawing, but its
+    # old extraction boundary contains neon marker remnants. Replace only the
+    # fully occluded remnants with nearby pixels from the same painted v7 hair
+    # base; no synthesized color, flat fill, or blur is introduced.
+    changed["v7_side_underlayer_boundary"] = _repair_v7_boundary_remnants(
+        base, _group_opacity(layers, SIDES) == 255
+    )
 
     # The v7 scalp reveal is genuine illustrated hairline/forehead artwork.
     # Retain the portion actually occluded by opaque bangs, then put it beneath
@@ -256,6 +289,15 @@ def clean_layers(v8_layers, v7_layers):
 
 def _audit_scenes(layers, approved):
     expected_alpha = approved[:, :, 3]
+    side_moves = {
+        "hair_side_left": (-8, 0),
+        "hair_side_left.illustrated_underpaint": (-8, 0),
+        "hair_side_right": (8, 0),
+        "hair_side_right.illustrated_underpaint": (8, 0),
+    }
+    rear_moves = {"hair_back_left": (-8, 0), "hair_back_right": (8, 0)}
+    side_moved_layers = _moved_layers(layers, side_moves)
+    rear_moved_layers = _moved_layers(layers, rear_moves)
     scenes = {
         "bangs_hidden": composite(layers, hide=BANGS),
         "side_hair_hidden": composite(layers, hide=SIDES),
@@ -263,15 +305,8 @@ def _audit_scenes(layers, approved):
         "crown_hidden": composite(layers, hide=CROWN),
         "rear_hair_hidden": composite(layers, hide=REAR),
         "bangs_displaced": _displaced(layers, {name: (0, -8) for name in BANGS}),
-        "side_hair_displaced": _displaced(
-            layers,
-            {
-                "hair_side_left": (-8, 0),
-                "hair_side_left.illustrated_underpaint": (-8, 0),
-                "hair_side_right": (8, 0),
-                "hair_side_right.illustrated_underpaint": (8, 0),
-            },
-        ),
+        "side_hair_displaced": composite(side_moved_layers),
+        "rear_hair_displaced": composite(rear_moved_layers),
         "accessory_displaced": _displaced(
             layers, {name: (8, 0) for name in ACCESSORY}
         ),
@@ -280,6 +315,44 @@ def _audit_scenes(layers, approved):
     for name, image in scenes.items():
         holes = int(np.count_nonzero((image[:, :, 3] == 0) & (expected_alpha > 0)))
         checks[name] = {"lost_alpha_pixels": holes, "pass": holes == 0}
+
+    for scene_name in ("side_hair_hidden", "rear_hair_hidden"):
+        changed_pixels = int(
+            np.count_nonzero(
+                np.any(scenes[scene_name][:, :, :3] != approved[:, :, :3], axis=2)
+            )
+        )
+        checks[scene_name]["changed_rgb_pixels_vs_default"] = changed_pixels
+        checks[scene_name]["pass"] &= changed_pixels > 0
+
+    displacement_specs = {
+        "side_hair_displaced": (SIDES, side_moved_layers, scenes["side_hair_hidden"]),
+        "rear_hair_displaced": (REAR, rear_moved_layers, scenes["rear_hair_hidden"]),
+    }
+    for scene_name, (names, moved_layers, hidden) in displacement_specs.items():
+        original_opacity = _group_opacity(layers, names)
+        moved_opacity = _group_opacity(moved_layers, names)
+        vacated = (original_opacity > 0) & (moved_opacity == 0)
+        moved = scenes[scene_name]
+        matches_hidden = np.all(moved == hidden, axis=2)
+        matches_default = np.all(moved == approved, axis=2)
+        vacated_pixels = int(np.count_nonzero(vacated))
+        matching_underpainting = int(np.count_nonzero(vacated & matches_hidden))
+        retained_default = int(np.count_nonzero(vacated & matches_default))
+        retained_fraction = retained_default / max(vacated_pixels, 1)
+        checks[scene_name].update(
+            {
+                "vacated_original_silhouette_pixels": vacated_pixels,
+                "vacated_pixels_matching_hidden_underpainting": matching_underpainting,
+                "vacated_pixels_still_matching_default": retained_default,
+                "retained_default_fraction": retained_fraction,
+            }
+        )
+        checks[scene_name]["pass"] &= (
+            vacated_pixels > 0
+            and matching_underpainting == vacated_pixels
+            and retained_fraction < 0.01
+        )
     return scenes, checks
 
 
@@ -333,7 +406,7 @@ def build_candidate(
 
     scenes, scene_checks = _audit_scenes(reloaded, approved)
     if not all(check["pass"] for check in scene_checks.values()):
-        raise AssertionError("a hidden/displaced hair scene introduced transparent holes")
+        raise AssertionError("a hidden/displaced hair scene failed its audit")
     _write_preview(approved, scenes, preview)
 
     report = {
@@ -352,6 +425,7 @@ def build_candidate(
             "approved v8 composite",
             "illustrated v7 scalp reveal",
             "illustrated v7 hair-underlayer composites",
+            "nearest painted pixels in the illustrated v7 hair base",
         ],
         "flat_fill_or_blur_used": False,
         "scene_checks": scene_checks,
