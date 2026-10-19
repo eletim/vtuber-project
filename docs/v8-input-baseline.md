@@ -1,5 +1,8 @@
 # PSD v8 input baseline status
 
+> **2026-10-19 現況更新：** PR #13により、下記で不足として扱っていたv7/v8 PSD、確定画像、表情参照画像をGit LFS / Gitへ登録しました。PR #14で、現行制作原則を `docs/design-principles.md` に整理しました。以降、この文書の「Missing」「blocked」は**PR #13以前の履歴**です。新ワークツリーでは `git lfs pull` と `sha256sum -c docs/v8-approved-assets.sha256` で実データを検証します。制作継続は Issue #15 を参照してください。ユーザーの追加アップロードを前提としないでください。
+
+
 ## Result
 
 The required input baseline is **blocked**. No artwork, regeneration, or visual
