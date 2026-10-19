@@ -36,8 +36,8 @@ REVIEW_REFERENCES = {
     "side_hair_displaced": REVIEW_REFERENCE_DIR / "side_hair_displaced_v8.png",
 }
 REVIEW_REFERENCE_SHA256 = {
-    "side_hair_hidden": "ba6d8d0eed59098568134c2355815dec3e439e2ff1c8987de972f36bdf2c0998",
-    "side_hair_displaced": "1c5702e8df631eb195a39cc152b640ad8cbbfcd6da1dae3d601a313e7842c391",
+    "side_hair_hidden": "12146bcccd7b0352450916eae1fc6dc5de6b71418c13175832ea3986052ee0f8",
+    "side_hair_displaced": "526d90fd6ed298b51b05c3018d27e9ba930629e5c7cd561c8a4e46dd0e546f73",
 }
 
 BANGS = ("front_bangs.illustrated_underpaint", "front_bangs")
@@ -115,6 +115,18 @@ def _moved_layers(layers, moves):
 
 def _displaced(layers, moves):
     return composite(_moved_layers(layers, moves))
+
+
+def _segmentation_marker_mask(image):
+    """Locate cyan, lime, and neon-yellow segmentation remnants."""
+    red, green, blue = [
+        image[:, :, channel].astype(np.int16) for channel in range(3)
+    ]
+    painted = image[:, :, 3] > 0
+    cyan = (red < 100) & (green > 170) & (blue > 170)
+    lime = (green > 150) & (green > red + 10) & (green > blue + 40)
+    neon_yellow = (red > 200) & (green > 195) & (blue < 80)
+    return painted & (cyan | lime | neon_yellow)
 
 
 def clean_layers(v8_layers, v7_layers):
@@ -290,6 +302,28 @@ def clean_layers(v8_layers, v7_layers):
     ) + 1
     layers.insert(insert_at, scalp)
 
+    # The v7 base contains isolated cyan, lime, and neon-yellow segmentation
+    # pixels beneath three movable groups. Replace only remnants that remain
+    # exposed in the final hidden states and are fully covered in the approved
+    # pose, using approved painted pixels at the same coordinates.
+    marker_groups = {
+        "side_hair": SIDES,
+        "accessory": ACCESSORY,
+        "crown": CROWN,
+    }
+    for label, names in marker_groups.items():
+        hidden = composite(layers, hide=names)
+        remnants = _segmentation_marker_mask(hidden)
+        fully_covered = _group_opacity(layers, names) == 255
+        if np.any(remnants & ~fully_covered):
+            raise AssertionError(
+                f"{label} segmentation remnant is not covered in the approved pose"
+            )
+        base[:, :, :3][remnants] = approved[:, :, :3][remnants]
+        changed[f"{label}_segmentation_remnants"] = int(
+            np.count_nonzero(remnants)
+        )
+
     cleaned = composite(layers)
     if not np.array_equal(cleaned[:, :, 3], approved[:, :, 3]):
         raise AssertionError("cleaned initial silhouette differs from approved v8")
@@ -330,6 +364,13 @@ def _audit_scenes(layers, default):
     for name, image in scenes.items():
         holes = int(np.count_nonzero((image[:, :, 3] == 0) & (expected_alpha > 0)))
         checks[name] = {"lost_alpha_pixels": holes, "pass": holes == 0}
+
+    for scene_name in ("side_hair_hidden", "accessory_hidden", "crown_hidden"):
+        marker_pixels = int(
+            np.count_nonzero(_segmentation_marker_mask(scenes[scene_name]))
+        )
+        checks[scene_name]["segmentation_marker_pixels"] = marker_pixels
+        checks[scene_name]["pass"] &= marker_pixels == 0
 
     for scene_name in ("side_hair_hidden", "rear_hair_hidden"):
         changed_pixels = int(

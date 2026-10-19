@@ -60,7 +60,13 @@ def main():
         assert report["changed_painted_pixels"]["fixed_side_hair_boundary"] > 0
         assert report["changed_painted_pixels"]["painted_side_hair_underlayer"] > 0
         assert report["changed_painted_pixels"]["approved_default_boundary_cleanup"] > 0
+        for name in ("side_hair", "accessory", "crown"):
+            assert report["changed_painted_pixels"][
+                f"{name}_segmentation_remnants"
+            ] > 0
         assert report["initial_alpha_pixel_diff"] == 0
+        for name in ("side_hair_hidden", "accessory_hidden", "crown_hidden"):
+            assert report["scene_checks"][name]["segmentation_marker_pixels"] == 0
         for name in ("side_hair_hidden", "rear_hair_hidden"):
             assert report["scene_checks"][name]["changed_rgb_pixels_vs_default"] > 0
         for name in ("side_hair_displaced", "rear_hair_displaced"):

@@ -23,6 +23,9 @@
     "rear_hair": 0,
     "painted_side_hair_underlayer": 194322,
     "hairline_underpainting": 59752,
+    "side_hair_segmentation_remnants": 17,
+    "accessory_segmentation_remnants": 20,
+    "crown_segmentation_remnants": 6,
     "approved_default_boundary_cleanup": 25541
   },
   "pixel_sources": [
@@ -40,18 +43,21 @@
     "side_hair_hidden": {
       "lost_alpha_pixels": 0,
       "pass": true,
-      "changed_rgb_pixels_vs_default": 110164,
+      "segmentation_marker_pixels": 0,
+      "changed_rgb_pixels_vs_default": 110147,
       "review_reference": "assets/parts/v8/review_references/side_hair_hidden_v8.png",
-      "review_reference_sha256": "ba6d8d0eed59098568134c2355815dec3e439e2ff1c8987de972f36bdf2c0998",
+      "review_reference_sha256": "12146bcccd7b0352450916eae1fc6dc5de6b71418c13175832ea3986052ee0f8",
       "review_reference_pixel_diff": 0
     },
     "accessory_hidden": {
       "lost_alpha_pixels": 0,
-      "pass": true
+      "pass": true,
+      "segmentation_marker_pixels": 0
     },
     "crown_hidden": {
       "lost_alpha_pixels": 0,
-      "pass": true
+      "pass": true,
+      "segmentation_marker_pixels": 0
     },
     "rear_hair_hidden": {
       "lost_alpha_pixels": 0,
@@ -67,10 +73,10 @@
       "pass": true,
       "vacated_original_silhouette_pixels": 12760,
       "vacated_pixels_matching_hidden_underpainting": 12760,
-      "vacated_pixels_still_matching_default": 2,
-      "retained_default_fraction": 0.00015673981191222572,
+      "vacated_pixels_still_matching_default": 6,
+      "retained_default_fraction": 0.0004702194357366771,
       "review_reference": "assets/parts/v8/review_references/side_hair_displaced_v8.png",
-      "review_reference_sha256": "1c5702e8df631eb195a39cc152b640ad8cbbfcd6da1dae3d601a313e7842c391",
+      "review_reference_sha256": "526d90fd6ed298b51b05c3018d27e9ba930629e5c7cd561c8a4e46dd0e546f73",
       "review_reference_pixel_diff": 0
     },
     "rear_hair_displaced": {
