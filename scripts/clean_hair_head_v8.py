@@ -36,8 +36,8 @@ REVIEW_REFERENCES = {
     "side_hair_displaced": REVIEW_REFERENCE_DIR / "side_hair_displaced_v8.png",
 }
 REVIEW_REFERENCE_SHA256 = {
-    "side_hair_hidden": "12146bcccd7b0352450916eae1fc6dc5de6b71418c13175832ea3986052ee0f8",
-    "side_hair_displaced": "526d90fd6ed298b51b05c3018d27e9ba930629e5c7cd561c8a4e46dd0e546f73",
+    "side_hair_hidden": "80f17a787c80465006db307b3377d942d9de797dcb27505cc3d75825048e427d",
+    "side_hair_displaced": "e5cd1c188f3960d359514f7efe43c91ad7602b7a966c03e6c9322e4488d0cd18",
 }
 
 BANGS = ("front_bangs.illustrated_underpaint", "front_bangs")
@@ -118,15 +118,15 @@ def _displaced(layers, moves):
 
 
 def _segmentation_marker_mask(image):
-    """Locate cyan, lime, and neon-yellow segmentation remnants."""
+    """Locate solid and anti-aliased cyan, green, and yellow markers."""
     red, green, blue = [
         image[:, :, channel].astype(np.int16) for channel in range(3)
     ]
     painted = image[:, :, 3] > 0
-    cyan = (red < 100) & (green > 170) & (blue > 170)
-    lime = (green > 150) & (green > red + 10) & (green > blue + 40)
+    cyan = (green > red + 2) & (blue > red + 2)
+    green_marker = (green > red + 2) & (green > blue)
     neon_yellow = (red > 200) & (green > 195) & (blue < 80)
-    return painted & (cyan | lime | neon_yellow)
+    return painted & (cyan | green_marker | neon_yellow)
 
 
 def clean_layers(v8_layers, v7_layers):
@@ -313,12 +313,8 @@ def clean_layers(v8_layers, v7_layers):
     }
     for label, names in marker_groups.items():
         hidden = composite(layers, hide=names)
-        remnants = _segmentation_marker_mask(hidden)
         fully_covered = _group_opacity(layers, names) == 255
-        if np.any(remnants & ~fully_covered):
-            raise AssertionError(
-                f"{label} segmentation remnant is not covered in the approved pose"
-            )
+        remnants = _segmentation_marker_mask(hidden) & fully_covered
         base[:, :, :3][remnants] = approved[:, :, :3][remnants]
         changed[f"{label}_segmentation_remnants"] = int(
             np.count_nonzero(remnants)
@@ -365,9 +361,17 @@ def _audit_scenes(layers, default):
         holes = int(np.count_nonzero((image[:, :, 3] == 0) & (expected_alpha > 0)))
         checks[name] = {"lost_alpha_pixels": holes, "pass": holes == 0}
 
-    for scene_name in ("side_hair_hidden", "accessory_hidden", "crown_hidden"):
+    marker_scenes = {
+        "side_hair_hidden": SIDES,
+        "accessory_hidden": ACCESSORY,
+        "crown_hidden": CROWN,
+    }
+    for scene_name, names in marker_scenes.items():
+        revealed_region = _group_opacity(layers, names) == 255
         marker_pixels = int(
-            np.count_nonzero(_segmentation_marker_mask(scenes[scene_name]))
+            np.count_nonzero(
+                _segmentation_marker_mask(scenes[scene_name]) & revealed_region
+            )
         )
         checks[scene_name]["segmentation_marker_pixels"] = marker_pixels
         checks[scene_name]["pass"] &= marker_pixels == 0

@@ -18,9 +18,10 @@ used.
    and side hair so it remains present when the bangs are hidden or displaced.
 2. The broad v7 scalp reveal is clipped to the fully occluded bang silhouette,
    cleaning its boundary without covering crown or facial detail.
-3. Cyan, lime, and neon-yellow segmentation remnants at the bangs, side-hair,
-   crown, and accessory underpaint boundaries are repainted with corresponding
-   approved top-layer pixels.
+3. Cyan, green, and neon-yellow segmentation remnants, including their dark
+   and pale anti-aliased edges, at the bangs, side-hair, crown, and accessory
+   underpaint boundaries are repainted with corresponding approved top-layer
+   pixels.
 4. Redundant extraction overlap is removed from each movable hair group;
    copied shoulder and garment pixels are retained as real approved artwork in
    a fixed underpainting instead of travelling with the side hair.
@@ -52,7 +53,8 @@ The audit also requires side/rear hidden states to differ from the default and
 requires every vacated displaced-silhouette pixel to match the hidden
 underdrawing rather than the original visible silhouette.
 Side-hair, accessory, and crown hidden states additionally require zero cyan,
-lime, or neon-yellow segmentation-remnant pixels.
+green, or neon-yellow segmentation-remnant pixels under the broadened
+anti-alias-aware thresholds.
 The full-resolution side-hair hidden and displaced scenes must also match the
 separately curated PNG references in `assets/parts/v8/review_references/`.
 Their SHA-256 digests are fixed in the audit script, and the generator has no
