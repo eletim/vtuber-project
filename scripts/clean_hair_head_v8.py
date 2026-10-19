@@ -36,8 +36,8 @@ REVIEW_REFERENCES = {
     "side_hair_displaced": REVIEW_REFERENCE_DIR / "side_hair_displaced_v8.png",
 }
 REVIEW_REFERENCE_SHA256 = {
-    "side_hair_hidden": "80f17a787c80465006db307b3377d942d9de797dcb27505cc3d75825048e427d",
-    "side_hair_displaced": "e5cd1c188f3960d359514f7efe43c91ad7602b7a966c03e6c9322e4488d0cd18",
+    "side_hair_hidden": "97d94f706fc60aa0a388485f4113a13ebf54fbd04d8ce1a773ad335dd9d42ac4",
+    "side_hair_displaced": "97698f3710734dc0802bcae7da720e321a66a6c581bcfae56f3f692a210cc3a6",
 }
 
 BANGS = ("front_bangs.illustrated_underpaint", "front_bangs")
@@ -118,15 +118,27 @@ def _displaced(layers, moves):
 
 
 def _segmentation_marker_mask(image):
-    """Locate solid and anti-aliased cyan, green, and yellow markers."""
+    """Locate solid and anti-aliased segmentation marker colors."""
     red, green, blue = [
         image[:, :, channel].astype(np.int16) for channel in range(3)
     ]
     painted = image[:, :, 3] > 0
     cyan = (green > red + 2) & (blue > red + 2)
     green_marker = (green > red + 2) & (green > blue)
+    blue_marker = (blue > red + 2) & (blue > green + 2)
+    magenta = (red > green + 2) & (blue > green + 2)
+    olive_chroma = red - blue
+    olive = (
+        (red >= green)
+        & (green >= blue)
+        & (green > blue + 10)
+        & (6 * (green - blue) >= 5 * olive_chroma)
+        & (100 * olive_chroma >= 18 * red)
+    )
     neon_yellow = (red > 200) & (green > 195) & (blue < 80)
-    return painted & (cyan | green_marker | neon_yellow)
+    return painted & (
+        cyan | green_marker | blue_marker | magenta | olive | neon_yellow
+    )
 
 
 def clean_layers(v8_layers, v7_layers):
@@ -302,10 +314,10 @@ def clean_layers(v8_layers, v7_layers):
     ) + 1
     layers.insert(insert_at, scalp)
 
-    # The v7 base contains isolated cyan, lime, and neon-yellow segmentation
-    # pixels beneath three movable groups. Replace only remnants that remain
-    # exposed in the final hidden states and are fully covered in the approved
-    # pose, using approved painted pixels at the same coordinates.
+    # The v7 base contains isolated segmentation colors beneath three movable
+    # groups. Replace only remnants that remain exposed in the final hidden
+    # states and are fully covered in the approved pose, using approved painted
+    # pixels at the same coordinates.
     marker_groups = {
         "side_hair": SIDES,
         "accessory": ACCESSORY,

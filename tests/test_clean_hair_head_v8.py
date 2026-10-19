@@ -27,12 +27,15 @@ def main():
             [45, 161, 161, 255],
             [217, 243, 243, 255],
             [50, 82, 46, 255],
+            [29, 29, 231, 255],
+            [111, 0, 108, 255],
+            [127, 127, 69, 255],
             [180, 150, 130, 255],
         ]],
         dtype=np.uint8,
     )
     assert _segmentation_marker_mask(threshold_samples).tolist() == [
-        [True, True, True, False]
+        [True, True, True, True, True, True, False]
     ]
 
     with tempfile.TemporaryDirectory() as directory:

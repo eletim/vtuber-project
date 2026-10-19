@@ -23,9 +23,9 @@
     "rear_hair": 0,
     "painted_side_hair_underlayer": 194322,
     "hairline_underpainting": 59752,
-    "side_hair_segmentation_remnants": 40,
-    "accessory_segmentation_remnants": 23,
-    "crown_segmentation_remnants": 24,
+    "side_hair_segmentation_remnants": 271,
+    "accessory_segmentation_remnants": 31,
+    "crown_segmentation_remnants": 67,
     "approved_default_boundary_cleanup": 25541
   },
   "pixel_sources": [
@@ -44,9 +44,9 @@
       "lost_alpha_pixels": 0,
       "pass": true,
       "segmentation_marker_pixels": 0,
-      "changed_rgb_pixels_vs_default": 110124,
+      "changed_rgb_pixels_vs_default": 109893,
       "review_reference": "assets/parts/v8/review_references/side_hair_hidden_v8.png",
-      "review_reference_sha256": "80f17a787c80465006db307b3377d942d9de797dcb27505cc3d75825048e427d",
+      "review_reference_sha256": "97d94f706fc60aa0a388485f4113a13ebf54fbd04d8ce1a773ad335dd9d42ac4",
       "review_reference_pixel_diff": 0
     },
     "accessory_hidden": {
@@ -73,10 +73,10 @@
       "pass": true,
       "vacated_original_silhouette_pixels": 12760,
       "vacated_pixels_matching_hidden_underpainting": 12760,
-      "vacated_pixels_still_matching_default": 15,
-      "retained_default_fraction": 0.0011755485893416929,
+      "vacated_pixels_still_matching_default": 95,
+      "retained_default_fraction": 0.007445141065830721,
       "review_reference": "assets/parts/v8/review_references/side_hair_displaced_v8.png",
-      "review_reference_sha256": "e5cd1c188f3960d359514f7efe43c91ad7602b7a966c03e6c9322e4488d0cd18",
+      "review_reference_sha256": "97698f3710734dc0802bcae7da720e321a66a6c581bcfae56f3f692a210cc3a6",
       "review_reference_pixel_diff": 0
     },
     "rear_hair_displaced": {
