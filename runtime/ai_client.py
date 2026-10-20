@@ -21,18 +21,19 @@ class KomaClient:
     def pose(self,**parameters):
         return self._post('/api/control',{'source':'ai','parameters':parameters,'ttl_ms':2000})
 
-    def say(self,text):
-        return self._post('/api/speech',{'text':text},timeout=125)
+    def say(self,text,emotion="auto"):
+        return self._post('/api/speech',{'text':text,'emotion':emotion},timeout=125)
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--url',default='http://127.0.0.1:8766')
     parser.add_argument('--say')
+    parser.add_argument('--emotion',choices=['auto','neutral','happy','thoughtful','surprised'],default='auto')
     parser.add_argument('--demo',action='store_true')
     args=parser.parse_args()
     client=KomaClient(args.url);client.select()
-    if args.say:print(client.say(args.say))
+    if args.say:print(client.say(args.say,args.emotion))
     if args.demo:
         for i in range(120):
             t=i*.08

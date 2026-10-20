@@ -5,6 +5,8 @@ import json
 import math
 import time
 import uuid
+import io
+import wave
 from collections import OrderedDict
 from voice import Voicevox
 from pathlib import Path
@@ -32,7 +34,8 @@ def validate_parameters(values):
 def create_app(voice=None):
     app = web.Application(client_max_size=65536)
     state = {'mode':'human', 'parameters':{k:v[2] for k,v in LIMITS.items()},
-             'revision':0, 'source':'idle'}
+             'revision':0, 'source':'idle',
+             'performance':{'enabled':True,'emotion':'neutral','started_at':time.time(),'until':0}}
     peers = set()
     controllers = []
     voice = voice or Voicevox()
@@ -76,6 +79,7 @@ def create_app(voice=None):
             raise web.HTTPBadRequest(text='mode must be human or ai')
         state.update(mode=data['mode'], source='idle', parameters={k:v[2] for k,v in LIMITS.items()})
         deadline[0] = 0
+        state['performance'].update(emotion='neutral',started_at=time.time(),until=0)
         generation[0] += 1
         await send({'type':'cancel_speech'})
         await publish()
@@ -87,6 +91,24 @@ def create_app(voice=None):
         except ValueError as e:
             raise web.HTTPBadRequest(text=str(e))
         return web.json_response(state)
+
+    async def performance(request):
+        data = await request.json()
+        if not isinstance(data,dict):
+            raise web.HTTPBadRequest(text='performance must be an object')
+        emotion=data.get('emotion','neutral')
+        if emotion not in ('neutral','happy','thoughtful','surprised'):
+            raise web.HTTPBadRequest(text='unknown emotion')
+        enabled=data.get('enabled',state['performance']['enabled'])
+        if not isinstance(enabled,bool):
+            raise web.HTTPBadRequest(text='enabled must be boolean')
+        duration=data.get('duration',4)
+        if isinstance(duration,bool) or not isinstance(duration,(int,float)) or not math.isfinite(duration) or not 0<duration<=30:
+            raise web.HTTPBadRequest(text='duration must be within 0–30 seconds')
+        now=time.time()
+        state['performance']={'enabled':enabled,'emotion':emotion,'started_at':now,'until':now+duration}
+        await publish()
+        return web.json_response(state['performance'])
 
     async def speech(request):
         data = await request.json()
@@ -108,6 +130,19 @@ def create_app(voice=None):
         clips[clip_id] = wav
         while len(clips)>8:
             clips.popitem(last=False)
+        emotion=data.get('emotion','auto')
+        if emotion=='auto':
+            emotion='surprised' if any(c in text for c in ('びっくり','驚','！？','?!')) else 'happy' if any(c in text for c in ('嬉','うれし','楽し','ありがとう','こんにちは')) else 'thoughtful' if any(c in text for c in ('考え','どうしよう','うーん')) else 'neutral'
+        if emotion not in ('neutral','happy','thoughtful','surprised'):
+            emotion='neutral'
+        try:
+            with wave.open(io.BytesIO(wav)) as audio:
+                duration=audio.getnframes()/audio.getframerate()
+        except (wave.Error,EOFError):
+            duration=5
+        now=time.time()
+        state['performance'].update(emotion=emotion,started_at=now,until=now+duration+.3)
+        await publish()
         event = {'type':'speech', 'text':text, 'url':f'/speech/{clip_id}.wav', 'credit':voice.credit}
         owner = controllers[-1] if controllers else None
         for peer in tuple(peers):
@@ -166,6 +201,7 @@ def create_app(voice=None):
     app.router.add_post('/api/mode', api_mode)
     app.router.add_post('/api/control', api_control)
     app.router.add_post('/api/speech', speech)
+    app.router.add_post('/api/performance', performance)
     app.router.add_get('/ws', socket)
     app.router.add_get('/speech/{clip}.wav', audio)
     async def index(request):

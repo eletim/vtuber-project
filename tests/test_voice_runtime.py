@@ -1,5 +1,7 @@
 """Speech delivery ownership, cancellation and provider failures."""
 import asyncio
+import io
+import wave
 import sys
 import unittest
 from pathlib import Path
@@ -13,7 +15,10 @@ class Voice:
     async def synthesize(self,text):
         await self.gate.wait()
         if self.fail: raise ConnectionError('offline')
-        return b'RIFF'+b'0000WAVE'+text.encode()
+        buffer=io.BytesIO()
+        with wave.open(buffer,'wb') as wav:
+            wav.setnchannels(1);wav.setsampwidth(1);wav.setframerate(24000);wav.writeframes(text.encode())
+        return buffer.getvalue()
 
 class Speech(unittest.IsolatedAsyncioTestCase):
     async def asyncSetUp(self):
@@ -28,6 +33,7 @@ class Speech(unittest.IsolatedAsyncioTestCase):
         event=await r.json();self.assertEqual(event['playback_clients'],1)
         self.assertEqual((await a.receive_json())['type'],'cancel_speech')
         self.assertEqual((await b.receive_json())['type'],'cancel_speech')
+        self.assertEqual((await a.receive_json())['type'],'state');self.assertEqual((await b.receive_json())['type'],'state')
         self.assertTrue((await a.receive_json())['play']);self.assertFalse((await b.receive_json())['play'])
         wav=await self.client.get(event['url']);self.assertTrue((await wav.read()).startswith(b'RIFF'))
         await a.close();await b.close()
@@ -40,6 +46,15 @@ class Speech(unittest.IsolatedAsyncioTestCase):
         await self.client.post('/api/mode',json={'mode':'ai'})
         self.voice.fail=True
         self.assertEqual((await self.client.post('/api/speech',json={'text':'接続失敗'})).status,503)
+    async def test_performance_validation_and_mode_reset(self):
+        for data in ({'emotion':'invalid'},{'enabled':'yes'},{'duration':-1}):
+            self.assertEqual((await self.client.post('/api/performance',json=data)).status,400)
+        r=await self.client.post('/api/performance',json={'emotion':'thoughtful','duration':4})
+        self.assertEqual((await r.json())['emotion'],'thoughtful')
+        await self.client.post('/api/mode',json={'mode':'human'})
+        state=await (await self.client.get('/api/state')).json()
+        self.assertEqual(state['performance']['emotion'],'neutral')
+
     async def test_cache_bounded(self):
         first=None
         for i in range(9):

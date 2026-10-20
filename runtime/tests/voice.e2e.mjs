@@ -7,7 +7,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const {chromium}=createRequire(import.meta.url)(process.env.PLAYWRIGHT_MODULE||'playwright');
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../..');
-const out=resolve(root,'assets/parts/v12');await mkdir(out,{recursive:true});
+const out=resolve(root,process.env.VOICE_OUTPUT||'assets/parts/v12');await mkdir(out,{recursive:true});
 const engine=spawn(process.env.VOICEVOX_ENGINE,['--host','127.0.0.1','--port','50021','--cpu_num_threads','2']);
 engine.stderr.on('data',d=>process.stderr.write(d));
 const server=spawn('python',[resolve(root,'runtime/server.py'),'--port','18766']);
@@ -37,20 +37,38 @@ try{
  assert.ok(Math.max(...observed.map(x=>x.mouth))-Math.min(...observed.map(x=>x.mouth))>.05);
  await page.screenshot({path:resolve(out,'free-voice-control.png'),fullPage:true});
  await page.locator('#audio').evaluate(a=>a.pause());await page.waitForFunction(()=>window.koma.current.ParamMouthOpenY<.05);
+ // Confirm idle/gesture sharing and user override in the real controller and overlay.
+ await post('/api/performance',{enabled:true,emotion:'thoughtful',duration:4});
+ await page.waitForFunction(()=>window.koma.performance.emotion==='thoughtful');
+ await overlay.waitForFunction(()=>window.koma.performance.emotion==='thoughtful');
+ const before=await page.evaluate(()=>window.koma.current.ParamAngleZ);await page.waitForTimeout(500);
+ assert.ok(Math.abs(await page.evaluate(()=>window.koma.current.ParamAngleZ)-before)>.05);
+ await page.locator('#lively').uncheck();await page.waitForFunction(()=>!window.koma.performance.enabled);
+ await page.waitForTimeout(500);assert.ok(Math.abs(await page.evaluate(()=>window.koma.current.ParamAngleZ))<.1);
+ await page.locator('#lively').check();
  // Capture deterministic time-sampled frames from the real rendered model using WAV RMS.
  const amplitudes=await page.evaluate(async url=>{
    const ac=new AudioContext();const b=await ac.decodeAudioData(await (await fetch(url)).arrayBuffer());const samples=b.getChannelData(0),fps=15;
    return Array.from({length:Math.ceil(b.duration*fps)},(_,i)=>{let sum=0,n=0;for(let j=Math.floor(i*b.sampleRate/fps);j<Math.min(samples.length,(i+1)*b.sampleRate/fps);j++){sum+=samples[j]*samples[j];n++;}return Math.min(1,Math.max(0,(Math.sqrt(sum/Math.max(1,n))-.008)*7));});
  },speech.url);
  const frames=resolve(root,'runtime/test-results/voice-frames');await mkdir(frames,{recursive:true});
- for(let i=0;i<amplitudes.length;i++){
-  const data=await page.evaluate(({mouth,t})=>{const r=window.koma.renderer;r.render({...window.koma.current,ParamMouthOpenY:mouth,ParamEyeLOpen:t%4.7>4.48?0:1,ParamEyeROpen:t%4.7>4.48?0:1},t);return document.querySelector('#avatar').toDataURL().split(',')[1];},{mouth:amplitudes[i],t:i/15});
+ const start=Date.now()/1000;
+ const sequence=[...Array(30).fill(0),...amplitudes,...Array(45).fill(0)];
+ for(let i=0;i<sequence.length;i++){
+  const phase=i<30?'idle':i<30+amplitudes.length?'talk':'think';
+  const data=await page.evaluate(async({mouth,t,phase,start})=>{
+   const {performancePose}=await import('/web/performance.js');
+   const base={ParamAngleX:0,ParamAngleY:0,ParamAngleZ:0,ParamBodyAngleX:0,ParamEyeLOpen:1,ParamEyeROpen:1,ParamMouthOpenY:mouth,ParamBreath:.5+.5*Math.sin(t/1.7)};
+   const p=performancePose(base,start+t,{enabled:true,emotion:phase==='talk'?'happy':phase==='think'?'thoughtful':'neutral',started_at:start+(phase==='talk'?2:phase==='think'?2+document.querySelector('#audio').duration:0),until:0},mouth);
+   if(t%4.7>4.48)p.ParamEyeLOpen=p.ParamEyeROpen=0;
+   window.koma.renderer.render(p,t);return document.querySelector('#avatar').toDataURL().split(',')[1];
+  },{mouth:sequence[i],t:i/15,phase,start});
   await writeFile(resolve(frames,`${String(i).padStart(4,'0')}.png`),Buffer.from(data,'base64'));
  }
  const speaking=post('/api/speech',{text:'途中で人間操作に切り替えます。'});await speaking;
  await page.waitForFunction(()=>!document.querySelector('#audio').paused);
  await post('/api/mode',{mode:'human'});await page.waitForFunction(()=>document.querySelector('#audio').paused&&document.querySelector('#subtitle').textContent==='');
  assert.deepEqual(errors,[]);
- await writeFile(resolve(out,'voice-verification.json'),JSON.stringify({status:'PASS',engine:'VOICEVOX engine 0.25.2 CPU',credit:speech.credit,text,checks:['real Japanese WAV synthesis','single controller playback; overlay silent','real Web Audio RMS mouth motion','mouth state reaches overlay','pause closes mouth','mode switch cancels playback'],observed,frames:amplitudes.length},null,2)+'\n');
+ await writeFile(resolve(out,'voice-verification.json'),JSON.stringify({status:'PASS',engine:'VOICEVOX engine 0.25.2 CPU',credit:speech.credit,text,checks:['real Japanese WAV synthesis','single controller playback; overlay silent','real Web Audio RMS mouth motion','mouth state reaches overlay','pause closes mouth','mode switch cancels playback','shared idle and thoughtful gesture','natural motion toggle returns neutral pose'],observed,frames:sequence.length},null,2)+'\n');
  console.log('PASS real VOICEVOX playback and lip sync; frames',amplitudes.length);
 }finally{if(browser)await browser.close();server.kill();engine.kill();}

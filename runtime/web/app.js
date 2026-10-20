@@ -1,3 +1,4 @@
+import {performancePose} from './performance.js';
 import {AvatarRenderer} from './renderer.js';
 import {limits,neutral,faceParameters,rmsMouth,smoothParameters,clamp} from './controls.js';
 const $=id=>document.getElementById(id);
@@ -6,7 +7,7 @@ let mode='human',target=neutral(),current=neutral(),ws,cameraStream,micStream,la
 let cameraPending=false,audioContext,micAnalyser,fileAnalyser,fileSource,audioURL;
 let manualBlink=0,lastFaceAt=0,frameStamp=0,lastSent=0;
 let demoTimer,connectionTimer;
-let manualActive=false;
+let manualActive=false,performanceState={enabled:true,emotion:'neutral'};
 const sliders={};
 const names={ParamAngleX:'顔・左右',ParamAngleY:'顔・上下',ParamAngleZ:'顔・傾き',ParamBodyAngleX:'体・左右',ParamEyeLOpen:'左目',ParamEyeROpen:'右目',ParamMouthOpenY:'口の開き'};
 const status=text=>$('status').textContent=text;
@@ -21,7 +22,8 @@ function connect(){
     const event=JSON.parse(data);
     if(event.type==='state'){
       const changed=mode!==event.mode;
-      mode=event.mode;target={...event.parameters};
+      mode=event.mode;target={...event.parameters};performanceState={...event.performance};
+      $('lively').checked=performanceState.enabled;
       if(changed){manualActive=false;stopCamera();stopMic();cancelSpeech();$('audio').pause();clearInterval(demoTimer);}
       $('human').classList.toggle('selected',mode==='human');$('ai').classList.toggle('selected',mode==='ai');
       $('mode-label').textContent=mode==='human'?'人間操作':'AI操作';
@@ -95,7 +97,9 @@ async function playSpeech(event){
   $('audio-status').textContent=event.credit+' · 実際の音量でリップシンク';
   try{await $('audio').play();}catch(e){$('audio-status').textContent=event.credit+' · 下の再生ボタンを押して音声を有効にしてください。';}
 }
-$('speak').onclick=async()=>{try{prepareAudio();clearInterval(demoTimer);await post('/api/mode',{mode:'ai'});status('音声を合成しています…');await post('/api/speech',{text:$('speech').value});status('音声を生成しました。');}catch(e){report(e);}};
+$('speak').onclick=async()=>{try{prepareAudio();clearInterval(demoTimer);await post('/api/mode',{mode:'ai'});status('音声を合成しています…');await post('/api/speech',{text:$('speech').value,emotion:$('emotion').value});status('音声を生成しました。');}catch(e){report(e);}};
+$('lively').onchange=()=>post('/api/performance',{enabled:$('lively').checked}).catch(report);
+$('gesture').onclick=()=>post('/api/performance',{emotion:$('emotion').value==='auto'?'happy':$('emotion').value,duration:4}).catch(report);
 $('demo').onclick=async()=>{
   $('audio').pause();cancelSpeech();clearInterval(demoTimer);await post('/api/mode',{mode:'ai'});const start=performance.now();
   demoTimer=setInterval(()=>{const t=(performance.now()-start)/1000;
@@ -130,13 +134,13 @@ function tick(now){
   if(mode==='human'&&micAnalyser){micAnalyser.getFloatTimeDomainData(samples);target.ParamMouthOpenY=rmsMouth(samples);microphone=true;}
   if(mode==='ai'&&fileAnalyser&&!$('audio').paused){fileAnalyser.getFloatTimeDomainData(samples);target.ParamMouthOpenY=rmsMouth(samples);microphone=true;}
   if((tracking||microphone||manualActive)&&now-lastSent>(manualActive&&!tracking&&!microphone?700:90)){send(target);lastSent=now;}
-  const pose={...target};
+  const pose=mode==='ai'?performancePose(target,Date.now()/1000,performanceState,target.ParamMouthOpenY):{...target};
   const phase=(now/1000)%4.7;const blink=$('autoblink').checked&&!tracking&&phase>4.48;
   if(blink||manualBlink>now)pose.ParamEyeLOpen=pose.ParamEyeROpen=0;
   pose.ParamBreath=.5+.5*Math.sin(now/1700);
   current=smoothParameters(current,pose,dt);renderer.render(current,now/1000);
   frames++;if(now-fpsTime>1000){$('fps').textContent=`${Math.round(frames*1000/(now-fpsTime))} FPS`;fpsTime=now;frames=0;}
-  window.koma={mode,target:{...target},current:{...current},frames:renderer.frames,tracking,lastFaceAt,renderer};
+  window.koma={mode,target:{...target},current:{...current},frames:renderer.frames,tracking,lastFaceAt,renderer,performance:performanceState};
   frameStamp=requestAnimationFrame(tick);
 }
 window.addEventListener('beforeunload',()=>{clearTimeout(connectionTimer);clearInterval(demoTimer);ws.onclose=null;ws.close();stopCamera();stopMic();cancelSpeech();landmarker?.close();audioContext?.close();if(audioURL)URL.revokeObjectURL(audioURL);cancelAnimationFrame(frameStamp);});
