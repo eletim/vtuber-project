@@ -4,6 +4,9 @@ import asyncio
 import json
 import math
 import time
+import uuid
+from collections import OrderedDict
+from voice import Voicevox
 from pathlib import Path
 from aiohttp import web, WSMsgType
 
@@ -26,11 +29,15 @@ def validate_parameters(values):
     return result
 
 
-def create_app():
+def create_app(voice=None):
     app = web.Application(client_max_size=65536)
     state = {'mode':'human', 'parameters':{k:v[2] for k,v in LIMITS.items()},
              'revision':0, 'source':'idle'}
     peers = set()
+    controllers = []
+    voice = voice or Voicevox()
+    clips = OrderedDict()
+    generation = [0]
     deadline = [0.0]
 
     async def send(event):
@@ -69,6 +76,7 @@ def create_app():
             raise web.HTTPBadRequest(text='mode must be human or ai')
         state.update(mode=data['mode'], source='idle', parameters={k:v[2] for k,v in LIMITS.items()})
         deadline[0] = 0
+        generation[0] += 1
         await send({'type':'cancel_speech'})
         await publish()
         return web.json_response(state)
@@ -87,13 +95,40 @@ def create_app():
         text = data.get('text') if isinstance(data,dict) else None
         if not isinstance(text,str) or not text.strip() or len(text)>2000:
             raise web.HTTPBadRequest(text='text must contain 1–2000 characters')
-        await send({'type':'speech', 'text':text})
-        return web.json_response({'queued_clients':len(peers)})
+        generation[0] += 1
+        ticket = generation[0]
+        await send({'type':'cancel_speech'})
+        try:
+            wav = await voice.synthesize(text)
+        except Exception as error:
+            raise web.HTTPServiceUnavailable(text='音声合成に接続できません。VOICEVOXを起動してください。 '+str(error))
+        if ticket != generation[0] or state['mode'] != 'ai':
+            raise web.HTTPConflict(text='speech was superseded or cancelled')
+        clip_id = uuid.uuid4().hex
+        clips[clip_id] = wav
+        while len(clips)>8:
+            clips.popitem(last=False)
+        event = {'type':'speech', 'text':text, 'url':f'/speech/{clip_id}.wav', 'credit':voice.credit}
+        owner = controllers[-1] if controllers else None
+        for peer in tuple(peers):
+            try:
+                await peer.send_json({**event, 'play':peer is owner})
+            except (ConnectionError, RuntimeError):
+                peers.discard(peer)
+        return web.json_response({**event, 'queued_clients':len(peers), 'playback_clients':int(owner is not None)})
+
+    async def audio(request):
+        wav = clips.get(request.match_info['clip'])
+        if wav is None:
+            raise web.HTTPNotFound(text='audio expired; request speech again')
+        return web.Response(body=wav, content_type='audio/wav', headers={'Cache-Control':'no-store'})
 
     async def socket(request):
         ws = web.WebSocketResponse(heartbeat=20)
         await ws.prepare(request)
         peers.add(ws)
+        if request.query.get("role") != "overlay":
+            controllers.append(ws)
         await ws.send_json({'type':'state', **state})
         try:
             async for msg in ws:
@@ -107,6 +142,8 @@ def create_app():
                         await ws.send_json({'type':'error','message':str(e)})
         finally:
             peers.discard(ws)
+            if ws in controllers:
+                controllers.remove(ws)
         return ws
 
     async def expiry(app):
@@ -130,6 +167,7 @@ def create_app():
     app.router.add_post('/api/control', api_control)
     app.router.add_post('/api/speech', speech)
     app.router.add_get('/ws', socket)
+    app.router.add_get('/speech/{clip}.wav', audio)
     async def index(request):
         return web.FileResponse(ROOT/'web/index.html')
     app.router.add_get('/', index)

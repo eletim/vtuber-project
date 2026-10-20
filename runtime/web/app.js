@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id);
 const renderer=new AvatarRenderer();
 let mode='human',target=neutral(),current=neutral(),ws,cameraStream,micStream,landmarker,tracking=false;
 let cameraPending=false,audioContext,micAnalyser,fileAnalyser,fileSource,audioURL;
-let speechActive=false,manualBlink=0,lastFaceAt=0,frameStamp=0,lastSent=0,speechStart=0;
+let manualBlink=0,lastFaceAt=0,frameStamp=0,lastSent=0;
 let demoTimer,connectionTimer;
 let manualActive=false;
 const sliders={};
@@ -14,7 +14,7 @@ async function post(path,body){const r=await fetch(path,{method:'POST',headers:{
 function report(error){console.error(error);status(error.message||String(error));}
 function send(parameters,source=mode){if(ws?.readyState===1)ws.send(JSON.stringify({source,parameters,ttl_ms:2000}));}
 function connect(){
-  ws=new WebSocket(`${location.protocol==='https:'?'wss':'ws'}://${location.host}/ws`);
+  ws=new WebSocket(`${location.protocol==='https:'?'wss':'ws'}://${location.host}/ws?role=${new URLSearchParams(location.search).has('overlay')?'overlay':'controller'}`);
   ws.onopen=()=>{$('connection').textContent='● 接続済み';};
   ws.onclose=()=>{$('connection').textContent='再接続中…';connectionTimer=setTimeout(connect,1200);};
   ws.onmessage=({data})=>{
@@ -29,8 +29,8 @@ function connect(){
       for(const [key,input] of Object.entries(sliders)){input.value=target[key];input.nextElementSibling.value=target[key].toFixed(2);}
     }
     if(event.type==='speech'){
-      if(document.body.classList.contains('overlay'))$('subtitle').textContent=event.text;
-      else speak(event.text);
+      $('subtitle').textContent=event.text;
+      if(event.play)playSpeech(event).catch(report);
     }
     if(event.type==='cancel_speech')cancelSpeech();
     if(event.type==='error')status(event.message);
@@ -86,17 +86,16 @@ $('microphone').onclick=async()=>{
     $('microphone').textContent='マイク停止';updateTracking();
   }catch(error){stopMic();report(error);}
 };
-function cancelSpeech(){speechSynthesis.cancel();speechActive=false;$('subtitle').textContent='';}
-function speak(text){
-  cancelSpeech();$('subtitle').textContent=text;
-  const utterance=new SpeechSynthesisUtterance(text);utterance.lang='ja-JP';
-  const voice=speechSynthesis.getVoices().find(v=>v.lang.startsWith('ja'));if(voice)utterance.voice=voice;
-  utterance.onstart=()=>{speechActive=true;speechStart=performance.now();};
-  utterance.onend=()=>{speechActive=false;send({ParamMouthOpenY:0},'ai');};
-  utterance.onerror=e=>{speechActive=false;$('audio-status').textContent='端末の音声合成が使えません。音声ファイルでも操作できます。';};
-  speechSynthesis.speak(utterance);
+function cancelSpeech(){$('audio').pause();$('subtitle').textContent='';}
+function prepareAudio(){
+  if(!fileSource){fileSource=context().createMediaElementSource($('audio'));fileAnalyser=context().createAnalyser();fileAnalyser.fftSize=1024;fileSource.connect(fileAnalyser);fileAnalyser.connect(context().destination);}
 }
-$('speak').onclick=async()=>{try{$('audio').pause();clearInterval(demoTimer);await post('/api/mode',{mode:'ai'});await post('/api/speech',{text:$('speech').value});}catch(e){report(e);}};
+async function playSpeech(event){
+  prepareAudio();$('audio').src=event.url;
+  $('audio-status').textContent=event.credit+' · 実際の音量でリップシンク';
+  try{await $('audio').play();}catch(e){$('audio-status').textContent=event.credit+' · 下の再生ボタンを押して音声を有効にしてください。';}
+}
+$('speak').onclick=async()=>{try{prepareAudio();clearInterval(demoTimer);await post('/api/mode',{mode:'ai'});status('音声を合成しています…');await post('/api/speech',{text:$('speech').value});status('音声を生成しました。');}catch(e){report(e);}};
 $('demo').onclick=async()=>{
   $('audio').pause();cancelSpeech();clearInterval(demoTimer);await post('/api/mode',{mode:'ai'});const start=performance.now();
   demoTimer=setInterval(()=>{const t=(performance.now()-start)/1000;
@@ -110,7 +109,7 @@ $('audiofile').onchange=async()=>{
   try{
     await post('/api/mode',{mode:'ai'});cancelSpeech();clearInterval(demoTimer);
     if(audioURL)URL.revokeObjectURL(audioURL);audioURL=URL.createObjectURL(file);$('audio').src=audioURL;
-    if(!fileSource){fileSource=context().createMediaElementSource($('audio'));fileAnalyser=context().createAnalyser();fileAnalyser.fftSize=1024;fileSource.connect(fileAnalyser);fileAnalyser.connect(context().destination);}
+    prepareAudio();
     await $('audio').play();$('audio-status').textContent='音声の実際の音量で口を動かしています。';
   }catch(e){report(e);}
 };
@@ -130,7 +129,6 @@ function tick(now){
   let microphone=false;
   if(mode==='human'&&micAnalyser){micAnalyser.getFloatTimeDomainData(samples);target.ParamMouthOpenY=rmsMouth(samples);microphone=true;}
   if(mode==='ai'&&fileAnalyser&&!$('audio').paused){fileAnalyser.getFloatTimeDomainData(samples);target.ParamMouthOpenY=rmsMouth(samples);microphone=true;}
-  if(mode==='ai'&&speechActive){target.ParamMouthOpenY=.2+.5*Math.abs(Math.sin((now-speechStart)/95));microphone=true;}
   if((tracking||microphone||manualActive)&&now-lastSent>(manualActive&&!tracking&&!microphone?700:90)){send(target);lastSent=now;}
   const pose={...target};
   const phase=(now/1000)%4.7;const blink=$('autoblink').checked&&!tracking&&phase>4.48;
