@@ -1,0 +1,22 @@
+{
+  "reviewer": "Codex visual inspection",
+  "date": "2026-10-20",
+  "scope": "Expression toggles and skin beneath eye/mouth parts only",
+  "result": "PASS",
+  "evidence": {
+    "four_expressions.png": "9411722da79c4a7ff2a8bc2fbd3de0099368434875a2057d08d737cb0dd39665",
+    "skin_reveal_detail.png": "3259c4ae6bc67cb12f7da758d11812e6735438ff8ccf134c38ab21afa7e441ec",
+    "independent_blinks.png": "fcdfc33bf97ecc841347f9cc49de97ca7c0f8bce2afb026b861c2e713fefb5f4",
+    "expression_cycle.gif": "39dabc7bcacbc6e20bbbf93bb3316a7287bf6946e6e6e6472f5d33b99d558a77",
+    "koma_expressions_v9.psd": "941846c094c14a3f4c88313738b868469c4dc97bb999346ab3db6659264f231d"
+  },
+  "observations": {
+    "normal": "Identical to inherited PSD; face identity and design preserved.",
+    "eyes_closed": "Both lashes continuous; no visible open-eye remnants or holes.",
+    "mouth_closed": "Continuous smile line and corners; no mouth cavity remains.",
+    "both_closed": "No overlap seam or duplicated expression lines observed.",
+    "skin_reveal": "No polygon patches, gaps, or mouth/eye outlines observed after hiding all open parts.",
+    "independent_blinks": "Left and right eye close independently; other eye and mouth preserved."
+  },
+  "remaining": "Inherited hair/clothing issues and sleeve/hand integration; no Cubism rigging or continuous deformation verification."
+}

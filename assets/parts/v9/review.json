@@ -1,0 +1,34 @@
+{
+  "source_psd": "assets/parts/v8/koma_neck_clothing_cleaned_v8.psd",
+  "source_sha256": "e839e28da1ce66cd81987bee13d2e15c58a5080a8db2763bb77935591179a685",
+  "layer_count": 54,
+  "normal_changed_pixels_vs_source": 0,
+  "inherited_foreground_rgb_differences_vs_original": 25541,
+  "states": {
+    "normal": {
+      "alpha_changes": 0,
+      "psd_roundtrip_exact": true
+    },
+    "eyes_closed": {
+      "alpha_changes": 0,
+      "psd_roundtrip_exact": true
+    },
+    "mouth_closed": {
+      "alpha_changes": 0,
+      "psd_roundtrip_exact": true
+    },
+    "both_closed": {
+      "alpha_changes": 0,
+      "psd_roundtrip_exact": true
+    }
+  },
+  "visual_review": "PENDING",
+  "skin_source_crop": [
+    305,
+    130,
+    730,
+    480
+  ],
+  "toggle": "Hide corresponding .open and show .closed; normal shows all .open.",
+  "scope": "Expression skin only; inherited hair/clothing defects remain."
+}
