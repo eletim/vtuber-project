@@ -1,38 +1,74 @@
-# VTuber Project — 羽月こま
+# 羽月こま — VTuber Project
 
-## 2026-10-19 更新：制作素材をGitに登録済み
+人間とAIの両方で操作するVTuberの制作プロジェクトです。
 
-PSD v7/v8・確定画像・表情参照画像は、PR #13により `dev/v0.3.0` に登録済みです。PSD本体を含め、素材は通常のGitで管理します。新規ワークツリーでは追加操作なしで取得でき、`sha256sum -c docs/v8-approved-assets.sha256` で確認できます。以前の「素材不足によるブロック」はこの登録以前の状況です。現行の制作原則は `docs/design-principles.md` を参照してください。次の実制作は Issue #15 で進めます。
+## 現在の成果（v10）
 
+- 66レイヤーの統合PSD。v9の表情、既存の袖・腕・手、髪・ベストの描画下地を統合。
+- 通常合成と左右個別を含む8通りの表情は、v9とRGBA全画素で一致。
+- WebGL操作画面。まばたき・口の開閉、顔と体の変形、呼吸に対応。
+- 人間: カメラの顔追跡、マイクの音量、スライダー。
+- AI: HTTP/WebSocketのパラメータ指示、テキスト読み上げ要求、音声ファイルのリップシンク。
+- 透明・グリーン背景と配信用表示。
 
-将棋VTuberキャラクターをLive2D化する制作プロジェクトです。人間モードとAIモードの両方に対応させる予定です。
+![操作画面](assets/parts/v10/control_room.png)
 
-## 現在の工程
+## 起動
 
-PSD v8 の承認済み入力素材は利用可能です。5つのソース素材は [PSD v8 input baseline](docs/v8-input-baseline.md) の手順で検証でき、v8 PSDは49レイヤーを保持しています。現在残っているのは入力取得ではなく、髪・頭部、首・衣装、袖・腕・手などの美術修正、統合、視覚監査です。
-
-- `python3 scripts/validate_approved_assets.py` でハッシュ、通常Git blob、PSD構造をまとめて検証できます
-- 承認済みPSDは上書きせず、表情修正の再生成物は別の候補PSDとして比較します
-- Live2D Cubismのモデリング・リギングも未実施です
-
-過去の v6 の性能改善と検証範囲は [PSD生成の性能レビュー](docs/psd_performance_review_20261018.md)、v8 表情修正の過去の報告は [履歴資料](docs/v8-expression-psd-repair.md) として残しています。どちらも現在の v8 リリースが検証済みであることを示すものではありません。
-
-## 再生成・監査
-
-Python 3.10以降。無料のオープンソースライブラリを利用します。
+Python 3.10以降。Chrome/Edge等のWebGL対応ブラウザを使います。
 
 ```bash
 python -m pip install -r requirements.txt
-
-# 元画像がなくても動くPSDエクスポート回帰テスト
-python tests/test_psd_writer.py
+python scripts/run_runtime.py
 ```
 
-次のゲートを順番に満たす必要があります。
+ブラウザで **http://127.0.0.1:8766/** を開いてください。
+初回だけ顔追跡のモデル/WASMを取得し、SHA-256で照合します。取得後の追跡はローカルで実行します。
+カメラ・マイクはボタンを押したときに開始します。
+コントロール画面を開いたまま、OBSのブラウザソース等で `http://127.0.0.1:8766/?overlay=1` を表示できます。
 
-1. [input baseline](docs/v8-input-baseline.md) に従って入力を検証し、`python scripts/repair_expressions_v8.py` で表情修正を別の候補PSDへ再生成して、承認済みPSDを上書きせずに比較・確認する
-2. 髪・頭部、首・衣装、袖・腕・手・隠れた肌の各領域の素材を完成させ、レビューする
-3. [integration worklog](docs/v8-integration-worklog.md) に従って編集可能なPSDへ統合し、初期画像と表情を維持できていることを確認する
-4. [visual audit worklog](docs/v8-visual-audit-worklog.md) に定めた全成果物を生成し、視覚監査する
+## AIから操作
 
-入力ゲートは通過済みですが、その結果だけで美術修正、視覚レビュー、またはCubism対応の完了を保証するものではありません。
+起動したコントロール画面を開いてから実行します。
+
+```bash
+python runtime/ai_client.py --demo
+python runtime/ai_client.py --say "こんにちは、羽月こまです。"
+```
+
+既存のAIプログラムから直接呼べます。
+
+```python
+from runtime.ai_client import KomaClient
+
+koma = KomaClient()
+koma.select("ai")
+koma.pose(ParamAngleX=8, ParamEyeLOpen=0, ParamMouthOpenY=1)
+koma.say("次の一手を考えています。")
+```
+
+会話AI/LLMそのものはまだ接続していません。
+人間/AIの切り替えで前の入力を停止し、外部からの指示が途切れると2秒で通常姿勢へ戻ります。
+読み上げは端末の音声合成を使います。音声ファイルとマイクではWeb Audioの音量に合わせて口を動かします。
+
+## PSDと再生成
+
+`assets/parts/v10/koma_integrated_v10.psd` が最新候補です。承認済み原画と旧PSDは上書きしていません。
+
+```bash
+python scripts/build_integrated_v10.py
+python scripts/export_runtime_model.py
+python tests/test_integrated_v10.py
+python tests/test_runtime_server.py
+node --test runtime/tests/controls.test.js
+```
+
+保存した描画素材から再ビルドでき、画像生成を再実行する必要はありません。
+
+## 残っている工程
+
+**正式なCubismモデル（cmo3/moc3/model3.json）は未作成です。** 現在の実行版はPSD由来素材を独自の2Dメッシュで動かしています。
+目・口は開閉2状態の切り替えです。中間形状、立体的な顔の向き、パーツごとの物理演算は次の工程です。
+元の髪の外周マットにも荒れが残るため、PSD全体を最終美術合格にはしていません。
+
+[制作・検証記録](docs/v10-production-runtime.md) / [Cubism引き継ぎ設定](config/cubism_rig_v10.json)

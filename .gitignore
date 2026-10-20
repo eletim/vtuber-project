@@ -28,3 +28,7 @@ assets/parts/**/mismatch_map.png
 # Regenerable high-resolution visual QA output (not source artwork)
 artifacts/v8_visual_review/
 artifacts/expression_baseline/
+artifacts/v10/
+runtime/vendor/
+runtime/node_modules/
+runtime/test-results/
