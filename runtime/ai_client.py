@@ -10,9 +10,9 @@ class KomaClient:
     def __init__(self,url='http://127.0.0.1:8766'):
         self.url=url.rstrip('/')
 
-    def _post(self,path,data):
+    def _post(self,path,data,timeout=5):
         request=Request(self.url+path,json.dumps(data).encode(),{'Content-Type':'application/json'})
-        with urlopen(request,timeout=5) as response:
+        with urlopen(request,timeout=timeout) as response:
             return json.load(response)
 
     def select(self,mode='ai'):
@@ -22,7 +22,7 @@ class KomaClient:
         return self._post('/api/control',{'source':'ai','parameters':parameters,'ttl_ms':2000})
 
     def say(self,text):
-        return self._post('/api/speech',{'text':text})
+        return self._post('/api/speech',{'text':text},timeout=125)
 
 
 if __name__=='__main__':

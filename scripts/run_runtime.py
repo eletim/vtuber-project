@@ -5,6 +5,8 @@ import hashlib
 import json
 import subprocess
 import sys
+import time
+from urllib.request import urlopen
 from pathlib import Path
 from urllib.request import urlretrieve
 ROOT=Path(__file__).resolve().parents[1]
@@ -29,7 +31,26 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port',type=int,default=8766)
     parser.add_argument('--prepare-only',action='store_true')
+    parser.add_argument('--voicevox',action='store_true',help='Start the Linux engine installed by setup_voicevox.py')
+    parser.add_argument('--voicevox-engine',type=Path,help='Start an existing VOICEVOX engine executable')
     args=parser.parse_args()
     prepare()
     if not args.prepare_only:
-        raise SystemExit(subprocess.call([sys.executable,str(ROOT/'runtime/server.py'),'--port',str(args.port)]))
+        engine=None
+        try:
+            executable=args.voicevox_engine or (ROOT/'runtime/vendor/voicevox/linux-cpu-x64/run' if args.voicevox else None)
+            if executable:
+                engine=subprocess.Popen([str(executable.resolve()),'--host','127.0.0.1','--port','50021','--cpu_num_threads','2'])
+                for _ in range(300):
+                    if engine.poll() is not None:
+                        raise RuntimeError('VOICEVOX failed to start')
+                    try:
+                        with urlopen('http://127.0.0.1:50021/version',timeout=1):break
+                    except OSError:time.sleep(.2)
+                else:raise RuntimeError('VOICEVOX startup timeout')
+            raise SystemExit(subprocess.call([sys.executable,str(ROOT/'runtime/server.py'),'--port',str(args.port)]))
+        finally:
+            if engine:
+                engine.terminate()
+                try:engine.wait(timeout=5)
+                except subprocess.TimeoutExpired:engine.kill()

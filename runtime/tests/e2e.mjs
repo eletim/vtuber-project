@@ -74,8 +74,8 @@ try{
   await page.locator('#ai').click();await page.waitForFunction(()=>window.koma.mode==='ai');
   await page.waitForFunction(()=>document.querySelector('#microphone').textContent==='マイク開始');
  }
- await api('/api/speech',{text:'羽月こまの発話テストです。'});await page.waitForFunction(()=>document.querySelector('#subtitle').textContent.includes('発話テスト'));
- report.checks.push('AI speech event reaches subtitles/browser synthesis request (voice output not verified)');
+ const invalidSpeech=await fetch(base+'/api/speech',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:''})});assert.equal(invalidSpeech.status,400);
+ report.checks.push('empty speech rejected; real VOICEVOX playback covered separately by voice.e2e.mjs');
  await page.locator('#human').click();await page.waitForFunction(()=>document.querySelector('#subtitle').textContent==='');
  await page.setViewportSize({width:390,height:844});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));

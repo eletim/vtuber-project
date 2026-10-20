@@ -73,3 +73,7 @@ node --test runtime/tests/*.test.js
 元の髪の外周マットにも荒れが残るため、PSD全体を最終美術合格にはしていません。
 
 [制作・検証記録](docs/v10-production-runtime.md) / [身体の動きの修正](docs/body-motion-v11.md) / [Cubism引き継ぎ設定](config/cubism_rig_v10.json)
+
+## 無料音声で発話（v12）
+
+VOICEVOXを起動して `python scripts/run_runtime.py` → 「読み上げ」。日本語音声に合わせて口が動きます。[起動・AI接続・検証](docs/free-voice-v12.md)。仮音声：VOICEVOX:雨晴はう。
