@@ -1,0 +1,88 @@
+{
+  "format": "cubism-authoring-handoff-1",
+  "source_psd": "assets/parts/v10/koma_integrated_v10.psd",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "parameters": {
+    "ParamAngleX": [
+      -15,
+      0,
+      15
+    ],
+    "ParamAngleY": [
+      -10,
+      0,
+      10
+    ],
+    "ParamAngleZ": [
+      -8,
+      0,
+      8
+    ],
+    "ParamBodyAngleX": [
+      -5,
+      0,
+      5
+    ],
+    "ParamEyeLOpen": [
+      0,
+      1
+    ],
+    "ParamEyeROpen": [
+      0,
+      1
+    ],
+    "ParamMouthOpenY": [
+      0,
+      1
+    ],
+    "ParamBreath": [
+      0,
+      0.5,
+      1
+    ]
+  },
+  "pivots": {
+    "head": [
+      540,
+      395
+    ],
+    "body": [
+      543,
+      900
+    ],
+    "left_arm": [
+      365,
+      565
+    ],
+    "right_arm": [
+      780,
+      565
+    ]
+  },
+  "controls": {
+    "ParamEyeLOpen": [
+      "eye_screen_right.open",
+      "eye_screen_right.closed"
+    ],
+    "ParamEyeROpen": [
+      "eye_screen_left.open",
+      "eye_screen_left.closed"
+    ],
+    "ParamMouthOpenY": [
+      "mouth.open",
+      "mouth.closed"
+    ]
+  },
+  "next_authoring": [
+    "Import layered PSD in Cubism Editor.",
+    "Create body/head deformers and per-part art meshes.",
+    "Author intermediate eye/mouth shapes and head angle keys, inspect every extreme.",
+    "Create hair/sleeve physics after checking overlaps.",
+    "Export a real model3.json + moc3 + textures, validate in Cubism Viewer."
+  ],
+  "cubism_project_created": false,
+  "moc3_exported": false
+}
