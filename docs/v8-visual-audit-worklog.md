@@ -2,45 +2,38 @@
 
 ## Result
 
-The visual PSD audit is **blocked and not run**. No image or regression GIF was
-exported because the mandatory gate in
-[`v8-input-baseline.md`](v8-input-baseline.md) is not satisfied and there is no
+The visual PSD audit is **blocked and not run**. The mandatory input gate in
+[`v8-input-baseline.md`](v8-input-baseline.md) is satisfied, but there is no
 completed integrated PSD to audit.
 
-This gate was rechecked on 2026-10-19 against `dev/v0.3.0` at
-`ea28b812302ef25e95376cf0331fd987f5bb060e`. The worktree, reachable Git
-history and remote branches, GitHub issue and pull-request records, and GitHub
-releases contain no owner-supplied artwork bundle, authoritative design
-principles, immutable approval record, completed region artwork, or completed
-integrated PSD. Pull request #2 records that binary inputs were supplied in a
-conversation ZIP, but neither that ZIP nor its approval evidence is available
-from this checkout.
+The input gate was rechecked on 2026-10-19 against `dev/v0.4.0`. The approved
+source assets and checksum manifest are available as ordinary Git blobs. The
+completed region artwork and integrated PSD required for this later audit are
+still outstanding.
 
 ## Audit evidence
 
 | Required evidence | Status |
 | --- | --- |
-| Initial-state image | **NOT RUN — BLOCKED.** There is no completed integrated PSD or approved confirmed image from which to export and compare it. |
+| Initial-state image | **NOT RUN — BLOCKED.** The approved confirmed image is available, but there is no completed integrated PSD to export and compare. |
 | Visibility-toggle images | **NOT RUN — BLOCKED.** The completed hidden artwork and integrated editable layers do not exist in this checkout. |
 | Displaced-part images | **NOT RUN — BLOCKED.** There is no completed integrated PSD whose independently editable parts can be moved and visually reviewed. |
-| Expression images | **NOT RUN — BLOCKED.** The approved expression references and integrated PSD are unavailable. |
-| Expression regression GIFs | **NOT RUN — BLOCKED.** A GIF generated from absent or substitute inputs would not be valid regression evidence. |
-| RGB fidelity | **NOT VERIFIED.** Neither side of the required integrated-PSD-to-confirmed-image comparison is available. |
-| Alpha fidelity | **NOT VERIFIED.** Neither side of the required integrated-PSD-to-confirmed-image comparison is available. |
+| Expression images | **NOT RUN — BLOCKED.** The approved expression references are available, but the integrated PSD is not. |
+| Expression regression GIFs | **NOT RUN — BLOCKED.** There is no completed integrated PSD from which to generate current regression evidence. |
+| RGB fidelity | **NOT VERIFIED.** The approved confirmed image is available, but the required integrated PSD is not. |
+| Alpha fidelity | **NOT VERIFIED.** The approved confirmed image is available, but the required integrated PSD is not. |
 | Visible art quality | **NOT REVIEWED.** There are no valid exports to inspect for natural lines, fills, seams, overlaps, or continuity. |
 
 No row above is a pass. In particular, the existing structural audit's
-zero-hole result, if it could be run, would be only a mechanical check and
-would not establish visible art quality. Missing evidence, unavailable inputs,
-and a retry-limit warning must remain failures or unresolved findings; they
-must never be promoted to PASS.
+zero-hole result would be only a mechanical check and would not establish
+visible art quality. Missing evidence and a retry-limit warning must remain
+failures or unresolved findings; they must never be promoted to PASS.
 
 ## Required sequence after unblocking
 
-Run this audit only after every requirement in the input baseline is satisfied,
-the owner-supplied checksums or equivalent immutable approval record is
-validated, all region artwork is completed, and the editable integrated PSD is
-reloaded successfully. Then:
+Run this audit only after the input baseline remains satisfied, all region
+artwork is completed, and the editable integrated PSD is reloaded successfully.
+Then:
 
 1. export the initial state and compare its RGB and alpha channels with the
    approved confirmed image;

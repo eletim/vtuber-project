@@ -33,4 +33,4 @@ git log -1 --oneline
 
 PRで9つの素材ファイルの追加を確認し、その後に対象の開発ブランチへ統合します。取り込み後のAWMでは、`assets/original/`、`assets/expression_references/`、`assets/parts/v7/`、`assets/parts/v8/` を参照できます。
 
-素材の存在確認が済むまでは、AWMのblocked状態やPSD制作完了判定を変更しません。
+現在の通常Git checkoutでは、`python3 scripts/validate_approved_assets.py` を実行して5つの承認済みソース素材とPSD構造を確認します。入力検証の合格は、後続の美術修正や視覚レビューの完了を意味しません。

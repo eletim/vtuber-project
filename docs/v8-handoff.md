@@ -5,60 +5,43 @@
 
 ## Handoff result
 
-The reusable v8 handoff is **blocked and documentation-only**. The verified
-repository materials below are the complete handoff currently available; no
-asset archive was created because the required approved binaries, completed
-region artwork, integrated PSD, and visual-audit evidence do not exist in this
-checkout.
+The reusable v8 handoff remains **incomplete** because completed region
+artwork, an integrated PSD, and current visual-audit evidence do not exist. The
+five approved source assets are available and pass the input baseline; they are
+not the finished handoff by themselves.
 
-This status was consolidated on 2026-10-19 on `dev/v0.3.0`. The release head
-includes the input, artwork, integration, visual-audit, and handoff gate
-records. Its tracked tree contains no `assets/` directory and no PSD, PNG, GIF,
-or ZIP artifact.
+This status was updated on 2026-10-19 on `dev/v0.4.0`. Its tracked tree contains
+the approved PSD, PNG, GIF, JSON, and README bundle contents as ordinary Git
+blobs. The source ZIP remains intentionally untracked to avoid duplication.
 
 ## Verified reusable materials
 
 | Material | Verified use and limitation |
 | --- | --- |
-| [`scripts/repair_expressions_v8.py`](../scripts/repair_expressions_v8.py) | Reproducible expression-repair entry point. It resolves the documented inputs and outputs but cannot run without the missing artwork. Its prior reported results are not a substitute for rerunning and visually reviewing the recovered inputs. |
+| [`scripts/validate_approved_assets.py`](../scripts/validate_approved_assets.py) | Read-only input validator for the five source hashes, ordinary Git blobs, PSD structures, and required v8 layer count. |
+| [`scripts/repair_expressions_v8.py`](../scripts/repair_expressions_v8.py) | Reproducible expression-repair entry point. It resolves the documented inputs and writes a separate candidate; rerunning it is not a substitute for visual review. |
 | [`scripts/audit_psd.py`](../scripts/audit_psd.py) and [`scripts/psd_writer.py`](../scripts/psd_writer.py) | PSD reload, composite, audit, and write support used by the v8 regeneration path. Their availability does not establish artwork quality or Cubism readiness. |
 | [`config/koma_regions.json`](../config/koma_regions.json) | Tracked region configuration. It is configuration only, not an approved artwork source or visual-review record. |
-| [`v8-expression-psd-repair.md`](v8-expression-psd-repair.md) | Historical regeneration instructions, expected paths, and reported results. The claims cannot be independently revalidated until the referenced binaries are supplied. |
-| [`v8-input-baseline.md`](v8-input-baseline.md) and the region, integration, and visual-audit worklogs | Current gate evidence and fail-closed continuation requirements. These records describe missing deliverables; they are not those deliverables. |
-| [`tests/test_psd_writer.py`](../tests/test_psd_writer.py) | Source-only PSD writer regression check. Passing it does not validate the absent v8 PSD or artwork. |
+| [`v8-expression-psd-repair.md`](v8-expression-psd-repair.md) | Historical regeneration instructions, expected paths, and reported results. Current outputs still require visual review. |
+| [`v8-input-baseline.md`](v8-input-baseline.md) and the region, integration, and visual-audit worklogs | Current gate evidence and fail-closed continuation requirements. The input gate passes; later deliverables remain outstanding. |
+| [`tests/test_psd_writer.py`](../tests/test_psd_writer.py) | PSD writer regression check. Passing it does not establish artwork quality. |
 
-The source and documentation listed above are the reusable materials currently
-available in the release head; they are not a completed asset package. Creating
-an empty ZIP, generated replacement images, or a manifest that presents missing
-files as delivered would produce a substitute bundle rather than the requested
-handoff.
+The source, approved assets, and documentation listed above are reusable
+materials, not a completed asset package. Generated replacement images must not
+be presented as approved inputs or as the requested finished handoff.
 
-## Owner-supplied unblock requirements
+## Verified input baseline
 
-The owner must supply all of the following through a controlled channel that
-does not change the assets' existing visibility:
+The five approved source assets, current design principles, and immutable
+checksum manifest are present. Run `python3 scripts/validate_approved_assets.py`
+before continuing. Never replace or overwrite the approved source PSD while
+producing a regeneration or integration candidate.
 
-1. the authoritative design-principles content, or an immutable identifier for
-   its authoritative copy;
-2. the original `koma_v8_psd_expression_fix_bundle.zip`, or these five files
-   individually at their documented paths:
-   - `assets/parts/v8/koma_expression_repaired_v8.psd`;
-   - `assets/original/koma_confirmed.png`;
-   - `assets/expression_references/eyes_closed_mouth_open.png`;
-   - `assets/expression_references/eyes_open_mouth_closed.png`; and
-   - `assets/parts/v7/koma_illustrated_underlayers_v7.psd`; and
-3. an owner-supplied checksum or equivalent immutable approval record that
-   identifies the approved PSD v8 and reference files.
+## Required continuation
 
-The blocker document at `docs/design-principles.md`, descriptions in existing
-worklogs, and files reconstructed from those descriptions do not satisfy these
-requirements.
-
-## Required continuation after supply
-
-The supplied files and approval record must first pass the validation sequence
-in [`v8-input-baseline.md`](v8-input-baseline.md). Then the outstanding work
-must proceed in order:
+The registered files must continue to pass the validation sequence in
+[`v8-input-baseline.md`](v8-input-baseline.md). Then the outstanding work must
+proceed in order:
 
 1. complete and review the hair/head, neck/clothing, and
    sleeves/arms/hands/hidden-skin artwork recorded in the three region
@@ -81,14 +64,14 @@ readiness, or rigging.
 
 | Requested handoff item | Status |
 | --- | --- |
-| Updated editable PSD | **Missing — blocked by inputs, region artwork, and integration.** |
+| Updated editable PSD | **Missing — blocked by region artwork and integration.** The approved 49-layer input PSD is available. |
 | Drawn PNG sources | **Missing — no approved completed region artwork exists.** |
-| Reproducible scripts | **Available as source, but asset-dependent v8 execution is blocked.** |
+| Reproducible scripts | **Available.** Input validation and asset-dependent v8 execution can resolve their sources. |
 | Initial/comparison/toggle/displacement/expression images | **Missing — visual audit not run.** |
 | Regression GIFs | **Missing — visual audit not run.** |
 | Audit report | **Missing — visual audit not run; historical claims are not a current report.** |
 | Explicit unresolved findings | **Available in this file and the linked gate records.** |
 
-No binary was copied, generated, published, or made more broadly visible while
-preparing this handoff. No main-branch content was merged, and the existing
-blocked status was not promoted to a pass.
+The approved binaries retain their established repository visibility. No new
+binary was generated while updating this handoff, and the unfinished artwork,
+integration, and visual-audit gates were not promoted to a pass.
