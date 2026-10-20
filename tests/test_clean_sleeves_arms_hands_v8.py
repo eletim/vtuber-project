@@ -34,6 +34,8 @@ def main():
         for part in ('hand', 'arm_sleeve'):
             name = f'{side}_{part}'
             assert np.array_equal(by_name[name]['data'][masks[name]], original[masks[name]])
+        names = [r['name'] for r in generated]
+        assert names.index(f'{side}_arm_wrist_join') < names.index(f'{side}_inner_cuff')
         arm = by_name[f'{side}_arm_wrist_join']['data']
         torso = by_name[f'{side}_torso_join']['data']
         assert not np.any((arm[:, :, 3] > 0) & (torso[:, :, 3] > 0))
@@ -42,6 +44,21 @@ def main():
         for y in range(760, 1170, 10):
             x = round(np.interp(y, [760, 1160], [303, 198] if side == 'left' else [824, 913]))
             assert arm[y, x, 3] >= 250, (side, x, y)
+    # The wrist must have one continuous contour, without the old flared
+    # ends or detached duplicate outlines. Check the arm and hand themselves
+    # so fixed torso/clothing layers cannot conceal a broken join.
+    for side, start, stop in (('left', 1180, 1260), ('right', 1200, 1280)):
+        limb = composite([by_name[f'{side}_hand'], by_name[f'{side}_arm_wrist_join']])
+        edges = []
+        for y in range(start, stop):
+            xs = np.flatnonzero(limb[y, :, 3] >= 128)
+            assert len(xs) > 0, (side, y, 'missing wrist')
+            assert len(xs) == xs[-1] - xs[0] + 1, (side, y, 'doubled contour')
+            edges.append((xs[0], xs[-1]))
+        assert np.max(np.abs(np.diff(edges, axis=0))) <= 2, 'square/flared join'
+        probes = ((160, 1210), (138, 1250)) if side == 'left' else ((958, 1238),)
+        for x, y in probes:
+            assert limb[y, x, 3] == 0, 'old cuff/flare retained as skin'
     views = scenes(generated)
     hidden = views['hands_hidden']
     for x, y in ((125, 1340), (990, 1350)):

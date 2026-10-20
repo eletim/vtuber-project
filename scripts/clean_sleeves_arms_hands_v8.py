@@ -29,6 +29,16 @@ def ownership_masks():
         canvas = Image.new('L', tuple(config['reference_size']))
         ImageDraw.Draw(canvas).polygon([tuple(p) for p in points], fill=255)
         masks[name] = np.asarray(canvas) > 0
+    # The broad hand extraction included cuff fabric and its contact shadow.
+    # Those pixels belong to the movable sleeve, not the hand silhouette.
+    for side, join in config['hand_skin_joins'].items():
+        canvas = Image.new('L', tuple(config['reference_size']))
+        ImageDraw.Draw(canvas).polygon([tuple(p) for p in join['polygon']], fill=255)
+        skin = np.asarray(canvas) > 0
+        skin[join['below_y']:] = True
+        hand = masks[f'{side}_hand']
+        masks[f'{side}_arm_sleeve'] |= hand & ~skin
+        masks[f'{side}_hand'] = hand & skin
     # Wrists/hands sit in front of the sleeve openings.
     for side in ('left', 'right'):
         masks[f'{side}_arm_sleeve'] &= ~masks[f'{side}_hand']
@@ -64,7 +74,6 @@ def clean_layers(source):
         # Inner fabric travels with its sleeve. It is completely covered in
         # the rest pose; hand hiding exposes the small cuff overlap only.
         cuff = hand & (yy < (1224 if side == 'left' else 1252))
-        add(f'{side}_inner_cuff', paints[1], cuff & (approved[:, :, 3] == 255))
         # Do not leave a second palm/fingers behind when a hand moves. A short
         # wrist overlap supports small rigging offsets under the sleeve hem.
         arm = (sleeve | (hand & (yy < (1234 if side == 'left' else 1262))))
@@ -79,6 +88,8 @@ def clean_layers(source):
         ImageDraw.Draw(boundary).polygon(points, fill=255)
         skin = np.asarray(boundary) > 0
         add(f'{side}_arm_wrist_join', paints[0], arm & skin)
+        # The inside of an opening is behind the wrist, including when moved.
+        add(f'{side}_inner_cuff', paints[1], cuff & (approved[:, :, 3] == 255))
         add(f'{side}_torso_join', paints[0], arm & ~skin)
     # Reuse the existing part names; the obsolete illustrated/base limb layers
     # must not retain fixed copies beyond the new masks either. Keep their
@@ -119,6 +130,23 @@ def write_preview(images, path):
     panel.save(path)
 
 
+def write_wrist_preview(images, path):
+    """Keep the small anatomical joins large enough for visual review."""
+    boxes = ((100, 1100, 260, 1320), (860, 1120, 1020, 1340))
+    panel = Image.new('RGB', (960, 1360), '#e8e4e0')
+    draw = ImageDraw.Draw(panel)
+    for row, name in enumerate(('sleeves_hidden', 'sleeves_moved')):
+        for column, box in enumerate(boxes):
+            crop = Image.fromarray(images[name]).crop(box).resize(
+                (480, 660), Image.Resampling.NEAREST)
+            x, y = column * 480, row * 680
+            panel.paste(crop, (x, y + 20), crop)
+            draw.text((x + 8, y + 4),
+                      ('left ' if column == 0 else 'right ') + name.replace('_', ' '),
+                      fill='#302020')
+    panel.save(path)
+
+
 def build_candidate(destination=OUTPUT):
     destination = Path(destination)
     source, size = parse_psd(SOURCE)
@@ -142,6 +170,7 @@ def build_candidate(destination=OUTPUT):
         'cubism_ready': False,
     }
     write_preview({'approved_pose': approved, **views}, destination.with_suffix('.png'))
+    write_wrist_preview(views, destination.with_name(destination.stem + '_wrists.png'))
     destination.with_suffix('.json').write_text(json.dumps(report, indent=2) + '\n')
     return report
 

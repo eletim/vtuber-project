@@ -51,8 +51,8 @@ agreement between hidden artwork and pixels vacated by movement.
 
 The comparison was inspected after correcting floating cloth fragments and
 shoulder boundaries. Sleeve hiding now reveals shaped arms and clothing joins;
-hand hiding exposes cuff interiors without duplicate fingers. Original wrist
-contact shadows are retained with the hands. The recorded movement check is
+hand hiding exposes cuff interiors without duplicate fingers. Cuff fabric and wrist contact-shadow pixels travel with the sleeves;
+the hand layers contain the skin silhouette. The recorded movement check is
 8 pixels outward and 4 pixels upward, not a claim of arbitrary deformation.
 Removing an outer sleeve or hand legitimately exposes transparent background;
 a zero-hole count across the old silhouette would incorrectly require ghosts.
@@ -80,3 +80,36 @@ clothing at identical coordinates. Remove only both visible hands and wrists.
 Finish the open sleeve ends with curved white inner-cuff fabric, warm grey/pink
 shaded hollow interiors and thin hem lines. Do not extend sleeves downward or
 add arms/hands. Transparent where hands were; no whole-character regeneration.”
+
+## Correctness review: wrist joins
+
+The P2 finding was confirmed in enlarged sleeve-hidden renders: the generated
+arm ends flared beyond the original wrists, and the broad hand polygons also
+owned grey cuff fabric. Both produced a second contour at the joint.
+
+Repainted only the local wrist sections in `arms_painted_underlayer_v8.png`,
+registered their tapered contours to the approved hands, and removed distal
+paint remnants. Added explicit skin boundaries under `hand_skin_joins` in the
+existing region config; the rejected cuff/contact-shadow pixels now belong to
+the sleeve. Inner cuffs stack behind the arm/wrist rather than over the skin.
+The PSD, audit JSON and full comparison have been regenerated. The additional
+`koma_sleeves_arms_hands_cleaned_v8_wrists.png` enlarges both wrists in the
+sleeve-hidden and sleeve-moved scenes for inspection.
+
+The new regression isolates each arm/hand from the torso and checks a single
+continuous silhouette on every scanline through the joint, at most a two-pixel
+edge step, and no paint at the previous flare/duplicate-contour locations. On
+the previous PSD the left wrist had 32 split scanlines and a 15-pixel edge jump;
+the right wrist had a 5-pixel jump. The repaired joins have no split scanlines
+and maximum steps of one and two pixels respectively. All approved pose and
+expression checks still apply.
+
+Painting used the built-in imagegen tool on enlarged crops `(100, 1100, 260,
+1320)` and `(860, 1120, 1020, 1340)`. Prompt for each: “Repair only the wrist
+join: taper the forearm smoothly into the existing hand, removing the square
+flare, grey cuff fragment and transverse seam. Use one continuous gently curved
+anatomical contour on each side. Keep the hand position, pose, skin shading,
+outline, adjacent clothing and framing. Preserve transparency; no new fingers
+or whole character.” The selected paint was registered locally and its edge
+colors matched to the existing hand; the canonical PNG remains the builder's
+input, with no image-generation dependency during reproduction.
