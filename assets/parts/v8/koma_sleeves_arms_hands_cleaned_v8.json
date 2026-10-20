@@ -1,0 +1,38 @@
+{
+  "source": "assets/parts/v8/koma_neck_clothing_cleaned_v8.psd",
+  "layer_count": 63,
+  "initial_rgba_changed_pixels": 0,
+  "paint_sha256": {
+    "arms_painted_underlayer_v8.png": "fe7a9375ca3bc872d99454bcab24aa4211951416ac78db4672cf3b5df2d55c58",
+    "inner_cuffs_painted_underlayer_v8.png": "2f8be563b4b57a92d00771563083ee7c4ef123a24af8298349d4d6df11150572"
+  },
+  "scenes": {
+    "sleeves_hidden": {
+      "changed_pixels": 196231
+    },
+    "sleeves_moved": {
+      "changed_pixels": 203693
+    },
+    "hands_hidden": {
+      "changed_pixels": 24613
+    },
+    "hands_moved": {
+      "changed_pixels": 27273
+    },
+    "sleeves_and_hands_hidden": {
+      "changed_pixels": 220954
+    }
+  },
+  "movement_pixels": {
+    "left": [
+      -8,
+      -4
+    ],
+    "right": [
+      8,
+      -4
+    ]
+  },
+  "note": "Removed outer cloth/hand silhouettes may become transparent. This is not a zero-hole audit.",
+  "cubism_ready": false
+}
