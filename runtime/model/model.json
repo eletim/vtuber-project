@@ -1,6 +1,6 @@
 {
   "name": "羽月こま",
-  "format": "koma-part-mesh-1",
+  "format": "koma-part-mesh-2",
   "size": [
     1086,
     1448
@@ -82,8 +82,9 @@
     }
   ],
   "mesh": [
-    30,
-    40
+    60,
+    80
   ],
+  "skinning": "skinning.json",
   "note": "PSD-derived preview mesh, not a Cubism moc3 export."
 }

@@ -1,0 +1,19 @@
+{
+  "reference_renderer_blob": "7fa2cc317be671759a7e729ca02900c113d8d6f5",
+  "warmup_frames": 48,
+  "frames_per_version": 48,
+  "errors": [],
+  "captures": "actual WebGL drawingBuffer frames with identical parameter/time input",
+  "final_pose": {
+    "body": -2.3368209705691476,
+    "arms": [
+      -0.4226892353055289,
+      -0.3516213644000461
+    ],
+    "elbows": [
+      -0.016896255531465763,
+      -0.018980717228835646
+    ]
+  },
+  "status": "PASS"
+}

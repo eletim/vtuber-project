@@ -1,0 +1,24 @@
+{
+  "scope": "body-motion rig only; PSD and face/expression textures preserved",
+  "textures_byte_identical_to_v10": [
+    "base.png",
+    "eye_screen_left_closed.png",
+    "eye_screen_left_open.png",
+    "eye_screen_right_closed.png",
+    "eye_screen_right_open.png",
+    "mouth_closed.png",
+    "mouth_open.png"
+  ],
+  "neutral_vertex_positions": "EXACT",
+  "topology_test": "PASS: 240 extreme/reversal frames; normalized triangle areas > 0.25",
+  "browser_e2e": "PASS",
+  "comparison_frames_per_version": 48,
+  "visual_review": "Reviewed same-input body/neck/shoulder/hand poses; motion change, not a drawing redesign.",
+  "files": {
+    "body_motion.gif": "2f45a98955073c7f80c36e771b240a158f9d190094550b14be44a02ce8c33297",
+    "body_compare.png": "8f83121e38457a1966dcdf6a2eab8c91c6f41c9eb1151d859b9ac22c6a47dde0",
+    "runtime_e2e.json": "d9657d7f9a700746c99f964dcda0872ced5580791f881e2edd37722b1a3e6ea6",
+    "body_before_after.gif": "cc5beb90bf3a41f36be4340fc148a1669ce2d89148d857c6400d906b4da3c12c",
+    "comparison_capture.json": "888018ad75035d59c53de6c284ce022acecbe6c0ade5b55950b05f12c3f4514a"
+  }
+}

@@ -2,11 +2,12 @@
 
 人間とAIの両方で操作するVTuberの制作プロジェクトです。
 
-## 現在の成果（v10）
+## 現在の成果（v11 / PSDはv10）
 
 - 66レイヤーの統合PSD。v9の表情、既存の袖・腕・手、髪・ベストの描画下地を統合。
 - 通常合成と左右個別を含む8通りの表情は、v9とRGBA全画素で一致。
 - WebGL操作画面。まばたき・口の開閉、顔と体の変形、呼吸に対応。
+- 身体は腰を支点に動き、首・肩・腕・前腕がつながって追従。腕には小さな遅れを持たせています。
 - 人間: カメラの顔追跡、マイクの音量、スライダー。
 - AI: HTTP/WebSocketのパラメータ指示、テキスト読み上げ要求、音声ファイルのリップシンク。
 - 透明・グリーン背景と配信用表示。
@@ -60,7 +61,7 @@ python scripts/build_integrated_v10.py
 python scripts/export_runtime_model.py
 python tests/test_integrated_v10.py
 python tests/test_runtime_server.py
-node --test runtime/tests/controls.test.js
+node --test runtime/tests/*.test.js
 ```
 
 保存した描画素材から再ビルドでき、画像生成を再実行する必要はありません。
@@ -71,4 +72,4 @@ node --test runtime/tests/controls.test.js
 目・口は開閉2状態の切り替えです。中間形状、立体的な顔の向き、パーツごとの物理演算は次の工程です。
 元の髪の外周マットにも荒れが残るため、PSD全体を最終美術合格にはしていません。
 
-[制作・検証記録](docs/v10-production-runtime.md) / [Cubism引き継ぎ設定](config/cubism_rig_v10.json)
+[制作・検証記録](docs/v10-production-runtime.md) / [身体の動きの修正](docs/body-motion-v11.md) / [Cubism引き継ぎ設定](config/cubism_rig_v10.json)
