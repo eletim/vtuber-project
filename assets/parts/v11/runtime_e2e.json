@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "WebGL model loads and draws nonempty transparent output",
+    "four expression endpoints rendered through human control API",
+    "manual blink reaches separate transparent overlay through shared control bus",
+    "external AI parameters drive model; inactive human input rejected",
+    "24 actual WebGL frames captured while AI API changes pose and expression",
+    "real Web Audio RMS from uploaded WAV opens mouth; pause closes it",
+    "MediaPipe WASM detects a face from fake camera portrait video and publishes parameters",
+    "switch to AI stops camera tracking",
+    "fake microphone WAV traverses getUserMedia/Web Audio to mouth parameters",
+    "AI speech event reaches subtitles/browser synthesis request (voice output not verified)",
+    "390px layout has no horizontal overflow"
+  ],
+  "errors": [],
+  "actual_camera_device_tested": false,
+  "actual_microphone_device_tested": false,
+  "tts_voice_output_verified": false,
+  "status": "PASS"
+}
