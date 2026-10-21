@@ -15,7 +15,7 @@ let motionAction,aiModeRequest;
 let expressionSelectionGeneration=0,mediaStatusGeneration=0;
 let manualActive=false,performanceState={enabled:true,emotion:'neutral'},expressionState={id:'neutral',owner:'idle',until:0};
 const sliders={};
-const names={ParamAngleX:'顔・左右',ParamAngleY:'顔・上下',ParamAngleZ:'顔・傾き',ParamBodyAngleX:'体・左右',ParamArmLOpen:'画面左の腕',ParamArmROpen:'画面右の腕',ParamShoulderY:'肩・上下',ParamBodyShiftX:'姿勢・左右',ParamEyeLOpen:'左目',ParamEyeROpen:'右目',ParamMouthOpenY:'口の開き'};
+const names={ParamAngleX:'顔・左右',ParamAngleY:'顔・上下',ParamAngleZ:'顔・傾き',ParamBodyAngleX:'体・左右',ParamArmLOpen:'画面左の腕',ParamArmROpen:'画面右の腕',ParamShoulderY:'肩・上下',ParamBodyShiftX:'姿勢・左右',ParamSkirtSway:'スカート・揺れ',ParamEyeLOpen:'左目',ParamEyeROpen:'右目',ParamMouthOpenY:'口の開き'};
 const status=text=>$('status').textContent=text;
 async function post(path,body){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok){const error=Error(await r.text());error.status=r.status;throw error;}return r.json();}
 function report(error){console.error(error);status(error.message||String(error));}

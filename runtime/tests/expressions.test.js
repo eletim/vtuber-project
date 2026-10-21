@@ -68,12 +68,13 @@ test('feature warp preserves exact endpoints and fixed patch boundaries',()=>{
 
 test('renderer paints one opaque endpoint per feature and never fades a face',()=>{
   const calls=[];
-  const ctx={clearRect(){},drawImage(...args){calls.push({alpha:this.globalAlpha,args});}};
+  const ctx={save(){},restore(){},translate(){},clearRect(){},drawImage(...args){calls.push({alpha:this.globalAlpha,args});}};
   const part=(parameter,state)=>({name:parameter+'.'+state,parameter,state,rect:[0,0,50,50],image:{width:50,height:50}});
   const parts=['ParamEyeLOpen','ParamEyeROpen','ParamMouthOpenY'].flatMap(parameter=>['open','closed'].map(state=>part(parameter,state)));
   const renderer=new AvatarRenderer();
   Object.assign(renderer,{ctx,paint:{width:100,height:100},canvas:{width:100,height:100},
-    rig:{frame:()=>new Float32Array()},transition:new ExpressionTransition(),
+    model:{size:[100,100]},layers:[{id:'head',role:'head',file:'head.png',rect:[0,0,100,100],features:true,ctx,paint:{width:100,height:100},images:new Map(),image:{head:true}}],
+    rig:{frames:()=>({head:new Float32Array()})},transition:new ExpressionTransition(),
     expressions:new Map([['neutral',{base:{neutral:true},parts}],['big_smile',{base:{smile:true},parts,defaults:{ParamEyeLOpen:0,ParamEyeROpen:0}}]]),
     gl:new Proxy({},{get:()=>()=>{}}),frames:0});
   for(let i=0;i<30;i++){

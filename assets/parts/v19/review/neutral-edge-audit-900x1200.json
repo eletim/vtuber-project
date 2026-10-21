@@ -1,0 +1,31 @@
+{
+  "source_model_sha256": "faadc7156387814706d637a8a35813f5961c17ae0c0d735d730408f0d2575702",
+  "renderer_sha256": "b00c2cef94141f8e6442842aa42d33d1bc982f371b6fd80634ef1229496420e6",
+  "source_sprite_sha256": {
+    "body_v19/arm_screen_left.png": "32c49f3dbda1a01da26f43431b2d9b715944ead6198676f5598a776a1a9dc4d0",
+    "body_v19/arm_screen_right.png": "89487a03f6be3aa8f59935df96b81ca86cbeb5ca74561011544cf88619a9a7e2",
+    "body_v19/hair_back.png": "4074dbc544b765b8df9bfa1613c2c9808ca1dd49ab751aa6e0bfbab76f4d15ff",
+    "body_v19/head_bashful.png": "3104455f7086e3113da71cab9141556f3458317cb87ae090d03464568e6cb520",
+    "body_v19/head_big_smile.png": "a96f4a6bb27530c9a3e74e74c63053db5b18455d12be0f7ac3f3da3a5ad97bd9",
+    "body_v19/head_displeased.png": "e8545905b3b27930f998228ce0690176fa826afc740e8aec5dd2587a16a348f5",
+    "body_v19/head_hair_front.png": "62e64e469f47eae536a2e69319d25fdef077e959a2be8000697403aa932a5e3a",
+    "body_v19/head_neutral.png": "62e64e469f47eae536a2e69319d25fdef077e959a2be8000697403aa932a5e3a",
+    "body_v19/head_soft_smile.png": "21e6a92dfd096422c5917fd7b42d9b138cc1b7bcf22aa012084f61970f243bc6",
+    "body_v19/head_surprised.png": "63391788c90b96a72e3aac38d60ba48526e15f1562cb4600e13e45b3f7ba1898",
+    "body_v19/head_thinking.png": "8a76359832a9d600d4a6d7fc6f39f68ac0e253b49edc4c8dffe191f76aa59c41",
+    "body_v19/head_worried.png": "322fddb3068fb2fedcc6eb08e3098a302f4fc1b4c15853c326ba18ae3573a329",
+    "body_v19/legs_static.png": "5d0d72ac0da41893bc598bdf7111116ae5ae76f7c8722bd354ca7191601c45a1",
+    "body_v19/skirt.png": "37368ec637d0afd1c8b805dcd734e7385e2af859cfd12ba0b674be4fe2cc6286",
+    "body_v19/torso_clothing.png": "34f91a166ecc7090b9c13cfb761ffe5f2aab4efa877629d19eccd657eb2e7f14"
+  },
+  "output_resolution": [
+    900,
+    1200
+  ],
+  "supersample": 2,
+  "method": "Actual offline GL neutral frame; all six role position arrays equal. Compare actual layered render against original full expression base plus identical face sprites, drawn through same GL mesh/canvas pipeline. Full-source reference is diagnostic only, not used in video.",
+  "opaque_reference_pixels": 470555,
+  "alpha_deficit_over3_pixels": 0,
+  "max_alpha_deficit_on_opaque_reference": 0,
+  "bbox": null
+}

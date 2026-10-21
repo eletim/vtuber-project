@@ -32,3 +32,8 @@ artifacts/v10/
 runtime/vendor/
 runtime/node_modules/
 runtime/test-results/
+
+# v19 raw QA rasters are reproducible from saved source; keep compact evidence.
+assets/parts/v19/review/*.png
+!assets/parts/v19/review/*_mask.png
+!assets/parts/v19/review/ownership_contact_sheet.png

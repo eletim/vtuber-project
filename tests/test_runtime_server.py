@@ -40,6 +40,28 @@ class Controls(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(event['parameters']['ParamMouthOpenY'],0)
         await ws.close()
 
+    async def test_skirt_parameter_is_independent_clamped_and_reset(self):
+        self.assertEqual(LIMITS['ParamSkirtSway'], (-1, 1, 0))
+        response = await self.client.post('/api/control', json={
+            'source': 'human', 'parameters': {'ParamSkirtSway': 20}})
+        payload = await response.json()
+        self.assertEqual(response.status, 200)
+        self.assertEqual(payload['parameters']['ParamSkirtSway'], 1)
+        for key in ('ParamArmLOpen', 'ParamArmROpen', 'ParamBodyAngleX', 'ParamShoulderY'):
+            self.assertEqual(payload['parameters'][key], 0)
+        response = await self.client.post('/api/mode', json={'mode': 'ai'})
+        self.assertEqual((await response.json())['parameters']['ParamSkirtSway'], 0)
+        for value in ('bad', True, None):
+            response = await self.client.post('/api/control', json={
+                'source': 'ai', 'parameters': {'ParamSkirtSway': value}})
+            self.assertEqual(response.status, 400)
+        ws = await self.client.ws_connect('/ws')
+        await ws.receive_json()
+        await ws.send_json({'source': 'ai', 'parameters': {'ParamSkirtSway': -.8}, 'ttl_ms': 100})
+        self.assertEqual((await ws.receive_json())['parameters']['ParamSkirtSway'], -.8)
+        self.assertEqual((await ws.receive_json(timeout=1))['parameters']['ParamSkirtSway'], 0)
+        await ws.close()
+
     async def test_arm_body_parameters_clamp_reset_and_expire(self):
         keys = ('ParamArmLOpen', 'ParamArmROpen', 'ParamShoulderY', 'ParamBodyShiftX')
         self.assertTrue(all(LIMITS[key] == (-1, 1, 0) for key in keys))

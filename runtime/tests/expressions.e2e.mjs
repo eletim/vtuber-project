@@ -38,14 +38,15 @@ try{
   const original=await page.evaluate(()=>{
     const renderer=window.koma.renderer,pose={ParamEyeLOpen:1,ParamEyeROpen:1,ParamMouthOpenY:1,ParamAngleX:0,ParamAngleY:0,ParamAngleZ:0,ParamBodyAngleX:0,ParamBreath:.5};
     renderer.render(pose,0,'neutral');
-    const expected=document.createElement('canvas');expected.width=renderer.paint.width;expected.height=renderer.paint.height;
+    const expected=document.createElement('canvas');expected.width=renderer.model.size[0];expected.height=renderer.model.size[1];
     const ctx=expected.getContext('2d');ctx.drawImage(renderer.base,0,0);
     for(const part of renderer.parts)if(part.state==='open')ctx.drawImage(part.image,part.rect[0],part.rect[1]);
-    const a=ctx.getImageData(0,0,expected.width,expected.height).data,b=renderer.ctx.getImageData(0,0,expected.width,expected.height).data;
+    const head=renderer.layers.find(layer=>layer.features),[x,y,w,h]=[330,170,390,270];
+    const a=ctx.getImageData(x,y,w,h).data,b=renderer.ctx.getImageData(x-head.rect[0],y-head.rect[1],w,h).data;
     return a.every((value,index)=>value===b[index]);
   });
-  assert.ok(original,'neutral open endpoint must retain exact original pixels');
-  report.checks.push('neutral open endpoint is pixel-identical to original base + endpoint layers');
+  assert.ok(original,'neutral open face endpoint must retain exact original pixels');
+  report.checks.push('neutral open face endpoint is pixel-identical to original base + endpoint layers');
   await api('/api/mode',{mode:'ai'});await page.waitForFunction(()=>window.koma.mode==='ai');
   await api('/api/performance',{enabled:false});
   const images=new Set();

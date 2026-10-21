@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "python_full_suite": {
+    "total": 81,
+    "passed": 80,
+    "skipped": 1,
+    "seconds": 289.838,
+    "skip_reason": "Optional psd-tools unavailable; independent native parser/compositor verifies PSD."
+  },
+  "additional_delivery_split_tests": {
+    "total": 2,
+    "passed": 2
+  },
+  "node_full_suite": {
+    "total": 84,
+    "passed": 84
+  },
+  "final_affected_node_recheck": {
+    "total": 13,
+    "passed": 13
+  },
+  "final_accepted_source_preservation_recheck": {
+    "total": 1,
+    "passed": 1,
+    "old_files_preserved": 396
+  },
+  "final_psd_expression_endpoint_cases": 64,
+  "final_dense_inner_and_outer_art_boundary_checks": 6384,
+  "neutral_psd_and_runtime_rgba_changed_pixels": 0,
+  "body_roles": 6,
+  "ordered_draw_layers": 7,
+  "independent_buffers": true,
+  "mesh_control_corner_cases": 1024,
+  "isolated_torso_rgba_changed_pixels": 0,
+  "isolated_final_composite_protected_torso_changed_pixels": 0,
+  "isolated_final_composite_protected_torso_pixel_range": [
+    109937,
+    109938
+  ],
+  "isolated_frame_cases": 9,
+  "skirt_waist_changed_vertices": 0,
+  "skirt_hem_maximum_source_pixels": 3,
+  "limits": [
+    "Offline OpenGL and mocked production WebGL tests, not real browser GUI/GPU E2E.",
+    "Reduced-scale low-limit GPU fallback is unit-tested but not visually device-tested.",
+    "Two-state eyelids; no Cubism moc3.",
+    "Small skirt sway only; original leg cutouts and hair matte remain unchanged."
+  ],
+  "encoded_video_review": "PASS: independent21 decoded frames, all8 expressions and24 mouth-state samples, isolated shoulders/cuffs/skirt, natural motion, ending.",
+  "video_sha256": "be5ad0f78f4f938a36d8182ab5439809d70fcf4c3dbcbda9328434223ced1194",
+  "video_bytes": 15781986,
+  "video_seconds": 48,
+  "video_frames": 1440,
+  "audio_source_correlation": 0.99997
+}

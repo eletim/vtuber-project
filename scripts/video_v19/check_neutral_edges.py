@@ -1,0 +1,15 @@
+"""Neutral crop-edge parity: separated layers vs exact same-mesh full original face canvas.
+This is a diagnostic reference only, never the claimed separated-layer video output.
+"""
+from layered_egl import *
+import argparse,hashlib
+parser=argparse.ArgumentParser();parser.add_argument("--supersample",type=int,default=1);args=parser.parse_args()
+D=Path(__file__).resolve().parent;r=LayeredRenderer(D,args.supersample);separated=np.array(r.render(0));state=r.plan['frames'][0];w,h=r.model['size'];base=next(e for e in r.model['expressions'] if e['id']=='neutral')['base']
+assert all(np.array_equal(r.mesh[role][0],r.mesh['torso'][0]) for role in r.mesh),'Neutral reference requires identical role positions'
+# Only this reference image uses a full canvas; production layered draw path remains unchanged.
+layer={'id':'full-original-reference','role':'torso','features':True,'file':base,'rect':[0,0,w,h],'textureRect':[0,0,1,1]};r.layers=[layer];r.head=layer;r.hw=w;r.hh=h;state['layerFiles']=[base];BindTexture(0x0DE1,r.head_texture);TexImage2D(0x0DE1,0,0x1908,w,h,0,0x1908,0x1401,None);reference=np.array(r.render(0));out=D/('neutral-edge-audit' if args.supersample==1 else f'neutral-edge-audit-{args.supersample}x'+('' if (AW,AH)==(900,1200) else f'-{AW}x{AH}'));out.mkdir(exist_ok=True);Image.fromarray(reference).save(out/'full-source-reference.png');Image.fromarray(separated).save(out/'separate-layers.png')
+opaque=reference[:,:,3]>=254;deficit=reference[:,:,3].astype(int)-separated[:,:,3].astype(int);mask=opaque&(deficit>3);heat=np.zeros_like(reference);heat[:,:,:3]=[255,0,200];heat[:,:,3]=np.clip(np.maximum(0,deficit)*12,0,255);Image.fromarray(heat.astype(np.uint8)).save(out/'alpha-deficit-12x.png')
+bg=Image.new('RGBA',(AW,AH),'#eeeeee');bg.alpha_composite(Image.fromarray(heat.astype(np.uint8)));bg.convert('RGB').save(out/'alpha-deficit-12x-on-gray.png')
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+source_model=json.loads((D/'source/runtime/model/model.json').read_text());source_files=sorted({l['file'] for l in source_model['bodyLayers']}|{f for l in source_model['bodyLayers'] for f in l.get('expressionFiles',{}).values()})
+result={'source_model_sha256':sha(D/'source/runtime/model/model.json'),'renderer_sha256':sha(D/'source/runtime/web/renderer.js'),'source_sprite_sha256':{f:sha(D/'source/runtime/model'/f) for f in source_files},'output_resolution':[AW,AH],'supersample':args.supersample,'method':'Actual offline GL neutral frame; all six role position arrays equal. Compare actual layered render against original full expression base plus identical face sprites, drawn through same GL mesh/canvas pipeline. Full-source reference is diagnostic only, not used in video.','opaque_reference_pixels':int(opaque.sum()),'alpha_deficit_over3_pixels':int(mask.sum()),'max_alpha_deficit_on_opaque_reference':int(deficit[opaque].max()),'bbox':Image.fromarray((mask*255).astype(np.uint8)).getbbox()};(out/'metrics.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))

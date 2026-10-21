@@ -1,12 +1,12 @@
 {
   "name": "羽月こま",
-  "format": "koma-part-mesh-2",
+  "format": "koma-part-mesh-3",
   "size": [
     1086,
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v10/koma_integrated_v10.psd",
+  "source_psd": "assets/parts/v19/koma_separated_body_v19.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -1401,5 +1401,132 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v17/koma_expression_skin_v17.psd"
+  "expression_source_psd": "assets/parts/v17/koma_expression_skin_v17.psd",
+  "bodyLayers": [
+    {
+      "id": "hair_back",
+      "role": "head",
+      "file": "body_v19/hair_back.png",
+      "rect": [
+        149,
+        448,
+        940,
+        775
+      ],
+      "psdGroup": "07 Rear hair | 後ろ髪"
+    },
+    {
+      "id": "legs_static",
+      "role": "root",
+      "file": "body_v19/legs_static.png",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ],
+      "psdGroup": "06 Legs fixed | 脚・固定"
+    },
+    {
+      "id": "skirt",
+      "role": "skirt",
+      "file": "body_v19/skirt.png",
+      "rect": [
+        182,
+        970,
+        914,
+        1445
+      ],
+      "psdGroup": "05 Skirt independent | スカート・独立"
+    },
+    {
+      "id": "torso_clothing",
+      "role": "torso",
+      "file": "body_v19/torso_clothing.png",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "psdGroup": "04 Torso clothing fixed | 胴体服・固定"
+    },
+    {
+      "id": "arm_screen_left",
+      "role": "armLeft",
+      "file": "body_v19/arm_screen_left.png",
+      "rect": [
+        47,
+        486,
+        399,
+        1406
+      ],
+      "psdGroup": "03 Screen-left arm | 画面左の腕・袖・手"
+    },
+    {
+      "id": "arm_screen_right",
+      "role": "armRight",
+      "file": "body_v19/arm_screen_right.png",
+      "rect": [
+        731,
+        489,
+        1027,
+        1412
+      ],
+      "psdGroup": "02 Screen-right arm | 画面右の腕・袖・手"
+    },
+    {
+      "id": "head_hair_front",
+      "role": "head",
+      "file": "body_v19/head_hair_front.png",
+      "rect": [
+        235,
+        1,
+        865,
+        683
+      ],
+      "psdGroup": "01 Head and front hair | 頭・前髪",
+      "features": true,
+      "expressionFiles": {
+        "neutral": "body_v19/head_neutral.png",
+        "soft_smile": "body_v19/head_soft_smile.png",
+        "big_smile": "body_v19/head_big_smile.png",
+        "worried": "body_v19/head_worried.png",
+        "surprised": "body_v19/head_surprised.png",
+        "bashful": "body_v19/head_bashful.png",
+        "displeased": "body_v19/head_displeased.png",
+        "thinking": "body_v19/head_thinking.png"
+      }
+    }
+  ],
+  "bodyRig": {
+    "shoulders": [
+      [
+        353,
+        510
+      ],
+      [
+        775,
+        530
+      ]
+    ],
+    "elbows": [
+      [
+        275,
+        935
+      ],
+      [
+        850,
+        955
+      ]
+    ],
+    "waist": [
+      555,
+      995
+    ],
+    "skirtTop": 995,
+    "skirtHem": 1395,
+    "skirtRevealLimitPixels": 3
+  },
+  "bodySampling": "coverage-2x"
 }

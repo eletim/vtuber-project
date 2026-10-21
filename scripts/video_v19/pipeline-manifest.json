@@ -1,0 +1,20 @@
+{
+  "files": {
+    "prepare_source.py": "9c1c247937f8bbae9b6f81c7e1781fd3abe793534e432886dcf35367e717cf3c",
+    "generate_layered_frames.mjs": "301d3dc139777f08437c28d27ce0524772eea0c119f55e821433aca64acd29d9",
+    "measure_isolation.py": "c6d0506add03fa344b09df38fa81c39d9df8019754a780fa01e67b4b85de9a0c",
+    "layered_egl.py": "73a0d03e4e4e6b5bfe268de07159cf52f74186e73b6ef31fe0cbbcdecc94eef5",
+    "test_egl.py": "535ddae94ea4f51c11b5123532623623b67034bcc5fb45d8179057dd4225729d",
+    "test_layer_alpha.py": "0fcfdaf1c3b28d04e5bc791e4c326677eb4f27553593966e61fc74c05f4a230a",
+    "check_neutral_edges.py": "c077f44f16c73d7f5b06c1cfbdfeda307bcc04291da303b4ecd49471b701bd5b",
+    "render_v19.py": "b0bc57856354bf9133cb413a249c136840c6fd403c99508a7b3bbd579f5eefb3",
+    "verify_video.py": "26e18f450a0806722568849df7e973a48a58071953e7d9fc2510d6ebdd9042bf",
+    "render_face_checks.py": "23f07913932bef18ff30c64d9e48723e297ddef76aa4ee7686c08897571310d5",
+    "generate_arm_extremes.mjs": "0831f48b7c4660521355ccbee5c82f672e9620ed5822e192683156b65b4be32c",
+    "render_arm_extremes.py": "c20803765796516892233a60f0e687c565418381871b560d642bfb6ae7f2304b",
+    "review_shoulders.py": "5a42f8f5cdf40706352d15a2579cd92a77a4053de4b11604195ac84066bbfa08",
+    "reuse_fixed_motion.py": "cd6f7fa91599d4df932e1c89e25bbaf42d37a463e1a22c3546ecb754a001d400",
+    "RERUN.md": "61af5c9c848cce848a92c91fdedd5652870aecb0d0faeba14b44996f10646a23"
+  },
+  "excluded": "Prototype scripts, rejected candidate directories, partial MP4s, raw mesh/source streams are not needed in the repository evidence package."
+}

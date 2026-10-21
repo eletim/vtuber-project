@@ -1,0 +1,53 @@
+{
+  "verdict": "PASS_FOR_DELIVERY",
+  "candidate": "05",
+  "source_psd_sha256": "0f1d28279d0256f2a7ba860422709041f701dade3becf361c2b54bf5342ba3f4",
+  "video_sha256": "be5ad0f78f4f938a36d8182ab5439809d70fcf4c3dbcbda9328434223ced1194",
+  "video_size_bytes": 15781986,
+  "independent_decode": "ffmpeg selected 21 frames through the final frame1439; exited0. ffprobe confirms48.000seconds/1440video frames/1080x1440/30fps.",
+  "reviewed_video_frames": [
+    0,
+    73,
+    149,
+    223,
+    299,
+    367,
+    410,
+    479,
+    539,
+    600,
+    690,
+    780,
+    870,
+    960,
+    990,
+    1050,
+    1140,
+    1230,
+    1320,
+    1400,
+    1439
+  ],
+  "additional_visual_review": "Actual encoded all8 expression sheet with closed/partial/open mouths; candidate05 full-range neutral,left/right/both±1 black/white shoulder joins.",
+  "preencode_exact_torso_invariance": true,
+  "face_and_original_source_preservation": true,
+  "waist_and_non_target_role_invariance": true,
+  "visual_blockers": [],
+  "limits": [
+    "Skirt is separate but subtle: about1.454sourcepixels peak in video, cap3.",
+    "Original white hair matte and lower-leg transparency cutouts retained.",
+    "PSD-derived preview, not Cubism moc3.",
+    "Offline EGL plus decoded video review, not GUI/browser E2E.",
+    "Lossy encoded pixels are not asserted byte-identical; exact torso proof uses lossless actual renders."
+  ],
+  "evidence": [
+    "independent-art-preservation.json",
+    "ownership-sentinel-result.json",
+    "dense-arm-ownership-result.json",
+    "independent-geometry-pixel-audit.json",
+    "../verification.json",
+    "../koma-v19-contact-sheet.png",
+    "../koma-v19-all8-face-states.png",
+    "../koma-v19-joins-black-white.png"
+  ]
+}

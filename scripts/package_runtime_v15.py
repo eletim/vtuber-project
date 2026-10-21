@@ -34,6 +34,9 @@ def build(destination, *, version='v15', guide='docs/expression-motion-v15.md', 
     for entry in [model]+model['expressions']:
         references.add(entry['base'])
         references.update(p['file'] for p in entry['parts'])
+    for layer in model.get('bodyLayers',[]):
+        references.add(layer['file'])
+        references.update(layer.get('expressionFiles',{}).values())
     for name in references:
         p=(stage/'runtime/model'/name).resolve()
         assert p.is_relative_to((stage/'runtime/model').resolve())

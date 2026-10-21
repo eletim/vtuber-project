@@ -1,0 +1,378 @@
+{
+  "method": "Independent manually annotated native semantic interior pixels; not exhaustive boundary validation.",
+  "pass": true,
+  "cases": [
+    {
+      "xy": [
+        805,
+        1020
+      ],
+      "expected": "torso_clothing",
+      "note": "Tan right vest, inside its dark outer outline",
+      "actual": [
+        "torso_clothing"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        820,
+        1060
+      ],
+      "expected": "torso_clothing",
+      "note": "Right vest pocket/panel, not sleeve",
+      "actual": [
+        "torso_clothing"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        850,
+        1140
+      ],
+      "expected": "torso_clothing",
+      "note": "Checkered right vest tail",
+      "actual": [
+        "torso_clothing"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        403,
+        943
+      ],
+      "expected": "torso_clothing",
+      "note": "Left vest button area",
+      "actual": [
+        "torso_clothing"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        560,
+        865
+      ],
+      "expected": "torso_clothing",
+      "note": "Central corset",
+      "actual": [
+        "torso_clothing"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        835,
+        620
+      ],
+      "expected": "hair_back",
+      "note": "Brown hair outside right bare upper arm",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        275,
+        630
+      ],
+      "expected": "hair_back",
+      "note": "Brown hair outside left bare upper arm",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        780,
+        1320
+      ],
+      "expected": "legs_static",
+      "note": "Right thigh skin inward of its outer contour",
+      "actual": [
+        "legs_static"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        275,
+        1300
+      ],
+      "expected": "skirt",
+      "note": "Rear brown petticoat outside left thigh",
+      "actual": [
+        "skirt"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        610,
+        1278
+      ],
+      "expected": "skirt",
+      "note": "White front hem, not skin",
+      "actual": [
+        "skirt"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        330,
+        900
+      ],
+      "expected": "arm_screen_left",
+      "note": "Left white sleeve",
+      "actual": [
+        "arm_screen_left"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        870,
+        1010
+      ],
+      "expected": "arm_screen_right",
+      "note": "Right white sleeve bell",
+      "actual": [
+        "arm_screen_right"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        560,
+        1110
+      ],
+      "expected": "skirt",
+      "note": "Central brown skirt panel",
+      "actual": [
+        "skirt"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        318,
+        1390
+      ],
+      "expected": "legs_static",
+      "note": "Exposed outer left leg, below rear-skirt hem",
+      "actual": [
+        "legs_static"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        338,
+        1440
+      ],
+      "expected": "legs_static",
+      "note": "Bottom of exposed left leg",
+      "actual": [
+        "legs_static"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        750,
+        1420
+      ],
+      "expected": "legs_static",
+      "note": "Outer right leg below rear-skirt hem",
+      "actual": [
+        "legs_static"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        740,
+        1440
+      ],
+      "expected": "legs_static",
+      "note": "Bottom of exposed right leg",
+      "actual": [
+        "legs_static"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        250,
+        680
+      ],
+      "expected": "hair_back",
+      "reason": "Native exterior cuff hair or retained white hair matte; must not move with arm.",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        240,
+        700
+      ],
+      "expected": "hair_back",
+      "reason": "Native exterior cuff hair or retained white hair matte; must not move with arm.",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        230,
+        720
+      ],
+      "expected": "hair_back",
+      "reason": "Native exterior cuff hair or retained white hair matte; must not move with arm.",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        236,
+        715
+      ],
+      "expected": "hair_back",
+      "reason": "Native exterior cuff hair or retained white hair matte; must not move with arm.",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        858,
+        690
+      ],
+      "expected": "hair_back",
+      "reason": "Native exterior cuff hair or retained white hair matte; must not move with arm.",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        852,
+        715
+      ],
+      "expected": "hair_back",
+      "reason": "Native exterior cuff hair or retained white hair matte; must not move with arm.",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        858,
+        745
+      ],
+      "expected": "hair_back",
+      "reason": "Native exterior cuff hair or retained white hair matte; must not move with arm.",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        872,
+        740
+      ],
+      "expected": "hair_back",
+      "reason": "Native exterior cuff hair or retained white hair matte; must not move with arm.",
+      "actual": [
+        "hair_back"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        272,
+        675
+      ],
+      "expected": "arm_screen_left",
+      "reason": "Native cuff or bow interior stays with arm.",
+      "actual": [
+        "arm_screen_left"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        275,
+        690
+      ],
+      "expected": "arm_screen_left",
+      "reason": "Native cuff or bow interior stays with arm.",
+      "actual": [
+        "arm_screen_left"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        252,
+        720
+      ],
+      "expected": "arm_screen_left",
+      "reason": "Native cuff or bow interior stays with arm.",
+      "actual": [
+        "arm_screen_left"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        843,
+        700
+      ],
+      "expected": "arm_screen_right",
+      "reason": "Native cuff or bow interior stays with arm.",
+      "actual": [
+        "arm_screen_right"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        841,
+        715
+      ],
+      "expected": "arm_screen_right",
+      "reason": "Native cuff or bow interior stays with arm.",
+      "actual": [
+        "arm_screen_right"
+      ],
+      "pass": true
+    },
+    {
+      "xy": [
+        850,
+        750
+      ],
+      "expected": "arm_screen_right",
+      "reason": "Native cuff or bow interior stays with arm.",
+      "actual": [
+        "arm_screen_right"
+      ],
+      "pass": true
+    }
+  ]
+}

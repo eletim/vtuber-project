@@ -136,7 +136,10 @@ class SkinV17IntegrationTests(unittest.TestCase):
         cls.candidate = rgba(CANDIDATE)
         with Image.open(PROTECTED_MASK) as image:
             cls.protected = np.asarray(image.convert('L')) > 0
-        cls.manifest = json.loads(MANIFEST.read_text())
+        # Validate the historical v17 PSD against its accepted manifest. v19
+        # adds a new structural body-layer model and a different source PSD.
+        cls.manifest = json.loads(subprocess.check_output(['git', '-C', str(ROOT),
+            'show', 'e70184fb6c5bc6fe33e1d0da0cd47f0fc2970415:runtime/model/model.json']))
         cls.original_manifest = json.loads(git_blob('runtime/model/model.json'))
         cls.expressions = {e['id']: e for e in cls.manifest['expressions']}
 

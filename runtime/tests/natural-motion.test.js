@@ -134,7 +134,7 @@ function sequence(fps){
     const t=i/fps,mouth=t>=1&&t<9?.5+.35*Math.sin(t*8)**2:0;
     const target=motion.frame({...neutral(),ParamMouthOpenY:mouth},t,state,mouth);
     current=smoothParameters(current,target,1/fps);r.frame(current,t);
-    if(i%(fps/10)===0)samples.push({t,hand:xy(r.positions,125,1340),arms:[...r.pose.arms],shoulder:r.pose.shoulder});
+    if(i%(fps/10)===0)samples.push({t,hand:xy(r.positionsByRole.armLeft,125,1340),arms:[...r.pose.arms],shoulder:r.pose.shoulder});
   }
   return samples;
 }
@@ -155,7 +155,8 @@ test('speech visibly moves hands relative to shoulders, stays smooth, then settl
     const pose=motion.frame(neutral(),t,{...state,enabled},mouth);
     current=smoothParameters(current,pose,1/60);
     baseline=smoothParameters(baseline,{...pose,ParamArmLOpen:0,ParamArmROpen:0},1/60);
-    const positions=r.frame(current,t),plain=control.frame(baseline,t);
+    r.frame(current,t);control.frame(baseline,t);
+    const positions=r.positionsByRole.armLeft,plain=control.positionsByRole.armLeft;
     const relative=subtract(xy(positions,125,1340),xy(positions,365,565));
     const relativePlain=subtract(xy(plain,125,1340),xy(plain,365,565));
     peak=Math.max(peak,distance(relative,relativePlain));

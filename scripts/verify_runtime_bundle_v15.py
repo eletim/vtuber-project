@@ -48,6 +48,9 @@ async def verify(bundle):
                     'source':'human','expression':expression['id'],'duration':30})
                 assert response.status==200
                 assert (await response.json())['id']==expression['id']
+            for layer in model.get('bodyLayers',[]):
+                files.add(layer['file'])
+                files.update(layer.get('expressionFiles',{}).values())
             for file in sorted(files):
                 response=await client.get('/model/'+file)
                 assert response.status==200, file
