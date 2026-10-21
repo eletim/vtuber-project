@@ -41,7 +41,17 @@ test('hair has fixed roots, distinct lag, and does not move the face surface',()
    for(let i=0;i<points.length;i+=2){const y=body.rest[i+1]*model.size[1];if(y<=layer.hairMotion.rootY){assert.equal(points[i],before[i]);assert.equal(points[i+1],before[i+1]);}peak=Math.max(peak,Math.abs(points[i]-before[i])*model.size[0]);}
   }
  }
- assert.ok(peak>5&&peak<18);assert.ok(new Set([...hair.states.values()].map(s=>s.x.toFixed(3))).size>8);
+ assert.ok(peak>15&&peak<32);assert.ok(new Set([...hair.states.values()].map(s=>s.x.toFixed(3))).size>8);
+});
+
+test('larger hair swing returns to its rest surface after motion stops',()=>{
+ const {body,hair}=setup();body.frame(neutral(),0,{ambient:false});const head=body.positionsByRole.head;
+ for(let i=0;i<=240;i++)hair.frame(neutral(),i/60,head,body.pose);
+ let peak=0;
+ for(const points of hair.geometry.values())for(let i=0;i<points.length;i+=2)peak=Math.max(peak,Math.abs(points[i]-head[i])*model.size[0]);
+ assert.ok(peak>5);
+ for(let i=241;i<=600;i++)hair.frame(neutral(),i/60,head,body.pose,{ambient:false});
+ for(const points of hair.geometry.values())for(let i=0;i<points.length;i++)assert.ok(Math.abs(points[i]-head[i])<.000001);
 });
 test('thoughtful gesture raises, holds, and lowers the hand within six seconds',()=>{
  const p=time=>performancePose(neutral(),time,{enabled:true,emotion:'thoughtful',started_at:0,until:6});
