@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "engine": "VOICEVOX engine 0.25.2 CPU",
+  "credit": "VOICEVOX:雨晴はう",
+  "text": "こんにちは、羽月こまです。今日は、声を出してお話しできるようになりました。一緒に楽しんでいきましょう。",
+  "checks": [
+    "real Japanese WAV synthesis",
+    "single controller playback; overlay silent",
+    "real Web Audio RMS mouth motion",
+    "mouth state reaches overlay",
+    "pause closes mouth",
+    "mode switch cancels playback",
+    "shared idle and thoughtful gesture",
+    "natural motion toggle returns neutral pose"
+  ],
+  "observed": [
+    {
+      "mouth": 0.11111786996498557,
+      "time": 0.570667
+    },
+    {
+      "mouth": 0.5879799880321172,
+      "time": 0.693333
+    },
+    {
+      "mouth": 0.8944019635628226,
+      "time": 0.816675
+    },
+    {
+      "mouth": 0.047529724667550996,
+      "time": 0.922667
+    },
+    {
+      "mouth": 0.00526644360925678,
+      "time": 1.052697
+    },
+    {
+      "mouth": 0.0002811000277908918,
+      "time": 1.160274
+    },
+    {
+      "mouth": 0.00004487633415218347,
+      "time": 1.253333
+    },
+    {
+      "mouth": 0.04519311685460226,
+      "time": 1.36
+    },
+    {
+      "mouth": 0.006120830946717479,
+      "time": 1.489453
+    },
+    {
+      "mouth": 0.03638772689952382,
+      "time": 1.605333
+    },
+    {
+      "mouth": 0.5231381581610912,
+      "time": 1.718203
+    },
+    {
+      "mouth": 0.6435647401223152,
+      "time": 1.84073
+    },
+    {
+      "mouth": 0.3459363696545787,
+      "time": 1.92
+    },
+    {
+      "mouth": 0.08086950930440065,
+      "time": 2.041154
+    },
+    {
+      "mouth": 0.006663763143544721,
+      "time": 2.153648
+    },
+    {
+      "mouth": 0.0007399921962464203,
+      "time": 2.256713
+    },
+    {
+      "mouth": 0.0001702111355955062,
+      "time": 2.341333
+    },
+    {
+      "mouth": 0.000013089882983879433,
+      "time": 2.432
+    },
+    {
+      "mouth": 0.32606140528369326,
+      "time": 2.554667
+    },
+    {
+      "mouth": 0.9557430430872524,
+      "time": 2.682109
+    },
+    {
+      "mouth": 0.809183260517883,
+      "time": 2.8
+    },
+    {
+      "mouth": 0.2154666950693887,
+      "time": 2.918168
+    },
+    {
+      "mouth": 0.016533793053944285,
+      "time": 3.034667
+    },
+    {
+      "mouth": 0.0012687172496084948,
+      "time": 3.146754
+    },
+    {
+      "mouth": 0.00014088749010579343,
+      "time": 3.253333
+    }
+  ],
+  "frames": 198
+}

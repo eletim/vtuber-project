@@ -1,0 +1,90 @@
+{
+  "name": "羽月こま",
+  "format": "koma-part-mesh-2",
+  "size": [
+    1086,
+    1448
+  ],
+  "base": "base.png",
+  "source_psd": "assets/parts/v10/koma_integrated_v10.psd",
+  "parts": [
+    {
+      "name": "eye_screen_left.closed",
+      "parameter": "ParamEyeROpen",
+      "state": "closed",
+      "rect": [
+        344,
+        217,
+        547,
+        367
+      ],
+      "file": "eye_screen_left_closed.png"
+    },
+    {
+      "name": "eye_screen_left.open",
+      "parameter": "ParamEyeROpen",
+      "state": "open",
+      "rect": [
+        356,
+        229,
+        535,
+        354
+      ],
+      "file": "eye_screen_left_open.png"
+    },
+    {
+      "name": "eye_screen_right.closed",
+      "parameter": "ParamEyeLOpen",
+      "state": "closed",
+      "rect": [
+        526,
+        192,
+        699,
+        337
+      ],
+      "file": "eye_screen_right_closed.png"
+    },
+    {
+      "name": "eye_screen_right.open",
+      "parameter": "ParamEyeLOpen",
+      "state": "open",
+      "rect": [
+        538,
+        204,
+        684,
+        320
+      ],
+      "file": "eye_screen_right_open.png"
+    },
+    {
+      "name": "mouth.closed",
+      "parameter": "ParamMouthOpenY",
+      "state": "closed",
+      "rect": [
+        461,
+        314,
+        617,
+        424
+      ],
+      "file": "mouth_closed.png"
+    },
+    {
+      "name": "mouth.open",
+      "parameter": "ParamMouthOpenY",
+      "state": "open",
+      "rect": [
+        467,
+        317,
+        614,
+        412
+      ],
+      "file": "mouth_open.png"
+    }
+  ],
+  "mesh": [
+    60,
+    80
+  ],
+  "skinning": "skinning.json",
+  "note": "PSD-derived preview mesh, not a Cubism moc3 export."
+}

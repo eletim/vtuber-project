@@ -1,0 +1,27 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "edits": [
+    {
+      "asset": "vest_hidden_painted_source.png",
+      "crop": [
+        130,
+        450,
+        990,
+        1400
+      ],
+      "prompt": "Use case precise-object-edit. This is an existing Live2D underpainting crop with the character's tan-and-brown long vest hidden, but badly unfinished. Repair ONLY the underlying clothing where the vest was. Remove the remaining long vest lapels, tan/dark coat tails at both outer sides of skirt, checkerboard vest collar pieces and all rectangular white/grey skin-like polygon patches. Reveal the same existing white ruffled blouse and the same brown high-waisted checker-pattern corset/skirt continuing naturally to the sides. Blouse is fitted white fabric with delicate pink-grey folds from shoulders to corset. The waist/skirt retains the exact existing belt, orange ribbon, small flower and hem. Keep exact existing sleeves, bare shoulders and arms, hanging pendant, bow at neckline, skirt design, hair, hands, thigh positions, crop and background. Do not redesign clothes, extend body or add accessories. Draw continuous finely shaded fabric underlayer; no white blocks, grey wedges, cutout edges, duplicated hems or vest fragments. This is repair of obscured parts of the EXISTING character, not new character art.",
+      "sha256": "d9bae941a21fcdfd3d43868c13af7345000d62926ca4bfa62aeaa66b534cd833"
+    },
+    {
+      "asset": "hair_hidden_painted_source.png",
+      "crop": [
+        0,
+        0,
+        1086,
+        950
+      ],
+      "prompt": "Use case precise-object-edit. Repair this EXISTING Live2D underpainting of a girl after long side and rear hair layers are hidden. Remove ONLY the long flowing side/rear locks that hang beside the cheeks, neck and over both shoulders, including fixed duplicate curly hair and dirty polygon/grey/green fragments in those regions. Leave the top head hair, bangs, crown, braid at the temple and hair ornament EXACTLY intact. Reveal the complete existing face outline, ears, neck, bare shoulders, white collar and vest beneath those removed long locks; paint them naturally with the same delicate original style and correct contours. Beyond the shoulders use the EXACT warm grey background already in image. Keep the existing original face expression, eyes, mouth, head geometry, body pose, vest, orange bow, sleeves, pendant and crop. No new face or new costume. The hairstyle visible in this hidden-parts underlayer should end near jaw/ear; no long curls along neck or shoulders, no duplicated hair, no floating fragments, no flat grey polygons. This is hidden artwork for the exact same character, not a redesign.",
+      "sha256": "089a320af8ecc5e8d38fd7c25f0cff17775d29dcbcdb2d947090a1f74cc70a63"
+    }
+  ]
+}

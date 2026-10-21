@@ -1,0 +1,99 @@
+{
+  "source_v8": "assets/parts/v8/koma_expression_repaired_v8.psd",
+  "underpainting_v7": "assets/parts/v7/koma_illustrated_underlayers_v7.psd",
+  "output_psd": "assets/parts/v8/koma_hair_head_cleaned_v8.psd",
+  "layer_count": 51,
+  "initial_rgb_pixel_diff": 25541,
+  "initial_alpha_pixel_diff": 0,
+  "changed_painted_pixels": {
+    "side_hair_redundant_boundary": 43811,
+    "accessory_redundant_boundary": 9103,
+    "crown_redundant_boundary": 3769,
+    "rear_hair_redundant_boundary": 1117,
+    "fixed_side_hair_boundary": 5049,
+    "bangs_boundary": 3,
+    "side_hair_left_boundary": 29,
+    "side_hair_right_boundary": 486,
+    "accessory_boundary": 48,
+    "crown_boundary": 5,
+    "bangs": 58494,
+    "side_hair": 0,
+    "accessory": 0,
+    "crown": 0,
+    "rear_hair": 0,
+    "painted_side_hair_underlayer": 194322,
+    "hairline_underpainting": 59752,
+    "side_hair_segmentation_remnants": 271,
+    "accessory_segmentation_remnants": 31,
+    "crown_segmentation_remnants": 67,
+    "approved_default_boundary_cleanup": 25541
+  },
+  "pixel_sources": [
+    "approved v8 composite",
+    "illustrated v7 scalp reveal",
+    "illustrated v7 hair-underlayer composites",
+    "separately reviewed painted side-hair underlayer"
+  ],
+  "flat_fill_or_blur_used": false,
+  "scene_checks": {
+    "bangs_hidden": {
+      "lost_alpha_pixels": 0,
+      "pass": true
+    },
+    "side_hair_hidden": {
+      "lost_alpha_pixels": 0,
+      "pass": true,
+      "segmentation_remnant_mask_pixels": 271,
+      "segmentation_marker_pixels": 0,
+      "changed_rgb_pixels_vs_default": 109893,
+      "review_reference": "assets/parts/v8/review_references/side_hair_hidden_v8.png",
+      "review_reference_sha256": "97d94f706fc60aa0a388485f4113a13ebf54fbd04d8ce1a773ad335dd9d42ac4",
+      "review_reference_pixel_diff": 0
+    },
+    "accessory_hidden": {
+      "lost_alpha_pixels": 0,
+      "pass": true,
+      "segmentation_remnant_mask_pixels": 31,
+      "segmentation_marker_pixels": 0
+    },
+    "crown_hidden": {
+      "lost_alpha_pixels": 0,
+      "pass": true,
+      "segmentation_remnant_mask_pixels": 67,
+      "segmentation_marker_pixels": 0
+    },
+    "rear_hair_hidden": {
+      "lost_alpha_pixels": 0,
+      "pass": true,
+      "changed_rgb_pixels_vs_default": 4772
+    },
+    "bangs_displaced": {
+      "lost_alpha_pixels": 0,
+      "pass": true
+    },
+    "side_hair_displaced": {
+      "lost_alpha_pixels": 0,
+      "pass": true,
+      "vacated_original_silhouette_pixels": 12760,
+      "vacated_pixels_matching_hidden_underpainting": 12760,
+      "vacated_pixels_still_matching_default": 95,
+      "retained_default_fraction": 0.007445141065830721,
+      "review_reference": "assets/parts/v8/review_references/side_hair_displaced_v8.png",
+      "review_reference_sha256": "97698f3710734dc0802bcae7da720e321a66a6c581bcfae56f3f692a210cc3a6",
+      "review_reference_pixel_diff": 0
+    },
+    "rear_hair_displaced": {
+      "lost_alpha_pixels": 0,
+      "pass": true,
+      "vacated_original_silhouette_pixels": 2134,
+      "vacated_pixels_matching_hidden_underpainting": 2134,
+      "vacated_pixels_still_matching_default": 2,
+      "retained_default_fraction": 0.0009372071227741331
+    },
+    "accessory_displaced": {
+      "lost_alpha_pixels": 0,
+      "pass": true
+    }
+  },
+  "art_ready_for_cubism": false
+}

@@ -21,3 +21,14 @@ assets/parts/**/koma_structure_v6.psd
 assets/parts/**/01_open_actual_layers.png
 assets/parts/**/audit/
 assets/parts/**/mismatch_map.png
+
+# The approved v7/v8 artwork binaries are tracked in Git / Git LFS.
+# Do not ignore assets/original, assets/expression_references, or assets/parts/v7-v8.
+
+# Regenerable high-resolution visual QA output (not source artwork)
+artifacts/v8_visual_review/
+artifacts/expression_baseline/
+artifacts/v10/
+runtime/vendor/
+runtime/node_modules/
+runtime/test-results/

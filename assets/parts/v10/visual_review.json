@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-20",
+  "reviewer": "Codex",
+  "normal_rgba_changed_pixels": 0,
+  "expressions": "All eight independent combinations match v9; neutral and merged PSD match.",
+  "hair_reveal": "Former fixed long-hair fragments removed in reviewed side/rear hidden state; shoulder and collar drawing revealed.",
+  "vest_reveal": "Large grey wedges and white polygons replaced with continuous blouse/corset/skirt painting.",
+  "sleeves_hands": "Retained draft arm/cuff artwork integrated and reviewed in hide/move strips.",
+  "remaining": [
+    "Original outer hair cutout still has rough/light fringes; not approved for final release.",
+    "Crown, ornament and bangs require final individual deformation review in Cubism.",
+    "Preview mesh is a shared 2D mesh; Cubism deformer hierarchy and moc3 export are not generated.",
+    "Eye/mouth playback uses two opaque authored endpoints, not continuous eyelid/lip art meshes.",
+    "Physical camera/microphone and audible Japanese TTS have not been tested on the user PC."
+  ],
+  "art_release": "NOT_READY",
+  "runtime_smoke": "PASS",
+  "files": {
+    "koma_integrated_v10.psd": "25e5cdba8fb464bf58f730ae2572a9d52325c9e8ef27516172dcc8c7c6f42540",
+    "hair_review.png": "9f74b5c7695536ce1174b95e23ecdbdfc411ece9170163bc35d2a9cb2aab32a7",
+    "vest_review.png": "2079282916e042f6868f3f1a62bfa30e443d8e86e2cb2b30ddf64adc43dd5336",
+    "sleeves_review.png": "ad059faf825b629290a8dea065d4f3867a84752e9c994b2be3419802956ece96",
+    "hands_review.png": "289c1d9357a5a928f2936cad27e9660da82cffffdba79aafa954a6b0b8346a76",
+    "runtime_motion.gif": "19b8f72ad4d99d72971717d1f0ef21463ce9bb2f0cc3050cd72b9fbb1361389f",
+    "runtime_e2e.json": "d9657d7f9a700746c99f964dcda0872ced5580791f881e2edd37722b1a3e6ea6"
+  }
+}
