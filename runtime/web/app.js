@@ -1,9 +1,10 @@
-import {performancePose} from './performance.js';
+import {PerformanceMotion} from './performance.js';
 import {expressionLabels} from './expressions.js';
 import {AvatarRenderer} from './renderer.js';
 import {limits,neutral,faceParameters,rmsMouth,smoothParameters,clamp} from './controls.js';
 const $=id=>document.getElementById(id);
 const renderer=new AvatarRenderer();
+const naturalMotion=new PerformanceMotion();
 let mode='human',target=neutral(),current=neutral(),ws,cameraStream,micStream,landmarker,tracking=false;
 let cameraRequest,audioContext,micAnalyser,fileAnalyser,fileSource,audioURL;
 let manualBlink=0,blinkTimer,blinkRestore,blinkGeneration=0,lastFaceAt=0,frameStamp=0,lastSent=0;
@@ -14,11 +15,11 @@ let motionAction,aiModeRequest;
 let expressionSelectionGeneration=0,mediaStatusGeneration=0;
 let manualActive=false,performanceState={enabled:true,emotion:'neutral'},expressionState={id:'neutral',owner:'idle',until:0};
 const sliders={};
-const names={ParamAngleX:'顔・左右',ParamAngleY:'顔・上下',ParamAngleZ:'顔・傾き',ParamBodyAngleX:'体・左右',ParamEyeLOpen:'左目',ParamEyeROpen:'右目',ParamMouthOpenY:'口の開き'};
+const names={ParamAngleX:'顔・左右',ParamAngleY:'顔・上下',ParamAngleZ:'顔・傾き',ParamBodyAngleX:'体・左右',ParamArmLOpen:'画面左の腕',ParamArmROpen:'画面右の腕',ParamShoulderY:'肩・上下',ParamBodyShiftX:'姿勢・左右',ParamEyeLOpen:'左目',ParamEyeROpen:'右目',ParamMouthOpenY:'口の開き'};
 const status=text=>$('status').textContent=text;
 async function post(path,body){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok){const error=Error(await r.text());error.status=r.status;throw error;}return r.json();}
 function report(error){console.error(error);status(error.message||String(error));}
-function stopMotionAction(invalidateSelection=true){motionAction=null;clearInterval(demoTimer);demoTimer=undefined;if(invalidateSelection){aiModeRequest?.resolveState();aiModeRequest=null;}}
+function stopMotionAction(invalidateSelection=true){motionAction=null;naturalMotion.reset();clearInterval(demoTimer);demoTimer=undefined;if(invalidateSelection){aiModeRequest?.resolveState();aiModeRequest=null;}}
 function beginMotionAction(){mediaStatusGeneration++;stopMotionAction(false);cancelSpeech();return motionAction={awaitingAI:true};}
 async function selectAIForMotion(action){
   if(ws?.readyState!==1)throw Error('接続が切れています。再接続後にもう一度お試しください。');
@@ -243,14 +244,14 @@ function tick(now){
   if(mode==='human'&&micAnalyser){micAnalyser.getFloatTimeDomainData(samples);target.ParamMouthOpenY=rmsMouth(samples);microphone=true;}
   if(mode==='ai'&&fileAnalyser&&!$('audio').paused){fileAnalyser.getFloatTimeDomainData(samples);target.ParamMouthOpenY=rmsMouth(samples);microphone=true;}
   if((tracking||microphone||manualActive)&&now-lastSent>(manualActive&&!tracking&&!microphone?700:90)){send(target);lastSent=now;}
-  const pose=mode==='ai'?performancePose(target,Date.now()/1000,performanceState,target.ParamMouthOpenY):{...target};
+  const pose=naturalMotion.frame(target,Date.now()/1000,{...performanceState,enabled:mode==='ai'&&performanceState.enabled},target.ParamMouthOpenY);
   const phase=(now/1000)%4.7;const blink=$('autoblink').checked&&!tracking&&phase>4.48;
   if(blink||manualBlink>now)pose.ParamEyeLOpen=pose.ParamEyeROpen=0;
   pose.ParamBreath=.5+.5*Math.sin(now/1700);
   const expression=expressionState.until&&Date.now()/1000>=expressionState.until?'neutral':expressionState.id;
   current=smoothParameters(current,pose,dt);renderer.render(current,now/1000,expression);
   frames++;if(now-fpsTime>1000){$('fps').textContent=`${Math.round(frames*1000/(now-fpsTime))} FPS`;fpsTime=now;frames=0;}
-  window.koma={mode,target:{...target},current:{...current},frames:renderer.frames,tracking,lastFaceAt,renderer,performance:performanceState,expression:{...expressionState},expressionFrame:renderer.expressionFrame,setExpression};
+  window.koma={mode,target:{...target},current:{...current},frames:renderer.frames,tracking,lastFaceAt,renderer,performance:performanceState,naturalMotion,expression:{...expressionState},expressionFrame:renderer.expressionFrame,setExpression};
   frameStamp=requestAnimationFrame(tick);
 }
 window.addEventListener('beforeunload',()=>{clearTimeout(connectionTimer);clearInterval(demoTimer);ws.onclose=null;ws.close();stopCamera();stopMic();cancelSpeech();landmarker?.close();audioContext?.close();if(audioURL)URL.revokeObjectURL(audioURL);cancelAnimationFrame(frameStamp);});

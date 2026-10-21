@@ -1,0 +1,7 @@
+{
+  "same_frame_count": true,
+  "same_face_draws": true,
+  "same_face_parameters": true,
+  "same_mouth_pixels": true,
+  "same_voice_pcm": true
+}

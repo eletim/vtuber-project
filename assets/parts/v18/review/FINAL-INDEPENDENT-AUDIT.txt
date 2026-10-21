@@ -1,0 +1,32 @@
+V18 independent arm/body motion audit: PASS
+Reviewed 2026-10-21. No production edits, push, merge or publication performed by this reviewer.
+
+Candidate and video identity
+- Accepted artwork baseline: e70184fb6c5bc6fe33e1d0da0cd47f0fc2970415.
+- Frozen BodyRig SHA-256: 15c8f78c03c398a57482f2742c81ca0c985970bce020e982369864ac8b5c61f3.
+- Frozen performance SHA-256: 525fdc976db942ae40930acbc2c87d31eeadd52ff608c664e2f412c9993a81fb.
+- Video: /workspace/shared/vtuber-v18-preview/koma-v18-arm-body-motion.mp4.
+- Video SHA-256: ce4fd5278984ab8f10092285ff8970766690f8b3a1e224113ecaf26302ee0e4a.
+- 1080 x 1440 portrait; 42 seconds; 1260 frames; 14,266,684 bytes.
+
+Independent findings
+1. The initial unchanged opacity-derived arm field was unsafe for larger gestures. At 3 degrees shoulder rotation it reduced wrist/finger-edge triangle area to 0.077; at 4 degrees it inverted. Static OpenGL images confirmed visible finger/wrist pinching, not merely transparent-region geometry. This issue was reported and corrected before freeze.
+2. The final runtime ownership extension fixes that pinching while preserving all source art. Independent static stress covered 133 combinations of arm direction, maximum torso/head rotation, lift, shift and breath. Minimum triangle area was 0.2643, no inversions, and central pelvis remained exact. Isolated +/-3.2-degree arm gestures kept fingers/cuffs shaped and connected. Bare-thigh movement was approximately 0.3 source pixels; central skirt movement was zero.
+3. All 1260 actual preview meshes were audited independently. Zero inverted triangle instances, zero warning frames. Minimum normalized area 0.724109 at frame 468 matches the pre-existing v17 head-transition minimum. Painted-body minimum area 0.818295. Maximum painted-body principal stretch 1.225452 at frame 1044. Maximum sampled left/right hand displacement from rest was 23.57/24.57 source pixels, versus 6.61/6.15 in v17. Maximum hand step was 1.93 source pixels at 30 fps. Central pelvis was exactly fixed throughout.
+4. All 369 protected artwork/model/face-rendering files match the accepted baseline byte-for-byte. All 1260 facial draw operations, head/eye/mouth parameters, and the warped mouth pixel stream match the approved v17 timeline exactly. Original voice PCM is byte-identical.
+5. Actual encoded visuals were inspected, not just numerical tests: overview at frames 0, 48, 186, 348, 468, 653, 745, 1044, 1230 and 1259; additional encoded frames 825 and 1125 cover bashful and thinking; native-size gesture maxima 48 and 1044; seven-frame temporal strips spanning +/-0.5 seconds around both gesture maxima; corrected-mouth close-up at frame 653; full ending frame. All eight expressions are covered. Fingers, wrists, cuffs and hem remain connected; no new tears, exposed cutouts, clipped hands, or abrupt motion discontinuities were observed in these samples. Body changes are visible and modest rather than replacing the face presentation.
+
+Residual limitations and bounded risks
+- Maximum simultaneous manual controls can compress one painted back-hem region to about 0.302 normalized area, though no inversion or visible crack appeared. The actual natural speech timeline does not approach this deformation. No further motion reduction was requested or needed for the delivered video.
+- Existing thigh cutouts and hair-edge matte artifacts remain unchanged. They are original artwork limitations, not hidden by cropping or repaired in this task.
+- This is an offline OpenGL render using the runtime calculations. This review does not claim browser E2E, real-camera/microphone, OBS, Photoshop or Cubism verification.
+- Temporal assessment combines all-frame numerical trajectory/geometry checks with sampled encoded images and temporal strips, not live browser playback.
+
+Evidence in this review directory
+- protected-art-final.json; timeline-face-preservation.json.
+- final-mesh-summary.json; final-mesh-audit.json; audit_mesh_sequence.py.
+- baseline-angle-probe.json; baseline-static-angle-sheet.png; baseline-wrist-angle-sheet.png.
+- v18-static-extremes.json; v18-static-angle-sheet.png; v18-wrist-angle-sheet.png; v18-hem-angle-sheet.png.
+- final-encoded-wrist-hem-sheet.png; encoded-additional-01.png; encoded-additional-02.png.
+
+Encoded overview, temporal strips, native keyframes and producer decode/audio verification are in /workspace/shared/vtuber-v18-preview. Producer reported full decode PASS and original-audio correlation 0.999962. The video SHA-256 was rechecked independently.

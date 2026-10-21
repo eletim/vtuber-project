@@ -1,15 +1,41 @@
 const clamp=(x,lo,hi)=>Math.min(hi,Math.max(lo,x));
 const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a),0,1);return t*t*(3-2*t);};
 const radians=x=>x*Math.PI/180;
+const value=(p,key,lo,hi)=>clamp(Number.isFinite(p[key])?p[key]:0,lo,hi);
+
+// The PSD weights describe painted opacity, not a rigid limb volume. Moving
+// their narrow alpha falloff bends fingers and can fold the transparent edge.
+// Extend ownership through the transparent margin, then feather it smoothly.
+// This is a runtime field only: neither the original weights nor art changes.
+function armOwnership(weights,nx,ny,channel){
+  const w=nx+1,h=ny+1,dilated=new Float32Array(w*h),out=new Float32Array(w*h);
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    let peak=0;
+    for(let dy=-4;dy<=4;dy++)for(let dx=-4;dx<=4;dx++){
+      if(dx*dx+dy*dy>18)continue;
+      peak=Math.max(peak,weights[clamp(y+dy,0,ny)*w+clamp(x+dx,0,nx)][channel]);
+    }
+    dilated[y*w+x]=peak;
+  }
+  const kernel=Array.from({length:13},(_,i)=>Math.exp(-(((i-6)/2.2)**2)/2));
+  const total=kernel.reduce((a,b)=>a+b,0),horizontal=new Float32Array(w*h);
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    for(let k=-6;k<=6;k++)horizontal[y*w+x]+=dilated[y*w+clamp(x+k,0,nx)]*kernel[k+6]/total;
+  }
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    for(let k=-6;k<=6;k++)out[y*w+x]+=horizontal[clamp(y+k,0,ny)*w+x]*kernel[k+6]/total;
+  }
+  return out;
+}
 
 class Spring {
   constructor(speed){this.x=0;this.v=0;this.speed=speed;}
   step(target,dt){
-    const count=Math.max(1,Math.ceil(dt*120)),h=dt/count;
-    for(let i=0;i<count;i++){
-      this.v+=((target-this.x)*this.speed*this.speed-2*this.speed*this.v)*h;
-      this.x+=this.v*h;
-    }
+    // Exact critically damped response for a held target. No Euler step-size
+    // dependence, overshoot on settling, or instability after a slow frame.
+    const offset=this.x-target,c=this.v+this.speed*offset,e=Math.exp(-this.speed*dt);
+    this.x=target+(offset+c*dt)*e;
+    this.v=(this.v-this.speed*c*dt)*e;
     return this.x;
   }
 }
@@ -29,28 +55,34 @@ export class BodyRig {
     }
     this.body=new Spring(9);this.arms=[new Spring(6),new Spring(6)];
     this.elbows=[new Spring(5),new Spring(5)];
+    this.shoulder=new Spring(8);this.shift=new Spring(6);
+    this.armWeights=[armOwnership(this.weights,nx,ny,0),armOwnership(this.weights,nx,ny,1)];
     this.firstTime=null;this.lastTime=null;
   }
   frame(p,time){
     if(this.firstTime===null)this.firstTime=time;
     const elapsed=Math.max(0,time-this.firstTime);
-    const dt=this.lastTime===null?0:clamp(time-this.lastTime,0,.05);this.lastTime=time;
+    const dt=this.lastTime===null?0:clamp(time-this.lastTime,0,.1);this.lastTime=time;
     const bodyTarget=clamp(p.ParamBodyAngleX*.8+p.ParamAngleX*.04,-4.6,4.6);
     const body=this.body.step(bodyTarget,dt);
     const breath=clamp(p.ParamBreath,0,1)-.5;
+    const shoulder=this.shoulder.step(value(p,'ParamShoulderY',-1,1)*3,dt);
+    const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*4,dt);
     const armAngles=[],elbowAngles=[];
     for(let side=0;side<2;side++){
       const sign=side===0?1:-1;
       const lag=clamp(-this.body.v*.055+body*.09+sign*breath*.18,-1.15,1.15);
-      armAngles.push(radians(this.arms[side].step(lag,dt)));
-      elbowAngles.push(radians(this.elbows[side].step(-this.arms[side].x*.35,dt)));
+      const intent=sign*2.8*value(p,side===0?'ParamArmLOpen':'ParamArmROpen',-1,1);
+      armAngles.push(radians(this.arms[side].step(clamp(lag+intent,-3.2,3.2),dt)));
+      elbowAngles.push(radians(this.elbows[side].step(clamp(-this.arms[side].x*.35,-1.12,1.12),dt)));
     }
     const bodyAngle=radians(body),bc=Math.cos(bodyAngle),bs=Math.sin(bodyAngle);
     const headAngle=radians(p.ParamAngleZ),hc=Math.cos(headAngle),hs=Math.sin(headAngle);
     const [width,height]=this.size;
     for(let i=0;i<this.weights.length;i++){
       const x=this.rest[i*2]*width,y=this.rest[i*2+1]*height;
-      const [left,right,hair,armParent]=this.weights[i];
+      const [, ,hair,armParent]=this.weights[i];
+      const left=this.armWeights[0][i],right=this.armWeights[1][i];
       let px=x,py=y;
       // Distal bone first, followed by its parent shoulder.
       for(let side=0;side<2;side++){
@@ -75,13 +107,16 @@ export class BodyRig {
       px+=(x-543)*breath*.002*chest*central;
       py-=breath*(.7*(1-smooth(570,950,y))+1.1*chest*central);
       // Hip/root stays planted. Upper body rotates around it as a hierarchy.
-      const torso=Math.max(1-smooth(1010,1370,y),armParent),tx=px-543,ty=py-1000;
+      const parent=Math.max(armParent,left,right);
+      const torso=Math.max(1-smooth(1010,1370,y),parent),tx=px-543,ty=py-1000;
       px+=(bc*tx-bs*ty-tx)*torso;py+=(bs*tx+bc*ty-ty)*torso;
+      px+=shift*torso;
+      py-=shoulder*Math.max(1-smooth(650,1020,y),parent);
       // Sway belongs only to actual long-hair ownership, not sleeve/torso pixels.
       px+=hair*.55*(Math.sin(elapsed*1.6+y*.007)-Math.sin(y*.007));
       this.positions[i*2]=px/width;this.positions[i*2+1]=py/height;
     }
-    this.pose={body,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x)};
+    this.pose={body,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift};
     return this.positions;
   }
 }

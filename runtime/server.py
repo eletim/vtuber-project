@@ -18,7 +18,9 @@ EMOTION_EXPRESSIONS = {'neutral':'neutral', 'happy':'soft_smile', 'thoughtful':'
 LIMITS = {'ParamAngleX': (-15,15,0), 'ParamAngleY': (-10,10,0),
           'ParamAngleZ': (-8,8,0), 'ParamBodyAngleX': (-5,5,0),
           'ParamEyeLOpen': (0,1,1), 'ParamEyeROpen': (0,1,1),
-          'ParamMouthOpenY': (0,1,0), 'ParamBreath': (0,1,0.5)}
+          'ParamMouthOpenY': (0,1,0), 'ParamBreath': (0,1,0.5),
+          'ParamArmLOpen': (-1,1,0), 'ParamArmROpen': (-1,1,0),
+          'ParamShoulderY': (-1,1,0), 'ParamBodyShiftX': (-1,1,0)}
 
 
 def validate_parameters(values):

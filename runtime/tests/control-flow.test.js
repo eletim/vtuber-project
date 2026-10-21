@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFileSync} from 'node:fs';
 import * as controls from '../web/controls.js';
-import {performancePose} from '../web/performance.js';
+import {PerformanceMotion} from '../web/performance.js';
 import {expressionLabels} from '../web/expressions.js';
 
 // Exercise the real UI handlers without WebGL, a media device, or wall-clock waits.
@@ -27,7 +27,7 @@ function harness(){
     return elements.get(id);
   }
   const context=vm.createContext({
-    ...controls,performancePose,expressionLabels,AvatarRenderer:class{},console,Date,URLSearchParams,
+    ...controls,PerformanceMotion,expressionLabels,AvatarRenderer:class{},console,Date,URLSearchParams,
     URL:{createObjectURL:()=> 'blob:test',revokeObjectURL(){}},
     document:{getElementById:element,createElement:()=>element(`row${sequence++}`),body:element('body')},
     window:{addEventListener(){}},location:{protocol:'http:',host:'test',search:''},
@@ -64,11 +64,24 @@ function harness(){
   function complete(request){publish(request);respond(request);}
   emit({type:'state',...state});
   return{element,requests,intervals,timeouts,sent,mediaRequests,emit,publish,respond,complete,
+    motion:vm.runInContext('naturalMotion',context),
     prepareCamera:()=>vm.runInContext('landmarker={detectForVideo(){}};',context),
     slider:key=>vm.runInContext('sliders['+JSON.stringify(key)+']',context),
     disconnect:()=>{socket.readyState=3;socket.onclose();},
     advance:time=>{now=time;for(const callback of [...intervals.values()])callback();for(const [id,timer] of [...timeouts])if(timer.at<=now){timeouts.delete(id);timer.fn();}}};
 }
+
+for(const action of ['reset','human','disconnect'])test(`${action} clears speech accents and cannot revive an old gesture`,()=>{
+  const h=harness();
+  for(let i=0;i<40;i++)h.motion.frame(controls.neutral(),i/60,{enabled:true},.8);
+  assert.ok(h.motion.pose.accent>.2);
+  if(action==='disconnect')h.disconnect();else h.element(action).onclick();
+  assert.equal(h.motion.gesture,null);assert.equal(h.motion.pose.accent,0);
+  for(let i=40;i<100;i++){
+    const pose=h.motion.frame(controls.neutral(),i/60,{enabled:action==='reset'},0);
+    assert.equal(pose.ParamArmLOpen,0);assert.equal(pose.ParamArmROpen,0);
+  }
+});
 
 test('gesture preview selects AI and enables disabled natural motion',async()=>{
   const h=harness();h.element('emotion').value='thoughtful';

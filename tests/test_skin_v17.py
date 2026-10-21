@@ -227,7 +227,7 @@ class SkinV17IntegrationTests(unittest.TestCase):
                 count += 1
         self.assertEqual(count, 64)
 
-    def test_all_preexisting_artwork_and_runtime_motion_sources_are_byte_exact(self):
+    def test_preexisting_artwork_and_historical_v17_motion_sources_are_exact(self):
         rows = subprocess.check_output([
             'git', '-C', str(ROOT), 'ls-tree', '-r', '-z', BASELINE,
             'assets', 'runtime/model', 'runtime/web',
@@ -243,7 +243,14 @@ class SkinV17IntegrationTests(unittest.TestCase):
             relative = path_bytes.decode()
             if relative == 'runtime/model/model.json':
                 continue  # Separately checked above, with only two fields allowed.
-            actual = (ROOT/relative).read_bytes()
+            # v18 deliberately adds body/arm motion. Keep the v17 historical
+            # no-motion-change assertion pinned to its accepted commit, while
+            # continuing to test all current artwork/model bytes below.
+            if relative.startswith('runtime/web/'):
+                actual = subprocess.check_output(['git', '-C', str(ROOT), 'show',
+                    f'e70184fb6c5bc6fe33e1d0da0cd47f0fc2970415:{relative}'])
+            else:
+                actual = (ROOT/relative).read_bytes()
             git_hash = hashlib.sha1(b'blob '+str(len(actual)).encode()+b'\0'+actual).hexdigest()
             self.assertEqual(git_hash, expected_hash.decode(), relative)
             checked += 1

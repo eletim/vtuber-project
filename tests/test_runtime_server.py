@@ -4,7 +4,7 @@ from pathlib import Path
 from aiohttp.test_utils import TestClient,TestServer
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'runtime'))
-from server import create_app
+from server import create_app, LIMITS
 
 
 class Controls(unittest.IsolatedAsyncioTestCase):
@@ -38,6 +38,33 @@ class Controls(unittest.IsolatedAsyncioTestCase):
         event=await ws.receive_json(timeout=1)
         self.assertEqual(event['source'],'idle')
         self.assertEqual(event['parameters']['ParamMouthOpenY'],0)
+        await ws.close()
+
+    async def test_arm_body_parameters_clamp_reset_and_expire(self):
+        keys = ('ParamArmLOpen', 'ParamArmROpen', 'ParamShoulderY', 'ParamBodyShiftX')
+        self.assertTrue(all(LIMITS[key] == (-1, 1, 0) for key in keys))
+        for source in ('human', 'ai'):
+            await self.client.post('/api/mode', json={'mode': source})
+            response = await self.client.post('/api/control', json={
+                'source': source, 'parameters': dict(zip(keys, (5, -5, 1, -1)))})
+            self.assertEqual(response.status, 200)
+            payload = await response.json()
+            self.assertEqual({key: payload['parameters'][key] for key in keys},
+                             dict(zip(keys, (1, -1, 1, -1))))
+        response = await self.client.post('/api/mode', json={'mode': 'human'})
+        payload = await response.json()
+        self.assertTrue(all(payload['parameters'][key] == 0 for key in keys))
+        for invalid in ('bad', True, None):
+            response = await self.client.post('/api/control', json={
+                'source': 'human', 'parameters': {'ParamArmLOpen': invalid}})
+            self.assertEqual(response.status, 400)
+        ws = await self.client.ws_connect('/ws')
+        await ws.receive_json()
+        await ws.send_json({'source': 'human', 'parameters': dict.fromkeys(keys, .8), 'ttl_ms': 100})
+        event = await ws.receive_json()
+        self.assertTrue(all(event['parameters'][key] == .8 for key in keys))
+        event = await ws.receive_json(timeout=1)
+        self.assertTrue(all(event['parameters'][key] == 0 for key in keys))
         await ws.close()
 
 
