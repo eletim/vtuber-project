@@ -21,6 +21,10 @@ export function performancePose(base,time,performance={enabled:true},mouth=0){
   const weight=onset*fade;
   if(emotion==='happy'){z+=weight*1.8*Math.sin(t*1.7);body+=weight*.6*Math.sin(t*1.7);y+=weight*.8*Math.sin(t*3.4);}
   if(emotion==='thoughtful'){z+=weight*3.1;x-=weight*2.2;y-=weight*.9;}
+  if(emotion==='thoughtful'){
+    const gesture=ease(age/1.1)*(1-ease((age-3.1)/1.5));
+    pose.ParamHandToCheek=clamp((pose.ParamHandToCheek||0)+gesture*(1-(pose.ParamHandToCheek||0)));
+  }
   if(emotion==='surprised'){y-=weight*1.5*Math.exp(-Math.max(0,age)*.9);z-=weight*1.1;}
   pose.ParamAngleX=clamp(pose.ParamAngleX+x,-15,15);
   pose.ParamAngleY=clamp(pose.ParamAngleY+y,-10,10);

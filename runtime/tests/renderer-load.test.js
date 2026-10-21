@@ -35,13 +35,14 @@ test('production renderer loads cropped textures and preserves independent draws
     };
     const renderer=new AvatarRenderer();await renderer.load({width:652,height:869,getContext:()=>gl});
     assert.deepEqual(renderer.sampling,{enabled:true,width:1304,height:1738,scale:2});
-    assert.equal(renderer.layers.length,7);
+    const count=renderer.model.bodyLayers.length;
+    assert.ok(count>=20);
     for(const layer of renderer.layers)assert.equal(textureFilters.get(layer.texture).TEXTURE_MIN_FILTER,'NEAREST');
     assert.equal(textureFilters.get(renderer.resolveTexture).TEXTURE_MIN_FILTER,'LINEAR');
     for(let frame=0;frame<3;frame++)renderer.render(neutral(),frame/60,'neutral',{ambient:false});
-    assert.equal(draws.length,24,'seven deformed parts plus one resolve per frame');
+    assert.equal(draws.length,(count+1)*3,'independent parts plus one resolve per frame');
     for(let frame=0;frame<3;frame++){
-      const batch=draws.slice(frame*8,frame*8+8),parts=batch.slice(0,7),resolve=batch[7];
+      const batch=draws.slice(frame*(count+1),(frame+1)*(count+1)),parts=batch.slice(0,count),resolve=batch[count];
       assert.ok(parts.every(draw=>draw.framebuffer===renderer.resolveFramebuffer&&draw.program===renderer.program));
       assert.ok(parts.every(draw=>draw.uv===renderer.uvBuffer));
       assert.deepEqual(parts.map(draw=>draw.position),renderer.layers.map(layer=>layer.positionBuffer));

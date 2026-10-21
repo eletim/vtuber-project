@@ -43,7 +43,7 @@ test('torso never receives ambient hair sway and diagnostic neutral stays pixel-
     r.frame(neutral(),frame/60);
     assert.deepEqual(r.positionsByRole.torso,r.rest);
   }
-  assert.ok(pixelDistance(r.positionsByRole.head,r.rest)>.01);
+  assert.deepEqual(r.positionsByRole.head,r.rest,'fixed face/crown no longer owns ambient hair sway');
   r.frame(neutral(),3,{ambient:false});assert.deepEqual(r.positionsByRole.head,r.rest);
 });
 

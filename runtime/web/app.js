@@ -118,6 +118,7 @@ function connect(){
     if(event.type==='error')status(event.message);
   };
 }
+names.ParamHandToCheek='頬に手を添える';
 for(const [key,label] of Object.entries(names)){
   const [min,max,def]=limits[key];const row=document.createElement('label');row.className='slider';
   row.innerHTML=`<span>${label}</span><input aria-label="${label}" type="range" min="${min}" max="${max}" step="0.01" value="${def}"><output>${def.toFixed(2)}</output>`;
@@ -375,6 +376,13 @@ $('clear-conversation').onclick=async()=>{
   }
 };
 $('lively').onchange=()=>post('/api/performance',{enabled:$('lively').checked}).catch(report);
+const cheekButton=document.createElement('button');cheekButton.id='cheek-gesture';cheekButton.textContent='頬に手を添えて戻す';
+$('sliders').append(cheekButton);
+cheekButton.onclick=async()=>{
+  const action=beginMotionAction();
+  try{if(!await selectAIForMotion(action))return;await post('/api/performance',{enabled:true,emotion:'thoughtful',duration:6});}
+  catch(error){if(motionAction===action)report(error);}
+};
 $('gesture').onclick=async()=>{
   const action=beginMotionAction(),emotion=$('emotion').value==='auto'?'happy':$('emotion').value;
   try{

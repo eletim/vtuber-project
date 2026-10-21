@@ -22,6 +22,7 @@ export const bodyRoles=Object.freeze(['root','skirt','torso','armLeft','armRight
 export class BodyRig {
   constructor(model,skinning){
     this.size=model.size;this.mesh=model.mesh;this.weights=skinning.weights;
+    this.separateHair=Boolean(model.hairExport?.exclusiveOwnership);
     const [nx,ny]=this.mesh;
     if(this.weights.length!==(nx+1)*(ny+1))throw Error('skinning grid size mismatch');
     this.config={shoulders:[[365,520],[780,540]],elbows:[[275,935],[850,955]],waist:[543,995],skirtTop:995,skirtHem:1430,skirtRevealLimitPixels:3,...model.bodyRig};
@@ -81,7 +82,7 @@ export class BodyRig {
       px+=(bc*tx-bs*ty-tx)*parent+shift*parent;
       py+=(bs*tx+bc*ty-ty)*parent-shoulder*(1-smooth(650,wy,y));
       torso[i*2]=px/width;torso[i*2+1]=py/height;
-      px+=(options.ambient===false?0:hair)*.55*(Math.sin(elapsed*1.6+y*.007)-Math.sin(y*.007));
+      px+=(options.ambient===false||this.separateHair?0:hair)*.55*(Math.sin(elapsed*1.6+y*.007)-Math.sin(y*.007));
       headPositions[i*2]=px/width;headPositions[i*2+1]=py/height;
       const hem=smooth(this.config.skirtTop+8,this.config.skirtHem,y);
       skirtPositions[i*2]=(x+skirt*hem)/width;

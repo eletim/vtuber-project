@@ -6,7 +6,7 @@
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v19/koma_separated_body_v19.psd",
+  "source_psd": "assets/parts/v22/koma_articulated_v22.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -1401,19 +1401,83 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v17/koma_expression_skin_v17.psd",
+  "expression_source_psd": "assets/parts/v22/koma_articulated_v22.psd",
   "bodyLayers": [
     {
-      "id": "hair_back",
+      "id": "rear_left_outer",
       "role": "head",
-      "file": "body_v19/hair_back.png",
+      "file": "body_v22/rear_left_outer.png",
       "rect": [
         149,
+        448,
+        260,
+        748
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 12,
+        "speed": 4.8,
+        "phase": 0.0
+      },
+      "psdGroup": "v22 exclusive hair/rear_left_outer"
+    },
+    {
+      "id": "rear_left_inner",
+      "role": "head",
+      "file": "body_v22/rear_left_inner.png",
+      "rect": [
+        260,
+        448,
+        373,
+        707
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 9,
+        "speed": 5.2,
+        "phase": 0.7
+      },
+      "psdGroup": "v22 exclusive hair/rear_left_inner"
+    },
+    {
+      "id": "rear_right_inner",
+      "role": "head",
+      "file": "body_v22/rear_right_inner.png",
+      "rect": [
+        733,
+        448,
+        825,
+        598
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 10,
+        "speed": 5.6,
+        "phase": 1.4
+      },
+      "psdGroup": "v22 exclusive hair/rear_right_inner"
+    },
+    {
+      "id": "rear_right_outer",
+      "role": "head",
+      "file": "body_v22/rear_right_outer.png",
+      "rect": [
+        825,
         448,
         940,
         775
       ],
-      "psdGroup": "07 Rear hair | 後ろ髪"
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 13,
+        "speed": 6.0,
+        "phase": 2.0999999999999996
+      },
+      "psdGroup": "v22 exclusive hair/rear_right_outer"
     },
     {
       "id": "legs_static",
@@ -1440,6 +1504,18 @@
       "psdGroup": "05 Skirt independent | スカート・独立"
     },
     {
+      "id": "left_body_reveal_painted",
+      "role": "torso",
+      "file": "body_v22/left_body_reveal_painted.png",
+      "rect": [
+        150,
+        940,
+        365,
+        1376
+      ],
+      "psdGroup": "v22 torso/painted former arm occlusion"
+    },
+    {
       "id": "torso_clothing",
       "role": "torso",
       "file": "body_v19/torso_clothing.png",
@@ -1450,18 +1526,6 @@
         1178
       ],
       "psdGroup": "04 Torso clothing fixed | 胴体服・固定"
-    },
-    {
-      "id": "arm_screen_left",
-      "role": "armLeft",
-      "file": "body_v19/arm_screen_left.png",
-      "rect": [
-        47,
-        486,
-        399,
-        1406
-      ],
-      "psdGroup": "03 Screen-left arm | 画面左の腕・袖・手"
     },
     {
       "id": "arm_screen_right",
@@ -1476,27 +1540,294 @@
       "psdGroup": "02 Screen-right arm | 画面右の腕・袖・手"
     },
     {
-      "id": "head_hair_front",
+      "id": "left_shoulder_original_support",
+      "role": "armLeft",
+      "file": "body_v22/left_shoulder_original_support.png",
+      "rect": [
+        279,
+        486,
+        399,
+        630
+      ],
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_shoulder_original_support"
+    },
+    {
+      "id": "left_raised_upper",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_upper.png",
+      "rect": [
+        251,
+        592,
+        386,
+        650
+      ],
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_raised_upper"
+    },
+    {
+      "id": "hair_reveal_native",
       "role": "head",
-      "file": "body_v19/head_hair_front.png",
+      "file": "body_v22/hair_reveal_native.png",
+      "rect": [
+        281,
+        43,
+        826,
+        681
+      ],
+      "psdGroup": "v22 hair reveal/native and newly painted scalp and skin"
+    },
+    {
+      "id": "face_fixed_v22",
+      "role": "head",
+      "file": "body_v22/face_fixed_v22.png",
       "rect": [
         235,
         1,
         865,
         683
       ],
-      "psdGroup": "01 Head and front hair | 頭・前髪",
+      "psdGroup": "v22 face and fixed crown",
       "features": true,
       "expressionFiles": {
-        "neutral": "body_v19/head_neutral.png",
-        "soft_smile": "body_v19/head_soft_smile.png",
-        "big_smile": "body_v19/head_big_smile.png",
-        "worried": "body_v19/head_worried.png",
-        "surprised": "body_v19/head_surprised.png",
-        "bashful": "body_v19/head_bashful.png",
-        "displeased": "body_v19/head_displeased.png",
-        "thinking": "body_v19/head_thinking.png"
-      }
+        "neutral": "body_v22/face_neutral.png",
+        "soft_smile": "body_v22/face_soft_smile.png",
+        "big_smile": "body_v22/face_big_smile.png",
+        "worried": "body_v22/face_worried.png",
+        "surprised": "body_v22/face_surprised.png",
+        "bashful": "body_v22/face_bashful.png",
+        "displeased": "body_v22/face_displeased.png",
+        "thinking": "body_v22/face_thinking.png"
+      },
+      "movingHairMask": "body_v22/face_hair_ownership.png"
+    },
+    {
+      "id": "bang_left",
+      "role": "head",
+      "file": "body_v22/bang_left.png",
+      "rect": [
+        406,
+        53,
+        500,
+        283
+      ],
+      "hairMotion": {
+        "rootY": 70,
+        "tipY": 276,
+        "amplitude": 2.4,
+        "speed": 9,
+        "phase": 0.1
+      },
+      "psdGroup": "v22 exclusive hair/bang_left"
+    },
+    {
+      "id": "bang_center",
+      "role": "head",
+      "file": "body_v22/bang_center.png",
+      "rect": [
+        476,
+        43,
+        580,
+        271
+      ],
+      "hairMotion": {
+        "rootY": 65,
+        "tipY": 273,
+        "amplitude": 3.5,
+        "speed": 7.5,
+        "phase": 0.8
+      },
+      "psdGroup": "v22 exclusive hair/bang_center"
+    },
+    {
+      "id": "bang_right",
+      "role": "head",
+      "file": "body_v22/bang_right.png",
+      "rect": [
+        556,
+        48,
+        651,
+        270
+      ],
+      "hairMotion": {
+        "rootY": 65,
+        "tipY": 248,
+        "amplitude": 2.5,
+        "speed": 8.3,
+        "phase": 1.6
+      },
+      "psdGroup": "v22 exclusive hair/bang_right"
+    },
+    {
+      "id": "side_left_front",
+      "role": "head",
+      "file": "body_v22/side_left_front.png",
+      "rect": [
+        390,
+        347,
+        512,
+        681
+      ],
+      "hairMotion": {
+        "rootY": 365,
+        "tipY": 682,
+        "amplitude": 7,
+        "speed": 6.1,
+        "phase": 0.4
+      },
+      "psdGroup": "v22 exclusive hair/side_left_front"
+    },
+    {
+      "id": "side_right_front",
+      "role": "head",
+      "file": "body_v22/side_right_front.png",
+      "rect": [
+        644,
+        335,
+        702,
+        450
+      ],
+      "hairMotion": {
+        "rootY": 335,
+        "tipY": 503,
+        "amplitude": 5.5,
+        "speed": 6.7,
+        "phase": 1.1
+      },
+      "psdGroup": "v22 exclusive hair/side_right_front"
+    },
+    {
+      "id": "side_left_outer",
+      "role": "head",
+      "file": "body_v22/side_left_outer.png",
+      "rect": [
+        235,
+        211,
+        357,
+        550
+      ],
+      "hairMotion": {
+        "rootY": 210,
+        "tipY": 530,
+        "amplitude": 6.5,
+        "speed": 5.7,
+        "phase": 1.7
+      },
+      "psdGroup": "v22 exclusive hair/side_left_outer"
+    },
+    {
+      "id": "side_left_inner",
+      "role": "head",
+      "file": "body_v22/side_left_inner.png",
+      "rect": [
+        333,
+        239,
+        427,
+        679
+      ],
+      "hairMotion": {
+        "rootY": 250,
+        "tipY": 515,
+        "amplitude": 4.5,
+        "speed": 7,
+        "phase": 2.2
+      },
+      "psdGroup": "v22 exclusive hair/side_left_inner"
+    },
+    {
+      "id": "side_right_outer",
+      "role": "head",
+      "file": "body_v22/side_right_outer.png",
+      "rect": [
+        731,
+        356,
+        865,
+        550
+      ],
+      "hairMotion": {
+        "rootY": 355,
+        "tipY": 650,
+        "amplitude": 8,
+        "speed": 5.5,
+        "phase": 2.7
+      },
+      "psdGroup": "v22 exclusive hair/side_right_outer"
+    },
+    {
+      "id": "left_raised_forearm",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_forearm.png",
+      "rect": [
+        398,
+        477,
+        496,
+        695
+      ],
+      "articulation": {
+        "joint": "forearm",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_raised_forearm"
+    },
+    {
+      "id": "left_raised_drape",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_drape.png",
+      "rect": [
+        174,
+        626,
+        528,
+        972
+      ],
+      "articulation": {
+        "joint": "drape",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_raised_drape"
+    },
+    {
+      "id": "left_raised_cuff",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_cuff.png",
+      "rect": [
+        365,
+        565,
+        481,
+        721
+      ],
+      "articulation": {
+        "joint": "cuff",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_raised_cuff"
+    },
+    {
+      "id": "left_raised_hand",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_hand.png",
+      "rect": [
+        366,
+        333,
+        499,
+        477
+      ],
+      "articulation": {
+        "joint": "hand",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_raised_hand"
     }
   ],
   "bodyRig": {
@@ -1528,5 +1859,31 @@
     "skirtHem": 1395,
     "skirtRevealLimitPixels": 3
   },
-  "bodySampling": "coverage-2x"
+  "bodySampling": "coverage-2x",
+  "articulatedArm": {
+    "shoulder": [
+      353,
+      510
+    ],
+    "elbow": [
+      275,
+      800
+    ],
+    "wristRest": [
+      185,
+      1190
+    ],
+    "wristRaised": [
+      476,
+      470
+    ],
+    "parameter": "ParamHandToCheek",
+    "source": "assets/parts/v22/sources/bent-arm-clean-painted.png"
+  },
+  "hairExport": {
+    "exclusiveOwnership": true,
+    "expressionBasesWithoutMovingHair": 8,
+    "strandCount": 12,
+    "source": "v19 approved head; native and newly painted hidden scalp/skin"
+  }
 }

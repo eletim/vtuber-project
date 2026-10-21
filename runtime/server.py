@@ -20,6 +20,7 @@ LIMITS = {'ParamAngleX': (-15,15,0), 'ParamAngleY': (-10,10,0),
           'ParamEyeLOpen': (0,1,1), 'ParamEyeROpen': (0,1,1),
           'ParamMouthOpenY': (0,1,0), 'ParamBreath': (0,1,0.5),
           'ParamArmLOpen': (-1,1,0), 'ParamArmROpen': (-1,1,0),
+          'ParamHandToCheek': (0,1,0),
           'ParamShoulderY': (-1,1,0), 'ParamBodyShiftX': (-1,1,0),
           'ParamSkirtSway': (-1,1,0)}
 

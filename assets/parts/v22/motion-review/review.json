@@ -1,0 +1,1009 @@
+{
+  "errors": [],
+  "poses": [
+    {
+      "bg": "white",
+      "amount": 0,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          188.11543884963146,
+          1176.4997649849304
+        ],
+        "amount": 0,
+        "blend": 1,
+        "flex": 0
+      }
+    },
+    {
+      "bg": "white",
+      "amount": 0.25,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          452.9250082339722,
+          1142.9922614942514
+        ],
+        "amount": 0.25,
+        "blend": 1,
+        "flex": -0.7053285775320131
+      }
+    },
+    {
+      "bg": "white",
+      "amount": 0.5,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          632.8282588434031,
+          945.8078776098826
+        ],
+        "amount": 0.5,
+        "blend": 1,
+        "flex": -1.4106571550640261
+      }
+    },
+    {
+      "bg": "white",
+      "amount": 0.75,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          641.9748490283669,
+          679.0435608137898
+        ],
+        "amount": 0.75,
+        "blend": 1,
+        "flex": -2.115985732596039
+      }
+    },
+    {
+      "bg": "white",
+      "amount": 1,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          475.9999999999999,
+          470
+        ],
+        "amount": 1,
+        "blend": 1,
+        "flex": -2.8213143101280522
+      }
+    },
+    {
+      "bg": "black",
+      "amount": 0,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          188.11543884963146,
+          1176.4997649849304
+        ],
+        "amount": 0,
+        "blend": 1,
+        "flex": 0
+      }
+    },
+    {
+      "bg": "black",
+      "amount": 0.25,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          452.9250082339722,
+          1142.9922614942514
+        ],
+        "amount": 0.25,
+        "blend": 1,
+        "flex": -0.7053285775320131
+      }
+    },
+    {
+      "bg": "black",
+      "amount": 0.5,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          632.8282588434031,
+          945.8078776098826
+        ],
+        "amount": 0.5,
+        "blend": 1,
+        "flex": -1.4106571550640261
+      }
+    },
+    {
+      "bg": "black",
+      "amount": 0.75,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          641.9748490283669,
+          679.0435608137898
+        ],
+        "amount": 0.75,
+        "blend": 1,
+        "flex": -2.115985732596039
+      }
+    },
+    {
+      "bg": "black",
+      "amount": 1,
+      "joints": {
+        "shoulder": [
+          353,
+          510
+        ],
+        "elbow": [
+          275,
+          800
+        ],
+        "wrist": [
+          475.9999999999999,
+          470
+        ],
+        "amount": 1,
+        "blend": 1,
+        "flex": -2.8213143101280522
+      }
+    }
+  ],
+  "expressionCombinations": [
+    {
+      "expression": "neutral",
+      "amount": 0,
+      "bg": "white"
+    },
+    {
+      "expression": "neutral",
+      "amount": 0,
+      "bg": "black"
+    },
+    {
+      "expression": "neutral",
+      "amount": 0.5,
+      "bg": "white"
+    },
+    {
+      "expression": "neutral",
+      "amount": 0.5,
+      "bg": "black"
+    },
+    {
+      "expression": "neutral",
+      "amount": 1,
+      "bg": "white"
+    },
+    {
+      "expression": "neutral",
+      "amount": 1,
+      "bg": "black"
+    },
+    {
+      "expression": "soft_smile",
+      "amount": 0,
+      "bg": "white"
+    },
+    {
+      "expression": "soft_smile",
+      "amount": 0,
+      "bg": "black"
+    },
+    {
+      "expression": "soft_smile",
+      "amount": 0.5,
+      "bg": "white"
+    },
+    {
+      "expression": "soft_smile",
+      "amount": 0.5,
+      "bg": "black"
+    },
+    {
+      "expression": "soft_smile",
+      "amount": 1,
+      "bg": "white"
+    },
+    {
+      "expression": "soft_smile",
+      "amount": 1,
+      "bg": "black"
+    },
+    {
+      "expression": "big_smile",
+      "amount": 0,
+      "bg": "white"
+    },
+    {
+      "expression": "big_smile",
+      "amount": 0,
+      "bg": "black"
+    },
+    {
+      "expression": "big_smile",
+      "amount": 0.5,
+      "bg": "white"
+    },
+    {
+      "expression": "big_smile",
+      "amount": 0.5,
+      "bg": "black"
+    },
+    {
+      "expression": "big_smile",
+      "amount": 1,
+      "bg": "white"
+    },
+    {
+      "expression": "big_smile",
+      "amount": 1,
+      "bg": "black"
+    },
+    {
+      "expression": "worried",
+      "amount": 0,
+      "bg": "white"
+    },
+    {
+      "expression": "worried",
+      "amount": 0,
+      "bg": "black"
+    },
+    {
+      "expression": "worried",
+      "amount": 0.5,
+      "bg": "white"
+    },
+    {
+      "expression": "worried",
+      "amount": 0.5,
+      "bg": "black"
+    },
+    {
+      "expression": "worried",
+      "amount": 1,
+      "bg": "white"
+    },
+    {
+      "expression": "worried",
+      "amount": 1,
+      "bg": "black"
+    },
+    {
+      "expression": "surprised",
+      "amount": 0,
+      "bg": "white"
+    },
+    {
+      "expression": "surprised",
+      "amount": 0,
+      "bg": "black"
+    },
+    {
+      "expression": "surprised",
+      "amount": 0.5,
+      "bg": "white"
+    },
+    {
+      "expression": "surprised",
+      "amount": 0.5,
+      "bg": "black"
+    },
+    {
+      "expression": "surprised",
+      "amount": 1,
+      "bg": "white"
+    },
+    {
+      "expression": "surprised",
+      "amount": 1,
+      "bg": "black"
+    },
+    {
+      "expression": "bashful",
+      "amount": 0,
+      "bg": "white"
+    },
+    {
+      "expression": "bashful",
+      "amount": 0,
+      "bg": "black"
+    },
+    {
+      "expression": "bashful",
+      "amount": 0.5,
+      "bg": "white"
+    },
+    {
+      "expression": "bashful",
+      "amount": 0.5,
+      "bg": "black"
+    },
+    {
+      "expression": "bashful",
+      "amount": 1,
+      "bg": "white"
+    },
+    {
+      "expression": "bashful",
+      "amount": 1,
+      "bg": "black"
+    },
+    {
+      "expression": "displeased",
+      "amount": 0,
+      "bg": "white"
+    },
+    {
+      "expression": "displeased",
+      "amount": 0,
+      "bg": "black"
+    },
+    {
+      "expression": "displeased",
+      "amount": 0.5,
+      "bg": "white"
+    },
+    {
+      "expression": "displeased",
+      "amount": 0.5,
+      "bg": "black"
+    },
+    {
+      "expression": "displeased",
+      "amount": 1,
+      "bg": "white"
+    },
+    {
+      "expression": "displeased",
+      "amount": 1,
+      "bg": "black"
+    },
+    {
+      "expression": "thinking",
+      "amount": 0,
+      "bg": "white"
+    },
+    {
+      "expression": "thinking",
+      "amount": 0,
+      "bg": "black"
+    },
+    {
+      "expression": "thinking",
+      "amount": 0.5,
+      "bg": "white"
+    },
+    {
+      "expression": "thinking",
+      "amount": 0.5,
+      "bg": "black"
+    },
+    {
+      "expression": "thinking",
+      "amount": 1,
+      "bg": "white"
+    },
+    {
+      "expression": "thinking",
+      "amount": 1,
+      "bg": "black"
+    }
+  ],
+  "video": {
+    "file": "koma-v22-arm-hair-motion.webm",
+    "seconds": 11,
+    "actualBrowser": true,
+    "backgrounds": [
+      "white",
+      "black"
+    ]
+  },
+  "facePreservation": [
+    {
+      "expression": "neutral",
+      "mouthChangedValues": 0,
+      "leftEyeChangedValues": 0,
+      "rightEyeChangedValues": 0
+    },
+    {
+      "expression": "soft_smile",
+      "mouthChangedValues": 0,
+      "leftEyeChangedValues": 0,
+      "rightEyeChangedValues": 0
+    },
+    {
+      "expression": "big_smile",
+      "mouthChangedValues": 0,
+      "leftEyeChangedValues": 0,
+      "rightEyeChangedValues": 0
+    },
+    {
+      "expression": "worried",
+      "mouthChangedValues": 0,
+      "leftEyeChangedValues": 0,
+      "rightEyeChangedValues": 0
+    },
+    {
+      "expression": "surprised",
+      "mouthChangedValues": 0,
+      "leftEyeChangedValues": 0,
+      "rightEyeChangedValues": 0
+    },
+    {
+      "expression": "bashful",
+      "mouthChangedValues": 0,
+      "leftEyeChangedValues": 0,
+      "rightEyeChangedValues": 0
+    },
+    {
+      "expression": "displeased",
+      "mouthChangedValues": 0,
+      "leftEyeChangedValues": 0,
+      "rightEyeChangedValues": 0
+    },
+    {
+      "expression": "thinking",
+      "mouthChangedValues": 0,
+      "leftEyeChangedValues": 0,
+      "rightEyeChangedValues": 0
+    }
+  ],
+  "control": {
+    "buttonRaises": true,
+    "mode": "ai",
+    "resetLowers": true
+  },
+  "layers": [
+    {
+      "id": "rear_left_outer",
+      "rect": [
+        149,
+        448,
+        260,
+        748
+      ],
+      "hair": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 12,
+        "speed": 4.8,
+        "phase": 0
+      }
+    },
+    {
+      "id": "rear_left_inner",
+      "rect": [
+        260,
+        448,
+        373,
+        707
+      ],
+      "hair": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 9,
+        "speed": 5.2,
+        "phase": 0.7
+      }
+    },
+    {
+      "id": "rear_right_inner",
+      "rect": [
+        733,
+        448,
+        825,
+        598
+      ],
+      "hair": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 10,
+        "speed": 5.6,
+        "phase": 1.4
+      }
+    },
+    {
+      "id": "rear_right_outer",
+      "rect": [
+        825,
+        448,
+        940,
+        775
+      ],
+      "hair": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 13,
+        "speed": 6,
+        "phase": 2.0999999999999996
+      }
+    },
+    {
+      "id": "legs_static",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ]
+    },
+    {
+      "id": "skirt",
+      "rect": [
+        182,
+        970,
+        914,
+        1445
+      ]
+    },
+    {
+      "id": "left_body_reveal_painted",
+      "rect": [
+        150,
+        940,
+        365,
+        1376
+      ]
+    },
+    {
+      "id": "torso_clothing",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ]
+    },
+    {
+      "id": "arm_screen_right",
+      "rect": [
+        731,
+        489,
+        1027,
+        1412
+      ]
+    },
+    {
+      "id": "left_shoulder_original_support",
+      "rect": [
+        279,
+        486,
+        399,
+        630
+      ]
+    },
+    {
+      "id": "left_raised_upper",
+      "rect": [
+        251,
+        592,
+        386,
+        650
+      ]
+    },
+    {
+      "id": "hair_reveal_native",
+      "rect": [
+        281,
+        43,
+        826,
+        681
+      ]
+    },
+    {
+      "id": "face_fixed_v22",
+      "rect": [
+        235,
+        1,
+        865,
+        683
+      ]
+    },
+    {
+      "id": "bang_left",
+      "rect": [
+        406,
+        53,
+        500,
+        283
+      ],
+      "hair": {
+        "rootY": 70,
+        "tipY": 276,
+        "amplitude": 2.4,
+        "speed": 9,
+        "phase": 0.1
+      }
+    },
+    {
+      "id": "bang_center",
+      "rect": [
+        476,
+        43,
+        580,
+        271
+      ],
+      "hair": {
+        "rootY": 65,
+        "tipY": 273,
+        "amplitude": 3.5,
+        "speed": 7.5,
+        "phase": 0.8
+      }
+    },
+    {
+      "id": "bang_right",
+      "rect": [
+        556,
+        48,
+        651,
+        270
+      ],
+      "hair": {
+        "rootY": 65,
+        "tipY": 248,
+        "amplitude": 2.5,
+        "speed": 8.3,
+        "phase": 1.6
+      }
+    },
+    {
+      "id": "side_left_front",
+      "rect": [
+        390,
+        347,
+        512,
+        681
+      ],
+      "hair": {
+        "rootY": 365,
+        "tipY": 682,
+        "amplitude": 7,
+        "speed": 6.1,
+        "phase": 0.4
+      }
+    },
+    {
+      "id": "side_right_front",
+      "rect": [
+        644,
+        335,
+        702,
+        450
+      ],
+      "hair": {
+        "rootY": 335,
+        "tipY": 503,
+        "amplitude": 5.5,
+        "speed": 6.7,
+        "phase": 1.1
+      }
+    },
+    {
+      "id": "side_left_outer",
+      "rect": [
+        235,
+        211,
+        357,
+        550
+      ],
+      "hair": {
+        "rootY": 210,
+        "tipY": 530,
+        "amplitude": 6.5,
+        "speed": 5.7,
+        "phase": 1.7
+      }
+    },
+    {
+      "id": "side_left_inner",
+      "rect": [
+        333,
+        239,
+        427,
+        679
+      ],
+      "hair": {
+        "rootY": 250,
+        "tipY": 515,
+        "amplitude": 4.5,
+        "speed": 7,
+        "phase": 2.2
+      }
+    },
+    {
+      "id": "side_right_outer",
+      "rect": [
+        731,
+        356,
+        865,
+        550
+      ],
+      "hair": {
+        "rootY": 355,
+        "tipY": 650,
+        "amplitude": 8,
+        "speed": 5.5,
+        "phase": 2.7
+      }
+    },
+    {
+      "id": "left_raised_forearm",
+      "rect": [
+        398,
+        477,
+        496,
+        695
+      ]
+    },
+    {
+      "id": "left_raised_drape",
+      "rect": [
+        174,
+        626,
+        528,
+        972
+      ]
+    },
+    {
+      "id": "left_raised_cuff",
+      "rect": [
+        365,
+        565,
+        481,
+        721
+      ]
+    },
+    {
+      "id": "left_raised_hand",
+      "rect": [
+        366,
+        333,
+        499,
+        477
+      ]
+    }
+  ],
+  "accessoryAudit": [
+    [
+      "rear_left_outer",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "rear_left_inner",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "rear_right_inner",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "rear_right_outer",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "legs_static",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "skirt",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "left_body_reveal_painted",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "torso_clothing",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "arm_screen_right",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "left_shoulder_original_support",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "left_raised_upper",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "hair_reveal_native",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "face_fixed_v22",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "bang_left",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "bang_center",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "bang_right",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "side_left_front",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "side_right_front",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "side_left_outer",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "side_left_inner",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "side_right_outer",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "left_raised_forearm",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "left_raised_drape",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "left_raised_cuff",
+      184,
+      127,
+      89,
+      255
+    ],
+    [
+      "left_raised_hand",
+      184,
+      127,
+      89,
+      255
+    ]
+  ]
+}

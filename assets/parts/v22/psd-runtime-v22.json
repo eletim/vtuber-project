@@ -1,0 +1,31 @@
+{
+  "psd": "assets/parts/v22/koma_articulated_v22.psd",
+  "sha256": "b159cbc45f04e835f4aa56fa3f28fcea35eea4e1906033c9a861f1d0b2907ce3",
+  "saved_default": "raised hand bind pose; runtime starts with lowered articulated pose",
+  "native_v19_backup": true,
+  "roundtrip_changed_values": 0,
+  "expressions": 8,
+  "runtime_groups": 25,
+  "articulated_groups": [
+    "left_shoulder_original_support",
+    "left_raised_upper",
+    "left_raised_forearm",
+    "left_raised_drape",
+    "left_raised_cuff",
+    "left_raised_hand"
+  ],
+  "hair_groups": [
+    "rear_left_outer",
+    "rear_left_inner",
+    "rear_right_inner",
+    "rear_right_outer",
+    "bang_left",
+    "bang_center",
+    "bang_right",
+    "side_left_front",
+    "side_right_front",
+    "side_left_outer",
+    "side_left_inner",
+    "side_right_outer"
+  ]
+}

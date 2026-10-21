@@ -1,4 +1,6 @@
 import {BodyRig} from './body-rig.js';
+import {ArticulatedArm} from './articulated-arm.js';
+import {HairRig} from './hair-rig.js';
 import {bodyLayers,bodyTextureFile,bodyTextureRect,bodySamplingPlan} from './render-plan.js';
 import {ExpressionTransition,expressionParameters,featureOpening,deformMouthPixels} from './expressions.js';
 
@@ -15,11 +17,11 @@ const resolveVertex=`attribute vec2 point; varying vec2 uv;
 void main(){uv=point*.5+.5;gl_Position=vec4(point,0.,1.);}`;
 const resolveFragment=`precision highp float; varying vec2 uv; uniform sampler2D tex;
 void main(){gl_FragColor=texture2D(tex,uv);}`;
-const fragment=`precision highp float; varying vec2 uv; uniform sampler2D tex; uniform vec4 rect;
+const fragment=`precision highp float; varying vec2 uv; uniform sampler2D tex; uniform vec4 rect; uniform float opacity;
 void main(){
  vec2 local=(uv-rect.xy)/rect.zw;
  if(local.x<0.||local.x>1.||local.y<0.||local.y>1.)discard;
- gl_FragColor=texture2D(tex,local);
+ gl_FragColor=texture2D(tex,local)*opacity;
 }`;
 
 export class AvatarRenderer {
@@ -27,6 +29,8 @@ export class AvatarRenderer {
     this.canvas=canvas;
     this.model=await (await fetch('/model/model.json')).json();
     this.rig=new BodyRig(this.model,await (await fetch('/model/'+this.model.skinning)).json());
+    this.articulatedArm=new ArticulatedArm(this.model,this.rig.rest);
+    this.hairRig=new HairRig(this.model,this.rig.rest);
     const images=new Map();
     const get=async file=>{
       if(!images.has(file))images.set(file,(async()=>{const im=new Image();im.src='/model/'+file;await im.decode();return im;})());
@@ -69,6 +73,7 @@ export class AvatarRenderer {
     this.uvAttribute=gl.getAttribLocation(program,'a');gl.enableVertexAttribArray(this.uvAttribute);gl.vertexAttribPointer(this.uvAttribute,2,gl.FLOAT,false,0,0);
     this.positionAttribute=gl.getAttribLocation(program,'position');gl.enableVertexAttribArray(this.positionAttribute);
     this.rectUniform=gl.getUniformLocation(program,'rect');
+    this.opacityUniform=gl.getUniformLocation(program,'opacity');
     this.indexBuffer=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,this.indexBuffer);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(indices),gl.STATIC_DRAW);
     gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
     gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,true);
@@ -82,6 +87,7 @@ export class AvatarRenderer {
         const file=bodyTextureFile(definition,expression,this.model);layer.images.set(expression.id,await get(file));
       }
       layer.image=await get(definition.file);
+      if(definition.movingHairMask)layer.hairMask=await get(definition.movingHairMask);
       const [x0,y0,x1,y1]=definition.rect;
       for(const image of [layer.image,...layer.images.values()])if(image.width!==x1-x0||image.height!==y1-y0)throw Error(`body texture size mismatch: ${layer.id}`);
       if(layer.features){
@@ -127,6 +133,8 @@ export class AvatarRenderer {
     const visible=active.parts.map(part=>({part,opening:featureOpening(pose[part.parameter],part.parameter.includes('Mouth'))})).filter(({part,opening})=>part.state===opening.state);
     this.visibleParts=visible.map(({part})=>part.name);
     const positions=this.rig.frames(p,time,options),gl=this.gl;
+    this.articulatedArm?.frame(p,time,this.rig.pose,options);
+    this.hairRig?.frame(p,time,positions.head,this.rig.pose,options);
     gl.useProgram(this.program);
     if(this.uvBuffer){
       gl.bindBuffer(gl.ARRAY_BUFFER,this.uvBuffer);gl.enableVertexAttribArray(this.uvAttribute);gl.vertexAttribPointer(this.uvAttribute,2,gl.FLOAT,false,0,0);
@@ -138,16 +146,24 @@ export class AvatarRenderer {
     this.lastDraws=[];
     for(const layer of this.layers){
       if(options.onlyRoles&&!options.onlyRoles.includes(layer.role))continue;
+      const opacity=this.articulatedArm?.opacity(layer)??1;
+      if(opacity<.00001)continue;
+      if(gl.uniform1f)gl.uniform1f(this.opacityUniform,opacity);
       gl.bindTexture(gl.TEXTURE_2D,layer.texture);
       if(layer.features){
         const ctx=layer.ctx;ctx.globalAlpha=1;ctx.clearRect(0,0,layer.paint.width,layer.paint.height);
         ctx.drawImage(layer.images.get(active.id)||layer.image,0,0);
         ctx.save();ctx.translate(-layer.rect[0],-layer.rect[1]);
         for(const {part,opening} of visible)this.drawPart(part,opening.scale,active.id,ctx);
-        ctx.restore();gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,layer.paint);
+        ctx.restore();
+        // Eye sprites historically include surrounding hair. Remove that
+        // ownership after painting too, so no static strand can be reintroduced.
+        if(layer.hairMask){ctx.globalCompositeOperation='destination-out';ctx.drawImage(layer.hairMask,0,0);ctx.globalCompositeOperation='source-over';}
+        gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,layer.paint);
       }
       gl.uniform4fv(this.rectUniform,bodyTextureRect(layer,this.model));
-      gl.bindBuffer(gl.ARRAY_BUFFER,layer.positionBuffer);gl.bufferSubData(gl.ARRAY_BUFFER,0,positions[layer.role]);
+      const geometry=this.articulatedArm?.geometry.get(layer.id)||this.hairRig?.geometry.get(layer.id)||positions[layer.role];
+      gl.bindBuffer(gl.ARRAY_BUFFER,layer.positionBuffer);gl.bufferSubData(gl.ARRAY_BUFFER,0,geometry);
       gl.vertexAttribPointer(this.positionAttribute,2,gl.FLOAT,false,0,0);
       gl.drawElements(gl.TRIANGLES,this.count,gl.UNSIGNED_SHORT,0);
       this.lastDraws.push({id:layer.id,role:layer.role,vertices:positions[layer.role].length/2});

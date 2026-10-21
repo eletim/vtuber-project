@@ -4,6 +4,7 @@ export const limits = {
   ParamMouthOpenY: [0,1,0], ParamBreath: [0,1,.5],
   // Screen-left/right, positive outward; shoulder up and posture right.
   ParamArmLOpen: [-1,1,0], ParamArmROpen: [-1,1,0],
+  ParamHandToCheek: [0,1,0],
   ParamShoulderY: [-1,1,0], ParamBodyShiftX: [-1,1,0],
   ParamSkirtSway: [-1,1,0]
 };
