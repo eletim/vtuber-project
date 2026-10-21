@@ -1,0 +1,152 @@
+{
+  "source_psd": "assets/parts/v10/koma_integrated_v10.psd",
+  "source_sha256": "25e5cdba8fb464bf58f730ae2572a9d52325c9e8ef27516172dcc8c7c6f42540",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "original_pixel_layers_preserved": 66,
+  "expression_folders": 7,
+  "total_pixel_layers": 73,
+  "neutral_changed_pixels": 0,
+  "original_blink_states_exact": [
+    "blink_left",
+    "blink_right",
+    "blink_both",
+    "closed_mouth",
+    "all_closed"
+  ],
+  "states": {
+    "neutral": {
+      "psd_roundtrip_exact": true,
+      "outside_face_changed_pixels": 0,
+      "alpha_changed_pixels": 0,
+      "changed_pixels": 0,
+      "folder": "All EXP folders off"
+    },
+    "soft_smile": {
+      "psd_roundtrip_exact": true,
+      "outside_face_changed_pixels": 0,
+      "alpha_changed_pixels": 0,
+      "changed_pixels": 36618,
+      "folder": "EXP 01 Soft smile | 微笑み"
+    },
+    "big_smile": {
+      "psd_roundtrip_exact": true,
+      "outside_face_changed_pixels": 0,
+      "alpha_changed_pixels": 0,
+      "changed_pixels": 36668,
+      "folder": "EXP 02 Big smile | にっこり"
+    },
+    "worried": {
+      "psd_roundtrip_exact": true,
+      "outside_face_changed_pixels": 0,
+      "alpha_changed_pixels": 0,
+      "changed_pixels": 36667,
+      "folder": "EXP 03 Worried | 困り顔"
+    },
+    "surprised": {
+      "psd_roundtrip_exact": true,
+      "outside_face_changed_pixels": 0,
+      "alpha_changed_pixels": 0,
+      "changed_pixels": 36737,
+      "folder": "EXP 04 Surprised | 驚き"
+    },
+    "bashful": {
+      "psd_roundtrip_exact": true,
+      "outside_face_changed_pixels": 0,
+      "alpha_changed_pixels": 0,
+      "changed_pixels": 36614,
+      "folder": "EXP 05 Bashful | 照れ"
+    },
+    "displeased": {
+      "psd_roundtrip_exact": true,
+      "outside_face_changed_pixels": 0,
+      "alpha_changed_pixels": 0,
+      "changed_pixels": 36560,
+      "folder": "EXP 06 Displeased | 不満"
+    },
+    "thinking": {
+      "psd_roundtrip_exact": true,
+      "outside_face_changed_pixels": 0,
+      "alpha_changed_pixels": 0,
+      "changed_pixels": 36601,
+      "folder": "EXP 07 Thinking | 考え顔"
+    }
+  },
+  "artwork_method": "Built-in image_gen edit, one individual painting per expression",
+  "crop": [
+    340,
+    165,
+    740,
+    465
+  ],
+  "support": "sources/expression_support_mask.png",
+  "sources": {
+    "soft_smile": {
+      "file": "assets/parts/v14/sources/soft_smile_painted.png",
+      "sha256": "a1d0b269dafe5771b40ec97e69dc03d60d3a750421dca4b87d18785ba41e1d80",
+      "original_size": [
+        1448,
+        1086
+      ]
+    },
+    "big_smile": {
+      "file": "assets/parts/v14/sources/big_smile_painted.png",
+      "sha256": "ccb8f6142094ae3f726fbad6c11beaa9db2a8243c90a0aa17909c42519dbd093",
+      "original_size": [
+        1448,
+        1086
+      ]
+    },
+    "worried": {
+      "file": "assets/parts/v14/sources/worried_painted.png",
+      "sha256": "0fbbf9a131808474a1cb7dd16061b5a8b118e597eae8739540de420854358d09",
+      "original_size": [
+        1448,
+        1086
+      ]
+    },
+    "surprised": {
+      "file": "assets/parts/v14/sources/surprised_painted.png",
+      "sha256": "8a2de1d0f106e67bd40cc8a651cb862e51a61da7cdf79b9d8cfdf9f90867595a",
+      "original_size": [
+        1448,
+        1086
+      ]
+    },
+    "bashful": {
+      "file": "assets/parts/v14/sources/bashful_painted.png",
+      "sha256": "8f7e27248adde0458dd9887c747142574951de7da62c292ccb2ad80315e7b854",
+      "original_size": [
+        1448,
+        1086
+      ]
+    },
+    "displeased": {
+      "file": "assets/parts/v14/sources/displeased_painted.png",
+      "sha256": "02a4176c24986627509d0cb470a7bc75f2ad26bc85c72c6b202b2b268e27cd47",
+      "original_size": [
+        1448,
+        1086
+      ]
+    },
+    "thinking": {
+      "file": "assets/parts/v14/sources/thinking_painted.png",
+      "sha256": "c8a6cfba0335216856c3e4553c56f21dbd3b6821ab104bb7e9d318f10aeb3804",
+      "original_size": [
+        1448,
+        1086
+      ]
+    }
+  },
+  "scope": "Facial expression collection only. Existing thigh cutouts and hair matte are unchanged, not repaired.",
+  "visual_review": "PASS: all eight PSD compositions reviewed; no blocking visual issues",
+  "independent_psd_render": "PASS: independent_validation.json; maximum 1/255 quantization difference",
+  "tests": {
+    "new_group_writer": 5,
+    "expression_collection": 6,
+    "python_unittest_total": 20,
+    "python_unittest_result": "PASS"
+  }
+}

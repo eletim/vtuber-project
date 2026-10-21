@@ -15,6 +15,18 @@
 
 ![操作画面](assets/parts/v10/control_room.png)
 
+## 表情コレクション（PSD v14）
+
+元の通常表情を保持したまま、微笑み・にっこり・困り顔・驚き・照れ・不満・考え顔を追加しました。
+`assets/parts/v14/koma_expression_collection_v14.psd` の EXP フォルダーを 1 個だけ表示して切り替えます。
+元の 66 レイヤーは保持し、7 個の描き下ろし表情レイヤーを追加しています。
+各表情は眉・目・口・頬をまとめた顔差分です。新表情ごとの独立した瞬き・口パクや実行画面への反映は含みません。
+
+![表情一覧](assets/parts/v14/expression_contact_sheet.png)
+
+[使い方・検証範囲](docs/expressions-v14.md)。Photoshop 用の選択スクリプトと日本語の説明書も同じフォルダーにあります。
+従来の v13 実行版は引き続き v10 の素材を使用します。
+
 ## 起動
 
 Python 3.10以降。Chrome/Edge等のWebGL対応ブラウザを使います。
@@ -55,7 +67,7 @@ koma.say("次の一手を考えています。")
 
 ## PSDと再生成
 
-`assets/parts/v10/koma_integrated_v10.psd` が最新候補です。承認済み原画と旧PSDは上書きしていません。
+表情を追加した最新 PSD は `assets/parts/v14/koma_expression_collection_v14.psd` です。実行版用の統合元は `assets/parts/v10/koma_integrated_v10.psd` のままです。承認済み原画と旧PSDは上書きしていません。
 
 ```bash
 python scripts/build_integrated_v10.py
