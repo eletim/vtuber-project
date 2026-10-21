@@ -41,6 +41,7 @@ def create_app(voice=None):
     voice = voice or Voicevox()
     clips = OrderedDict()
     generation = [0]
+    active_speech = [None]
     deadline = [0.0]
 
     async def send(event):
@@ -81,6 +82,7 @@ def create_app(voice=None):
         deadline[0] = 0
         state['performance'].update(emotion='neutral',started_at=time.time(),until=0)
         generation[0] += 1
+        active_speech[0] = None
         await send({'type':'cancel_speech'})
         await publish()
         return web.json_response(state)
@@ -119,7 +121,10 @@ def create_app(voice=None):
             raise web.HTTPBadRequest(text='text must contain 1–2000 characters')
         generation[0] += 1
         ticket = generation[0]
+        active_speech[0] = None
+        state['performance'].update(emotion='neutral', started_at=time.time(), until=0)
         await send({'type':'cancel_speech'})
+        await publish()
         try:
             wav = await voice.synthesize(text)
         except Exception as error:
@@ -140,17 +145,49 @@ def create_app(voice=None):
                 duration=audio.getnframes()/audio.getframerate()
         except (wave.Error,EOFError):
             duration=5
-        now=time.time()
-        state['performance'].update(emotion=emotion,started_at=now,until=now+duration+.3)
-        await publish()
-        event = {'type':'speech', 'text':text, 'url':f'/speech/{clip_id}.wav', 'credit':voice.credit}
+        active_speech[0] = {'clip_id':clip_id, 'emotion':emotion, 'duration':duration, 'sequence':-1}
+        event = {'type':'speech', 'text':text, 'url':f'/speech/{clip_id}.wav', 'credit':voice.credit,
+                 'clip_id':clip_id, 'emotion':emotion, 'duration':duration}
         owner = controllers[-1] if controllers else None
+        active_speech[0]['owner'] = owner
         for peer in tuple(peers):
             try:
                 await peer.send_json({**event, 'play':peer is owner})
             except (ConnectionError, RuntimeError):
                 peers.discard(peer)
         return web.json_response({**event, 'queued_clients':len(peers), 'playback_clients':int(owner is not None)})
+
+    async def playback(request):
+        """Synchronize shared gestures to actual audio playback, not synthesis time."""
+        data = await request.json()
+        if not isinstance(data, dict):
+            raise web.HTTPBadRequest(text='playback must be an object')
+        phase = data.get('state')
+        position = data.get('position')
+        sequence = data.get('sequence')
+        if phase not in ('playing', 'paused', 'ended'):
+            raise web.HTTPBadRequest(text='unknown playback state')
+        if isinstance(position, bool) or not isinstance(position, (int, float)) or not math.isfinite(position) or position < 0:
+            raise web.HTTPBadRequest(text='position must be a finite nonnegative number')
+        if isinstance(sequence, bool) or not isinstance(sequence, int) or sequence < 0:
+            raise web.HTTPBadRequest(text='sequence must be a nonnegative integer')
+        clip = active_speech[0]
+        if state['mode'] != 'ai' or not clip or data.get('clip_id') != clip['clip_id']:
+            raise web.HTTPConflict(text='speech is no longer active')
+        if sequence <= clip['sequence']:
+            return web.json_response({'ignored':True})
+        if position > clip['duration'] + 0.5:
+            raise web.HTTPBadRequest(text='position exceeds clip duration')
+        clip['sequence'] = sequence
+        position = min(position, clip['duration'])
+        now = time.time()
+        if phase == 'playing' and position < clip['duration']:
+            state['performance'].update(emotion=clip['emotion'], started_at=now-position,
+                                        until=now+clip['duration']-position)
+        else:
+            state['performance'].update(emotion='neutral', started_at=now, until=0)
+        await publish()
+        return web.json_response(state['performance'])
 
     async def audio(request):
         wav = clips.get(request.match_info['clip'])
@@ -179,6 +216,10 @@ def create_app(voice=None):
             peers.discard(ws)
             if ws in controllers:
                 controllers.remove(ws)
+            if active_speech[0] and active_speech[0].get('owner') is ws:
+                active_speech[0] = None
+                state['performance'].update(emotion='neutral', started_at=time.time(), until=0)
+                await publish()
         return ws
 
     async def expiry(app):
@@ -201,6 +242,7 @@ def create_app(voice=None):
     app.router.add_post('/api/mode', api_mode)
     app.router.add_post('/api/control', api_control)
     app.router.add_post('/api/speech', speech)
+    app.router.add_post('/api/playback', playback)
     app.router.add_post('/api/performance', performance)
     app.router.add_get('/ws', socket)
     app.router.add_get('/speech/{clip}.wav', audio)
