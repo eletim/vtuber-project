@@ -56,6 +56,7 @@ async def verify(out):
                     assert r.status==200;wav=await r.read()
                 duration=validate_wav(wav)
                 (out/'koma-v20-runtime-fresh-voice.wav').write_bytes(wav)
+                (out/'fresh-voice-text.txt').write_text(TEXT+'\n',encoding='utf-8')
                 base={'clip_id':event['clip_id'],'position':0,'sequence':0,'state':'playing'}
                 playing=await post('/api/playback',base)
                 assert playing['emotion']=='happy'

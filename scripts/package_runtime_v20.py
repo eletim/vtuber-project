@@ -10,14 +10,16 @@ from package_runtime_v15 import build
 from split_runtime_bundle_v19 import split
 ROOT=Path(__file__).resolve().parents[1]
 
-def package(destination, evidence):
+def package(destination, evidence, version="v20", guide="docs/text-speech-v20.md"):
     destination=Path(destination);evidence=Path(evidence)
-    archive=build(destination,version='v20',guide='docs/text-speech-v20.md',artwork_folder='assets/parts/v19')
-    stage=destination/'koma-v20-runtime'
+    archive=build(destination,version=version,guide=guide,artwork_folder='assets/parts/v19')
+    stage=destination/f'koma-{version}-runtime'
     for old in (stage/'samples').iterdir():old.unlink()
     shutil.copy2(evidence/'koma-v20-runtime-fresh-voice.wav',stage/'samples/koma-v20-fresh-voice.wav')
     shutil.copy2(evidence/'runtime-fresh-speech-verification.json',stage/'samples/runtime-fresh-speech-verification.json')
     shutil.copy2(ROOT/'scripts/setup_voicevox.py',stage/'scripts/setup_voicevox.py')
+    if version == 'v21':
+        shutil.copy2(ROOT/'scripts/setup_local_model.py',stage/'scripts/setup_local_model.py')
     (stage/'requirements-voicevox-setup.txt').write_text('py7zr>=0.22\n')
     records=[]
     for p in sorted(stage.rglob('*')):
@@ -28,7 +30,7 @@ def package(destination, evidence):
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as out:
         for p in sorted(stage.rglob('*')):
             if p.is_file():out.write(p,p.relative_to(destination))
-    report=split(archive,version='v20')
+    report=split(archive,version=version)
     return report
 
 if __name__=='__main__':

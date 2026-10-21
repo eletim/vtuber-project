@@ -19,6 +19,8 @@ def build(destination, *, version='v15', guide='docs/expression-motion-v15.md', 
         shutil.copytree(ROOT/'runtime'/name,stage/'runtime'/name)
     for name in ['server.py','voice.py','ai_client.py','vendor-manifest.json']:
         shutil.copy2(ROOT/'runtime'/name,stage/'runtime'/name)
+    if (ROOT/'runtime/conversation.py').is_file():
+        shutil.copy2(ROOT/'runtime/conversation.py',stage/'runtime/conversation.py')
     (stage/'scripts').mkdir()
     shutil.copy2(ROOT/'scripts/run_runtime.py',stage/'scripts/run_runtime.py')
     (stage/'samples').mkdir()
