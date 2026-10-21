@@ -8,9 +8,9 @@ import shutil
 import zipfile
 ROOT=Path(__file__).resolve().parents[1]
 
-def build(destination):
+def build(destination, *, version='v15', guide='docs/expression-motion-v15.md'):
     destination=Path(destination);destination.mkdir(parents=True,exist_ok=True)
-    stage=destination/'koma-v15-runtime'
+    stage=destination/f'koma-{version}-runtime'
     if stage.exists():
         raise RuntimeError(f'Refusing to overwrite existing bundle staging directory: {stage}')
     (stage/'runtime/vendor').mkdir(parents=True)
@@ -27,9 +27,9 @@ def build(destination):
     for name in ['Switch_Koma_Expression.jsx','使い方.txt','expression_motion_contact_sheet.png']:
         shutil.copy2(ROOT/'assets/parts/v15'/name,stage/'artwork_controls'/name)
     (stage/'requirements-runtime.txt').write_text('aiohttp>=3.10\n')
-    shutil.copy2(ROOT/'docs/expression-motion-v15.md',stage/'README_日本語.md')
+    shutil.copy2(ROOT/guide,stage/'README_日本語.md')
     model=json.loads((stage/'runtime/model/model.json').read_text())
-    assert len(model.get('expressions',[]))==8,'Expected all eight v15 expressions'
+    assert len(model.get('expressions',[]))==8,'Expected all eight expressions'
     references={model['base'],model['skinning']}
     for entry in [model]+model['expressions']:
         references.add(entry['base'])
@@ -41,8 +41,8 @@ def build(destination):
     records=[]
     for p in sorted(stage.rglob('*')):
         if p.is_file():records.append({'file':str(p.relative_to(stage)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size})
-    (stage/'bundle_manifest.json').write_text(json.dumps({'version':'v15','format':model['format'],'expressions':list(e['id'] for e in model['expressions']),'files':records},ensure_ascii=False,indent=2)+'\n')
-    target=destination/'koma-v15-runtime.zip'
+    (stage/'bundle_manifest.json').write_text(json.dumps({'version':version,'format':model['format'],'expressions':list(e['id'] for e in model['expressions']),'files':records},ensure_ascii=False,indent=2)+'\n')
+    target=destination/f'koma-{version}-runtime.zip'
     with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
         for p in sorted(stage.rglob('*')):
             if p.is_file():z.write(p,p.relative_to(destination))

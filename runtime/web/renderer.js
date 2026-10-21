@@ -1,5 +1,5 @@
 import {BodyRig} from './body-rig.js';
-import {ExpressionTransition,expressionParameters,featureOpening,featureBands} from './expressions.js';
+import {ExpressionTransition,expressionParameters,featureOpening,deformMouthPixels} from './expressions.js';
 
 function shader(gl,type,source) {
   const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);
@@ -29,6 +29,21 @@ export class AvatarRenderer {
       this.expressions.set(expression.id,{...expression,base:expression.base?await get(expression.base):this.base,
         parts:expression.parts?await loadParts(expression.parts):this.parts});
     }
+    // Decode once. Runtime and offline video share the same alpha-aware local
+    // mouth deformation; no screen-aligned Canvas strip resizing remains.
+    this.mouthPixels=new WeakMap();
+    const readPixels=part=>{
+      const patch=document.createElement('canvas');patch.width=part.image.width;patch.height=part.image.height;
+      const context=patch.getContext('2d',{willReadFrequently:true});context.drawImage(part.image,0,0);
+      return {pixels:context.getImageData(0,0,patch.width,patch.height).data,width:patch.width,height:patch.height,rect:part.rect,patch,context};
+    };
+    for(const expression of this.expressions.values()){
+      const closed=expression.parts.find(part=>part.parameter==='ParamMouthOpenY'&&part.state==='closed');
+      const shut=closed?readPixels(closed):null;
+      for(const part of expression.parts)if(part.parameter==='ParamMouthOpenY'&&part.state==='open'){
+        this.mouthPixels.set(part,{...readPixels(part),closed:shut});
+      }
+    }
     this.transition=new ExpressionTransition();
     const gl=this.gl=canvas.getContext('webgl',{alpha:true,premultipliedAlpha:false,antialias:true,preserveDrawingBuffer:true});
     if(!gl)throw Error('WebGLを利用できません。ブラウザのグラフィック設定を確認してください。');
@@ -53,21 +68,15 @@ export class AvatarRenderer {
     gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
     this.frames=0;
   }
-  drawPart(part,scale=1) {
-    const ctx=this.ctx,[x,y]=part.rect,w=part.image.width,h=part.image.height;
-    const bands=featureBands(part,scale);
-    if(!bands){ctx.drawImage(part.image,x,y);return;}
-    const {x0,x1,source,destination}=bands;
-    // Partition, don't overlay: each source pixel belongs to exactly one strip.
-    // Eyes always take the unchanged endpoint path above. Only the mouth core
-    // scales; zero-source intervals reveal clean base, exterior stays fixed.
-    if(x0>0)ctx.drawImage(part.image,0,0,x0,h,x,y,x0,h);
-    if(x1<w)ctx.drawImage(part.image,x1,0,w-x1,h,x+x1,y,w-x1,h);
-    for(let i=0;i<source.length-1;i++){
-      const sh=source[i+1]-source[i],dh=destination[i+1]-destination[i];
-      if(sh>0&&dh>0)ctx.drawImage(part.image,x0,source[i],x1-x0,sh,x+x0,y+destination[i],x1-x0,dh);
-    }
+  drawPart(part,scale=1,expression='neutral') {
+    const ctx=this.ctx,[x,y]=part.rect;
+    const source=this.mouthPixels?.get(part);
+    if(!source||!part.motion||scale>=.9999){ctx.drawImage(part.image,x,y);return;}
+    const pixels=deformMouthPixels(source.pixels,source.width,source.height,part,scale,expression,source.closed);
+    source.context.putImageData(new ImageData(pixels,source.width,source.height),0,0);
+    ctx.drawImage(source.patch,x,y);
   }
+
   render(p,time=0,expression='neutral') {
     const requested=this.expressions.has(expression)?expression:'neutral';
     this.transition.request(requested,time);
@@ -81,7 +90,7 @@ export class AvatarRenderer {
       const opening=featureOpening(pose[part.parameter],part.parameter.includes('Mouth'));
       if(part.state!==opening.state)continue;
       this.visibleParts.push(part.name);
-      this.drawPart(part,opening.scale);
+      this.drawPart(part,opening.scale,active.id);
     }
     const gl=this.gl;
     gl.viewport(0,0,this.canvas.width,this.canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);

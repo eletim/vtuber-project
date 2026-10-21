@@ -1,0 +1,29 @@
+{
+  "frame_count": 1260,
+  "all_pose_arrays_exactly_identical": true,
+  "mesh_sha256_identical": "5e2d1fb36d84925ecb31c8e6d036d61c3f63faaddf55ed42a0354db9b34b6255",
+  "audio_pcm_sha256_identical": "7b1aea86672c9e4f50c4243d51a722970ffb1e390cb1d947ddf872312d7bfb4a",
+  "before_video_sha256": "412db3116f740f600c4f15a4cdf865b5bf21615c943e1a253d6f7dd1d02d8fa1",
+  "after_video_sha256": "395ba4940ae0dfc6a5a16d4f68acbfa9d44d73ba5ce47e67bb5949c43b14b3a8",
+  "sameframe_times_seconds": [
+    6,
+    6.5,
+    7,
+    12,
+    12.5,
+    13
+  ],
+  "fixed_face_crop": [
+    1138,
+    430,
+    1522,
+    786
+  ],
+  "fixed_mouth_crop": [
+    1273,
+    600,
+    1453,
+    676
+  ],
+  "note": "No reduction or removal of head/body motion; same42sec audio and poses. Only mouth rendering changed, plus title labels."
+}

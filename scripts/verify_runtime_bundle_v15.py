@@ -21,7 +21,9 @@ async def verify(bundle):
             for name in archive.namelist():
                 assert not Path(name).is_absolute() and '..' not in Path(name).parts
             archive.extractall(temporary)
-        stage=Path(temporary)/'koma-v15-runtime'
+        roots=list(Path(temporary).iterdir())
+        assert len(roots)==1 and roots[0].is_dir(), 'Expected one runtime folder'
+        stage=roots[0]
         manifest=json.loads((stage/'bundle_manifest.json').read_text())
         for record in manifest['files']:
             file=stage/record['file']
