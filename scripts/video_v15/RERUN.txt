@@ -1,0 +1,16 @@
+VTuber v15 confirmation video rerun
+
+Requirements already present in this environment: Node24+, Python3.12+, NumPy, Pillow, ffmpeg/ffprobe, libEGL.so.1, libGL.so.1, NotoSansCJK-Regular.ttc and Bold.ttc under /usr/share/fonts/opentype/noto/. No npm packages or browser required.
+
+Copy prepare_source.py, generate_expression_frames.mjs, test_egl.py, render_v15.py and verify_video.py into a NEW output directory to preserve earlier deliveries. Every script reads/writes relative to its own location. Then run:
+
+python /YOUR/OUTPUT/prepare_source.py --source /YOUR/FINALIZED/VTUBER/REPOSITORY
+node /YOUR/OUTPUT/generate_expression_frames.mjs
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -u /YOUR/OUTPUT/render_v15.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python /YOUR/OUTPUT/verify_video.py
+
+prepare_source verifies all8 expression IDs and original approved voice hash. It snapshots runtime/web, runtime/model, runtime/package.json, runtime/server.py and assets/parts/v13/koma-free-voice.wav into output/source and refuses source changes during copy. To reproduce the exact existing output, keep the existing source snapshot and skip prepare_source.
+
+Method: actual JS expression/motion helpers produce every pose and feature strip. OpenGL composites authored PNGs in manifest order with premultiplied source-over, then deforms the source mesh. This is an offline re-render, NOT a browser/GUI recording or UI E2E. Eye art is two-state. Mouth/body motion is continuous. Original VOICEVOX:雨晴はう sample repeats4 times; no new dialogue. 42sec at30fps,1600x1080 H264/AAC.
+
+Known artwork limitations: existing thigh cutout gaps, rough hair matte, and faint zoom-level skin-tone edge around mouth during deformation. No official Cubism export.

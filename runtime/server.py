@@ -13,6 +13,8 @@ from pathlib import Path
 from aiohttp import web, WSMsgType
 
 ROOT = Path(__file__).resolve().parent
+EXPRESSIONS = ('neutral', 'soft_smile', 'big_smile', 'worried', 'surprised', 'bashful', 'displeased', 'thinking')
+EMOTION_EXPRESSIONS = {'neutral':'neutral', 'happy':'soft_smile', 'thoughtful':'thinking', 'surprised':'surprised'}
 LIMITS = {'ParamAngleX': (-15,15,0), 'ParamAngleY': (-10,10,0),
           'ParamAngleZ': (-8,8,0), 'ParamBodyAngleX': (-5,5,0),
           'ParamEyeLOpen': (0,1,1), 'ParamEyeROpen': (0,1,1),
@@ -55,6 +57,24 @@ def create_app(voice=None):
         state['revision'] += 1
         await send({'type':'state', **state})
 
+    def validate_expression(expression, duration):
+        if not isinstance(expression, str) or expression not in EXPRESSIONS:
+            raise ValueError('unknown expression')
+        if isinstance(duration, bool) or not isinstance(duration, (int, float)) or not math.isfinite(duration) or not 0.1 <= duration <= 30:
+            raise ValueError('expression duration must be within 0.1–30 seconds')
+        return expression, duration
+
+    def set_expression(expression='neutral', source='idle', owner='idle', duration=0):
+        now = time.time()
+        state['expression'] = {'id':expression, 'source':source, 'owner':owner,
+                               'started_at':now, 'until':now+duration if duration else 0}
+
+    def clear_speech_expression():
+        if state['expression']['owner'] == 'speech':
+            set_expression()
+
+    set_expression()
+
     async def control(data):
         if not isinstance(data,dict):
             raise ValueError('control must be an object')
@@ -66,6 +86,9 @@ def create_app(voice=None):
         ttl = data.get('ttl_ms', 2000)
         if isinstance(ttl, bool) or not isinstance(ttl, (int,float)) or not math.isfinite(ttl):
             raise ValueError('ttl_ms must be finite')
+        expression = validate_expression(data['expression'], data.get('expression_duration', 4)) if 'expression' in data else None
+        if expression:
+            set_expression(expression[0], data['source'], 'manual', expression[1])
         state['parameters'].update(parameters)
         state['source'] = data['source']
         deadline[0] = time.monotonic()+max(100, min(10000, ttl))/1000
@@ -80,6 +103,7 @@ def create_app(voice=None):
             raise web.HTTPBadRequest(text='mode must be human or ai')
         state.update(mode=data['mode'], source='idle', parameters={k:v[2] for k,v in LIMITS.items()})
         deadline[0] = 0
+        set_expression()
         state['performance'].update(emotion='neutral',started_at=time.time(),until=0)
         generation[0] += 1
         active_speech[0] = None
@@ -93,6 +117,23 @@ def create_app(voice=None):
         except ValueError as e:
             raise web.HTTPBadRequest(text=str(e))
         return web.json_response(state)
+
+    async def api_expression(request):
+        try:
+            data = await request.json()
+        except ValueError:
+            raise web.HTTPBadRequest(text='expression must be valid JSON')
+        if not isinstance(data, dict) or data.get('source') not in ('human', 'ai'):
+            raise web.HTTPBadRequest(text='source must be human or ai')
+        if data['source'] != state['mode']:
+            raise web.HTTPConflict(text='inactive control source')
+        try:
+            expression, duration = validate_expression(data.get('expression'), data.get('duration', 4))
+        except ValueError as error:
+            raise web.HTTPBadRequest(text=str(error))
+        set_expression(expression, data['source'], 'manual', duration)
+        await publish()
+        return web.json_response(state['expression'])
 
     async def performance(request):
         data = await request.json()
@@ -119,9 +160,16 @@ def create_app(voice=None):
         text = data.get('text') if isinstance(data,dict) else None
         if not isinstance(text,str) or not text.strip() or len(text)>2000:
             raise web.HTTPBadRequest(text='text must contain 1–2000 characters')
+        if 'expression' in data:
+            try:
+                validate_expression(data['expression'], 4)
+            except ValueError as error:
+                raise web.HTTPBadRequest(text=str(error))
         generation[0] += 1
         ticket = generation[0]
         active_speech[0] = None
+        clear_speech_expression()
+        state['parameters']['ParamMouthOpenY'] = 0
         state['performance'].update(emotion='neutral', started_at=time.time(), until=0)
         await send({'type':'cancel_speech'})
         await publish()
@@ -145,9 +193,10 @@ def create_app(voice=None):
                 duration=audio.getnframes()/audio.getframerate()
         except (wave.Error,EOFError):
             duration=5
-        active_speech[0] = {'clip_id':clip_id, 'emotion':emotion, 'duration':duration, 'sequence':-1}
+        active_speech[0] = {'clip_id':clip_id, 'emotion':emotion, 'expression':data.get('expression', EMOTION_EXPRESSIONS[emotion]),
+                            'duration':duration, 'sequence':-1}
         event = {'type':'speech', 'text':text, 'url':f'/speech/{clip_id}.wav', 'credit':voice.credit,
-                 'clip_id':clip_id, 'emotion':emotion, 'duration':duration}
+                 'clip_id':clip_id, 'emotion':emotion, 'expression':active_speech[0]['expression'], 'duration':duration}
         owner = controllers[-1] if controllers else None
         active_speech[0]['owner'] = owner
         for peer in tuple(peers):
@@ -182,9 +231,13 @@ def create_app(voice=None):
         position = min(position, clip['duration'])
         now = time.time()
         if phase == 'playing' and position < clip['duration']:
+            if state['expression']['owner'] != 'manual':
+                set_expression(clip['expression'], 'ai', 'speech', clip['duration']-position)
             state['performance'].update(emotion=clip['emotion'], started_at=now-position,
                                         until=now+clip['duration']-position)
         else:
+            clear_speech_expression()
+            state['parameters']['ParamMouthOpenY'] = 0
             state['performance'].update(emotion='neutral', started_at=now, until=0)
         await publish()
         return web.json_response(state['performance'])
@@ -218,6 +271,8 @@ def create_app(voice=None):
                 controllers.remove(ws)
             if active_speech[0] and active_speech[0].get('owner') is ws:
                 active_speech[0] = None
+                clear_speech_expression()
+                state['parameters']['ParamMouthOpenY'] = 0
                 state['performance'].update(emotion='neutral', started_at=time.time(), until=0)
                 await publish()
         return ws
@@ -226,9 +281,15 @@ def create_app(voice=None):
         async def loop():
             while True:
                 await asyncio.sleep(0.1)
+                changed = False
+                if state['expression']['until'] and time.time() > state['expression']['until']:
+                    set_expression()
+                    changed = True
                 if deadline[0] and time.monotonic()>deadline[0]:
                     deadline[0] = 0
                     state.update(source='idle', parameters={k:v[2] for k,v in LIMITS.items()})
+                    changed = True
+                if changed:
                     await publish()
         task=asyncio.create_task(loop())
         yield
@@ -241,6 +302,7 @@ def create_app(voice=None):
     app.router.add_get('/api/state', api_state)
     app.router.add_post('/api/mode', api_mode)
     app.router.add_post('/api/control', api_control)
+    app.router.add_post('/api/expression', api_expression)
     app.router.add_post('/api/speech', speech)
     app.router.add_post('/api/playback', playback)
     app.router.add_post('/api/performance', performance)

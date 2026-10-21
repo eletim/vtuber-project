@@ -3,3 +3,5 @@
 video{max-height:170px;object-fit:contain;background:#f1e7db}.stage{align-self:start;position:sticky;top:16px;height:calc(100vh - 180px)}canvas{height:100%;max-height:none}.overlay .stage{position:relative;top:0;height:100vh}@media(max-width:780px){.stage{position:relative;top:0;height:65vh;min-height:500px}}
 
 .performance-controls{flex-wrap:wrap;margin:8px 0}.performance-controls select{flex:1;min-width:0}.performance-controls button{white-space:nowrap}
+
+.expression-picker{display:flex;align-items:center;gap:12px;font-size:12px}.expression-picker select{flex:1;min-width:0}.expression-help{font-size:10px;margin-bottom:14px}

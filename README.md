@@ -2,10 +2,10 @@
 
 人間とAIの両方で操作するVTuberの制作プロジェクトです。
 
-## 現在の成果（v13 / PSDはv10）
+## 現在の成果（表情・動作 v15）
 
-- 66レイヤーの統合PSD。v9の表情、既存の袖・腕・手、髪・ベストの描画下地を統合。
-- 通常合成と左右個別を含む8通りの表情は、v9とRGBA全画素で一致。
+- 元の 66 レイヤーを保持した 115 レイヤーの表情 PSD。7 表情に左右の目と口の開閉差分を追加。
+- 元の通常表情と左右個別を含む 8 通りの旧来の目・口の組み合わせは、v9 と RGBA 全画素で一致。
 - WebGL操作画面。まばたき・口の開閉、顔と体の変形、呼吸に対応。
 - 身体は腰を支点に動き、首・肩・腕・前腕がつながって追従。腕には小さな遅れを持たせています。
 - 人間: カメラの顔追跡、マイクの音量、スライダー。
@@ -13,7 +13,22 @@
 - 透明・グリーン背景と配信用表示。
 - AI待機時の揺れ、発話時のうなずき、楽しそう／考え中／びっくりの仕草。
 
-![操作画面](assets/parts/v10/control_room.png)
+![以前の操作画面（v10）](assets/parts/v10/control_room.png)
+
+## 表情を動かす（v15）
+
+8 表情を操作画面から選び、各表情に対応したまばたき・実音量に連動する口パクで動かせます。
+切り替え時は目と口を短く閉じ、閉じ際に表情を切り替えます。顔全体の半透明クロスフェードはしません。
+まばたきは描かれた開眼・閉眼の 2 状態を切り替え、口の中間形状は口まわりの狭い範囲だけの局所変形で作ります。にっこりの目は閉じたデザインを保持します。
+
+最新 PSD は `assets/parts/v15/koma_expression_motion_v15.psd`。
+[起動・使い方・動画と検証の範囲](docs/expression-motion-v15.md) を参照してください。
+v14 のファイルは前段階の静止表情として残しています。
+
+![v15 表情と目・口の開閉](assets/parts/v15/expression_motion_contact_sheet.png)
+
+[42 秒の音声付き動画サンプル](assets/parts/v15/koma-v15-expression-motion.mp4)。実行版と同じ計算を使ったオフライン OpenGL 再描画で、操作画面の録画ではありません。保存済み音声を再使用しています。
+[動画の再生成手順](scripts/video_v15/RERUN.txt)。
 
 ## 表情コレクション（PSD v14）
 
@@ -25,7 +40,7 @@
 ![表情一覧](assets/parts/v14/expression_contact_sheet.png)
 
 [使い方・検証範囲](docs/expressions-v14.md)。Photoshop 用の選択スクリプトと日本語の説明書も同じフォルダーにあります。
-従来の v13 実行版は引き続き v10 の素材を使用します。
+v14 時点の実行版は v10 素材でしたが、v15 で表情用の描画素材と動作を統合しています。
 
 ## 起動
 
@@ -67,11 +82,13 @@ koma.say("次の一手を考えています。")
 
 ## PSDと再生成
 
-表情を追加した最新 PSD は `assets/parts/v14/koma_expression_collection_v14.psd` です。実行版用の統合元は `assets/parts/v10/koma_integrated_v10.psd` のままです。承認済み原画と旧PSDは上書きしていません。
+最新 PSD は `assets/parts/v15/koma_expression_motion_v15.psd` です。元の統合データは `assets/parts/v10/koma_integrated_v10.psd`、静止表情版は v14 に保持しています。承認済み原画と旧PSDは上書きしていません。
 
 ```bash
 python scripts/build_integrated_v10.py
 python scripts/export_runtime_model.py
+python scripts/build_expressions_v15.py
+python tests/test_expressions_v15.py
 python tests/test_integrated_v10.py
 python tests/test_runtime_server.py
 node --test runtime/tests/*.test.js
@@ -82,7 +99,7 @@ node --test runtime/tests/*.test.js
 ## 残っている工程
 
 **正式なCubismモデル（cmo3/moc3/model3.json）は未作成です。** 現在の実行版はPSD由来素材を独自の2Dメッシュで動かしています。
-目・口は開閉2状態の切り替えです。中間形状、立体的な顔の向き、パーツごとの物理演算は次の工程です。
+目・口は描画された開閉 2 状態と局所変形を組み合わせて動かします。音素別の口形状、立体的な顔の向き、パーツごとの物理演算は今後の工程です。
 元の髪の外周マットにも荒れが残るため、PSD全体を最終美術合格にはしていません。
 
 [制作・検証記録](docs/v10-production-runtime.md) / [身体の動きの修正](docs/body-motion-v11.md) / [Cubism引き継ぎ設定](config/cubism_rig_v10.json)

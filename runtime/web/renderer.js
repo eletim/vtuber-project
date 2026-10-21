@@ -1,4 +1,5 @@
 import {BodyRig} from './body-rig.js';
+import {ExpressionTransition,expressionParameters,featureOpening,featureBands} from './expressions.js';
 
 function shader(gl,type,source) {
   const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);
@@ -20,8 +21,15 @@ export class AvatarRenderer {
     this.paint=document.createElement('canvas');this.paint.width=this.model.size[0];this.paint.height=this.model.size[1];
     this.ctx=this.paint.getContext('2d');
     const get=async file=>{const im=new Image();im.src='/model/'+file;await im.decode();return im;};
+    const loadParts=parts=>Promise.all(parts.map(async p=>({...p,image:await get(p.file)})));
     this.base=await get(this.model.base);
-    this.parts=await Promise.all(this.model.parts.map(async p=>({...p,image:await get(p.file)})));
+    this.parts=await loadParts(this.model.parts);
+    this.expressions=new Map([['neutral',{id:'neutral',base:this.base,parts:this.parts,defaults:{}}]]);
+    for(const expression of this.model.expressions||[]){
+      this.expressions.set(expression.id,{...expression,base:expression.base?await get(expression.base):this.base,
+        parts:expression.parts?await loadParts(expression.parts):this.parts});
+    }
+    this.transition=new ExpressionTransition();
     const gl=this.gl=canvas.getContext('webgl',{alpha:true,premultipliedAlpha:false,antialias:true,preserveDrawingBuffer:true});
     if(!gl)throw Error('WebGLを利用できません。ブラウザのグラフィック設定を確認してください。');
     const program=this.program=gl.createProgram();
@@ -45,18 +53,36 @@ export class AvatarRenderer {
     gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
     this.frames=0;
   }
-  render(p,time=0) {
-    const ctx=this.ctx;
-    ctx.clearRect(0,0,this.paint.width,this.paint.height);ctx.globalAlpha=1;ctx.drawImage(this.base,0,0);
-    for(const part of this.parts){
-      const value=p[part.parameter];
-      // Existing art is two authored endpoints. Keep linework opaque rather
-      // than crossfading two sets of lashes/lips into transparent ghost lines.
-      const open=value >= (part.parameter.includes('Mouth')?.32:.4);
-      ctx.globalAlpha=(part.state==='open')===open?1:0;
-      ctx.drawImage(part.image,part.rect[0],part.rect[1]);
+  drawPart(part,scale=1) {
+    const ctx=this.ctx,[x,y]=part.rect,w=part.image.width,h=part.image.height;
+    const bands=featureBands(part,scale);
+    if(!bands){ctx.drawImage(part.image,x,y);return;}
+    const {x0,x1,source,destination}=bands;
+    // Partition, don't overlay: each source pixel belongs to exactly one strip.
+    // Eyes always take the unchanged endpoint path above. Only the mouth core
+    // scales; zero-source intervals reveal clean base, exterior stays fixed.
+    if(x0>0)ctx.drawImage(part.image,0,0,x0,h,x,y,x0,h);
+    if(x1<w)ctx.drawImage(part.image,x1,0,w-x1,h,x+x1,y,w-x1,h);
+    for(let i=0;i<source.length-1;i++){
+      const sh=source[i+1]-source[i],dh=destination[i+1]-destination[i];
+      if(sh>0&&dh>0)ctx.drawImage(part.image,x0,source[i],x1-x0,sh,x+x0,y+destination[i],x1-x0,dh);
     }
-    ctx.globalAlpha=1;
+  }
+  render(p,time=0,expression='neutral') {
+    const requested=this.expressions.has(expression)?expression:'neutral';
+    this.transition.request(requested,time);
+    this.expressionFrame=this.transition.update(time);
+    const active=this.expressions.get(this.expressionFrame.id);
+    const pose=expressionParameters(p,active,this.expressionFrame.gate);
+    const ctx=this.ctx;
+    ctx.clearRect(0,0,this.paint.width,this.paint.height);ctx.globalAlpha=1;ctx.drawImage(active.base,0,0);
+    this.visibleParts=[];
+    for(const part of active.parts){
+      const opening=featureOpening(pose[part.parameter],part.parameter.includes('Mouth'));
+      if(part.state!==opening.state)continue;
+      this.visibleParts.push(part.name);
+      this.drawPart(part,opening.scale);
+    }
     const gl=this.gl;
     gl.viewport(0,0,this.canvas.width,this.canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
     gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,this.paint);
