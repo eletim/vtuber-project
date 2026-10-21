@@ -26,7 +26,9 @@ class ExpressionMotionV15(unittest.TestCase):
         assert size==cls.size
         cls.baseline=composite(cls.original)
         cls.groups=[g for g in cls.tree if isinstance(g,LayerGroup)]
-        cls.manifest=json.loads((MODEL/'model.json').read_text())
+        # This is a historical PSD regression. Later corrections use versioned
+        # sprites; validate v15 against its frozen manifest, not the latest UI.
+        cls.manifest=json.loads((ROOT/'tests/fixtures/model_v15.json').read_text())
         cls.expressions={e['id']:e for e in cls.manifest['expressions']}
         cls.scope=np.zeros(cls.baseline.shape[:2],bool)
         x0,y0,x1,y1=CROP

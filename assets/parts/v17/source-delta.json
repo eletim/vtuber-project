@@ -1,0 +1,11 @@
+{
+  "changed_existing_files": [
+    "runtime/model/model.json"
+  ],
+  "added_files": [
+    "runtime/model/expressions/surprised/mouth_closed_skin_v17.png"
+  ],
+  "all_runtime_javascript_identical": true,
+  "all_existing_artwork_bytes_preserved": true,
+  "corrected_skin_asset_sha256": "08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74"
+}

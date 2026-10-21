@@ -1,0 +1,70 @@
+INDEPENDENT MOUTH-SKIN ACCEPTANCE: PASS
+======================================
+
+Accepted sprite:
+08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74
+Production name: expressions/surprised/mouth_closed_skin_v17.png
+
+Accepted final video:
+/workspace/shared/vtuber-v17-preview/koma-v17-mouth-motion.mp4
+SHA256: 8b8f10dafd8a165f21ad671db3a84102608205a83ae4f3a875493cb1ab7f19cb
+
+Independent source review
+-------------------------
+The corrected candidate replaces only surprised closed-mouth surrounding skin.
+Original base and open sprite, runtime mouth geometry, neutral and every other
+expression remain unchanged. Alpha is exact. All 122 independently detected
+closed-lip/core pixels and all 409 candidate-protected artwork pixels are exact.
+
+Using the frozen 2,916-pixel pale-skin ring mask and ORIGINAL clean base:
+  Closed mean luma shift:     -6.527 -> +0.521
+  Frame653-scale mean shift:  -5.662 -> +0.508
+  Closed ring >3Y dark:       88.2% -> 0.0%
+  Frame653 ring >3Y dark:     86.7% -> 0.0%
+  Closed mean DeltaE76:       2.548 -> 0.821
+
+All 32 static composites inspected/measured: eight expressions at closed,
+exact frame653 scale, small scale .25 and full open. Only surprised closed and
+near-closed change. A further 23-scale closure sweep, including .06 through .14
+every .005, has mean skin shift between +0.521 and -0.491Y; no gray ring or skin
+jump reappears. The original tiny local lip shadow remains intentionally.
+
+Independent encoded-video review
+--------------------------------
+Viewed exact decoded frame653 (21.7666667s), frame630 (21s), frame675 (22.5s),
+plus unchanged 6/12/13s examples. The broad gray oval is visibly removed.
+
+Mapped the frozen PSD skin mask through the actual frame653 mesh and face inset
+transform, then eroded one encoded pixel to avoid lip/chroma-edge contamination.
+On 1,696 final encoded skin pixels:
+  Before mean RGB: [246.59,231.43,224.60]
+  After mean RGB:  [251.88,239.04,230.35]
+  Mean after-minus-before luma: +6.981
+  Median after-minus-before luma: +7.290
+
+Viewed all 24 encoded state pairs (eight expressions, closed/small/open) in:
+/workspace/shared/vtuber-v17-preview/koma-v17-all8-skin-before-after.png
+No new visible mouth geometry issue, broad skin seam, or expression regression.
+The final encode has normal lossy-codec differences; source pixel preservation
+does not imply byte-exact encoded crops.
+
+Renderer's full-video validation also reports complete decode PASS, 1,260 frames,
+42 seconds, identical body/head pose arrays, identical mesh and audio PCM.
+The video snapshot points to the exact accepted corrected sprite hash.
+
+Evidence
+--------
+candidate-independent-results/independent-candidate-audit.json
+candidate-independent-results/all-state-before-after.png
+candidate-independent-results/surprised-continuous-skin-sweep.png
+final-encoded-audit/exact-frame653-lower-face-before-after.png
+final-encoded-audit/exact-frame653-frozen-skin-mask.png
+final-encoded-audit/encoded-frame653-metrics.json
+Paths above are relative to /workspace/shared/vtuber-v17-review.
+
+Scope
+-----
+Acceptance covers the reported surprised-expression diffuse gray mouth halo,
+not all pre-existing tiny source-tone variations. Thinking open's smaller skin
+tone difference is unchanged. Thigh cutout gaps and hair matte remain outside
+this fix. No production writes or publication were performed by this auditor.

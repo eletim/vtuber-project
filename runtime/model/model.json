@@ -856,7 +856,7 @@
             601,
             390
           ],
-          "file": "expressions/surprised/mouth_closed.png",
+          "file": "expressions/surprised/mouth_closed_skin_v17.png",
           "motion": {
             "anchor": [
               553,
@@ -1401,5 +1401,5 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v15/koma_expression_motion_v15.psd"
+  "expression_source_psd": "assets/parts/v17/koma_expression_skin_v17.psd"
 }

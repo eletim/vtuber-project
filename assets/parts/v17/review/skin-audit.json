@@ -1,0 +1,673 @@
+{
+  "candidate": "/workspace/shared/vtuber-v17-review/diffuse-audit-candidate",
+  "reference": "/workspace/shared/vtuber-v17-review/diffuse-audit-before",
+  "method": "Frozen pre-fix pale-skin ring masks, candidate compared to original pre-fix base at identical coordinates, not refitted candidate masks or candidate-derived base.",
+  "changed_pngs": [
+    {
+      "file": "expressions/surprised/mouth_closed.png",
+      "changed_pixels": 4616,
+      "alpha_changed": 0
+    }
+  ],
+  "states": {
+    "neutral": {
+      "closed": {
+        "skin_pixels": 2350,
+        "mean_delta_Y_vs_original_base": 1.2088082553191488,
+        "p05_delta_Y_vs_original_base": -0.2848,
+        "mean_delta_L_vs_original_base": 0.4131113620802769,
+        "mean_delta_a_vs_original_base": -0.5476144040253363,
+        "mean_delta_b_vs_original_base": -0.23762003531549172,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 0.9502810201850741,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 214,
+        "changed_protected_lip_pixels": 0
+      },
+      "near_closed": {
+        "skin_pixels": 2350,
+        "mean_delta_Y_vs_original_base": 1.2030785531914894,
+        "p05_delta_Y_vs_original_base": -0.2848,
+        "mean_delta_L_vs_original_base": 0.41115573100499514,
+        "mean_delta_a_vs_original_base": -0.5460890283369582,
+        "mean_delta_b_vs_original_base": -0.23428420860422464,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 0.9476992816578755,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "small": {
+        "skin_pixels": 2350,
+        "mean_delta_Y_vs_original_base": 0.6003982127659574,
+        "p05_delta_Y_vs_original_base": -0.7874,
+        "mean_delta_L_vs_original_base": 0.2065810240079405,
+        "mean_delta_a_vs_original_base": -0.17279162403483714,
+        "mean_delta_b_vs_original_base": -0.07184820361398694,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 0.6292766600971501,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "open": {
+        "skin_pixels": 2350,
+        "mean_delta_Y_vs_original_base": 0.6200900425531916,
+        "p05_delta_Y_vs_original_base": -0.7874,
+        "mean_delta_L_vs_original_base": 0.21314316594520294,
+        "mean_delta_a_vs_original_base": -0.20448457628154557,
+        "mean_delta_b_vs_original_base": -0.06039501606164591,
+        "dark3_fraction": 0.001276595744680851,
+        "mean_deltaE76": 0.665004696275994,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 986,
+        "changed_protected_lip_pixels": 0
+      }
+    },
+    "soft_smile": {
+      "closed": {
+        "skin_pixels": 2385,
+        "mean_delta_Y_vs_original_base": 0.469615681341719,
+        "p05_delta_Y_vs_original_base": -0.7782,
+        "mean_delta_L_vs_original_base": 0.15013188325972374,
+        "mean_delta_a_vs_original_base": -1.0983659696705852,
+        "mean_delta_b_vs_original_base": -0.37728580512607923,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 1.264153479604409,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 319,
+        "changed_protected_lip_pixels": 0
+      },
+      "near_closed": {
+        "skin_pixels": 2385,
+        "mean_delta_Y_vs_original_base": 0.48965618448637316,
+        "p05_delta_Y_vs_original_base": -0.7100000000000001,
+        "mean_delta_L_vs_original_base": 0.15677434178702976,
+        "mean_delta_a_vs_original_base": -1.05377674857613,
+        "mean_delta_b_vs_original_base": -0.49972039766456594,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 1.274133583135476,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "small": {
+        "skin_pixels": 2385,
+        "mean_delta_Y_vs_original_base": 0.6362079664570229,
+        "p05_delta_Y_vs_original_base": -0.5616000000000001,
+        "mean_delta_L_vs_original_base": 0.20376722583927032,
+        "mean_delta_a_vs_original_base": -0.9179799306123331,
+        "mean_delta_b_vs_original_base": -1.5097758974170565,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 1.8657449793737098,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "open": {
+        "skin_pixels": 2385,
+        "mean_delta_Y_vs_original_base": 0.5114948427672955,
+        "p05_delta_Y_vs_original_base": -1.12276,
+        "mean_delta_L_vs_original_base": 0.1584057584248231,
+        "mean_delta_a_vs_original_base": -0.9649927385203361,
+        "mean_delta_b_vs_original_base": -1.7922238297944453,
+        "dark3_fraction": 0.0037735849056603774,
+        "mean_deltaE76": 2.1783368776350454,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 964,
+        "changed_protected_lip_pixels": 0
+      }
+    },
+    "big_smile": {
+      "closed": {
+        "skin_pixels": 1407,
+        "mean_delta_Y_vs_original_base": -0.758123383084577,
+        "p05_delta_Y_vs_original_base": -2.8516,
+        "mean_delta_L_vs_original_base": -0.2773508079865371,
+        "mean_delta_a_vs_original_base": -0.14623393956096337,
+        "mean_delta_b_vs_original_base": -1.9990702579134336,
+        "dark3_fraction": 0.03482587064676617,
+        "mean_deltaE76": 2.0874463878492313,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 238,
+        "changed_protected_lip_pixels": 0
+      },
+      "near_closed": {
+        "skin_pixels": 1407,
+        "mean_delta_Y_vs_original_base": -0.7269147121535181,
+        "p05_delta_Y_vs_original_base": -2.7072,
+        "mean_delta_L_vs_original_base": -0.2655212136788573,
+        "mean_delta_a_vs_original_base": -0.11771716097516673,
+        "mean_delta_b_vs_original_base": -1.8602034594015449,
+        "dark3_fraction": 0.01990049751243781,
+        "mean_deltaE76": 1.947687200862894,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "small": {
+        "skin_pixels": 1407,
+        "mean_delta_Y_vs_original_base": -0.19286538734896944,
+        "p05_delta_Y_vs_original_base": -1.2086,
+        "mean_delta_L_vs_original_base": -0.07092962993364459,
+        "mean_delta_a_vs_original_base": -0.03711058009402307,
+        "mean_delta_b_vs_original_base": -0.4914450536118237,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 0.5556504976566464,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "open": {
+        "skin_pixels": 1407,
+        "mean_delta_Y_vs_original_base": -0.5459259417199716,
+        "p05_delta_Y_vs_original_base": -2.7112,
+        "mean_delta_L_vs_original_base": -0.19557785491800586,
+        "mean_delta_a_vs_original_base": 0.0049555322285745355,
+        "mean_delta_b_vs_original_base": -0.8300802609390319,
+        "dark3_fraction": 0.030561478322672354,
+        "mean_deltaE76": 0.9786166654520009,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 1816,
+        "changed_protected_lip_pixels": 0
+      }
+    },
+    "worried": {
+      "closed": {
+        "skin_pixels": 2895,
+        "mean_delta_Y_vs_original_base": -0.17815343696027636,
+        "p05_delta_Y_vs_original_base": -1.5695999999999999,
+        "mean_delta_L_vs_original_base": -0.07430573461794733,
+        "mean_delta_a_vs_original_base": -0.8276037687584382,
+        "mean_delta_b_vs_original_base": -0.5544493434921531,
+        "dark3_fraction": 0.001381692573402418,
+        "mean_deltaE76": 1.2025269520799722,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 144,
+        "changed_protected_lip_pixels": 0
+      },
+      "near_closed": {
+        "skin_pixels": 2895,
+        "mean_delta_Y_vs_original_base": -0.17685727115716757,
+        "p05_delta_Y_vs_original_base": -1.5695999999999999,
+        "mean_delta_L_vs_original_base": -0.07387899359505896,
+        "mean_delta_a_vs_original_base": -0.8214303612104148,
+        "mean_delta_b_vs_original_base": -0.5672194195164659,
+        "dark3_fraction": 0.001381692573402418,
+        "mean_deltaE76": 1.201749397262038,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "small": {
+        "skin_pixels": 2895,
+        "mean_delta_Y_vs_original_base": -0.7312254922279792,
+        "p05_delta_Y_vs_original_base": -2.3489999999999998,
+        "mean_delta_L_vs_original_base": -0.2681263944495356,
+        "mean_delta_a_vs_original_base": -0.41726854683585995,
+        "mean_delta_b_vs_original_base": -1.381406468859899,
+        "dark3_fraction": 0.022452504317789293,
+        "mean_deltaE76": 1.5768555239889501,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "open": {
+        "skin_pixels": 2895,
+        "mean_delta_Y_vs_original_base": -0.9531366493955096,
+        "p05_delta_Y_vs_original_base": -2.7834,
+        "mean_delta_L_vs_original_base": -0.34600047685109586,
+        "mean_delta_a_vs_original_base": -0.3361667484688526,
+        "mean_delta_b_vs_original_base": -1.6048345940110795,
+        "dark3_fraction": 0.03177892918825561,
+        "mean_deltaE76": 1.819315898019353,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 564,
+        "changed_protected_lip_pixels": 0
+      }
+    },
+    "surprised": {
+      "closed": {
+        "skin_pixels": 2916,
+        "mean_delta_Y_vs_original_base": 0.5210513717421124,
+        "p05_delta_Y_vs_original_base": -0.9278,
+        "mean_delta_L_vs_original_base": 0.17477195259157383,
+        "mean_delta_a_vs_original_base": -0.302142147119655,
+        "mean_delta_b_vs_original_base": -0.4873355163705145,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 0.820814003511771,
+        "mean_delta_Y_vs_before": 7.047755555555556,
+        "changed_rgba_pixels": 4470,
+        "protected_lip_pixels": 122,
+        "changed_protected_lip_pixels": 0
+      },
+      "near_closed": {
+        "skin_pixels": 2916,
+        "mean_delta_Y_vs_original_base": 0.5075152949245542,
+        "p05_delta_Y_vs_original_base": -0.9278,
+        "mean_delta_L_vs_original_base": 0.17009499126122368,
+        "mean_delta_a_vs_original_base": -0.2996805717663371,
+        "mean_delta_b_vs_original_base": -0.4854729674162943,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 0.8136908055724447,
+        "mean_delta_Y_vs_before": 6.169620576131687,
+        "changed_rgba_pixels": 4464
+      },
+      "small": {
+        "skin_pixels": 2916,
+        "mean_delta_Y_vs_original_base": -0.4760962277091907,
+        "p05_delta_Y_vs_original_base": -2.0,
+        "mean_delta_L_vs_original_base": -0.1729608717715304,
+        "mean_delta_a_vs_original_base": -0.30330185402404564,
+        "mean_delta_b_vs_original_base": -0.5320237810210572,
+        "dark3_fraction": 0.0017146776406035665,
+        "mean_deltaE76": 0.7633704193234712,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "open": {
+        "skin_pixels": 2916,
+        "mean_delta_Y_vs_original_base": -0.45578971193415635,
+        "p05_delta_Y_vs_original_base": -2.1404,
+        "mean_delta_L_vs_original_base": -0.1673203066412916,
+        "mean_delta_a_vs_original_base": -0.37690440602443115,
+        "mean_delta_b_vs_original_base": -0.6369689381467876,
+        "dark3_fraction": 0.006172839506172839,
+        "mean_deltaE76": 0.9157734266036591,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 589,
+        "changed_protected_lip_pixels": 0
+      }
+    },
+    "bashful": {
+      "closed": {
+        "skin_pixels": 2371,
+        "mean_delta_Y_vs_original_base": -0.6124812315478702,
+        "p05_delta_Y_vs_original_base": -2.1404,
+        "mean_delta_L_vs_original_base": -0.22059128503770933,
+        "mean_delta_a_vs_original_base": -0.24055228709422072,
+        "mean_delta_b_vs_original_base": -0.6764685089687127,
+        "dark3_fraction": 0.007169970476592155,
+        "mean_deltaE76": 0.9279379439354776,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 379,
+        "changed_protected_lip_pixels": 0
+      },
+      "near_closed": {
+        "skin_pixels": 2371,
+        "mean_delta_Y_vs_original_base": -0.6040281737663433,
+        "p05_delta_Y_vs_original_base": -2.1043000000000003,
+        "mean_delta_L_vs_original_base": -0.21774718074415525,
+        "mean_delta_a_vs_original_base": -0.2325396928784631,
+        "mean_delta_b_vs_original_base": -0.7038116584407487,
+        "dark3_fraction": 0.007169970476592155,
+        "mean_deltaE76": 0.9339537733357226,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "small": {
+        "skin_pixels": 2371,
+        "mean_delta_Y_vs_original_base": -0.13898802193167442,
+        "p05_delta_Y_vs_original_base": -1.4933999999999998,
+        "mean_delta_L_vs_original_base": -0.06016988996935872,
+        "mean_delta_a_vs_original_base": -0.4248573248274441,
+        "mean_delta_b_vs_original_base": -1.129890852626615,
+        "dark3_fraction": 0.00042176296921130323,
+        "mean_deltaE76": 1.2948452519872438,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "open": {
+        "skin_pixels": 2371,
+        "mean_delta_Y_vs_original_base": -0.02828696752425137,
+        "p05_delta_Y_vs_original_base": -1.4933999999999998,
+        "mean_delta_L_vs_original_base": -0.024294827968924595,
+        "mean_delta_a_vs_original_base": -0.48371056172260507,
+        "mean_delta_b_vs_original_base": -1.5029313596531966,
+        "dark3_fraction": 0.0029523407844791226,
+        "mean_deltaE76": 1.6885389620095996,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 973,
+        "changed_protected_lip_pixels": 0
+      }
+    },
+    "displeased": {
+      "closed": {
+        "skin_pixels": 2585,
+        "mean_delta_Y_vs_original_base": -0.2649278916827853,
+        "p05_delta_Y_vs_original_base": -1.9278,
+        "mean_delta_L_vs_original_base": -0.10135673972579526,
+        "mean_delta_a_vs_original_base": -0.38811613262570704,
+        "mean_delta_b_vs_original_base": -0.7158668587572878,
+        "dark3_fraction": 0.0019342359767891683,
+        "mean_deltaE76": 0.9520521346713466,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 117,
+        "changed_protected_lip_pixels": 0
+      },
+      "near_closed": {
+        "skin_pixels": 2585,
+        "mean_delta_Y_vs_original_base": -0.24212758220502906,
+        "p05_delta_Y_vs_original_base": -1.8556,
+        "mean_delta_L_vs_original_base": -0.09375479924756067,
+        "mean_delta_a_vs_original_base": -0.3496374870085942,
+        "mean_delta_b_vs_original_base": -0.8348961844071442,
+        "dark3_fraction": 0.0011605415860735009,
+        "mean_deltaE76": 1.0288524823747287,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "small": {
+        "skin_pixels": 2585,
+        "mean_delta_Y_vs_original_base": 0.37357299806576394,
+        "p05_delta_Y_vs_original_base": -0.9960000000000001,
+        "mean_delta_L_vs_original_base": 0.11569021247268658,
+        "mean_delta_a_vs_original_base": -0.498381830789172,
+        "mean_delta_b_vs_original_base": -1.5121077800558873,
+        "dark3_fraction": 0.0,
+        "mean_deltaE76": 1.672278691140033,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "open": {
+        "skin_pixels": 2585,
+        "mean_delta_Y_vs_original_base": 0.5231886266924565,
+        "p05_delta_Y_vs_original_base": -1.1364,
+        "mean_delta_L_vs_original_base": 0.16458966023046726,
+        "mean_delta_a_vs_original_base": -0.615673125459038,
+        "mean_delta_b_vs_original_base": -1.8920303321628227,
+        "dark3_fraction": 0.006963249516441006,
+        "mean_deltaE76": 2.1170472815822903,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 822,
+        "changed_protected_lip_pixels": 0
+      }
+    },
+    "thinking": {
+      "closed": {
+        "skin_pixels": 3199,
+        "mean_delta_Y_vs_original_base": -0.3211110972178806,
+        "p05_delta_Y_vs_original_base": -2.0722,
+        "mean_delta_L_vs_original_base": -0.1206750178829031,
+        "mean_delta_a_vs_original_base": -0.7831022587366219,
+        "mean_delta_b_vs_original_base": -0.05819109985111536,
+        "dark3_fraction": 0.0031259768677711786,
+        "mean_deltaE76": 1.0311224675418487,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 155,
+        "changed_protected_lip_pixels": 0
+      },
+      "near_closed": {
+        "skin_pixels": 3199,
+        "mean_delta_Y_vs_original_base": -0.33882557049077844,
+        "p05_delta_Y_vs_original_base": -2.0722,
+        "mean_delta_L_vs_original_base": -0.1268129139153843,
+        "mean_delta_a_vs_original_base": -0.7665835343554657,
+        "mean_delta_b_vs_original_base": -0.07725592082106343,
+        "dark3_fraction": 0.0031259768677711786,
+        "mean_deltaE76": 1.0183076314120252,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "small": {
+        "skin_pixels": 3199,
+        "mean_delta_Y_vs_original_base": -1.7479524851516102,
+        "p05_delta_Y_vs_original_base": -3.6496999999999993,
+        "mean_delta_L_vs_original_base": -0.6203991789898438,
+        "mean_delta_a_vs_original_base": -0.3551474181193754,
+        "mean_delta_b_vs_original_base": -1.072223162172378,
+        "dark3_fraction": 0.17474210690840888,
+        "mean_deltaE76": 1.464158396800038,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0
+      },
+      "open": {
+        "skin_pixels": 3199,
+        "mean_delta_Y_vs_original_base": -1.8606288215067206,
+        "p05_delta_Y_vs_original_base": -3.9278,
+        "mean_delta_L_vs_original_base": -0.6593489162684514,
+        "mean_delta_a_vs_original_base": -0.3286361032876152,
+        "mean_delta_b_vs_original_base": -1.0578133181565876,
+        "dark3_fraction": 0.1997499218505783,
+        "mean_deltaE76": 1.4951277611882339,
+        "mean_delta_Y_vs_before": 0.0,
+        "changed_rgba_pixels": 0,
+        "protected_lip_pixels": 360,
+        "changed_protected_lip_pixels": 0
+      }
+    }
+  },
+  "hashes": {
+    "base.png": {
+      "before": "144b2db17ffe40aa14fc26510eb2ae3aef55a3ae1398d34cf4da51ebf4980f69",
+      "after": "144b2db17ffe40aa14fc26510eb2ae3aef55a3ae1398d34cf4da51ebf4980f69"
+    },
+    "expressions/bashful/base.png": {
+      "before": "9c6b144c6d0111ba9fcb57b0fb69b6049292127f9977a797e60eb9046ba32993",
+      "after": "9c6b144c6d0111ba9fcb57b0fb69b6049292127f9977a797e60eb9046ba32993"
+    },
+    "expressions/bashful/eye_screen_left_closed.png": {
+      "before": "99ae0d48157d972b6d9393a1da058435a3c1b792ab93a6d65b165621941b0d3e",
+      "after": "99ae0d48157d972b6d9393a1da058435a3c1b792ab93a6d65b165621941b0d3e"
+    },
+    "expressions/bashful/eye_screen_left_open.png": {
+      "before": "cd1595469fbeae2f2c03b663a41e6f7b767d4c489869621da4c55f490ade15a6",
+      "after": "cd1595469fbeae2f2c03b663a41e6f7b767d4c489869621da4c55f490ade15a6"
+    },
+    "expressions/bashful/eye_screen_right_closed.png": {
+      "before": "27584750d44f3e7f32d878312ba878836437857f6a4093e1993a2434ea5a1254",
+      "after": "27584750d44f3e7f32d878312ba878836437857f6a4093e1993a2434ea5a1254"
+    },
+    "expressions/bashful/eye_screen_right_open.png": {
+      "before": "b4df10aef1eed3342847b0ac6077bb9354c0ec2176a81876c9bdd729958d9e94",
+      "after": "b4df10aef1eed3342847b0ac6077bb9354c0ec2176a81876c9bdd729958d9e94"
+    },
+    "expressions/bashful/mouth_closed.png": {
+      "before": "2123120f57b2793bbed38ce34c42a3d511063cd6f32b13cd7fb679654e300e52",
+      "after": "2123120f57b2793bbed38ce34c42a3d511063cd6f32b13cd7fb679654e300e52"
+    },
+    "expressions/bashful/mouth_open.png": {
+      "before": "a75a4e774eb1be6949a969543193fe4e7c4cc48d30394cc16c762b843a707ce2",
+      "after": "a75a4e774eb1be6949a969543193fe4e7c4cc48d30394cc16c762b843a707ce2"
+    },
+    "expressions/big_smile/base.png": {
+      "before": "2072691d69bd6fb843abaf48c3cbf29ed9e8f07dc4347fca1f094b0c61f5cc00",
+      "after": "2072691d69bd6fb843abaf48c3cbf29ed9e8f07dc4347fca1f094b0c61f5cc00"
+    },
+    "expressions/big_smile/eye_screen_left_closed.png": {
+      "before": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2",
+      "after": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2"
+    },
+    "expressions/big_smile/eye_screen_left_open.png": {
+      "before": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2",
+      "after": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2"
+    },
+    "expressions/big_smile/eye_screen_right_closed.png": {
+      "before": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f",
+      "after": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f"
+    },
+    "expressions/big_smile/eye_screen_right_open.png": {
+      "before": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f",
+      "after": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f"
+    },
+    "expressions/big_smile/mouth_closed.png": {
+      "before": "795dd2fdab28b65656b7bc8d0d0f840fd3846e8e26d2d59c7b4ec00249f31085",
+      "after": "795dd2fdab28b65656b7bc8d0d0f840fd3846e8e26d2d59c7b4ec00249f31085"
+    },
+    "expressions/big_smile/mouth_open.png": {
+      "before": "1dbb5e48723f51eeaf86282dd07f26bd4290937a9da2d745e1f6d875d2d08b44",
+      "after": "1dbb5e48723f51eeaf86282dd07f26bd4290937a9da2d745e1f6d875d2d08b44"
+    },
+    "expressions/displeased/base.png": {
+      "before": "fe002e48dd155d5411491d65051d2e03999a217539af127d72d0e5bd55851ad5",
+      "after": "fe002e48dd155d5411491d65051d2e03999a217539af127d72d0e5bd55851ad5"
+    },
+    "expressions/displeased/eye_screen_left_closed.png": {
+      "before": "15532ec0af676df9538935a7ae273b0f4c5c87313959da2f648f0d663cd01c57",
+      "after": "15532ec0af676df9538935a7ae273b0f4c5c87313959da2f648f0d663cd01c57"
+    },
+    "expressions/displeased/eye_screen_left_open.png": {
+      "before": "b12826786ffa51d31c73a4ad907846dc12214432f87415082145eab97ef79e58",
+      "after": "b12826786ffa51d31c73a4ad907846dc12214432f87415082145eab97ef79e58"
+    },
+    "expressions/displeased/eye_screen_right_closed.png": {
+      "before": "9958b7294a6d6747b05623d79111a3d8162d207b9a4c151b0e121d1ae9e15134",
+      "after": "9958b7294a6d6747b05623d79111a3d8162d207b9a4c151b0e121d1ae9e15134"
+    },
+    "expressions/displeased/eye_screen_right_open.png": {
+      "before": "bc87c9f857b3c4f2646564f11882b0641357dba13e7096accf8da9df920a52f3",
+      "after": "bc87c9f857b3c4f2646564f11882b0641357dba13e7096accf8da9df920a52f3"
+    },
+    "expressions/displeased/mouth_closed.png": {
+      "before": "349bfd0ae63f027705007663502b988930d9f419c8b4b7b1a1400b7536cf6cdd",
+      "after": "349bfd0ae63f027705007663502b988930d9f419c8b4b7b1a1400b7536cf6cdd"
+    },
+    "expressions/displeased/mouth_open.png": {
+      "before": "ec99fdc6928f2fd66ef1f0f89ec1a250344990d6661668e89b1682115a8ad0ae",
+      "after": "ec99fdc6928f2fd66ef1f0f89ec1a250344990d6661668e89b1682115a8ad0ae"
+    },
+    "expressions/soft_smile/base.png": {
+      "before": "0f8b1012546cb74149dbcfa7d139384ac6b21ef6bc87b75b962fcfb0cdcb3708",
+      "after": "0f8b1012546cb74149dbcfa7d139384ac6b21ef6bc87b75b962fcfb0cdcb3708"
+    },
+    "expressions/soft_smile/eye_screen_left_closed.png": {
+      "before": "546c32b34f62ac8eb682dda09e945a46218d3ab795bcdbebabd44750829107a1",
+      "after": "546c32b34f62ac8eb682dda09e945a46218d3ab795bcdbebabd44750829107a1"
+    },
+    "expressions/soft_smile/eye_screen_left_open.png": {
+      "before": "8197c3b72fbc9430c62e98653f6d1c7b523c83fc260f3aafb3d409e8c704f9b0",
+      "after": "8197c3b72fbc9430c62e98653f6d1c7b523c83fc260f3aafb3d409e8c704f9b0"
+    },
+    "expressions/soft_smile/eye_screen_right_closed.png": {
+      "before": "8876845d71eee8fa78b39ddcf1e6c4aebdc7013be3670104378fe4f320c1e481",
+      "after": "8876845d71eee8fa78b39ddcf1e6c4aebdc7013be3670104378fe4f320c1e481"
+    },
+    "expressions/soft_smile/eye_screen_right_open.png": {
+      "before": "09a447b1a2924736e016453fde22891cd3a2e7122a9ce83ed4980ea73e5ea9b2",
+      "after": "09a447b1a2924736e016453fde22891cd3a2e7122a9ce83ed4980ea73e5ea9b2"
+    },
+    "expressions/soft_smile/mouth_closed.png": {
+      "before": "852590b6590c57d80ae3e03f815c228272b06b079ffb5e9f45eee74f1aec6f92",
+      "after": "852590b6590c57d80ae3e03f815c228272b06b079ffb5e9f45eee74f1aec6f92"
+    },
+    "expressions/soft_smile/mouth_open.png": {
+      "before": "e93256b4333f16e65db4f14421ffb2d66199c107ba6ba727afaad8cbd54bd402",
+      "after": "e93256b4333f16e65db4f14421ffb2d66199c107ba6ba727afaad8cbd54bd402"
+    },
+    "expressions/surprised/base.png": {
+      "before": "bb4f3219e0233798b89115fd18d7886a59858494b939ff92c0f674d415fa79e5",
+      "after": "bb4f3219e0233798b89115fd18d7886a59858494b939ff92c0f674d415fa79e5"
+    },
+    "expressions/surprised/eye_screen_left_closed.png": {
+      "before": "ba02f4d7ef996472d84ef293e74289386707fb0e9dd12b77943b46ee6ecd1d23",
+      "after": "ba02f4d7ef996472d84ef293e74289386707fb0e9dd12b77943b46ee6ecd1d23"
+    },
+    "expressions/surprised/eye_screen_left_open.png": {
+      "before": "72a4dc3559ab25530b7e3dffb7cc1260e3ff399366a3a003917bdf86564ac5ed",
+      "after": "72a4dc3559ab25530b7e3dffb7cc1260e3ff399366a3a003917bdf86564ac5ed"
+    },
+    "expressions/surprised/eye_screen_right_closed.png": {
+      "before": "05880a5b9bf3272fc841fcadd58ba2e6c42df9437816764c85f5deb248af5d5b",
+      "after": "05880a5b9bf3272fc841fcadd58ba2e6c42df9437816764c85f5deb248af5d5b"
+    },
+    "expressions/surprised/eye_screen_right_open.png": {
+      "before": "6d80d79cea82d493ba309e84a25b4ef494b7a84dc13d8ae0ca7be8ccb8d93145",
+      "after": "6d80d79cea82d493ba309e84a25b4ef494b7a84dc13d8ae0ca7be8ccb8d93145"
+    },
+    "expressions/surprised/mouth_closed.png": {
+      "before": "2ae283bd6577af767f61b9d63dd921082ffd98debdec95a8d06cdcefa0ff8427",
+      "after": "08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74"
+    },
+    "expressions/surprised/mouth_open.png": {
+      "before": "94c624622c2b8217bb30dfb7a02f9003ffa9d9aaf9f842ac2b2d6d9d7ade4190",
+      "after": "94c624622c2b8217bb30dfb7a02f9003ffa9d9aaf9f842ac2b2d6d9d7ade4190"
+    },
+    "expressions/thinking/base.png": {
+      "before": "7432b25b70fc5a196abf909e864ac20a0adfe65fa63696d058da07540aab59eb",
+      "after": "7432b25b70fc5a196abf909e864ac20a0adfe65fa63696d058da07540aab59eb"
+    },
+    "expressions/thinking/eye_screen_left_closed.png": {
+      "before": "c49728b5c3a2befdff8d1ba5cdaf8c07b4c767a574cd730bcd558492f5df042c",
+      "after": "c49728b5c3a2befdff8d1ba5cdaf8c07b4c767a574cd730bcd558492f5df042c"
+    },
+    "expressions/thinking/eye_screen_left_open.png": {
+      "before": "87930d8705db7cb0c12df8d3b1e03566c5b541794a38172e61101b0da2b84d19",
+      "after": "87930d8705db7cb0c12df8d3b1e03566c5b541794a38172e61101b0da2b84d19"
+    },
+    "expressions/thinking/eye_screen_right_closed.png": {
+      "before": "d5d4c9e9abe0aeec4edab8d85ebeb1f054a4b66d1669173cfaa8aadfca724108",
+      "after": "d5d4c9e9abe0aeec4edab8d85ebeb1f054a4b66d1669173cfaa8aadfca724108"
+    },
+    "expressions/thinking/eye_screen_right_open.png": {
+      "before": "7e464813010c23633fcde2bf0552e59c2f495c7ee2396ec8ede87fb70018ff5d",
+      "after": "7e464813010c23633fcde2bf0552e59c2f495c7ee2396ec8ede87fb70018ff5d"
+    },
+    "expressions/thinking/mouth_closed.png": {
+      "before": "024db87e355ded577adafc61ea913f28009fdd581ff9cbcfcd33d7fffe376080",
+      "after": "024db87e355ded577adafc61ea913f28009fdd581ff9cbcfcd33d7fffe376080"
+    },
+    "expressions/thinking/mouth_open.png": {
+      "before": "23ae09a9b19b3c0b94ea0f424f80a85b74f29aa2ea4ea6bb191cbc2baec18787",
+      "after": "23ae09a9b19b3c0b94ea0f424f80a85b74f29aa2ea4ea6bb191cbc2baec18787"
+    },
+    "expressions/worried/base.png": {
+      "before": "c79d07f43a570408e54b7f139435b1a85a18b35e06d1776cf8c800b58385db06",
+      "after": "c79d07f43a570408e54b7f139435b1a85a18b35e06d1776cf8c800b58385db06"
+    },
+    "expressions/worried/eye_screen_left_closed.png": {
+      "before": "29ca6e119dd642b2c1ec56e610ff315b3c956365822b2f0ab73d027125ca596b",
+      "after": "29ca6e119dd642b2c1ec56e610ff315b3c956365822b2f0ab73d027125ca596b"
+    },
+    "expressions/worried/eye_screen_left_open.png": {
+      "before": "d4095264e8179643ece08b039fed4252393685d14a75163fec431a089c26499b",
+      "after": "d4095264e8179643ece08b039fed4252393685d14a75163fec431a089c26499b"
+    },
+    "expressions/worried/eye_screen_right_closed.png": {
+      "before": "87dff968d824860e34a7166b58a1a8d2fadd0809924bef0e7531dc8de90258af",
+      "after": "87dff968d824860e34a7166b58a1a8d2fadd0809924bef0e7531dc8de90258af"
+    },
+    "expressions/worried/eye_screen_right_open.png": {
+      "before": "69b8ba526fefdd090da59a78611308c3e46730cfe2ca100648b968d450d26a8f",
+      "after": "69b8ba526fefdd090da59a78611308c3e46730cfe2ca100648b968d450d26a8f"
+    },
+    "expressions/worried/mouth_closed.png": {
+      "before": "b960d330ceb01eb93807125683e5b20b767e41c62123d97c509ca01e8a37797c",
+      "after": "b960d330ceb01eb93807125683e5b20b767e41c62123d97c509ca01e8a37797c"
+    },
+    "expressions/worried/mouth_open.png": {
+      "before": "b2579a0cded2a20360a3da1dad383613f643677165f4244bdb2acded606cdd13",
+      "after": "b2579a0cded2a20360a3da1dad383613f643677165f4244bdb2acded606cdd13"
+    },
+    "eye_screen_left_closed.png": {
+      "before": "a6538777a06d680011ed952b7b27507d72de8ca0205517c47b84e7b796328bc6",
+      "after": "a6538777a06d680011ed952b7b27507d72de8ca0205517c47b84e7b796328bc6"
+    },
+    "eye_screen_left_open.png": {
+      "before": "177f3320d850e3d03a928e113683ff0ddf097f10fe4f0622dea6ad6489f6a2ee",
+      "after": "177f3320d850e3d03a928e113683ff0ddf097f10fe4f0622dea6ad6489f6a2ee"
+    },
+    "eye_screen_right_closed.png": {
+      "before": "db067f50468c0cf4fdf9b504630129360788846b28cb73fe3dacc5468641c7dd",
+      "after": "db067f50468c0cf4fdf9b504630129360788846b28cb73fe3dacc5468641c7dd"
+    },
+    "eye_screen_right_open.png": {
+      "before": "4a43f45ed58338938f403b6eebc0f64ff7b4723c850d70fa71163639a0e3fda1",
+      "after": "4a43f45ed58338938f403b6eebc0f64ff7b4723c850d70fa71163639a0e3fda1"
+    },
+    "mouth_closed.png": {
+      "before": "217da54a84ed2fc385ccd7c80d6f20131e6b262885a507cbfb1e31921e4aa9b4",
+      "after": "217da54a84ed2fc385ccd7c80d6f20131e6b262885a507cbfb1e31921e4aa9b4"
+    },
+    "mouth_open.png": {
+      "before": "066d5cbbf610d899207dc69a5f8a58d8a26a53407c2515a754467cd2a9dd38ae",
+      "after": "066d5cbbf610d899207dc69a5f8a58d8a26a53407c2515a754467cd2a9dd38ae"
+    }
+  },
+  "model_json_equal": true
+}

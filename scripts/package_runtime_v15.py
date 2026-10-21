@@ -8,7 +8,7 @@ import shutil
 import zipfile
 ROOT=Path(__file__).resolve().parents[1]
 
-def build(destination, *, version='v15', guide='docs/expression-motion-v15.md'):
+def build(destination, *, version='v15', guide='docs/expression-motion-v15.md', artwork_folder='assets/parts/v15'):
     destination=Path(destination);destination.mkdir(parents=True,exist_ok=True)
     stage=destination/f'koma-{version}-runtime'
     if stage.exists():
@@ -25,7 +25,7 @@ def build(destination, *, version='v15', guide='docs/expression-motion-v15.md'):
     shutil.copy2(ROOT/'assets/parts/v13/koma-free-voice.wav',stage/'samples/koma-free-voice.wav')
     (stage/'artwork_controls').mkdir()
     for name in ['Switch_Koma_Expression.jsx','使い方.txt','expression_motion_contact_sheet.png']:
-        shutil.copy2(ROOT/'assets/parts/v15'/name,stage/'artwork_controls'/name)
+        shutil.copy2(ROOT/artwork_folder/name,stage/'artwork_controls'/name)
     (stage/'requirements-runtime.txt').write_text('aiohttp>=3.10\n')
     shutil.copy2(ROOT/guide,stage/'README_日本語.md')
     model=json.loads((stage/'runtime/model/model.json').read_text())
