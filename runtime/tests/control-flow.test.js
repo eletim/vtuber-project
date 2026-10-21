@@ -8,7 +8,7 @@ import {expressionLabels} from '../web/expressions.js';
 
 // Exercise the real UI handlers without WebGL, a media device, or wall-clock waits.
 const source=readFileSync(new URL('../web/app.js',import.meta.url),'utf8')
-  .replace(/^import .*;\n/gm,'')
+  .replace(/^import .*;\r?\n/gm,'')
   .replace(/^try\{await renderer\.load.*$/m,'');
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
 function harness(){
