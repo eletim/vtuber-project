@@ -17,17 +17,18 @@ function harness(){
   let state={mode:'human',parameters:controls.neutral(),performance:{enabled:false,emotion:'neutral'},expression:{id:'neutral',owner:'idle'}};
   function element(id){
     if(!elements.has(id))elements.set(id,{
-      value:'auto',checked:true,textContent:'',paused:true,ended:false,currentTime:0,files:[],listeners:{},
+      value:'auto',checked:true,textContent:'',dataset:{},disabled:false,paused:true,ended:false,currentTime:0,playbackRate:1,readyState:4,seeking:false,error:null,src:'',files:[],listeners:{},
       classList:{toggle(){},add(){},remove(){}},append(){},
       addEventListener(type,callback){(this.listeners[type]||=[]).push(callback);},
       fire(type){for(const callback of this.listeners[type]||[])callback();},
-      pause(){this.paused=true;},play(){this.paused=false;return Promise.resolve();},
+      pause(){this.paused=true;},play(){this.paused=false;this.ended=false;return Promise.resolve();},
+      removeAttribute(name){if(name==='src')this.src='';},load(){this.currentTime=0;this.ended=false;},
       querySelector(){return{value:0,nextElementSibling:{value:0}};}
     });
     return elements.get(id);
   }
   const context=vm.createContext({
-    ...controls,PerformanceMotion,expressionLabels,AvatarRenderer:class{},console,Date,URLSearchParams,
+    ...controls,PerformanceMotion,expressionLabels,AvatarRenderer:class{},console,Date,URLSearchParams,AbortController,
     URL:{createObjectURL:()=> 'blob:test',revokeObjectURL(){}},
     document:{getElementById:element,createElement:()=>element(`row${sequence++}`),body:element('body')},
     window:{addEventListener(){}},location:{protocol:'http:',host:'test',search:''},
@@ -42,7 +43,11 @@ function harness(){
       constructor(){socket=this;this.readyState=1;}
       send(data){const message=JSON.parse(data);sent.push(message);if(message.source===state.mode){Object.assign(state.parameters,message.parameters);if(message.expression)state.expression={id:message.expression,owner:'manual'};emit({type:'state',...state});}}
     },
-    fetch:(path,options)=>new Promise(resolve=>requests.push({path,body:JSON.parse(options.body),resolve})),
+    fetch:(path,options={})=>new Promise((resolve,reject)=>{
+      const request={path,body:options.body?JSON.parse(options.body):undefined,signal:options.signal,resolve,reject};
+      requests.push(request);
+      options.signal?.addEventListener('abort',()=>{if(!request.ignoreAbort)reject(options.signal.reason);});
+    }),
     setInterval:fn=>{const id=++sequence;intervals.set(id,fn);return id;},
     clearInterval:id=>intervals.delete(id),
     setTimeout:(fn,delay)=>{const id=++sequence;timeouts.set(id,{fn,at:now+delay});return id;},
@@ -54,7 +59,7 @@ function harness(){
   function publish(request){
     if(request.path==='/api/mode'){
       state={...state,mode:request.body.mode,parameters:controls.neutral(),expression:{id:'neutral',owner:'idle'}};
-      emit({type:'cancel_speech'});
+      emit({type:'cancel_speech',reason:'mode_change'});
     }else if(request.path==='/api/performance'){
       state.performance={...state.performance,...request.body};
     }
@@ -64,6 +69,7 @@ function harness(){
   function complete(request){publish(request);respond(request);}
   emit({type:'state',...state});
   return{element,requests,intervals,timeouts,sent,mediaRequests,emit,publish,respond,complete,
+    reconnect:()=>{vm.runInContext('connect();',context);emit({type:'state',...state});},
     motion:vm.runInContext('naturalMotion',context),
     prepareCamera:()=>vm.runInContext('landmarker={detectForVideo(){}};',context),
     slider:key=>vm.runInContext('sliders['+JSON.stringify(key)+']',context),
@@ -340,9 +346,258 @@ test('manual eye change during blink cancels stale restoration and restores only
 test('superseded speech responses do not overwrite the newer UI status',async()=>{
   for(const ok of [true,false]){
     const h=harness();const speech=h.element('speak').onclick();h.complete(h.requests[0]);await flush();
-    const human=h.element('human').onclick();h.complete(h.requests[2]);await human;
+    const human=h.element('human').onclick();h.complete(h.requests.findLast(request=>request.path==='/api/mode'));await human;
     h.element('status').textContent='newer operation';
     h.requests[1].resolve({ok,status:409,json:async()=>({}),text:async()=> 'speech was superseded or cancelled'});
     await speech;assert.equal(h.element('status').textContent,'newer operation');
   }
+});
+
+
+// v20: request-scoped text synthesis, real audio lifecycle, and engine health.
+async function beginSynthesis(h,text='新しい文章です。'){
+  h.element('speech').value=text;
+  const pending=h.element('speak').onclick();
+  h.complete(h.requests.findLast(request=>request.path==='/api/mode'));await flush();
+  const request=h.requests.findLast(request=>request.path==='/api/speech');
+  return{pending,request};
+}
+function speechEvent(request,overrides={}){
+  return{type:'speech',play:true,text:request.body.text,request_id:request.body.request_id,url:'/speech/fresh.wav',clip_id:'fresh',credit:'VOICEVOX:雨晴はう',...overrides};
+}
+function resolveJSON(request,data){request.resolve({ok:true,json:async()=>data});}
+
+for(const ordering of ['before-mode','http-first','ws-first'])test(`Stop ${ordering} prevents synthesis without requesting human mode`,async()=>{
+  const h=harness();const pending=h.element('speak').onclick(),request=h.requests[0];
+  if(ordering==='http-first')h.respond(request);
+  if(ordering==='ws-first')h.publish(request);
+  h.element('stop-speech').onclick();
+  assert.equal(h.element('audio').paused,true);assert.equal(h.element('audio').src,'');
+  assert.equal(h.element('stop-speech').disabled,true);
+  h.complete(request);await pending;
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech').length,0);
+  assert.ok(h.requests.filter(r=>r.path==='/api/mode').every(r=>r.body.mode==='ai'));
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+});
+
+test('retry immediately after Stop shares the unfinished AI selection and only new text synthesizes',async()=>{
+  const h=harness();const first=h.element('speak').onclick();
+  h.element('stop-speech').onclick();h.element('speech').value='新しい発話';
+  const latest=h.element('speak').onclick();
+  assert.equal(h.requests.length,1);h.complete(h.requests[0]);await flush();
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech').length,1);
+  const speech=h.requests.at(-1);assert.equal(speech.body.text,'新しい発話');
+  resolveJSON(speech,{});await Promise.all([first,latest]);
+});
+
+for(const outcome of ['success','failure'])test(`Stop aborts pending synthesis and ignores late ${outcome} and its WS event`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  request.ignoreAbort=true;h.element('stop-speech').onclick();
+  assert.equal(request.signal.aborted,true);
+  const cancellation=h.requests.find(r=>r.path==='/api/speech/cancel');
+  assert.deepEqual(cancellation.body,{request_id:request.body.request_id});
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+  if(outcome==='success')resolveJSON(request,speechEvent(request));
+  else request.resolve({ok:false,status:503,text:async()=> 'late failure'});
+  await pending;h.emit(speechEvent(request));
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('subtitle').textContent,'');
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+  assert.equal(h.element('stop-speech').disabled,true);
+});
+
+test('own superseded broadcast preserves the pending request, followed by ready and playing feedback',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  assert.equal(h.element('audio-status').dataset.state,'generating');
+  h.emit({type:'cancel_speech',reason:'superseded',request_id:request.body.request_id});
+  assert.equal(request.signal.aborted,false);assert.equal(h.element('stop-speech').disabled,false);
+  h.emit(speechEvent(request));assert.equal(h.element('audio-status').dataset.state,'ready');
+  h.element('audio').fire('playing');assert.equal(h.element('audio-status').dataset.state,'playing');
+  resolveJSON(request,speechEvent(request));await pending;
+  assert.equal(h.element('audio-status').dataset.state,'playing');
+  assert.match(h.element('audio-status').textContent,/入力文から生成/);
+});
+
+for(const phase of ['ready','playing'])test(`Stop clears a ${phase} generated source and late play rejection cannot restore it`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  let rejectPlay;h.element('audio').play=function(){this.paused=false;return new Promise((_,reject)=>{rejectPlay=reject;});};
+  h.emit(speechEvent(request));if(phase==='playing')h.element('audio').fire('playing');
+  h.element('stop-speech').onclick();rejectPlay(Error('old autoplay failure'));await pending;await flush();
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('audio').paused,true);
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+  h.emit(speechEvent(request));h.element('audio').fire('playing');
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+});
+
+test('new generation cannot be cancelled or overwritten by an old scoped response/event',async()=>{
+  const h=harness();const old=await beginSynthesis(h,'古い文章');old.request.ignoreAbort=true;
+  const latest=await beginSynthesis(h,'新しい文章');
+  assert.equal(old.request.signal.aborted,true);
+  assert.notEqual(old.request.body.request_id,latest.request.body.request_id);
+  h.emit({type:'cancel_speech',reason:'stopped',request_id:old.request.body.request_id});
+  h.emit({type:'cancel_speech',reason:'superseded',request_id:old.request.body.request_id});
+  h.emit(speechEvent(old.request));
+  assert.equal(h.element('audio').src,'');assert.equal(latest.request.signal.aborted,false);
+  h.emit(speechEvent(latest.request,{clip_id:'latest',url:'/latest.wav'}));h.element('audio').fire('playing');
+  resolveJSON(old.request,speechEvent(old.request));resolveJSON(latest.request,speechEvent(latest.request));
+  await Promise.all([old.pending,latest.pending]);
+  assert.equal(h.element('audio').src,'/latest.wav');assert.equal(h.element('subtitle').textContent,'新しい文章');
+  assert.equal(h.element('audio-status').dataset.state,'playing');
+});
+
+for(const action of ['human','reset','disconnect'])test(`${action} cancels in-flight synthesis immediately and ignores late speech`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  if(action==='disconnect')h.disconnect();else h.element(action).onclick();
+  assert.equal(request.signal.aborted,true);await pending;
+  h.emit(speechEvent(request));assert.equal(h.element('audio').paused,true);assert.equal(h.element('audio').src,'');
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+});
+
+test('disconnect then reconnect allows a new request but never revives old speech',async()=>{
+  const h=harness();const first=await beginSynthesis(h);h.disconnect();await first.pending;
+  h.reconnect();const latest=await beginSynthesis(h,'接続後の新しい文章');
+  h.emit(speechEvent(first.request));assert.equal(h.element('audio').src,'');
+  h.emit(speechEvent(latest.request,{clip_id:'reconnected'}));resolveJSON(latest.request,{});await latest.pending;
+  assert.equal(h.element('subtitle').textContent,'接続後の新しい文章');assert.equal(h.element('audio').paused,false);
+});
+
+test('synthesis errors show provider instructions, allow retry, and never fall back to a saved clip',async()=>{
+  const h=harness();const first=await beginSynthesis(h);
+  first.request.resolve({ok:false,status:503,text:async()=> 'VOICEVOXを起動してください。'});await first.pending;
+  assert.match(h.element('audio-status').textContent,/VOICEVOXを起動してください/);
+  assert.equal(h.element('audio-status').dataset.state,'error');assert.equal(h.element('audio').src,'');
+  assert.equal(h.element('stop-speech').disabled,true);
+  const latest=await beginSynthesis(h);h.emit(speechEvent(latest.request));resolveJSON(latest.request,{});await latest.pending;
+  assert.equal(h.element('audio').paused,false);assert.equal(h.element('audio-status').dataset.state,'ready');
+});
+
+test('empty input is explained without switching mode or making a synthesis request',async()=>{
+  const h=harness();h.element('speech').value='  ';await h.element('speak').onclick();
+  assert.equal(h.requests.length,0);assert.equal(h.element('audio-status').dataset.state,'error');
+});
+
+test('uploaded audio is labeled as saved media, not generated speech, and Stop clears its source',async()=>{
+  const h=harness();h.element('audiofile').files=[{name:'saved.wav'}];
+  const pending=h.element('audiofile').onchange();h.complete(h.requests[0]);await pending;
+  assert.match(h.element('audio-status').textContent,/保存済み音声ファイル/);
+  assert.match(h.element('audio-status').textContent,/文章からの音声生成ではありません/);
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech').length,0);
+  h.element('audio').fire('playing');assert.match(h.element('audio-status').textContent,/保存済み音声ファイル/);
+  h.element('stop-speech').onclick();assert.equal(h.element('audio').src,'');
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech\/cancel').length,0);
+});
+
+test('a file replacing synthesis ignores its old generated event and never gains generated credit',async()=>{
+  const h=harness();const first=await beginSynthesis(h);
+  h.element('audiofile').files=[{name:'saved.wav'}];const file=h.element('audiofile').onchange();
+  h.complete(h.requests.findLast(r=>r.path==='/api/mode'));await file;await first.pending;
+  h.emit(speechEvent(first.request));assert.equal(h.element('audio').src,'blob:test');
+  assert.match(h.element('audio-status').textContent,/保存済み音声ファイル/);
+  assert.doesNotMatch(h.element('audio-status').textContent,/VOICEVOX/);
+});
+
+test('seeking, buffering, rate changes and audio failure report actual playback to the server',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;
+  const audio=h.element('audio');audio.fire('playing');audio.currentTime=.5;audio.seeking=true;audio.fire('seeking');
+  audio.currentTime=1;audio.seeking=false;audio.fire('seeked');audio.playbackRate=1.5;audio.fire('ratechange');
+  audio.readyState=2;audio.fire('waiting');audio.readyState=4;audio.fire('playing');audio.error={code:3};audio.fire('error');
+  const reports=h.requests.filter(r=>r.path==='/api/playback').map(r=>r.body);
+  assert.deepEqual(reports.map(r=>r.state),['playing','paused','playing','playing','paused','playing','paused']);
+  assert.equal(reports[3].playback_rate,1.5);assert.equal(reports[2].position,1);
+  assert.deepEqual(reports.map(r=>r.sequence),[1,2,3,4,5,6,7]);
+  assert.equal(h.element('audio-status').dataset.state,'error');
+});
+
+test('engine health check displays availability and stale checks cannot overwrite the latest result',async()=>{
+  const h=harness();const old=h.element('check-voice').onclick(),first=h.requests[0];first.ignoreAbort=true;
+  const latest=h.element('check-voice').onclick();assert.equal(first.signal.aborted,true);
+  resolveJSON(h.requests[1],{available:true,provider:'VOICEVOX',credit:'VOICEVOX:雨晴はう',version:'1.0'});await latest;
+  resolveJSON(first,{available:false,message:'old unavailable'});await old;
+  assert.match(h.element('voice-status').textContent,/利用可能.*雨晴はう.*v1.0/);
+  assert.doesNotMatch(h.element('voice-status').textContent,/old/);
+  const unavailable=h.element('check-voice').onclick();resolveJSON(h.requests.at(-1),{available:false,message:'VOICEVOXを起動してください。'});await unavailable;
+  assert.match(h.element('voice-status').textContent,/利用できません.*VOICEVOXを起動/);
+});
+
+test('failed engine health check offers a retry without changing speech state',async()=>{
+  const h=harness();const check=h.element('check-voice').onclick();h.requests[0].reject(Error('offline'));await check;
+  assert.match(h.element('voice-status').textContent,/確認できません/);
+  const retry=h.element('check-voice').onclick();resolveJSON(h.requests[1],{available:true,credit:'VOICEVOX:雨晴はう'});await retry;
+  assert.match(h.element('voice-status').textContent,/利用可能/);assert.equal(h.element('audio').src,'');
+});
+
+
+test('old queued error, waiting and seeking events do not pause healthy replacement audio',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;h.element('audio').fire('playing');
+  const count=h.requests.length;
+  for(const event of ['error','waiting','seeking'])h.element('audio').fire(event);
+  assert.equal(h.requests.length,count);assert.equal(h.element('audio-status').dataset.state,'playing');
+});
+
+test('Stop is available while a saved file awaits AI-mode selection',async()=>{
+  const h=harness();h.element('audiofile').files=[{name:'saved.wav'}];
+  const pending=h.element('audiofile').onchange();assert.equal(h.element('stop-speech').disabled,false);
+  h.element('stop-speech').onclick();h.complete(h.requests[0]);await pending;
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('stop-speech').disabled,true);
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+});
+
+test('stale controller-disconnect cancellation does not stop a newer local synthesis',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit({type:'cancel_speech',reason:'controller_disconnected',request_id:'some-other-old-controller'});
+  assert.equal(request.signal.aborted,false);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;
+  assert.equal(h.element('audio').paused,false);
+});
+
+
+test('confirmed WS playback wins over a late HTTP transport error and duplicate speech event',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit(speechEvent(request));h.element('audio').fire('playing');h.element('audio').currentTime=1;
+  const count=h.requests.length;h.emit(speechEvent(request));
+  assert.equal(h.requests.length,count);assert.equal(h.element('audio').currentTime,1);
+  request.reject(Error('HTTP response disconnected'));await pending;
+  assert.equal(h.element('audio').paused,false);assert.equal(h.element('audio-status').dataset.state,'playing');
+});
+
+
+for(const name of ['NotAllowedError','NotSupportedError','NetworkError'])test(`${name} explains autoplay vs actual generated audio failure`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.element('audio').play=()=>Promise.reject(Object.assign(Error('audio playback failed'),{name}));
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;await flush();
+  if(name==='NotAllowedError'){
+    assert.equal(h.element('audio-status').dataset.state,'ready');assert.match(h.element('audio-status').textContent,/再生ボタン/);
+  }else{
+    assert.equal(h.element('audio-status').dataset.state,'error');assert.doesNotMatch(h.element('audio-status').textContent,/再生ボタン/);
+  }
+});
+
+test('an audio decode error is not overwritten by later autoplay rejection advice',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  let rejectPlay;h.element('audio').play=()=>new Promise((_,reject)=>{rejectPlay=reject;});
+  h.emit(speechEvent(request));const audio=h.element('audio');audio.error={code:3};audio.fire('error');
+  rejectPlay(Object.assign(Error('not allowed'),{name:'NotAllowedError'}));resolveJSON(request,{});await pending;await flush();
+  assert.equal(h.element('audio-status').dataset.state,'error');assert.doesNotMatch(h.element('audio-status').textContent,/再生ボタン/);
+});
+
+
+for(const reason of ['stopped','controller_disconnected'])test(`${reason} tombstones an external request before its delayed first speech event`,async()=>{
+  const h=harness();const ai=h.element('ai').onclick();h.complete(h.requests[0]);await ai;
+  const request_id='external-ai-client-utterance';
+  h.emit({type:'cancel_speech',reason,request_id});
+  h.emit({type:'state',mode:'ai',parameters:controls.neutral(),performance:{enabled:true,emotion:'neutral'},speech:{phase:'idle'}});
+  h.emit({type:'speech',play:true,request_id,text:'cancelled external speech',clip_id:'late-external',url:'/late-external.wav',credit:'VOICEVOX:雨晴はう'});
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('audio').paused,true);
+  assert.equal(h.element('subtitle').textContent,'');
+  assert.equal(h.requests.filter(r=>r.path==='/api/playback').length,0);
+});
+
+test('tombstoning an unseen external stop neither cancels nor blocks a different new utterance',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit({type:'cancel_speech',reason:'stopped',request_id:'external-old'});
+  assert.equal(request.signal.aborted,false);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;
+  h.emit({type:'speech',play:true,request_id:'external-old',text:'late',clip_id:'late',url:'/late.wav',credit:'VOICEVOX:雨晴はう'});
+  assert.equal(h.element('audio').src,'/speech/fresh.wav');assert.equal(h.element('audio').paused,false);
 });

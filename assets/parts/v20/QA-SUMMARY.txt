@@ -1,0 +1,18 @@
+v20 fresh-speech offline preview: PASS
+
+Video: koma-v20-fresh-speech.mp4
+15.000 seconds, 450 frames, 30 fps, 1080 x 1440, H.264/AAC.
+Size: 6,526,292 bytes (below 20 MB).
+SHA256: fadd8466574bc0afcb7964d5a2450471f490d2aff8a506ef3feedf050247e77b
+
+Audio is the complete newly synthesized 10.485333-second runtime-integrated WAV, played once at 1.5 seconds. It is not the older recorded sample. The runtime HTTP/WS synthesis and controller lifecycle evidence are retained in fresh-voice-verification.json. Browser audio output or GUI end-to-end playback is not claimed.
+Decoded AAC correlation with the exact unmodified PCM timeline: 0.9999692604.
+
+Full MP4 decode passed. Every mesh role across all 450 frames has positive signed triangle area; zero folds. The minimum area ratio across all roles is 0.784620. All frame bounds fit the visible stage.
+Natural performance uses the actual PerformanceMotion, RMS mouth, smoothing, BodyRig and expression/mouth helpers. Playback begins after 1.5 seconds of quiet idle, uses the new waveform for mouth and arm motion, and settles after speech. Maximum mouth amplitude is 0.9078; independent left/right arm parameters reach 0.7836/0.8228.
+
+All 81 snapshotted model/art/motion files and the three EGL helpers are byte-identical to accepted v19 commit 83fb688e78b7f478cc8bed134e3f4f641ebf99b2. The API/UI code is separately verified by the runtime worker, not pictured in this offline video. No runtime or artwork files were edited for rendering.
+
+Visual review: actual decoded contact sheet, six face states including maximum mouth opening at frame304, and full-size arm maxima at frames71/155 inspected. No new shoulder/cuff/skin/occlusion defect was observed. Eyes remain authored open/closed states. The accepted v19 small skirt limit, hair matte and thigh cutout boundaries remain; the approved artwork ends at the thighs. No Cubism claim.
+
+Evidence: verification.json, source-provenance.json, v19-preservation.json, alpha-regression.json, stage-bounds-all.json, koma-v20-contact-sheet.png, koma-v20-face-checks.png. Reproduce with the eight files listed in pipeline-manifest.json and RERUN.md. Output is an offline code-generated preview, not a browser screen capture.

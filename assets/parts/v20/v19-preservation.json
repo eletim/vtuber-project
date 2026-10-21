@@ -1,0 +1,10 @@
+{
+  "all_81_frozen_source_files_equal_accepted_v19": true,
+  "accepted_commit": "83fb688e78b7f478cc8bed134e3f4f641ebf99b2",
+  "unchanged_offline_helpers": {
+    "layered_egl.py": true,
+    "test_egl.py": true,
+    "test_layer_alpha.py": true
+  },
+  "fresh_wav_differs_from_old_sample": true
+}

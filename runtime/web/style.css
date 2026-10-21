@@ -5,3 +5,5 @@ video{max-height:170px;object-fit:contain;background:#f1e7db}.stage{align-self:s
 .performance-controls{flex-wrap:wrap;margin:8px 0}.performance-controls select{flex:1;min-width:0}.performance-controls button{white-space:nowrap}
 
 .expression-picker{display:flex;align-items:center;gap:12px;font-size:12px}.expression-picker select{flex:1;min-width:0}.expression-help{font-size:10px;margin-bottom:14px}
+
+.voice-engine{background:#f5efe5;border:1px solid #e5d9ca;border-radius:8px;padding:10px;margin:12px 0}.voice-engine p{margin:0 0 8px;color:#70553c}.voice-engine button{font-size:11px}.speech-label{display:block;font-size:11px;margin-bottom:6px}.speech-actions{flex-wrap:wrap}.speech-actions #speak{flex:1}.speech-actions #stop-speech{border-color:#b86d59;color:#884a3b}#audio-status{min-height:3em;overflow-wrap:anywhere}#audio-status[data-state=error],#voice-status[data-state=unavailable]{color:#984c35}#audio-status[data-state=playing],#voice-status[data-state=available]{color:#47713c}.demo-button{margin-top:12px;font-size:11px}

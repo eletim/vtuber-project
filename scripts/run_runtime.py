@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 import subprocess
 import sys
 import time
@@ -31,16 +32,21 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port',type=int,default=8766)
     parser.add_argument('--prepare-only',action='store_true')
+    parser.add_argument('--text-only',action='store_true',help='Skip camera dependency downloads; text speech and avatar rendering still work')
     parser.add_argument('--voicevox',action='store_true',help='Start the Linux engine installed by setup_voicevox.py')
     parser.add_argument('--voicevox-engine',type=Path,help='Start an existing VOICEVOX engine executable')
     args=parser.parse_args()
-    prepare()
+    if not args.text_only:
+        prepare()
     if not args.prepare_only:
         engine=None
         try:
             executable=args.voicevox_engine or (ROOT/'runtime/vendor/voicevox/linux-cpu-x64/run' if args.voicevox else None)
             if executable:
-                engine=subprocess.Popen([str(executable.resolve()),'--host','127.0.0.1','--port','50021','--cpu_num_threads','2'])
+                env = os.environ.copy()
+                for name, folder in (('XDG_DATA_HOME','user-data'),('XDG_CONFIG_HOME','user-config'),('XDG_CACHE_HOME','user-cache')):
+                    env[name] = str(ROOT/'runtime/vendor/voicevox'/folder)
+                engine=subprocess.Popen([str(executable.resolve()),'--host','127.0.0.1','--port','50021','--cpu_num_threads','2'], env=env)
                 for _ in range(300):
                     if engine.poll() is not None:
                         raise RuntimeError('VOICEVOX failed to start')
