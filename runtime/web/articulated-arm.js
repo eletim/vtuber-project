@@ -58,8 +58,8 @@ export class ArticulatedArm {
    for(let i=0;i<this.rest.length;i+=2){
     let q=[this.rest[i]*width,this.rest[i+1]*height];
     if(a.sourceElbow&&a.sourceWrist){
-     const se=a.sourceElbow,sw=a.sourceWrist,sl=Math.hypot(sw[0]-se[0],sw[1]-se[1]),sd=[(sw[0]-se[0])/sl,(sw[1]-se[1])/sl],dx=q[0]-sw[0],dy=q[1]-sw[1],u=dx*sd[0]+dy*sd[1],v=-dx*sd[1]+dy*sd[0],along=a.joint==='cuff'?(-80-130*smooth(0,.4,t))+(u+70):u<0?u*length/sl:u;
-     q=[WU[0]+along*bindDirection[0]+v*bindNormal[0],WU[1]+along*bindDirection[1]+v*bindNormal[1]];
+     const se=a.sourceElbow,sw=a.sourceWrist,sl=Math.hypot(sw[0]-se[0],sw[1]-se[1]),sd=[(sw[0]-se[0])/sl,(sw[1]-se[1])/sl],dx=q[0]-sw[0],dy=q[1]-sw[1],u=dx*sd[0]+dy*sd[1],v=-dx*sd[1]+dy*sd[0],along=a.joint==='cuff'?(-80-130*smooth(0,.4,t))+(u+70):u<0?u*length/sl:u*(config.extendedHandPose?.88:1);
+     q=[WU[0]+along*bindDirection[0]+v*(config.extendedHandPose?1-.06*smooth(-25,10,u):1)*bindNormal[0],WU[1]+along*bindDirection[1]+v*(config.extendedHandPose?1-.06*smooth(-25,10,u):1)*bindNormal[1]];
     }
     if(a.joint==='forearm'||a.joint==='cuff'){
      if(a.joint==='cuff'){

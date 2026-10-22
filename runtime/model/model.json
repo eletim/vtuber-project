@@ -6,7 +6,7 @@
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v30/koma_material_repair_v30.psd",
+  "source_psd": "assets/parts/v31/koma_material_repair_v31.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -1401,12 +1401,12 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v30/koma_material_repair_v30.psd",
+  "expression_source_psd": "assets/parts/v31/koma_material_repair_v31.psd",
   "bodyLayers": [
     {
       "id": "rear_left_outer",
       "role": "head",
-      "file": "body_v29/rear_left_outer.png",
+      "file": "body_v31/rear_left_outer.png",
       "rect": [
         149,
         448,
@@ -1426,7 +1426,7 @@
     {
       "id": "rear_left_inner",
       "role": "head",
-      "file": "body_v29/rear_left_inner.png",
+      "file": "body_v31/rear_left_inner.png",
       "rect": [
         260,
         448,
@@ -1446,7 +1446,7 @@
     {
       "id": "rear_right_inner",
       "role": "head",
-      "file": "body_v29/rear_right_inner.png",
+      "file": "body_v31/rear_right_inner.png",
       "rect": [
         733,
         448,
@@ -1466,7 +1466,7 @@
     {
       "id": "rear_right_outer",
       "role": "head",
-      "file": "body_v29/rear_right_outer.png",
+      "file": "body_v31/rear_right_outer.png",
       "rect": [
         825,
         448,
@@ -1647,7 +1647,7 @@
     {
       "id": "face_fixed_v22",
       "role": "head",
-      "file": "body_v29/face_fixed_v22.png",
+      "file": "body_v31/face_fixed_v22.png",
       "rect": [
         235,
         1,
@@ -1657,14 +1657,14 @@
       "psdGroup": "v22 face and fixed crown",
       "features": true,
       "expressionFiles": {
-        "neutral": "body_v29/face_neutral.png",
-        "soft_smile": "body_v29/face_soft_smile.png",
-        "big_smile": "body_v29/face_big_smile.png",
-        "worried": "body_v29/face_worried.png",
-        "surprised": "body_v29/face_surprised.png",
-        "bashful": "body_v29/face_bashful.png",
-        "displeased": "body_v29/face_displeased.png",
-        "thinking": "body_v29/face_thinking.png"
+        "neutral": "body_v31/face_neutral.png",
+        "soft_smile": "body_v31/face_soft_smile.png",
+        "big_smile": "body_v31/face_big_smile.png",
+        "worried": "body_v31/face_worried.png",
+        "surprised": "body_v31/face_surprised.png",
+        "bashful": "body_v31/face_bashful.png",
+        "displeased": "body_v31/face_displeased.png",
+        "thinking": "body_v31/face_thinking.png"
       },
       "movingHairMask": "body_v22/face_hair_ownership.png"
     },
@@ -1771,7 +1771,7 @@
     {
       "id": "side_left_outer",
       "role": "head",
-      "file": "body_v29/side_left_outer.png",
+      "file": "body_v31/side_left_outer.png",
       "rect": [
         235,
         211,
@@ -1791,7 +1791,7 @@
     {
       "id": "side_left_inner",
       "role": "head",
-      "file": "body_v29/side_left_inner.png",
+      "file": "body_v31/side_left_inner.png",
       "rect": [
         333,
         239,
@@ -1811,7 +1811,7 @@
     {
       "id": "side_right_outer",
       "role": "head",
-      "file": "body_v29/side_right_outer.png",
+      "file": "body_v31/side_right_outer.png",
       "rect": [
         731,
         356,
@@ -1831,12 +1831,12 @@
     {
       "id": "left_raised_forearm",
       "role": "armLeft",
-      "file": "body_v29/left_raised_forearm.png",
+      "file": "body_v31/left_raised_forearm.png",
       "rect": [
         289,
-        771,
-        473,
-        966
+        776,
+        479,
+        977
       ],
       "articulation": {
         "joint": "forearm",
@@ -1857,7 +1857,7 @@
     {
       "id": "left_raised_cuff",
       "role": "armLeft",
-      "file": "body_v29/left_raised_cuff.png",
+      "file": "body_v31/left_raised_cuff.png",
       "rect": [
         329,
         754,
@@ -1918,12 +1918,12 @@
     {
       "id": "left_raised_hand",
       "role": "armLeft",
-      "file": "body_v29/left_raised_hand.png",
+      "file": "body_v31/left_raised_hand.png",
       "rect": [
-        422,
-        694,
-        568,
-        826
+        428,
+        680,
+        591,
+        835
       ],
       "articulation": {
         "joint": "hand",
@@ -2016,7 +2016,8 @@
     ],
     "parameter": "ParamHandToCheek",
     "source": "assets/parts/v22/sources/bent-arm-clean-painted.png",
-    "forwardPosePaint": true
+    "forwardPosePaint": true,
+    "extendedHandPose": true
   },
   "hairExport": {
     "exclusiveOwnership": true,
