@@ -15,6 +15,14 @@ class Controls(unittest.IsolatedAsyncioTestCase):
     async def asyncTearDown(self):
         await self.client.close()
 
+    async def test_body_bounce_clamps_and_resets_on_mode_change(self):
+        await self.client.post('/api/mode',json={'mode':'ai'})
+        response=await self.client.post('/api/control',json={'source':'ai','parameters':{'ParamBodyBounce':9}})
+        self.assertEqual(response.status,200)
+        self.assertEqual((await response.json())['parameters']['ParamBodyBounce'],1)
+        response=await self.client.post('/api/mode',json={'mode':'human'})
+        self.assertEqual((await response.json())['parameters']['ParamBodyBounce'],0)
+
     async def test_source_ownership_and_switch_reset(self):
         r=await self.client.post('/api/control',json={'source':'ai','parameters':{'ParamAngleX':8}})
         self.assertEqual(r.status,409)

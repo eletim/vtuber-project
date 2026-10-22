@@ -108,7 +108,7 @@ test('all 512 settled control corners retain positive triangle area and a fixed 
       r.arms[side].x=clamp(s*2.8*p[side===0?'ParamArmLOpen':'ParamArmROpen']+r.body.x*.09+s*(p.ParamBreath-.5)*.18,-3.2,3.2);r.arms[side].v=0;
       r.elbows[side].x=-r.arms[side].x*.35;r.elbows[side].v=0;
     }
-    r.shoulder.x=p.ParamShoulderY*3;r.shoulder.v=0;r.shift.x=p.ParamBodyShiftX*4;r.shift.v=0;r.lastTime=0;
+    r.shoulder.x=p.ParamShoulderY*3;r.shoulder.v=0;r.shift.x=p.ParamBodyShiftX*28;r.shift.v=0;r.lastTime=0;
     const positions=r.frame(p,0);min=Math.min(min,minimumArea(positions));
     for(const y of [1390,1448])assert.deepEqual(xy(positions,543,y),xy(r.rest,543,y));
   }
@@ -123,7 +123,7 @@ test('rapid multi-axis reversals keep every triangle oriented and limbs within t
     const p={...neutral(),ParamBodyAngleX:s(0)*5,ParamAngleX:s(1)*15,ParamAngleY:s(2)*10,ParamAngleZ:s(3)*8,ParamBreath:(s(4)+1)/2,ParamArmLOpen:s(5),ParamArmROpen:s(6),ParamShoulderY:s(7),ParamBodyShiftX:s(8)};
     min=Math.min(min,minimumArea(r.frame(p,i/60)));
     assert.ok(r.pose.arms.every(x=>Math.abs(x)<=3.2));assert.ok(r.pose.elbows.every(x=>Math.abs(x)<=1.12));
-    assert.ok(Math.abs(r.pose.shoulder)<=3);assert.ok(Math.abs(r.pose.shift)<=4);
+    assert.ok(Math.abs(r.pose.shoulder)<=3);assert.ok(Math.abs(r.pose.shift)<=28);
   }
   assert.ok(min>.25,`minimum normalized area ${min}`);
 });

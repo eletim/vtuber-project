@@ -36,6 +36,7 @@ export class BodyRig {
     this.body=new Spring(9);this.arms=[new Spring(6),new Spring(6)];
     this.elbows=[new Spring(5),new Spring(5)];
     this.shoulder=new Spring(8);this.shift=new Spring(6);this.skirt=new Spring(4.5);
+    this.bounce=new Spring(14);this.headLag=new Spring(6);
     this.firstTime=null;this.lastTime=null;
   }
   frame(p,time,options={}){
@@ -46,8 +47,10 @@ export class BodyRig {
     const bodyTarget=clamp(value(p,'ParamBodyAngleX',-5,5)*.8+angleX*.04,-4.6,4.6);
     const body=this.body.step(bodyTarget,dt);
     const breath=value(p,'ParamBreath',0,1,.5)-.5;
-    const shoulder=this.shoulder.step(value(p,'ParamShoulderY',-1,1)*3,dt);
-    const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*4,dt);
+    const bounce=this.bounce.step(value(p,'ParamBodyBounce',-1,1)*22,dt);
+    const shoulder=this.shoulder.step(value(p,'ParamShoulderY',-1,1)*3,dt)+bounce;
+    const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*28,dt);
+    const headLag=this.headLag.step(clamp(-this.body.v*.09-body*.18,-2,2),dt);
     const armAngles=[],elbowAngles=[];
     for(let side=0;side<2;side++){
       const sign=side===0?1:-1;
@@ -60,10 +63,10 @@ export class BodyRig {
     // remains fixed, even under a full manual skirt command. The approved
     // hidden hem artwork supports at most three source pixels of reveal.
     const skirtLimit=clamp(this.config.skirtRevealLimitPixels,0,3);
-    const skirtTarget=clamp(value(p,'ParamSkirtSway',-1,1)*skirtLimit-this.body.v*.4-this.shift.v*.25-body*.65,-skirtLimit,skirtLimit);
+    const skirtTarget=clamp(value(p,'ParamSkirtSway',-1,1)*skirtLimit-this.body.v*.4-this.shift.v*.25-this.bounce.v*.035-body*.65,-skirtLimit,skirtLimit);
     const skirt=this.skirt.step(skirtTarget,dt);
     const bodyAngle=radians(body),bc=Math.cos(bodyAngle),bs=Math.sin(bodyAngle);
-    const headAngle=radians(value(p,'ParamAngleZ',-8,8)),hc=Math.cos(headAngle),hs=Math.sin(headAngle);
+    const headAngle=radians(clamp(value(p,'ParamAngleZ',-8,8)+headLag,-8,8)),hc=Math.cos(headAngle),hs=Math.sin(headAngle);
     const [width,height]=this.size,[wx,wy]=this.config.waist;
     const torso=this.positionsByRole.torso,headPositions=this.positionsByRole.head,skirtPositions=this.positionsByRole.skirt;
     for(let i=0;i<this.weights.length;i++){
@@ -108,7 +111,7 @@ export class BodyRig {
         positions[i*2]=px/width;positions[i*2+1]=py/height;
       }
     }
-    this.pose={body,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt};
+    this.pose={body,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
     // Legacy callers receive torso geometry. Multi-part callers must render
     // every independent positionsByRole surface in model.bodyLayers order.
     return this.positions;

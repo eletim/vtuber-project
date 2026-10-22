@@ -118,6 +118,7 @@ function connect(){
     if(event.type==='error')status(event.message);
   };
 }
+names.ParamBodyBounce='身体・弾み';
 names.ParamHandToCheek='頬に手を添える';
 for(const [key,label] of Object.entries(names)){
   const [min,max,def]=limits[key];const row=document.createElement('label');row.className='slider';

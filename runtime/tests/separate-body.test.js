@@ -107,7 +107,7 @@ test('all 1024 settled control corners keep every render role non-inverting',()=
       r.arms[side].x=clamp(s*2.8*p[side===0?'ParamArmLOpen':'ParamArmROpen']+r.body.x*.09+s*(p.ParamBreath-.5)*.18,-3.2,3.2);r.arms[side].v=0;
       r.elbows[side].x=-r.arms[side].x*.35;r.elbows[side].v=0;
     }
-    r.shoulder.x=p.ParamShoulderY*3;r.shoulder.v=0;r.shift.x=p.ParamBodyShiftX*4;r.shift.v=0;
+    r.shoulder.x=p.ParamShoulderY*3;r.shoulder.v=0;r.shift.x=p.ParamBodyShiftX*28;r.shift.v=0;
     r.skirt.x=clamp(p.ParamSkirtSway*3-r.body.x*.65,-3,3);r.skirt.v=0;r.lastTime=0;
     for(const positions of Object.values(r.frames(p,0)))minimum=Math.min(minimum,minimumArea(positions));
   }

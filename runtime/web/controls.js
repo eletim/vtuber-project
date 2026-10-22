@@ -6,6 +6,7 @@ export const limits = {
   ParamArmLOpen: [-1,1,0], ParamArmROpen: [-1,1,0],
   ParamHandToCheek: [0,1,0],
   ParamShoulderY: [-1,1,0], ParamBodyShiftX: [-1,1,0],
+  ParamBodyBounce: [-1,1,0],
   ParamSkirtSway: [-1,1,0]
 };
 export const neutral = () => Object.fromEntries(Object.entries(limits).map(([k,v])=>[k,v[2]]));

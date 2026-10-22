@@ -22,6 +22,7 @@ LIMITS = {'ParamAngleX': (-15,15,0), 'ParamAngleY': (-10,10,0),
           'ParamArmLOpen': (-1,1,0), 'ParamArmROpen': (-1,1,0),
           'ParamHandToCheek': (0,1,0),
           'ParamShoulderY': (-1,1,0), 'ParamBodyShiftX': (-1,1,0),
+          'ParamBodyBounce': (-1,1,0),
           'ParamSkirtSway': (-1,1,0)}
 
 

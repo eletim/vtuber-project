@@ -11,7 +11,8 @@ function shader(gl,type,source) {
 }
 const vertex=`attribute vec2 a; attribute vec2 position; varying vec2 uv;
 void main(){
- uv=a; gl_Position=vec4(position.x*2.-1.,1.-position.y*2.,0.,1.);
+ // Leave camera margin for the authored bounce without clipping the crown.
+ uv=a; gl_Position=vec4((position.x*2.-1.)*.94,(1.-position.y*2.)*.94,0.,1.);
 }`;
 const resolveVertex=`attribute vec2 point; varying vec2 uv;
 void main(){uv=point*.5+.5;gl_Position=vec4(point,0.,1.);}`;

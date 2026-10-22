@@ -19,7 +19,16 @@ export function performancePose(base,time,performance={enabled:true},mouth=0){
   y+=speaking*1.6*pulse;z+=speaking*.7*Math.sin(t*1.8);
   const onset=Math.min(1,Math.max(0,age)*2.5),fade=performance.until?clamp((performance.until-t)*2):1;
   const weight=onset*fade;
-  if(emotion==='happy'){z+=weight*1.8*Math.sin(t*1.7);body+=weight*.6*Math.sin(t*1.7);y+=weight*.8*Math.sin(t*3.4);}
+  if(emotion==='happy'){
+    z+=weight*1.8*Math.sin(age*1.7);body+=weight*2.1*Math.sin(age*1.7);
+    add(pose,'ParamBodyShiftX',weight*.78*Math.sin(age*1.7));
+    // Two anticipatory dips and hops, then a quiet pause. No perpetual jumping.
+    const beat=Math.max(0,age)%5.6;
+    const hop=a=>a<0||a>1.1?0:a<.3?-.5*Math.sin(Math.PI*a/.3):Math.sin(Math.PI*(a-.3)/.8);
+    add(pose,'ParamBodyBounce',weight*(hop(beat)+.8*hop(beat-1.35)));
+    add(pose,'ParamArmLOpen',weight*.35*(hop(beat)+.8*hop(beat-1.35)));
+    add(pose,'ParamArmROpen',weight*.35*(hop(beat)+.8*hop(beat-1.35)));
+  }
   if(emotion==='thoughtful'){z+=weight*3.1;x-=weight*2.2;y-=weight*.9;}
   if(emotion==='thoughtful'){
     const gesture=ease(age/1.1)*(1-ease((age-3.1)/1.5));
@@ -84,7 +93,7 @@ export class PerformanceMotion {
       if(age>=1.43||settle<=0)this.gesture=null;
     }
     // Quiet weight shifts are deliberately much smaller than speaking accents.
-    const idle=.23*Math.sin(time*.31)+.09*Math.sin(time*.17);
+    const idle=.08*Math.sin(time*.31)+.03*Math.sin(time*.17);
     add(pose,'ParamBodyShiftX',idle+(side===0?-.35:.35)*accent);
     add(pose,'ParamArmLOpen',accent*(side===0?1:.24));
     add(pose,'ParamArmROpen',accent*(side===1?1:.24));

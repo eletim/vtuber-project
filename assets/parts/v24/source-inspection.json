@@ -1,0 +1,193 @@
+{
+  "psd": "assets/parts/v22/koma_articulated_v22.psd",
+  "mesh": [
+    60,
+    80
+  ],
+  "mesh_vertices": 4941,
+  "separate_geometry_per_strand": true,
+  "fixed_expression_hair_mask": "body_v22/face_hair_ownership.png",
+  "strands": [
+    {
+      "id": "rear_left_outer",
+      "psd_group": "v22 exclusive hair/rear_left_outer",
+      "group_exists": true,
+      "rect": [
+        149,
+        448,
+        260,
+        748
+      ],
+      "root": 448,
+      "configured_tip": 775,
+      "visible_bottom": 748,
+      "texture_sha256": "616e875b14d13d082c4864a28b39c85341e945d9546bfb8fb8afc85179708936"
+    },
+    {
+      "id": "rear_left_inner",
+      "psd_group": "v22 exclusive hair/rear_left_inner",
+      "group_exists": true,
+      "rect": [
+        260,
+        448,
+        373,
+        707
+      ],
+      "root": 448,
+      "configured_tip": 775,
+      "visible_bottom": 707,
+      "texture_sha256": "8b90589a042ef6dbf83eb158e88d0ee4baa07051cb8d496c57a6721143c84522"
+    },
+    {
+      "id": "rear_right_inner",
+      "psd_group": "v22 exclusive hair/rear_right_inner",
+      "group_exists": true,
+      "rect": [
+        733,
+        448,
+        825,
+        598
+      ],
+      "root": 448,
+      "configured_tip": 775,
+      "visible_bottom": 598,
+      "texture_sha256": "f1aef0f99ec3568e6efb144d07ed003c6b9ca4180368a253703d4d52c6824a72"
+    },
+    {
+      "id": "rear_right_outer",
+      "psd_group": "v22 exclusive hair/rear_right_outer",
+      "group_exists": true,
+      "rect": [
+        825,
+        448,
+        940,
+        775
+      ],
+      "root": 448,
+      "configured_tip": 775,
+      "visible_bottom": 775,
+      "texture_sha256": "9bbdd32d1ef6dd81511bdc1109013b4ee17975a7441b72991847ac6397e5d03d"
+    },
+    {
+      "id": "bang_left",
+      "psd_group": "v22 exclusive hair/bang_left",
+      "group_exists": true,
+      "rect": [
+        406,
+        53,
+        500,
+        283
+      ],
+      "root": 70,
+      "configured_tip": 276,
+      "visible_bottom": 283,
+      "texture_sha256": "5c7d0aa7164d0645c41e917e2745dd60351ba3d305bcd232bc94c17677c1766a"
+    },
+    {
+      "id": "bang_center",
+      "psd_group": "v22 exclusive hair/bang_center",
+      "group_exists": true,
+      "rect": [
+        476,
+        43,
+        580,
+        271
+      ],
+      "root": 65,
+      "configured_tip": 273,
+      "visible_bottom": 271,
+      "texture_sha256": "ef309f79021cb6e86dcaec378490730f64cdcffed7fcd485506c4a87c87ba96b"
+    },
+    {
+      "id": "bang_right",
+      "psd_group": "v22 exclusive hair/bang_right",
+      "group_exists": true,
+      "rect": [
+        556,
+        48,
+        651,
+        270
+      ],
+      "root": 65,
+      "configured_tip": 248,
+      "visible_bottom": 270,
+      "texture_sha256": "4bbd5f598bbf23a9a89a7496bce60da65e714c6c59d5c1df3d9cd6351995b78f"
+    },
+    {
+      "id": "side_left_front",
+      "psd_group": "v22 exclusive hair/side_left_front",
+      "group_exists": true,
+      "rect": [
+        390,
+        347,
+        512,
+        681
+      ],
+      "root": 365,
+      "configured_tip": 682,
+      "visible_bottom": 681,
+      "texture_sha256": "bcb4d56ccffce9d21f1ad7929343163044d95f97233de5a77c94d96f56dea106"
+    },
+    {
+      "id": "side_right_front",
+      "psd_group": "v22 exclusive hair/side_right_front",
+      "group_exists": true,
+      "rect": [
+        644,
+        335,
+        702,
+        450
+      ],
+      "root": 335,
+      "configured_tip": 503,
+      "visible_bottom": 450,
+      "texture_sha256": "bd7791757eabbd3cf7bc682ee69e6b2599e35020d03e8f1e95c3206fbe48382b"
+    },
+    {
+      "id": "side_left_outer",
+      "psd_group": "v22 exclusive hair/side_left_outer",
+      "group_exists": true,
+      "rect": [
+        235,
+        211,
+        357,
+        550
+      ],
+      "root": 210,
+      "configured_tip": 530,
+      "visible_bottom": 550,
+      "texture_sha256": "ddab21efea6ad700537b0a4ea8051a86dfe6d0e080a0901e4fbff2bbeba72e66"
+    },
+    {
+      "id": "side_left_inner",
+      "psd_group": "v22 exclusive hair/side_left_inner",
+      "group_exists": true,
+      "rect": [
+        333,
+        239,
+        427,
+        679
+      ],
+      "root": 250,
+      "configured_tip": 515,
+      "visible_bottom": 679,
+      "texture_sha256": "bde2b117e34623609688212c5cb720566aeae78c1a94b6fb99c739b0e02e8fca"
+    },
+    {
+      "id": "side_right_outer",
+      "psd_group": "v22 exclusive hair/side_right_outer",
+      "group_exists": true,
+      "rect": [
+        731,
+        356,
+        865,
+        550
+      ],
+      "root": 355,
+      "configured_tip": 650,
+      "visible_bottom": 550,
+      "texture_sha256": "e3208e5e1c14645060fdb6f34d046cdcd3d38d98bc7f8e83d6fcb1ec7b370311"
+    }
+  ],
+  "finding": "Several configured tips extend beyond visible strand pixels. v24 bends using each visible rectangle bottom and retains seam guards. No new raster partition is needed for the revised body-driven priority."
+}
