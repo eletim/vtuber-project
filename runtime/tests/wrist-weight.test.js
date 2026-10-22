@@ -11,13 +11,13 @@ test('wrist correction is continuous across the hand-forearm seam and keeps visi
   arm.frame({...neutral(),ParamHandToCheek:f/100},f/60,r.pose,{snapArticulation:true});
   const hand=arm.geometry.get('left_raised_hand'),forearm=arm.geometry.get('left_raised_forearm');
   for(let row=25;row<=28;row++)for(let col=24;col<=27;col++){const i=(row*61+col)*2;assert.ok(Math.hypot((hand[i]-forearm[i])*1086,(hand[i+1]-forearm[i+1])*1448)<.001);}
-  for(const [name,rect] of [['left_raised_hand',[366,333,499,477]],['left_raised_forearm',[398,477,496,695]],['left_raised_cuff',[365,565,481,721]]]){
+  for(const [name,rect] of ['left_raised_hand','left_raised_forearm','left_raised_cuff'].map(id=>[id,m.bodyLayers.find(l=>l.id===id).rect])){
    const v=arm.geometry.get(name);for(let row=Math.floor(rect[1]/1448*80);row<=Math.ceil(rect[3]/1448*80);row++)for(let col=Math.floor(rect[0]/1086*60);col<=Math.ceil(rect[2]/1086*60);col++){
     const a=row*61+col,b=a+1,c=a+61;const area=((v[b*2]-v[a*2])*(v[c*2+1]-v[a*2+1])-(v[b*2+1]-v[a*2+1])*(v[c*2]-v[a*2]))*4800;minimum=Math.min(minimum,area);
    }
   }
  }
- assert.ok(minimum>.3,`visible arm surface minimum area ${minimum}`);assert.ok(Math.abs(arm.joints.wristRoll)<1e-10);
+ assert.ok(minimum>.3,`visible arm surface minimum area ${minimum}`);assert.ok(Math.abs(arm.joints.wristRoll-(m.articulatedArm.forwardPosePaint?-Math.PI/3:0))<1e-10);
 });
 test('larger weight transfer moves pelvis and differentiates thighs without changing hip radii',()=>{
  const r=new BodyRig(m,w);let difference=0;

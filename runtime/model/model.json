@@ -6,7 +6,7 @@
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v28/koma_depth_hair_v28.psd",
+  "source_psd": "assets/parts/v29/koma_material_repair_v29.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -1401,12 +1401,12 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v28/koma_depth_hair_v28.psd",
+  "expression_source_psd": "assets/parts/v29/koma_material_repair_v29.psd",
   "bodyLayers": [
     {
       "id": "rear_left_outer",
       "role": "head",
-      "file": "body_v28/rear_left_outer.png",
+      "file": "body_v29/rear_left_outer.png",
       "rect": [
         149,
         448,
@@ -1425,7 +1425,7 @@
     {
       "id": "rear_left_inner",
       "role": "head",
-      "file": "body_v28/rear_left_inner.png",
+      "file": "body_v29/rear_left_inner.png",
       "rect": [
         260,
         448,
@@ -1444,7 +1444,7 @@
     {
       "id": "rear_right_inner",
       "role": "head",
-      "file": "body_v28/rear_right_inner.png",
+      "file": "body_v29/rear_right_inner.png",
       "rect": [
         733,
         448,
@@ -1463,7 +1463,7 @@
     {
       "id": "rear_right_outer",
       "role": "head",
-      "file": "body_v28/rear_right_outer.png",
+      "file": "body_v29/rear_right_outer.png",
       "rect": [
         825,
         448,
@@ -1482,7 +1482,7 @@
     {
       "id": "thigh_left",
       "role": "legLeft",
-      "file": "body_v26/thigh_left.png",
+      "file": "body_v29/thigh_left.png",
       "rect": [
         285,
         1218,
@@ -1494,7 +1494,7 @@
     {
       "id": "thigh_right",
       "role": "legRight",
-      "file": "body_v26/thigh_right.png",
+      "file": "body_v29/thigh_right.png",
       "rect": [
         285,
         1218,
@@ -1576,6 +1576,23 @@
       "psdGroup": "02 Screen-right arm | 画面右の腕・袖・手"
     },
     {
+      "id": "left_shoulder_underlap",
+      "role": "armLeft",
+      "file": "body_v29/left_shoulder_underlap.png",
+      "rect": [
+        330,
+        478,
+        405,
+        520
+      ],
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v29 shoulder/retained painted underlap"
+    },
+    {
       "id": "left_shoulder_original_support",
       "role": "armLeft",
       "file": "body_v22/left_shoulder_original_support.png",
@@ -1624,7 +1641,7 @@
     {
       "id": "face_fixed_v22",
       "role": "head",
-      "file": "body_v28/face_fixed_v22.png",
+      "file": "body_v29/face_fixed_v22.png",
       "rect": [
         235,
         1,
@@ -1634,14 +1651,14 @@
       "psdGroup": "v22 face and fixed crown",
       "features": true,
       "expressionFiles": {
-        "neutral": "body_v28/face_neutral.png",
-        "soft_smile": "body_v28/face_soft_smile.png",
-        "big_smile": "body_v28/face_big_smile.png",
-        "worried": "body_v28/face_worried.png",
-        "surprised": "body_v28/face_surprised.png",
-        "bashful": "body_v28/face_bashful.png",
-        "displeased": "body_v28/face_displeased.png",
-        "thinking": "body_v28/face_thinking.png"
+        "neutral": "body_v29/face_neutral.png",
+        "soft_smile": "body_v29/face_soft_smile.png",
+        "big_smile": "body_v29/face_big_smile.png",
+        "worried": "body_v29/face_worried.png",
+        "surprised": "body_v29/face_surprised.png",
+        "bashful": "body_v29/face_bashful.png",
+        "displeased": "body_v29/face_displeased.png",
+        "thinking": "body_v29/face_thinking.png"
       },
       "movingHairMask": "body_v22/face_hair_ownership.png"
     },
@@ -1705,7 +1722,7 @@
     {
       "id": "side_left_front",
       "role": "head",
-      "file": "body_v28/side_left_front.png",
+      "file": "body_v29/side_left_front.png",
       "rect": [
         390,
         347,
@@ -1724,7 +1741,7 @@
     {
       "id": "side_right_front",
       "role": "head",
-      "file": "body_v22/side_right_front.png",
+      "file": "body_v29/side_right_front.png",
       "rect": [
         644,
         335,
@@ -1743,7 +1760,7 @@
     {
       "id": "side_left_outer",
       "role": "head",
-      "file": "body_v28/side_left_outer.png",
+      "file": "body_v29/side_left_outer.png",
       "rect": [
         235,
         211,
@@ -1762,7 +1779,7 @@
     {
       "id": "side_left_inner",
       "role": "head",
-      "file": "body_v28/side_left_inner.png",
+      "file": "body_v29/side_left_inner.png",
       "rect": [
         333,
         239,
@@ -1781,7 +1798,7 @@
     {
       "id": "side_right_outer",
       "role": "head",
-      "file": "body_v28/side_right_outer.png",
+      "file": "body_v29/side_right_outer.png",
       "rect": [
         731,
         356,
@@ -1800,19 +1817,27 @@
     {
       "id": "left_raised_forearm",
       "role": "armLeft",
-      "file": "body_v22/left_raised_forearm.png",
+      "file": "body_v29/left_raised_forearm.png",
       "rect": [
-        398,
-        477,
-        496,
-        695
+        289,
+        771,
+        473,
+        966
       ],
       "articulation": {
         "joint": "forearm",
         "bind": "raised",
-        "variant": "raised"
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ]
       },
-      "psdGroup": "v22 articulated arm/left_raised_forearm"
+      "psdGroup": "v29 forward-pose paint/left_raised_forearm"
     },
     {
       "id": "left_raised_drape",
@@ -1832,7 +1857,7 @@
       "psdGroup": "v22 articulated arm/left_raised_drape"
     },
     {
-      "id": "left_raised_cuff",
+      "id": "left_rest_cuff",
       "role": "armLeft",
       "file": "body_v22/left_raised_cuff.png",
       "rect": [
@@ -1844,26 +1869,61 @@
       "articulation": {
         "joint": "cuff",
         "bind": "raised",
-        "variant": "raised"
+        "variant": "raised",
+        "poseWeight": "rest-cuff"
       },
-      "psdGroup": "v22 articulated arm/left_raised_cuff"
+      "psdGroup": "v29 cuff/down-facing original"
+    },
+    {
+      "id": "left_raised_cuff",
+      "role": "armLeft",
+      "file": "body_v29/left_raised_cuff.png",
+      "rect": [
+        329,
+        754,
+        480,
+        931
+      ],
+      "articulation": {
+        "joint": "cuff",
+        "bind": "raised",
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ],
+        "poseWeight": "forward-cuff"
+      },
+      "psdGroup": "v29 forward-pose paint/left_raised_cuff"
     },
     {
       "id": "left_raised_hand",
       "role": "armLeft",
-      "file": "body_v22/left_raised_hand.png",
+      "file": "body_v29/left_raised_hand.png",
       "rect": [
-        366,
-        333,
-        499,
-        477
+        422,
+        694,
+        568,
+        826
       ],
       "articulation": {
         "joint": "hand",
         "bind": "raised",
-        "variant": "raised"
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ]
       },
-      "psdGroup": "v22 articulated arm/left_raised_hand"
+      "psdGroup": "v29 forward-pose paint/left_raised_hand"
     }
   ],
   "bodyRig": {
@@ -1939,7 +1999,8 @@
       470
     ],
     "parameter": "ParamHandToCheek",
-    "source": "assets/parts/v22/sources/bent-arm-clean-painted.png"
+    "source": "assets/parts/v22/sources/bent-arm-clean-painted.png",
+    "forwardPosePaint": true
   },
   "hairExport": {
     "exclusiveOwnership": true,

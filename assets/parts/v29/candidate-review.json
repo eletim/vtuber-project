@@ -1,0 +1,28 @@
+{
+  "status": "independent-review checkpoint; not final approval",
+  "baseline": "64ae158a4e08e475d89c61cac57be3eed10d6f71",
+  "changes": [
+    "Painted thigh interiors replace cutout holes while preserving garter pixels and outer silhouette.",
+    "Generated hair repairs confined to native ownership; front curls retain original paint with only local hole fills.",
+    "New forward cuff, hidden elbow/forearm and relaxed gathered hand paint; rigid palm carried by continuous wrist curvature.",
+    "Separate rest/forward cuff weights and shoulder underlap.",
+    "v28 body motion, waist connection and twelve hair dynamics preserved."
+  ],
+  "observed": [
+    "Viewed 23-frame chronological contact sheet and full-size rest/half/cheek poses.",
+    "Decoded and inspected MP4 11.3/12.5/14.3 second frames on white/black/teal; holes materially improved, cheek hand and waist connected.",
+    "All 178 Node tests pass; actual app 8 expressions times 2 extreme poses passed with no errors.",
+    "Protected face ROI unchanged in all eight expressions."
+  ],
+  "remaining_review": [
+    "Fine hair alpha edges and thin shoulder boundary remain visible at full resolution; do not claim flawless matte.",
+    "Cuff crossfade and changing hand orientation need independent continuous-motion judgement.",
+    "Comparison recording duration 20.36 seconds vs 18.56 single sample due real-time capture scheduling; each comparison column uses identical scenario input.",
+    "No knees/feet created; large jumping is not supported."
+  ],
+  "tools": {
+    "image_edit": "built-in image_gen.imagegen succeeded; six source edits retained",
+    "screen": "dedicated headless Chrome only"
+  },
+  "upload": "not performed"
+}

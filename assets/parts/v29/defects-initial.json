@@ -1,0 +1,47 @@
+{
+  "baseline": "64ae158a4e08e475d89c61cac57be3eed10d6f71",
+  "items": [
+    {
+      "priority": 1,
+      "id": "thigh-holes",
+      "source_region": [
+        285,
+        1218,
+        790,
+        1448
+      ],
+      "cause": "Native source alpha is absent inside both thighs; runtime rotations preserve the holes.",
+      "repair": "Paint only missing thigh interiors; retain skirt and garter RGB and outer contours."
+    },
+    {
+      "priority": 2,
+      "id": "arm-depth-silhouette",
+      "scenario_times": [
+        11.3,
+        14.3
+      ],
+      "cause": "One raised painted arm is projected across the entire gesture. Palm foreshortening and cuff shape are not authored for forward lift.",
+      "repair": "Create forward-lift intermediate arm/sleeve pose artwork and independent joint ownership; test continuous transition."
+    },
+    {
+      "priority": 3,
+      "id": "hair-fragmented-matte",
+      "source_regions": [
+        [
+          235,
+          211,
+          427,
+          679
+        ],
+        [
+          733,
+          356,
+          940,
+          775
+        ]
+      ],
+      "cause": "Removing baked white exposes pre-existing noisy alpha and missing hair texture; source has fragmented contours.",
+      "repair": "Restore continuous painted locks while preserving intentional inter-lock gaps and highlights; export exclusive moving ownership."
+    }
+  ]
+}

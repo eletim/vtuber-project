@@ -1,0 +1,16 @@
+[
+  {
+    "id": "thigh_left",
+    "old": "body_v26/thigh_left.png",
+    "new": "body_v29/thigh_left.png",
+    "new_opaque_pixels": 33760,
+    "opaque_original_changes": 0
+  },
+  {
+    "id": "thigh_right",
+    "old": "body_v26/thigh_right.png",
+    "new": "body_v29/thigh_right.png",
+    "new_opaque_pixels": 14073,
+    "opaque_original_changes": 0
+  }
+]

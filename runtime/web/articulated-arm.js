@@ -16,7 +16,7 @@ export class ArticulatedArm {
   if(options.snapArticulation){this.cloth=clothTarget;this.clothVelocity=0;}
   else{const speed=9,offset=this.cloth-clothTarget,c=this.clothVelocity+speed*offset,e=Math.exp(-speed*dt);this.cloth=clothTarget+(offset+c*dt)*e;this.clothVelocity=(this.clothVelocity-speed*c*dt)*e;}
   const t=clamp(this.amount),[width,height]=this.model.size,S=config.shoulder,E=config.elbow,WR=config.wristRest,WU=config.wristRaised;
-  const a0=Math.atan2(WR[1]-E[1],WR[0]-E[0]),a1=Math.atan2(WU[1]-E[1],WU[0]-E[0]),flex=(a1-a0)*t;
+  const a0=Math.atan2(WR[1]-E[1],WR[0]-E[0]),a1=Math.atan2(WU[1]-E[1],WU[0]-E[0]),flex=(a1-a0)*(config.forwardPosePaint?Math.sin(Math.PI*smooth(0,1,t)/2):t);
   const length=Math.hypot(WU[0]-E[0],WU[1]-E[1]);
   const depthAngle=1.095*Math.sin(Math.PI*t)*(1+.3*Math.cos(Math.PI*t)**2),projection=Math.cos(depthAngle);
   const lift=Math.sin(Math.PI*t),projectedElbow=[E[0]+12*lift,E[1]-14*lift];
@@ -27,14 +27,25 @@ export class ArticulatedArm {
   const projectUpper=q=>{const x=q[0]-S[0],y=q[1]-S[1],u=x*upperBind[0]+y*upperBind[1],v=-x*upperBind[1]+y*upperBind[0];return[S[0]+u*upperProjected/upperLength*upperAxis[0]-v*upperAxis[1],S[1]+u*upperProjected/upperLength*upperAxis[1]+v*upperAxis[0]];};
   // Integrate the projection scale along the palm: its derivative never exceeds
   // the original length, unlike multiplying position by a varying scale.
-  const projectLength=u=>{const d=u-length,z=clamp((d-20)/55),integral=d<=20?0:d>=75?d-47.5:55*(z**3-.5*z**4);return u*projection+(1-projection)*.9*integral;};
+  const projectLength=u=>{const d=u-length,z=clamp((d-20)/55),integral=d<=20?0:d>=75?d-47.5:55*(z**3-.5*z**4);const handZ=clamp(d/20),handIntegral=d<=0?0:d>=20?d-10:20*(handZ**3-.5*handZ**4);return u*projection+(1-projection)*(config.forwardPosePaint?handIntegral:.9*integral);};
   const projectForearm=q=>{const x=q[0]-E[0],y=q[1]-E[1],u=x*bindDirection[0]+y*bindDirection[1],v=x*bindNormal[0]+y*bindNormal[1],along=projectLength(u);return[projectedElbow[0]+along*direction[0]+v*normal[0],projectedElbow[1]+along*direction[1]+v*normal[1]];};
   const projectHand=q=>projectForearm(q);
-  const wristRoll=26*Math.sin(Math.PI*t)**2*Math.PI/180;
+  const wristRoll=(config.forwardPosePaint?(-60*smooth(.45,1,t)-30*(1-smooth(0,.35,t))):26*Math.sin(Math.PI*t)**2)*Math.PI/180;
   // Correct the authored bent wrist over the palm-base transition, not a hinge.
   // The hand and the terminal forearm share exactly the same transform.
   const wristShape=point=>{
    const dir=[Math.cos(a1),Math.sin(a1)],along=(point[0]-WU[0])*dir[0]+(point[1]-WU[1])*dir[1];
+   if(config.forwardPosePaint&&Math.abs(wristRoll)>1e-8){
+    // A curved wrist centreline carries a rigid palm. Width follows its normal;
+    // no position-dependent rotation stretches fingers or folds the wrist mesh.
+    const v=-(point[0]-WU[0])*dir[1]+(point[1]-WU[1])*dir[0],span=160;
+    let cx,cy,theta;
+    if(along>=0){theta=wristRoll;cx=along*Math.cos(theta);cy=along*Math.sin(theta);}
+    else if(along>=-span){theta=wristRoll*(along+span)/span;cx=span/wristRoll*(Math.sin(theta)-Math.sin(wristRoll));cy=span/wristRoll*(Math.cos(wristRoll)-Math.cos(theta));}
+    else{theta=0;const fade=smooth(-length,-span,along);cx=along+fade*(span-span/wristRoll*Math.sin(wristRoll));cy=fade*span/wristRoll*(Math.cos(wristRoll)-1);}
+    const u=cx-v*Math.sin(theta),n=cy+v*Math.cos(theta);
+    return[WU[0]+u*dir[0]-n*dir[1],WU[1]+u*dir[1]+n*dir[0]];
+   }
    return rotate(point,WU,wristRoll*smooth(-15,45,along));
   };
   const upperAngle=(bodyPose?.arms?.[0]||0)*Math.PI/180;
@@ -46,13 +57,20 @@ export class ArticulatedArm {
    let positions=this.geometry.get(layer.id);if(!positions){positions=new Float32Array(this.rest.length);this.geometry.set(layer.id,positions);}
    for(let i=0;i<this.rest.length;i+=2){
     let q=[this.rest[i]*width,this.rest[i+1]*height];
+    if(a.sourceElbow&&a.sourceWrist){
+     const se=a.sourceElbow,sw=a.sourceWrist,sl=Math.hypot(sw[0]-se[0],sw[1]-se[1]),sd=[(sw[0]-se[0])/sl,(sw[1]-se[1])/sl],dx=q[0]-sw[0],dy=q[1]-sw[1],u=dx*sd[0]+dy*sd[1],v=-dx*sd[1]+dy*sd[0],along=a.joint==='cuff'?-210+(u+70):u<0?u*length/sl:u;
+     q=[WU[0]+along*bindDirection[0]+v*bindNormal[0],WU[1]+along*bindDirection[1]+v*bindNormal[1]];
+    }
     if(a.joint==='forearm'||a.joint==='cuff'){
      if(a.joint==='cuff'){
       // Cloth bows at mid-flexion; pinned seam strips and rigid skin stay intact.
       const u=clamp((q[1]-565)/156),bell=Math.sin(Math.PI*u)**2;
       q=[q[0]-12*Math.sin(Math.PI*t)**2*bell,q[1]+5*Math.sin(Math.PI*t)**2*bell];
      }
-     q=projectForearm(wristShape(q));
+     if(a.joint==='cuff'&&config.forwardPosePaint&&a.sourceWrist){
+      const sl=Math.hypot(a.sourceWrist[0]-a.sourceElbow[0],a.sourceWrist[1]-a.sourceElbow[1]),u=-210,center=[WU[0]+u*bindDirection[0],WU[1]+u*bindDirection[1]],mapped=wristShape(center),theta=wristRoll*clamp((u+160)/160);
+      q=rotate(q,center,theta);q=[q[0]+mapped[0]-center[0],q[1]+mapped[1]-center[1]];q=projectForearm(q);
+     }else q=projectForearm(a.poseWeight==='rest-cuff'?q:wristShape(q));
     }
     else if(a.joint==='hand')q=projectHand(wristShape(q));
     else if(a.joint==='upper')q=projectUpper(q);
@@ -69,5 +87,5 @@ export class ArticulatedArm {
    }
   }
  }
- opacity(layer){return layer.articulation?(layer.articulation.variant==='raised'?this.joints?.blend||0:1-(this.joints?.blend||0)):1;}
+ opacity(layer){const pose=layer.articulation?.poseWeight;if(pose)return pose==='forward-cuff'?smooth(.15,.45,this.amount):1-smooth(.15,.45,this.amount);return layer.articulation?(layer.articulation.variant==='raised'?this.joints?.blend||0:1-(this.joints?.blend||0)):1;}
 }

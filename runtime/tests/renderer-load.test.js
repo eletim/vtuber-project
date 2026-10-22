@@ -40,12 +40,14 @@ test('production renderer loads cropped textures and preserves independent draws
     for(const layer of renderer.layers)assert.equal(textureFilters.get(layer.texture).TEXTURE_MIN_FILTER,'NEAREST');
     assert.equal(textureFilters.get(renderer.resolveTexture).TEXTURE_MIN_FILTER,'LINEAR');
     for(let frame=0;frame<3;frame++)renderer.render(neutral(),frame/60,'neutral',{ambient:false});
-    assert.equal(draws.length,(count+1)*3,'independent parts plus one resolve per frame');
+    const visible=renderer.layers.filter(layer=>(renderer.articulatedArm?.opacity(layer)??1)>=.00001);
+    const visibleCount=visible.length;
+    assert.equal(draws.length,(visibleCount+1)*3,'visible independent parts plus one resolve per frame');
     for(let frame=0;frame<3;frame++){
-      const batch=draws.slice(frame*(count+1),(frame+1)*(count+1)),parts=batch.slice(0,count),resolve=batch[count];
+      const batch=draws.slice(frame*(visibleCount+1),(frame+1)*(visibleCount+1)),parts=batch.slice(0,visibleCount),resolve=batch[visibleCount];
       assert.ok(parts.every(draw=>draw.framebuffer===renderer.resolveFramebuffer&&draw.program===renderer.program));
       assert.ok(parts.every(draw=>draw.uv===renderer.uvBuffer));
-      assert.deepEqual(parts.map(draw=>draw.position),renderer.layers.map(layer=>layer.positionBuffer));
+      assert.deepEqual(parts.map(draw=>draw.position),visible.map(layer=>layer.positionBuffer));
       assert.equal(resolve.type,'resolve');assert.equal(resolve.framebuffer,null);assert.equal(resolve.texture,renderer.resolveTexture);
     }
   }finally{for(const [key,value] of Object.entries(originals)){if(value===undefined)delete globalThis[key];else globalThis[key]=value;}}

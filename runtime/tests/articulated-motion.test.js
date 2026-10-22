@@ -58,14 +58,14 @@ test('thoughtful gesture raises, holds, and lowers the hand within six seconds',
 });
 
 test('depth projection preserves forearm cross-section while narrowing its forward arc',()=>{
- const {body}=setup(),E=model.articulatedArm.elbow,W=model.articulatedArm.wristRaised,L=Math.hypot(W[0]-E[0],W[1]-E[1]),d=[(W[0]-E[0])/L,(W[1]-E[1])/L];
- const rest=new Float32Array([-20,20].flatMap(v=>[(E[0]+180*d[0]-v*d[1])/1086,(E[1]+180*d[1]+v*d[0])/1448]));
+ const {body}=setup(),a=model.bodyLayers.find(l=>l.id==='left_raised_forearm').articulation,E=a.sourceElbow||model.articulatedArm.elbow,W=a.sourceWrist||model.articulatedArm.wristRaised,L=Math.hypot(W[0]-E[0],W[1]-E[1]),d=[(W[0]-E[0])/L,(W[1]-E[1])/L];
+ const rest=new Float32Array([-20,20].flatMap(v=>[(E[0]+L*.45*d[0]-v*d[1])/1086,(E[1]+L*.45*d[1]+v*d[0])/1448]));
  const arm=new ArticulatedArm(model,rest);body.frame(neutral(),0);
  for(let f=0;f<=100;f++){arm.frame({...neutral(),ParamHandToCheek:f/100},f/60,body.pose,{snapArticulation:true});const v=arm.geometry.get('left_raised_forearm');assert.ok(Math.abs(Math.hypot((v[2]-v[0])*1086,(v[3]-v[1])*1448)-40)<.001);assert.ok(arm.joints.wrist[0]<550);}
 });
 
 test('projected distal hand cannot elongate the authored fingers',()=>{
- const {body}=setup(),E=model.articulatedArm.elbow,W=model.articulatedArm.wristRaised,L=Math.hypot(W[0]-E[0],W[1]-E[1]),d=[(W[0]-E[0])/L,(W[1]-E[1])/L];
+ const {body}=setup(),a=model.bodyLayers.find(l=>l.id==='left_raised_forearm').articulation,E=a.sourceElbow||model.articulatedArm.elbow,W=a.sourceWrist||model.articulatedArm.wristRaised,L=Math.hypot(W[0]-E[0],W[1]-E[1]),d=[(W[0]-E[0])/L,(W[1]-E[1])/L];
  const rest=new Float32Array([80,150].flatMap(u=>[(W[0]+u*d[0])/1086,(W[1]+u*d[1])/1448]));const arm=new ArticulatedArm(model,rest);body.frame(neutral(),0);
  for(let f=0;f<=100;f++){arm.frame({...neutral(),ParamHandToCheek:f/100},f/60,body.pose,{snapArticulation:true});const v=arm.geometry.get('left_raised_hand');assert.ok(Math.hypot((v[2]-v[0])*1086,(v[3]-v[1])*1448)<=70.001);}
 });
