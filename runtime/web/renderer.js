@@ -96,7 +96,7 @@ export class AvatarRenderer {
         layer.ctx=layer.paint.getContext('2d');this.paint=layer.paint;this.ctx=layer.ctx;
       }
       gl.bindTexture(gl.TEXTURE_2D,layer.texture);
-      const filter=this.sampling.enabled?gl.NEAREST:gl.LINEAR;
+      const filter=this.sampling.enabled&&definition.sampling!=='linear'?gl.NEAREST:gl.LINEAR;
       gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,filter);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,filter);
       gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
       if(!layer.features)gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,layer.image);

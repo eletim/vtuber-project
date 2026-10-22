@@ -6,7 +6,7 @@
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v29/koma_material_repair_v29.psd",
+  "source_psd": "assets/parts/v30/koma_material_repair_v30.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -1401,7 +1401,7 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v29/koma_material_repair_v29.psd",
+  "expression_source_psd": "assets/parts/v30/koma_material_repair_v30.psd",
   "bodyLayers": [
     {
       "id": "rear_left_outer",
@@ -1420,7 +1420,8 @@
         "speed": 4.8,
         "phase": 0.0
       },
-      "psdGroup": "v22 exclusive hair/rear_left_outer"
+      "psdGroup": "v22 exclusive hair/rear_left_outer",
+      "sampling": "linear"
     },
     {
       "id": "rear_left_inner",
@@ -1439,7 +1440,8 @@
         "speed": 5.2,
         "phase": 0.7
       },
-      "psdGroup": "v22 exclusive hair/rear_left_inner"
+      "psdGroup": "v22 exclusive hair/rear_left_inner",
+      "sampling": "linear"
     },
     {
       "id": "rear_right_inner",
@@ -1458,7 +1460,8 @@
         "speed": 5.6,
         "phase": 1.4
       },
-      "psdGroup": "v22 exclusive hair/rear_right_inner"
+      "psdGroup": "v22 exclusive hair/rear_right_inner",
+      "sampling": "linear"
     },
     {
       "id": "rear_right_outer",
@@ -1477,7 +1480,8 @@
         "speed": 6.0,
         "phase": 2.0999999999999996
       },
-      "psdGroup": "v22 exclusive hair/rear_right_outer"
+      "psdGroup": "v22 exclusive hair/rear_right_outer",
+      "sampling": "linear"
     },
     {
       "id": "thigh_left",
@@ -1590,12 +1594,13 @@
         "bind": "raised",
         "variant": "raised"
       },
-      "psdGroup": "v29 shoulder/retained painted underlap"
+      "psdGroup": "v29 shoulder/retained painted underlap",
+      "sampling": "linear"
     },
     {
       "id": "left_shoulder_original_support",
       "role": "armLeft",
-      "file": "body_v22/left_shoulder_original_support.png",
+      "file": "body_v30/left_shoulder_original_support.png",
       "rect": [
         279,
         486,
@@ -1607,7 +1612,8 @@
         "bind": "raised",
         "variant": "raised"
       },
-      "psdGroup": "v22 articulated arm/left_shoulder_original_support"
+      "psdGroup": "v22 articulated arm/left_shoulder_original_support",
+      "sampling": "linear"
     },
     {
       "id": "left_raised_upper",
@@ -1679,7 +1685,8 @@
         "speed": 9,
         "phase": 0.1
       },
-      "psdGroup": "v22 exclusive hair/bang_left"
+      "psdGroup": "v22 exclusive hair/bang_left",
+      "sampling": "linear"
     },
     {
       "id": "bang_center",
@@ -1698,7 +1705,8 @@
         "speed": 7.5,
         "phase": 0.8
       },
-      "psdGroup": "v22 exclusive hair/bang_center"
+      "psdGroup": "v22 exclusive hair/bang_center",
+      "sampling": "linear"
     },
     {
       "id": "bang_right",
@@ -1717,7 +1725,8 @@
         "speed": 8.3,
         "phase": 1.6
       },
-      "psdGroup": "v22 exclusive hair/bang_right"
+      "psdGroup": "v22 exclusive hair/bang_right",
+      "sampling": "linear"
     },
     {
       "id": "side_left_front",
@@ -1736,7 +1745,8 @@
         "speed": 6.1,
         "phase": 0.4
       },
-      "psdGroup": "v22 exclusive hair/side_left_front"
+      "psdGroup": "v22 exclusive hair/side_left_front",
+      "sampling": "linear"
     },
     {
       "id": "side_right_front",
@@ -1755,7 +1765,8 @@
         "speed": 6.7,
         "phase": 1.1
       },
-      "psdGroup": "v22 exclusive hair/side_right_front"
+      "psdGroup": "v22 exclusive hair/side_right_front",
+      "sampling": "linear"
     },
     {
       "id": "side_left_outer",
@@ -1774,7 +1785,8 @@
         "speed": 5.7,
         "phase": 1.7
       },
-      "psdGroup": "v22 exclusive hair/side_left_outer"
+      "psdGroup": "v22 exclusive hair/side_left_outer",
+      "sampling": "linear"
     },
     {
       "id": "side_left_inner",
@@ -1793,7 +1805,8 @@
         "speed": 7,
         "phase": 2.2
       },
-      "psdGroup": "v22 exclusive hair/side_left_inner"
+      "psdGroup": "v22 exclusive hair/side_left_inner",
+      "sampling": "linear"
     },
     {
       "id": "side_right_outer",
@@ -1812,7 +1825,8 @@
         "speed": 5.5,
         "phase": 2.7
       },
-      "psdGroup": "v22 exclusive hair/side_right_outer"
+      "psdGroup": "v22 exclusive hair/side_right_outer",
+      "sampling": "linear"
     },
     {
       "id": "left_raised_forearm",
@@ -1837,7 +1851,34 @@
           807
         ]
       },
-      "psdGroup": "v29 forward-pose paint/left_raised_forearm"
+      "psdGroup": "v29 forward-pose paint/left_raised_forearm",
+      "sampling": "linear"
+    },
+    {
+      "id": "left_raised_cuff",
+      "role": "armLeft",
+      "file": "body_v29/left_raised_cuff.png",
+      "rect": [
+        329,
+        754,
+        480,
+        931
+      ],
+      "articulation": {
+        "joint": "cuff",
+        "bind": "raised",
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ],
+        "poseWeight": "forward-cuff"
+      },
+      "psdGroup": "v29 forward-pose paint/left_raised_cuff"
     },
     {
       "id": "left_raised_drape",
@@ -1875,32 +1916,6 @@
       "psdGroup": "v29 cuff/down-facing original"
     },
     {
-      "id": "left_raised_cuff",
-      "role": "armLeft",
-      "file": "body_v29/left_raised_cuff.png",
-      "rect": [
-        329,
-        754,
-        480,
-        931
-      ],
-      "articulation": {
-        "joint": "cuff",
-        "bind": "raised",
-        "variant": "raised",
-        "sourceElbow": [
-          325,
-          925
-        ],
-        "sourceWrist": [
-          455,
-          807
-        ],
-        "poseWeight": "forward-cuff"
-      },
-      "psdGroup": "v29 forward-pose paint/left_raised_cuff"
-    },
-    {
       "id": "left_raised_hand",
       "role": "armLeft",
       "file": "body_v29/left_raised_hand.png",
@@ -1923,7 +1938,8 @@
           807
         ]
       },
-      "psdGroup": "v29 forward-pose paint/left_raised_hand"
+      "psdGroup": "v29 forward-pose paint/left_raised_hand",
+      "sampling": "linear"
     }
   ],
   "bodyRig": {

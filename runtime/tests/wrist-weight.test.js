@@ -29,3 +29,19 @@ test('larger weight transfer moves pelvis and differentiates thighs without chan
  }
  assert.ok(r.pose.shift>47.9&&r.pose.shift<=48);assert.ok(difference>5);
 });
+
+test('one opaque cuff stays behind drape through lift and lowering without an alpha transition',()=>{
+ const r=new BodyRig(m,w),arm=new ArticulatedArm(m,r.rest);r.frame(neutral(),0);
+ const cuff=m.bodyLayers.find(l=>l.id==='left_raised_cuff'),old=m.bodyLayers.find(l=>l.id==='left_rest_cuff');
+ assert.ok(m.bodyLayers.indexOf(cuff)<m.bodyLayers.findIndex(l=>l.id==='left_raised_drape'));
+ let previous=null,maximumStep=0;
+ for(let i=0;i<=400;i++){
+  const amount=i<=200?i/200:(400-i)/200;
+  arm.frame({...neutral(),ParamHandToCheek:amount},i/60,r.pose,{snapArticulation:true});
+  assert.equal(arm.opacity(cuff),1);assert.equal(arm.opacity(old),0);
+  const v=arm.geometry.get(cuff.id),index=(46*61+23)*2;
+  if(previous)maximumStep=Math.max(maximumStep,Math.hypot((v[index]-previous[0])*1086,(v[index+1]-previous[1])*1448));
+  previous=[v[index],v[index+1]];
+ }
+ assert.ok(maximumStep<12,`cuff step ${maximumStep}`);
+});

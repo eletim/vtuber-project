@@ -37,7 +37,7 @@ test('production renderer loads cropped textures and preserves independent draws
     assert.deepEqual(renderer.sampling,{enabled:true,width:1304,height:1738,scale:2});
     const count=renderer.model.bodyLayers.length;
     assert.ok(count>=20);
-    for(const layer of renderer.layers)assert.equal(textureFilters.get(layer.texture).TEXTURE_MIN_FILTER,'NEAREST');
+    for(const layer of renderer.layers)assert.equal(textureFilters.get(layer.texture).TEXTURE_MIN_FILTER,layer.sampling==='linear'?'LINEAR':'NEAREST');
     assert.equal(textureFilters.get(renderer.resolveTexture).TEXTURE_MIN_FILTER,'LINEAR');
     for(let frame=0;frame<3;frame++)renderer.render(neutral(),frame/60,'neutral',{ambient:false});
     const visible=renderer.layers.filter(layer=>(renderer.articulatedArm?.opacity(layer)??1)>=.00001);
