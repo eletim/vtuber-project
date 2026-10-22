@@ -1,0 +1,9 @@
+✔ all frame times and sample bytes survive exact 30fps mux without initial hold (15.4574ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 82.1176
