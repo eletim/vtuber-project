@@ -33,7 +33,7 @@ test('shared pelvis weight shifts and bounce preserve rigid face width and skirt
    const area=((positions[i1*2]-positions[i0*2])*(positions[i2*2+1]-positions[i0*2+1])-(positions[i1*2+1]-positions[i0*2+1])*(positions[i2*2]-positions[i0*2]))*nx*ny;minArea=Math.min(minArea,area);
   }
  }
- assert.ok(shift>24&&bounce>8);assert.ok(minArea>.25);
+ assert.ok(shift>24&&bounce>4&&bounce<=6);assert.ok(minArea>.25);
 });
 test('happy hops include anticipation and a quiet interval while neutral never bounces',()=>{
  let low=0,high=0;

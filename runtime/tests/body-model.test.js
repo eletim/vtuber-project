@@ -5,20 +5,20 @@ import {bodyLayers,bodyTextureFile} from '../web/render-plan.js';
 const root=new URL('../model/',import.meta.url),model=JSON.parse(readFileSync(new URL('model.json',root)));
 function pngSize(file){const data=readFileSync(new URL(file,root));assert.equal(data.subarray(1,4).toString(),'PNG');return[data.readUInt32BE(16),data.readUInt32BE(20)];}
 
-test('v22 manifest loads explicit PSD layers for every separately rendered body role',()=>{
+test('v26 manifest loads explicit PSD layers for every separately rendered body role',()=>{
   assert.equal(model.format,'koma-part-mesh-3');
   const layers=bodyLayers(model);
-  assert.deepEqual(new Set(layers.map(layer=>layer.role)),new Set(['root','skirt','torso','armLeft','armRight','head']));
+  assert.deepEqual(new Set(layers.map(layer=>layer.role)),new Set(['legLeft','legRight','skirt','torso','armLeft','armRight','head','chest','abdomen','pelvis']));
   assert.ok(layers.length>=6);
-  assert.match(model.source_psd,/v22\/koma_articulated_v22\.psd$/);
+  assert.match(model.source_psd,/v26\/koma_counterbalance_v26\.psd$/);
   for(const layer of layers){
     assert.ok(layer.psdGroup,'every render layer points to its editable PSD group');
-    assert.match(layer.file,/^body_v(?:19|22)\//);
+    assert.match(layer.file,/^body_v(?:19|22|26)\//);
     const [x0,y0,x1,y1]=layer.rect;
     for(const file of new Set([layer.file,...Object.values(layer.expressionFiles||{})]))assert.deepEqual(pngSize(file),[x1-x0,y1-y0],file);
   }
   const order=layers.map(layer=>layer.role);
-  assert.ok(order.indexOf('root')<order.indexOf('skirt'),'skirt occludes static legs');
+  assert.ok(order.indexOf('legRight')<order.indexOf('skirt'),'skirt occludes articulated thighs');
   assert.ok(order.indexOf('skirt')<order.indexOf('torso'),'torso vest panels stay over skirt');
   assert.ok(order.indexOf('torso')<order.indexOf('armLeft'));
   assert.ok(order.indexOf('torso')<order.indexOf('armRight'));

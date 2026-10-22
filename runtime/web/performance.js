@@ -22,12 +22,12 @@ export function performancePose(base,time,performance={enabled:true},mouth=0){
   if(emotion==='happy'){
     z+=weight*1.8*Math.sin(age*1.7);body+=weight*2.1*Math.sin(age*1.7);
     add(pose,'ParamBodyShiftX',weight*.78*Math.sin(age*1.7));
-    // Two anticipatory dips and hops, then a quiet pause. No perpetual jumping.
+    // Two small buoyant weight transfers, then quiet. Legs have no knee artwork.
     const beat=Math.max(0,age)%5.6;
     const hop=a=>a<0||a>1.1?0:a<.3?-.5*Math.sin(Math.PI*a/.3):Math.sin(Math.PI*(a-.3)/.8);
     add(pose,'ParamBodyBounce',weight*(hop(beat)+.8*hop(beat-1.35)));
-    add(pose,'ParamArmLOpen',weight*.35*(hop(beat)+.8*hop(beat-1.35)));
-    add(pose,'ParamArmROpen',weight*.35*(hop(beat)+.8*hop(beat-1.35)));
+    add(pose,'ParamArmLOpen',weight*.32*(hop(beat)+.45*hop(beat-1.35)));
+    add(pose,'ParamArmROpen',weight*.23*(hop(beat-.16)+hop(beat-1.5)));
   }
   if(emotion==='thoughtful'){z+=weight*3.1;x-=weight*2.2;y-=weight*.9;}
   if(emotion==='thoughtful'){

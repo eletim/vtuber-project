@@ -6,12 +6,15 @@ const rotate=(point,pivot,angle)=>{const c=Math.cos(angle),s=Math.sin(angle),x=p
 // Each limb is a rigid surface. Joint transforms never touch torso vertices.
 // The painted raised bind pose follows the elbow/wrist hierarchy.
 export class ArticulatedArm {
- constructor(model,rest){this.model=model;this.rest=rest;this.amount=0;this.velocity=0;this.last=null;this.geometry=new Map();}
+ constructor(model,rest){this.model=model;this.rest=rest;this.amount=0;this.velocity=0;this.last=null;this.geometry=new Map();this.cloth=0;this.clothVelocity=0;}
  frame(parameters,time,bodyPose,options={}){
   const config=this.model.articulatedArm;if(!config)return;
   const target=clamp(Number(parameters[config.parameter])||0),dt=this.last===null?0:clamp(time-this.last,0,.1);this.last=time;
   if(options.snapArticulation){this.amount=target;this.velocity=0;}
   else {const speed=7,offset=this.amount-target,c=this.velocity+speed*offset,e=Math.exp(-speed*dt);this.amount=target+(offset+c*dt)*e;this.velocity=(this.velocity-speed*c*dt)*e;}
+  const clothTarget=this.amount;
+  if(options.snapArticulation){this.cloth=clothTarget;this.clothVelocity=0;}
+  else{const speed=9,offset=this.cloth-clothTarget,c=this.clothVelocity+speed*offset,e=Math.exp(-speed*dt);this.cloth=clothTarget+(offset+c*dt)*e;this.clothVelocity=(this.clothVelocity-speed*c*dt)*e;}
   const t=clamp(this.amount),[width,height]=this.model.size,S=config.shoulder,E=config.elbow,WR=config.wristRest,WU=config.wristRaised;
   const a0=Math.atan2(WR[1]-E[1],WR[0]-E[0]),a1=Math.atan2(WU[1]-E[1],WU[0]-E[0]),flex=(a1-a0)*t;
   const length=Math.hypot(WU[0]-E[0],WU[1]-E[1]);
@@ -26,12 +29,19 @@ export class ArticulatedArm {
    const raised=a.bind==='raised',bindW=raised?WU:WR,bindAngle=raised?a1:a0;
    for(let i=0;i<this.rest.length;i+=2){
     let q=[this.rest[i]*width,this.rest[i+1]*height];
-    if(a.joint==='forearm'||a.joint==='cuff')q=rotate(q,E,a0+flex-bindAngle);
-    else if(a.joint==='hand') {q=rotate(q,bindW,a0+flex-bindAngle);q=[q[0]+W[0]-bindW[0],q[1]+W[1]-bindW[1]];}
+    if(a.joint==='forearm'||a.joint==='cuff'){
+     if(a.joint==='cuff'){
+      // Cloth bows at mid-flexion; pinned seam strips and rigid skin stay intact.
+      const u=clamp((q[1]-565)/156),bell=Math.sin(Math.PI*u)**2;
+      q=[q[0]-5*Math.sin(Math.PI*t)*bell,q[1]+2*Math.sin(Math.PI*t)*bell];
+     }
+     q=rotate(q,E,a0+flex-bindAngle);
+    }
+    else if(a.joint==='hand') {q=rotate(q,bindW,a0+flex-bindAngle);q=[q[0]+W[0]-bindW[0],q[1]+W[1]-bindW[1]];q=rotate(q,W,(-3*Math.sin(Math.PI*t)-clamp(this.velocity,-1,1)*1.5)*Math.PI/180);}
     else if(a.joint==='drape'){
      // Cloth has its own cage: the upper attachment stays at the upper sleeve,
      // while the lower ruffles hang down. The skin/hand never use this map.
-     const original=q,v=smooth(650,960,q[1]),drop=(1-t);
+     const original=q,v=smooth(650,960,q[1]),drop=(1-clamp(this.cloth));
      const hanging=[q[0]-drop*133*v,q[1]+drop*245*v];
      const cuffWeight=smooth(350,445,q[0])*(1-smooth(650,830,q[1]));
      const cuff=rotate(original,E,a0+flex-a1);

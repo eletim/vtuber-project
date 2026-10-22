@@ -6,7 +6,7 @@
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v22/koma_articulated_v22.psd",
+  "source_psd": "assets/parts/v26/koma_counterbalance_v26.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -1401,7 +1401,7 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v22/koma_articulated_v22.psd",
+  "expression_source_psd": "assets/parts/v26/koma_counterbalance_v26.psd",
   "bodyLayers": [
     {
       "id": "rear_left_outer",
@@ -1480,16 +1480,28 @@
       "psdGroup": "v22 exclusive hair/rear_right_outer"
     },
     {
-      "id": "legs_static",
-      "role": "root",
-      "file": "body_v19/legs_static.png",
+      "id": "thigh_left",
+      "role": "legLeft",
+      "file": "body_v26/thigh_left.png",
       "rect": [
         285,
         1218,
         790,
         1448
       ],
-      "psdGroup": "06 Legs fixed | 脚・固定"
+      "psdGroup": "v26 articulated body/thigh_left"
+    },
+    {
+      "id": "thigh_right",
+      "role": "legRight",
+      "file": "body_v26/thigh_right.png",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ],
+      "psdGroup": "v26 articulated body/thigh_right"
     },
     {
       "id": "skirt",
@@ -1516,16 +1528,40 @@
       "psdGroup": "v22 torso/painted former arm occlusion"
     },
     {
-      "id": "torso_clothing",
-      "role": "torso",
-      "file": "body_v19/torso_clothing.png",
+      "id": "chest_clothing",
+      "role": "chest",
+      "file": "body_v26/chest_clothing.png",
       "rect": [
         273,
         450,
         878,
         1178
       ],
-      "psdGroup": "04 Torso clothing fixed | 胴体服・固定"
+      "psdGroup": "v26 articulated body/chest_clothing"
+    },
+    {
+      "id": "abdomen_clothing",
+      "role": "abdomen",
+      "file": "body_v26/abdomen_clothing.png",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "psdGroup": "v26 articulated body/abdomen_clothing"
+    },
+    {
+      "id": "pelvis_clothing",
+      "role": "pelvis",
+      "file": "body_v26/pelvis_clothing.png",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "psdGroup": "v26 articulated body/pelvis_clothing"
     },
     {
       "id": "arm_screen_right",
@@ -1857,7 +1893,32 @@
     ],
     "skirtTop": 995,
     "skirtHem": 1395,
-    "skirtRevealLimitPixels": 3
+    "skirtRevealLimitPixels": 3,
+    "segmentOwnership": {
+      "chest": [
+        450,
+        820
+      ],
+      "abdomen": [
+        820,
+        980
+      ],
+      "pelvis": [
+        980,
+        1178
+      ],
+      "hips": [
+        [
+          400,
+          1225
+        ],
+        [
+          650,
+          1225
+        ]
+      ],
+      "note": "Exact source partitions; common attachment strip at torso joins and inner thigh split. No knee artwork exists."
+    }
   },
   "bodySampling": "coverage-2x",
   "articulatedArm": {

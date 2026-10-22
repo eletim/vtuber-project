@@ -16,11 +16,11 @@ class Spring {
 
 // Shared pelvis parent used by every surface, including articulated limbs.
 export function pelvisPoint(x,y,pose){
- const a=radians(pose.pelvisAngle||0),c=Math.cos(a),s=Math.sin(a),dx=x-543,dy=y-1400;
- return [543+c*dx-s*dy+(pose.shift||0),1400+s*dx+c*dy-(pose.bounce||0)];
+ const a=radians(pose.pelvisAngle||0),c=Math.cos(a),s=Math.sin(a),dx=x-555,dy=y-1100;
+ return [555+c*dx-s*dy+(pose.shift||0),1100+s*dx+c*dy-(pose.bounce||0)];
 }
 
-export const bodyRoles=Object.freeze(['root','skirt','torso','armLeft','armRight','head']);
+export const bodyRoles=Object.freeze(['root','skirt','torso','armLeft','armRight','head','chest','abdomen','pelvis','legLeft','legRight']);
 
 // Each role owns an independent surface. Texture alpha only controls coverage;
 // it is never used as, or dilated into, a deformation field. Body art is exported
@@ -42,7 +42,8 @@ export class BodyRig {
     this.body=new Spring(9);this.arms=[new Spring(6),new Spring(6)];
     this.elbows=[new Spring(5),new Spring(5)];
     this.shoulder=new Spring(8);this.shift=new Spring(6);this.skirt=new Spring(4.5);
-    this.bounce=new Spring(14);this.headLag=new Spring(6);
+    this.bounce=new Spring(11);this.headLag=new Spring(6);
+    this.pelvis=new Spring(7);this.counterChest=new Spring(5.8);this.legs=[new Spring(6.5),new Spring(5.3)];
     this.firstTime=null;this.lastTime=null;
   }
   frame(p,time,options={}){
@@ -53,14 +54,18 @@ export class BodyRig {
     const bodyTarget=clamp(value(p,'ParamBodyAngleX',-5,5)*.8+angleX*.04,-4.6,4.6);
     const body=this.body.step(bodyTarget,dt);
     const breath=value(p,'ParamBreath',0,1,.5)-.5;
-    const bounce=this.bounce.step(value(p,'ParamBodyBounce',-1,1)*10,dt);
+    const bounce=this.bounce.step(value(p,'ParamBodyBounce',-1,1)*6,dt);
     const shoulder=this.shoulder.step(value(p,'ParamShoulderY',-1,1)*.6,dt);
     const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*28,dt);
+    const pelvisAngle=this.pelvis.step(clamp(shift/28*2.4-body*.12,-2.8,2.8),dt);
+    // Ribcage balances the loaded hip with its own delayed angular response.
+    const chestAngle=this.counterChest.step(clamp(-pelvisAngle*1.25+body*.28-this.shift.v*.009,-3.6,3.6),dt);
+    const legAngles=this.legs.map((spring,side)=>spring.step(clamp(-pelvisAngle*.5+(side===0?1:-1)*(shift/28*.65+bounce*.035),-1.8,1.8),dt));
     const headLag=this.headLag.step(clamp(-this.body.v*.09-body*.18,-2,2),dt);
     const armAngles=[],elbowAngles=[];
     for(let side=0;side<2;side++){
       const sign=side===0?1:-1;
-      const lag=clamp(-this.body.v*.055+body*.09+sign*breath*.18,-1.15,1.15);
+      const lag=clamp(-this.counterChest.v*(side===0?.08:.055)+chestAngle*.09+sign*breath*.18,-1.15,1.15);
       const intent=sign*2.8*value(p,side===0?'ParamArmLOpen':'ParamArmROpen',-1,1);
       armAngles.push(radians(this.arms[side].step(clamp(lag+intent,-3.2,3.2),dt)));
       elbowAngles.push(radians(this.elbows[side].step(clamp(-this.arms[side].x*.35,-1.12,1.12),dt)));
@@ -71,7 +76,7 @@ export class BodyRig {
     const skirtLimit=clamp(this.config.skirtRevealLimitPixels,0,3);
     const skirtTarget=clamp(value(p,'ParamSkirtSway',-1,1)*skirtLimit-this.body.v*.4-this.shift.v*.25-this.bounce.v*.035-body*.65,-skirtLimit,skirtLimit);
     const skirt=this.skirt.step(skirtTarget,dt);
-    const bodyAngle=radians(body*.35),bc=Math.cos(bodyAngle),bs=Math.sin(bodyAngle);
+    const bodyAngle=radians(chestAngle),bc=Math.cos(bodyAngle),bs=Math.sin(bodyAngle);
     const headAngle=radians(clamp(value(p,'ParamAngleZ',-8,8)+headLag,-8,8)),hc=Math.cos(headAngle),hs=Math.sin(headAngle);
     const [width,height]=this.size,[wx,wy]=this.config.waist;
     const torso=this.positionsByRole.torso,headPositions=this.positionsByRole.head,skirtPositions=this.positionsByRole.skirt;
@@ -87,7 +92,7 @@ export class BodyRig {
       const central=1-smooth(180,300,Math.abs(x-543));
       px+=(x-543)*breath*.002*chest*central;
       py-=breath*(.7*(1-smooth(570,950,y))+1.1*chest*central);
-      const parent=1-smooth(875,wy,y),tx=px-wx,ty=py-wy;
+      const parent=1-smooth(840,960,y),tx=px-wx,ty=py-wy;
       px+=(bc*tx-bs*ty-tx)*parent;
       py+=(bs*tx+bc*ty-ty)*parent-shoulder*(1-smooth(650,wy,y));
       torso[i*2]=px/width;torso[i*2+1]=py/height;
@@ -117,11 +122,24 @@ export class BodyRig {
         positions[i*2]=px/width;positions[i*2+1]=py/height;
       }
     }
-    this.pose={body:body*.35,pelvisAngle:body*.65,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
+    this.pose={body:chestAngle,pelvisAngle,legs:legAngles,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
     // One rigid pelvis parent transports torso, skirt and legs together. Bounce
     // is a translation of the complete skeleton, never a torso scale field.
-    // The small lumbar rotation fades to zero at the shared waist attachment.
+    // Chest counter-rotation connects through abdomen into the pelvis attachment.
     this.positionsByRole.root.set(this.rest);
+    this.positionsByRole.pelvis.set(this.rest);
+    this.positionsByRole.abdomen.set(torso);
+    this.positionsByRole.chest.set(torso);
+    // Chest is rigid below its visible cut too; abdomen alone owns the short
+    // lumbar transition. A 20px common strip on both cuts prevents cracks.
+    for(let i=0;i<this.rest.length;i+=2){
+      const x=this.rest[i]*width,y=this.rest[i+1]*height;
+      if(y>=840){const ax=x-wx,ay=y-wy;this.positionsByRole.chest[i]=(wx+bc*ax-bs*ay)/width;this.positionsByRole.chest[i+1]=(wy+bs*ax+bc*ay-shoulder)/height;}
+      for(let side=0;side<2;side++){
+        const hip=[side===0?400:650,1225],u=smooth(1300,1440,y)*smooth(15,60,Math.abs(x-540)),a=radians(legAngles[side])*u,c=Math.cos(a),s=Math.sin(a),dx=x-hip[0],dy=y-hip[1],v=this.positionsByRole[side===0?'legLeft':'legRight'];
+        v[i]=(hip[0]+c*dx-s*dy)/width;v[i+1]=(hip[1]+s*dx+c*dy)/height;
+      }
+    }
     for(const positions of Object.values(this.positionsByRole))for(let i=0;i<positions.length;i+=2){
       const q=pelvisPoint(positions[i]*width,positions[i+1]*height,this.pose);
       positions[i]=q[0]/width;positions[i+1]=q[1]/height;
