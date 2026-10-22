@@ -6,7 +6,7 @@
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v32/koma_material_repair_v32.psd",
+  "source_psd": "assets/parts/v35/koma_hand_angle_v35.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -1401,7 +1401,7 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v32/koma_material_repair_v32.psd",
+  "expression_source_psd": "assets/parts/v35/koma_hand_angle_v35.psd",
   "bodyLayers": [
     {
       "id": "rear_left_outer",
@@ -1939,7 +1939,9 @@
         ]
       },
       "psdGroup": "v29 forward-pose paint/left_raised_hand",
-      "sampling": "linear"
+      "sampling": "linear",
+      "angleSideFile": "body_v35/left_raised_hand_side.png",
+      "angleSourceLibrary": "libfile_f54582935e3881918c471077b21eec9c"
     }
   ],
   "bodyRig": {

@@ -52,7 +52,10 @@ export class ArticulatedArm {
   const projectLength=u=>{const d=u-length,z=clamp((d-20)/55),integral=d<=20?0:d>=75?d-47.5:55*(z**3-.5*z**4);const handZ=clamp(d/20),handIntegral=d<=0?0:d>=20?d-10:20*(handZ**3-.5*handZ**4);return u*projection+(1-projection)*(config.forwardPosePaint?handIntegral:.9*integral);};
   const projectForearm=q=>{const x=q[0]-E[0],y=q[1]-E[1],u=x*bindDirection[0]+y*bindDirection[1],v=x*bindNormal[0]+y*bindNormal[1],along=projectLength(u);return[projectedElbow[0]+along*direction[0]+v*normal[0],projectedElbow[1]+along*direction[1]+v*normal[1]];};
   const projectHand=q=>projectForearm(q);
-  const palmYaw=(.8+.1*returning)*Math.sin(Math.PI*t)**2;
+  // Authored oblique paint already includes finger overlap/side foreshortening.
+  // Only the remaining shallow depth is projected, avoiding a twice-thinned hand.
+  const anglePaint=this.model.bodyLayers.some(l=>l.id==='left_raised_hand'&&l.angleSideFile);
+  const palmYaw=(.8+.1*returning)*Math.sin(Math.PI*t)**2*(anglePaint?1-.55*Math.sin(Math.PI*t)**2:1);
   const wristRoll=(config.forwardPosePaint?(-60*smooth(.35,1,t)-30*(1-smooth(0,.35,t))-22*Math.sin(Math.PI*t)**2+7*returning):26*Math.sin(Math.PI*t)**2)*Math.PI/180;
   // Correct the authored bent wrist over the palm-base transition, not a hinge.
   // The hand and the terminal forearm share exactly the same transform.

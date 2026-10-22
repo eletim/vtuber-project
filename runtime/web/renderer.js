@@ -1,6 +1,7 @@
 import {BodyRig} from './body-rig.js';
 import {ArticulatedArm} from './articulated-arm.js';
 import {HairRig} from './hair-rig.js';
+import {handAngleMap,paintHandAngle} from './hand-angle-material.js';
 import {bodyLayers,bodyTextureFile,bodyTextureRect,bodySamplingPlan} from './render-plan.js';
 import {ExpressionTransition,expressionParameters,featureOpening,deformMouthPixels} from './expressions.js';
 
@@ -92,6 +93,12 @@ export class AvatarRenderer {
         const file=bodyTextureFile(definition,expression,this.model);layer.images.set(expression.id,await get(file));
       }
       layer.image=await get(definition.file);
+      if(definition.angleSideFile){
+        const read=image=>{const c=document.createElement('canvas');c.width=image.width;c.height=image.height;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(image,0,0);return ctx.getImageData(0,0,c.width,c.height).data};
+        const side=await get(definition.angleSideFile);
+        layer.angleMap=handAngleMap(read(layer.image),read(side),side.width,side.height);
+        layer.angleCanvas=document.createElement('canvas');layer.angleCanvas.width=side.width;layer.angleCanvas.height=side.height;layer.angleContext=layer.angleCanvas.getContext('2d');layer.angleAmount=0;
+      }
       if(definition.movingHairMask)layer.hairMask=await get(definition.movingHairMask);
       const [x0,y0,x1,y1]=definition.rect;
       for(const image of [layer.image,...layer.images.values()])if(image.width!==x1-x0||image.height!==y1-y0)throw Error(`body texture size mismatch: ${layer.id}`);
@@ -155,6 +162,13 @@ export class AvatarRenderer {
       if(opacity<.00001)continue;
       if(gl.uniform1f)gl.uniform1f(this.opacityUniform,opacity);
       gl.bindTexture(gl.TEXTURE_2D,layer.texture);
+      if(layer.angleMap){
+        const amount=Math.sin(Math.PI*this.articulatedArm.amount)**2;
+        if(Math.abs(amount-layer.angleAmount)>1e-6){
+          layer.angleContext.putImageData(new ImageData(paintHandAngle(layer.angleMap,amount),layer.angleCanvas.width,layer.angleCanvas.height),0,0);
+          gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,layer.angleCanvas);layer.angleAmount=amount;
+        }
+      }
       if(layer.features){
         const ctx=layer.ctx;ctx.globalAlpha=1;ctx.clearRect(0,0,layer.paint.width,layer.paint.height);
         ctx.drawImage(layer.images.get(active.id)||layer.image,0,0);
