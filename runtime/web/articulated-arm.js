@@ -3,10 +3,30 @@ const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
 const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t);};
 const rotate=(point,pivot,angle)=>{const c=Math.cos(angle),s=Math.sin(angle),x=point[0]-pivot[0],y=point[1]-pivot[1];return[pivot[0]+c*x-s*y,pivot[1]+s*x+c*y];};
 
+// A shallow palm and individual finger crowns, rotated in depth about the
+// forearm axis. This is geometric projection of the existing paint, not alpha
+// blending or a new side-view illustration.
+export function palmProjection(along,v,yaw){
+ if(along<=-65||along>240||Math.abs(v)>100||Math.abs(yaw)<1e-10)return {v,depth:0};
+ const fade=smooth(-65,8,along),finger=smooth(75,112,along);
+ const centers=[-32,-15,2,22].map((c,i)=>c+[.34,.28,.2,-.05][i]*(along-115));
+ const weights=centers.map(c=>Math.exp(-(((v-c)/7)**2)));
+ const total=weights.reduce((a,b)=>a+b,0)+1e-20;
+ const fingerZ=weights.reduce((sum,w,i)=>sum+w*([3,7,10,5][i]+3*Math.sqrt(Math.max(0,1-((v-centers[i])/8)**2))),0)/total;
+ const palmZ=8*Math.sqrt(Math.max(0,1-((v+7)/45)**2));
+ const z=fade*((1-finger)*palmZ+finger*fingerZ),a=yaw*fade;
+ return {v:v*Math.cos(a)+z*Math.sin(a),depth:z*Math.cos(a)-v*Math.sin(a)};
+}
+
 // Bone lengths stay rigid; local wrist/cloth shaping never touches torso vertices.
 // The painted raised bind pose follows the elbow/wrist hierarchy.
 export class ArticulatedArm {
- constructor(model,rest){this.model=model;this.rest=rest;this.amount=0;this.velocity=0;this.last=null;this.geometry=new Map();this.cloth=0;this.clothVelocity=0;}
+ constructor(model,rest){this.model=model;this.rest=rest;this.amount=0;this.velocity=0;this.last=null;this.geometry=new Map();this.cloth=0;this.clothVelocity=0;
+ const hand=model.bodyLayers.find(l=>l.id==='left_raised_hand');
+ if(hand){const [x0,y0,x1,y1]=hand.rect,[w,h]=model.size,n=48;this.handDetailRest=new Float32Array((n+1)**2*2);this.handTriangles=[];
+ for(let y=0;y<=n;y++)for(let x=0;x<=n;x++){const i=y*(n+1)+x;this.handDetailRest[2*i]=(x0+(x1-x0)*x/n)/w;this.handDetailRest[2*i+1]=(y0+(y1-y0)*y/n)/h;if(x<n&&y<n)this.handTriangles.push([i,i+1,i+n+1],[i+1,i+n+2,i+n+1]);}
+ this.handDrawIndices=new Uint16Array(this.handTriangles.flat());this.handDepth=new Float32Array((n+1)**2);
+ }}
  frame(parameters,time,bodyPose,options={}){
   const config=this.model.articulatedArm;if(!config)return;
   const target=clamp(Number(parameters[config.parameter])||0),dt=this.last===null?0:clamp(time-this.last,0,.1);this.last=time;
@@ -32,6 +52,7 @@ export class ArticulatedArm {
   const projectLength=u=>{const d=u-length,z=clamp((d-20)/55),integral=d<=20?0:d>=75?d-47.5:55*(z**3-.5*z**4);const handZ=clamp(d/20),handIntegral=d<=0?0:d>=20?d-10:20*(handZ**3-.5*handZ**4);return u*projection+(1-projection)*(config.forwardPosePaint?handIntegral:.9*integral);};
   const projectForearm=q=>{const x=q[0]-E[0],y=q[1]-E[1],u=x*bindDirection[0]+y*bindDirection[1],v=x*bindNormal[0]+y*bindNormal[1],along=projectLength(u);return[projectedElbow[0]+along*direction[0]+v*normal[0],projectedElbow[1]+along*direction[1]+v*normal[1]];};
   const projectHand=q=>projectForearm(q);
+  const palmYaw=(.8+.1*returning)*Math.sin(Math.PI*t)**2;
   const wristRoll=(config.forwardPosePaint?(-60*smooth(.35,1,t)-30*(1-smooth(0,.35,t))-22*Math.sin(Math.PI*t)**2+7*returning):26*Math.sin(Math.PI*t)**2)*Math.PI/180;
   // Correct the authored bent wrist over the palm-base transition, not a hinge.
   // The hand and the terminal forearm share exactly the same transform.
@@ -40,7 +61,7 @@ export class ArticulatedArm {
    if(config.forwardPosePaint&&Math.abs(wristRoll)>1e-8){
     // A curved wrist centreline carries a rigid palm. Width follows its normal;
     // no position-dependent rotation stretches fingers or folds the wrist mesh.
-    const v=-(point[0]-WU[0])*dir[1]+(point[1]-WU[1])*dir[0],span=160;
+    const rawV=-(point[0]-WU[0])*dir[1]+(point[1]-WU[1])*dir[0],v=palmProjection(along,rawV,palmYaw).v,span=160;
     let cx,cy,theta;
     if(along>=0){theta=wristRoll;cx=along*Math.cos(theta);cy=along*Math.sin(theta);}
     else if(along>=-span){theta=wristRoll*(along+span)/span;cx=span/wristRoll*(Math.sin(theta)-Math.sin(wristRoll));cy=span/wristRoll*(Math.cos(wristRoll)-Math.cos(theta));}
@@ -53,14 +74,18 @@ export class ArticulatedArm {
   const upperAngle=(bodyPose?.arms?.[0]||0)*Math.PI/180;
   const bodyAngle=(bodyPose?.body||0)*Math.PI/180,waist=this.model.bodyRig.waist;
   const parent=point=>{let q=rotate(point,S,upperAngle);q=rotate(q,waist,bodyAngle);return pelvisPoint(q[0],q[1]-(bodyPose?.shoulder||0)-(Number(parameters.ParamBreath??.5)-.5)*.7,bodyPose||{});};
-  const blend=1;this.joints={shoulder:parent(S),elbow:parent(projectedElbow),wrist:parent(W),amount:t,returning,blend,flex,wristRoll,forearmDepth:length*Math.sin(depthAngle),projection,upperDepth:Math.sqrt(Math.max(0,upperLength**2-upperProjected**2))};
-  for(const layer of this.model.bodyLayers){
+  const blend=1;this.joints={shoulder:parent(S),elbow:parent(projectedElbow),wrist:parent(W),amount:t,returning,palmYaw,blend,flex,wristRoll,forearmDepth:length*Math.sin(depthAngle),projection,upperDepth:Math.sqrt(Math.max(0,upperLength**2-upperProjected**2))};
+  const handLayer=this.model.bodyLayers.find(l=>l.id==='left_raised_hand');
+  const drawingLayers=this.handDetailRest?[...this.model.bodyLayers,{...handLayer,id:'left_raised_hand_detail'}]:this.model.bodyLayers;
+  for(const layer of drawingLayers){
    const a=layer.articulation;if(!a)continue;
-   let positions=this.geometry.get(layer.id);if(!positions){positions=new Float32Array(this.rest.length);this.geometry.set(layer.id,positions);}
-   for(let i=0;i<this.rest.length;i+=2){
-    let q=[this.rest[i]*width,this.rest[i+1]*height];
+   const detail=layer.id==='left_raised_hand_detail',rest=detail?this.handDetailRest:this.rest;
+   let positions=this.geometry.get(layer.id);if(!positions){positions=new Float32Array(rest.length);this.geometry.set(layer.id,positions);}
+   for(let i=0;i<rest.length;i+=2){
+    let q=[rest[i]*width,rest[i+1]*height];
     if(a.sourceElbow&&a.sourceWrist){
      const se=a.sourceElbow,sw=a.sourceWrist,sl=Math.hypot(sw[0]-se[0],sw[1]-se[1]),sd=[(sw[0]-se[0])/sl,(sw[1]-se[1])/sl],dx=q[0]-sw[0],dy=q[1]-sw[1],u=dx*sd[0]+dy*sd[1],v=-dx*sd[1]+dy*sd[0],along=a.joint==='cuff'?(-90-155*smooth(0,.4,t))+(u+70):u<0?u*length/sl:u*(config.extendedHandPose?.88:1);
+     if(detail)this.handDepth[i/2]=palmProjection(along,v*.94,palmYaw).depth;
      q=[WU[0]+along*bindDirection[0]+v*(config.extendedHandPose?1-.06*smooth(-25,10,u):1)*bindNormal[0],WU[1]+along*bindDirection[1]+v*(config.extendedHandPose?1-.06*smooth(-25,10,u):1)*bindNormal[1]];
     }
     if(a.joint==='forearm'||a.joint==='cuff'){
@@ -91,6 +116,7 @@ export class ArticulatedArm {
     q=parent(q);positions[i]=q[0]/width;positions[i+1]=q[1]/height;
    }
   }
+  if(this.handDetailRest){const triangles=this.handTriangles.map((ids,index)=>({ids,index,z:ids.reduce((sum,i)=>sum+this.handDepth[i],0)}));triangles.sort((a,b)=>a.z-b.z||a.index-b.index);this.handDrawIndices.set(triangles.flatMap(t=>t.ids));}
  }
  // One opaque cuff remains behind the drape. The archived down-facing paint
  // is retained in the PSD/model but never cross-faded through the clothing.

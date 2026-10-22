@@ -80,6 +80,10 @@ export class AvatarRenderer {
     gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,true);
     this.sampling=bodySamplingPlan(this.model,canvas.width,canvas.height,Math.min(gl.getParameter(gl.MAX_TEXTURE_SIZE),gl.getParameter(gl.MAX_RENDERBUFFER_SIZE),...gl.getParameter(gl.MAX_VIEWPORT_DIMS)));
     this.layers=[];
+    if(this.articulatedArm.handDetailRest){
+      this.handUvBuffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,this.handUvBuffer);gl.bufferData(gl.ARRAY_BUFFER,this.articulatedArm.handDetailRest,gl.STATIC_DRAW);
+      this.handIndexBuffer=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,this.handIndexBuffer);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,this.articulatedArm.handDrawIndices,gl.DYNAMIC_DRAW);
+    }
     for(const definition of bodyLayers(this.model)){
       const layer={...definition,images:new Map(),positionBuffer:gl.createBuffer(),texture:gl.createTexture()};
       gl.bindBuffer(gl.ARRAY_BUFFER,layer.positionBuffer);gl.bufferData(gl.ARRAY_BUFFER,this.rig.rest,gl.DYNAMIC_DRAW);
@@ -163,11 +167,13 @@ export class AvatarRenderer {
         gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,layer.paint);
       }
       gl.uniform4fv(this.rectUniform,bodyTextureRect(layer,this.model));
-      const geometry=this.articulatedArm?.geometry.get(layer.id)||this.hairRig?.geometry.get(layer.id)||positions[layer.role];
+      const detailed=layer.id==='left_raised_hand'&&this.handUvBuffer;
+      if(this.handUvBuffer){gl.bindBuffer(gl.ARRAY_BUFFER,detailed?this.handUvBuffer:this.uvBuffer);gl.vertexAttribPointer(this.uvAttribute,2,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,detailed?this.handIndexBuffer:this.indexBuffer);if(detailed)gl.bufferSubData(gl.ELEMENT_ARRAY_BUFFER,0,this.articulatedArm.handDrawIndices);}
+      const geometry=(detailed?this.articulatedArm.geometry.get('left_raised_hand_detail'):null)||this.articulatedArm?.geometry.get(layer.id)||this.hairRig?.geometry.get(layer.id)||positions[layer.role];
       gl.bindBuffer(gl.ARRAY_BUFFER,layer.positionBuffer);gl.bufferSubData(gl.ARRAY_BUFFER,0,geometry);
       gl.vertexAttribPointer(this.positionAttribute,2,gl.FLOAT,false,0,0);
-      gl.drawElements(gl.TRIANGLES,this.count,gl.UNSIGNED_SHORT,0);
-      this.lastDraws.push({id:layer.id,role:layer.role,vertices:positions[layer.role].length/2});
+      gl.drawElements(gl.TRIANGLES,detailed?this.articulatedArm.handDrawIndices.length:this.count,gl.UNSIGNED_SHORT,0);
+      this.lastDraws.push({id:layer.id,role:layer.role,vertices:geometry.length/2});
     }
     if(this.resolveFramebuffer){
       gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.viewport(0,0,this.canvas.width,this.canvas.height);

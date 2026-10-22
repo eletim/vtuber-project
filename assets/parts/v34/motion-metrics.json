@@ -1,0 +1,12 @@
+{
+  "v33": {
+    "pelvis_peak_degrees": 3.7592408253817013,
+    "hip_height_difference_peak_px": 16.391016472100933,
+    "shared_support_height_peak_px": 0
+  },
+  "v34": {
+    "pelvis_peak_degrees": 4.741207402141805,
+    "hip_height_difference_peak_px": 20.663818453138013,
+    "shared_support_height_peak_px": 5.343827847804498
+  }
+}

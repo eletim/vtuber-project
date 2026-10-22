@@ -46,7 +46,7 @@ test('production renderer loads cropped textures and preserves independent draws
     for(let frame=0;frame<3;frame++){
       const batch=draws.slice(frame*(visibleCount+1),(frame+1)*(visibleCount+1)),parts=batch.slice(0,visibleCount),resolve=batch[visibleCount];
       assert.ok(parts.every(draw=>draw.framebuffer===renderer.resolveFramebuffer&&draw.program===renderer.program));
-      assert.ok(parts.every(draw=>draw.uv===renderer.uvBuffer));
+      assert.ok(parts.every((draw,i)=>draw.uv===(visible[i].id==='left_raised_hand'?renderer.handUvBuffer:renderer.uvBuffer)),'dense hand UV is isolated and common UV restored for other layers');
       assert.deepEqual(parts.map(draw=>draw.position),visible.map(layer=>layer.positionBuffer));
       assert.equal(resolve.type,'resolve');assert.equal(resolve.framebuffer,null);assert.equal(resolve.texture,renderer.resolveTexture);
     }

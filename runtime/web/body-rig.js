@@ -17,7 +17,7 @@ class Spring {
 // Shared pelvis parent used by every surface, including articulated limbs.
 export function pelvisPoint(x,y,pose){
  const a=radians(pose.pelvisAngle||0),c=Math.cos(a),s=Math.sin(a),dx=x-555,dy=y-1100;
- return [555+c*dx-s*dy+(pose.shift||0),1100+s*dx+c*dy-(pose.bounce||0)];
+ return [555+c*dx-s*dy+(pose.shift||0),1100+s*dx+c*dy-(pose.bounce||0)+(pose.supportHeight||0)];
 }
 
 export const bodyRoles=Object.freeze(['root','skirt','torso','armLeft','armRight','head','chest','abdomen','pelvis','legLeft','legRight']);
@@ -60,8 +60,10 @@ export class BodyRig {
     const bounce=this.bounce.step(value(p,'ParamBodyBounce',-1,1)*6,dt);
     const shoulder=this.shoulder.step(value(p,'ParamShoulderY',-1,1)*.6,dt);
     const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*48,dt);
-    const pelvisAngle=this.pelvis.step(clamp(shift/48*4.5-body*.12,-5,5),dt);
+    const pelvisAngle=this.pelvis.step(clamp(shift/48*5.6-body*.12,-5.9,5.9),dt);
     // Ribcage balances the loaded hip with its own delayed angular response.
+    // Shared pelvis height follows loading rather than stretching either leg.
+    const supportHeight=-5.5*smooth(0,1,Math.abs(shift)/48);
     const chestAngle=this.counterChest.step(clamp(-pelvisAngle*1.25+body*.28-this.shift.v*.012-.6*approach,-6,6),dt);
     const legAngles=this.legs.map((spring,side)=>spring.step(clamp(-pelvisAngle*.5+(side===0?1:-1)*(shift/48*4.5+bounce*.05),-6,6),dt));
     const headLag=this.headLag.step(clamp(-this.body.v*.09-body*.18,-2,2),dt);
@@ -133,7 +135,7 @@ export class BodyRig {
         positions[i*2]=px/width;positions[i*2+1]=py/height;
       }
     }
-    this.pose={cheek,approach,contact,body:chestAngle,pelvisAngle,legs:legAngles,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
+    this.pose={supportHeight,cheek,approach,contact,body:chestAngle,pelvisAngle,legs:legAngles,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
     // One rigid pelvis parent transports torso, skirt and legs together. Bounce
     // is a translation of the complete skeleton, never a torso scale field.
     // Chest counter-rotation connects through abdomen into the pelvis attachment.
