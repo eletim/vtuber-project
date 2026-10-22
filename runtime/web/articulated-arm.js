@@ -58,7 +58,7 @@ export class ArticulatedArm {
    for(let i=0;i<this.rest.length;i+=2){
     let q=[this.rest[i]*width,this.rest[i+1]*height];
     if(a.sourceElbow&&a.sourceWrist){
-     const se=a.sourceElbow,sw=a.sourceWrist,sl=Math.hypot(sw[0]-se[0],sw[1]-se[1]),sd=[(sw[0]-se[0])/sl,(sw[1]-se[1])/sl],dx=q[0]-sw[0],dy=q[1]-sw[1],u=dx*sd[0]+dy*sd[1],v=-dx*sd[1]+dy*sd[0],along=a.joint==='cuff'?(-80-130*smooth(0,.4,t))+(u+70):u<0?u*length/sl:u*(config.extendedHandPose?.88:1);
+     const se=a.sourceElbow,sw=a.sourceWrist,sl=Math.hypot(sw[0]-se[0],sw[1]-se[1]),sd=[(sw[0]-se[0])/sl,(sw[1]-se[1])/sl],dx=q[0]-sw[0],dy=q[1]-sw[1],u=dx*sd[0]+dy*sd[1],v=-dx*sd[1]+dy*sd[0],along=a.joint==='cuff'?(-90-155*smooth(0,.4,t))+(u+70):u<0?u*length/sl:u*(config.extendedHandPose?.88:1);
      q=[WU[0]+along*bindDirection[0]+v*(config.extendedHandPose?1-.06*smooth(-25,10,u):1)*bindNormal[0],WU[1]+along*bindDirection[1]+v*(config.extendedHandPose?1-.06*smooth(-25,10,u):1)*bindNormal[1]];
     }
     if(a.joint==='forearm'||a.joint==='cuff'){
@@ -68,7 +68,7 @@ export class ArticulatedArm {
       q=[q[0]-12*Math.sin(Math.PI*t)**2*bell,q[1]+5*Math.sin(Math.PI*t)**2*bell];
      }
      if(a.joint==='cuff'&&config.forwardPosePaint&&a.sourceWrist){
-      const sl=Math.hypot(a.sourceWrist[0]-a.sourceElbow[0],a.sourceWrist[1]-a.sourceElbow[1]),u=-80-130*smooth(0,.4,t),center=[WU[0]+u*bindDirection[0],WU[1]+u*bindDirection[1]],mapped=wristShape(center),theta=wristRoll*clamp((u+160)/160);
+      const sl=Math.hypot(a.sourceWrist[0]-a.sourceElbow[0],a.sourceWrist[1]-a.sourceElbow[1]),u=-90-155*smooth(0,.4,t),center=[WU[0]+u*bindDirection[0],WU[1]+u*bindDirection[1]],mapped=wristShape(center),theta=wristRoll*clamp((u+160)/160);
       q=rotate(q,center,theta);q=[q[0]+mapped[0]-center[0],q[1]+mapped[1]-center[1]];q=projectForearm(q);
      }else q=projectForearm(a.poseWeight==='rest-cuff'?q:wristShape(q));
     }
@@ -82,6 +82,9 @@ export class ArticulatedArm {
      const cuffWeight=smooth(350,445,q[0])*(1-smooth(650,830,q[1]));
      const cuff=projectForearm(original);
      q=[hanging[0]*(1-cuffWeight)+cuff[0]*cuffWeight,hanging[1]*(1-cuffWeight)+cuff[1]*cuffWeight];
+     // Opaque inner ruffle folds into the drape below the shoulder attachment.
+     const innerFold=smooth(400,560,q[0])*smooth(600,680,q[1])*(1-smooth(850,1000,q[1]))*Math.sin(Math.PI*t)**2;
+     q=[q[0]-75*innerFold,q[1]];
     }
     q=parent(q);positions[i]=q[0]/width;positions[i+1]=q[1]/height;
    }

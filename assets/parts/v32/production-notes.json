@@ -1,0 +1,49 @@
+{
+  "status": "independent review candidate; not declared perfect or approved",
+  "baseline": "23db0404b944b7e8fb4c98df466854d012319d95",
+  "branch": "codex/koma-v32-cuff-edge",
+  "changes": [
+    "Opaque drape inner fold and cuff placement keep the small inner ruffle within the sleeve in intermediate poses.",
+    "Rounded native alpha edge removes 464 pixels from the narrow pointed inner flap; no shoulder pixels changed.",
+    "2962 hair RGB pixels locally decontaminated while preserving strand alpha and luminance.",
+    "325 detached static cutout-debris pixels removed from the left loop reveal layer.",
+    "PSD synchronized: 30 source groups, 12 moving hair strands, 8 expressions, original v19 backup."
+  ],
+  "verification": {
+    "tests": {
+      "passed": 179,
+      "failed": 0
+    },
+    "headless_app": "happy gesture + reset + eight expressions at both extremes; no page errors",
+    "faces": "all eight head textures and protected face values match v31 exactly",
+    "encoded_video_frames": 522,
+    "decoded_video_frames": 522,
+    "one_times_playback": {
+      "totalVideoFrames": 522,
+      "droppedVideoFrames": 34
+    },
+    "playback_wall_seconds": 18.68470000000298,
+    "visual_inspection": "169 decoded arm-region frames, media 10..16s, in six contact sheets; six largest-change crops; three-background sample frame; 16 extreme-expression contact frames; hair composite comparison. No evident sleeve translucency, detached white spike or abrupt part pop in inspected frames.",
+    "rig_samples": 1111,
+    "cuff_alpha_changes": 0,
+    "shoulder_geometry_changes": 0
+  },
+  "limits": [
+    "Shoulder rectangular boundary remains untouched. Prior v31 shoulder image-generation refusal remains on hold; no retry or alternate route.",
+    "13 new signed-area changes near pre-existing degenerate drape cells, largest negative triangle area 1.0559 native px^2. No corresponding clear visible pop identified, but not claimed numerically inversion-free.",
+    "1x playback dropped 34/522 frames in headless Chrome. All encoded frames were independently decoded and analyzed; not equivalent to personally watching a drop-free real-time video.",
+    "Transparent PNG may show red/yellow low-alpha RGB if a viewer ignores alpha. In reviewed loop ROI 23 saturated pixels all have alpha 1/255; correct black compositing contributes at most one RGB level. Not intentional artwork. See alpha-rounding-evidence.png/json."
+  ],
+  "safety": {
+    "upload": false,
+    "main_merge": false,
+    "install": false,
+    "shoulder_edit": false,
+    "user_screen_input": false,
+    "refused_action_this_turn": "Attempt to replace working articulated-arm.js from HEAD was blocked before execution due to possible loss of uncommitted edits. Trial code was then separately copied and hash-verified, and targeted edits applied without discarding it. No remaining blocker for sleeve/hair work."
+  },
+  "final_video_hashes": {
+    "koma-v31-v32-motion-comparison.mp4": "bc5a21024f361a194142fda212e4518a2ce4a531cfd9e96c3b69f33a76c418bb",
+    "koma-v32-motion-sample.mp4": "1b7e98c47857c1a37cc78ecd0a8a5d2b6df6162e482d774e40f7d58ed831ca35"
+  }
+}

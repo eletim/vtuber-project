@@ -1,0 +1,14 @@
+{
+  "source": "body_v28/hair_reveal_native.png",
+  "target": "body_v32/hair_reveal_native.png",
+  "removed_debris_pixels": 325,
+  "region": [
+    281,
+    211,
+    332,
+    292
+  ],
+  "outside_region_changed": 0,
+  "moving_strands_changed": 0,
+  "reason": "isolated static cutout fragments visible inside the screen-left loop on all three composited backgrounds"
+}
