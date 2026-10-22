@@ -1,0 +1,1265 @@
+{
+  "motion_frames": [
+    {
+      "file": "pose-v27-0.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 999,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 973,
+          "box_source": [
+            340,
+            726,
+            384,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 20,
+          "box_source": [
+            356,
+            654,
+            368,
+            662
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-1.8.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 999,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 973,
+          "box_source": [
+            340,
+            726,
+            384,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 20,
+          "box_source": [
+            356,
+            654,
+            368,
+            662
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-10.5.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 930,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 893,
+          "box_source": [
+            346,
+            740,
+            386,
+            868
+          ]
+        },
+        {
+          "pixels_half_resolution": 17,
+          "box_source": [
+            358,
+            654,
+            368,
+            662
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-10.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1170,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 1001,
+          "box_source": [
+            340,
+            720,
+            386,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 25,
+          "box_source": [
+            836,
+            740,
+            842,
+            764
+          ]
+        },
+        {
+          "pixels_half_resolution": 23,
+          "box_source": [
+            358,
+            652,
+            370,
+            662
+          ]
+        },
+        {
+          "pixels_half_resolution": 20,
+          "box_source": [
+            256,
+            472,
+            264,
+            488
+          ]
+        },
+        {
+          "pixels_half_resolution": 16,
+          "box_source": [
+            830,
+            706,
+            832,
+            726
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-11.3.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 14,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 9,
+          "box_source": [
+            358,
+            654,
+            368,
+            656
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-11.5.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 13,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 8,
+          "box_source": [
+            358,
+            654,
+            368,
+            656
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-11.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 18,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 12,
+          "box_source": [
+            358,
+            654,
+            368,
+            658
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-12.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 9,
+      "largest_components": []
+    },
+    {
+      "file": "pose-v27-13.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 6,
+      "largest_components": []
+    },
+    {
+      "file": "pose-v27-14.3.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 16,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 10,
+          "box_source": [
+            358,
+            654,
+            368,
+            658
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-14.5.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 19,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 13,
+          "box_source": [
+            356,
+            654,
+            368,
+            658
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-14.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 13,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 7,
+          "box_source": [
+            358,
+            654,
+            368,
+            656
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-15.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 649,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 625,
+          "box_source": [
+            352,
+            744,
+            384,
+            854
+          ]
+        },
+        {
+          "pixels_half_resolution": 18,
+          "box_source": [
+            356,
+            654,
+            368,
+            660
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-17.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 999,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 973,
+          "box_source": [
+            340,
+            726,
+            384,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 20,
+          "box_source": [
+            356,
+            654,
+            368,
+            662
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-18.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 999,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 973,
+          "box_source": [
+            340,
+            726,
+            384,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 20,
+          "box_source": [
+            356,
+            654,
+            368,
+            662
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-2.3.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1081,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 976,
+          "box_source": [
+            322,
+            724,
+            366,
+            860
+          ]
+        },
+        {
+          "pixels_half_resolution": 24,
+          "box_source": [
+            336,
+            654,
+            348,
+            664
+          ]
+        },
+        {
+          "pixels_half_resolution": 18,
+          "box_source": [
+            794,
+            648,
+            796,
+            672
+          ]
+        },
+        {
+          "pixels_half_resolution": 9,
+          "box_source": [
+            792,
+            630,
+            792,
+            646
+          ]
+        },
+        {
+          "pixels_half_resolution": 5,
+          "box_source": [
+            786,
+            590,
+            786,
+            598
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-2.8.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1071,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 972,
+          "box_source": [
+            306,
+            726,
+            350,
+            862
+          ]
+        },
+        {
+          "pixels_half_resolution": 19,
+          "box_source": [
+            318,
+            656,
+            328,
+            666
+          ]
+        },
+        {
+          "pixels_half_resolution": 9,
+          "box_source": [
+            750,
+            1266,
+            750,
+            1282
+          ]
+        },
+        {
+          "pixels_half_resolution": 7,
+          "box_source": [
+            384,
+            1226,
+            384,
+            1238
+          ]
+        },
+        {
+          "pixels_half_resolution": 6,
+          "box_source": [
+            714,
+            900,
+            714,
+            910
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-3.4.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1074,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 988,
+          "box_source": [
+            328,
+            724,
+            372,
+            860
+          ]
+        },
+        {
+          "pixels_half_resolution": 24,
+          "box_source": [
+            342,
+            654,
+            354,
+            664
+          ]
+        },
+        {
+          "pixels_half_resolution": 9,
+          "box_source": [
+            792,
+            582,
+            792,
+            598
+          ]
+        },
+        {
+          "pixels_half_resolution": 6,
+          "box_source": [
+            260,
+            632,
+            260,
+            642
+          ]
+        },
+        {
+          "pixels_half_resolution": 6,
+          "box_source": [
+            772,
+            1266,
+            772,
+            1276
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-4.4.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1173,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 1037,
+          "box_source": [
+            376,
+            720,
+            422,
+            856
+          ]
+        },
+        {
+          "pixels_half_resolution": 27,
+          "box_source": [
+            852,
+            642,
+            854,
+            678
+          ]
+        },
+        {
+          "pixels_half_resolution": 27,
+          "box_source": [
+            396,
+            650,
+            408,
+            660
+          ]
+        },
+        {
+          "pixels_half_resolution": 23,
+          "box_source": [
+            296,
+            470,
+            304,
+            486
+          ]
+        },
+        {
+          "pixels_half_resolution": 10,
+          "box_source": [
+            326,
+            1268,
+            326,
+            1286
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-4.8.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1117,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 994,
+          "box_source": [
+            352,
+            724,
+            396,
+            860
+          ]
+        },
+        {
+          "pixels_half_resolution": 24,
+          "box_source": [
+            366,
+            654,
+            378,
+            664
+          ]
+        },
+        {
+          "pixels_half_resolution": 20,
+          "box_source": [
+            264,
+            476,
+            270,
+            490
+          ]
+        },
+        {
+          "pixels_half_resolution": 19,
+          "box_source": [
+            824,
+            648,
+            826,
+            672
+          ]
+        },
+        {
+          "pixels_half_resolution": 11,
+          "box_source": [
+            814,
+            582,
+            816,
+            598
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-4.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1227,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 1038,
+          "box_source": [
+            374,
+            716,
+            422,
+            854
+          ]
+        },
+        {
+          "pixels_half_resolution": 80,
+          "box_source": [
+            862,
+            688,
+            878,
+            772
+          ]
+        },
+        {
+          "pixels_half_resolution": 21,
+          "box_source": [
+            398,
+            648,
+            408,
+            658
+          ]
+        },
+        {
+          "pixels_half_resolution": 17,
+          "box_source": [
+            852,
+            658,
+            854,
+            682
+          ]
+        },
+        {
+          "pixels_half_resolution": 14,
+          "box_source": [
+            848,
+            596,
+            850,
+            620
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-5.3.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1086,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 938,
+          "box_source": [
+            342,
+            730,
+            384,
+            860
+          ]
+        },
+        {
+          "pixels_half_resolution": 23,
+          "box_source": [
+            352,
+            656,
+            364,
+            664
+          ]
+        },
+        {
+          "pixels_half_resolution": 6,
+          "box_source": [
+            772,
+            1264,
+            772,
+            1274
+          ]
+        },
+        {
+          "pixels_half_resolution": 5,
+          "box_source": [
+            690,
+            1252,
+            690,
+            1260
+          ]
+        },
+        {
+          "pixels_half_resolution": 4,
+          "box_source": [
+            772,
+            694,
+            772,
+            700
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-5.8.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1046,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 942,
+          "box_source": [
+            342,
+            726,
+            384,
+            860
+          ]
+        },
+        {
+          "pixels_half_resolution": 23,
+          "box_source": [
+            354,
+            654,
+            366,
+            662
+          ]
+        },
+        {
+          "pixels_half_resolution": 21,
+          "box_source": [
+            250,
+            476,
+            258,
+            492
+          ]
+        },
+        {
+          "pixels_half_resolution": 10,
+          "box_source": [
+            804,
+            582,
+            804,
+            600
+          ]
+        },
+        {
+          "pixels_half_resolution": 6,
+          "box_source": [
+            772,
+            1262,
+            772,
+            1272
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-6.15.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1065,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 959,
+          "box_source": [
+            342,
+            726,
+            386,
+            860
+          ]
+        },
+        {
+          "pixels_half_resolution": 23,
+          "box_source": [
+            254,
+            474,
+            260,
+            490
+          ]
+        },
+        {
+          "pixels_half_resolution": 21,
+          "box_source": [
+            356,
+            654,
+            368,
+            662
+          ]
+        },
+        {
+          "pixels_half_resolution": 5,
+          "box_source": [
+            860,
+            1164,
+            860,
+            1172
+          ]
+        },
+        {
+          "pixels_half_resolution": 5,
+          "box_source": [
+            862,
+            1184,
+            862,
+            1192
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-6.4.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1038,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 951,
+          "box_source": [
+            348,
+            728,
+            390,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 20,
+          "box_source": [
+            362,
+            654,
+            374,
+            662
+          ]
+        },
+        {
+          "pixels_half_resolution": 11,
+          "box_source": [
+            812,
+            582,
+            812,
+            602
+          ]
+        },
+        {
+          "pixels_half_resolution": 8,
+          "box_source": [
+            356,
+            502,
+            370,
+            502
+          ]
+        },
+        {
+          "pixels_half_resolution": 8,
+          "box_source": [
+            384,
+            500,
+            398,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-6.7.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1165,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 1039,
+          "box_source": [
+            356,
+            718,
+            402,
+            854
+          ]
+        },
+        {
+          "pixels_half_resolution": 29,
+          "box_source": [
+            370,
+            494,
+            424,
+            496
+          ]
+        },
+        {
+          "pixels_half_resolution": 27,
+          "box_source": [
+            374,
+            648,
+            386,
+            658
+          ]
+        },
+        {
+          "pixels_half_resolution": 6,
+          "box_source": [
+            866,
+            1130,
+            868,
+            1138
+          ]
+        },
+        {
+          "pixels_half_resolution": 6,
+          "box_source": [
+            862,
+            1120,
+            864,
+            1128
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-7.1.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1326,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 1089,
+          "box_source": [
+            366,
+            714,
+            414,
+            854
+          ]
+        },
+        {
+          "pixels_half_resolution": 38,
+          "box_source": [
+            778,
+            896,
+            792,
+            950
+          ]
+        },
+        {
+          "pixels_half_resolution": 31,
+          "box_source": [
+            386,
+            648,
+            398,
+            662
+          ]
+        },
+        {
+          "pixels_half_resolution": 14,
+          "box_source": [
+            794,
+            952,
+            802,
+            970
+          ]
+        },
+        {
+          "pixels_half_resolution": 14,
+          "box_source": [
+            384,
+            496,
+            410,
+            496
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-7.5.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1174,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 1001,
+          "box_source": [
+            368,
+            724,
+            412,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 39,
+          "box_source": [
+            854,
+            692,
+            864,
+            736
+          ]
+        },
+        {
+          "pixels_half_resolution": 23,
+          "box_source": [
+            864,
+            740,
+            868,
+            762
+          ]
+        },
+        {
+          "pixels_half_resolution": 23,
+          "box_source": [
+            384,
+            654,
+            396,
+            664
+          ]
+        },
+        {
+          "pixels_half_resolution": 11,
+          "box_source": [
+            784,
+            934,
+            788,
+            948
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-7.9.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1187,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 977,
+          "box_source": [
+            356,
+            724,
+            400,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 48,
+          "box_source": [
+            838,
+            682,
+            850,
+            732
+          ]
+        },
+        {
+          "pixels_half_resolution": 29,
+          "box_source": [
+            848,
+            734,
+            856,
+            758
+          ]
+        },
+        {
+          "pixels_half_resolution": 19,
+          "box_source": [
+            370,
+            654,
+            380,
+            662
+          ]
+        },
+        {
+          "pixels_half_resolution": 13,
+          "box_source": [
+            826,
+            646,
+            826,
+            670
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-8.5.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1178,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 977,
+          "box_source": [
+            326,
+            726,
+            370,
+            860
+          ]
+        },
+        {
+          "pixels_half_resolution": 20,
+          "box_source": [
+            338,
+            656,
+            350,
+            664
+          ]
+        },
+        {
+          "pixels_half_resolution": 19,
+          "box_source": [
+            760,
+            700,
+            760,
+            736
+          ]
+        },
+        {
+          "pixels_half_resolution": 15,
+          "box_source": [
+            756,
+            738,
+            758,
+            762
+          ]
+        },
+        {
+          "pixels_half_resolution": 11,
+          "box_source": [
+            698,
+            504,
+            714,
+            506
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-9.2.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1019,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 943,
+          "box_source": [
+            324,
+            730,
+            368,
+            860
+          ]
+        },
+        {
+          "pixels_half_resolution": 21,
+          "box_source": [
+            336,
+            656,
+            348,
+            664
+          ]
+        },
+        {
+          "pixels_half_resolution": 7,
+          "box_source": [
+            784,
+            578,
+            784,
+            590
+          ]
+        },
+        {
+          "pixels_half_resolution": 7,
+          "box_source": [
+            732,
+            900,
+            732,
+            912
+          ]
+        },
+        {
+          "pixels_half_resolution": 5,
+          "box_source": [
+            730,
+            864,
+            730,
+            872
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pose-v27-9.6.png",
+      "alpha_pixels_on_canvas_border": 0,
+      "enclosed_transparent_pixels_half_resolution": 1046,
+      "largest_components": [
+        {
+          "pixels_half_resolution": 976,
+          "box_source": [
+            338,
+            724,
+            382,
+            858
+          ]
+        },
+        {
+          "pixels_half_resolution": 23,
+          "box_source": [
+            354,
+            652,
+            366,
+            662
+          ]
+        },
+        {
+          "pixels_half_resolution": 5,
+          "box_source": [
+            804,
+            592,
+            804,
+            600
+          ]
+        },
+        {
+          "pixels_half_resolution": 5,
+          "box_source": [
+            300,
+            1252,
+            300,
+            1260
+          ]
+        },
+        {
+          "pixels_half_resolution": 4,
+          "box_source": [
+            742,
+            876,
+            742,
+            882
+          ]
+        }
+      ]
+    }
+  ],
+  "extremes": [
+    {
+      "file": "extreme-bashful--1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-bashful-1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-big_smile--1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-big_smile-1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-displeased--1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-displeased-1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-neutral--1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-neutral-1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-soft_smile--1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-soft_smile-1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-surprised--1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-surprised-1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-thinking--1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-thinking-1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-worried--1.png",
+      "border_alpha_pixels": 0
+    },
+    {
+      "file": "extreme-worried-1.png",
+      "border_alpha_pixels": 0
+    }
+  ],
+  "note": "Enclosed alpha gaps include inherited hair/leg matte holes and armpit negative space surrounded by the hanging sleeve. These topology counts are not defect counts. Border coverage checks catch crown clipping."
+}

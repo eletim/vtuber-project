@@ -3,7 +3,7 @@ const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
 const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t);};
 const rotate=(point,pivot,angle)=>{const c=Math.cos(angle),s=Math.sin(angle),x=point[0]-pivot[0],y=point[1]-pivot[1];return[pivot[0]+c*x-s*y,pivot[1]+s*x+c*y];};
 
-// Each limb is a rigid surface. Joint transforms never touch torso vertices.
+// Bone lengths stay rigid; local wrist/cloth shaping never touches torso vertices.
 // The painted raised bind pose follows the elbow/wrist hierarchy.
 export class ArticulatedArm {
  constructor(model,rest){this.model=model;this.rest=rest;this.amount=0;this.velocity=0;this.last=null;this.geometry=new Map();this.cloth=0;this.clothVelocity=0;}
@@ -19,10 +19,17 @@ export class ArticulatedArm {
   const a0=Math.atan2(WR[1]-E[1],WR[0]-E[0]),a1=Math.atan2(WU[1]-E[1],WU[0]-E[0]),flex=(a1-a0)*t;
   const length=Math.hypot(WU[0]-E[0],WU[1]-E[1]);
   const W=[E[0]+Math.cos(a0+flex)*length,E[1]+Math.sin(a0+flex)*length];
+  const wristRoll=26*Math.sin(Math.PI*t)**2*Math.PI/180;
+  // Correct the authored bent wrist over the palm-base transition, not a hinge.
+  // The hand and the terminal forearm share exactly the same transform.
+  const wristShape=point=>{
+   const dir=[Math.cos(a1),Math.sin(a1)],along=(point[0]-WU[0])*dir[0]+(point[1]-WU[1])*dir[1];
+   return rotate(point,WU,wristRoll*smooth(-15,45,along));
+  };
   const upperAngle=(bodyPose?.arms?.[0]||0)*Math.PI/180;
   const bodyAngle=(bodyPose?.body||0)*Math.PI/180,waist=this.model.bodyRig.waist;
   const parent=point=>{let q=rotate(point,S,upperAngle);q=rotate(q,waist,bodyAngle);return pelvisPoint(q[0],q[1]-(bodyPose?.shoulder||0)-(Number(parameters.ParamBreath??.5)-.5)*.7,bodyPose||{});};
-  const blend=1;this.joints={shoulder:parent(S),elbow:parent(E),wrist:parent(W),amount:t,blend,flex};
+  const blend=1;this.joints={shoulder:parent(S),elbow:parent(E),wrist:parent(W),amount:t,blend,flex,wristRoll};
   for(const layer of this.model.bodyLayers){
    const a=layer.articulation;if(!a)continue;
    let positions=this.geometry.get(layer.id);if(!positions){positions=new Float32Array(this.rest.length);this.geometry.set(layer.id,positions);}
@@ -33,11 +40,11 @@ export class ArticulatedArm {
      if(a.joint==='cuff'){
       // Cloth bows at mid-flexion; pinned seam strips and rigid skin stay intact.
       const u=clamp((q[1]-565)/156),bell=Math.sin(Math.PI*u)**2;
-      q=[q[0]-5*Math.sin(Math.PI*t)*bell,q[1]+2*Math.sin(Math.PI*t)*bell];
+      q=[q[0]-12*Math.sin(Math.PI*t)**2*bell,q[1]+5*Math.sin(Math.PI*t)**2*bell];
      }
-     q=rotate(q,E,a0+flex-bindAngle);
+     q=wristShape(q);q=rotate(q,E,a0+flex-bindAngle);
     }
-    else if(a.joint==='hand') {q=rotate(q,bindW,a0+flex-bindAngle);q=[q[0]+W[0]-bindW[0],q[1]+W[1]-bindW[1]];q=rotate(q,W,(-3*Math.sin(Math.PI*t)-clamp(this.velocity,-1,1)*1.5)*Math.PI/180);}
+    else if(a.joint==='hand') {q=wristShape(q);q=rotate(q,bindW,a0+flex-bindAngle);q=[q[0]+W[0]-bindW[0],q[1]+W[1]-bindW[1]];}
     else if(a.joint==='drape'){
      // Cloth has its own cage: the upper attachment stays at the upper sleeve,
      // while the lower ruffles hang down. The skin/hand never use this map.
