@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {bodyLayers,bodyTextureFile} from '../web/render-plan.js';
 const root=new URL('../model/',import.meta.url),model=JSON.parse(readFileSync(new URL('model.json',root)));
 function pngSize(file){const data=readFileSync(new URL(file,root));assert.equal(data.subarray(1,4).toString(),'PNG');return[data.readUInt32BE(16),data.readUInt32BE(20)];}
@@ -10,12 +11,19 @@ test('v26 manifest loads explicit PSD layers for every separately rendered body 
   const layers=bodyLayers(model);
   assert.deepEqual(new Set(layers.map(layer=>layer.role)),new Set(['legLeft','legRight','skirt','torso','armLeft','armRight','head','chest','abdomen','pelvis']));
   assert.ok(layers.length>=6);
-  assert.match(model.source_psd,/v32\/koma_material_repair_v32\.psd$/);
+  assert.match(model.source_psd,/^assets\/parts\/v\d+\/.+\.psd$/);
+  const psdUrl=new URL('../../'+model.source_psd,import.meta.url),psd=readFileSync(psdUrl);
+  assert.equal(psd.subarray(0,4).toString(),'8BPS');
+  assert.deepEqual([psd.readUInt32BE(18),psd.readUInt32BE(14)],model.size);
+  const version=model.source_psd.split('/')[2],saved=JSON.parse(readFileSync(new URL(`psd-runtime-${version}.json`,psdUrl)));
+  assert.equal(saved.sha256,createHash('sha256').update(psd).digest('hex'),'manifest references the verified PSD bytes');
+  assert.equal(saved.roundtrip_changed_values,0);assert.equal(saved.expressions,8);
   for(const layer of layers){
     assert.ok(layer.psdGroup,'every render layer points to its editable PSD group');
     assert.match(layer.file,/^body_v(?:19|22|26|28|29|30|31|32)\//);
     const [x0,y0,x1,y1]=layer.rect;
     for(const file of new Set([layer.file,...Object.values(layer.expressionFiles||{})]))assert.deepEqual(pngSize(file),[x1-x0,y1-y0],file);
+    if(layer.angleSideFile)assert.deepEqual(pngSize(layer.angleSideFile),[x1-x0,y1-y0],'angle material uses the same registered bounds');
   }
   const order=layers.map(layer=>layer.role);
   assert.ok(order.indexOf('legRight')<order.indexOf('skirt'),'skirt occludes articulated thighs');

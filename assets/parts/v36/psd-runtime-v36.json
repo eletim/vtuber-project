@@ -1,0 +1,33 @@
+{
+  "psd": "assets/parts/v36/koma_hand_angle_v36.psd",
+  "sha256": "45e685d78f8b5a78b8fec41b26b380d0750d757cdfb5cfb773a222a6d4283b9e",
+  "saved_default": "runtime half-raised reference; editable source groups hidden beneath, source anchors defined in model.json",
+  "native_v19_backup": true,
+  "roundtrip_changed_values": 0,
+  "expressions": 8,
+  "runtime_groups": 30,
+  "articulated_groups": [
+    "left_shoulder_underlap",
+    "left_shoulder_original_support",
+    "left_raised_upper",
+    "left_raised_forearm",
+    "left_raised_cuff",
+    "left_raised_drape",
+    "left_rest_cuff",
+    "left_raised_hand"
+  ],
+  "hair_groups": [
+    "rear_left_outer",
+    "rear_left_inner",
+    "rear_right_inner",
+    "rear_right_outer",
+    "bang_left",
+    "bang_center",
+    "bang_right",
+    "side_left_front",
+    "side_right_front",
+    "side_left_outer",
+    "side_left_inner",
+    "side_right_outer"
+  ]
+}

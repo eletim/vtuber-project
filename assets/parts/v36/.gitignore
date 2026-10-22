@@ -1,0 +1,10 @@
+cfr-review/sample-frames/*.jpg
+cfr-review/comparison-frames/*.jpg
+native-review/frame-*.png
+!native-review/frame-0330.png
+!native-review/frame-0351.png
+!native-review/frame-0414.png
+!native-review/frame-0438.png
+probe-review/
+review/extreme-*.png
+psd-bind-pose.png

@@ -1,0 +1,60 @@
+{
+  "baseline": "083379ad775a72ab1758025d42e1d8c195b88fa7",
+  "tests": {
+    "passed": 188,
+    "failed": 0,
+    "after_psd_sync": true
+  },
+  "source_paint_changed": false,
+  "shoulder_redraw": "held, untouched",
+  "native_frames": 181,
+  "native_times": [
+    10,
+    16
+  ],
+  "focused_intervals": [
+    [
+      10.8,
+      11.05
+    ],
+    [
+      11.6,
+      11.8
+    ],
+    [
+      13.7,
+      14.0
+    ],
+    [
+      14.55,
+      14.8
+    ]
+  ],
+  "videos": [
+    {
+      "kind": "single",
+      "encoded": 555,
+      "decoded": 555,
+      "fps": 30,
+      "physics_hz": 60,
+      "seconds": 18.5,
+      "playback_dropped": 0
+    },
+    {
+      "kind": "comparison",
+      "encoded": 555,
+      "decoded": 555,
+      "fps": 30,
+      "physics_hz": 60,
+      "seconds": 18.5,
+      "playback_dropped": 0
+    }
+  ],
+  "visual_review": "Native-size comparisons and sequential hand contact sheets; all four specified intervals, both directions, eight expressions and three background video panels. Improved single crease readability; no new wrist separation or obvious silhouette pop seen.",
+  "limitations": [
+    "Two-view illustration morph, not full anatomical 3D hand",
+    "Fine antialiasing and paint differences remain",
+    "Shoulder redraw remains held"
+  ],
+  "regression_test_correction": "Replaced stale v32 filename assertion with reading the referenced PSD, checking header/dimensions, roundtrip report and SHA256."
+}
