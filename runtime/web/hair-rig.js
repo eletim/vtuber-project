@@ -23,15 +23,15 @@ export class HairRig {
    const rear=layer.id.startsWith('rear_'),bang=layer.id.startsWith('bang_'),left=layer.id.includes('left');
    const root=bang?config.rootY:Math.max(config.rootY,rear||layer.id==='side_left_outer'?560:460);
    const tip=layer.rect[3]-1,active=tip>root+10;
-   const limit=bang?.55:rear?(layer.id.includes('outer')?22:7):layer.id==='side_left_front'?10:6;
+   const limit=bang?1.0:rear?(layer.id.includes('outer')?38:12):layer.id==='side_left_front'?20:12;
    let state=this.states.get(layer.id);if(!state){state={mid:0,midV:0,tail:0,tailV:0,vertical:0,verticalV:0,x:0,v:0};this.states.set(layer.id,state);}
-   const inertia=(-ax*.035-vx*.055+(left?-1:1)*ay*.014)*(bang?.025:config.amplitude/12);
+   const inertia=(-ax*.07-vx*.09+(left?-1:1)*ay*.025)*(bang?.025:config.amplitude/12);
    const idle=options.ambient===false?0:config.amplitude*.09*(1-Math.exp(-elapsed*2))*Math.sin(elapsed*.85+config.phase);
    const target=active?clamp(inertia+idle,-limit,limit):0;
    const omega=config.speed*(rear?.8:1);
    spring(state,'mid',target*.45,omega*1.7,.9,dt);
-   spring(state,'tail',target+state.mid*.25,omega,.57,dt);
-   spring(state,'vertical',active?clamp(-ay*.009,-4,4):0,omega*.9,.68,dt);
+   spring(state,'tail',target+state.mid*.25,omega,.52,dt);
+   spring(state,'vertical',active?clamp(-ay*.014,-6,6):0,omega*.9,.68,dt);
    state.tail=clamp(state.tail,-limit,limit);state.x=state.tail;state.v=state.tailV;
    let points=this.geometry.get(layer.id);if(!points){points=new Float32Array(head.length);this.geometry.set(layer.id,points);}
    for(let i=0;i<head.length;i+=2){const y=this.rest[i+1]*h,u=active?smooth((y-root)/(tip-root)):0;

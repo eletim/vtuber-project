@@ -56,11 +56,11 @@ export class BodyRig {
     const breath=value(p,'ParamBreath',0,1,.5)-.5;
     const bounce=this.bounce.step(value(p,'ParamBodyBounce',-1,1)*6,dt);
     const shoulder=this.shoulder.step(value(p,'ParamShoulderY',-1,1)*.6,dt);
-    const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*36,dt);
-    const pelvisAngle=this.pelvis.step(clamp(shift/36*3.4-body*.12,-3.8,3.8),dt);
+    const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*48,dt);
+    const pelvisAngle=this.pelvis.step(clamp(shift/48*4.5-body*.12,-5,5),dt);
     // Ribcage balances the loaded hip with its own delayed angular response.
-    const chestAngle=this.counterChest.step(clamp(-pelvisAngle*1.25+body*.28-this.shift.v*.009,-4.8,4.8),dt);
-    const legAngles=this.legs.map((spring,side)=>spring.step(clamp(-pelvisAngle*.5+(side===0?1:-1)*(shift/36*2.8+bounce*.05),-4.8,4.8),dt));
+    const chestAngle=this.counterChest.step(clamp(-pelvisAngle*1.25+body*.28-this.shift.v*.009,-6,6),dt);
+    const legAngles=this.legs.map((spring,side)=>spring.step(clamp(-pelvisAngle*.5+(side===0?1:-1)*(shift/48*3.3+bounce*.05),-6,6),dt));
     const headLag=this.headLag.step(clamp(-this.body.v*.09-body*.18,-2,2),dt);
     const armAngles=[],elbowAngles=[];
     for(let side=0;side<2;side++){
@@ -114,6 +114,14 @@ export class BodyRig {
         angle=armAngles[side]*attachment;c=Math.cos(angle);s=Math.sin(angle);
         ax=px-anchor[0];ay=py-anchor[1];
         px=anchor[0]+c*ax-s*ay;py=anchor[1]+s*ax+c*ay;
+        if(side===1){
+          // Pin the authored inner sleeve cut to the torso's identical surface.
+          // Independent elbow/shoulder lag grows across the outer sleeve width.
+          const seam=[[489,731],[600,768],[700,791],[800,780],[900,765],[1000,795],[1050,820]];
+          let inner=seam[0][1];for(let k=1;k<seam.length;k++)if(y>=seam[k-1][0]){const u=clamp((y-seam[k-1][0])/(seam[k][0]-seam[k-1][0]),0,1);inner=seam[k-1][1]+u*(seam[k][1]-seam[k-1][1]);}
+          const pin=smooth(-120,-20,x-inner)*(1-smooth(0,90,x-inner))*smooth(440,490,y)*(1-smooth(760,830,y));
+          px=px*(1-pin)+x*pin;py=py*(1-pin)+y*pin;
+        }
         // Inherit the shoulder's complete body transform. No waist fade can
         // pin a low hand to the skirt, and no arm motion feeds back to torso.
         ax=px-wx;ay=py-wy;

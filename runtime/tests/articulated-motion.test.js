@@ -15,12 +15,11 @@ test('cheek gesture keeps rigid bone lengths and never changes torso or skirt',(
   const torso=body.positionsByRole.torso.slice();arm.frame(p,time,body.pose,{snapArticulation:true});
   assert.deepEqual(body.positionsByRole.torso,torso);assert.deepEqual(torso,baseline.positionsByRole.torso);assert.deepEqual(body.positionsByRole.skirt,baseline.positionsByRole.skirt);
   const {elbow,wrist,shoulder}=arm.joints,d=Math.hypot(wrist[0]-elbow[0],wrist[1]-elbow[1]);
-  assert.ok(Math.abs(d-Math.hypot(201,330))<1e-8);assert.deepEqual(shoulder,[353,510]);
-  if(previous)assert.ok(Math.hypot(wrist[0]-previous[0],wrist[1]-previous[1])<12,'intermediate joints cannot jump');previous=wrist;
-  for(const layer of model.bodyLayers.filter(l=>['forearm','hand','cuff'].includes(l.articulation?.joint))){
-   const a=arm.geometry.get(layer.id),dx=(a[2]-a[0])*model.size[0],dy=(a[3]-a[1])*model.size[1];
-   assert.ok(Math.abs(Math.hypot(dx,dy)-model.size[0]/model.mesh[0])<.001,'skin and hand are rotated, never stretched');
-  }
+  assert.ok(Math.abs(Math.hypot(d,arm.joints.forearmDepth)-Math.hypot(201,330))<1e-8);assert.deepEqual(shoulder,[353,510]);
+  if(previous)assert.ok(Math.hypot(wrist[0]-previous[0],wrist[1]-previous[1])<16,'continuous depth arc has bounded motion per 1% pose step');previous=wrist;
+  assert.ok(arm.joints.projection>=Math.cos(1.095)-1e-10&&arm.joints.projection<=1);
+  assert.ok(Math.abs(Math.hypot(elbow[0]-shoulder[0],elbow[1]-shoulder[1],arm.joints.upperDepth)-Math.hypot(78,290))<1e-8);
+
  }
  assert.ok(Math.hypot(arm.joints.wrist[0]-476,arm.joints.wrist[1]-470)<1e-7);
 });
@@ -56,4 +55,17 @@ test('larger hair swing returns to its rest surface after motion stops',()=>{
 test('thoughtful gesture raises, holds, and lowers the hand within six seconds',()=>{
  const p=time=>performancePose(neutral(),time,{enabled:true,emotion:'thoughtful',started_at:0,until:6});
  assert.equal(p(0).ParamHandToCheek,0);assert.ok(p(2).ParamHandToCheek>.99);assert.equal(p(5).ParamHandToCheek,0);
+});
+
+test('depth projection preserves forearm cross-section while narrowing its forward arc',()=>{
+ const {body}=setup(),E=model.articulatedArm.elbow,W=model.articulatedArm.wristRaised,L=Math.hypot(W[0]-E[0],W[1]-E[1]),d=[(W[0]-E[0])/L,(W[1]-E[1])/L];
+ const rest=new Float32Array([-20,20].flatMap(v=>[(E[0]+180*d[0]-v*d[1])/1086,(E[1]+180*d[1]+v*d[0])/1448]));
+ const arm=new ArticulatedArm(model,rest);body.frame(neutral(),0);
+ for(let f=0;f<=100;f++){arm.frame({...neutral(),ParamHandToCheek:f/100},f/60,body.pose,{snapArticulation:true});const v=arm.geometry.get('left_raised_forearm');assert.ok(Math.abs(Math.hypot((v[2]-v[0])*1086,(v[3]-v[1])*1448)-40)<.001);assert.ok(arm.joints.wrist[0]<550);}
+});
+
+test('projected distal hand cannot elongate the authored fingers',()=>{
+ const {body}=setup(),E=model.articulatedArm.elbow,W=model.articulatedArm.wristRaised,L=Math.hypot(W[0]-E[0],W[1]-E[1]),d=[(W[0]-E[0])/L,(W[1]-E[1])/L];
+ const rest=new Float32Array([80,150].flatMap(u=>[(W[0]+u*d[0])/1086,(W[1]+u*d[1])/1448]));const arm=new ArticulatedArm(model,rest);body.frame(neutral(),0);
+ for(let f=0;f<=100;f++){arm.frame({...neutral(),ParamHandToCheek:f/100},f/60,body.pose,{snapArticulation:true});const v=arm.geometry.get('left_raised_hand');assert.ok(Math.hypot((v[2]-v[0])*1086,(v[3]-v[1])*1448)<=70.001);}
 });

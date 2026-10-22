@@ -27,5 +27,5 @@ test('larger weight transfer moves pelvis and differentiates thighs without chan
    const i=(row*61+col)*2,original=Math.hypot(r.rest[i]*1086-hx,r.rest[i+1]*1448-1225),current=Math.hypot(v[i]*1086-hip[0],v[i+1]*1448-hip[1]);assert.ok(Math.abs(original-current)<.001);
   }}
  }
- assert.ok(r.pose.shift>35.9&&r.pose.shift<=36);assert.ok(difference>5);
+ assert.ok(r.pose.shift>47.9&&r.pose.shift<=48);assert.ok(difference>5);
 });

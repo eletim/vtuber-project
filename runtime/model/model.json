@@ -6,7 +6,7 @@
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v26/koma_counterbalance_v26.psd",
+  "source_psd": "assets/parts/v28/koma_depth_hair_v28.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -1401,12 +1401,12 @@
       "folder": "EXP 07 Thinking | 考え顔"
     }
   ],
-  "expression_source_psd": "assets/parts/v26/koma_counterbalance_v26.psd",
+  "expression_source_psd": "assets/parts/v28/koma_depth_hair_v28.psd",
   "bodyLayers": [
     {
       "id": "rear_left_outer",
       "role": "head",
-      "file": "body_v22/rear_left_outer.png",
+      "file": "body_v28/rear_left_outer.png",
       "rect": [
         149,
         448,
@@ -1425,7 +1425,7 @@
     {
       "id": "rear_left_inner",
       "role": "head",
-      "file": "body_v22/rear_left_inner.png",
+      "file": "body_v28/rear_left_inner.png",
       "rect": [
         260,
         448,
@@ -1444,7 +1444,7 @@
     {
       "id": "rear_right_inner",
       "role": "head",
-      "file": "body_v22/rear_right_inner.png",
+      "file": "body_v28/rear_right_inner.png",
       "rect": [
         733,
         448,
@@ -1463,7 +1463,7 @@
     {
       "id": "rear_right_outer",
       "role": "head",
-      "file": "body_v22/rear_right_outer.png",
+      "file": "body_v28/rear_right_outer.png",
       "rect": [
         825,
         448,
@@ -1612,7 +1612,7 @@
     {
       "id": "hair_reveal_native",
       "role": "head",
-      "file": "body_v22/hair_reveal_native.png",
+      "file": "body_v28/hair_reveal_native.png",
       "rect": [
         281,
         43,
@@ -1624,7 +1624,7 @@
     {
       "id": "face_fixed_v22",
       "role": "head",
-      "file": "body_v22/face_fixed_v22.png",
+      "file": "body_v28/face_fixed_v22.png",
       "rect": [
         235,
         1,
@@ -1634,14 +1634,14 @@
       "psdGroup": "v22 face and fixed crown",
       "features": true,
       "expressionFiles": {
-        "neutral": "body_v22/face_neutral.png",
-        "soft_smile": "body_v22/face_soft_smile.png",
-        "big_smile": "body_v22/face_big_smile.png",
-        "worried": "body_v22/face_worried.png",
-        "surprised": "body_v22/face_surprised.png",
-        "bashful": "body_v22/face_bashful.png",
-        "displeased": "body_v22/face_displeased.png",
-        "thinking": "body_v22/face_thinking.png"
+        "neutral": "body_v28/face_neutral.png",
+        "soft_smile": "body_v28/face_soft_smile.png",
+        "big_smile": "body_v28/face_big_smile.png",
+        "worried": "body_v28/face_worried.png",
+        "surprised": "body_v28/face_surprised.png",
+        "bashful": "body_v28/face_bashful.png",
+        "displeased": "body_v28/face_displeased.png",
+        "thinking": "body_v28/face_thinking.png"
       },
       "movingHairMask": "body_v22/face_hair_ownership.png"
     },
@@ -1705,7 +1705,7 @@
     {
       "id": "side_left_front",
       "role": "head",
-      "file": "body_v22/side_left_front.png",
+      "file": "body_v28/side_left_front.png",
       "rect": [
         390,
         347,
@@ -1743,7 +1743,7 @@
     {
       "id": "side_left_outer",
       "role": "head",
-      "file": "body_v22/side_left_outer.png",
+      "file": "body_v28/side_left_outer.png",
       "rect": [
         235,
         211,
@@ -1762,7 +1762,7 @@
     {
       "id": "side_left_inner",
       "role": "head",
-      "file": "body_v22/side_left_inner.png",
+      "file": "body_v28/side_left_inner.png",
       "rect": [
         333,
         239,
@@ -1781,7 +1781,7 @@
     {
       "id": "side_right_outer",
       "role": "head",
-      "file": "body_v22/side_right_outer.png",
+      "file": "body_v28/side_right_outer.png",
       "rect": [
         731,
         356,
@@ -1945,6 +1945,7 @@
     "exclusiveOwnership": true,
     "expressionBasesWithoutMovingHair": 8,
     "strandCount": 12,
-    "source": "v19 approved head; native and newly painted hidden scalp/skin"
+    "source": "v19 approved head; native and newly painted hidden scalp/skin",
+    "matteCorrection": "native-layer white-matte coverage inversion, protected face/accessory and warm highlights"
   }
 }

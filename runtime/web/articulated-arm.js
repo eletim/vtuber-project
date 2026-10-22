@@ -18,7 +18,18 @@ export class ArticulatedArm {
   const t=clamp(this.amount),[width,height]=this.model.size,S=config.shoulder,E=config.elbow,WR=config.wristRest,WU=config.wristRaised;
   const a0=Math.atan2(WR[1]-E[1],WR[0]-E[0]),a1=Math.atan2(WU[1]-E[1],WU[0]-E[0]),flex=(a1-a0)*t;
   const length=Math.hypot(WU[0]-E[0],WU[1]-E[1]);
-  const W=[E[0]+Math.cos(a0+flex)*length,E[1]+Math.sin(a0+flex)*length];
+  const depthAngle=1.095*Math.sin(Math.PI*t)*(1+.3*Math.cos(Math.PI*t)**2),projection=Math.cos(depthAngle);
+  const lift=Math.sin(Math.PI*t),projectedElbow=[E[0]+12*lift,E[1]-14*lift];
+  const direction=[Math.cos(a0+flex),Math.sin(a0+flex)],normal=[-direction[1],direction[0]],bindDirection=[Math.cos(a1),Math.sin(a1)],bindNormal=[-bindDirection[1],bindDirection[0]];
+  const W=[projectedElbow[0]+direction[0]*length*projection,projectedElbow[1]+direction[1]*length*projection];
+  const upperLength=Math.hypot(E[0]-S[0],E[1]-S[1]),upperProjected=Math.hypot(projectedElbow[0]-S[0],projectedElbow[1]-S[1]);
+  const upperBind=[(E[0]-S[0])/upperLength,(E[1]-S[1])/upperLength],upperAxis=[(projectedElbow[0]-S[0])/upperProjected,(projectedElbow[1]-S[1])/upperProjected];
+  const projectUpper=q=>{const x=q[0]-S[0],y=q[1]-S[1],u=x*upperBind[0]+y*upperBind[1],v=-x*upperBind[1]+y*upperBind[0];return[S[0]+u*upperProjected/upperLength*upperAxis[0]-v*upperAxis[1],S[1]+u*upperProjected/upperLength*upperAxis[1]+v*upperAxis[0]];};
+  // Integrate the projection scale along the palm: its derivative never exceeds
+  // the original length, unlike multiplying position by a varying scale.
+  const projectLength=u=>{const d=u-length,z=clamp((d-20)/55),integral=d<=20?0:d>=75?d-47.5:55*(z**3-.5*z**4);return u*projection+(1-projection)*.9*integral;};
+  const projectForearm=q=>{const x=q[0]-E[0],y=q[1]-E[1],u=x*bindDirection[0]+y*bindDirection[1],v=x*bindNormal[0]+y*bindNormal[1],along=projectLength(u);return[projectedElbow[0]+along*direction[0]+v*normal[0],projectedElbow[1]+along*direction[1]+v*normal[1]];};
+  const projectHand=q=>projectForearm(q);
   const wristRoll=26*Math.sin(Math.PI*t)**2*Math.PI/180;
   // Correct the authored bent wrist over the palm-base transition, not a hinge.
   // The hand and the terminal forearm share exactly the same transform.
@@ -29,11 +40,10 @@ export class ArticulatedArm {
   const upperAngle=(bodyPose?.arms?.[0]||0)*Math.PI/180;
   const bodyAngle=(bodyPose?.body||0)*Math.PI/180,waist=this.model.bodyRig.waist;
   const parent=point=>{let q=rotate(point,S,upperAngle);q=rotate(q,waist,bodyAngle);return pelvisPoint(q[0],q[1]-(bodyPose?.shoulder||0)-(Number(parameters.ParamBreath??.5)-.5)*.7,bodyPose||{});};
-  const blend=1;this.joints={shoulder:parent(S),elbow:parent(E),wrist:parent(W),amount:t,blend,flex,wristRoll};
+  const blend=1;this.joints={shoulder:parent(S),elbow:parent(projectedElbow),wrist:parent(W),amount:t,blend,flex,wristRoll,forearmDepth:length*Math.sin(depthAngle),projection,upperDepth:Math.sqrt(Math.max(0,upperLength**2-upperProjected**2))};
   for(const layer of this.model.bodyLayers){
    const a=layer.articulation;if(!a)continue;
    let positions=this.geometry.get(layer.id);if(!positions){positions=new Float32Array(this.rest.length);this.geometry.set(layer.id,positions);}
-   const raised=a.bind==='raised',bindW=raised?WU:WR,bindAngle=raised?a1:a0;
    for(let i=0;i<this.rest.length;i+=2){
     let q=[this.rest[i]*width,this.rest[i+1]*height];
     if(a.joint==='forearm'||a.joint==='cuff'){
@@ -42,16 +52,17 @@ export class ArticulatedArm {
       const u=clamp((q[1]-565)/156),bell=Math.sin(Math.PI*u)**2;
       q=[q[0]-12*Math.sin(Math.PI*t)**2*bell,q[1]+5*Math.sin(Math.PI*t)**2*bell];
      }
-     q=wristShape(q);q=rotate(q,E,a0+flex-bindAngle);
+     q=projectForearm(wristShape(q));
     }
-    else if(a.joint==='hand') {q=wristShape(q);q=rotate(q,bindW,a0+flex-bindAngle);q=[q[0]+W[0]-bindW[0],q[1]+W[1]-bindW[1]];}
+    else if(a.joint==='hand')q=projectHand(wristShape(q));
+    else if(a.joint==='upper')q=projectUpper(q);
     else if(a.joint==='drape'){
      // Cloth has its own cage: the upper attachment stays at the upper sleeve,
      // while the lower ruffles hang down. The skin/hand never use this map.
      const original=q,v=smooth(650,960,q[1]),drop=(1-clamp(this.cloth));
-     const hanging=[q[0]-drop*133*v,q[1]+drop*245*v];
+     const upper=projectUpper(q),hanging=[upper[0]-drop*133*v,upper[1]+drop*245*v];
      const cuffWeight=smooth(350,445,q[0])*(1-smooth(650,830,q[1]));
-     const cuff=rotate(original,E,a0+flex-a1);
+     const cuff=projectForearm(original);
      q=[hanging[0]*(1-cuffWeight)+cuff[0]*cuffWeight,hanging[1]*(1-cuffWeight)+cuff[1]*cuffWeight];
     }
     q=parent(q);positions[i]=q[0]/width;positions[i+1]=q[1]/height;

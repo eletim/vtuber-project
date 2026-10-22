@@ -26,7 +26,7 @@ test('cloth trails the raised arm while wrist and forearm lengths remain rigid',
  const r=new BodyRig(m,w),arm=new ArticulatedArm(m,r.rest);let lag=0;
  for(let f=0;f<360;f++){
   const p={...neutral(),ParamHandToCheek:f<90?1:0};r.frame(p,f/60);arm.frame(p,f/60,r.pose);lag=Math.max(lag,Math.abs(arm.amount-arm.cloth));
-  const {wrist,elbow}=arm.joints;assert.ok(Math.abs(Math.hypot(wrist[0]-elbow[0],wrist[1]-elbow[1])-Math.hypot(201,330))<1e-6);
+  const {wrist,elbow}=arm.joints;assert.ok(Math.abs(Math.hypot(wrist[0]-elbow[0],wrist[1]-elbow[1],arm.joints.forearmDepth)-Math.hypot(201,330))<1e-6);
  }
  assert.ok(lag>.1);assert.ok(arm.cloth<.00001);
 });
