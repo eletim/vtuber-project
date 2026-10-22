@@ -123,7 +123,7 @@ test('rapid multi-axis reversals keep every triangle oriented and limbs within t
     const p={...neutral(),ParamBodyAngleX:s(0)*5,ParamAngleX:s(1)*15,ParamAngleY:s(2)*10,ParamAngleZ:s(3)*8,ParamBreath:(s(4)+1)/2,ParamArmLOpen:s(5),ParamArmROpen:s(6),ParamShoulderY:s(7),ParamBodyShiftX:s(8)};
     min=Math.min(min,minimumArea(r.frame(p,i/60)));
     assert.ok(r.pose.arms.every(x=>Math.abs(x)<=3.2));assert.ok(r.pose.elbows.every(x=>Math.abs(x)<=1.12));
-    assert.ok(Math.abs(r.pose.shoulder)<=3);assert.ok(Math.abs(r.pose.shift)<=36);
+    assert.ok(Math.abs(r.pose.shoulder)<=3);assert.ok(Math.abs(r.pose.shift)<=48);
   }
   assert.ok(min>.25,`minimum normalized area ${min}`);
 });

@@ -1,0 +1,63 @@
+{
+  "baseline": "7bc8d903e0565b4d5ee5ce8830222018c0f2c06c",
+  "tests": {
+    "pass": 183,
+    "fail": 0
+  },
+  "same_input_same_camera": true,
+  "physics_hz": 60,
+  "output_fps": 30,
+  "frames_each": 555,
+  "duration_seconds": 18.5,
+  "decoded_each": 555,
+  "timestamp_mismatch_each": 0,
+  "visual_review": {
+    "arm_full_frame_sequence_seconds": [
+      10,
+      16
+    ],
+    "arm_frames_viewed": 181,
+    "hair_sequence_seconds": [
+      0,
+      10
+    ],
+    "hair_interval_seconds": 0.2,
+    "hair_white_frames_viewed": 51,
+    "hair_teal_frames_viewed": 17,
+    "comparison_key_frames": 18,
+    "expressions": 8,
+    "expression_extremes": 16,
+    "backgrounds": [
+      "white",
+      "black",
+      "teal"
+    ],
+    "findings": "Head now leans toward arriving hand; lowering route is deeper. No visible cuff transparency, pop, wrist acute break or waist gap in inspected frames. Subtle load and strand-settling changes; not a new 3D hand pose."
+  },
+  "playback": {
+    "sample": {
+      "wall_seconds": 18.51589999999106,
+      "quality": {
+        "totalVideoFrames": 555,
+        "droppedVideoFrames": 75
+      }
+    },
+    "comparison": {
+      "wall_seconds": 18.520299999997018,
+      "quality": {
+        "totalVideoFrames": 555,
+        "droppedVideoFrames": 77
+      }
+    }
+  },
+  "limitations": [
+    "Existing shoulder boundary held; rejected image generation not retried or bypassed.",
+    "Hand still uses one painted dorsal view; palm/finger reveal does not fully rotate in depth.",
+    "No knees/feet; thigh load difference is modest and ground contact cannot be judged.",
+    "The diagnostic keeps the original neutral pause at 9.2-10 seconds for fair comparison; it does not invent future manual intent.",
+    "Headless 1x playback drops presentation frames despite exact MP4 timestamps; all samples separately decoded.",
+    "Two existing cropped strands (side_right_front, side_left_outer) have tip above fixed deformation root and inherit only head movement; ten strands have active secondary bending. No new alpha or root change was made."
+  ],
+  "assets_changed": false,
+  "psd": "assets/parts/v32/koma_material_repair_v32.psd"
+}

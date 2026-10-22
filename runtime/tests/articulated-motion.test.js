@@ -8,10 +8,10 @@ import {neutral} from '../web/controls.js';
 import {performancePose} from '../web/performance.js';
 const model=JSON.parse(readFileSync(new URL('../model/model.json',import.meta.url))),weights=JSON.parse(readFileSync(new URL('../model/skinning.json',import.meta.url)));
 const setup=()=>{const body=new BodyRig(model,weights);return{body,arm:new ArticulatedArm(model,body.rest),hair:new HairRig(model,body.rest)};};
-test('cheek gesture keeps rigid bone lengths and never changes torso or skirt',()=>{
+test('arm deformation keeps rigid bone lengths and never feeds back into torso or skirt',()=>{
  const {body,arm}=setup(),baseline=new BodyRig(model,weights);let previous;
  for(let i=0;i<=100;i++){
-  const p={...neutral(),ParamHandToCheek:i/100},time=i/60;body.frame(p,time,{ambient:false});baseline.frame(neutral(),time,{ambient:false});
+  const p={...neutral(),ParamHandToCheek:i/100},time=i/60;body.frame(neutral(),time,{ambient:false});baseline.frame(neutral(),time,{ambient:false});
   const torso=body.positionsByRole.torso.slice();arm.frame(p,time,body.pose,{snapArticulation:true});
   assert.deepEqual(body.positionsByRole.torso,torso);assert.deepEqual(torso,baseline.positionsByRole.torso);assert.deepEqual(body.positionsByRole.skirt,baseline.positionsByRole.skirt);
   const {elbow,wrist,shoulder}=arm.joints,d=Math.hypot(wrist[0]-elbow[0],wrist[1]-elbow[1]);

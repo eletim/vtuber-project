@@ -28,11 +28,14 @@ export class HairRig {
    const inertia=(-ax*.07-vx*.09+(left?-1:1)*ay*.025)*(bang?.025:config.amplitude/12);
    const idle=options.ambient===false?0:config.amplitude*.09*(1-Math.exp(-elapsed*2))*Math.sin(elapsed*.85+config.phase);
    const target=active?clamp(inertia+idle,-limit,limit):0;
-   const omega=config.speed*(rear?.8:1);
+   // Short face locks settle first; the long rear locks retain a softer after-swing.
+   const outer=layer.id.includes('outer');
+   const omega=config.speed*(rear?(outer?.72:.94):bang?1.12:1.08);
+   const damping=rear?(outer?.47:.62):bang?.78:.66;
    spring(state,'mid',target*.45,omega*1.7,.9,dt);
-   spring(state,'tail',target+state.mid*.25,omega,.52,dt);
+   spring(state,'tail',target+state.mid*.25,omega,damping,dt);
    spring(state,'vertical',active?clamp(-ay*.014,-6,6):0,omega*.9,.68,dt);
-   state.tail=clamp(state.tail,-limit,limit);state.x=state.tail;state.v=state.tailV;
+   if(Math.abs(state.tail)>limit){state.tail=clamp(state.tail,-limit,limit);if(state.tail*state.tailV>0)state.tailV=0;}state.x=state.tail;state.v=state.tailV;
    let points=this.geometry.get(layer.id);if(!points){points=new Float32Array(head.length);this.geometry.set(layer.id,points);}
    for(let i=0;i<head.length;i+=2){const y=this.rest[i+1]*h,u=active?smooth((y-root)/(tip-root)):0;
     const dx=state.mid*2*u*(1-u)+state.tail*u*u;

@@ -41,17 +41,20 @@ export class BodyRig {
     this.positions=this.positionsByRole.torso;
     this.body=new Spring(9);this.arms=[new Spring(6),new Spring(6)];
     this.elbows=[new Spring(5),new Spring(5)];
-    this.shoulder=new Spring(8);this.shift=new Spring(6);this.skirt=new Spring(4.5);
+    this.shoulder=new Spring(8);this.shift=new Spring(8);this.skirt=new Spring(4.5);
     this.bounce=new Spring(11);this.headLag=new Spring(6);
-    this.pelvis=new Spring(7);this.counterChest=new Spring(5.8);this.legs=[new Spring(6.5),new Spring(5.3)];
+    this.pelvis=new Spring(9);this.counterChest=new Spring(4.8);this.cheek=new Spring(5.2);this.legs=[new Spring(6.5),new Spring(5.3)];
     this.firstTime=null;this.lastTime=null;
   }
   frame(p,time,options={}){
     if(this.firstTime===null)this.firstTime=time;
     const elapsed=Math.max(0,time-this.firstTime);
     const dt=this.lastTime===null?0:clamp(time-this.lastTime,0,.1);this.lastTime=time;
-    const angleX=value(p,'ParamAngleX',-15,15),angleY=value(p,'ParamAngleY',-10,10);
-    const bodyTarget=clamp(value(p,'ParamBodyAngleX',-5,5)*.8+angleX*.04,-4.6,4.6);
+    // Intent leads the hand slightly; the neck keeps responding as the palm arrives.
+    const cheek=this.cheek.step(value(p,'ParamHandToCheek',0,1),dt);
+    const approach=smooth(.12,.9,cheek),contact=smooth(.62,1,cheek);
+    const angleX=clamp(value(p,'ParamAngleX',-15,15)-2.2*approach,-15,15),angleY=clamp(value(p,'ParamAngleY',-10,10)+.7*contact,-10,10);
+    const bodyTarget=clamp(value(p,'ParamBodyAngleX',-5,5)*.8+value(p,'ParamAngleX',-15,15)*.04,-4.6,4.6);
     const body=this.body.step(bodyTarget,dt);
     const breath=value(p,'ParamBreath',0,1,.5)-.5;
     const bounce=this.bounce.step(value(p,'ParamBodyBounce',-1,1)*6,dt);
@@ -59,8 +62,8 @@ export class BodyRig {
     const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*48,dt);
     const pelvisAngle=this.pelvis.step(clamp(shift/48*4.5-body*.12,-5,5),dt);
     // Ribcage balances the loaded hip with its own delayed angular response.
-    const chestAngle=this.counterChest.step(clamp(-pelvisAngle*1.25+body*.28-this.shift.v*.009,-6,6),dt);
-    const legAngles=this.legs.map((spring,side)=>spring.step(clamp(-pelvisAngle*.5+(side===0?1:-1)*(shift/48*3.3+bounce*.05),-6,6),dt));
+    const chestAngle=this.counterChest.step(clamp(-pelvisAngle*1.25+body*.28-this.shift.v*.012-.6*approach,-6,6),dt);
+    const legAngles=this.legs.map((spring,side)=>spring.step(clamp(-pelvisAngle*.5+(side===0?1:-1)*(shift/48*4.5+bounce*.05),-6,6),dt));
     const headLag=this.headLag.step(clamp(-this.body.v*.09-body*.18,-2,2),dt);
     const armAngles=[],elbowAngles=[];
     for(let side=0;side<2;side++){
@@ -77,7 +80,7 @@ export class BodyRig {
     const skirtTarget=clamp(value(p,'ParamSkirtSway',-1,1)*skirtLimit-this.body.v*.4-this.shift.v*.25-this.bounce.v*.035-body*.65,-skirtLimit,skirtLimit);
     const skirt=this.skirt.step(skirtTarget,dt);
     const bodyAngle=radians(chestAngle),bc=Math.cos(bodyAngle),bs=Math.sin(bodyAngle);
-    const headAngle=radians(clamp(value(p,'ParamAngleZ',-8,8)+headLag,-8,8)),hc=Math.cos(headAngle),hs=Math.sin(headAngle);
+    const headAngle=radians(clamp(value(p,'ParamAngleZ',-8,8)+headLag-2.8*approach-.7*contact,-8,8)),hc=Math.cos(headAngle),hs=Math.sin(headAngle);
     const [width,height]=this.size,[wx,wy]=this.config.waist;
     const torso=this.positionsByRole.torso,headPositions=this.positionsByRole.head,skirtPositions=this.positionsByRole.skirt;
     for(let i=0;i<this.weights.length;i++){
@@ -130,7 +133,7 @@ export class BodyRig {
         positions[i*2]=px/width;positions[i*2+1]=py/height;
       }
     }
-    this.pose={body:chestAngle,pelvisAngle,legs:legAngles,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
+    this.pose={cheek,approach,contact,body:chestAngle,pelvisAngle,legs:legAngles,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
     // One rigid pelvis parent transports torso, skirt and legs together. Bounce
     // is a translation of the complete skeleton, never a torso scale field.
     // Chest counter-rotation connects through abdomen into the pelvis attachment.

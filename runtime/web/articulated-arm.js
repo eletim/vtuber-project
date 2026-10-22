@@ -16,9 +16,11 @@ export class ArticulatedArm {
   if(options.snapArticulation){this.cloth=clothTarget;this.clothVelocity=0;}
   else{const speed=9,offset=this.cloth-clothTarget,c=this.clothVelocity+speed*offset,e=Math.exp(-speed*dt);this.cloth=clothTarget+(offset+c*dt)*e;this.clothVelocity=(this.clothVelocity-speed*c*dt)*e;}
   const t=clamp(this.amount),[width,height]=this.model.size,S=config.shoulder,E=config.elbow,WR=config.wristRest,WU=config.wristRaised;
-  const a0=Math.atan2(WR[1]-E[1],WR[0]-E[0]),a1=Math.atan2(WU[1]-E[1],WU[0]-E[0]),flex=(a1-a0)*(config.forwardPosePaint?Math.sin(Math.PI*smooth(0,1,t)/2):t);
+  const a0=Math.atan2(WR[1]-E[1],WR[0]-E[0]),a1=Math.atan2(WU[1]-E[1],WU[0]-E[0]),flex=(a1-a0)*(config.forwardPosePaint?(.55*Math.sin(Math.PI*smooth(0,1,t)/2)+.45*(t+.18*Math.sin(Math.PI*t))):t);
   const length=Math.hypot(WU[0]-E[0],WU[1]-E[1]);
-  const depthAngle=1.095*Math.sin(Math.PI*t)*(1+.3*Math.cos(Math.PI*t)**2),projection=Math.cos(depthAngle);
+  // Lowering relaxes into a slightly deeper route, continuously from velocity.
+  const returning=Math.tanh(Math.max(0,-this.velocity)*2)*Math.sin(Math.PI*t)**2;
+  const depthAngle=(1.095+.09*returning)*Math.sin(Math.PI*t)*(1+.3*Math.cos(Math.PI*t)**2),projection=Math.cos(depthAngle);
   const lift=Math.sin(Math.PI*t),projectedElbow=[E[0]+12*lift,E[1]-14*lift];
   const direction=[Math.cos(a0+flex),Math.sin(a0+flex)],normal=[-direction[1],direction[0]],bindDirection=[Math.cos(a1),Math.sin(a1)],bindNormal=[-bindDirection[1],bindDirection[0]];
   const W=[projectedElbow[0]+direction[0]*length*projection,projectedElbow[1]+direction[1]*length*projection];
@@ -30,7 +32,7 @@ export class ArticulatedArm {
   const projectLength=u=>{const d=u-length,z=clamp((d-20)/55),integral=d<=20?0:d>=75?d-47.5:55*(z**3-.5*z**4);const handZ=clamp(d/20),handIntegral=d<=0?0:d>=20?d-10:20*(handZ**3-.5*handZ**4);return u*projection+(1-projection)*(config.forwardPosePaint?handIntegral:.9*integral);};
   const projectForearm=q=>{const x=q[0]-E[0],y=q[1]-E[1],u=x*bindDirection[0]+y*bindDirection[1],v=x*bindNormal[0]+y*bindNormal[1],along=projectLength(u);return[projectedElbow[0]+along*direction[0]+v*normal[0],projectedElbow[1]+along*direction[1]+v*normal[1]];};
   const projectHand=q=>projectForearm(q);
-  const wristRoll=(config.forwardPosePaint?(-60*smooth(.35,1,t)-30*(1-smooth(0,.35,t))-22*Math.sin(Math.PI*t)**2):26*Math.sin(Math.PI*t)**2)*Math.PI/180;
+  const wristRoll=(config.forwardPosePaint?(-60*smooth(.35,1,t)-30*(1-smooth(0,.35,t))-22*Math.sin(Math.PI*t)**2+7*returning):26*Math.sin(Math.PI*t)**2)*Math.PI/180;
   // Correct the authored bent wrist over the palm-base transition, not a hinge.
   // The hand and the terminal forearm share exactly the same transform.
   const wristShape=point=>{
@@ -51,7 +53,7 @@ export class ArticulatedArm {
   const upperAngle=(bodyPose?.arms?.[0]||0)*Math.PI/180;
   const bodyAngle=(bodyPose?.body||0)*Math.PI/180,waist=this.model.bodyRig.waist;
   const parent=point=>{let q=rotate(point,S,upperAngle);q=rotate(q,waist,bodyAngle);return pelvisPoint(q[0],q[1]-(bodyPose?.shoulder||0)-(Number(parameters.ParamBreath??.5)-.5)*.7,bodyPose||{});};
-  const blend=1;this.joints={shoulder:parent(S),elbow:parent(projectedElbow),wrist:parent(W),amount:t,blend,flex,wristRoll,forearmDepth:length*Math.sin(depthAngle),projection,upperDepth:Math.sqrt(Math.max(0,upperLength**2-upperProjected**2))};
+  const blend=1;this.joints={shoulder:parent(S),elbow:parent(projectedElbow),wrist:parent(W),amount:t,returning,blend,flex,wristRoll,forearmDepth:length*Math.sin(depthAngle),projection,upperDepth:Math.sqrt(Math.max(0,upperLength**2-upperProjected**2))};
   for(const layer of this.model.bodyLayers){
    const a=layer.articulation;if(!a)continue;
    let positions=this.geometry.get(layer.id);if(!positions){positions=new Float32Array(this.rest.length);this.geometry.set(layer.id,positions);}

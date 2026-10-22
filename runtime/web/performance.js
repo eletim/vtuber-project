@@ -17,14 +17,14 @@ export function performancePose(base,time,performance={enabled:true},mouth=0){
   const speaking=clamp(mouth),pulse=Math.sin(t*4.1)*Math.sin(t*1.37);
   let x=1.7*Math.sin(t*.63)+.55*Math.sin(t*1.19),y=.65*Math.sin(t*.89),z=.85*Math.sin(t*.49),body=.5*Math.sin(t*.53);
   y+=speaking*1.6*pulse;z+=speaking*.7*Math.sin(t*1.8);
-  const onset=Math.min(1,Math.max(0,age)*2.5),fade=performance.until?clamp((performance.until-t)*2):1;
+  const onset=ease(age/.4),fade=performance.until?ease((performance.until-t)/.7):1;
   const weight=onset*fade;
   if(emotion==='happy'){
     z+=weight*1.8*Math.sin(age*1.7);body+=weight*2.1*Math.sin(age*1.7);
     add(pose,'ParamBodyShiftX',weight*.78*Math.sin(age*1.7));
     // Two small buoyant weight transfers, then quiet. Legs have no knee artwork.
     const beat=Math.max(0,age)%5.6;
-    const hop=a=>a<0||a>1.1?0:a<.3?-.5*Math.sin(Math.PI*a/.3):Math.sin(Math.PI*(a-.3)/.8);
+    const hop=a=>a<0||a>1.1?0:a<.3?-.5*Math.sin(Math.PI*a/.3)**2:Math.sin(Math.PI*(a-.3)/.8)**2;
     add(pose,'ParamBodyBounce',weight*(hop(beat)+.8*hop(beat-1.35)));
     add(pose,'ParamArmLOpen',weight*.32*(hop(beat)+.45*hop(beat-1.35)));
     add(pose,'ParamArmROpen',weight*.23*(hop(beat-.16)+hop(beat-1.5)));
