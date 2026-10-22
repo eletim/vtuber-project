@@ -14,6 +14,12 @@ class Spring {
   }
 }
 
+// Shared pelvis parent used by every surface, including articulated limbs.
+export function pelvisPoint(x,y,pose){
+ const a=radians(pose.pelvisAngle||0),c=Math.cos(a),s=Math.sin(a),dx=x-543,dy=y-1400;
+ return [543+c*dx-s*dy+(pose.shift||0),1400+s*dx+c*dy-(pose.bounce||0)];
+}
+
 export const bodyRoles=Object.freeze(['root','skirt','torso','armLeft','armRight','head']);
 
 // Each role owns an independent surface. Texture alpha only controls coverage;
@@ -47,8 +53,8 @@ export class BodyRig {
     const bodyTarget=clamp(value(p,'ParamBodyAngleX',-5,5)*.8+angleX*.04,-4.6,4.6);
     const body=this.body.step(bodyTarget,dt);
     const breath=value(p,'ParamBreath',0,1,.5)-.5;
-    const bounce=this.bounce.step(value(p,'ParamBodyBounce',-1,1)*22,dt);
-    const shoulder=this.shoulder.step(value(p,'ParamShoulderY',-1,1)*3,dt)+bounce;
+    const bounce=this.bounce.step(value(p,'ParamBodyBounce',-1,1)*10,dt);
+    const shoulder=this.shoulder.step(value(p,'ParamShoulderY',-1,1)*.6,dt);
     const shift=this.shift.step(value(p,'ParamBodyShiftX',-1,1)*28,dt);
     const headLag=this.headLag.step(clamp(-this.body.v*.09-body*.18,-2,2),dt);
     const armAngles=[],elbowAngles=[];
@@ -60,12 +66,12 @@ export class BodyRig {
       elbowAngles.push(radians(this.elbows[side].step(clamp(-this.arms[side].x*.35,-1.12,1.12),dt)));
     }
     // Delayed hem inertia follows the body, never an arm. The entire waist row
-    // remains fixed, even under a full manual skirt command. The approved
+    // remains fixed relative to the pelvis parent, even under a full manual skirt command. The approved
     // hidden hem artwork supports at most three source pixels of reveal.
     const skirtLimit=clamp(this.config.skirtRevealLimitPixels,0,3);
     const skirtTarget=clamp(value(p,'ParamSkirtSway',-1,1)*skirtLimit-this.body.v*.4-this.shift.v*.25-this.bounce.v*.035-body*.65,-skirtLimit,skirtLimit);
     const skirt=this.skirt.step(skirtTarget,dt);
-    const bodyAngle=radians(body),bc=Math.cos(bodyAngle),bs=Math.sin(bodyAngle);
+    const bodyAngle=radians(body*.35),bc=Math.cos(bodyAngle),bs=Math.sin(bodyAngle);
     const headAngle=radians(clamp(value(p,'ParamAngleZ',-8,8)+headLag,-8,8)),hc=Math.cos(headAngle),hs=Math.sin(headAngle);
     const [width,height]=this.size,[wx,wy]=this.config.waist;
     const torso=this.positionsByRole.torso,headPositions=this.positionsByRole.head,skirtPositions=this.positionsByRole.skirt;
@@ -82,7 +88,7 @@ export class BodyRig {
       px+=(x-543)*breath*.002*chest*central;
       py-=breath*(.7*(1-smooth(570,950,y))+1.1*chest*central);
       const parent=1-smooth(875,wy,y),tx=px-wx,ty=py-wy;
-      px+=(bc*tx-bs*ty-tx)*parent+shift*parent;
+      px+=(bc*tx-bs*ty-tx)*parent;
       py+=(bs*tx+bc*ty-ty)*parent-shoulder*(1-smooth(650,wy,y));
       torso[i*2]=px/width;torso[i*2+1]=py/height;
       px+=(options.ambient===false||this.separateHair?0:hair)*.55*(Math.sin(elapsed*1.6+y*.007)-Math.sin(y*.007));
@@ -106,12 +112,20 @@ export class BodyRig {
         // Inherit the shoulder's complete body transform. No waist fade can
         // pin a low hand to the skirt, and no arm motion feeds back to torso.
         ax=px-wx;ay=py-wy;
-        px=wx+bc*ax-bs*ay+shift;
+        px=wx+bc*ax-bs*ay;
         py=wy+bs*ax+bc*ay-shoulder-breath*.7*(1-smooth(570,950,anchor[1]));
         positions[i*2]=px/width;positions[i*2+1]=py/height;
       }
     }
-    this.pose={body,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
+    this.pose={body:body*.35,pelvisAngle:body*.65,arms:this.arms.map(v=>v.x),elbows:this.elbows.map(v=>v.x),shoulder,shift,skirt,bounce,headLag};
+    // One rigid pelvis parent transports torso, skirt and legs together. Bounce
+    // is a translation of the complete skeleton, never a torso scale field.
+    // The small lumbar rotation fades to zero at the shared waist attachment.
+    this.positionsByRole.root.set(this.rest);
+    for(const positions of Object.values(this.positionsByRole))for(let i=0;i<positions.length;i+=2){
+      const q=pelvisPoint(positions[i]*width,positions[i+1]*height,this.pose);
+      positions[i]=q[0]/width;positions[i+1]=q[1]/height;
+    }
     // Legacy callers receive torso geometry. Multi-part callers must render
     // every independent positionsByRole surface in model.bodyLayers order.
     return this.positions;

@@ -1,3 +1,4 @@
+import {pelvisPoint} from './body-rig.js';
 const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
 const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t);};
 const rotate=(point,pivot,angle)=>{const c=Math.cos(angle),s=Math.sin(angle),x=point[0]-pivot[0],y=point[1]-pivot[1];return[pivot[0]+c*x-s*y,pivot[1]+s*x+c*y];};
@@ -17,7 +18,7 @@ export class ArticulatedArm {
   const W=[E[0]+Math.cos(a0+flex)*length,E[1]+Math.sin(a0+flex)*length];
   const upperAngle=(bodyPose?.arms?.[0]||0)*Math.PI/180;
   const bodyAngle=(bodyPose?.body||0)*Math.PI/180,waist=this.model.bodyRig.waist;
-  const parent=point=>{let q=rotate(point,S,upperAngle);q=rotate(q,waist,bodyAngle);return[q[0]+(bodyPose?.shift||0),q[1]-(bodyPose?.shoulder||0)-(Number(parameters.ParamBreath??.5)-.5)*.7];};
+  const parent=point=>{let q=rotate(point,S,upperAngle);q=rotate(q,waist,bodyAngle);return pelvisPoint(q[0],q[1]-(bodyPose?.shoulder||0)-(Number(parameters.ParamBreath??.5)-.5)*.7,bodyPose||{});};
   const blend=1;this.joints={shoulder:parent(S),elbow:parent(E),wrist:parent(W),amount:t,blend,flex};
   for(const layer of this.model.bodyLayers){
    const a=layer.articulation;if(!a)continue;

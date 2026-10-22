@@ -19,7 +19,7 @@ test('head acceleration drives a delayed hair reversal and decays after the body
  assert.ok(movingPeak>3&&velocityPeak>20);assert.ok(Math.max(...trailing)>.1&&Math.min(...trailing)<-.1,'inertial tail crosses rest after the torso has nearly stopped');
  assert.ok([...hair.states.values()].every(s=>Math.abs(s.x)<.001),'tail settles without continued drive');
 });
-test('larger planted weight shifts and bounce preserve rigid face width and skirt coverage',()=>{
+test('shared pelvis weight shifts and bounce preserve rigid face width and skirt coverage',()=>{
  const {body}=setup(),[nx,ny]=model.mesh,[w,h]=model.size;
  const idx=(x,y)=>(Math.round(y/h*ny)*(nx+1)+Math.round(x/w*nx))*2;
  const a=idx(450,200),b=idx(630,200),length=Math.hypot((body.rest[a]-body.rest[b])*w,(body.rest[a+1]-body.rest[b+1])*h);
@@ -33,7 +33,7 @@ test('larger planted weight shifts and bounce preserve rigid face width and skir
    const area=((positions[i1*2]-positions[i0*2])*(positions[i2*2+1]-positions[i0*2+1])-(positions[i1*2+1]-positions[i0*2+1])*(positions[i2*2]-positions[i0*2]))*nx*ny;minArea=Math.min(minArea,area);
   }
  }
- assert.ok(shift>24&&bounce>17);assert.ok(minArea>.25);
+ assert.ok(shift>24&&bounce>8);assert.ok(minArea>.25);
 });
 test('happy hops include anticipation and a quiet interval while neutral never bounces',()=>{
  let low=0,high=0;

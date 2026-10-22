@@ -95,7 +95,7 @@ test('autonomous accents respect saturated manual limbs and use only remaining h
   }
 });
 
-test('all 512 settled control corners retain positive triangle area and a fixed pelvis',()=>{
+test('all 512 settled control corners retain positive triangle area and a shared pelvis',()=>{
   const r=makeRig(),clamp=(x,lo,hi)=>Math.min(hi,Math.max(lo,x));let min=Infinity;
   for(let bits=0;bits<512;bits++){
     const sign=i=>(bits>>i)&1?1:-1;
@@ -110,7 +110,7 @@ test('all 512 settled control corners retain positive triangle area and a fixed 
     }
     r.shoulder.x=p.ParamShoulderY*3;r.shoulder.v=0;r.shift.x=p.ParamBodyShiftX*28;r.shift.v=0;r.lastTime=0;
     const positions=r.frame(p,0);min=Math.min(min,minimumArea(positions));
-    for(const y of [1390,1448])assert.deepEqual(xy(positions,543,y),xy(r.rest,543,y));
+    for(const y of [1390,1448])assert.deepEqual(xy(positions,543,y),xy(r.positionsByRole.root,543,y));
   }
   assert.ok(min>.25,`minimum normalized area ${min}`);
   assert.deepEqual(r.weights,skinning.weights,'runtime field must not mutate source ownership');
