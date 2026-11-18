@@ -1,0 +1,170 @@
+[
+  {
+    "version": "v39",
+    "x": -15,
+    "y": 0,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v39",
+    "x": 15,
+    "y": 0,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v39",
+    "x": 0,
+    "y": -10,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v39",
+    "x": 0,
+    "y": 10,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v39",
+    "x": -15,
+    "y": -10,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v39",
+    "x": 15,
+    "y": 10,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v40",
+    "x": -15,
+    "y": 0,
+    "faceHorizontalEdgeScaleMin": 0.9155247916372369,
+    "faceHorizontalEdgeScaleMax": 1.0197839925613332
+  },
+  {
+    "version": "v40",
+    "x": 15,
+    "y": 0,
+    "faceHorizontalEdgeScaleMin": 0.9120663757957228,
+    "faceHorizontalEdgeScaleMax": 1.016325698580755
+  },
+  {
+    "version": "v40",
+    "x": 0,
+    "y": -10,
+    "faceHorizontalEdgeScaleMin": 1.000001241801327,
+    "faceHorizontalEdgeScaleMax": 1.0006526903089168
+  },
+  {
+    "version": "v40",
+    "x": 0,
+    "y": 10,
+    "faceHorizontalEdgeScaleMin": 1.000001241801327,
+    "faceHorizontalEdgeScaleMax": 1.0006526903089168
+  },
+  {
+    "version": "v40",
+    "x": -15,
+    "y": -10,
+    "faceHorizontalEdgeScaleMin": 0.9161490545399779,
+    "faceHorizontalEdgeScaleMax": 1.0204240285816513
+  },
+  {
+    "version": "v40",
+    "x": 15,
+    "y": 10,
+    "faceHorizontalEdgeScaleMin": 0.9127818985530699,
+    "faceHorizontalEdgeScaleMax": 1.0168881614392047
+  },
+  {
+    "version": "v41",
+    "x": -15,
+    "y": 0,
+    "faceHorizontalEdgeScaleMin": 0.7303416594992141,
+    "faceHorizontalEdgeScaleMax": 1.205017523782276
+  },
+  {
+    "version": "v41",
+    "x": 15,
+    "y": 0,
+    "faceHorizontalEdgeScaleMin": 0.7268364208568772,
+    "faceHorizontalEdgeScaleMax": 1.201510618856629
+  },
+  {
+    "version": "v41",
+    "x": 0,
+    "y": -10,
+    "faceHorizontalEdgeScaleMin": 1.0000615586179777,
+    "faceHorizontalEdgeScaleMax": 1.0127844349909207
+  },
+  {
+    "version": "v41",
+    "x": 0,
+    "y": 10,
+    "faceHorizontalEdgeScaleMin": 1.0000615586179777,
+    "faceHorizontalEdgeScaleMax": 1.0127844349909207
+  },
+  {
+    "version": "v41",
+    "x": -15,
+    "y": -10,
+    "faceHorizontalEdgeScaleMin": 0.7472494457101835,
+    "faceHorizontalEdgeScaleMax": 1.2156477879641974
+  },
+  {
+    "version": "v41",
+    "x": 15,
+    "y": 10,
+    "faceHorizontalEdgeScaleMin": 0.7443272882211929,
+    "faceHorizontalEdgeScaleMax": 1.2118627461188283
+  },
+  {
+    "version": "v42",
+    "x": -15,
+    "y": 0,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v42",
+    "x": 15,
+    "y": 0,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v42",
+    "x": 0,
+    "y": -10,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v42",
+    "x": 0,
+    "y": 10,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v42",
+    "x": -15,
+    "y": -10,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  },
+  {
+    "version": "v42",
+    "x": 15,
+    "y": 10,
+    "faceHorizontalEdgeScaleMin": 1,
+    "faceHorizontalEdgeScaleMax": 1
+  }
+]

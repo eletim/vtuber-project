@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: ribcage counterbalances the loaded pelvis and left/right thighs have distinct lag
+ok 1 - ribcage counterbalances the loaded pelvis and left/right thighs have distinct lag
+  ---
+  duration_ms: 555.151
+  type: 'test'
+  ...
+# Subtest: independent chest-abdomen and abdomen-pelvis cut strips stay coincident; thigh roots stay under skirt
+ok 2 - independent chest-abdomen and abdomen-pelvis cut strips stay coincident; thigh roots stay under skirt
+  ---
+  duration_ms: 1217.4884
+  type: 'test'
+  ...
+# Subtest: cloth trails the raised arm while wrist and forearm lengths remain rigid
+ok 3 - cloth trails the raised arm while wrist and forearm lengths remain rigid
+  ---
+  duration_ms: 2461.4356
+  type: 'test'
+  ...
+# Subtest: happy gesture no longer opens both arms in phase
+ok 4 - happy gesture no longer opens both arms in phase
+  ---
+  duration_ms: 1.6567
+  type: 'test'
+  ...
+# Subtest: production renderer loads cropped textures and preserves independent draws across repeated FBO resolves
+not ok 5 - production renderer loads cropped textures and preserves independent draws across repeated FBO resolves
+  ---
+  duration_ms: 216.339
+  type: 'test'
+  location: 'C:\\Users\\rext7\\Documents\\Codex\\2026-10-22\\task\\vtuber-project\\runtime\\tests\\renderer-load.test.js:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(parts.every(draw=>draw.uv===renderer.uvBuffer))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/rext7/Documents/Codex/2026-10-22/task/vtuber-project/runtime/tests/renderer-load.test.js:49:14)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: wrist correction is continuous across the hand-forearm seam and keeps visible mesh triangles positive
+not ok 6 - wrist correction is continuous across the hand-forearm seam and keeps visible mesh triangles positive
+  ---
+  duration_ms: 740.7694
+  type: 'test'
+  location: 'C:\\Users\\rext7\\Documents\\Codex\\2026-10-22\\task\\vtuber-project\\runtime\\tests\\wrist-weight.test.js:8:1'
+  failureType: 'testCodeFailure'
+  error: 'visible arm surface minimum area 0.2506475647706452'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/rext7/Documents/Codex/2026-10-22/task/vtuber-project/runtime/tests/wrist-weight.test.js:20:9)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: larger weight transfer moves pelvis and differentiates thighs without changing hip radii
+ok 7 - larger weight transfer moves pelvis and differentiates thighs without changing hip radii
+  ---
+  duration_ms: 440.3011
+  type: 'test'
+  ...
+# Subtest: one opaque cuff stays behind drape through lift and lowering without an alpha transition
+ok 8 - one opaque cuff stays behind drape through lift and lowering without an alpha transition
+  ---
+  duration_ms: 2331.0349
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 6
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4366.5212

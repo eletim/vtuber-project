@@ -1,0 +1,20 @@
+{
+  "description": "Same authored source-axis samples, same joint poses. Distance of middle shaft samples from endpoint chord in model pixels.",
+  "samples": [
+    {
+      "amount": 0.5,
+      "v39": 11.519898904355907,
+      "v40": 0.00006377731690561115
+    },
+    {
+      "amount": 0.75,
+      "v39": 17.942290654478796,
+      "v40": 0.0000568914316296161
+    },
+    {
+      "amount": 1,
+      "v39": 20.791141104238793,
+      "v40": 0.00003568276044876089
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "source_psd": "assets/parts/v10/koma_integrated_v10.psd",
+  "source_sha256": "25e5cdba8fb464bf58f730ae2572a9d52325c9e8ef27516172dcc8c7c6f42540",
+  "v14_psd": "assets/parts/v14/koma_expression_collection_v14.psd",
+  "v14_sha256": "b73f652330933d92597e26d072089d630acf5d5e4cca3dee5a05a02e155c766e",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "original_pixel_layers_preserved": 66,
+  "expression_groups": 7,
+  "new_pixel_layers": 49,
+  "total_pixel_layers": 115,
+  "neutral_changed_pixels": 0,
+  "legacy_combinations_exact": 8,
+  "states": {
+    "neutral": {
+      "combinations_reloaded": 8,
+      "psd_runtime_exact": true,
+      "v14_authored_pose_exact": true,
+      "alpha_changes": 0,
+      "outside_expression_face_changes": "Legacy unchanged"
+    },
+    "soft_smile": {
+      "combinations_reloaded": 8,
+      "psd_runtime_exact": true,
+      "v14_authored_pose_exact": true,
+      "alpha_changes": 0,
+      "outside_expression_face_changes": 0
+    },
+    "big_smile": {
+      "combinations_reloaded": 8,
+      "psd_runtime_exact": true,
+      "v14_authored_pose_exact": true,
+      "alpha_changes": 0,
+      "outside_expression_face_changes": 0
+    },
+    "worried": {
+      "combinations_reloaded": 8,
+      "psd_runtime_exact": true,
+      "v14_authored_pose_exact": true,
+      "alpha_changes": 0,
+      "outside_expression_face_changes": 0
+    },
+    "surprised": {
+      "combinations_reloaded": 8,
+      "psd_runtime_exact": true,
+      "v14_authored_pose_exact": true,
+      "alpha_changes": 0,
+      "outside_expression_face_changes": 0
+    },
+    "bashful": {
+      "combinations_reloaded": 8,
+      "psd_runtime_exact": true,
+      "v14_authored_pose_exact": true,
+      "alpha_changes": 0,
+      "outside_expression_face_changes": 0
+    },
+    "displeased": {
+      "combinations_reloaded": 8,
+      "psd_runtime_exact": true,
+      "v14_authored_pose_exact": true,
+      "alpha_changes": 0,
+      "outside_expression_face_changes": 0
+    },
+    "thinking": {
+      "combinations_reloaded": 8,
+      "psd_runtime_exact": true,
+      "v14_authored_pose_exact": true,
+      "alpha_changes": 0,
+      "outside_expression_face_changes": 0
+    }
+  },
+  "sources": {
+    "soft_smile": {
+      "file": "assets/parts/v15/sources/soft_smile_blink_speech.png",
+      "sha256": "a6087de94872fd735e102322b2ceecb039fb357c3188c6e9ecbc8bc009f03bab",
+      "original_size": [
+        1448,
+        1086
+      ],
+      "mapped_crop": [
+        340,
+        165,
+        740,
+        465
+      ],
+      "translation": [
+        0,
+        0
+      ]
+    },
+    "big_smile": {
+      "file": "assets/parts/v15/sources/big_smile_blink_speech.png",
+      "sha256": "c95e29e8eb2e14d0d74fa214941393d7e8cb4f887f1fc330d449cb15676552b1",
+      "original_size": [
+        1448,
+        1086
+      ],
+      "mapped_crop": [
+        340,
+        165,
+        740,
+        465
+      ],
+      "translation": [
+        0,
+        0
+      ]
+    },
+    "worried": {
+      "file": "assets/parts/v15/sources/worried_blink_speech.png",
+      "sha256": "cf228816a56ea937d8268e94bf34e076ea60981c70485222285154dc225846f1",
+      "original_size": [
+        1448,
+        1086
+      ],
+      "mapped_crop": [
+        340,
+        165,
+        740,
+        465
+      ],
+      "translation": [
+        0,
+        0
+      ]
+    },
+    "surprised": {
+      "file": "assets/parts/v15/sources/surprised_blink_speech.png",
+      "sha256": "89625b11b78ce24e718cff1e8b1c1ee290411d9649baa0ecd8b07e103ed0cf91",
+      "original_size": [
+        1448,
+        1086
+      ],
+      "mapped_crop": [
+        340,
+        165,
+        740,
+        465
+      ],
+      "translation": [
+        0,
+        0
+      ]
+    },
+    "bashful": {
+      "file": "assets/parts/v15/sources/bashful_blink_speech.png",
+      "sha256": "6d41acbbdd21556774118d571dc0810245896d993abfe562d36ad7f85756feb6",
+      "original_size": [
+        1448,
+        1086
+      ],
+      "mapped_crop": [
+        340,
+        165,
+        740,
+        465
+      ],
+      "translation": [
+        0,
+        0
+      ]
+    },
+    "displeased": {
+      "file": "assets/parts/v15/sources/displeased_blink_speech.png",
+      "sha256": "44ae37fd2cdb16cd2bdfad8a8f02948cb5a21c978dc8e65ca5b147365b2bd51a",
+      "original_size": [
+        1448,
+        1086
+      ],
+      "mapped_crop": [
+        340,
+        165,
+        740,
+        465
+      ],
+      "translation": [
+        0,
+        0
+      ]
+    },
+    "thinking": {
+      "file": "assets/parts/v15/sources/thinking_blink_speech.png",
+      "sha256": "0ec29447f0f24735400c82dc5e6e98a5b45cef4bbdf8aaa9430425421106de4b",
+      "original_size": [
+        1448,
+        1086
+      ],
+      "mapped_crop": [
+        340,
+        165,
+        740,
+        465
+      ],
+      "translation": [
+        0,
+        0
+      ]
+    }
+  },
+  "underpaint_source": "assets/parts/v9/face_skin_painted_source.png",
+  "underpaint_source_sha256": "b6715c07d648a5ebe47b5c4ab4c15242a792d0f6dffbf19959b2dd23f5b1f474",
+  "underpaint_source_crop": [
+    305,
+    130,
+    730,
+    480
+  ],
+  "artwork_method": "Built-in image-tool endpoint paintings and existing approved painted sources only; code masks and packaging only.",
+  "scope": "Facial animation only. Existing thigh cutouts and hair matte are unchanged, not repaired. Not a Cubism moc3 export.",
+  "visual_review": "PASS: all eight hidden feature plates clean at 3x; all endpoint paintings reviewed. Intermediate runtime motion is checked separately.",
+  "independent_psd_render": "PASS: independent raw PSD decoder and psd-tools 1.25.0; all 64 endpoints; at most 1 byte of third-party rounding.",
+  "psd_sha256": "aeedcf0e025b7d18f61586be3e070b12987be9890c01bec26475677b300a3c10",
+  "independent_review": "assets/parts/v15/independent_art_review.json",
+  "unit_tests": "PASS: 9 tests including all 64 endpoint combinations and all 8 legacy states.",
+  "intermediate_motion_review": "PASS WITH LIMITATIONS: final runtime uses authored two-state eye blinks and continuous mouth-core/body motion. No critical ghosting or deformation remains; eyes do not have geometric eyelid interpolation, and a faint mouth skin-tone boundary is visible when enlarged.",
+  "runtime_expression_helper_sha256": "bf714f61c2738de340dcbbd54f8d2f1b02c163b335fe9ba718c947af30a8c3ca",
+  "runtime_manifest_sha256": "bb9810be07b74ec2591485bf3f3c44e804c337720027d4033c93b0ac5efddee1",
+  "overall_status": "PASS WITH LIMITATIONS",
+  "environment_validation_limitations": [
+    "No actual browser end-to-end render verification; the offline renderer follows the exported runtime helpers.",
+    "No actual Photoshop application end-to-end test; PSD structure and endpoints were checked by independent raw decoding and psd-tools 1.25.0."
+  ]
+}

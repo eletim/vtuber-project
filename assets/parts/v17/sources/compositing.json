@@ -1,0 +1,119 @@
+{
+  "original": "/workspace/shared/vtuber-expressions-v14/runtime/model/expressions/surprised/mouth_closed.png",
+  "original_sha256": "2ae283bd6577af767f61b9d63dd921082ffd98debdec95a8d06cdcefa0ff8427",
+  "image_tool_source": "/workspace/scratch/f1d5e45451e6/generated_images/exec-78e29265-ac6d-403e-b883-d4bf9ce6f25b.png",
+  "image_tool_source_sha256": "0dc3b86ea7056a7794bd5e6f73e4642a5b4dd10dfa108ed1d8ddd674e4c4c99a",
+  "candidate": "/workspace/shared/vtuber-v17-sampling/candidate_surprised/mouth_closed.png",
+  "candidate_sha256": "08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74",
+  "source_mapping": {
+    "original_size": [
+      1448,
+      1086
+    ],
+    "resize_to": [
+      400,
+      300
+    ],
+    "full_crop": [
+      340,
+      165,
+      740,
+      465
+    ],
+    "translation": [
+      0,
+      0
+    ]
+  },
+  "rect": [
+    510,
+    321,
+    601,
+    390
+  ],
+  "alpha_exact": true,
+  "original_protected_pixels_exact": true,
+  "new_lip_ink_included_in_protected_mask": true,
+  "original_ink_bbox": [
+    540,
+    353,
+    561,
+    364
+  ],
+  "generated_ink_bbox": [
+    540,
+    354,
+    562,
+    363
+  ],
+  "protected_lip_bbox": [
+    538,
+    351,
+    564,
+    366
+  ],
+  "original_lip_ink_pixels": 146,
+  "generated_lip_ink_pixels": 123,
+  "protected_lip_pixels": 267,
+  "other_ink_protected_pixels": 142,
+  "changed_rgb_pixels": 4616,
+  "changed_bbox": [
+    511,
+    321,
+    601,
+    390
+  ],
+  "fixed_skin_count": 3408,
+  "original_vs_approved_open_skin": {
+    "mean_RGB": [
+      -5.1059,
+      -6.7154,
+      -6.1719
+    ],
+    "median_luminance": -6.647,
+    "p05_p95_luminance": [
+      -8.7653,
+      -3.5662
+    ],
+    "skin_pixels_luminance_below_minus3": 3283
+  },
+  "candidate_vs_approved_open_skin": {
+    "mean_RGB": [
+      1.3263,
+      1.096,
+      0.9437
+    ],
+    "median_luminance": 0.9278,
+    "p05_p95_luminance": [
+      -0.5748,
+      2.9278
+    ],
+    "skin_pixels_luminance_below_minus3": 39
+  },
+  "mapped_source_vs_approved_open_skin": {
+    "mean_RGB": [
+      1.3589,
+      1.1376,
+      0.98
+    ],
+    "median_luminance": 0.9278,
+    "p05_p95_luminance": [
+      -0.5748,
+      2.9278
+    ],
+    "skin_pixels_luminance_below_minus3": 31
+  },
+  "candidate_vs_base_skin": {
+    "mean_RGB": [
+      -0.7729,
+      0.5892,
+      1.5631
+    ],
+    "median_luminance": 0.5748,
+    "p05_p95_luminance": [
+      -1.0,
+      1.647
+    ],
+    "skin_pixels_luminance_below_minus3": 10
+  }
+}

@@ -15,14 +15,14 @@ function areas(r,positions){
  }
  return minimum;
 }
-test('neutral mesh preserves the original drawing; pelvis/base remains planted',()=>{
+test('neutral mesh preserves the original drawing; pelvis/base follows the shared parent',()=>{
  const r=rig(),base=r.frame(neutral(),0);
  assert.deepEqual(base,r.rest);
  for(let i=0;i<180;i++)r.frame({...neutral(),ParamBodyAngleX:5,ParamAngleX:15},i/60);
  const bottom=vertex(r,543,1448)*2;
- assert.equal(r.positions[bottom],r.rest[bottom]);assert.equal(r.positions[bottom+1],r.rest[bottom+1]);
+ assert.equal(r.positions[bottom],r.positionsByRole.root[bottom]);assert.equal(r.positions[bottom+1],r.positionsByRole.root[bottom+1]);
  const hand=vertex(r,125,1340)*2;
- const distance=Math.hypot((r.positions[hand]-r.rest[hand])*model.size[0],(r.positions[hand+1]-r.rest[hand+1])*model.size[1]);
+ const distance=Math.hypot((r.positionsByRole.armLeft[hand]-r.rest[hand])*model.size[0],(r.positionsByRole.armLeft[hand+1]-r.rest[hand+1])*model.size[1]);
  assert.ok(distance>10,'hands inherit the shoulder/body transform instead of being pinned at hip height');
 });
 test('head tilt keeps chest attached; arm springs follow torso with independent lag',()=>{

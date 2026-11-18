@@ -1,0 +1,14 @@
+{
+  "roi": [
+    350,
+    265,
+    425,
+    435
+  ],
+  "saturated_pixels": 23,
+  "alpha_values": [
+    1
+  ],
+  "max_rgb_contribution_on_black": 1,
+  "interpretation": "Not intentional colors. Low-alpha premultiplied 8-bit quantization becomes saturated unassociated RGB on PNG export. Opaque MP4 and correct background composition weight RGB by alpha."
+}

@@ -1,0 +1,3999 @@
+{
+  "errors": [],
+  "codec": "avc1.424020",
+  "encodedSamples": 292,
+  "decodedFrames": 292,
+  "allEncodedSamplesDecoded": true,
+  "frames": [
+    {
+      "index": 0,
+      "time": 0,
+      "meanDelta": 0,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 0,
+      "changedOver35": 0,
+      "file": "frame-0000-0.000.jpg"
+    },
+    {
+      "index": 1,
+      "time": 0.280167,
+      "meanDelta": 0.001698160745779791,
+      "armMeanDelta": 0.0021164021164021165,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0001-0.280.jpg"
+    },
+    {
+      "index": 2,
+      "time": 0.333833,
+      "meanDelta": 0.005291005291005305,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0002-0.334.jpg"
+    },
+    {
+      "index": 3,
+      "time": 0.387667,
+      "meanDelta": 0.005240614764424307,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0003-0.388.jpg"
+    },
+    {
+      "index": 4,
+      "time": 0.440567,
+      "meanDelta": 0.005248173343411457,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0004-0.441.jpg"
+    },
+    {
+      "index": 5,
+      "time": 0.493267,
+      "meanDelta": 0.005263290501385759,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0005-0.493.jpg"
+    },
+    {
+      "index": 6,
+      "time": 0.579167,
+      "meanDelta": 0.005212899974804754,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0006-0.579.jpg"
+    },
+    {
+      "index": 7,
+      "time": 0.633167,
+      "meanDelta": 0.005240614764424307,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0007-0.633.jpg"
+    },
+    {
+      "index": 8,
+      "time": 0.690967,
+      "meanDelta": 0.005308641975308661,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 2.6666666666666665,
+      "changedOver35": 0,
+      "file": "frame-0008-0.691.jpg"
+    },
+    {
+      "index": 9,
+      "time": 0.746267,
+      "meanDelta": 0.005265810027714808,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0009-0.746.jpg"
+    },
+    {
+      "index": 10,
+      "time": 0.7769,
+      "meanDelta": 0.005235575711766208,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0010-0.777.jpg"
+    },
+    {
+      "index": 11,
+      "time": 0.8385,
+      "meanDelta": 0.00528596623834721,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 2.6666666666666665,
+      "changedOver35": 0,
+      "file": "frame-0011-0.839.jpg"
+    },
+    {
+      "index": 12,
+      "time": 0.897967,
+      "meanDelta": 0.005268329554043859,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0012-0.898.jpg"
+    },
+    {
+      "index": 13,
+      "time": 0.9572,
+      "meanDelta": 0.005313681027966763,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 3.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0013-0.957.jpg"
+    },
+    {
+      "index": 14,
+      "time": 1.014767,
+      "meanDelta": 0.0053212396069539135,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 3.6666666666666665,
+      "changedOver35": 0,
+      "file": "frame-0014-1.015.jpg"
+    },
+    {
+      "index": 15,
+      "time": 1.072467,
+      "meanDelta": 0.005222978080120956,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0015-1.072.jpg"
+    },
+    {
+      "index": 16,
+      "time": 1.131433,
+      "meanDelta": 0.005250692869740507,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0016-1.131.jpg"
+    },
+    {
+      "index": 17,
+      "time": 1.191633,
+      "meanDelta": 0.005273368606701959,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0017-1.192.jpg"
+    },
+    {
+      "index": 18,
+      "time": 1.2559,
+      "meanDelta": 0.005296044343663411,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0018-1.256.jpg"
+    },
+    {
+      "index": 19,
+      "time": 1.314933,
+      "meanDelta": 0.005356512975560616,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 2.6666666666666665,
+      "changedOver35": 0,
+      "file": "frame-0019-1.315.jpg"
+    },
+    {
+      "index": 20,
+      "time": 1.344333,
+      "meanDelta": 0.005222978080120956,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0020-1.344.jpg"
+    },
+    {
+      "index": 21,
+      "time": 1.4063,
+      "meanDelta": 0.005273368606701959,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0021-1.406.jpg"
+    },
+    {
+      "index": 22,
+      "time": 1.439867,
+      "meanDelta": 0.005243134290753357,
+      "armMeanDelta": 0.011428571428571425,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0022-1.440.jpg"
+    },
+    {
+      "index": 23,
+      "time": 1.501167,
+      "meanDelta": 0.00582514487276392,
+      "armMeanDelta": 0.01728395061728393,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0023-1.501.jpg"
+    },
+    {
+      "index": 24,
+      "time": 1.5636,
+      "meanDelta": 0.00010833963214915592,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0024-1.564.jpg"
+    },
+    {
+      "index": 25,
+      "time": 1.657667,
+      "meanDelta": 0.00008818342151675486,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0025-1.658.jpg"
+    },
+    {
+      "index": 26,
+      "time": 1.7185,
+      "meanDelta": 0.00008566389518770472,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0026-1.718.jpg"
+    },
+    {
+      "index": 27,
+      "time": 1.780933,
+      "meanDelta": 0.000060468631897203316,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0027-1.781.jpg"
+    },
+    {
+      "index": 28,
+      "time": 1.8133,
+      "meanDelta": 0.00006550768455530362,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0028-1.813.jpg"
+    },
+    {
+      "index": 29,
+      "time": 1.874,
+      "meanDelta": 0.00005794910556815318,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0029-1.874.jpg"
+    },
+    {
+      "index": 30,
+      "time": 1.934667,
+      "meanDelta": 0.000010078105316200553,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 0.3333333333333333,
+      "changedOver35": 0,
+      "file": "frame-0030-1.935.jpg"
+    },
+    {
+      "index": 31,
+      "time": 1.999733,
+      "meanDelta": 0.00005291005291005291,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0031-2.000.jpg"
+    },
+    {
+      "index": 32,
+      "time": 2.062533,
+      "meanDelta": 0.00006802721088435374,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0032-2.063.jpg"
+    },
+    {
+      "index": 33,
+      "time": 2.1602,
+      "meanDelta": 0.00009574200050390527,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0033-2.160.jpg"
+    },
+    {
+      "index": 34,
+      "time": 2.222733,
+      "meanDelta": 0.00008062484252960444,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0034-2.223.jpg"
+    },
+    {
+      "index": 35,
+      "time": 2.287267,
+      "meanDelta": 2.212569916855679,
+      "armMeanDelta": 3.6291005291005214,
+      "maxPixelDelta": 185.33333333333334,
+      "changedOver35": 1143,
+      "file": "frame-0035-2.287.jpg"
+    },
+    {
+      "index": 36,
+      "time": 2.351133,
+      "meanDelta": 9.913151927437434,
+      "armMeanDelta": 15.867865961199342,
+      "maxPixelDelta": 255,
+      "changedOver35": 11178,
+      "file": "frame-0036-2.351.jpg"
+    },
+    {
+      "index": 37,
+      "time": 2.3827,
+      "meanDelta": 7.622136558327265,
+      "armMeanDelta": 12.267372134038723,
+      "maxPixelDelta": 255,
+      "changedOver35": 8398,
+      "file": "frame-0037-2.383.jpg"
+    },
+    {
+      "index": 38,
+      "time": 2.4477,
+      "meanDelta": 12.682214663643023,
+      "armMeanDelta": 20.692380952381072,
+      "maxPixelDelta": 255,
+      "changedOver35": 14958,
+      "file": "frame-0038-2.448.jpg"
+    },
+    {
+      "index": 39,
+      "time": 2.514533,
+      "meanDelta": 13.464913076341318,
+      "armMeanDelta": 22.44345679012349,
+      "maxPixelDelta": 255,
+      "changedOver35": 16046,
+      "file": "frame-0039-2.515.jpg"
+    },
+    {
+      "index": 40,
+      "time": 2.579067,
+      "meanDelta": 12.492290249432791,
+      "armMeanDelta": 21.264550264550348,
+      "maxPixelDelta": 255,
+      "changedOver35": 14939,
+      "file": "frame-0040-2.579.jpg"
+    },
+    {
+      "index": 41,
+      "time": 2.6451,
+      "meanDelta": 11.837664399092375,
+      "armMeanDelta": 20.42268077601416,
+      "maxPixelDelta": 255,
+      "changedOver35": 14287,
+      "file": "frame-0041-2.645.jpg"
+    },
+    {
+      "index": 42,
+      "time": 2.710567,
+      "meanDelta": 10.685747039556325,
+      "armMeanDelta": 18.565255731922406,
+      "maxPixelDelta": 255,
+      "changedOver35": 12678,
+      "file": "frame-0042-2.711.jpg"
+    },
+    {
+      "index": 43,
+      "time": 2.776933,
+      "meanDelta": 9.577989417989214,
+      "armMeanDelta": 16.817319223985933,
+      "maxPixelDelta": 255,
+      "changedOver35": 11226,
+      "file": "frame-0043-2.777.jpg"
+    },
+    {
+      "index": 44,
+      "time": 2.843233,
+      "meanDelta": 8.462136558327161,
+      "armMeanDelta": 15.00306878306878,
+      "maxPixelDelta": 255,
+      "changedOver35": 9716,
+      "file": "frame-0044-2.843.jpg"
+    },
+    {
+      "index": 45,
+      "time": 2.875967,
+      "meanDelta": 4.324784580498858,
+      "armMeanDelta": 7.630970017636682,
+      "maxPixelDelta": 205.66666666666666,
+      "changedOver35": 3890,
+      "file": "frame-0045-2.876.jpg"
+    },
+    {
+      "index": 46,
+      "time": 2.942367,
+      "meanDelta": 6.152038296800345,
+      "armMeanDelta": 11.172874779541429,
+      "maxPixelDelta": 250.66666666666666,
+      "changedOver35": 6410,
+      "file": "frame-0046-2.942.jpg"
+    },
+    {
+      "index": 47,
+      "time": 3.0098,
+      "meanDelta": 4.672479213907866,
+      "armMeanDelta": 8.732874779541453,
+      "maxPixelDelta": 213.66666666666666,
+      "changedOver35": 4263,
+      "file": "frame-0047-3.010.jpg"
+    },
+    {
+      "index": 48,
+      "time": 3.0994,
+      "meanDelta": 3.378316956412107,
+      "armMeanDelta": 6.949100529100503,
+      "maxPixelDelta": 203.33333333333334,
+      "changedOver35": 2527,
+      "file": "frame-0048-3.099.jpg"
+    },
+    {
+      "index": 49,
+      "time": 3.166767,
+      "meanDelta": 2.026916099773291,
+      "armMeanDelta": 3.442469135802455,
+      "maxPixelDelta": 200.33333333333334,
+      "changedOver35": 891,
+      "file": "frame-0049-3.167.jpg"
+    },
+    {
+      "index": 50,
+      "time": 3.2265,
+      "meanDelta": 1.4559259259259394,
+      "armMeanDelta": 2.185855379188711,
+      "maxPixelDelta": 125.33333333333333,
+      "changedOver35": 309,
+      "file": "frame-0050-3.227.jpg"
+    },
+    {
+      "index": 51,
+      "time": 3.2902,
+      "meanDelta": 3.1450340136054002,
+      "armMeanDelta": 4.397883597883624,
+      "maxPixelDelta": 209,
+      "changedOver35": 2256,
+      "file": "frame-0051-3.290.jpg"
+    },
+    {
+      "index": 52,
+      "time": 3.354667,
+      "meanDelta": 2.32025447215927,
+      "armMeanDelta": 3.0595414462080974,
+      "maxPixelDelta": 186.66666666666666,
+      "changedOver35": 1481,
+      "file": "frame-0052-3.355.jpg"
+    },
+    {
+      "index": 53,
+      "time": 3.4175,
+      "meanDelta": 2.574434366339131,
+      "armMeanDelta": 3.5701940035273263,
+      "maxPixelDelta": 171.33333333333334,
+      "changedOver35": 1529,
+      "file": "frame-0053-3.417.jpg"
+    },
+    {
+      "index": 54,
+      "time": 3.4958,
+      "meanDelta": 7.148568909045279,
+      "armMeanDelta": 12.098871252204578,
+      "maxPixelDelta": 253.33333333333334,
+      "changedOver35": 7937,
+      "file": "frame-0054-3.496.jpg"
+    },
+    {
+      "index": 55,
+      "time": 3.567633,
+      "meanDelta": 18.203741496598532,
+      "armMeanDelta": 31.580599647266162,
+      "maxPixelDelta": 255,
+      "changedOver35": 21776,
+      "file": "frame-0055-3.568.jpg"
+    },
+    {
+      "index": 56,
+      "time": 3.6539,
+      "meanDelta": 21.722040816326512,
+      "armMeanDelta": 37.21520282186928,
+      "maxPixelDelta": 255,
+      "changedOver35": 26180,
+      "file": "frame-0056-3.654.jpg"
+    },
+    {
+      "index": 57,
+      "time": 3.718,
+      "meanDelta": 18.5593675988916,
+      "armMeanDelta": 31.163068783068717,
+      "maxPixelDelta": 255,
+      "changedOver35": 22228,
+      "file": "frame-0057-3.718.jpg"
+    },
+    {
+      "index": 58,
+      "time": 3.784067,
+      "meanDelta": 17.72432350718046,
+      "armMeanDelta": 29.516402116402258,
+      "maxPixelDelta": 255,
+      "changedOver35": 21375,
+      "file": "frame-0058-3.784.jpg"
+    },
+    {
+      "index": 59,
+      "time": 3.847467,
+      "meanDelta": 16.80012093726362,
+      "armMeanDelta": 27.566490299823723,
+      "maxPixelDelta": 255,
+      "changedOver35": 20249,
+      "file": "frame-0059-3.847.jpg"
+    },
+    {
+      "index": 60,
+      "time": 3.9096,
+      "meanDelta": 14.952809271856484,
+      "armMeanDelta": 23.714109347442715,
+      "maxPixelDelta": 255,
+      "changedOver35": 18230,
+      "file": "frame-0060-3.910.jpg"
+    },
+    {
+      "index": 61,
+      "time": 3.9701,
+      "meanDelta": 13.435588309397653,
+      "armMeanDelta": 21.0297001763669,
+      "maxPixelDelta": 255,
+      "changedOver35": 16231,
+      "file": "frame-0061-3.970.jpg"
+    },
+    {
+      "index": 62,
+      "time": 4.031533,
+      "meanDelta": 11.784545225497167,
+      "armMeanDelta": 17.875731922398664,
+      "maxPixelDelta": 255,
+      "changedOver35": 14212,
+      "file": "frame-0062-4.032.jpg"
+    },
+    {
+      "index": 63,
+      "time": 4.0971,
+      "meanDelta": 10.445076845552677,
+      "armMeanDelta": 15.84158730158725,
+      "maxPixelDelta": 255,
+      "changedOver35": 12337,
+      "file": "frame-0063-4.097.jpg"
+    },
+    {
+      "index": 64,
+      "time": 4.192067,
+      "meanDelta": 10.601496598639425,
+      "armMeanDelta": 16.121128747795417,
+      "maxPixelDelta": 255,
+      "changedOver35": 12422,
+      "file": "frame-0064-4.192.jpg"
+    },
+    {
+      "index": 65,
+      "time": 4.252033,
+      "meanDelta": 5.235840262030821,
+      "armMeanDelta": 8.106172839506167,
+      "maxPixelDelta": 243.33333333333334,
+      "changedOver35": 4969,
+      "file": "frame-0065-4.252.jpg"
+    },
+    {
+      "index": 66,
+      "time": 4.314933,
+      "meanDelta": 3.319286974048832,
+      "armMeanDelta": 5.782857142857156,
+      "maxPixelDelta": 229.66666666666666,
+      "changedOver35": 2580,
+      "file": "frame-0066-4.315.jpg"
+    },
+    {
+      "index": 67,
+      "time": 4.382367,
+      "meanDelta": 3.2644620811286824,
+      "armMeanDelta": 4.266031746031736,
+      "maxPixelDelta": 251,
+      "changedOver35": 2250,
+      "file": "frame-0067-4.382.jpg"
+    },
+    {
+      "index": 68,
+      "time": 4.413833,
+      "meanDelta": 1.9066767447720034,
+      "armMeanDelta": 2.1718871252204557,
+      "maxPixelDelta": 167.66666666666666,
+      "changedOver35": 803,
+      "file": "frame-0068-4.414.jpg"
+    },
+    {
+      "index": 69,
+      "time": 4.476033,
+      "meanDelta": 3.726900982615196,
+      "armMeanDelta": 4.141410934744258,
+      "maxPixelDelta": 249.66666666666666,
+      "changedOver35": 3079,
+      "file": "frame-0069-4.476.jpg"
+    },
+    {
+      "index": 70,
+      "time": 4.537567,
+      "meanDelta": 3.992287729906685,
+      "armMeanDelta": 4.427583774250454,
+      "maxPixelDelta": 238,
+      "changedOver35": 3592,
+      "file": "frame-0070-4.538.jpg"
+    },
+    {
+      "index": 71,
+      "time": 4.569733,
+      "meanDelta": 2.3360594608213785,
+      "armMeanDelta": 2.5072310405643674,
+      "maxPixelDelta": 215.33333333333334,
+      "changedOver35": 1351,
+      "file": "frame-0071-4.570.jpg"
+    },
+    {
+      "index": 72,
+      "time": 4.6847,
+      "meanDelta": 11.074179894179707,
+      "armMeanDelta": 14.320776014109333,
+      "maxPixelDelta": 255,
+      "changedOver35": 13287,
+      "file": "frame-0072-4.685.jpg"
+    },
+    {
+      "index": 73,
+      "time": 4.745933,
+      "meanDelta": 12.494537666918339,
+      "armMeanDelta": 17.19269841269832,
+      "maxPixelDelta": 255,
+      "changedOver35": 14778,
+      "file": "frame-0073-4.746.jpg"
+    },
+    {
+      "index": 74,
+      "time": 4.807467,
+      "meanDelta": 13.092857142856968,
+      "armMeanDelta": 18.385537918871318,
+      "maxPixelDelta": 255,
+      "changedOver35": 15515,
+      "file": "frame-0074-4.807.jpg"
+    },
+    {
+      "index": 75,
+      "time": 4.8693,
+      "meanDelta": 12.91939279415428,
+      "armMeanDelta": 18.809241622574998,
+      "maxPixelDelta": 255,
+      "changedOver35": 15454,
+      "file": "frame-0075-4.869.jpg"
+    },
+    {
+      "index": 76,
+      "time": 4.932167,
+      "meanDelta": 12.470211640211156,
+      "armMeanDelta": 18.575555555555564,
+      "maxPixelDelta": 255,
+      "changedOver35": 15021,
+      "file": "frame-0076-4.932.jpg"
+    },
+    {
+      "index": 77,
+      "time": 4.9951,
+      "meanDelta": 11.657132779037138,
+      "armMeanDelta": 17.988289241622656,
+      "maxPixelDelta": 255,
+      "changedOver35": 13975,
+      "file": "frame-0077-4.995.jpg"
+    },
+    {
+      "index": 78,
+      "time": 5.0858,
+      "meanDelta": 12.83490803728852,
+      "armMeanDelta": 20.147619047619166,
+      "maxPixelDelta": 255,
+      "changedOver35": 15458,
+      "file": "frame-0078-5.086.jpg"
+    },
+    {
+      "index": 79,
+      "time": 5.145167,
+      "meanDelta": 8.624648526077163,
+      "armMeanDelta": 13.707089947089912,
+      "maxPixelDelta": 255,
+      "changedOver35": 10002,
+      "file": "frame-0079-5.145.jpg"
+    },
+    {
+      "index": 80,
+      "time": 5.207533,
+      "meanDelta": 7.750619803477089,
+      "armMeanDelta": 12.57802469135802,
+      "maxPixelDelta": 254.33333333333334,
+      "changedOver35": 8745,
+      "file": "frame-0080-5.208.jpg"
+    },
+    {
+      "index": 81,
+      "time": 5.268233,
+      "meanDelta": 6.251942554799779,
+      "armMeanDelta": 10.266701940035272,
+      "maxPixelDelta": 225.66666666666666,
+      "changedOver35": 6810,
+      "file": "frame-0081-5.268.jpg"
+    },
+    {
+      "index": 82,
+      "time": 5.329133,
+      "meanDelta": 4.904731670446034,
+      "armMeanDelta": 8.034603174603154,
+      "maxPixelDelta": 229.33333333333334,
+      "changedOver35": 4871,
+      "file": "frame-0082-5.329.jpg"
+    },
+    {
+      "index": 83,
+      "time": 5.4216,
+      "meanDelta": 4.712726127488073,
+      "armMeanDelta": 8.074532627865981,
+      "maxPixelDelta": 227.66666666666666,
+      "changedOver35": 4497,
+      "file": "frame-0083-5.422.jpg"
+    },
+    {
+      "index": 84,
+      "time": 5.480967,
+      "meanDelta": 1.7777525825145268,
+      "armMeanDelta": 3.4365079365079305,
+      "maxPixelDelta": 194.33333333333334,
+      "changedOver35": 816,
+      "file": "frame-0084-5.481.jpg"
+    },
+    {
+      "index": 85,
+      "time": 5.5474,
+      "meanDelta": 2.014368858654618,
+      "armMeanDelta": 3.3183421516754885,
+      "maxPixelDelta": 202.33333333333334,
+      "changedOver35": 604,
+      "file": "frame-0085-5.547.jpg"
+    },
+    {
+      "index": 86,
+      "time": 5.577,
+      "meanDelta": 0.9479843789367506,
+      "armMeanDelta": 1.155908289241625,
+      "maxPixelDelta": 127.66666666666667,
+      "changedOver35": 218,
+      "file": "frame-0086-5.577.jpg"
+    },
+    {
+      "index": 87,
+      "time": 5.637833,
+      "meanDelta": 2.291093474426791,
+      "armMeanDelta": 3.1060317460317393,
+      "maxPixelDelta": 184,
+      "changedOver35": 928,
+      "file": "frame-0087-5.638.jpg"
+    },
+    {
+      "index": 88,
+      "time": 5.704467,
+      "meanDelta": 2.04407911312679,
+      "armMeanDelta": 2.5299470899470897,
+      "maxPixelDelta": 174,
+      "changedOver35": 1163,
+      "file": "frame-0088-5.704.jpg"
+    },
+    {
+      "index": 89,
+      "time": 5.766133,
+      "meanDelta": 2.400486268581525,
+      "armMeanDelta": 3.185714285714268,
+      "maxPixelDelta": 203.33333333333334,
+      "changedOver35": 1452,
+      "file": "frame-0089-5.766.jpg"
+    },
+    {
+      "index": 90,
+      "time": 5.7979,
+      "meanDelta": 1.5134290753338757,
+      "armMeanDelta": 2.047936507936511,
+      "maxPixelDelta": 145.33333333333334,
+      "changedOver35": 320,
+      "file": "frame-0090-5.798.jpg"
+    },
+    {
+      "index": 91,
+      "time": 5.8881,
+      "meanDelta": 3.133499622070966,
+      "armMeanDelta": 4.273756613756626,
+      "maxPixelDelta": 215.33333333333334,
+      "changedOver35": 2441,
+      "file": "frame-0091-5.888.jpg"
+    },
+    {
+      "index": 92,
+      "time": 5.947667,
+      "meanDelta": 1.89848828420261,
+      "armMeanDelta": 2.4843738977072287,
+      "maxPixelDelta": 190,
+      "changedOver35": 975,
+      "file": "frame-0092-5.948.jpg"
+    },
+    {
+      "index": 93,
+      "time": 6.008833,
+      "meanDelta": 1.9169236583522693,
+      "armMeanDelta": 2.5223280423280334,
+      "maxPixelDelta": 173.66666666666666,
+      "changedOver35": 940,
+      "file": "frame-0093-6.009.jpg"
+    },
+    {
+      "index": 94,
+      "time": 6.0695,
+      "meanDelta": 1.9718770471151978,
+      "armMeanDelta": 2.507619047619048,
+      "maxPixelDelta": 124.33333333333333,
+      "changedOver35": 863,
+      "file": "frame-0094-6.069.jpg"
+    },
+    {
+      "index": 95,
+      "time": 6.131967,
+      "meanDelta": 1.488347190728142,
+      "armMeanDelta": 1.9657495590829,
+      "maxPixelDelta": 122.66666666666667,
+      "changedOver35": 551,
+      "file": "frame-0095-6.132.jpg"
+    },
+    {
+      "index": 96,
+      "time": 6.191533,
+      "meanDelta": 1.7693373645754864,
+      "armMeanDelta": 2.495767195767191,
+      "maxPixelDelta": 132.33333333333334,
+      "changedOver35": 477,
+      "file": "frame-0096-6.192.jpg"
+    },
+    {
+      "index": 97,
+      "time": 6.252633,
+      "meanDelta": 1.0462559838750194,
+      "armMeanDelta": 1.269100529100526,
+      "maxPixelDelta": 126.33333333333333,
+      "changedOver35": 269,
+      "file": "frame-0097-6.253.jpg"
+    },
+    {
+      "index": 98,
+      "time": 6.314233,
+      "meanDelta": 2.1751095993953364,
+      "armMeanDelta": 3.11252204585536,
+      "maxPixelDelta": 187,
+      "changedOver35": 812,
+      "file": "frame-0098-6.314.jpg"
+    },
+    {
+      "index": 99,
+      "time": 6.3762,
+      "meanDelta": 2.792285210380409,
+      "armMeanDelta": 3.499999999999996,
+      "maxPixelDelta": 233.33333333333334,
+      "changedOver35": 1692,
+      "file": "frame-0099-6.376.jpg"
+    },
+    {
+      "index": 100,
+      "time": 6.437867,
+      "meanDelta": 3.602733686066955,
+      "armMeanDelta": 5.291816578483262,
+      "maxPixelDelta": 231.33333333333334,
+      "changedOver35": 2800,
+      "file": "frame-0100-6.438.jpg"
+    },
+    {
+      "index": 101,
+      "time": 6.501233,
+      "meanDelta": 5.19768203577715,
+      "armMeanDelta": 7.989982363315698,
+      "maxPixelDelta": 207.66666666666666,
+      "changedOver35": 4156,
+      "file": "frame-0101-6.501.jpg"
+    },
+    {
+      "index": 102,
+      "time": 6.561833,
+      "meanDelta": 5.321486520534195,
+      "armMeanDelta": 7.725185185185202,
+      "maxPixelDelta": 239.66666666666666,
+      "changedOver35": 5303,
+      "file": "frame-0102-6.562.jpg"
+    },
+    {
+      "index": 103,
+      "time": 6.653467,
+      "meanDelta": 8.455112118921754,
+      "armMeanDelta": 12.826913580246856,
+      "maxPixelDelta": 255,
+      "changedOver35": 9754,
+      "file": "frame-0103-6.653.jpg"
+    },
+    {
+      "index": 104,
+      "time": 6.713633,
+      "meanDelta": 7.743577727387504,
+      "armMeanDelta": 11.8100881834215,
+      "maxPixelDelta": 255,
+      "changedOver35": 8655,
+      "file": "frame-0104-6.714.jpg"
+    },
+    {
+      "index": 105,
+      "time": 6.7723,
+      "meanDelta": 8.437614008566438,
+      "armMeanDelta": 12.562469135802466,
+      "maxPixelDelta": 253.33333333333334,
+      "changedOver35": 9640,
+      "file": "frame-0105-6.772.jpg"
+    },
+    {
+      "index": 106,
+      "time": 6.832467,
+      "meanDelta": 8.748135550516526,
+      "armMeanDelta": 13.211216931216878,
+      "maxPixelDelta": 255,
+      "changedOver35": 10077,
+      "file": "frame-0106-6.832.jpg"
+    },
+    {
+      "index": 107,
+      "time": 6.864533,
+      "meanDelta": 5.456764928193592,
+      "armMeanDelta": 7.916084656084665,
+      "maxPixelDelta": 230.66666666666666,
+      "changedOver35": 5662,
+      "file": "frame-0107-6.865.jpg"
+    },
+    {
+      "index": 108,
+      "time": 6.954667,
+      "meanDelta": 11.394734189971992,
+      "armMeanDelta": 16.654567901234568,
+      "maxPixelDelta": 255,
+      "changedOver35": 13511,
+      "file": "frame-0108-6.955.jpg"
+    },
+    {
+      "index": 109,
+      "time": 7.020867,
+      "meanDelta": 9.04195515243132,
+      "armMeanDelta": 13.149735449735422,
+      "maxPixelDelta": 255,
+      "changedOver35": 10406,
+      "file": "frame-0109-7.021.jpg"
+    },
+    {
+      "index": 110,
+      "time": 7.082133,
+      "meanDelta": 7.927362055933687,
+      "armMeanDelta": 11.224162257495562,
+      "maxPixelDelta": 253.66666666666666,
+      "changedOver35": 9000,
+      "file": "frame-0110-7.082.jpg"
+    },
+    {
+      "index": 111,
+      "time": 7.1435,
+      "meanDelta": 7.526505416981772,
+      "armMeanDelta": 10.828500881834199,
+      "maxPixelDelta": 253.33333333333334,
+      "changedOver35": 8432,
+      "file": "frame-0111-7.144.jpg"
+    },
+    {
+      "index": 112,
+      "time": 7.1738,
+      "meanDelta": 4.098090199042472,
+      "armMeanDelta": 6.118130511463863,
+      "maxPixelDelta": 204.66666666666666,
+      "changedOver35": 3463,
+      "file": "frame-0112-7.174.jpg"
+    },
+    {
+      "index": 113,
+      "time": 7.233433,
+      "meanDelta": 6.2978609221467625,
+      "armMeanDelta": 9.29421516754846,
+      "maxPixelDelta": 254.33333333333334,
+      "changedOver35": 6591,
+      "file": "frame-0113-7.233.jpg"
+    },
+    {
+      "index": 114,
+      "time": 7.2937,
+      "meanDelta": 5.50670194003531,
+      "armMeanDelta": 8.536049382716028,
+      "maxPixelDelta": 237.66666666666666,
+      "changedOver35": 5472,
+      "file": "frame-0114-7.294.jpg"
+    },
+    {
+      "index": 115,
+      "time": 7.356333,
+      "meanDelta": 4.737450239355054,
+      "armMeanDelta": 7.87950617283948,
+      "maxPixelDelta": 241.66666666666666,
+      "changedOver35": 4230,
+      "file": "frame-0115-7.356.jpg"
+    },
+    {
+      "index": 116,
+      "time": 7.417367,
+      "meanDelta": 3.7753993449230956,
+      "armMeanDelta": 6.614779541446224,
+      "maxPixelDelta": 232.66666666666666,
+      "changedOver35": 2960,
+      "file": "frame-0116-7.417.jpg"
+    },
+    {
+      "index": 117,
+      "time": 7.478333,
+      "meanDelta": 2.9327689594355952,
+      "armMeanDelta": 5.489488536155222,
+      "maxPixelDelta": 192.66666666666666,
+      "changedOver35": 1960,
+      "file": "frame-0117-7.478.jpg"
+    },
+    {
+      "index": 118,
+      "time": 7.537967,
+      "meanDelta": 2.3848526077097616,
+      "armMeanDelta": 3.6707583774250305,
+      "maxPixelDelta": 187.33333333333334,
+      "changedOver35": 1251,
+      "file": "frame-0118-7.538.jpg"
+    },
+    {
+      "index": 119,
+      "time": 7.598033,
+      "meanDelta": 2.759040060468619,
+      "armMeanDelta": 3.147336860670191,
+      "maxPixelDelta": 208.33333333333334,
+      "changedOver35": 1809,
+      "file": "frame-0119-7.598.jpg"
+    },
+    {
+      "index": 120,
+      "time": 7.6764,
+      "meanDelta": 4.5137893675988785,
+      "armMeanDelta": 5.166525573192271,
+      "maxPixelDelta": 221,
+      "changedOver35": 4257,
+      "file": "frame-0120-7.676.jpg"
+    },
+    {
+      "index": 121,
+      "time": 7.763567,
+      "meanDelta": 5.264734189972385,
+      "armMeanDelta": 6.32218694885364,
+      "maxPixelDelta": 235.33333333333334,
+      "changedOver35": 5360,
+      "file": "frame-0121-7.764.jpg"
+    },
+    {
+      "index": 122,
+      "time": 7.8306,
+      "meanDelta": 7.9527261274881855,
+      "armMeanDelta": 9.86818342151675,
+      "maxPixelDelta": 249,
+      "changedOver35": 9124,
+      "file": "frame-0122-7.831.jpg"
+    },
+    {
+      "index": 123,
+      "time": 7.924567,
+      "meanDelta": 9.256848072562228,
+      "armMeanDelta": 12.510864197530857,
+      "maxPixelDelta": 255,
+      "changedOver35": 10772,
+      "file": "frame-0123-7.925.jpg"
+    },
+    {
+      "index": 124,
+      "time": 7.988333,
+      "meanDelta": 7.944227765180242,
+      "armMeanDelta": 10.949100529100468,
+      "maxPixelDelta": 255,
+      "changedOver35": 9079,
+      "file": "frame-0124-7.988.jpg"
+    },
+    {
+      "index": 125,
+      "time": 8.050667,
+      "meanDelta": 8.581806500377875,
+      "armMeanDelta": 12.544162257495595,
+      "maxPixelDelta": 255,
+      "changedOver35": 9858,
+      "file": "frame-0125-8.051.jpg"
+    },
+    {
+      "index": 126,
+      "time": 8.1154,
+      "meanDelta": 9.159332325522625,
+      "armMeanDelta": 13.569911816578475,
+      "maxPixelDelta": 255,
+      "changedOver35": 10490,
+      "file": "frame-0126-8.115.jpg"
+    },
+    {
+      "index": 127,
+      "time": 8.199667,
+      "meanDelta": 11.343847316704277,
+      "armMeanDelta": 17.32839506172846,
+      "maxPixelDelta": 255,
+      "changedOver35": 13470,
+      "file": "frame-0127-8.200.jpg"
+    },
+    {
+      "index": 128,
+      "time": 8.2624,
+      "meanDelta": 9.734845049130481,
+      "armMeanDelta": 15.275908289241649,
+      "maxPixelDelta": 255,
+      "changedOver35": 11211,
+      "file": "frame-0128-8.262.jpg"
+    },
+    {
+      "index": 129,
+      "time": 8.376433,
+      "meanDelta": 14.273071302594527,
+      "armMeanDelta": 22.688641975308684,
+      "maxPixelDelta": 255,
+      "changedOver35": 17191,
+      "file": "frame-0129-8.376.jpg"
+    },
+    {
+      "index": 130,
+      "time": 8.408167,
+      "meanDelta": 6.702118921642852,
+      "armMeanDelta": 10.754074074073987,
+      "maxPixelDelta": 255,
+      "changedOver35": 7164,
+      "file": "frame-0130-8.408.jpg"
+    },
+    {
+      "index": 131,
+      "time": 8.4696,
+      "meanDelta": 10.035091962710714,
+      "armMeanDelta": 15.722433862433869,
+      "maxPixelDelta": 255,
+      "changedOver35": 11657,
+      "file": "frame-0131-8.470.jpg"
+    },
+    {
+      "index": 132,
+      "time": 8.531067,
+      "meanDelta": 10.450420760896828,
+      "armMeanDelta": 16.99315696649026,
+      "maxPixelDelta": 255,
+      "changedOver35": 12324,
+      "file": "frame-0132-8.531.jpg"
+    },
+    {
+      "index": 133,
+      "time": 8.621333,
+      "meanDelta": 12.986061980347296,
+      "armMeanDelta": 21.077037037037133,
+      "maxPixelDelta": 255,
+      "changedOver35": 15600,
+      "file": "frame-0133-8.621.jpg"
+    },
+    {
+      "index": 134,
+      "time": 8.682967,
+      "meanDelta": 9.880541698160538,
+      "armMeanDelta": 15.950793650793656,
+      "maxPixelDelta": 255,
+      "changedOver35": 11482,
+      "file": "frame-0134-8.683.jpg"
+    },
+    {
+      "index": 135,
+      "time": 8.748833,
+      "meanDelta": 9.83575711766158,
+      "armMeanDelta": 15.702716049382742,
+      "maxPixelDelta": 255,
+      "changedOver35": 11417,
+      "file": "frame-0135-8.749.jpg"
+    },
+    {
+      "index": 136,
+      "time": 8.811233,
+      "meanDelta": 9.991143864953006,
+      "armMeanDelta": 16.313968253968373,
+      "maxPixelDelta": 255,
+      "changedOver35": 11500,
+      "file": "frame-0136-8.811.jpg"
+    },
+    {
+      "index": 137,
+      "time": 8.878133,
+      "meanDelta": 8.97337364575468,
+      "armMeanDelta": 15.038871252204627,
+      "maxPixelDelta": 255,
+      "changedOver35": 10238,
+      "file": "frame-0137-8.878.jpg"
+    },
+    {
+      "index": 138,
+      "time": 8.9418,
+      "meanDelta": 8.738997228521148,
+      "armMeanDelta": 14.496296296296265,
+      "maxPixelDelta": 255,
+      "changedOver35": 9924,
+      "file": "frame-0138-8.942.jpg"
+    },
+    {
+      "index": 139,
+      "time": 9.0093,
+      "meanDelta": 7.4890199042581145,
+      "armMeanDelta": 13.098201058201036,
+      "maxPixelDelta": 255,
+      "changedOver35": 8223,
+      "file": "frame-0139-9.009.jpg"
+    },
+    {
+      "index": 140,
+      "time": 9.068633,
+      "meanDelta": 5.888359788359947,
+      "armMeanDelta": 10.74934744268075,
+      "maxPixelDelta": 251,
+      "changedOver35": 5905,
+      "file": "frame-0140-9.069.jpg"
+    },
+    {
+      "index": 141,
+      "time": 9.129,
+      "meanDelta": 3.2100831443687476,
+      "armMeanDelta": 6.287619047619072,
+      "maxPixelDelta": 254.33333333333334,
+      "changedOver35": 2307,
+      "file": "frame-0141-9.129.jpg"
+    },
+    {
+      "index": 142,
+      "time": 9.2204,
+      "meanDelta": 3.909125724363725,
+      "armMeanDelta": 3.9804938271604904,
+      "maxPixelDelta": 239.33333333333334,
+      "changedOver35": 3521,
+      "file": "frame-0142-9.220.jpg"
+    },
+    {
+      "index": 143,
+      "time": 9.283333,
+      "meanDelta": 5.479783320735736,
+      "armMeanDelta": 8.24338624338624,
+      "maxPixelDelta": 225,
+      "changedOver35": 5736,
+      "file": "frame-0143-9.283.jpg"
+    },
+    {
+      "index": 144,
+      "time": 9.3439,
+      "meanDelta": 7.708329554044076,
+      "armMeanDelta": 12.257037037037009,
+      "maxPixelDelta": 255,
+      "changedOver35": 8653,
+      "file": "frame-0144-9.344.jpg"
+    },
+    {
+      "index": 145,
+      "time": 9.406533,
+      "meanDelta": 9.006583522297646,
+      "armMeanDelta": 14.782186948853633,
+      "maxPixelDelta": 255,
+      "changedOver35": 10501,
+      "file": "frame-0145-9.407.jpg"
+    },
+    {
+      "index": 146,
+      "time": 9.466833,
+      "meanDelta": 9.867228521037813,
+      "armMeanDelta": 16.48176366843032,
+      "maxPixelDelta": 255,
+      "changedOver35": 11579,
+      "file": "frame-0146-9.467.jpg"
+    },
+    {
+      "index": 147,
+      "time": 9.526233,
+      "meanDelta": 10.33863189720296,
+      "armMeanDelta": 16.66835978835978,
+      "maxPixelDelta": 255,
+      "changedOver35": 12358,
+      "file": "frame-0147-9.526.jpg"
+    },
+    {
+      "index": 148,
+      "time": 9.5582,
+      "meanDelta": 6.171169060216752,
+      "armMeanDelta": 10.101940035273355,
+      "maxPixelDelta": 242.33333333333334,
+      "changedOver35": 6622,
+      "file": "frame-0148-9.558.jpg"
+    },
+    {
+      "index": 149,
+      "time": 9.6195,
+      "meanDelta": 9.586165280926803,
+      "armMeanDelta": 15.67922398589058,
+      "maxPixelDelta": 255,
+      "changedOver35": 11111,
+      "file": "frame-0149-9.620.jpg"
+    },
+    {
+      "index": 150,
+      "time": 9.680667,
+      "meanDelta": 8.745487528344425,
+      "armMeanDelta": 14.770264550264514,
+      "maxPixelDelta": 254.66666666666666,
+      "changedOver35": 10203,
+      "file": "frame-0150-9.681.jpg"
+    },
+    {
+      "index": 151,
+      "time": 9.740333,
+      "meanDelta": 8.15674225245675,
+      "armMeanDelta": 13.213721340387947,
+      "maxPixelDelta": 255,
+      "changedOver35": 9281,
+      "file": "frame-0151-9.740.jpg"
+    },
+    {
+      "index": 152,
+      "time": 9.8044,
+      "meanDelta": 6.954628369866611,
+      "armMeanDelta": 11.34550264550264,
+      "maxPixelDelta": 241.66666666666666,
+      "changedOver35": 7717,
+      "file": "frame-0152-9.804.jpg"
+    },
+    {
+      "index": 153,
+      "time": 9.8636,
+      "meanDelta": 6.2399344923156725,
+      "armMeanDelta": 10.385820105820072,
+      "maxPixelDelta": 235.33333333333334,
+      "changedOver35": 6696,
+      "file": "frame-0153-9.864.jpg"
+    },
+    {
+      "index": 154,
+      "time": 9.9535,
+      "meanDelta": 6.24137314184944,
+      "armMeanDelta": 10.22462081128748,
+      "maxPixelDelta": 246.33333333333334,
+      "changedOver35": 6754,
+      "file": "frame-0154-9.954.jpg"
+    },
+    {
+      "index": 155,
+      "time": 10.013933,
+      "meanDelta": 3.506832955404323,
+      "armMeanDelta": 5.694356261022943,
+      "maxPixelDelta": 179.66666666666666,
+      "changedOver35": 2841,
+      "file": "frame-0155-10.014.jpg"
+    },
+    {
+      "index": 156,
+      "time": 10.0805,
+      "meanDelta": 2.8491383219953854,
+      "armMeanDelta": 4.666807760141113,
+      "maxPixelDelta": 182,
+      "changedOver35": 1667,
+      "file": "frame-0156-10.081.jpg"
+    },
+    {
+      "index": 157,
+      "time": 10.141033,
+      "meanDelta": 1.4171554547745406,
+      "armMeanDelta": 2.66730158730157,
+      "maxPixelDelta": 165.66666666666666,
+      "changedOver35": 367,
+      "file": "frame-0157-10.141.jpg"
+    },
+    {
+      "index": 158,
+      "time": 10.172633,
+      "meanDelta": 1.2961854371378356,
+      "armMeanDelta": 2.277248677248679,
+      "maxPixelDelta": 120,
+      "changedOver35": 154,
+      "file": "frame-0158-10.173.jpg"
+    },
+    {
+      "index": 159,
+      "time": 10.2346,
+      "meanDelta": 0.944111866968989,
+      "armMeanDelta": 1.479153439153443,
+      "maxPixelDelta": 123.33333333333333,
+      "changedOver35": 207,
+      "file": "frame-0159-10.235.jpg"
+    },
+    {
+      "index": 160,
+      "time": 10.296,
+      "meanDelta": 1.1627084908037262,
+      "armMeanDelta": 1.455908289241627,
+      "maxPixelDelta": 130.33333333333334,
+      "changedOver35": 201,
+      "file": "frame-0160-10.296.jpg"
+    },
+    {
+      "index": 161,
+      "time": 10.387933,
+      "meanDelta": 1.9958100277148276,
+      "armMeanDelta": 2.5589417989417966,
+      "maxPixelDelta": 136.33333333333334,
+      "changedOver35": 849,
+      "file": "frame-0161-10.388.jpg"
+    },
+    {
+      "index": 162,
+      "time": 10.447567,
+      "meanDelta": 1.5415923406399714,
+      "armMeanDelta": 1.9149559082892431,
+      "maxPixelDelta": 138.66666666666666,
+      "changedOver35": 459,
+      "file": "frame-0162-10.448.jpg"
+    },
+    {
+      "index": 163,
+      "time": 10.509267,
+      "meanDelta": 1.7106046863189899,
+      "armMeanDelta": 2.239611992945335,
+      "maxPixelDelta": 189.33333333333334,
+      "changedOver35": 610,
+      "file": "frame-0163-10.509.jpg"
+    },
+    {
+      "index": 164,
+      "time": 10.539533,
+      "meanDelta": 1.0307659360040202,
+      "armMeanDelta": 1.3010934744268092,
+      "maxPixelDelta": 143.66666666666666,
+      "changedOver35": 242,
+      "file": "frame-0164-10.540.jpg"
+    },
+    {
+      "index": 165,
+      "time": 10.5997,
+      "meanDelta": 1.8224489795918561,
+      "armMeanDelta": 2.5748853615520315,
+      "maxPixelDelta": 236.66666666666666,
+      "changedOver35": 740,
+      "file": "frame-0165-10.600.jpg"
+    },
+    {
+      "index": 166,
+      "time": 10.661733,
+      "meanDelta": 1.769002267573721,
+      "armMeanDelta": 2.616331569664906,
+      "maxPixelDelta": 237.33333333333334,
+      "changedOver35": 755,
+      "file": "frame-0166-10.662.jpg"
+    },
+    {
+      "index": 167,
+      "time": 10.7568,
+      "meanDelta": 2.4254472159234166,
+      "armMeanDelta": 3.507936507936501,
+      "maxPixelDelta": 252,
+      "changedOver35": 1366,
+      "file": "frame-0167-10.757.jpg"
+    },
+    {
+      "index": 168,
+      "time": 10.819033,
+      "meanDelta": 1.6474124464600794,
+      "armMeanDelta": 2.660811287477952,
+      "maxPixelDelta": 252.33333333333334,
+      "changedOver35": 713,
+      "file": "frame-0168-10.819.jpg"
+    },
+    {
+      "index": 169,
+      "time": 10.878467,
+      "meanDelta": 1.6236155202821978,
+      "armMeanDelta": 2.870934744268077,
+      "maxPixelDelta": 240.66666666666666,
+      "changedOver35": 830,
+      "file": "frame-0169-10.878.jpg"
+    },
+    {
+      "index": 170,
+      "time": 10.9396,
+      "meanDelta": 1.7983623078861266,
+      "armMeanDelta": 3.1867019400352694,
+      "maxPixelDelta": 255,
+      "changedOver35": 1109,
+      "file": "frame-0170-10.940.jpg"
+    },
+    {
+      "index": 171,
+      "time": 10.9982,
+      "meanDelta": 1.8535222978080277,
+      "armMeanDelta": 4.39830687830688,
+      "maxPixelDelta": 253.66666666666666,
+      "changedOver35": 1221,
+      "file": "frame-0171-10.998.jpg"
+    },
+    {
+      "index": 172,
+      "time": 11.0564,
+      "meanDelta": 2.0241143864953344,
+      "armMeanDelta": 5.9465255731922335,
+      "maxPixelDelta": 255,
+      "changedOver35": 1315,
+      "file": "frame-0172-11.056.jpg"
+    },
+    {
+      "index": 173,
+      "time": 11.087833,
+      "meanDelta": 1.2249962207105143,
+      "armMeanDelta": 4.234144620811294,
+      "maxPixelDelta": 255,
+      "changedOver35": 860,
+      "file": "frame-0173-11.088.jpg"
+    },
+    {
+      "index": 174,
+      "time": 11.151133,
+      "meanDelta": 2.819778281682982,
+      "armMeanDelta": 8.454109347442666,
+      "maxPixelDelta": 255,
+      "changedOver35": 1627,
+      "file": "frame-0174-11.151.jpg"
+    },
+    {
+      "index": 175,
+      "time": 11.208733,
+      "meanDelta": 1.8833056185437314,
+      "armMeanDelta": 7.272698412698382,
+      "maxPixelDelta": 255,
+      "changedOver35": 1596,
+      "file": "frame-0175-11.209.jpg"
+    },
+    {
+      "index": 176,
+      "time": 11.270767,
+      "meanDelta": 2.5051650289744805,
+      "armMeanDelta": 8.458694885361565,
+      "maxPixelDelta": 255,
+      "changedOver35": 1584,
+      "file": "frame-0176-11.271.jpg"
+    },
+    {
+      "index": 177,
+      "time": 11.3307,
+      "meanDelta": 1.7584983623078865,
+      "armMeanDelta": 6.822081128747799,
+      "maxPixelDelta": 243.33333333333334,
+      "changedOver35": 1395,
+      "file": "frame-0177-11.331.jpg"
+    },
+    {
+      "index": 178,
+      "time": 11.418767,
+      "meanDelta": 2.191171579742874,
+      "armMeanDelta": 6.652134038800715,
+      "maxPixelDelta": 247,
+      "changedOver35": 1273,
+      "file": "frame-0178-11.419.jpg"
+    },
+    {
+      "index": 179,
+      "time": 11.476933,
+      "meanDelta": 0.7810833963214887,
+      "armMeanDelta": 2.9956613756613732,
+      "maxPixelDelta": 248.66666666666666,
+      "changedOver35": 565,
+      "file": "frame-0179-11.477.jpg"
+    },
+    {
+      "index": 180,
+      "time": 11.538467,
+      "meanDelta": 1.4687931468884532,
+      "armMeanDelta": 3.9554850088183464,
+      "maxPixelDelta": 247.66666666666666,
+      "changedOver35": 560,
+      "file": "frame-0180-11.538.jpg"
+    },
+    {
+      "index": 181,
+      "time": 11.597067,
+      "meanDelta": 0.8161174099269347,
+      "armMeanDelta": 3.18433862433862,
+      "maxPixelDelta": 242,
+      "changedOver35": 583,
+      "file": "frame-0181-11.597.jpg"
+    },
+    {
+      "index": 182,
+      "time": 11.689767,
+      "meanDelta": 1.9547316704459823,
+      "armMeanDelta": 5.893474426807767,
+      "maxPixelDelta": 243,
+      "changedOver35": 1035,
+      "file": "frame-0182-11.690.jpg"
+    },
+    {
+      "index": 183,
+      "time": 11.758433,
+      "meanDelta": 0.8960896951373138,
+      "armMeanDelta": 3.7435978835978796,
+      "maxPixelDelta": 248.66666666666666,
+      "changedOver35": 803,
+      "file": "frame-0183-11.758.jpg"
+    },
+    {
+      "index": 184,
+      "time": 11.7938,
+      "meanDelta": 0.7462005542957869,
+      "armMeanDelta": 2.4617989417989397,
+      "maxPixelDelta": 246.66666666666666,
+      "changedOver35": 452,
+      "file": "frame-0184-11.794.jpg"
+    },
+    {
+      "index": 185,
+      "time": 11.852667,
+      "meanDelta": 0.9093953136810216,
+      "armMeanDelta": 3.50980599647266,
+      "maxPixelDelta": 246.66666666666666,
+      "changedOver35": 726,
+      "file": "frame-0185-11.853.jpg"
+    },
+    {
+      "index": 186,
+      "time": 11.916433,
+      "meanDelta": 1.1701083396321645,
+      "armMeanDelta": 3.508994708994706,
+      "maxPixelDelta": 245,
+      "changedOver35": 651,
+      "file": "frame-0186-11.916.jpg"
+    },
+    {
+      "index": 187,
+      "time": 11.987167,
+      "meanDelta": 0.7249433106575954,
+      "armMeanDelta": 2.900035273368602,
+      "maxPixelDelta": 250,
+      "changedOver35": 638,
+      "file": "frame-0187-11.987.jpg"
+    },
+    {
+      "index": 188,
+      "time": 12.0514,
+      "meanDelta": 1.2341093474426772,
+      "armMeanDelta": 3.4916049382716117,
+      "maxPixelDelta": 247.33333333333334,
+      "changedOver35": 650,
+      "file": "frame-0188-12.051.jpg"
+    },
+    {
+      "index": 189,
+      "time": 12.1145,
+      "meanDelta": 0.7626933736457507,
+      "armMeanDelta": 3.230758377425036,
+      "maxPixelDelta": 245,
+      "changedOver35": 701,
+      "file": "frame-0189-12.114.jpg"
+    },
+    {
+      "index": 190,
+      "time": 12.181633,
+      "meanDelta": 1.0145301083396405,
+      "armMeanDelta": 3.7811640211640305,
+      "maxPixelDelta": 245.66666666666666,
+      "changedOver35": 851,
+      "file": "frame-0190-12.182.jpg"
+    },
+    {
+      "index": 191,
+      "time": 12.243067,
+      "meanDelta": 0.9965532879818616,
+      "armMeanDelta": 3.836084656084658,
+      "maxPixelDelta": 244.66666666666666,
+      "changedOver35": 909,
+      "file": "frame-0191-12.243.jpg"
+    },
+    {
+      "index": 192,
+      "time": 12.3062,
+      "meanDelta": 0.9796649029982323,
+      "armMeanDelta": 3.62299823633157,
+      "maxPixelDelta": 239,
+      "changedOver35": 967,
+      "file": "frame-0192-12.306.jpg"
+    },
+    {
+      "index": 193,
+      "time": 12.376233,
+      "meanDelta": 0.958931720836476,
+      "armMeanDelta": 3.374038800705464,
+      "maxPixelDelta": 242.66666666666666,
+      "changedOver35": 922,
+      "file": "frame-0193-12.376.jpg"
+    },
+    {
+      "index": 194,
+      "time": 12.405967,
+      "meanDelta": 1.1293121693121975,
+      "armMeanDelta": 2.7158730158730164,
+      "maxPixelDelta": 247.33333333333334,
+      "changedOver35": 598,
+      "file": "frame-0194-12.406.jpg"
+    },
+    {
+      "index": 195,
+      "time": 12.469067,
+      "meanDelta": 0.7177903754094239,
+      "armMeanDelta": 2.3173897707231044,
+      "maxPixelDelta": 244.66666666666666,
+      "changedOver35": 645,
+      "file": "frame-0195-12.469.jpg"
+    },
+    {
+      "index": 196,
+      "time": 12.534667,
+      "meanDelta": 0.7140942302846927,
+      "armMeanDelta": 2.167830687830682,
+      "maxPixelDelta": 250,
+      "changedOver35": 516,
+      "file": "frame-0196-12.535.jpg"
+    },
+    {
+      "index": 197,
+      "time": 12.608433,
+      "meanDelta": 0.46015369110607457,
+      "armMeanDelta": 1.5576719576719573,
+      "maxPixelDelta": 241,
+      "changedOver35": 354,
+      "file": "frame-0197-12.608.jpg"
+    },
+    {
+      "index": 198,
+      "time": 12.672433,
+      "meanDelta": 0.37147896195515334,
+      "armMeanDelta": 1.3071957671957688,
+      "maxPixelDelta": 247.33333333333334,
+      "changedOver35": 290,
+      "file": "frame-0198-12.672.jpg"
+    },
+    {
+      "index": 199,
+      "time": 12.738133,
+      "meanDelta": 0.2711740992693381,
+      "armMeanDelta": 1.0008112874779544,
+      "maxPixelDelta": 238,
+      "changedOver35": 203,
+      "file": "frame-0199-12.738.jpg"
+    },
+    {
+      "index": 200,
+      "time": 12.8082,
+      "meanDelta": 0.6011388259007141,
+      "armMeanDelta": 1.3301587301587365,
+      "maxPixelDelta": 234.66666666666666,
+      "changedOver35": 144,
+      "file": "frame-0200-12.808.jpg"
+    },
+    {
+      "index": 201,
+      "time": 12.872333,
+      "meanDelta": 0.19924162257495479,
+      "armMeanDelta": 0.7482539682539684,
+      "maxPixelDelta": 218.33333333333334,
+      "changedOver35": 128,
+      "file": "frame-0201-12.872.jpg"
+    },
+    {
+      "index": 202,
+      "time": 12.9397,
+      "meanDelta": 1.3253212396069438,
+      "armMeanDelta": 2.140599647266312,
+      "maxPixelDelta": 202.33333333333334,
+      "changedOver35": 105,
+      "file": "frame-0202-12.940.jpg"
+    },
+    {
+      "index": 203,
+      "time": 13.0052,
+      "meanDelta": 0.1838699924414231,
+      "armMeanDelta": 0.5463139329805997,
+      "maxPixelDelta": 200,
+      "changedOver35": 58,
+      "file": "frame-0203-13.005.jpg"
+    },
+    {
+      "index": 204,
+      "time": 13.0704,
+      "meanDelta": 0.11429327286470155,
+      "armMeanDelta": 0.4479717813051147,
+      "maxPixelDelta": 171.33333333333334,
+      "changedOver35": 53,
+      "file": "frame-0204-13.070.jpg"
+    },
+    {
+      "index": 205,
+      "time": 13.140567,
+      "meanDelta": 0.16107331821617413,
+      "armMeanDelta": 0.44846560846561,
+      "maxPixelDelta": 109,
+      "changedOver35": 32,
+      "file": "frame-0205-13.141.jpg"
+    },
+    {
+      "index": 206,
+      "time": 13.2052,
+      "meanDelta": 0.09881330309901624,
+      "armMeanDelta": 0.3342151675484999,
+      "maxPixelDelta": 68.66666666666667,
+      "changedOver35": 18,
+      "file": "frame-0206-13.205.jpg"
+    },
+    {
+      "index": 207,
+      "time": 13.268333,
+      "meanDelta": 0.28822121441169163,
+      "armMeanDelta": 0.5658553791887139,
+      "maxPixelDelta": 63.333333333333336,
+      "changedOver35": 18,
+      "file": "frame-0207-13.268.jpg"
+    },
+    {
+      "index": 208,
+      "time": 13.333633,
+      "meanDelta": 0.10688082640463295,
+      "armMeanDelta": 0.2912874779541426,
+      "maxPixelDelta": 73,
+      "changedOver35": 10,
+      "file": "frame-0208-13.334.jpg"
+    },
+    {
+      "index": 209,
+      "time": 13.3966,
+      "meanDelta": 0.1918770471151488,
+      "armMeanDelta": 0.5456437389770774,
+      "maxPixelDelta": 97.66666666666667,
+      "changedOver35": 25,
+      "file": "frame-0209-13.397.jpg"
+    },
+    {
+      "index": 210,
+      "time": 13.500633,
+      "meanDelta": 0.231179138322005,
+      "armMeanDelta": 0.7189417989418053,
+      "maxPixelDelta": 101.33333333333333,
+      "changedOver35": 77,
+      "file": "frame-0210-13.501.jpg"
+    },
+    {
+      "index": 211,
+      "time": 13.5655,
+      "meanDelta": 0.23998236331569595,
+      "armMeanDelta": 0.7634920634920631,
+      "maxPixelDelta": 186,
+      "changedOver35": 187,
+      "file": "frame-0211-13.566.jpg"
+    },
+    {
+      "index": 212,
+      "time": 13.661567,
+      "meanDelta": 0.698007054673722,
+      "armMeanDelta": 2.1995767195767164,
+      "maxPixelDelta": 206,
+      "changedOver35": 672,
+      "file": "frame-0212-13.662.jpg"
+    },
+    {
+      "index": 213,
+      "time": 13.760167,
+      "meanDelta": 0.9603250188964522,
+      "armMeanDelta": 3.2941446208112932,
+      "maxPixelDelta": 246,
+      "changedOver35": 995,
+      "file": "frame-0213-13.760.jpg"
+    },
+    {
+      "index": 214,
+      "time": 13.825133,
+      "meanDelta": 0.8474577979339896,
+      "armMeanDelta": 3.091710758377425,
+      "maxPixelDelta": 249.33333333333334,
+      "changedOver35": 870,
+      "file": "frame-0214-13.825.jpg"
+    },
+    {
+      "index": 215,
+      "time": 13.890033,
+      "meanDelta": 0.8543940539178624,
+      "armMeanDelta": 3.326631393298057,
+      "maxPixelDelta": 241.33333333333334,
+      "changedOver35": 835,
+      "file": "frame-0215-13.890.jpg"
+    },
+    {
+      "index": 216,
+      "time": 13.953467,
+      "meanDelta": 0.767669438145626,
+      "armMeanDelta": 3.054109347442677,
+      "maxPixelDelta": 241.66666666666666,
+      "changedOver35": 760,
+      "file": "frame-0216-13.953.jpg"
+    },
+    {
+      "index": 217,
+      "time": 14.018733,
+      "meanDelta": 0.7449155958679762,
+      "armMeanDelta": 3.1841622574955846,
+      "maxPixelDelta": 242.66666666666666,
+      "changedOver35": 725,
+      "file": "frame-0217-14.019.jpg"
+    },
+    {
+      "index": 218,
+      "time": 14.082967,
+      "meanDelta": 0.6528571428571425,
+      "armMeanDelta": 2.7781305114638424,
+      "maxPixelDelta": 245.66666666666666,
+      "changedOver35": 623,
+      "file": "frame-0218-14.083.jpg"
+    },
+    {
+      "index": 219,
+      "time": 14.148667,
+      "meanDelta": 0.6223078861174094,
+      "armMeanDelta": 2.596155202821868,
+      "maxPixelDelta": 241.66666666666666,
+      "changedOver35": 569,
+      "file": "frame-0219-14.149.jpg"
+    },
+    {
+      "index": 220,
+      "time": 14.216067,
+      "meanDelta": 0.6080952380952386,
+      "armMeanDelta": 2.520352733686065,
+      "maxPixelDelta": 243.33333333333334,
+      "changedOver35": 551,
+      "file": "frame-0220-14.216.jpg"
+    },
+    {
+      "index": 221,
+      "time": 14.2792,
+      "meanDelta": 0.6990551776266056,
+      "armMeanDelta": 2.9240917107583737,
+      "maxPixelDelta": 244.66666666666666,
+      "changedOver35": 656,
+      "file": "frame-0221-14.279.jpg"
+    },
+    {
+      "index": 222,
+      "time": 14.343967,
+      "meanDelta": 0.7870697908793158,
+      "armMeanDelta": 3.3281481481481503,
+      "maxPixelDelta": 247.66666666666666,
+      "changedOver35": 741,
+      "file": "frame-0222-14.344.jpg"
+    },
+    {
+      "index": 223,
+      "time": 14.413467,
+      "meanDelta": 0.8007432602670719,
+      "armMeanDelta": 3.376825396825398,
+      "maxPixelDelta": 252,
+      "changedOver35": 750,
+      "file": "frame-0223-14.413.jpg"
+    },
+    {
+      "index": 224,
+      "time": 14.4786,
+      "meanDelta": 0.8963492063492042,
+      "armMeanDelta": 3.7717813051146365,
+      "maxPixelDelta": 243.33333333333334,
+      "changedOver35": 826,
+      "file": "frame-0224-14.479.jpg"
+    },
+    {
+      "index": 225,
+      "time": 14.510167,
+      "meanDelta": 0.49097505668934327,
+      "armMeanDelta": 2.120211640211641,
+      "maxPixelDelta": 245.66666666666666,
+      "changedOver35": 429,
+      "file": "frame-0225-14.510.jpg"
+    },
+    {
+      "index": 226,
+      "time": 14.571233,
+      "meanDelta": 0.7520508944318472,
+      "armMeanDelta": 3.1273368606701912,
+      "maxPixelDelta": 246,
+      "changedOver35": 552,
+      "file": "frame-0226-14.571.jpg"
+    },
+    {
+      "index": 227,
+      "time": 14.635467,
+      "meanDelta": 0.7253313177122713,
+      "armMeanDelta": 3.0179541446208082,
+      "maxPixelDelta": 242,
+      "changedOver35": 546,
+      "file": "frame-0227-14.635.jpg"
+    },
+    {
+      "index": 228,
+      "time": 14.698167,
+      "meanDelta": 0.7623784328546247,
+      "armMeanDelta": 3.1603527336860617,
+      "maxPixelDelta": 242.33333333333334,
+      "changedOver35": 643,
+      "file": "frame-0228-14.698.jpg"
+    },
+    {
+      "index": 229,
+      "time": 14.792567,
+      "meanDelta": 1.6547165532879842,
+      "armMeanDelta": 7.090264550264547,
+      "maxPixelDelta": 250.66666666666666,
+      "changedOver35": 1421,
+      "file": "frame-0229-14.793.jpg"
+    },
+    {
+      "index": 230,
+      "time": 14.8528,
+      "meanDelta": 1.7697026958931759,
+      "armMeanDelta": 7.791005291005277,
+      "maxPixelDelta": 244.66666666666666,
+      "changedOver35": 1536,
+      "file": "frame-0230-14.853.jpg"
+    },
+    {
+      "index": 231,
+      "time": 14.883533,
+      "meanDelta": 1.017067271352984,
+      "armMeanDelta": 4.479541446208111,
+      "maxPixelDelta": 255,
+      "changedOver35": 895,
+      "file": "frame-0231-14.884.jpg"
+    },
+    {
+      "index": 232,
+      "time": 14.9421,
+      "meanDelta": 1.6127865961199253,
+      "armMeanDelta": 7.023915343915344,
+      "maxPixelDelta": 253.66666666666666,
+      "changedOver35": 1411,
+      "file": "frame-0232-14.942.jpg"
+    },
+    {
+      "index": 233,
+      "time": 15.000667,
+      "meanDelta": 1.6768732678256537,
+      "armMeanDelta": 7.2246913580246765,
+      "maxPixelDelta": 255,
+      "changedOver35": 1529,
+      "file": "frame-0233-15.001.jpg"
+    },
+    {
+      "index": 234,
+      "time": 15.0591,
+      "meanDelta": 1.518641975308647,
+      "armMeanDelta": 6.37820105820105,
+      "maxPixelDelta": 255,
+      "changedOver35": 1383,
+      "file": "frame-0234-15.059.jpg"
+    },
+    {
+      "index": 235,
+      "time": 15.088767,
+      "meanDelta": 0.8590576971529346,
+      "armMeanDelta": 3.2737918871252223,
+      "maxPixelDelta": 240,
+      "changedOver35": 779,
+      "file": "frame-0235-15.089.jpg"
+    },
+    {
+      "index": 236,
+      "time": 15.148133,
+      "meanDelta": 1.3422373393801976,
+      "armMeanDelta": 4.400987654320988,
+      "maxPixelDelta": 251,
+      "changedOver35": 1288,
+      "file": "frame-0236-15.148.jpg"
+    },
+    {
+      "index": 237,
+      "time": 15.247567,
+      "meanDelta": 1.1747543461829177,
+      "armMeanDelta": 3.105502645502641,
+      "maxPixelDelta": 255,
+      "changedOver35": 1163,
+      "file": "frame-0237-15.248.jpg"
+    },
+    {
+      "index": 238,
+      "time": 15.304867,
+      "meanDelta": 1.1791131267321806,
+      "armMeanDelta": 2.8728395061728453,
+      "maxPixelDelta": 255,
+      "changedOver35": 1145,
+      "file": "frame-0238-15.305.jpg"
+    },
+    {
+      "index": 239,
+      "time": 15.3359,
+      "meanDelta": 0.4407634164777016,
+      "armMeanDelta": 1.0978835978835968,
+      "maxPixelDelta": 237.66666666666666,
+      "changedOver35": 331,
+      "file": "frame-0239-15.336.jpg"
+    },
+    {
+      "index": 240,
+      "time": 15.392333,
+      "meanDelta": 0.8265280927185664,
+      "armMeanDelta": 2.142857142857141,
+      "maxPixelDelta": 248.33333333333334,
+      "changedOver35": 697,
+      "file": "frame-0240-15.392.jpg"
+    },
+    {
+      "index": 241,
+      "time": 15.4786,
+      "meanDelta": 0.8191055681531867,
+      "armMeanDelta": 2.022998236331567,
+      "maxPixelDelta": 254,
+      "changedOver35": 773,
+      "file": "frame-0241-15.479.jpg"
+    },
+    {
+      "index": 242,
+      "time": 15.534367,
+      "meanDelta": 0.6346510456034258,
+      "armMeanDelta": 1.5765784832451528,
+      "maxPixelDelta": 252.33333333333334,
+      "changedOver35": 560,
+      "file": "frame-0242-15.534.jpg"
+    },
+    {
+      "index": 243,
+      "time": 15.5989,
+      "meanDelta": 0.583741496598637,
+      "armMeanDelta": 1.5967548500881847,
+      "maxPixelDelta": 250.66666666666666,
+      "changedOver35": 402,
+      "file": "frame-0243-15.599.jpg"
+    },
+    {
+      "index": 244,
+      "time": 15.666,
+      "meanDelta": 0.39011085915847926,
+      "armMeanDelta": 1.0360141093474413,
+      "maxPixelDelta": 243.66666666666666,
+      "changedOver35": 283,
+      "file": "frame-0244-15.666.jpg"
+    },
+    {
+      "index": 245,
+      "time": 15.692967,
+      "meanDelta": 0.37202569916855577,
+      "armMeanDelta": 1.0904409171075837,
+      "maxPixelDelta": 233.33333333333334,
+      "changedOver35": 230,
+      "file": "frame-0245-15.693.jpg"
+    },
+    {
+      "index": 246,
+      "time": 15.757567,
+      "meanDelta": 0.32956916099773154,
+      "armMeanDelta": 0.9159435626102317,
+      "maxPixelDelta": 240.33333333333334,
+      "changedOver35": 214,
+      "file": "frame-0246-15.758.jpg"
+    },
+    {
+      "index": 247,
+      "time": 15.8933,
+      "meanDelta": 0.4763844797178067,
+      "armMeanDelta": 1.2316049382716059,
+      "maxPixelDelta": 234.66666666666666,
+      "changedOver35": 268,
+      "file": "frame-0247-15.893.jpg"
+    },
+    {
+      "index": 248,
+      "time": 15.945733,
+      "meanDelta": 0.34884101788863026,
+      "armMeanDelta": 0.8601410934744276,
+      "maxPixelDelta": 242.33333333333334,
+      "changedOver35": 196,
+      "file": "frame-0248-15.946.jpg"
+    },
+    {
+      "index": 249,
+      "time": 15.9964,
+      "meanDelta": 0.19648274124464982,
+      "armMeanDelta": 0.45601410934744185,
+      "maxPixelDelta": 170.33333333333334,
+      "changedOver35": 39,
+      "file": "frame-0249-15.996.jpg"
+    },
+    {
+      "index": 250,
+      "time": 16.0797,
+      "meanDelta": 0.5021164021164085,
+      "armMeanDelta": 0.9544268077601425,
+      "maxPixelDelta": 176.66666666666666,
+      "changedOver35": 79,
+      "file": "frame-0250-16.080.jpg"
+    },
+    {
+      "index": 251,
+      "time": 16.142267,
+      "meanDelta": 0.09201814058956785,
+      "armMeanDelta": 0.2017283950617284,
+      "maxPixelDelta": 136.33333333333334,
+      "changedOver35": 19,
+      "file": "frame-0251-16.142.jpg"
+    },
+    {
+      "index": 252,
+      "time": 16.2049,
+      "meanDelta": 0.17266313932980287,
+      "armMeanDelta": 0.36458553791887144,
+      "maxPixelDelta": 72.33333333333333,
+      "changedOver35": 14,
+      "file": "frame-0252-16.205.jpg"
+    },
+    {
+      "index": 253,
+      "time": 16.273333,
+      "meanDelta": 0.1158982111363027,
+      "armMeanDelta": 0.23943562610229227,
+      "maxPixelDelta": 72,
+      "changedOver35": 7,
+      "file": "frame-0253-16.273.jpg"
+    },
+    {
+      "index": 254,
+      "time": 16.3365,
+      "meanDelta": 0.1161753590324995,
+      "armMeanDelta": 0.2713227513227504,
+      "maxPixelDelta": 64.33333333333333,
+      "changedOver35": 2,
+      "file": "frame-0254-16.337.jpg"
+    },
+    {
+      "index": 255,
+      "time": 16.397567,
+      "meanDelta": 0.04203073822121437,
+      "armMeanDelta": 0.09943562610229284,
+      "maxPixelDelta": 74,
+      "changedOver35": 2,
+      "file": "frame-0255-16.398.jpg"
+    },
+    {
+      "index": 256,
+      "time": 16.460967,
+      "meanDelta": 0.028392542202066072,
+      "armMeanDelta": 0.08264550264550269,
+      "maxPixelDelta": 31.333333333333332,
+      "changedOver35": 0,
+      "file": "frame-0256-16.461.jpg"
+    },
+    {
+      "index": 257,
+      "time": 16.484133,
+      "meanDelta": 0.017062232300327516,
+      "armMeanDelta": 0.051287477954144574,
+      "maxPixelDelta": 30.666666666666668,
+      "changedOver35": 0,
+      "file": "frame-0257-16.484.jpg"
+    },
+    {
+      "index": 258,
+      "time": 16.547733,
+      "meanDelta": 0.019292013101536925,
+      "armMeanDelta": 0.05724867724867725,
+      "maxPixelDelta": 20,
+      "changedOver35": 0,
+      "file": "frame-0258-16.548.jpg"
+    },
+    {
+      "index": 259,
+      "time": 16.613567,
+      "meanDelta": 0.015374149659863922,
+      "armMeanDelta": 0.0389770723104056,
+      "maxPixelDelta": 31.333333333333332,
+      "changedOver35": 0,
+      "file": "frame-0259-16.614.jpg"
+    },
+    {
+      "index": 260,
+      "time": 16.652033,
+      "meanDelta": 0.0053212396069539,
+      "armMeanDelta": 0.016825396825396834,
+      "maxPixelDelta": 5.666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0260-16.652.jpg"
+    },
+    {
+      "index": 261,
+      "time": 16.683767,
+      "meanDelta": 0.009284454522549765,
+      "armMeanDelta": 0.0330864197530864,
+      "maxPixelDelta": 33.666666666666664,
+      "changedOver35": 0,
+      "file": "frame-0261-16.684.jpg"
+    },
+    {
+      "index": 262,
+      "time": 16.7516,
+      "meanDelta": 0.0103779289493575,
+      "armMeanDelta": 0.04088183421516755,
+      "maxPixelDelta": 24.333333333333332,
+      "changedOver35": 0,
+      "file": "frame-0262-16.752.jpg"
+    },
+    {
+      "index": 263,
+      "time": 16.814833,
+      "meanDelta": 0.26393298059963527,
+      "armMeanDelta": 0.427231040564375,
+      "maxPixelDelta": 22.666666666666668,
+      "changedOver35": 0,
+      "file": "frame-0263-16.815.jpg"
+    },
+    {
+      "index": 264,
+      "time": 16.882967,
+      "meanDelta": 0.030131015369110076,
+      "armMeanDelta": 0.059188712522045946,
+      "maxPixelDelta": 12.666666666666666,
+      "changedOver35": 0,
+      "file": "frame-0264-16.883.jpg"
+    },
+    {
+      "index": 265,
+      "time": 16.946033,
+      "meanDelta": 0.05320987654320888,
+      "armMeanDelta": 0.08479717813051142,
+      "maxPixelDelta": 7,
+      "changedOver35": 0,
+      "file": "frame-0265-16.946.jpg"
+    },
+    {
+      "index": 266,
+      "time": 17.038667,
+      "meanDelta": 0.007556059460821377,
+      "armMeanDelta": 0.013192239858906524,
+      "maxPixelDelta": 24,
+      "changedOver35": 0,
+      "file": "frame-0266-17.039.jpg"
+    },
+    {
+      "index": 267,
+      "time": 17.0862,
+      "meanDelta": 0.0017208364827412457,
+      "armMeanDelta": 0.004056437389770723,
+      "maxPixelDelta": 9.666666666666666,
+      "changedOver35": 0,
+      "file": "frame-0267-17.086.jpg"
+    },
+    {
+      "index": 268,
+      "time": 17.144867,
+      "meanDelta": 0.001929957168052407,
+      "armMeanDelta": 0.007795414462081127,
+      "maxPixelDelta": 6.333333333333333,
+      "changedOver35": 0,
+      "file": "frame-0268-17.145.jpg"
+    },
+    {
+      "index": 269,
+      "time": 17.207733,
+      "meanDelta": 0.0018694885361552037,
+      "armMeanDelta": 0.004197530864197529,
+      "maxPixelDelta": 7,
+      "changedOver35": 0,
+      "file": "frame-0269-17.208.jpg"
+    },
+    {
+      "index": 270,
+      "time": 17.2709,
+      "meanDelta": 0.000564373897707231,
+      "armMeanDelta": 0.0015167548500881836,
+      "maxPixelDelta": 3,
+      "changedOver35": 0,
+      "file": "frame-0270-17.271.jpg"
+    },
+    {
+      "index": 271,
+      "time": 17.335033,
+      "meanDelta": 0.00014361300075585792,
+      "armMeanDelta": 0.00035273368606701937,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0271-17.335.jpg"
+    },
+    {
+      "index": 272,
+      "time": 17.404667,
+      "meanDelta": 0.000954900478710002,
+      "armMeanDelta": 0.0004938271604938271,
+      "maxPixelDelta": 8,
+      "changedOver35": 0,
+      "file": "frame-0272-17.405.jpg"
+    },
+    {
+      "index": 273,
+      "time": 17.427467,
+      "meanDelta": 0.0001940035273368607,
+      "armMeanDelta": 0.00021164021164021162,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0273-17.427.jpg"
+    },
+    {
+      "index": 274,
+      "time": 17.490967,
+      "meanDelta": 0.00018896447467876043,
+      "armMeanDelta": 0.00021164021164021162,
+      "maxPixelDelta": 3.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0274-17.491.jpg"
+    },
+    {
+      "index": 275,
+      "time": 17.5564,
+      "meanDelta": 0.00012093726379440663,
+      "armMeanDelta": 0.0005996472663139331,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0275-17.556.jpg"
+    },
+    {
+      "index": 276,
+      "time": 17.650533,
+      "meanDelta": 0.00010330057949105569,
+      "armMeanDelta": 0.00014109347442680775,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0276-17.651.jpg"
+    },
+    {
+      "index": 277,
+      "time": 17.713467,
+      "meanDelta": 0.00006802721088435374,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0277-17.713.jpg"
+    },
+    {
+      "index": 278,
+      "time": 17.776567,
+      "meanDelta": 0.00018140589569160998,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 3,
+      "changedOver35": 0,
+      "file": "frame-0278-17.777.jpg"
+    },
+    {
+      "index": 279,
+      "time": 17.849567,
+      "meanDelta": 0.0001184177374653565,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.6666666666666665,
+      "changedOver35": 0,
+      "file": "frame-0279-17.850.jpg"
+    },
+    {
+      "index": 280,
+      "time": 17.908167,
+      "meanDelta": 0.00007054673721340387,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 1.3333333333333333,
+      "changedOver35": 0,
+      "file": "frame-0280-17.908.jpg"
+    },
+    {
+      "index": 281,
+      "time": 17.989167,
+      "meanDelta": 0.00011589821113630636,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 4.333333333333333,
+      "changedOver35": 0,
+      "file": "frame-0281-17.989.jpg"
+    },
+    {
+      "index": 282,
+      "time": 18.0533,
+      "meanDelta": 0.00007306626354245401,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.6666666666666665,
+      "changedOver35": 0,
+      "file": "frame-0282-18.053.jpg"
+    },
+    {
+      "index": 283,
+      "time": 18.134867,
+      "meanDelta": 0.00005291005291005291,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0283-18.135.jpg"
+    },
+    {
+      "index": 284,
+      "time": 18.157467,
+      "meanDelta": 0.00006298815822625347,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0284-18.157.jpg"
+    },
+    {
+      "index": 285,
+      "time": 18.2382,
+      "meanDelta": 0.00005794910556815318,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0285-18.238.jpg"
+    },
+    {
+      "index": 286,
+      "time": 18.301933,
+      "meanDelta": 0.00008818342151675484,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0286-18.302.jpg"
+    },
+    {
+      "index": 287,
+      "time": 18.348833,
+      "meanDelta": 0.0000655076845553036,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2,
+      "changedOver35": 0,
+      "file": "frame-0287-18.349.jpg"
+    },
+    {
+      "index": 288,
+      "time": 18.4078,
+      "meanDelta": 0.00011337868480725623,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.6666666666666665,
+      "changedOver35": 0,
+      "file": "frame-0288-18.408.jpg"
+    },
+    {
+      "index": 289,
+      "time": 18.461733,
+      "meanDelta": 0.00009826152683295541,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.6666666666666665,
+      "changedOver35": 0,
+      "file": "frame-0289-18.462.jpg"
+    },
+    {
+      "index": 290,
+      "time": 18.536067,
+      "meanDelta": 0.00007054673721340389,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 2.3333333333333335,
+      "changedOver35": 0,
+      "file": "frame-0290-18.536.jpg"
+    },
+    {
+      "index": 291,
+      "time": 18.578933,
+      "meanDelta": 0.00004787100025195263,
+      "armMeanDelta": 0,
+      "maxPixelDelta": 1.6666666666666667,
+      "changedOver35": 0,
+      "file": "frame-0291-18.579.jpg"
+    }
+  ],
+  "playback": {
+    "rate": 1,
+    "duration": 18.612233,
+    "wallDuration": 18.64270000000298,
+    "quality": {
+      "totalVideoFrames": 292,
+      "droppedVideoFrames": 10
+    },
+    "callbacks": [
+      {
+        "mediaTime": 0,
+        "presentedFrames": 1,
+        "wallTime": 0.00890000000298005
+      },
+      {
+        "mediaTime": 0.280167,
+        "presentedFrames": 2,
+        "wallTime": 0.2886000000029803
+      },
+      {
+        "mediaTime": 0.333833,
+        "presentedFrames": 3,
+        "wallTime": 0.34020000000298023
+      },
+      {
+        "mediaTime": 0.387667,
+        "presentedFrames": 4,
+        "wallTime": 0.40340000000298004
+      },
+      {
+        "mediaTime": 0.440567,
+        "presentedFrames": 5,
+        "wallTime": 0.45410000000298034
+      },
+      {
+        "mediaTime": 0.493267,
+        "presentedFrames": 6,
+        "wallTime": 0.5060000000029804
+      },
+      {
+        "mediaTime": 0.579167,
+        "presentedFrames": 7,
+        "wallTime": 0.5951000000029804
+      },
+      {
+        "mediaTime": 0.633167,
+        "presentedFrames": 8,
+        "wallTime": 0.6462000000029803
+      },
+      {
+        "mediaTime": 0.7769,
+        "presentedFrames": 9,
+        "wallTime": 0.7224000000029801
+      },
+      {
+        "mediaTime": 0.8385,
+        "presentedFrames": 10,
+        "wallTime": 0.7347000000029802
+      },
+      {
+        "mediaTime": 0.897967,
+        "presentedFrames": 11,
+        "wallTime": 0.9118000000029801
+      },
+      {
+        "mediaTime": 0.9572,
+        "presentedFrames": 12,
+        "wallTime": 0.97740000000298
+      },
+      {
+        "mediaTime": 1.191633,
+        "presentedFrames": 13,
+        "wallTime": 1.23490000000298
+      },
+      {
+        "mediaTime": 1.314933,
+        "presentedFrames": 15,
+        "wallTime": 1.3346000000029798
+      },
+      {
+        "mediaTime": 1.344333,
+        "presentedFrames": 16,
+        "wallTime": 1.36010000000298
+      },
+      {
+        "mediaTime": 1.4063,
+        "presentedFrames": 17,
+        "wallTime": 1.42440000000298
+      },
+      {
+        "mediaTime": 1.439867,
+        "presentedFrames": 18,
+        "wallTime": 1.4503000000029806
+      },
+      {
+        "mediaTime": 1.501167,
+        "presentedFrames": 19,
+        "wallTime": 1.51510000000298
+      },
+      {
+        "mediaTime": 1.5636,
+        "presentedFrames": 20,
+        "wallTime": 1.5786000000029798
+      },
+      {
+        "mediaTime": 1.657667,
+        "presentedFrames": 21,
+        "wallTime": 1.6690000000029803
+      },
+      {
+        "mediaTime": 1.7185,
+        "presentedFrames": 22,
+        "wallTime": 1.7332000000029801
+      },
+      {
+        "mediaTime": 1.780933,
+        "presentedFrames": 23,
+        "wallTime": 1.7995000000029804
+      },
+      {
+        "mediaTime": 1.8133,
+        "presentedFrames": 24,
+        "wallTime": 1.8257000000029802
+      },
+      {
+        "mediaTime": 1.874,
+        "presentedFrames": 25,
+        "wallTime": 1.8898000000029807
+      },
+      {
+        "mediaTime": 1.934667,
+        "presentedFrames": 26,
+        "wallTime": 1.9545000000029804
+      },
+      {
+        "mediaTime": 1.999733,
+        "presentedFrames": 27,
+        "wallTime": 2.0176000000029797
+      },
+      {
+        "mediaTime": 2.062533,
+        "presentedFrames": 28,
+        "wallTime": 2.0827000000029803
+      },
+      {
+        "mediaTime": 2.1602,
+        "presentedFrames": 29,
+        "wallTime": 2.1735000000029805
+      },
+      {
+        "mediaTime": 2.222733,
+        "presentedFrames": 30,
+        "wallTime": 2.2386000000029798
+      },
+      {
+        "mediaTime": 2.287267,
+        "presentedFrames": 31,
+        "wallTime": 2.30020000000298
+      },
+      {
+        "mediaTime": 2.351133,
+        "presentedFrames": 32,
+        "wallTime": 2.36510000000298
+      },
+      {
+        "mediaTime": 2.3827,
+        "presentedFrames": 33,
+        "wallTime": 2.4022000000029804
+      },
+      {
+        "mediaTime": 2.4477,
+        "presentedFrames": 34,
+        "wallTime": 2.4655000000029803
+      },
+      {
+        "mediaTime": 2.514533,
+        "presentedFrames": 35,
+        "wallTime": 2.5300000000029805
+      },
+      {
+        "mediaTime": 2.579067,
+        "presentedFrames": 36,
+        "wallTime": 2.5958000000029804
+      },
+      {
+        "mediaTime": 2.6451,
+        "presentedFrames": 37,
+        "wallTime": 2.65990000000298
+      },
+      {
+        "mediaTime": 2.710567,
+        "presentedFrames": 38,
+        "wallTime": 2.72450000000298
+      },
+      {
+        "mediaTime": 2.776933,
+        "presentedFrames": 39,
+        "wallTime": 2.7885000000029803
+      },
+      {
+        "mediaTime": 2.843233,
+        "presentedFrames": 40,
+        "wallTime": 2.85290000000298
+      },
+      {
+        "mediaTime": 2.875967,
+        "presentedFrames": 41,
+        "wallTime": 2.89160000000298
+      },
+      {
+        "mediaTime": 2.942367,
+        "presentedFrames": 42,
+        "wallTime": 2.95570000000298
+      },
+      {
+        "mediaTime": 3.0098,
+        "presentedFrames": 43,
+        "wallTime": 3.01840000000298
+      },
+      {
+        "mediaTime": 3.0994,
+        "presentedFrames": 44,
+        "wallTime": 3.10790000000298
+      },
+      {
+        "mediaTime": 3.166767,
+        "presentedFrames": 45,
+        "wallTime": 3.18490000000298
+      },
+      {
+        "mediaTime": 3.2265,
+        "presentedFrames": 46,
+        "wallTime": 3.23590000000298
+      },
+      {
+        "mediaTime": 3.2902,
+        "presentedFrames": 47,
+        "wallTime": 3.29940000000298
+      },
+      {
+        "mediaTime": 3.354667,
+        "presentedFrames": 48,
+        "wallTime": 3.36270000000298
+      },
+      {
+        "mediaTime": 3.4175,
+        "presentedFrames": 49,
+        "wallTime": 3.4259000000029802
+      },
+      {
+        "mediaTime": 3.4958,
+        "presentedFrames": 50,
+        "wallTime": 3.51490000000298
+      },
+      {
+        "mediaTime": 3.567633,
+        "presentedFrames": 51,
+        "wallTime": 3.57840000000298
+      },
+      {
+        "mediaTime": 3.6539,
+        "presentedFrames": 52,
+        "wallTime": 3.66870000000298
+      },
+      {
+        "mediaTime": 3.718,
+        "presentedFrames": 53,
+        "wallTime": 3.7317000000029803
+      },
+      {
+        "mediaTime": 3.784067,
+        "presentedFrames": 54,
+        "wallTime": 3.79640000000298
+      },
+      {
+        "mediaTime": 3.847467,
+        "presentedFrames": 55,
+        "wallTime": 3.8598000000029806
+      },
+      {
+        "mediaTime": 3.9096,
+        "presentedFrames": 56,
+        "wallTime": 3.9246000000029797
+      },
+      {
+        "mediaTime": 3.9701,
+        "presentedFrames": 57,
+        "wallTime": 3.9882000000029803
+      },
+      {
+        "mediaTime": 4.031533,
+        "presentedFrames": 58,
+        "wallTime": 4.039300000002981
+      },
+      {
+        "mediaTime": 4.0971,
+        "presentedFrames": 59,
+        "wallTime": 4.1152000000029805
+      },
+      {
+        "mediaTime": 4.192067,
+        "presentedFrames": 60,
+        "wallTime": 4.20460000000298
+      },
+      {
+        "mediaTime": 4.252033,
+        "presentedFrames": 61,
+        "wallTime": 4.26810000000298
+      },
+      {
+        "mediaTime": 4.314933,
+        "presentedFrames": 62,
+        "wallTime": 4.3309000000029805
+      },
+      {
+        "mediaTime": 4.382367,
+        "presentedFrames": 63,
+        "wallTime": 4.394000000002981
+      },
+      {
+        "mediaTime": 4.413833,
+        "presentedFrames": 64,
+        "wallTime": 4.432200000002981
+      },
+      {
+        "mediaTime": 4.476033,
+        "presentedFrames": 65,
+        "wallTime": 4.48390000000298
+      },
+      {
+        "mediaTime": 4.537567,
+        "presentedFrames": 66,
+        "wallTime": 4.54740000000298
+      },
+      {
+        "mediaTime": 4.569733,
+        "presentedFrames": 67,
+        "wallTime": 4.58570000000298
+      },
+      {
+        "mediaTime": 4.6847,
+        "presentedFrames": 68,
+        "wallTime": 4.7013000000029805
+      },
+      {
+        "mediaTime": 4.745933,
+        "presentedFrames": 69,
+        "wallTime": 4.753800000002981
+      },
+      {
+        "mediaTime": 4.807467,
+        "presentedFrames": 70,
+        "wallTime": 4.81710000000298
+      },
+      {
+        "mediaTime": 4.8693,
+        "presentedFrames": 71,
+        "wallTime": 4.88070000000298
+      },
+      {
+        "mediaTime": 4.932167,
+        "presentedFrames": 72,
+        "wallTime": 4.94560000000298
+      },
+      {
+        "mediaTime": 5.145167,
+        "presentedFrames": 73,
+        "wallTime": 5.20260000000298
+      },
+      {
+        "mediaTime": 5.4216,
+        "presentedFrames": 74,
+        "wallTime": 5.44510000000298
+      },
+      {
+        "mediaTime": 5.480967,
+        "presentedFrames": 75,
+        "wallTime": 5.49660000000298
+      },
+      {
+        "mediaTime": 5.5474,
+        "presentedFrames": 76,
+        "wallTime": 5.5607000000029805
+      },
+      {
+        "mediaTime": 5.577,
+        "presentedFrames": 77,
+        "wallTime": 5.58610000000298
+      },
+      {
+        "mediaTime": 5.637833,
+        "presentedFrames": 78,
+        "wallTime": 5.652800000002981
+      },
+      {
+        "mediaTime": 5.704467,
+        "presentedFrames": 79,
+        "wallTime": 5.717400000002981
+      },
+      {
+        "mediaTime": 5.766133,
+        "presentedFrames": 80,
+        "wallTime": 5.78060000000298
+      },
+      {
+        "mediaTime": 5.7979,
+        "presentedFrames": 81,
+        "wallTime": 5.80660000000298
+      },
+      {
+        "mediaTime": 5.8881,
+        "presentedFrames": 82,
+        "wallTime": 5.908200000002981
+      },
+      {
+        "mediaTime": 5.947667,
+        "presentedFrames": 83,
+        "wallTime": 5.959400000002981
+      },
+      {
+        "mediaTime": 6.008833,
+        "presentedFrames": 84,
+        "wallTime": 6.023400000002981
+      },
+      {
+        "mediaTime": 6.0695,
+        "presentedFrames": 85,
+        "wallTime": 6.087300000002981
+      },
+      {
+        "mediaTime": 6.131967,
+        "presentedFrames": 86,
+        "wallTime": 6.151900000002981
+      },
+      {
+        "mediaTime": 6.191533,
+        "presentedFrames": 87,
+        "wallTime": 6.20350000000298
+      },
+      {
+        "mediaTime": 6.252633,
+        "presentedFrames": 88,
+        "wallTime": 6.267800000002981
+      },
+      {
+        "mediaTime": 6.314233,
+        "presentedFrames": 89,
+        "wallTime": 6.331200000002981
+      },
+      {
+        "mediaTime": 6.3762,
+        "presentedFrames": 90,
+        "wallTime": 6.39520000000298
+      },
+      {
+        "mediaTime": 6.437867,
+        "presentedFrames": 91,
+        "wallTime": 6.44680000000298
+      },
+      {
+        "mediaTime": 6.501233,
+        "presentedFrames": 92,
+        "wallTime": 6.510500000002979
+      },
+      {
+        "mediaTime": 6.561833,
+        "presentedFrames": 93,
+        "wallTime": 6.57400000000298
+      },
+      {
+        "mediaTime": 6.653467,
+        "presentedFrames": 94,
+        "wallTime": 6.6625000000029795
+      },
+      {
+        "mediaTime": 6.713633,
+        "presentedFrames": 95,
+        "wallTime": 6.7246000000029795
+      },
+      {
+        "mediaTime": 6.7723,
+        "presentedFrames": 96,
+        "wallTime": 6.7882000000029805
+      },
+      {
+        "mediaTime": 6.832467,
+        "presentedFrames": 97,
+        "wallTime": 6.851800000002981
+      },
+      {
+        "mediaTime": 6.864533,
+        "presentedFrames": 98,
+        "wallTime": 6.87760000000298
+      },
+      {
+        "mediaTime": 6.954667,
+        "presentedFrames": 99,
+        "wallTime": 6.96650000000298
+      },
+      {
+        "mediaTime": 7.020867,
+        "presentedFrames": 100,
+        "wallTime": 7.03120000000298
+      },
+      {
+        "mediaTime": 7.082133,
+        "presentedFrames": 101,
+        "wallTime": 7.095900000002981
+      },
+      {
+        "mediaTime": 7.1435,
+        "presentedFrames": 102,
+        "wallTime": 7.15920000000298
+      },
+      {
+        "mediaTime": 7.1738,
+        "presentedFrames": 103,
+        "wallTime": 7.18470000000298
+      },
+      {
+        "mediaTime": 7.233433,
+        "presentedFrames": 104,
+        "wallTime": 7.2478000000029805
+      },
+      {
+        "mediaTime": 7.2937,
+        "presentedFrames": 105,
+        "wallTime": 7.3122000000029805
+      },
+      {
+        "mediaTime": 7.356333,
+        "presentedFrames": 106,
+        "wallTime": 7.375300000002981
+      },
+      {
+        "mediaTime": 7.417367,
+        "presentedFrames": 107,
+        "wallTime": 7.426900000002981
+      },
+      {
+        "mediaTime": 7.478333,
+        "presentedFrames": 108,
+        "wallTime": 7.491400000002981
+      },
+      {
+        "mediaTime": 7.537967,
+        "presentedFrames": 109,
+        "wallTime": 7.555500000002979
+      },
+      {
+        "mediaTime": 7.763567,
+        "presentedFrames": 110,
+        "wallTime": 7.81300000000298
+      },
+      {
+        "mediaTime": 7.988333,
+        "presentedFrames": 111,
+        "wallTime": 8.033500000002979
+      },
+      {
+        "mediaTime": 8.050667,
+        "presentedFrames": 112,
+        "wallTime": 8.05920000000298
+      },
+      {
+        "mediaTime": 8.1154,
+        "presentedFrames": 113,
+        "wallTime": 8.12360000000298
+      },
+      {
+        "mediaTime": 8.199667,
+        "presentedFrames": 114,
+        "wallTime": 8.21290000000298
+      },
+      {
+        "mediaTime": 8.2624,
+        "presentedFrames": 115,
+        "wallTime": 8.276400000002981
+      },
+      {
+        "mediaTime": 8.376433,
+        "presentedFrames": 116,
+        "wallTime": 8.39220000000298
+      },
+      {
+        "mediaTime": 8.408167,
+        "presentedFrames": 117,
+        "wallTime": 8.41780000000298
+      },
+      {
+        "mediaTime": 8.4696,
+        "presentedFrames": 118,
+        "wallTime": 8.48090000000298
+      },
+      {
+        "mediaTime": 8.531067,
+        "presentedFrames": 119,
+        "wallTime": 8.545000000002979
+      },
+      {
+        "mediaTime": 8.621333,
+        "presentedFrames": 120,
+        "wallTime": 8.634800000002981
+      },
+      {
+        "mediaTime": 8.682967,
+        "presentedFrames": 121,
+        "wallTime": 8.699000000002979
+      },
+      {
+        "mediaTime": 8.748833,
+        "presentedFrames": 122,
+        "wallTime": 8.763000000002979
+      },
+      {
+        "mediaTime": 8.811233,
+        "presentedFrames": 123,
+        "wallTime": 8.82900000000298
+      },
+      {
+        "mediaTime": 8.878133,
+        "presentedFrames": 124,
+        "wallTime": 8.894000000002979
+      },
+      {
+        "mediaTime": 8.9418,
+        "presentedFrames": 125,
+        "wallTime": 8.958400000002982
+      },
+      {
+        "mediaTime": 9.0093,
+        "presentedFrames": 126,
+        "wallTime": 9.021900000002981
+      },
+      {
+        "mediaTime": 9.068633,
+        "presentedFrames": 127,
+        "wallTime": 9.08600000000298
+      },
+      {
+        "mediaTime": 9.2204,
+        "presentedFrames": 128,
+        "wallTime": 9.151000000002979
+      },
+      {
+        "mediaTime": 9.6195,
+        "presentedFrames": 130,
+        "wallTime": 9.60850000000298
+      },
+      {
+        "mediaTime": 9.680667,
+        "presentedFrames": 131,
+        "wallTime": 9.672800000002981
+      },
+      {
+        "mediaTime": 9.8044,
+        "presentedFrames": 132,
+        "wallTime": 9.737700000002981
+      },
+      {
+        "mediaTime": 9.8636,
+        "presentedFrames": 133,
+        "wallTime": 9.80270000000298
+      },
+      {
+        "mediaTime": 9.9535,
+        "presentedFrames": 134,
+        "wallTime": 9.93120000000298
+      },
+      {
+        "mediaTime": 10.013933,
+        "presentedFrames": 135,
+        "wallTime": 10.03400000000298
+      },
+      {
+        "mediaTime": 10.0805,
+        "presentedFrames": 136,
+        "wallTime": 10.09720000000298
+      },
+      {
+        "mediaTime": 10.141033,
+        "presentedFrames": 137,
+        "wallTime": 10.160400000002982
+      },
+      {
+        "mediaTime": 10.172633,
+        "presentedFrames": 138,
+        "wallTime": 10.18620000000298
+      },
+      {
+        "mediaTime": 10.2346,
+        "presentedFrames": 139,
+        "wallTime": 10.25010000000298
+      },
+      {
+        "mediaTime": 10.296,
+        "presentedFrames": 140,
+        "wallTime": 10.314000000002979
+      },
+      {
+        "mediaTime": 10.387933,
+        "presentedFrames": 141,
+        "wallTime": 10.40390000000298
+      },
+      {
+        "mediaTime": 10.447567,
+        "presentedFrames": 142,
+        "wallTime": 10.45550000000298
+      },
+      {
+        "mediaTime": 10.509267,
+        "presentedFrames": 143,
+        "wallTime": 10.517500000002979
+      },
+      {
+        "mediaTime": 10.539533,
+        "presentedFrames": 144,
+        "wallTime": 10.55550000000298
+      },
+      {
+        "mediaTime": 10.5997,
+        "presentedFrames": 145,
+        "wallTime": 10.61840000000298
+      },
+      {
+        "mediaTime": 10.661733,
+        "presentedFrames": 146,
+        "wallTime": 10.681900000002981
+      },
+      {
+        "mediaTime": 10.7568,
+        "presentedFrames": 147,
+        "wallTime": 10.77210000000298
+      },
+      {
+        "mediaTime": 10.819033,
+        "presentedFrames": 148,
+        "wallTime": 10.835900000002981
+      },
+      {
+        "mediaTime": 10.878467,
+        "presentedFrames": 149,
+        "wallTime": 10.88730000000298
+      },
+      {
+        "mediaTime": 10.9396,
+        "presentedFrames": 150,
+        "wallTime": 10.95060000000298
+      },
+      {
+        "mediaTime": 10.9982,
+        "presentedFrames": 151,
+        "wallTime": 11.01500000000298
+      },
+      {
+        "mediaTime": 11.0564,
+        "presentedFrames": 152,
+        "wallTime": 11.06580000000298
+      },
+      {
+        "mediaTime": 11.087833,
+        "presentedFrames": 153,
+        "wallTime": 11.10550000000298
+      },
+      {
+        "mediaTime": 11.151133,
+        "presentedFrames": 154,
+        "wallTime": 11.15910000000298
+      },
+      {
+        "mediaTime": 11.208733,
+        "presentedFrames": 155,
+        "wallTime": 11.22360000000298
+      },
+      {
+        "mediaTime": 11.418767,
+        "presentedFrames": 156,
+        "wallTime": 11.491600000002979
+      },
+      {
+        "mediaTime": 11.597067,
+        "presentedFrames": 157,
+        "wallTime": 11.66540000000298
+      },
+      {
+        "mediaTime": 11.689767,
+        "presentedFrames": 158,
+        "wallTime": 11.70600000000298
+      },
+      {
+        "mediaTime": 11.758433,
+        "presentedFrames": 159,
+        "wallTime": 11.769000000002979
+      },
+      {
+        "mediaTime": 11.7938,
+        "presentedFrames": 160,
+        "wallTime": 11.80790000000298
+      },
+      {
+        "mediaTime": 11.852667,
+        "presentedFrames": 161,
+        "wallTime": 11.86110000000298
+      },
+      {
+        "mediaTime": 11.916433,
+        "presentedFrames": 162,
+        "wallTime": 11.92530000000298
+      },
+      {
+        "mediaTime": 11.987167,
+        "presentedFrames": 163,
+        "wallTime": 12.00120000000298
+      },
+      {
+        "mediaTime": 12.0514,
+        "presentedFrames": 164,
+        "wallTime": 12.065300000002981
+      },
+      {
+        "mediaTime": 12.1145,
+        "presentedFrames": 165,
+        "wallTime": 12.12890000000298
+      },
+      {
+        "mediaTime": 12.181633,
+        "presentedFrames": 166,
+        "wallTime": 12.19230000000298
+      },
+      {
+        "mediaTime": 12.243067,
+        "presentedFrames": 167,
+        "wallTime": 12.25660000000298
+      },
+      {
+        "mediaTime": 12.3062,
+        "presentedFrames": 168,
+        "wallTime": 12.32060000000298
+      },
+      {
+        "mediaTime": 12.376233,
+        "presentedFrames": 169,
+        "wallTime": 12.38460000000298
+      },
+      {
+        "mediaTime": 12.405967,
+        "presentedFrames": 170,
+        "wallTime": 12.424900000002982
+      },
+      {
+        "mediaTime": 12.469067,
+        "presentedFrames": 171,
+        "wallTime": 12.47720000000298
+      },
+      {
+        "mediaTime": 12.534667,
+        "presentedFrames": 172,
+        "wallTime": 12.55360000000298
+      },
+      {
+        "mediaTime": 12.608433,
+        "presentedFrames": 173,
+        "wallTime": 12.617900000002981
+      },
+      {
+        "mediaTime": 12.672433,
+        "presentedFrames": 174,
+        "wallTime": 12.68070000000298
+      },
+      {
+        "mediaTime": 12.738133,
+        "presentedFrames": 175,
+        "wallTime": 12.75770000000298
+      },
+      {
+        "mediaTime": 12.9397,
+        "presentedFrames": 176,
+        "wallTime": 13.01520000000298
+      },
+      {
+        "mediaTime": 13.2052,
+        "presentedFrames": 177,
+        "wallTime": 13.255200000002981
+      },
+      {
+        "mediaTime": 13.268333,
+        "presentedFrames": 178,
+        "wallTime": 13.28070000000298
+      },
+      {
+        "mediaTime": 13.333633,
+        "presentedFrames": 179,
+        "wallTime": 13.345100000002981
+      },
+      {
+        "mediaTime": 13.3966,
+        "presentedFrames": 180,
+        "wallTime": 13.408400000002981
+      },
+      {
+        "mediaTime": 13.500633,
+        "presentedFrames": 181,
+        "wallTime": 13.51290000000298
+      },
+      {
+        "mediaTime": 13.5655,
+        "presentedFrames": 182,
+        "wallTime": 13.578500000002979
+      },
+      {
+        "mediaTime": 13.760167,
+        "presentedFrames": 183,
+        "wallTime": 13.835800000002978
+      },
+      {
+        "mediaTime": 13.953467,
+        "presentedFrames": 184,
+        "wallTime": 14.023400000002981
+      },
+      {
+        "mediaTime": 14.018733,
+        "presentedFrames": 185,
+        "wallTime": 14.03670000000298
+      },
+      {
+        "mediaTime": 14.082967,
+        "presentedFrames": 186,
+        "wallTime": 14.100800000002979
+      },
+      {
+        "mediaTime": 14.148667,
+        "presentedFrames": 187,
+        "wallTime": 14.16530000000298
+      },
+      {
+        "mediaTime": 14.216067,
+        "presentedFrames": 188,
+        "wallTime": 14.229900000002981
+      },
+      {
+        "mediaTime": 14.2792,
+        "presentedFrames": 189,
+        "wallTime": 14.29420000000298
+      },
+      {
+        "mediaTime": 14.343967,
+        "presentedFrames": 190,
+        "wallTime": 14.359000000002979
+      },
+      {
+        "mediaTime": 14.413467,
+        "presentedFrames": 191,
+        "wallTime": 14.42400000000298
+      },
+      {
+        "mediaTime": 14.4786,
+        "presentedFrames": 192,
+        "wallTime": 14.488500000002979
+      },
+      {
+        "mediaTime": 14.510167,
+        "presentedFrames": 193,
+        "wallTime": 14.527500000002979
+      },
+      {
+        "mediaTime": 14.571233,
+        "presentedFrames": 194,
+        "wallTime": 14.57920000000298
+      },
+      {
+        "mediaTime": 14.635467,
+        "presentedFrames": 195,
+        "wallTime": 14.64450000000298
+      },
+      {
+        "mediaTime": 14.698167,
+        "presentedFrames": 196,
+        "wallTime": 14.70900000000298
+      },
+      {
+        "mediaTime": 14.792567,
+        "presentedFrames": 197,
+        "wallTime": 14.811100000002982
+      },
+      {
+        "mediaTime": 14.8528,
+        "presentedFrames": 198,
+        "wallTime": 14.86290000000298
+      },
+      {
+        "mediaTime": 14.883533,
+        "presentedFrames": 199,
+        "wallTime": 14.90080000000298
+      },
+      {
+        "mediaTime": 14.9421,
+        "presentedFrames": 200,
+        "wallTime": 14.95320000000298
+      },
+      {
+        "mediaTime": 15.000667,
+        "presentedFrames": 201,
+        "wallTime": 15.01700000000298
+      },
+      {
+        "mediaTime": 15.0591,
+        "presentedFrames": 202,
+        "wallTime": 15.06830000000298
+      },
+      {
+        "mediaTime": 15.088767,
+        "presentedFrames": 203,
+        "wallTime": 15.10590000000298
+      },
+      {
+        "mediaTime": 15.148133,
+        "presentedFrames": 204,
+        "wallTime": 15.156600000002982
+      },
+      {
+        "mediaTime": 15.247567,
+        "presentedFrames": 205,
+        "wallTime": 15.258100000002981
+      },
+      {
+        "mediaTime": 15.304867,
+        "presentedFrames": 206,
+        "wallTime": 15.322600000002982
+      },
+      {
+        "mediaTime": 15.3359,
+        "presentedFrames": 207,
+        "wallTime": 15.348900000002981
+      },
+      {
+        "mediaTime": 15.392333,
+        "presentedFrames": 208,
+        "wallTime": 15.400300000002979
+      },
+      {
+        "mediaTime": 15.4786,
+        "presentedFrames": 209,
+        "wallTime": 15.490300000002978
+      },
+      {
+        "mediaTime": 15.534367,
+        "presentedFrames": 210,
+        "wallTime": 15.542400000002981
+      },
+      {
+        "mediaTime": 15.5989,
+        "presentedFrames": 211,
+        "wallTime": 15.618300000002979
+      },
+      {
+        "mediaTime": 15.666,
+        "presentedFrames": 212,
+        "wallTime": 15.68220000000298
+      },
+      {
+        "mediaTime": 15.692967,
+        "presentedFrames": 213,
+        "wallTime": 15.708700000002981
+      },
+      {
+        "mediaTime": 15.757567,
+        "presentedFrames": 214,
+        "wallTime": 15.772800000002979
+      },
+      {
+        "mediaTime": 15.8933,
+        "presentedFrames": 215,
+        "wallTime": 15.90170000000298
+      },
+      {
+        "mediaTime": 15.945733,
+        "presentedFrames": 216,
+        "wallTime": 15.965100000002982
+      },
+      {
+        "mediaTime": 15.9964,
+        "presentedFrames": 217,
+        "wallTime": 16.016500000002978
+      },
+      {
+        "mediaTime": 16.0797,
+        "presentedFrames": 218,
+        "wallTime": 16.09400000000298
+      },
+      {
+        "mediaTime": 16.142267,
+        "presentedFrames": 219,
+        "wallTime": 16.16080000000298
+      },
+      {
+        "mediaTime": 16.397567,
+        "presentedFrames": 220,
+        "wallTime": 16.42890000000298
+      },
+      {
+        "mediaTime": 16.547733,
+        "presentedFrames": 221,
+        "wallTime": 16.58030000000298
+      },
+      {
+        "mediaTime": 16.613567,
+        "presentedFrames": 222,
+        "wallTime": 16.63110000000298
+      },
+      {
+        "mediaTime": 16.652033,
+        "presentedFrames": 223,
+        "wallTime": 16.66910000000298
+      },
+      {
+        "mediaTime": 16.683767,
+        "presentedFrames": 224,
+        "wallTime": 16.69450000000298
+      },
+      {
+        "mediaTime": 16.7516,
+        "presentedFrames": 225,
+        "wallTime": 16.75940000000298
+      },
+      {
+        "mediaTime": 16.814833,
+        "presentedFrames": 226,
+        "wallTime": 16.822800000002978
+      },
+      {
+        "mediaTime": 16.882967,
+        "presentedFrames": 227,
+        "wallTime": 16.90090000000298
+      },
+      {
+        "mediaTime": 16.946033,
+        "presentedFrames": 228,
+        "wallTime": 16.965600000002983
+      },
+      {
+        "mediaTime": 17.038667,
+        "presentedFrames": 229,
+        "wallTime": 17.05550000000298
+      },
+      {
+        "mediaTime": 17.0862,
+        "presentedFrames": 230,
+        "wallTime": 17.09490000000298
+      },
+      {
+        "mediaTime": 17.144867,
+        "presentedFrames": 231,
+        "wallTime": 17.15880000000298
+      },
+      {
+        "mediaTime": 17.207733,
+        "presentedFrames": 232,
+        "wallTime": 17.222300000002978
+      },
+      {
+        "mediaTime": 17.2709,
+        "presentedFrames": 233,
+        "wallTime": 17.287800000002978
+      },
+      {
+        "mediaTime": 17.335033,
+        "presentedFrames": 234,
+        "wallTime": 17.351100000002983
+      },
+      {
+        "mediaTime": 17.404667,
+        "presentedFrames": 235,
+        "wallTime": 17.420100000002982
+      },
+      {
+        "mediaTime": 17.427467,
+        "presentedFrames": 236,
+        "wallTime": 17.44540000000298
+      },
+      {
+        "mediaTime": 17.490967,
+        "presentedFrames": 237,
+        "wallTime": 17.51070000000298
+      },
+      {
+        "mediaTime": 17.5564,
+        "presentedFrames": 238,
+        "wallTime": 17.56510000000298
+      },
+      {
+        "mediaTime": 17.650533,
+        "presentedFrames": 239,
+        "wallTime": 17.66610000000298
+      },
+      {
+        "mediaTime": 17.713467,
+        "presentedFrames": 240,
+        "wallTime": 17.73200000000298
+      },
+      {
+        "mediaTime": 17.908167,
+        "presentedFrames": 241,
+        "wallTime": 18.000600000002983
+      },
+      {
+        "mediaTime": 18.134867,
+        "presentedFrames": 243,
+        "wallTime": 18.15300000000298
+      },
+      {
+        "mediaTime": 18.157467,
+        "presentedFrames": 244,
+        "wallTime": 18.165400000002982
+      },
+      {
+        "mediaTime": 18.2382,
+        "presentedFrames": 245,
+        "wallTime": 18.25670000000298
+      },
+      {
+        "mediaTime": 18.301933,
+        "presentedFrames": 246,
+        "wallTime": 18.321300000002978
+      },
+      {
+        "mediaTime": 18.348833,
+        "presentedFrames": 247,
+        "wallTime": 18.35940000000298
+      },
+      {
+        "mediaTime": 18.4078,
+        "presentedFrames": 248,
+        "wallTime": 18.42340000000298
+      },
+      {
+        "mediaTime": 18.461733,
+        "presentedFrames": 249,
+        "wallTime": 18.47520000000298
+      },
+      {
+        "mediaTime": 18.536067,
+        "presentedFrames": 250,
+        "wallTime": 18.55250000000298
+      },
+      {
+        "mediaTime": 18.578933,
+        "presentedFrames": 251,
+        "wallTime": 18.59120000000298
+      }
+    ]
+  },
+  "highestArmChanges": [
+    {
+      "index": 147,
+      "time": 9.526233,
+      "meanDelta": 10.33863189720296,
+      "armMeanDelta": 16.66835978835978,
+      "maxPixelDelta": 255,
+      "changedOver35": 12358,
+      "file": "frame-0147-9.526.jpg"
+    },
+    {
+      "index": 146,
+      "time": 9.466833,
+      "meanDelta": 9.867228521037813,
+      "armMeanDelta": 16.48176366843032,
+      "maxPixelDelta": 255,
+      "changedOver35": 11579,
+      "file": "frame-0146-9.467.jpg"
+    },
+    {
+      "index": 149,
+      "time": 9.6195,
+      "meanDelta": 9.586165280926803,
+      "armMeanDelta": 15.67922398589058,
+      "maxPixelDelta": 255,
+      "changedOver35": 11111,
+      "file": "frame-0149-9.620.jpg"
+    },
+    {
+      "index": 145,
+      "time": 9.406533,
+      "meanDelta": 9.006583522297646,
+      "armMeanDelta": 14.782186948853633,
+      "maxPixelDelta": 255,
+      "changedOver35": 10501,
+      "file": "frame-0145-9.407.jpg"
+    },
+    {
+      "index": 150,
+      "time": 9.680667,
+      "meanDelta": 8.745487528344425,
+      "armMeanDelta": 14.770264550264514,
+      "maxPixelDelta": 254.66666666666666,
+      "changedOver35": 10203,
+      "file": "frame-0150-9.681.jpg"
+    },
+    {
+      "index": 151,
+      "time": 9.740333,
+      "meanDelta": 8.15674225245675,
+      "armMeanDelta": 13.213721340387947,
+      "maxPixelDelta": 255,
+      "changedOver35": 9281,
+      "file": "frame-0151-9.740.jpg"
+    },
+    {
+      "index": 139,
+      "time": 9.0093,
+      "meanDelta": 7.4890199042581145,
+      "armMeanDelta": 13.098201058201036,
+      "maxPixelDelta": 255,
+      "changedOver35": 8223,
+      "file": "frame-0139-9.009.jpg"
+    },
+    {
+      "index": 144,
+      "time": 9.3439,
+      "meanDelta": 7.708329554044076,
+      "armMeanDelta": 12.257037037037009,
+      "maxPixelDelta": 255,
+      "changedOver35": 8653,
+      "file": "frame-0144-9.344.jpg"
+    },
+    {
+      "index": 152,
+      "time": 9.8044,
+      "meanDelta": 6.954628369866611,
+      "armMeanDelta": 11.34550264550264,
+      "maxPixelDelta": 241.66666666666666,
+      "changedOver35": 7717,
+      "file": "frame-0152-9.804.jpg"
+    },
+    {
+      "index": 140,
+      "time": 9.068633,
+      "meanDelta": 5.888359788359947,
+      "armMeanDelta": 10.74934744268075,
+      "maxPixelDelta": 251,
+      "changedOver35": 5905,
+      "file": "frame-0140-9.069.jpg"
+    },
+    {
+      "index": 153,
+      "time": 9.8636,
+      "meanDelta": 6.2399344923156725,
+      "armMeanDelta": 10.385820105820072,
+      "maxPixelDelta": 235.33333333333334,
+      "changedOver35": 6696,
+      "file": "frame-0153-9.864.jpg"
+    },
+    {
+      "index": 154,
+      "time": 9.9535,
+      "meanDelta": 6.24137314184944,
+      "armMeanDelta": 10.22462081128748,
+      "maxPixelDelta": 246.33333333333334,
+      "changedOver35": 6754,
+      "file": "frame-0154-9.954.jpg"
+    }
+  ],
+  "note": "All encoded samples decoded with WebCodecs. Separate 1x HTMLVideoElement playback observed via requestVideoFrameCallback. MP4 has opaque backgrounds; alpha continuity is checked separately in the rig test."
+}

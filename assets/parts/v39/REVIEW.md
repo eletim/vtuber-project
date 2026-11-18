@@ -1,0 +1,15 @@
+# v39: shared acting on the existing local WebSocket
+
+The server owns one acting ID, start epoch and optional stop epoch. Existing state broadcasts carry these fields. Start is idempotent while running or settling; stop is idempotent. Overlay-role sockets can request a fresh snapshot but cannot start/stop acting. No additional service, endpoint, authentication, port policy or external broadcast was introduced.
+
+Control Room sends start/stop commands instead of starting a private timer. Overlay and controller map the shared epoch to their monotonic frame clock. Repeated snapshots do not restart the phrase or reset renderer/hair physics. A late/new viewer blends into the current phrase instead of replaying from the beginning. Reconnection resumes the same ID/current time. There is intentionally a short settle/cooldown before a new start. Brief physical convergence on late join is expected; this is not pixel-identical deterministic lockstep rendering.
+
+Mode changes, a new ordinary performance, speech/conversation and explicit posture commands stop the shared phrase. Mouth-only input and manual expression updates keep authority without cancelling it. Camera/microphone acquisition sends a shared stop immediately. The existing local mouth and expression priority remains. A hidden tab does not stop other viewers; on becoming visible it requests the current state. Controller disconnect leaves the finite phrase running on the overlay; the server expires it after 18.5 seconds.
+
+Validation includes all JavaScript tests (200 passed) and the complete relevant server suites for controls, acting, speech lifecycle/broadcast, conversation, voice, expressions and launcher (95 passed). Earlier concurrent runs hit an existing one-second wait and a 150ms expression timing tolerance; both logs are retained. The final isolated runs passed without changing those tests or tolerances.
+
+Dedicated headless Chrome uses two independent BrowserContexts sharing only the local server. It tests late join, eight repeated starts, stop, restart, AI/human mode changes, overlay WebSocket reconnect and final settling. A synthetic mouth value and manual worried expression test uses the existing control API, not a real microphone or voice provider. See sync-review/report.json and sync-audit.json for exact observations.
+
+Video distinction: sync-review/koma-v39-two-context-sync.mp4 is a 10fps live-UI capture of two contexts (actual sample wall times retained). cfr-review/koma-v39-cfr-motion-sample.mp4 is an uninterrupted 18.5-second, 30fps/60Hz simulation sample of the same controller motion. Do not use the latter as proof of cross-tab communication. A raw-helper comparison is retained as supplementary evidence, not a claim of new artwork or rig improvement. No video was streamed externally.
+
+All artwork, v36 hand material, v37 head/hair rig and PSD remain unchanged. The shoulder redraw remains held and was not retried. Existing missing knee/foot art and subtle full-body loading remain limitations. No installs, credential changes, upload, push or main merge.

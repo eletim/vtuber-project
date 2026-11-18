@@ -1,0 +1,41 @@
+{
+  "frames": 100,
+  "wall_seconds": 9.942,
+  "max_shared_age_delta": 0.034799958038330914,
+  "events": [
+    {
+      "n": 10,
+      "action": "stop"
+    },
+    {
+      "n": 25,
+      "action": "restart"
+    },
+    {
+      "n": 45,
+      "action": "AI mode"
+    },
+    {
+      "n": 65,
+      "action": "human/start"
+    },
+    {
+      "n": 80,
+      "action": "overlay reconnect"
+    }
+  ],
+  "mouthAndExpression": [
+    {
+      "mouth": 0.6287113862748402,
+      "expression": "worried"
+    },
+    {
+      "mouth": 0.6333971832801029,
+      "expression": "worried"
+    }
+  ],
+  "finite": true,
+  "errors": [],
+  "reconnected": true,
+  "settled": true
+}

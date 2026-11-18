@@ -1,0 +1,1685 @@
+{
+  "errors": [],
+  "poses": [
+    {
+      "name": "neutral-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth1-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "neutral-mouth1-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "neutral",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "soft_smile",
+      "mouth": 0
+    },
+    {
+      "name": "soft_smile-mouth1-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "soft_smile-mouth1-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "soft_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "big_smile",
+      "mouth": 0
+    },
+    {
+      "name": "big_smile-mouth1-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "big_smile-mouth1-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "big_smile",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "worried",
+      "mouth": 0
+    },
+    {
+      "name": "worried-mouth1-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "worried-mouth1-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "worried",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "surprised",
+      "mouth": 0
+    },
+    {
+      "name": "surprised-mouth1-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "surprised-mouth1-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "surprised",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "bashful",
+      "mouth": 0
+    },
+    {
+      "name": "bashful-mouth1-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "bashful-mouth1-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "bashful",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "displeased",
+      "mouth": 0
+    },
+    {
+      "name": "displeased-mouth1-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "displeased-mouth1-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "displeased",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "thinking",
+      "mouth": 0
+    },
+    {
+      "name": "thinking-mouth1-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x-10-y0.png",
+      "x": -10,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x-5-y0.png",
+      "x": -5,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x5-y0.png",
+      "x": 5,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x10-y0.png",
+      "x": 10,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x0-y-10.png",
+      "x": 0,
+      "y": -10,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x0-y-5.png",
+      "x": 0,
+      "y": -5,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x0-y5.png",
+      "x": 0,
+      "y": 5,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x0-y10.png",
+      "x": 0,
+      "y": 10,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x-15-y10.png",
+      "x": -15,
+      "y": 10,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x15-y-10.png",
+      "x": 15,
+      "y": -10,
+      "expression": "thinking",
+      "mouth": 1
+    },
+    {
+      "name": "thinking-mouth1-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "thinking",
+      "mouth": 1
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "file": "assets\\parts\\v29\\sources\\thigh-repair-imagegen.png",
+    "tool": "built-in image_gen.imagegen",
+    "mode": "edit / num_last_images_to_include=1 / transparent_background=true",
+    "prompt_summary": "Repair ONLY the two accidental transparent holes inside the visible thighs; continue existing peach skin shading, preserve skirt, garter and outer silhouette, no knees/feet, same registration, transparent background.",
+    "bytes": 1815110,
+    "sha256": "b3fb02b0059dc75d96cc874bb528c83b493075a8a1f2e2403bc56fb8dd1eecb7"
+  },
+  {
+    "file": "assets\\parts\\v29\\sources\\hair-repair-imagegen.png",
+    "tool": "built-in image_gen.imagegen",
+    "mode": "edit / num_last_images_to_include=1 / transparent_background=true",
+    "prompt_summary": "Repair ONLY ragged speckled hair as continuous warm brown locks with clean gaps, preserving hairstyle, highlights, face and costume; no white/black/colored fringe, transparent background.",
+    "bytes": 1772446,
+    "sha256": "8a5c864358bdab531903da7a81c581e77c259da212e49eb46a466dd7c8631d26"
+  },
+  {
+    "file": "assets\\parts\\v29\\sources\\forward-arm-imagegen.png",
+    "tool": "built-in image_gen.imagegen",
+    "mode": "edit / num_last_images_to_include=1 / transparent_background=true",
+    "prompt_summary": "Paint natural forward-lifting intermediate screen-left arm: elbow bends toward viewer, relaxed adult-sized hand in front of lower chest, foreshortened forearm, rounded wrist and soft layered inner cuff; same shoulder, costume and registration.",
+    "bytes": 1704838,
+    "sha256": "d8abdbd2acfc4aea52f15a62c1673d346c5e3d29f792f955bfdb818c7a557224"
+  },
+  {
+    "file": "assets\\parts\\v29\\sources\\hair-unoccluded-imagegen.png",
+    "tool": "built-in image_gen.imagegen",
+    "mode": "edit / num_last_images_to_include=1 / transparent_background=true",
+    "prompt_summary": "Remove raised hand/forearm crossing screen-left hair and reconstruct the hair underneath at x350-510 y320-700; preserve face, hairstyle and registration; use only as unoccluded hair paint.",
+    "bytes": 1808717,
+    "sha256": "73c042b0e374eef8ac50201a57d01dd8f12ab674966314481be548b11be6d940"
+  },
+  {
+    "file": "assets\\parts\\v29\\sources\\hidden-forearm-imagegen.png",
+    "tool": "built-in image_gen.imagegen",
+    "mode": "edit / num_last_images_to_include=1 / transparent_background=true",
+    "prompt_summary": "Extend the isolated arm to a rounded hidden elbow, preserving wrist and skin.",
+    "bytes": 487020,
+    "sha256": "f621f7c7bc0d6c8ba5f062777dccfb725f6e07679d19c1597e1dd9fe9624541c"
+  },
+  {
+    "file": "assets\\parts\\v29\\sources\\relaxed-hand.png",
+    "tool": "built-in image_gen.imagegen",
+    "mode": "edit / num_last_images_to_include=1 / transparent_background=true",
+    "prompt_summary": "Replace only the hand with five relaxed gathered softly curled fingers, shorten apparent hand length ten percent; preserve forearm, wrist, shading and registration.",
+    "bytes": 454250,
+    "sha256": "c4b37406eff652b0d956d247dadd01b9aad100b77e71126f86ded83dfea4ead3"
+  }
+]

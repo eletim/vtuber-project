@@ -1,0 +1,12 @@
+test_cache_bounded (test_voice_runtime.Speech.test_cache_bounded) ... ok
+test_inflight_cancel_and_error (test_voice_runtime.Speech.test_inflight_cancel_and_error) ... ok
+test_performance_validation_and_mode_reset (test_voice_runtime.Speech.test_performance_validation_and_mode_reset) ... ok
+test_playback_controller_disconnect_resets_emotion (test_voice_runtime.Speech.test_playback_controller_disconnect_resets_emotion) ... ok
+test_playback_drives_emotion_and_pause_resume (test_voice_runtime.Speech.test_playback_drives_emotion_and_pause_resume) ... ok
+test_playback_stale_clip_failure_and_validation (test_voice_runtime.Speech.test_playback_stale_clip_failure_and_validation) ... ok
+test_single_player_overlay_and_download (test_voice_runtime.Speech.test_single_player_overlay_and_download) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.260s
+
+OK

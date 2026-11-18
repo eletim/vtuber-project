@@ -1,0 +1,32 @@
+羽月こま v18 肩・腕・体の動き確認
+
+Video: koma-v18-arm-body-motion.mp4
+Contact sheet: koma-v18-body-contact-sheet.png
+Matched v17/v18 comparisons: koma-v18-diagnostic-motion-sheet.png and motion-comparison/
+Actual encoded gesture windows: gesture-window-48.png and gesture-window-1044.png
+Approved mouth-skin check: koma-v18-frame653-face.png
+
+42.000 seconds, 1080 × 1440 portrait, 30 fps, 1260 frames, H.264/yuv420p and AAC mono 24 kHz. 14,266,684 bytes, below20MB.
+MP4 SHA256: ce4fd5278984ab8f10092285ff8970766690f8b3a1e224113ecaf26302ee0e4a
+
+Motion change
+The actual production PerformanceMotion controller is stepped once per chronological frame, followed by smoothParameters and BodyRig, matching the application path. Speech-linked arm intents, shoulder movement, torso shift and delayed elbow follow-through use the existing shared mesh. Idle and speech-end motion settle smoothly. The entire available character drawing is shown with a fixed margin around the hands and sleeves; there is no face inset obscuring the body.
+
+Approximate hand landmarks, measured in the moving chest-to-waist coordinate frame, show voiced motion ranges of 1.99→24.71 source pixels on the left and 2.18→26.22 on the right. This removes simple global translation/rotation from the comparison. These are artwork landmarks, not anatomical tracking. The last half-second hand steps are at most0.021 source pixels/frame.
+
+Preservation
+All v17 model/artwork bytes, including the corrected surprised-mouth skin, are identical. All1260 head-angle, eye and mouth parameter values are exactly identical to v17. The original audio WAV is byte-identical; body mesh/arm trajectories intentionally differ. No new artwork, PSD or dialogue was generated. The existing VOICEVOX:雨晴はう sample repeats four times.
+
+Verification
+Complete video/audio decode passed. Decoded AAC correlation with the intended PCM is 0.9999623686, peak 0.36323, no clipping. Independent all-frame geometry review found zero folds/warnings across1260 meshes; minimum signed area ratio .724, painted-body minimum .818 and worst painted stretch1.225. Diagnostic sleeve/cuff/finger/skirt review passed. Ten saved avatar alpha bounds are strictly inside the padded stage. Final independent encoded review passed native-size gesture peaks48/1044, minimum-area frame468, face frame653, the final pose, and both one-second temporal strips: gentle continuous motion, clean wrists/cuffs/fingers/hem, no new clipping or cutouts. The corrected mouth skin at exact frame653 is visually retained.
+
+Source
+Snapshot base revision: e70184fb6c5bc6fe33e1d0da0cd47f0fc2970415, plus the frozen v18 worktree in source-provenance.json.
+body-rig.js SHA256: 15c8f78c03c398a57482f2742c81ca0c985970bce020e982369864ac8b5c61f3
+performance.js SHA256: 525fdc976db942ae40930acbc2c87d31eeadd52ff608c664e2f412c9993a81fb
+controls.js SHA256: 66cc57478cbf24a41314b332e8edd3ae9a8bf43cb246d86c0450eca1ce7d5fc9
+
+Method and limitations
+Offline premultiplied OpenGL re-render of actual runtime helpers, not browser UI recording or E2E. Eyes use authored open/closed sprites, not continuous eyelid morphing. The mouth remains a two-endpoint2D deformation. The existing artwork ends at the thighs; thigh cutout gaps and rough hair matte remain visible. No official Cubism export is claimed.
+
+Reports: verification.json, motion-verification.json, source-provenance.json, stage-bounds.json. Reproduction: RERUN.txt and six pipeline scripts. Independent geometry and encoded-image review both passed.

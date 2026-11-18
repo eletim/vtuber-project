@@ -1,0 +1,68 @@
+{
+  "errors": [],
+  "faces": [
+    {
+      "roll": -8,
+      "opening": 0,
+      "gaze": 0,
+      "name": "face--8-0-0.png",
+      "sha256": "0195916cc7f44cc8c3afa5e8b2025148e9f8d6335b09651af4327c4d980e59ae"
+    },
+    {
+      "roll": -8,
+      "opening": 0.5,
+      "gaze": 0,
+      "name": "face--8-0.5-0.png",
+      "sha256": "a54b80ef4bb77ec15f53aa9384755329e3742a8ea16619edbf452e4d0369d468"
+    },
+    {
+      "roll": -8,
+      "opening": 1,
+      "gaze": 0,
+      "name": "face--8-1-0.png",
+      "sha256": "9e8c7a89bfa771dc0b15fbf70d308973290b366798fa008824db63d8b76f6874"
+    },
+    {
+      "roll": 0,
+      "opening": 0,
+      "gaze": 0,
+      "name": "face-0-0-0.png",
+      "sha256": "5a5c481f0deba1bc1e26381fb9380dfd4bda00639536b5c0ba4755e00e05a80c"
+    },
+    {
+      "roll": 0,
+      "opening": 0.5,
+      "gaze": 0,
+      "name": "face-0-0.5-0.png",
+      "sha256": "1b2adc33f745a264b3808784fe2037de5a8d0a33b01df4766bcd5e47aa79c10b"
+    },
+    {
+      "roll": 0,
+      "opening": 1,
+      "gaze": 0,
+      "name": "face-0-1-0.png",
+      "sha256": "61e7d8afbdf1481463b33a91550689536d7ee22a119151abf6b4f5e6b69a871b"
+    },
+    {
+      "roll": 8,
+      "opening": 0,
+      "gaze": 0,
+      "name": "face-8-0-0.png",
+      "sha256": "6b41e287a0afd74d23c7d898784d92ff9164e346185ee111249159d199962272"
+    },
+    {
+      "roll": 8,
+      "opening": 0.5,
+      "gaze": 0,
+      "name": "face-8-0.5-0.png",
+      "sha256": "569218359783a332936bf58693dec87178d84a1eda0ed2d0222dc80b27d39983"
+    },
+    {
+      "roll": 8,
+      "opening": 1,
+      "gaze": 0,
+      "name": "face-8-1-0.png",
+      "sha256": "30e109e4d2e3fd0d7d6dbaf97623ec68d39f272bae0102e2890a751e9d30ef43"
+    }
+  ]
+}

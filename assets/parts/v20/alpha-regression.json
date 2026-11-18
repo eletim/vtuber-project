@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "observed": {
+    "transparent": {
+      "overlap": [
+        64,
+        0,
+        128,
+        192
+      ],
+      "red_only": [
+        128,
+        0,
+        0,
+        128
+      ]
+    },
+    "white": {
+      "overlap": [
+        127,
+        63,
+        191,
+        255
+      ],
+      "red_only": [
+        255,
+        127,
+        127,
+        255
+      ]
+    },
+    "black": {
+      "overlap": [
+        64,
+        0,
+        128,
+        255
+      ],
+      "red_only": [
+        128,
+        0,
+        0,
+        255
+      ]
+    }
+  },
+  "expected": {
+    "transparent": {
+      "overlap": [
+        64,
+        0,
+        128,
+        192
+      ],
+      "red_only": [
+        128,
+        0,
+        0,
+        128
+      ]
+    },
+    "white": {
+      "overlap": [
+        127,
+        63,
+        191,
+        255
+      ],
+      "red_only": [
+        255,
+        127,
+        127,
+        255
+      ]
+    },
+    "black": {
+      "overlap": [
+        64,
+        0,
+        128,
+        255
+      ],
+      "red_only": [
+        128,
+        0,
+        0,
+        255
+      ]
+    }
+  },
+  "method": "Real offline GL draw/readPixels. Two straight-RGBA inputs premultiplied once, ONE/ONE_MINUS_SRC_ALPHA, production crop/discard shader, separate draws. No browser claim.",
+  "head_FBO_straight_RGBA_samples": {
+    "overlap": [
+      85,
+      0,
+      170,
+      192
+    ],
+    "red_only": [
+      255,
+      0,
+      0,
+      128
+    ]
+  },
+  "head_FBO_double_premultiply_test": "PASS",
+  "coverage_2x_head_FBO_test": "PASS",
+  "max_texture_and_renderbuffer_size": 16384
+}

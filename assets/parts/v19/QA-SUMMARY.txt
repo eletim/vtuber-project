@@ -1,0 +1,54 @@
+v19 separated-body preview verification
+
+Deliverable
+
+- koma-v19-separated-body-motion.mp4: 48.000 seconds, 1,440 frames, 1080 × 1440, 30 fps, H.264 video and 24 kHz mono AAC audio.
+- Size: 15,781,986 bytes, below 20 MB.
+- SHA256: be5ad0f78f4f938a36d8182ab5439809d70fcf4c3dbcbda9328434223ced1194.
+- Offline OpenGL re-render of the actual frozen runtime code and artwork. Not a browser/GUI recording, browser E2E test, or Cubism model.
+
+What is demonstrated
+
+0–5 s: screen-left arm alone. 5–10 s: screen-right arm alone. 10–16 s: skirt alone with waist pinned. 16–18 s: rest. 18–48 s: combined natural motion, eight expressions, preserved speech sample, and settle.
+
+The actual PSD contains 144 native layers assigned to seven semantic body groups. Runtime draws seven ordered cropped textures with six independent mesh-role buffers. It does not warp a single combined body image. The rest source composite is pixel-identical, and all 64 expression endpoint cases pass PSD/runtime round-trip checks.
+
+Passed checks
+
+- Complete MP4 decode without errors; dimensions, frame count, duration, and size verified.
+- Original saved 8.1707-second VOICEVOX:雨晴はう sample repeated completely at 18.5, 28.5, and 38.5 s. No new dialogue or voice generation. Decoded audio correlation with the exact source timeline: 0.9999700408.
+- Across all 540 diagnostic frames, torso mesh arrays are identical. Every non-target role remains bit-identical within each arm/skirt isolation section. Waist and above are fixed during skirt isolation.
+- 47,506 protected torso pixels checked losslessly before encoding: 0 changed pixels, 0 maximum channel delta. Actual foreground masks additionally establish visible, unoccluded torso invariance at review frames. Torso-only samples also match exactly.
+- Isolated arm maximum displacement: left 36.8023, right 37.0026 source pixels. Skirt diagnostic maximum displacement: 1.45387 source pixels. Its production safe target cap is ±3 source pixels, so the skirt motion is deliberately small, not a broad cloth simulation.
+- All six pose/mesh streams are byte-identical before and after the artwork/alpha corrections. Motion was not reduced to hide defects.
+- Actual GL premultiplied-alpha fixture, crop/discard, head FBO, and 2× composition tests pass. Expected half-alpha red/blue overlap is exactly RGBA [64, 0, 128, 192].
+- Final candidate05 sprites have zero alpha deficit against the full-source diagnostic reference at both 900 × 1200 and 652 × 869. Reports bind the exact model, renderer and sprite hashes. Production and offline renderer both use all-layer NEAREST sampling into a 2× premultiplied FBO, then one LINEAR resolve.
+- All 48 accepted facial part files and the mouth deformation helper remain byte-identical. Actual encoded face sheet checks eight expressions × three mouth openings, including the corrected surprised-expression skin.
+- All-frame stage bounds and selected full-size encoded frames show no output clipping.
+
+Visual evidence
+
+- koma-v19-contact-sheet.png: actual decoded diagnostic and natural frames.
+- koma-v19-all8-face-states.png: actual decoded 24-state face review.
+- koma-v19-surprised-face.png: actual decoded frame 990.
+- koma-v19-shoulder-attachment.png: lossless matched shoulder detail, including rejected candidate03 versus final candidate05.
+- koma-v19-full-range-shoulders.png: final candidate05 isolated ±1 controls for both arms on black/white backgrounds.
+- koma-v19-torso-isolation-proof.png: lossless torso-only and visible protected-mask evidence.
+- isolation-window-{73,223,367,990}.png: actual decoded one-second temporal strips around diagnostic and natural samples.
+- verification.json, isolation-pixels.json, isolation-verification.json: detailed decode, audio, geometry and pixel results.
+
+Independent final encoded acceptance: PASS, bound to the MP4 SHA256 above. The reviewer independently decoded the complete video, inspected 21 spanning frames and the actual encoded eight-expression/three-mouth-state sheet, and found no new visual blocker. Shoulder/cuff fixes, torso isolation, skirt phase and natural motion match the accepted candidate05.
+
+Provenance and limits
+
+Final PSD SHA256: 0f1d28279d0256f2a7ba860422709041f701dade3becf361c2b54bf5342ba3f4.
+Model SHA256: faadc7156387814706d637a8a35813f5961c17ae0c0d735d730408f0d2575702.
+Renderer SHA256: b00c2cef94141f8e6442842aa42d33d1bc982f371b6fd80634ef1229496420e6.
+Rig SHA256: 1204bb29b3c1beff259c5dc6e361badc21fa5a709fdf60c71bf0d9997a36a3ae.
+The exact frozen working-tree file hashes, rather than the pre-change Git HEAD alone, identify this render in source-provenance.json. The coordinator records the later final commit.
+
+Original thigh cutout gaps and hair matte boundaries remain. The approved artwork ends at the thighs; there is no invented lower body. Eyes use authored open/closed states, not continuous eyelid morphing. Skirt movement remains bounded by actual painted reveal coverage. No browser route was used.
+
+Reproduction
+
+The 15 files in pipeline-manifest.json are frozen and hashed. See RERUN.md. Raw source copies, mesh streams, rejected candidates, incomplete videos and prototype scripts are not part of the compact repository evidence package.

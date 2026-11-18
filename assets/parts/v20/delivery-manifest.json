@@ -1,0 +1,45 @@
+{
+  "frozen": true,
+  "files": {
+    "koma-v20-fresh-speech.mp4": {
+      "sha256": "fadd8466574bc0afcb7964d5a2450471f490d2aff8a506ef3feedf050247e77b",
+      "bytes": 6526292
+    },
+    "koma-v20-contact-sheet.png": {
+      "sha256": "6b1040386fe234d8015c5db5a00790172f7179c901777157d96e1402b792a8e1",
+      "bytes": 1904245
+    },
+    "koma-v20-face-checks.png": {
+      "sha256": "41b55b7a858fb0e8e96a22e47cc3433f12e49ee4d9635a026731f4f5f9fa42e4",
+      "bytes": 1135178
+    },
+    "verification.json": {
+      "sha256": "d75b646e7d10163c8aa7627452590bd3638c8d0f720c6f2d466b3d8a1f024e51",
+      "bytes": 19242
+    },
+    "source-provenance.json": {
+      "sha256": "c3c771e8670740912211f863c88daaf764210a8644d8ac26a1f791d398fa2391",
+      "bytes": 12117
+    },
+    "v19-preservation.json": {
+      "sha256": "3f1fdef34e2943f10a42ac431225a945eeaa805356be957971a59b7c39ea2c61",
+      "bytes": 292
+    },
+    "fresh-voice-verification.json": {
+      "sha256": "3a42bec2982d938ee5088067052fb33bc53aae11932817773db9126927a2753f",
+      "bytes": 1255
+    },
+    "alpha-regression.json": {
+      "sha256": "8f72b18cbd91fe57424ddcef3127c0d870d70ddb7241b3a4872685f3a9c59cb6",
+      "bytes": 1607
+    },
+    "QA-SUMMARY.txt": {
+      "sha256": "411155fbe28c7ad67e0debebb277fe961ce57d00ef19c3d0be679254b57d7f1f",
+      "bytes": 2212
+    },
+    "pipeline-manifest.json": {
+      "sha256": "282a8b45dd0bbe38353300a4ca75aa9ac42569d7bf3dd76f0731bcd4e3bb06b1",
+      "bytes": 792
+    }
+  }
+}

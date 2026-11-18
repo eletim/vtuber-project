@@ -5,18 +5,26 @@ import json
 import math
 import time
 import uuid
-import io
-import wave
 from collections import OrderedDict
-from voice import Voicevox
+from voice import Voicevox, VoiceError, validate_wav
+from conversation import (create_provider, ConversationError, validate_reply, MAX_INPUT_CHARS,
+                          MAX_HISTORY_TURNS, MAX_HISTORY_CHARS)
 from pathlib import Path
 from aiohttp import web, WSMsgType
 
 ROOT = Path(__file__).resolve().parent
+EXPRESSIONS = ('neutral', 'soft_smile', 'big_smile', 'worried', 'surprised', 'bashful', 'displeased', 'thinking')
+EMOTION_EXPRESSIONS = {'neutral':'neutral', 'happy':'soft_smile', 'thoughtful':'thinking', 'surprised':'surprised'}
 LIMITS = {'ParamAngleX': (-15,15,0), 'ParamAngleY': (-10,10,0),
           'ParamAngleZ': (-8,8,0), 'ParamBodyAngleX': (-5,5,0),
           'ParamEyeLOpen': (0,1,1), 'ParamEyeROpen': (0,1,1),
-          'ParamMouthOpenY': (0,1,0), 'ParamBreath': (0,1,0.5)}
+          'ParamEyeBallX': (-1,1,0), 'ParamEyeBallY': (-1,1,0),
+          'ParamMouthOpenY': (0,1,0), 'ParamBreath': (0,1,0.5),
+          'ParamArmLOpen': (-1,1,0), 'ParamArmROpen': (-1,1,0),
+          'ParamHandToCheek': (0,1,0),
+          'ParamShoulderY': (-1,1,0), 'ParamBodyShiftX': (-1,1,0),
+          'ParamBodyBounce': (-1,1,0),
+          'ParamSkirtSway': (-1,1,0)}
 
 
 def validate_parameters(values):
@@ -31,17 +39,27 @@ def validate_parameters(values):
     return result
 
 
-def create_app(voice=None):
+def create_app(voice=None, conversation=None):
     app = web.Application(client_max_size=65536)
     state = {'mode':'human', 'parameters':{k:v[2] for k,v in LIMITS.items()},
              'revision':0, 'source':'idle',
              'performance':{'enabled':True,'emotion':'neutral','started_at':time.time(),'until':0}}
+    state['acting'] = {'id':None, 'started_at':0, 'stopped_at':0}
+    def stop_acting():
+        if state['acting']['id'] and not state['acting']['stopped_at']:
+            state['acting']['stopped_at'] = min(time.time(), state['acting']['started_at']+18.5)
+
     peers = set()
     controllers = []
     voice = voice or Voicevox()
+    conversation = conversation or create_provider()
+    history = []  # Completed turns only; process memory, never written to disk.
     clips = OrderedDict()
     generation = [0]
     active_speech = [None]
+    synthesis = [None]
+    retired_requests = OrderedDict()
+    state['speech'] = {'phase':'idle'}
     deadline = [0.0]
 
     async def send(event):
@@ -55,6 +73,101 @@ def create_app(voice=None):
         state['revision'] += 1
         await send({'type':'state', **state})
 
+    def validate_expression(expression, duration):
+        if not isinstance(expression, str) or expression not in EXPRESSIONS:
+            raise ValueError('unknown expression')
+        if isinstance(duration, bool) or not isinstance(duration, (int, float)) or not math.isfinite(duration) or not 0.1 <= duration <= 30:
+            raise ValueError('expression duration must be within 0.1–30 seconds')
+        return expression, duration
+
+    def set_expression(expression='neutral', source='idle', owner='idle', duration=0):
+        now = time.time()
+        state['expression'] = {'id':expression, 'source':source, 'owner':owner,
+                               'started_at':now, 'until':now+duration if duration else 0}
+
+    def clear_speech_expression():
+        if state['expression']['owner'] == 'speech':
+            set_expression()
+
+    set_expression()
+
+    def retire(request_id):
+        if request_id:
+            retired_requests[request_id] = None
+            while len(retired_requests) > 128:
+                retired_requests.popitem(last=False)
+
+    def forget_interrupted_turn(current):
+        if current and current.get('kind') == 'conversation' and state['speech']['phase'] != 'ended':
+            history[:] = [turn for turn in history if turn['request_id'] != current['request_id']]
+
+    def reset_speech():
+        stop_acting()
+        generation[0] += 1
+        job = synthesis[0]
+        if job:
+            retire(job['request_id'])
+            job['task'].cancel()
+            synthesis[0] = None
+        if active_speech[0]:
+            retire(active_speech[0]['request_id'])
+        active_speech[0] = None
+        clear_speech_expression()
+        state['parameters']['ParamMouthOpenY'] = 0
+        state['performance'].update(emotion='neutral', started_at=time.time(), until=0)
+        state['speech'] = {'phase':'idle'}
+
+    def request_identity(data, optional=False):
+        value = data.get('request_id')
+        if value is None:
+            return None if optional else uuid.uuid4().hex
+        if not isinstance(value, str) or not value.strip() or len(value) > 128:
+            raise web.HTTPBadRequest(text='request_id must contain 1–128 characters')
+        return value
+
+    async def voice_status(request):
+        if not hasattr(voice, 'status'):
+            return web.json_response({'available':False, 'provider':'VOICEVOX',
+                                      'message':'音声プロバイダーの接続確認に対応していません。'})
+        return web.json_response(await voice.status())
+
+    async def conversation_status(request):
+        info = await conversation.status()
+        return web.json_response({**info, 'history_turns':len(history),
+                                  'history_limit':MAX_HISTORY_TURNS})
+
+    async def clear_conversation(request):
+        history.clear()
+        current = synthesis[0] or active_speech[0]
+        if current and current.get('kind') == 'conversation':
+            request_id = current['request_id']
+            reset_speech()
+            await send({'type':'cancel_speech', 'reason':'history_cleared', 'request_id':request_id})
+            await publish()
+        return web.json_response({'cleared':True, 'history_turns':0})
+
+    async def cancel_speech(request):
+        try:
+            data = await request.json()
+        except ValueError:
+            raise web.HTTPBadRequest(text='cancel must be valid JSON')
+        if not isinstance(data, dict):
+            raise web.HTTPBadRequest(text='cancel must be an object')
+        request_id = request_identity(data, optional=True)
+        current = synthesis[0] or active_speech[0]
+        # A cancellation may arrive before its HTTP synthesis request. Keep a
+        # bounded tombstone without cancelling a different, newer utterance.
+        retire(request_id)
+        if request_id and (not current or current['request_id'] != request_id):
+            return web.json_response({'cancelled':False, 'ignored':True})
+        cancelled_id = request_id or (current['request_id'] if current else None)
+        # A stopped ready/playing reply must not be recalled as a completed turn.
+        forget_interrupted_turn(current)
+        reset_speech()
+        await send({'type':'cancel_speech', 'reason':'stopped', 'request_id':cancelled_id})
+        await publish()
+        return web.json_response({'cancelled':True})
+
     async def control(data):
         if not isinstance(data,dict):
             raise ValueError('control must be an object')
@@ -66,6 +179,11 @@ def create_app(voice=None):
         ttl = data.get('ttl_ms', 2000)
         if isinstance(ttl, bool) or not isinstance(ttl, (int,float)) or not math.isfinite(ttl):
             raise ValueError('ttl_ms must be finite')
+        expression = validate_expression(data['expression'], data.get('expression_duration', 4)) if 'expression' in data else None
+        if expression:
+            set_expression(expression[0], data['source'], 'manual', expression[1])
+        if set(parameters)-{'ParamMouthOpenY','ParamBreath'}:
+            stop_acting()
         state['parameters'].update(parameters)
         state['source'] = data['source']
         deadline[0] = time.monotonic()+max(100, min(10000, ttl))/1000
@@ -78,12 +196,13 @@ def create_app(voice=None):
         data = await request.json()
         if not isinstance(data,dict) or data.get('mode') not in ('human','ai'):
             raise web.HTTPBadRequest(text='mode must be human or ai')
+        forget_interrupted_turn(synthesis[0] or active_speech[0])
         state.update(mode=data['mode'], source='idle', parameters={k:v[2] for k,v in LIMITS.items()})
         deadline[0] = 0
+        set_expression()
         state['performance'].update(emotion='neutral',started_at=time.time(),until=0)
-        generation[0] += 1
-        active_speech[0] = None
-        await send({'type':'cancel_speech'})
+        reset_speech()
+        await send({'type':'cancel_speech', 'reason':'mode_change'})
         await publish()
         return web.json_response(state)
 
@@ -93,6 +212,23 @@ def create_app(voice=None):
         except ValueError as e:
             raise web.HTTPBadRequest(text=str(e))
         return web.json_response(state)
+
+    async def api_expression(request):
+        try:
+            data = await request.json()
+        except ValueError:
+            raise web.HTTPBadRequest(text='expression must be valid JSON')
+        if not isinstance(data, dict) or data.get('source') not in ('human', 'ai'):
+            raise web.HTTPBadRequest(text='source must be human or ai')
+        if data['source'] != state['mode']:
+            raise web.HTTPConflict(text='inactive control source')
+        try:
+            expression, duration = validate_expression(data.get('expression'), data.get('duration', 4))
+        except ValueError as error:
+            raise web.HTTPBadRequest(text=str(error))
+        set_expression(expression, data['source'], 'manual', duration)
+        await publish()
+        return web.json_response(state['expression'])
 
     async def performance(request):
         data = await request.json()
@@ -108,29 +244,88 @@ def create_app(voice=None):
         if isinstance(duration,bool) or not isinstance(duration,(int,float)) or not math.isfinite(duration) or not 0<duration<=30:
             raise web.HTTPBadRequest(text='duration must be within 0–30 seconds')
         now=time.time()
+        stop_acting()
         state['performance']={'enabled':enabled,'emotion':emotion,'started_at':now,'until':now+duration}
         await publish()
         return web.json_response(state['performance'])
 
-    async def speech(request):
-        data = await request.json()
+    async def speech_request(request, is_conversation=False):
+        try:
+            data = await request.json()
+        except ValueError:
+            raise web.HTTPBadRequest(text='speech must be valid JSON')
         if state['mode'] != 'ai':
             raise web.HTTPConflict(text='select AI mode first')
         text = data.get('text') if isinstance(data,dict) else None
-        if not isinstance(text,str) or not text.strip() or len(text)>2000:
-            raise web.HTTPBadRequest(text='text must contain 1–2000 characters')
-        generation[0] += 1
+        text_limit = MAX_INPUT_CHARS if is_conversation else 2000
+        if not isinstance(text,str) or not text.strip() or len(text)>text_limit:
+            raise web.HTTPBadRequest(text=f'text must contain 1–{text_limit} characters')
+        if 'expression' in data:
+            try:
+                validate_expression(data['expression'], 4)
+            except ValueError as error:
+                raise web.HTTPBadRequest(text=str(error))
+        request_id = request_identity(data)
+        if request_id in retired_requests or any(item and item['request_id'] == request_id for item in (synthesis[0], active_speech[0])):
+            raise web.HTTPConflict(text='この音声リクエストは停止済み、または処理済みです。')
+        reset_speech()
         ticket = generation[0]
-        active_speech[0] = None
-        state['performance'].update(emotion='neutral', started_at=time.time(), until=0)
-        await send({'type':'cancel_speech'})
-        await publish()
+        owner = controllers[-1] if controllers else None
+        kind = 'conversation' if is_conversation else 'speech'
+        user_text = text
+        phase = ['thinking' if is_conversation else 'synthesizing']
+        context = [message for turn in history for message in (
+            {'role':'user', 'content':turn['user_text']},
+            {'role':'assistant', 'content':turn['text']})]
+
+        def assert_current():
+            if ticket != generation[0] or state['mode'] != 'ai':
+                raise asyncio.CancelledError
+
+        async def generate():
+            reply = user_text
+            if is_conversation:
+                reply = validate_reply(await conversation.reply(user_text, context))
+                assert_current()
+                phase[0] = 'synthesizing'
+                state['speech'] = {'phase':'synthesizing', 'request_id':request_id, 'kind':kind}
+                await publish()
+                assert_current()
+            wav = await voice.synthesize(reply)
+            assert_current()
+            return reply, wav, validate_wav(wav)
+
+        task = asyncio.create_task(generate())
+        job = {'task':task, 'request_id':request_id, 'owner':owner, 'kind':kind}
+        synthesis[0] = job
+        state['speech'] = {'phase':phase[0], 'request_id':request_id, 'kind':kind}
         try:
-            wav = await voice.synthesize(text)
+            await send({'type':'cancel_speech', 'reason':'superseded', 'request_id':request_id})
+            assert_current()
+            await publish()
+            text, wav, duration = await task
+            assert_current()
+        except asyncio.CancelledError:
+            task.cancel()
+            # Request disconnects and every explicit stop share the same cleanup.
+            if synthesis[0] is job:
+                reset_speech()
+                await publish()
+            await asyncio.gather(task, return_exceptions=True)
+            raise web.HTTPConflict(text='返答・音声の生成を停止しました。') from None
         except Exception as error:
-            raise web.HTTPServiceUnavailable(text='音声合成に接続できません。VOICEVOXを起動してください。 '+str(error))
-        if ticket != generation[0] or state['mode'] != 'ai':
-            raise web.HTTPConflict(text='speech was superseded or cancelled')
+            if ticket != generation[0]:
+                raise web.HTTPConflict(text='speech was superseded or cancelled') from None
+            known = isinstance(error, (VoiceError, ConversationError))
+            code = error.code if known else ('conversation_unavailable' if phase[0] == 'thinking' else 'engine_unavailable')
+            state['speech'] = {'phase':'error', 'request_id':request_id, 'kind':kind, 'error':code}
+            retire(request_id)
+            await publish()
+            message = str(error) if known else ('ローカル会話の返答を生成できません。会話エンジンの状態を確認してください。' if phase[0] == 'thinking' else '音声合成に接続できません。VOICEVOXの接続を確認してください。')
+            raise web.HTTPServiceUnavailable(text=message) from None
+        finally:
+            if synthesis[0] is job:
+                synthesis[0] = None
         clip_id = uuid.uuid4().hex
         clips[clip_id] = wav
         while len(clips)>8:
@@ -140,22 +335,36 @@ def create_app(voice=None):
             emotion='surprised' if any(c in text for c in ('びっくり','驚','！？','?!')) else 'happy' if any(c in text for c in ('嬉','うれし','楽し','ありがとう','こんにちは')) else 'thoughtful' if any(c in text for c in ('考え','どうしよう','うーん')) else 'neutral'
         if emotion not in ('neutral','happy','thoughtful','surprised'):
             emotion='neutral'
-        try:
-            with wave.open(io.BytesIO(wav)) as audio:
-                duration=audio.getnframes()/audio.getframerate()
-        except (wave.Error,EOFError):
-            duration=5
-        active_speech[0] = {'clip_id':clip_id, 'emotion':emotion, 'duration':duration, 'sequence':-1}
+        active_speech[0] = {'clip_id':clip_id, 'request_id':request_id, 'emotion':emotion,
+                            'expression':data.get('expression', EMOTION_EXPRESSIONS[emotion]),
+                            'duration':duration, 'sequence':-1, 'owner':owner, 'kind':kind}
+        state['speech'] = {'phase':'ready', 'request_id':request_id, 'clip_id':clip_id, 'kind':kind}
         event = {'type':'speech', 'text':text, 'url':f'/speech/{clip_id}.wav', 'credit':voice.credit,
-                 'clip_id':clip_id, 'emotion':emotion, 'duration':duration}
-        owner = controllers[-1] if controllers else None
-        active_speech[0]['owner'] = owner
+                 'request_id':request_id, 'clip_id':clip_id, 'emotion':emotion,
+                 'expression':active_speech[0]['expression'], 'duration':duration}
+        if is_conversation:
+            event.update(kind=kind, user_text=user_text)
         for peer in tuple(peers):
+            if ticket != generation[0] or not active_speech[0] or active_speech[0]['clip_id'] != clip_id:
+                raise web.HTTPConflict(text='speech was superseded or cancelled')
             try:
                 await peer.send_json({**event, 'play':peer is owner})
             except (ConnectionError, RuntimeError):
                 peers.discard(peer)
+        if ticket != generation[0] or not active_speech[0] or active_speech[0]['clip_id'] != clip_id:
+            raise web.HTTPConflict(text='speech was superseded or cancelled')
+        if is_conversation:
+            history.append({'request_id':request_id, 'user_text':user_text, 'text':text})
+            while (len(history) > MAX_HISTORY_TURNS
+                   or sum(len(turn['user_text']) + len(turn['text']) for turn in history) > MAX_HISTORY_CHARS):
+                history.pop(0)
         return web.json_response({**event, 'queued_clients':len(peers), 'playback_clients':int(owner is not None)})
+
+    async def speech(request):
+        return await speech_request(request)
+
+    async def converse(request):
+        return await speech_request(request, is_conversation=True)
 
     async def playback(request):
         """Synchronize shared gestures to actual audio playback, not synthesis time."""
@@ -165,6 +374,9 @@ def create_app(voice=None):
         phase = data.get('state')
         position = data.get('position')
         sequence = data.get('sequence')
+        rate = data.get('playback_rate', 1)
+        if isinstance(rate, bool) or not isinstance(rate, (int, float)) or not math.isfinite(rate) or not 0.25 <= rate <= 4:
+            raise web.HTTPBadRequest(text='playback_rate must be within 0.25–4')
         if phase not in ('playing', 'paused', 'ended'):
             raise web.HTTPBadRequest(text='unknown playback state')
         if isinstance(position, bool) or not isinstance(position, (int, float)) or not math.isfinite(position) or position < 0:
@@ -181,10 +393,15 @@ def create_app(voice=None):
         clip['sequence'] = sequence
         position = min(position, clip['duration'])
         now = time.time()
+        state['speech'] = {'phase':phase, 'request_id':clip['request_id'], 'clip_id':clip['clip_id'], 'kind':clip['kind']}
         if phase == 'playing' and position < clip['duration']:
-            state['performance'].update(emotion=clip['emotion'], started_at=now-position,
-                                        until=now+clip['duration']-position)
+            if state['expression']['owner'] != 'manual':
+                set_expression(clip['expression'], 'ai', 'speech', (clip['duration']-position)/rate)
+            state['performance'].update(emotion=clip['emotion'], started_at=now-position/rate,
+                                        until=now+(clip['duration']-position)/rate)
         else:
+            clear_speech_expression()
+            state['parameters']['ParamMouthOpenY'] = 0
             state['performance'].update(emotion='neutral', started_at=now, until=0)
         await publish()
         return web.json_response(state['performance'])
@@ -206,7 +423,29 @@ def create_app(voice=None):
             async for msg in ws:
                 if msg.type == WSMsgType.TEXT:
                     try:
-                        await control(json.loads(msg.data))
+                        data = json.loads(msg.data)
+                        if isinstance(data, dict) and 'acting' in data:
+                            action = data['acting']
+                            if action not in ('start','switch','stop','sync'):
+                                raise ValueError('unknown acting action')
+                            if action != 'sync' and ws not in controllers:
+                                raise ValueError('overlay is read-only for acting')
+                            if action in ('start','switch'):
+                                variant = data.get('variant', 'original')
+                                if variant not in ('original','curious','joyful','thinking','surprised'):
+                                    raise ValueError('unknown acting variant')
+                                now = time.time()
+                                current = state['acting']
+                                busy = synthesis[0] or active_speech[0]
+                                cooling = current['id'] and now < (current['stopped_at'] or current['started_at']+18.5)+1.5
+                                switching = action == 'switch' and current['id'] and not current['stopped_at'] and current.get('variant') != variant
+                                if not busy and (not cooling or switching):
+                                    state['acting'] = {'id':uuid.uuid4().hex,'started_at':now,'stopped_at':0,'variant':variant}
+                            elif action == 'stop':
+                                stop_acting()
+                            await publish()
+                        else:
+                            await control(data)
                     except web.HTTPConflict:
                         # Frames already in flight at a mode switch are stale.
                         continue
@@ -216,9 +455,12 @@ def create_app(voice=None):
             peers.discard(ws)
             if ws in controllers:
                 controllers.remove(ws)
-            if active_speech[0] and active_speech[0].get('owner') is ws:
-                active_speech[0] = None
-                state['performance'].update(emotion='neutral', started_at=time.time(), until=0)
+            current = synthesis[0] or active_speech[0]
+            if current and current.get('owner') is ws:
+                forget_interrupted_turn(current)
+                request_id = current['request_id']
+                reset_speech()
+                await send({'type':'cancel_speech', 'reason':'controller_disconnected', 'request_id':request_id})
                 await publish()
         return ws
 
@@ -226,9 +468,18 @@ def create_app(voice=None):
         async def loop():
             while True:
                 await asyncio.sleep(0.1)
+                changed = False
+                if state['acting']['id'] and not state['acting']['stopped_at'] and time.time() >= state['acting']['started_at']+18.5:
+                    stop_acting()
+                    changed = True
+                if state['expression']['until'] and time.time() > state['expression']['until']:
+                    set_expression()
+                    changed = True
                 if deadline[0] and time.monotonic()>deadline[0]:
                     deadline[0] = 0
                     state.update(source='idle', parameters={k:v[2] for k,v in LIMITS.items()})
+                    changed = True
+                if changed:
                     await publish()
         task=asyncio.create_task(loop())
         yield
@@ -237,11 +488,26 @@ def create_app(voice=None):
         for ws in tuple(peers):
             await ws.close()
 
+    async def shutdown(app):
+        job = synthesis[0]
+        reset_speech()
+        if job:
+            await asyncio.gather(job['task'], return_exceptions=True)
+        for ws in tuple(peers):
+            await ws.close()
+
+    app.on_shutdown.append(shutdown)
     app.cleanup_ctx.append(expiry)
     app.router.add_get('/api/state', api_state)
     app.router.add_post('/api/mode', api_mode)
     app.router.add_post('/api/control', api_control)
+    app.router.add_post('/api/expression', api_expression)
+    app.router.add_get('/api/voice', voice_status)
+    app.router.add_get('/api/conversation', conversation_status)
+    app.router.add_post('/api/conversation', converse)
+    app.router.add_post('/api/conversation/clear', clear_conversation)
     app.router.add_post('/api/speech', speech)
+    app.router.add_post('/api/speech/cancel', cancel_speech)
     app.router.add_post('/api/playback', playback)
     app.router.add_post('/api/performance', performance)
     app.router.add_get('/ws', socket)
@@ -251,7 +517,8 @@ def create_app(voice=None):
     app.router.add_get('/', index)
     app.router.add_static('/web/', ROOT/'web')
     app.router.add_static('/model/', ROOT/'model')
-    app.router.add_static('/vendor/', ROOT/'vendor')
+    if (ROOT/'vendor').is_dir():
+        app.router.add_static('/vendor/', ROOT/'vendor')
     return app
 
 

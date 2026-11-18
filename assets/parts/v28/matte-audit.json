@@ -1,0 +1,164 @@
+[
+  {
+    "id": "rear_left_outer",
+    "source": "body_v22/rear_left_outer.png",
+    "output": "body_v28/rear_left_outer.png",
+    "modified_pixels": 3907,
+    "opaque_white_before": 3100,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "rear_left_inner",
+    "source": "body_v22/rear_left_inner.png",
+    "output": "body_v28/rear_left_inner.png",
+    "modified_pixels": 662,
+    "opaque_white_before": 470,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "rear_right_inner",
+    "source": "body_v22/rear_right_inner.png",
+    "output": "body_v28/rear_right_inner.png",
+    "modified_pixels": 662,
+    "opaque_white_before": 498,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "rear_right_outer",
+    "source": "body_v22/rear_right_outer.png",
+    "output": "body_v28/rear_right_outer.png",
+    "modified_pixels": 4002,
+    "opaque_white_before": 3059,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "hair_reveal_native",
+    "source": "body_v22/hair_reveal_native.png",
+    "output": "body_v28/hair_reveal_native.png",
+    "modified_pixels": 3209,
+    "opaque_white_before": 123,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_fixed_v22.png",
+    "output": "body_v28/face_fixed_v22.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_neutral.png",
+    "output": "body_v28/face_neutral.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_soft_smile.png",
+    "output": "body_v28/face_soft_smile.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_big_smile.png",
+    "output": "body_v28/face_big_smile.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_worried.png",
+    "output": "body_v28/face_worried.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_surprised.png",
+    "output": "body_v28/face_surprised.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_bashful.png",
+    "output": "body_v28/face_bashful.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_displeased.png",
+    "output": "body_v28/face_displeased.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "face_fixed_v22",
+    "source": "body_v22/face_thinking.png",
+    "output": "body_v28/face_thinking.png",
+    "modified_pixels": 2001,
+    "opaque_white_before": 1716,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "side_left_front",
+    "source": "body_v22/side_left_front.png",
+    "output": "body_v28/side_left_front.png",
+    "modified_pixels": 603,
+    "opaque_white_before": 121,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "side_left_outer",
+    "source": "body_v22/side_left_outer.png",
+    "output": "body_v28/side_left_outer.png",
+    "modified_pixels": 3215,
+    "opaque_white_before": 2381,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "side_left_inner",
+    "source": "body_v22/side_left_inner.png",
+    "output": "body_v28/side_left_inner.png",
+    "modified_pixels": 452,
+    "opaque_white_before": 299,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  },
+  {
+    "id": "side_right_outer",
+    "source": "body_v22/side_right_outer.png",
+    "output": "body_v28/side_right_outer.png",
+    "modified_pixels": 1817,
+    "opaque_white_before": 1481,
+    "opaque_white_after": 0,
+    "protected_changed_values": 0
+  }
+]

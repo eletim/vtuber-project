@@ -1,0 +1,19 @@
+[
+  {
+    "source": "body_v19/legs_static.png",
+    "parts": [
+      "thigh_left",
+      "thigh_right"
+    ],
+    "recombined_changed_values": 0
+  },
+  {
+    "source": "body_v19/torso_clothing.png",
+    "parts": [
+      "chest_clothing",
+      "abdomen_clothing",
+      "pelvis_clothing"
+    ],
+    "recombined_changed_values": 0
+  }
+]

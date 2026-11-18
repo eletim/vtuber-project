@@ -1,0 +1,146 @@
+{
+  "method": "Independent numpy comparison of actual lossless EGL RGBA and binary role meshes. Protected visibility masks recomputed from opaque torso and zero reference/current foreground alpha. Not browser/GUI E2E.",
+  "candidate": "candidate-05",
+  "pixel_cases": [
+    {
+      "frame": 0,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109938,
+      "full_composite_changed_protected_pixels": 0
+    },
+    {
+      "frame": 73,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109937,
+      "full_composite_changed_protected_pixels": 0
+    },
+    {
+      "frame": 149,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109937,
+      "full_composite_changed_protected_pixels": 0
+    },
+    {
+      "frame": 150,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109938,
+      "full_composite_changed_protected_pixels": 0
+    },
+    {
+      "frame": 223,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109937,
+      "full_composite_changed_protected_pixels": 0
+    },
+    {
+      "frame": 367,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109938,
+      "full_composite_changed_protected_pixels": 0
+    },
+    {
+      "frame": 410,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109938,
+      "full_composite_changed_protected_pixels": 0
+    },
+    {
+      "frame": 479,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109938,
+      "full_composite_changed_protected_pixels": 0
+    },
+    {
+      "frame": 539,
+      "torso_rgba_changed_pixels": 0,
+      "visible_protected_pixels": 109938,
+      "full_composite_changed_protected_pixels": 0
+    }
+  ],
+  "pixel_pass": true,
+  "geometry_cases": {
+    "left_arm": {
+      "root": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "skirt": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "torso": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "armLeft": {
+        "changed_components": 863072,
+        "max_pixel_distance": 36.80233924883638
+      },
+      "armRight": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "head": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "all_non_target_fixed": true
+    },
+    "right_arm": {
+      "root": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "skirt": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "torso": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "armLeft": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "armRight": {
+        "changed_components": 846579,
+        "max_pixel_distance": 37.002598265131454
+      },
+      "head": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "all_non_target_fixed": true
+    },
+    "skirt": {
+      "root": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "skirt": {
+        "changed_components": 472680,
+        "max_pixel_distance": 1.453871483547528
+      },
+      "torso": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "armLeft": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "armRight": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "head": {
+        "changed_components": 0,
+        "max_pixel_distance": 0.0
+      },
+      "all_non_target_fixed": true
+    }
+  },
+  "waist_changed_components": 0,
+  "waist_pass": true
+}

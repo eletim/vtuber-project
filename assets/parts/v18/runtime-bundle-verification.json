@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "bundle": "koma-v18-runtime.zip",
+  "sha256": "123c7040e492ce68d412f8ed9d7799018e6dacb705105e604f4c46c408761d32",
+  "file_hashes_verified": 79,
+  "model_http_assets_verified": 57,
+  "expression_api_states_verified": 8,
+  "reset_to_neutral": true,
+  "voice_duration_seconds": 8.170666666666667,
+  "limitations": "HTTP/API and archive verification only; no browser/WebGL/camera/microphone/Photoshop E2E.",
+  "body_parameter_ids": [
+    "ParamArmLOpen",
+    "ParamArmROpen",
+    "ParamShoulderY",
+    "ParamBodyShiftX"
+  ],
+  "both_control_modes_verified": true,
+  "body_parameter_clamps_and_validation_verified": true,
+  "body_parameters_reset_on_mode_change": true
+}

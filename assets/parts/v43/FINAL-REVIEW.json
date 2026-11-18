@@ -1,0 +1,52 @@
+{
+  "version": "v43",
+  "status": "small-angle implementation saved; large-angle facial rotation remains unfinished",
+  "completed": [
+    "Shared face/fixed-hair/moving-hair correspondence avoids separate ownership seams.",
+    "Eye interiors and mouth center retain rigid local shape; mixed directions stay in a bounded envelope.",
+    "Nose candidates registered to original highlight and tip; no whole-head image crossfade.",
+    "Neck/clothing boundary is locked; arm, hand, body, waist and skirt source pixels and rig code retained.",
+    "Fresh same-epoch acting reconnection discards only a stale RAF interval; blocked speech/manual behavior has regression coverage.",
+    "PSD preserves v36 layer tree/default composite and adds four registered nose overlays."
+  ],
+  "validation": {
+    "javascript_passed": 206,
+    "python_passed": 95,
+    "static_conditions": 144,
+    "face_cfr": {
+      "frames": 480,
+      "fps": 30,
+      "seconds": 16,
+      "timestamp_missing_or_duplicate": 0,
+      "headless_1x_dropped": 0
+    },
+    "whole_body_cfr": {
+      "frames": 555,
+      "fps": 30,
+      "seconds": 18.5,
+      "timestamp_missing_or_duplicate": 0,
+      "headless_1x_dropped": 72
+    },
+    "native_body_frames": 221,
+    "dense_visual_inspection": "Viewed four sheets covering all 16 seconds every 0.1 second (160 images), both eight-expression yaw grids, selected native extrema/mixed black-white conditions, temporal peak native frames 157/217, and full-body native frames 90/210/345/420. Not a claim that every native PNG was individually inspected.",
+    "all_face_frame_hashes": "runtime-face-final-review/temporal-audit.json",
+    "two_context_sync": "sync-review/report.json",
+    "psd_roundtrip_changed_values": 0
+  },
+  "limits": [
+    "Shallow directions only; normal-size viewing still retains some frontal illustration impression. Large yaw and deep up/down views need consistent angle-specific eye/ear/cheek/jaw/hair occlusion artwork.",
+    "Full-body high-resolution video playback drops 72/555 frames in isolated headless; CFR timestamps are regular. This does not certify visible-browser runtime performance.",
+    "Shoulder repaint was not retried; existing shoulder/underlap constraints remain.",
+    "Live camera input, physical foot contact and external streaming were not exercised."
+  ],
+  "recording_note": "Final face/rendering modules are unchanged after the last face/body recordings. A later reconnect-only change in ActingController.sync was verified separately in the final two-context test; offline recordings use start/frame and do not call sync.",
+  "blocked_actions": [],
+  "uploads_performed": false,
+  "source_hashes": {
+    "runtime\\web\\face-angle-rig.js": "37671641bf3debd16f2a23dda570bbc8c1f9065391181c9c1b4ac2ada2163907",
+    "runtime\\web\\renderer.js": "d5e2b5bf011e52e2cab86da031dad8be93355ecb346d9887e63fbc81992e72b3",
+    "runtime\\web\\acting-controller.js": "fca4234e2ae060faf138189f2970ddd8f05a2a65e66644032ca2f9d37ba943bf",
+    "runtime\\model\\model.json": "5aa215e3b09a5f0e2f47600987e9f5704d9f05cfb091b74f78b617552618740a"
+  },
+  "recorded_at": "2026-10-23T09:05:15.932961+00:00"
+}

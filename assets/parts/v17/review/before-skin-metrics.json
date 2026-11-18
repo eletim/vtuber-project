@@ -1,0 +1,751 @@
+{
+  "method": "Same-position CIE Lab and sRGB-luma difference versus each expression's clean base, in a fixed skin-only oval, excluding union lip/cavity/white-highlight mask dilated 5px. This measures endpoint-induced tone shifts, not transparency or pure-black counts. Base residual requires separate source-vs-original review.",
+  "states": {
+    "neutral": {
+      "closed": {
+        "skin_pixels": 2350,
+        "mean_delta_L": 0.4131113620802769,
+        "p05_delta_L": -0.10693744221027612,
+        "mean_delta_a": -0.5476144040253363,
+        "mean_delta_b": -0.23762003531549172,
+        "mean_delta_srgb_luma": 1.2088082553191488,
+        "p05_delta_srgb_luma": -0.2848,
+        "mean_deltaE76": 0.9502810201850741,
+        "skin_fraction_darker_3_luma": 0.0,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          253.671,
+          240.782,
+          232.004
+        ],
+        "base_mean_RGB": [
+          253.733,
+          239.236,
+          230.394
+        ]
+      },
+      "near_closed": {
+        "skin_pixels": 2350,
+        "mean_delta_L": 0.41115573100499514,
+        "p05_delta_L": -0.10693744221027612,
+        "mean_delta_a": -0.5460890283369582,
+        "mean_delta_b": -0.23428420860422464,
+        "mean_delta_srgb_luma": 1.2030785531914894,
+        "p05_delta_srgb_luma": -0.2848,
+        "mean_deltaE76": 0.9476992816578755,
+        "skin_fraction_darker_3_luma": 0.0,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          253.671,
+          240.775,
+          231.992
+        ],
+        "base_mean_RGB": [
+          253.733,
+          239.236,
+          230.394
+        ]
+      },
+      "small": {
+        "skin_pixels": 2350,
+        "mean_delta_L": 0.2065810240079405,
+        "p05_delta_L": -0.2694203792396621,
+        "mean_delta_a": -0.17279162403483714,
+        "mean_delta_b": -0.07184820361398694,
+        "mean_delta_srgb_luma": 0.6003982127659574,
+        "p05_delta_srgb_luma": -0.7874,
+        "mean_deltaE76": 0.6292766600971501,
+        "skin_fraction_darker_3_luma": 0.0,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          253.938,
+          239.942,
+          231.112
+        ],
+        "base_mean_RGB": [
+          253.733,
+          239.236,
+          230.394
+        ]
+      },
+      "open": {
+        "skin_pixels": 2350,
+        "mean_delta_L": 0.21314316594520294,
+        "p05_delta_L": -0.26960610612195524,
+        "mean_delta_a": -0.20448457628154557,
+        "mean_delta_b": -0.06039501606164591,
+        "mean_delta_srgb_luma": 0.6200900425531916,
+        "p05_delta_srgb_luma": -0.7874,
+        "mean_deltaE76": 0.665004696275994,
+        "skin_fraction_darker_3_luma": 0.001276595744680851,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          253.905,
+          239.98,
+          231.108
+        ],
+        "base_mean_RGB": [
+          253.733,
+          239.236,
+          230.394
+        ]
+      }
+    },
+    "soft_smile": {
+      "closed": {
+        "skin_pixels": 2385,
+        "mean_delta_L": 0.15013188325972374,
+        "p05_delta_L": -0.28115289473116434,
+        "mean_delta_a": -1.0983659696705852,
+        "mean_delta_b": -0.37728580512607923,
+        "mean_delta_srgb_luma": 0.469615681341719,
+        "p05_delta_srgb_luma": -0.7782,
+        "mean_deltaE76": 1.264153479604409,
+        "skin_fraction_darker_3_luma": 0.0,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.901,
+          240.797,
+          231.857
+        ],
+        "base_mean_RGB": [
+          252.925,
+          239.65,
+          230.749
+        ]
+      },
+      "near_closed": {
+        "skin_pixels": 2385,
+        "mean_delta_L": 0.15677434178702976,
+        "p05_delta_L": -0.2586286384057672,
+        "mean_delta_a": -1.05377674857613,
+        "mean_delta_b": -0.49972039766456594,
+        "mean_delta_srgb_luma": 0.48965618448637316,
+        "p05_delta_srgb_luma": -0.7100000000000001,
+        "mean_deltaE76": 1.274133583135476,
+        "skin_fraction_darker_3_luma": 0.0,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.909,
+          240.797,
+          232.113
+        ],
+        "base_mean_RGB": [
+          252.925,
+          239.65,
+          230.749
+        ]
+      },
+      "small": {
+        "skin_pixels": 2385,
+        "mean_delta_L": 0.20376722583927032,
+        "p05_delta_L": -0.21685724247714688,
+        "mean_delta_a": -0.9179799306123331,
+        "mean_delta_b": -1.5097758974170565,
+        "mean_delta_srgb_luma": 0.6362079664570229,
+        "p05_delta_srgb_luma": -0.5616000000000001,
+        "mean_deltaE76": 1.8657449793737098,
+        "skin_fraction_darker_3_luma": 0.0,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.48,
+          240.919,
+          234.189
+        ],
+        "base_mean_RGB": [
+          252.925,
+          239.65,
+          230.749
+        ]
+      },
+      "open": {
+        "skin_pixels": 2385,
+        "mean_delta_L": 0.1584057584248231,
+        "p05_delta_L": -0.40476308132281813,
+        "mean_delta_a": -0.9649927385203361,
+        "mean_delta_b": -1.7922238297944453,
+        "mean_delta_srgb_luma": 0.5114948427672955,
+        "p05_delta_srgb_luma": -1.12276,
+        "mean_deltaE76": 2.1783368776350454,
+        "skin_fraction_darker_3_luma": 0.0037735849056603774,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.023,
+          240.839,
+          234.599
+        ],
+        "base_mean_RGB": [
+          252.925,
+          239.65,
+          230.749
+        ]
+      }
+    },
+    "big_smile": {
+      "closed": {
+        "skin_pixels": 1407,
+        "mean_delta_L": -0.2773508079865371,
+        "p05_delta_L": -1.0027342399233503,
+        "mean_delta_a": -0.14623393956096337,
+        "mean_delta_b": -1.9990702579134336,
+        "mean_delta_srgb_luma": -0.758123383084577,
+        "p05_delta_srgb_luma": -2.8516,
+        "mean_deltaE76": 2.0874463878492313,
+        "skin_fraction_darker_3_luma": 0.03482587064676617,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          249.872,
+          238.638,
+          234.959
+        ],
+        "base_mean_RGB": [
+          252.596,
+          239.194,
+          231.928
+        ]
+      },
+      "near_closed": {
+        "skin_pixels": 1407,
+        "mean_delta_L": -0.2655212136788573,
+        "p05_delta_L": -0.9555130202900657,
+        "mean_delta_a": -0.11771716097516673,
+        "mean_delta_b": -1.8602034594015449,
+        "mean_delta_srgb_luma": -0.7269147121535181,
+        "p05_delta_srgb_luma": -2.7072,
+        "mean_deltaE76": 1.947687200862894,
+        "skin_fraction_darker_3_luma": 0.01990049751243781,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.078,
+          238.643,
+          234.729
+        ],
+        "base_mean_RGB": [
+          252.596,
+          239.194,
+          231.928
+        ]
+      },
+      "small": {
+        "skin_pixels": 1407,
+        "mean_delta_L": -0.07092962993364459,
+        "p05_delta_L": -0.4338149108779277,
+        "mean_delta_a": -0.03711058009402307,
+        "mean_delta_b": -0.4914450536118237,
+        "mean_delta_srgb_luma": -0.19286538734896944,
+        "p05_delta_srgb_luma": -1.2086,
+        "mean_deltaE76": 0.5556504976566464,
+        "skin_fraction_darker_3_luma": 0.0,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.923,
+          239.05,
+          232.665
+        ],
+        "base_mean_RGB": [
+          252.596,
+          239.194,
+          231.928
+        ]
+      },
+      "open": {
+        "skin_pixels": 1407,
+        "mean_delta_L": -0.19557785491800586,
+        "p05_delta_L": -0.9494009674450155,
+        "mean_delta_a": 0.0049555322285745355,
+        "mean_delta_b": -0.8300802609390319,
+        "mean_delta_srgb_luma": -0.5459259417199716,
+        "p05_delta_srgb_luma": -2.7112,
+        "mean_deltaE76": 0.9786166654520009,
+        "skin_fraction_darker_3_luma": 0.030561478322672354,
+        "skin_fraction_darker_6_luma": 0.007818052594171997,
+        "mean_RGB": [
+          251.37,
+          238.691,
+          232.961
+        ],
+        "base_mean_RGB": [
+          252.596,
+          239.194,
+          231.928
+        ]
+      }
+    },
+    "worried": {
+      "closed": {
+        "skin_pixels": 2895,
+        "mean_delta_L": -0.07430573461794733,
+        "p05_delta_L": -0.5610633313753226,
+        "mean_delta_a": -0.8276037687584382,
+        "mean_delta_b": -0.5544493434921531,
+        "mean_delta_srgb_luma": -0.17815343696027636,
+        "p05_delta_srgb_luma": -1.5695999999999999,
+        "mean_deltaE76": 1.2025269520799722,
+        "skin_fraction_darker_3_luma": 0.001381692573402418,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.716,
+          239.605,
+          231.066
+        ],
+        "base_mean_RGB": [
+          252.999,
+          239.258,
+          230.247
+        ]
+      },
+      "near_closed": {
+        "skin_pixels": 2895,
+        "mean_delta_L": -0.07387899359505896,
+        "p05_delta_L": -0.5597061176528229,
+        "mean_delta_a": -0.8214303612104148,
+        "mean_delta_b": -0.5672194195164659,
+        "mean_delta_srgb_luma": -0.17685727115716757,
+        "p05_delta_srgb_luma": -1.5695999999999999,
+        "mean_deltaE76": 1.201749397262038,
+        "skin_fraction_darker_3_luma": 0.001381692573402418,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.72,
+          239.603,
+          231.092
+        ],
+        "base_mean_RGB": [
+          252.999,
+          239.258,
+          230.247
+        ]
+      },
+      "small": {
+        "skin_pixels": 2895,
+        "mean_delta_L": -0.2681263944495356,
+        "p05_delta_L": -0.8300746940979877,
+        "mean_delta_a": -0.41726854683585995,
+        "mean_delta_b": -1.381406468859899,
+        "mean_delta_srgb_luma": -0.7312254922279792,
+        "p05_delta_srgb_luma": -2.3489999999999998,
+        "mean_deltaE76": 1.5768555239889501,
+        "skin_fraction_darker_3_luma": 0.022452504317789293,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.29,
+          238.853,
+          232.114
+        ],
+        "base_mean_RGB": [
+          252.999,
+          239.258,
+          230.247
+        ]
+      },
+      "open": {
+        "skin_pixels": 2895,
+        "mean_delta_L": -0.34600047685109586,
+        "p05_delta_L": -0.9728408999579017,
+        "mean_delta_a": -0.3361667484688526,
+        "mean_delta_b": -1.6048345940110795,
+        "mean_delta_srgb_luma": -0.9531366493955096,
+        "p05_delta_srgb_luma": -2.7834,
+        "mean_deltaE76": 1.819315898019353,
+        "skin_fraction_darker_3_luma": 0.03177892918825561,
+        "skin_fraction_darker_6_luma": 0.001381692573402418,
+        "mean_RGB": [
+          250.042,
+          238.595,
+          232.323
+        ],
+        "base_mean_RGB": [
+          252.999,
+          239.258,
+          230.247
+        ]
+      }
+    },
+    "surprised": {
+      "closed": {
+        "skin_pixels": 2916,
+        "mean_delta_L": -2.280645957318574,
+        "p05_delta_L": -3.2870981014192466,
+        "mean_delta_a": 0.3120022661217949,
+        "mean_delta_b": -0.5657972998197127,
+        "mean_delta_srgb_luma": -6.526704183813441,
+        "p05_delta_srgb_luma": -9.4264,
+        "mean_deltaE76": 2.547798200537847,
+        "skin_fraction_darker_3_luma": 0.8816872427983539,
+        "skin_fraction_darker_6_luma": 0.6971879286694102,
+        "mean_RGB": [
+          246.733,
+          232.349,
+          224.986
+        ],
+        "base_mean_RGB": [
+          253.171,
+          239.018,
+          230.364
+        ]
+      },
+      "near_closed": {
+        "skin_pixels": 2916,
+        "mean_delta_L": -1.9782355032177006,
+        "p05_delta_L": -2.902228209630607,
+        "mean_delta_a": 0.27424340418899473,
+        "mean_delta_b": -0.5610084738070592,
+        "mean_delta_srgb_luma": -5.6621052812071335,
+        "p05_delta_srgb_luma": -8.286999999999999,
+        "mean_deltaE76": 2.262658267761083,
+        "skin_fraction_darker_3_luma": 0.8665980795610425,
+        "skin_fraction_darker_6_luma": 0.5288065843621399,
+        "mean_RGB": [
+          247.536,
+          233.234,
+          225.832
+        ],
+        "base_mean_RGB": [
+          253.171,
+          239.018,
+          230.364
+        ]
+      },
+      "small": {
+        "skin_pixels": 2916,
+        "mean_delta_L": -0.1729608717715304,
+        "p05_delta_L": -0.6968873200566321,
+        "mean_delta_a": -0.30330185402404564,
+        "mean_delta_b": -0.5320237810210572,
+        "mean_delta_srgb_luma": -0.4760962277091907,
+        "p05_delta_srgb_luma": -2.0,
+        "mean_deltaE76": 0.7633704193234712,
+        "skin_fraction_darker_3_luma": 0.0017146776406035665,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.652,
+          238.752,
+          230.88
+        ],
+        "base_mean_RGB": [
+          253.171,
+          239.018,
+          230.364
+        ]
+      },
+      "open": {
+        "skin_pixels": 2916,
+        "mean_delta_L": -0.1673203066412916,
+        "p05_delta_L": -0.7510556243231008,
+        "mean_delta_a": -0.37690440602443115,
+        "mean_delta_b": -0.6369689381467876,
+        "mean_delta_srgb_luma": -0.45578971193415635,
+        "p05_delta_srgb_luma": -2.1404,
+        "mean_deltaE76": 0.9157734266036591,
+        "skin_fraction_darker_3_luma": 0.006172839506172839,
+        "skin_fraction_darker_6_luma": 0.0003429355281207133,
+        "mean_RGB": [
+          251.44,
+          238.822,
+          231.094
+        ],
+        "base_mean_RGB": [
+          253.171,
+          239.018,
+          230.364
+        ]
+      }
+    },
+    "bashful": {
+      "closed": {
+        "skin_pixels": 2371,
+        "mean_delta_L": -0.22059128503770933,
+        "p05_delta_L": -0.7508709694557893,
+        "mean_delta_a": -0.24055228709422072,
+        "mean_delta_b": -0.6764685089687127,
+        "mean_delta_srgb_luma": -0.6124812315478702,
+        "p05_delta_srgb_luma": -2.1404,
+        "mean_deltaE76": 0.9279379439354776,
+        "skin_fraction_darker_3_luma": 0.007169970476592155,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.393,
+          238.748,
+          231.353
+        ],
+        "base_mean_RGB": [
+          253.046,
+          239.179,
+          230.694
+        ]
+      },
+      "near_closed": {
+        "skin_pixels": 2371,
+        "mean_delta_L": -0.21774718074415525,
+        "p05_delta_L": -0.7408186069132725,
+        "mean_delta_a": -0.2325396928784631,
+        "mean_delta_b": -0.7038116584407487,
+        "mean_delta_srgb_luma": -0.6040281737663433,
+        "p05_delta_srgb_luma": -2.1043000000000003,
+        "mean_deltaE76": 0.9339537733357226,
+        "skin_fraction_darker_3_luma": 0.007169970476592155,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.395,
+          238.753,
+          231.414
+        ],
+        "base_mean_RGB": [
+          253.046,
+          239.179,
+          230.694
+        ]
+      },
+      "small": {
+        "skin_pixels": 2371,
+        "mean_delta_L": -0.06016988996935872,
+        "p05_delta_L": -0.5356427240522237,
+        "mean_delta_a": -0.4248573248274441,
+        "mean_delta_b": -1.129890852626615,
+        "mean_delta_srgb_luma": -0.13898802193167442,
+        "p05_delta_srgb_luma": -1.4933999999999998,
+        "mean_deltaE76": 1.2948452519872438,
+        "skin_fraction_darker_3_luma": 0.00042176296921130323,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.126,
+          239.356,
+          232.671
+        ],
+        "base_mean_RGB": [
+          253.046,
+          239.179,
+          230.694
+        ]
+      },
+      "open": {
+        "skin_pixels": 2371,
+        "mean_delta_L": -0.024294827968924595,
+        "p05_delta_L": -0.5340917335636135,
+        "mean_delta_a": -0.48371056172260507,
+        "mean_delta_b": -1.5029313596531966,
+        "mean_delta_srgb_luma": -0.02828696752425137,
+        "p05_delta_srgb_luma": -1.4933999999999998,
+        "mean_deltaE76": 1.6885389620095996,
+        "skin_fraction_darker_3_luma": 0.0029523407844791226,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.81,
+          239.523,
+          233.486
+        ],
+        "base_mean_RGB": [
+          253.046,
+          239.179,
+          230.694
+        ]
+      }
+    },
+    "displeased": {
+      "closed": {
+        "skin_pixels": 2585,
+        "mean_delta_L": -0.10135673972579526,
+        "p05_delta_L": -0.6726282203240543,
+        "mean_delta_a": -0.38811613262570704,
+        "mean_delta_b": -0.7158668587572878,
+        "mean_delta_srgb_luma": -0.2649278916827853,
+        "p05_delta_srgb_luma": -1.9278,
+        "mean_deltaE76": 0.9520521346713466,
+        "skin_fraction_darker_3_luma": 0.0019342359767891683,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.511,
+          239.187,
+          231.775
+        ],
+        "base_mean_RGB": [
+          253.138,
+          239.182,
+          230.707
+        ]
+      },
+      "near_closed": {
+        "skin_pixels": 2585,
+        "mean_delta_L": -0.09375479924756067,
+        "p05_delta_L": -0.6490764489462378,
+        "mean_delta_a": -0.3496374870085942,
+        "mean_delta_b": -0.8348961844071442,
+        "mean_delta_srgb_luma": -0.24212758220502906,
+        "p05_delta_srgb_luma": -1.8556,
+        "mean_deltaE76": 1.0288524823747287,
+        "skin_fraction_darker_3_luma": 0.0011605415860735009,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.512,
+          239.193,
+          232.026
+        ],
+        "base_mean_RGB": [
+          253.138,
+          239.182,
+          230.707
+        ]
+      },
+      "small": {
+        "skin_pixels": 2585,
+        "mean_delta_L": 0.11569021247268658,
+        "p05_delta_L": -0.35487689594430094,
+        "mean_delta_a": -0.498381830789172,
+        "mean_delta_b": -1.5121077800558873,
+        "mean_delta_srgb_luma": 0.37357299806576394,
+        "p05_delta_srgb_luma": -0.9960000000000001,
+        "mean_deltaE76": 1.672278691140033,
+        "skin_fraction_darker_3_luma": 0.0,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.268,
+          239.936,
+          233.915
+        ],
+        "base_mean_RGB": [
+          253.138,
+          239.182,
+          230.707
+        ]
+      },
+      "open": {
+        "skin_pixels": 2585,
+        "mean_delta_L": 0.16458966023046726,
+        "p05_delta_L": -0.4084716378429363,
+        "mean_delta_a": -0.615673125459038,
+        "mean_delta_b": -1.8920303321628227,
+        "mean_delta_srgb_luma": 0.5231886266924565,
+        "p05_delta_srgb_luma": -1.1364,
+        "mean_deltaE76": 2.1170472815822903,
+        "skin_fraction_darker_3_luma": 0.006963249516441006,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          250.867,
+          240.178,
+          234.778
+        ],
+        "base_mean_RGB": [
+          253.138,
+          239.182,
+          230.707
+        ]
+      }
+    },
+    "thinking": {
+      "closed": {
+        "skin_pixels": 3199,
+        "mean_delta_L": -0.1206750178829031,
+        "p05_delta_L": -0.728014455226969,
+        "mean_delta_a": -0.7831022587366219,
+        "mean_delta_b": -0.05819109985111536,
+        "mean_delta_srgb_luma": -0.3211110972178806,
+        "p05_delta_srgb_luma": -2.0722,
+        "mean_deltaE76": 1.0311224675418487,
+        "skin_fraction_darker_3_luma": 0.0031259768677711786,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.249,
+          239.365,
+          229.906
+        ],
+        "base_mean_RGB": [
+          253.177,
+          239.214,
+          230.167
+        ]
+      },
+      "near_closed": {
+        "skin_pixels": 3199,
+        "mean_delta_L": -0.1268129139153843,
+        "p05_delta_L": -0.7275478549894487,
+        "mean_delta_a": -0.7665835343554657,
+        "mean_delta_b": -0.07725592082106343,
+        "mean_delta_srgb_luma": -0.33882557049077844,
+        "p05_delta_srgb_luma": -2.0722,
+        "mean_deltaE76": 1.0183076314120252,
+        "skin_fraction_darker_3_luma": 0.0031259768677711786,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          251.248,
+          239.339,
+          229.925
+        ],
+        "base_mean_RGB": [
+          253.177,
+          239.214,
+          230.167
+        ]
+      },
+      "small": {
+        "skin_pixels": 3199,
+        "mean_delta_L": -0.6203991789898438,
+        "p05_delta_L": -1.2712935116870836,
+        "mean_delta_a": -0.3551474181193754,
+        "mean_delta_b": -1.072223162172378,
+        "mean_delta_srgb_luma": -1.7479524851516102,
+        "p05_delta_srgb_luma": -3.6496999999999993,
+        "mean_deltaE76": 1.464158396800038,
+        "skin_fraction_darker_3_luma": 0.17474210690840888,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          249.825,
+          237.739,
+          230.442
+        ],
+        "base_mean_RGB": [
+          253.177,
+          239.214,
+          230.167
+        ]
+      },
+      "open": {
+        "skin_pixels": 3199,
+        "mean_delta_L": -0.6593489162684514,
+        "p05_delta_L": -1.3703930619095814,
+        "mean_delta_a": -0.3286361032876152,
+        "mean_delta_b": -1.0578133181565876,
+        "mean_delta_srgb_luma": -1.8606288215067206,
+        "p05_delta_srgb_luma": -3.9278,
+        "mean_deltaE76": 1.4951277611882339,
+        "skin_fraction_darker_3_luma": 0.1997499218505783,
+        "skin_fraction_darker_6_luma": 0.0,
+        "mean_RGB": [
+          249.776,
+          237.61,
+          230.305
+        ],
+        "base_mean_RGB": [
+          253.177,
+          239.214,
+          230.167
+        ]
+      }
+    }
+  },
+  "sha256": {
+    "base.png": "144b2db17ffe40aa14fc26510eb2ae3aef55a3ae1398d34cf4da51ebf4980f69",
+    "mouth_open.png": "066d5cbbf610d899207dc69a5f8a58d8a26a53407c2515a754467cd2a9dd38ae",
+    "mouth_closed.png": "217da54a84ed2fc385ccd7c80d6f20131e6b262885a507cbfb1e31921e4aa9b4",
+    "expressions/soft_smile/base.png": "0f8b1012546cb74149dbcfa7d139384ac6b21ef6bc87b75b962fcfb0cdcb3708",
+    "expressions/soft_smile/mouth_closed.png": "852590b6590c57d80ae3e03f815c228272b06b079ffb5e9f45eee74f1aec6f92",
+    "expressions/soft_smile/mouth_open.png": "e93256b4333f16e65db4f14421ffb2d66199c107ba6ba727afaad8cbd54bd402",
+    "expressions/big_smile/base.png": "2072691d69bd6fb843abaf48c3cbf29ed9e8f07dc4347fca1f094b0c61f5cc00",
+    "expressions/big_smile/mouth_closed.png": "795dd2fdab28b65656b7bc8d0d0f840fd3846e8e26d2d59c7b4ec00249f31085",
+    "expressions/big_smile/mouth_open.png": "1dbb5e48723f51eeaf86282dd07f26bd4290937a9da2d745e1f6d875d2d08b44",
+    "expressions/worried/base.png": "c79d07f43a570408e54b7f139435b1a85a18b35e06d1776cf8c800b58385db06",
+    "expressions/worried/mouth_closed.png": "b960d330ceb01eb93807125683e5b20b767e41c62123d97c509ca01e8a37797c",
+    "expressions/worried/mouth_open.png": "b2579a0cded2a20360a3da1dad383613f643677165f4244bdb2acded606cdd13",
+    "expressions/surprised/base.png": "bb4f3219e0233798b89115fd18d7886a59858494b939ff92c0f674d415fa79e5",
+    "expressions/surprised/mouth_closed.png": "2ae283bd6577af767f61b9d63dd921082ffd98debdec95a8d06cdcefa0ff8427",
+    "expressions/surprised/mouth_open.png": "94c624622c2b8217bb30dfb7a02f9003ffa9d9aaf9f842ac2b2d6d9d7ade4190",
+    "expressions/bashful/base.png": "9c6b144c6d0111ba9fcb57b0fb69b6049292127f9977a797e60eb9046ba32993",
+    "expressions/bashful/mouth_closed.png": "2123120f57b2793bbed38ce34c42a3d511063cd6f32b13cd7fb679654e300e52",
+    "expressions/bashful/mouth_open.png": "a75a4e774eb1be6949a969543193fe4e7c4cc48d30394cc16c762b843a707ce2",
+    "expressions/displeased/base.png": "fe002e48dd155d5411491d65051d2e03999a217539af127d72d0e5bd55851ad5",
+    "expressions/displeased/mouth_closed.png": "349bfd0ae63f027705007663502b988930d9f419c8b4b7b1a1400b7536cf6cdd",
+    "expressions/displeased/mouth_open.png": "ec99fdc6928f2fd66ef1f0f89ec1a250344990d6661668e89b1682115a8ad0ae",
+    "expressions/thinking/base.png": "7432b25b70fc5a196abf909e864ac20a0adfe65fa63696d058da07540aab59eb",
+    "expressions/thinking/mouth_closed.png": "024db87e355ded577adafc61ea913f28009fdd581ff9cbcfcd33d7fffe376080",
+    "expressions/thinking/mouth_open.png": "23ae09a9b19b3c0b94ea0f424f80a85b74f29aa2ea4ea6bb191cbc2baec18787"
+  }
+}

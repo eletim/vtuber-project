@@ -1,0 +1,13 @@
+{
+  "status": "Integrated v46 review candidate; right-eye and surprised-lid corrections applied; independent review pending",
+  "production_enabled": true,
+  "report": "integrated-review/report.json",
+  "roll_report": "pair-probe/report.json",
+  "previous_candidate4_commit": "f4c6e74f1953a9db7be60948931e3ff44e084ff4",
+  "tests": {
+    "javascript_pass": 213,
+    "runtime_python_pass": 97,
+    "legacy_full_discovery": "4 missing-SciPy import errors; 1 CRLF raw-byte mismatch; see logs"
+  },
+  "remaining": "Fine hair/lash intersections; smile eyes deliberately preserve authored endpoint; shoulder unchanged"
+}

@@ -1,0 +1,30 @@
+{
+  "method": "Built-in image_gen precise-object-edit; only painted mouth-surround skin used in final sprite. Original lip/highlight pixels restored exactly by protected-art compositing mask.",
+  "prompt": "Use case: precise-object-edit. Asset: existing anime VTuber facial animation sprite. Image1 is the edit target: the surprised face with a tiny CLOSED mouth. Image2 is the same approved face with an open mouth and is ONLY a skin-color reference. Remove ONLY the diffuse gray oval discoloration surrounding the tiny mouth in image1. Restore smooth warm pale-peach facial skin that continuously matches image2 and the surrounding cheek/chin skin, without a patch edge, gray ring, dark haze, local shadow or blurred blotch. Preserve the tiny closed-mouth lip line, its exact position, tilt, width and expression. Keep eyes, eyebrows, nose, blush, hair, jewelry, face outline, framing and all other artwork unchanged. Do NOT open the mouth. Do NOT redesign, relight, change saturation, or smooth away the surrounding illustration texture. Retain the original composition and same 4:3 aspect ratio. No text.",
+  "reference_files": [
+    {
+      "file": "assets/parts/v15/previews/surprised_L1_R1_M0_face.png",
+      "sha256": "55206a9959af2c45e3d525cb02651978d3fb84aa92ed3c2bfd3921f383d88725"
+    },
+    {
+      "file": "assets/parts/v14/previews/surprised_face.png",
+      "sha256": "01a8ff93a36d38798422299cbcbeac49c86124c3a133d55876e6ed0ed679324d"
+    }
+  ],
+  "output": "assets/parts/v17/sources/surprised_skin_corrected.png",
+  "output_sha256": "0dc3b86ea7056a7794bd5e6f73e4642a5b4dd10dfa108ed1d8ddd674e4c4c99a",
+  "source_size": [
+    1448,
+    1086
+  ],
+  "mapped_size": [
+    400,
+    300
+  ],
+  "mapped_crop": [
+    340,
+    165,
+    740,
+    465
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "recorded_code_sha256": {
+    "runtime/web/eye-components.js": "6677a967c1b78d0d85cc34ffff7bf78c565c0c48cfa62895860ebe1b7daaead7",
+    "runtime/web/renderer.js": "ec09ec6daaddcff6190e40ba36569c67b432f51405159d1149c8d4e0b53c0969",
+    "runtime/model/model.json": "30f9d139654b62ab518ff6d2b086a2cb3b23bbd0206828a7b26c1a998a62559c",
+    "runtime/model/eyes_v46/left-neutral.json": "260597eda18e3ad2389ed02c71217db2010095a913b027978eeccb2f78805d8e",
+    "runtime/model/eyes_v46/right/right-neutral.json": "a1789a9ce5fba26a05e82de481c9e31ffd9ad0d79ec21ee75dae2212cb43bbab"
+  },
+  "focus_frames": {
+    "frame-022.png": {
+      "sha256": "91d2628de1a19d896bb800cf196ccad2404903a39a93bbf8880a5daa78f9118f",
+      "mtime_utc": "2026-10-24T05:18:06.167728+00:00"
+    },
+    "frame-023.png": {
+      "sha256": "f1bd7575c2360f0f234753e17cde26bb9afbad3edef7728c83b3f830e056cd4a",
+      "mtime_utc": "2026-10-24T05:18:06.283051+00:00"
+    },
+    "frame-237.png": {
+      "sha256": "3cde12b4b4ea0a55d119952e4ef5b71cf82de1de9c0912bd7e9d89ee632b24d9",
+      "mtime_utc": "2026-10-24T05:18:30.872928+00:00"
+    },
+    "frame-247.png": {
+      "sha256": "3d707b22a55a4d642b254c3a9f48d8b92e8a58060eb4117253573bccc825f092",
+      "mtime_utc": "2026-10-24T05:18:32.123349+00:00"
+    },
+    "frame-315.png": {
+      "sha256": "8bde002a8c2f03b2bea8871b6ec0d63e2c842b16a4154ceb74bfc85ba149bffc",
+      "mtime_utc": "2026-10-24T05:18:40.783100+00:00"
+    }
+  },
+  "visual_scope": "Generated 40 static native face comparisons; visually inspected selected native cases across expressions and the regression frames 22,23,237,247,315, plus a 60-frame contact sheet at 0.2s intervals. All 360 CFR frames retained. Playback measured at 1x; not a claim of human continuous viewing.",
+  "independent_acceptance": false
+}

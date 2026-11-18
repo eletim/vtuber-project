@@ -1,0 +1,152 @@
+{
+  "frames": [
+    {
+      "time": 0.0,
+      "v22_enclosed_transparent_pixels": 13,
+      "v23_enclosed_transparent_pixels": 15,
+      "new_enclosed_pixels": 3,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 0.5,
+      "v22_enclosed_transparent_pixels": 36,
+      "v23_enclosed_transparent_pixels": 36,
+      "new_enclosed_pixels": 0,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 1.0,
+      "v22_enclosed_transparent_pixels": 17,
+      "v23_enclosed_transparent_pixels": 16,
+      "new_enclosed_pixels": 1,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 1.5,
+      "v22_enclosed_transparent_pixels": 9,
+      "v23_enclosed_transparent_pixels": 9,
+      "new_enclosed_pixels": 3,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 2.0,
+      "v22_enclosed_transparent_pixels": 66,
+      "v23_enclosed_transparent_pixels": 64,
+      "new_enclosed_pixels": 3,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 2.5,
+      "v22_enclosed_transparent_pixels": 66,
+      "v23_enclosed_transparent_pixels": 66,
+      "new_enclosed_pixels": 3,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 3.0,
+      "v22_enclosed_transparent_pixels": 93,
+      "v23_enclosed_transparent_pixels": 84,
+      "new_enclosed_pixels": 7,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 3.5,
+      "v22_enclosed_transparent_pixels": 77,
+      "v23_enclosed_transparent_pixels": 99,
+      "new_enclosed_pixels": 29,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 4.0,
+      "v22_enclosed_transparent_pixels": 68,
+      "v23_enclosed_transparent_pixels": 49,
+      "new_enclosed_pixels": 6,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 4.5,
+      "v22_enclosed_transparent_pixels": 47,
+      "v23_enclosed_transparent_pixels": 60,
+      "new_enclosed_pixels": 18,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 5.0,
+      "v22_enclosed_transparent_pixels": 21,
+      "v23_enclosed_transparent_pixels": 26,
+      "new_enclosed_pixels": 6,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 5.5,
+      "v22_enclosed_transparent_pixels": 17,
+      "v23_enclosed_transparent_pixels": 35,
+      "new_enclosed_pixels": 18,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 6.0,
+      "v22_enclosed_transparent_pixels": 38,
+      "v23_enclosed_transparent_pixels": 42,
+      "new_enclosed_pixels": 5,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 6.5,
+      "v22_enclosed_transparent_pixels": 30,
+      "v23_enclosed_transparent_pixels": 33,
+      "new_enclosed_pixels": 7,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 7.0,
+      "v22_enclosed_transparent_pixels": 78,
+      "v23_enclosed_transparent_pixels": 79,
+      "new_enclosed_pixels": 4,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 7.5,
+      "v22_enclosed_transparent_pixels": 79,
+      "v23_enclosed_transparent_pixels": 98,
+      "new_enclosed_pixels": 28,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 8.0,
+      "v22_enclosed_transparent_pixels": 108,
+      "v23_enclosed_transparent_pixels": 127,
+      "new_enclosed_pixels": 31,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 8.5,
+      "v22_enclosed_transparent_pixels": 149,
+      "v23_enclosed_transparent_pixels": 133,
+      "new_enclosed_pixels": 7,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 9.0,
+      "v22_enclosed_transparent_pixels": 136,
+      "v23_enclosed_transparent_pixels": 145,
+      "new_enclosed_pixels": 12,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 9.5,
+      "v22_enclosed_transparent_pixels": 34,
+      "v23_enclosed_transparent_pixels": 39,
+      "new_enclosed_pixels": 31,
+      "face_region_new_transparency": 0
+    },
+    {
+      "time": 10.0,
+      "v22_enclosed_transparent_pixels": 37,
+      "v23_enclosed_transparent_pixels": 42,
+      "new_enclosed_pixels": 8,
+      "face_region_new_transparency": 0
+    }
+  ],
+  "note": "Enclosed alpha holes are diagnostic only: shifted hair silhouettes can open/close pre-existing cutout gaps. Review paired frames and unchanged source texture hashes."
+}

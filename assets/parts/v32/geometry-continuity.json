@@ -1,0 +1,7905 @@
+{
+  "baseline": "23db0404b944b7e8fb4c98df466854d012319d95",
+  "samples": [
+    {
+      "time": 0,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.016666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.03333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.06666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.08333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.11666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.13333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.16666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.18333333333333332,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.21666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.23333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.26666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.2833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.31666666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.3333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.36666666666666664,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.38333333333333336,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.4166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.43333333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.4666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.48333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.5166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.5333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.5666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.5833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.6166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.6333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.6666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.6833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.7166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.7333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.7666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.7833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.8166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.8333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.8666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.8833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.9166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.9333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.9666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 0.9833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.0166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.0333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.0666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.0833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.1166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.1333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.1666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.1833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.2166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.2333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.2666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.2833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.3166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.3333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.3666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.3833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.4166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.4333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.4666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.4833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.5166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.5333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.5666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.5833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.6166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.6333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.6666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.6833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.7166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.7333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.7666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.7833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.8166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.8333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.8666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.8833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.9166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.9333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.9666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 1.9833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.0166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.033333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.066666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.0833333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.1166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.1333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.1666666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.183333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.216666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.2333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.2666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.283333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.316666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.3333333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.3666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.3833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.4166666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.433333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.466666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.4833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.5166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.533333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.566666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.5833333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.6166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.6333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.6666666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.683333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.716666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.7333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.7666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.783333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.816666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.8333333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.8666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.8833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.9166666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.933333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.966666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 2.9833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.0166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.033333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.066666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.0833333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.1166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.1333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.1666666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.183333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.216666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.2333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.2666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.283333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.316666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.3333333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.3666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.3833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.4166666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.433333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.466666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.4833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.5166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.533333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.566666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.5833333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.6166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.6333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.6666666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.683333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.716666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.7333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.7666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.783333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.816666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.8333333333333335,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.8666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.8833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.9166666666666665,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.933333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.966666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 3.9833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.016666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.033333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.066666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.083333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.116666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.133333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.183333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.216666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.233333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.266666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.283333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.316666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.366666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.383333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.416666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.433333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.466666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.483333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.516666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.533333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.566666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.583333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.616666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.633333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.683333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.716666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.733333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.766666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.783333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.816666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.866666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.883333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.916666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.933333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.966666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 4.983333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.016666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.033333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.066666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.083333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.116666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.133333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.183333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.216666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.233333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.266666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.283333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.316666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.366666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.383333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.416666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.433333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.466666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.483333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.516666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.533333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.566666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.583333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.616666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.633333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.683333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.716666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.733333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.766666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.783333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.816666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.866666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.883333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.916666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.933333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.966666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 5.983333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.016666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.033333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.066666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.083333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.116666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.133333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.183333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.216666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.233333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.266666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.283333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.316666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.366666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.383333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.416666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.433333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.466666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.483333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.516666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.533333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.566666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.583333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.616666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.633333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.683333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.716666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.733333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.766666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.783333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.816666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.866666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.883333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.916666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.933333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.966666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 6.983333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.016666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.033333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.066666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.083333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.116666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.133333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.166666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.183333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.216666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.233333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.266666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.283333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.316666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.333333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.366666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.383333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.416666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.433333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.466666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.483333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.516666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.533333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.566666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.583333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.616666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.633333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.666666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.683333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.716666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.733333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.766666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.783333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.816666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.833333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.866666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.883333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.916666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.933333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.966666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 7.983333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.016666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.033333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.066666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.083333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.116666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.133333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.183333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.216666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.233333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.266666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.283333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.316666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.366666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.383333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.416666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.433333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.466666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.483333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.516666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.533333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.566666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.583333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.616666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.633333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.683333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.716666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.733333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.766666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.783333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.816666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.866666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.883333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.916666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.933333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.966666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 8.983333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.016666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.033333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.05,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.066666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.083333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.1,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.116666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.133333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.15,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.166666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.183333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.2,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.216666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.233333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.25,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.266666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.283333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.3,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.316666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.333333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.35,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.366666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.383333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.4,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.416666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.433333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.45,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.466666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.483333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.5,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.516666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.533333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.55,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.566666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.583333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.6,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.616666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.633333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.65,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.666666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.683333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.7,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.716666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.733333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.75,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.766666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.783333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.8,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.816666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.833333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.85,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.866666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.883333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.9,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.916666666666666,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.933333333333334,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.95,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.966666666666667,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 9.983333333333333,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 10,
+      "amount": 0,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 10.016666666666667,
+      "amount": 0.00005248907552811953,
+      "maxStep": 0.005242960193236024,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487622438745575
+    },
+    {
+      "time": 10.033333333333333,
+      "amount": 0.00024695742151119304,
+      "maxStep": 0.019749530653495807,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.64872777428684
+    },
+    {
+      "time": 10.05,
+      "amount": 0.0006525497455090248,
+      "maxStep": 0.0424241778608923,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6486365689758031
+    },
+    {
+      "time": 10.066666666666666,
+      "amount": 0.0013214609255049747,
+      "maxStep": 0.07242340912476727,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6484790123968196
+    },
+    {
+      "time": 10.083333333333334,
+      "amount": 0.0022918305299280198,
+      "maxStep": 0.10926227878180708,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6481966180009522
+    },
+    {
+      "time": 10.1,
+      "amount": 0.0035902053928829752,
+      "maxStep": 0.1525836995919347,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6477427242250542
+    },
+    {
+      "time": 10.116666666666667,
+      "amount": 0.005233630275561771,
+      "maxStep": 0.20194101981653523,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6470374822461054
+    },
+    {
+      "time": 10.133333333333333,
+      "amount": 0.007231418661567582,
+      "maxStep": 0.2571568267337181,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6460153486320905
+    },
+    {
+      "time": 10.15,
+      "amount": 0.009586648780918791,
+      "maxStep": 0.3178571730026063,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6445689900194793
+    },
+    {
+      "time": 10.166666666666666,
+      "amount": 0.012297423904682844,
+      "maxStep": 0.3834337017547819,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.642561502868034
+    },
+    {
+      "time": 10.183333333333334,
+      "amount": 0.015357930685623994,
+      "maxStep": 0.45575727125659515,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.639903462509551
+    },
+    {
+      "time": 10.2,
+      "amount": 0.018759324740124997,
+      "maxStep": 0.5838864499887566,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6364442417426517
+    },
+    {
+      "time": 10.216666666666667,
+      "amount": 0.02249046868569647,
+      "maxStep": 0.7340164618610263,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6320640366245698
+    },
+    {
+      "time": 10.233333333333333,
+      "amount": 0.026538544390135352,
+      "maxStep": 0.9064092448826672,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6266187299891044
+    },
+    {
+      "time": 10.25,
+      "amount": 0.030889558186062857,
+      "maxStep": 1.1006386480372414,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6200071149341966
+    },
+    {
+      "time": 10.266666666666667,
+      "amount": 0.03552875519960867,
+      "maxStep": 1.3157298346111064,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6120951784500903
+    },
+    {
+      "time": 10.283333333333333,
+      "amount": 0.04044095668338488,
+      "maxStep": 1.550253434006386,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6027837067071005
+    },
+    {
+      "time": 10.3,
+      "amount": 0.04561083228684977,
+      "maxStep": 1.8022791559157536,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5919996802097103
+    },
+    {
+      "time": 10.316666666666666,
+      "amount": 0.051023117502706716,
+      "maxStep": 2.0694948166354203,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5796587766487846
+    },
+    {
+      "time": 10.333333333333334,
+      "amount": 0.05666278506202907,
+      "maxStep": 2.3492727014940606,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5656957870362476
+    },
+    {
+      "time": 10.35,
+      "amount": 0.06251517778350518,
+      "maxStep": 2.638736987505203,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5500993969965293
+    },
+    {
+      "time": 10.366666666666667,
+      "amount": 0.06856610928768617,
+      "maxStep": 2.9348709884699034,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5328327468580483
+    },
+    {
+      "time": 10.383333333333333,
+      "amount": 0.07480193804258448,
+      "maxStep": 3.2345552676769747,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5139082763596434
+    },
+    {
+      "time": 10.4,
+      "amount": 0.08120961939278623,
+      "maxStep": 3.5347053047158394,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.4933280309435304
+    },
+    {
+      "time": 10.416666666666666,
+      "amount": 0.08777673952301321,
+      "maxStep": 3.8322939151902076,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.471155520144407
+    },
+    {
+      "time": 10.433333333333334,
+      "amount": 0.09449153470393999,
+      "maxStep": 4.124411688031799,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.4474363930617073
+    },
+    {
+      "time": 10.45,
+      "amount": 0.10134289864978782,
+      "maxStep": 4.408396132956306,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.42222390436757
+    },
+    {
+      "time": 10.466666666666667,
+      "amount": 0.1083203803725599,
+      "maxStep": 4.6818133158375055,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.395598426148581
+    },
+    {
+      "time": 10.483333333333333,
+      "amount": 0.11541417453666578,
+      "maxStep": 4.942609660617887,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.3676482493536923
+    },
+    {
+      "time": 10.5,
+      "amount": 0.12261510599166253,
+      "maxStep": 5.188982992669331,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.3384721578290737
+    },
+    {
+      "time": 10.516666666666667,
+      "amount": 0.12991460988224363,
+      "maxStep": 5.419589984052303,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.308151886428277
+    },
+    {
+      "time": 10.533333333333333,
+      "amount": 0.13730470849709922,
+      "maxStep": 5.633438039674821,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.2767778972659016
+    },
+    {
+      "time": 10.55,
+      "amount": 0.1447779858160485,
+      "maxStep": 5.829922871652456,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.2444592376198216
+    },
+    {
+      "time": 10.566666666666666,
+      "amount": 0.15232756054309163,
+      "maxStep": 6.008807163836552,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.2112622530366934
+    },
+    {
+      "time": 10.583333333333334,
+      "amount": 0.159947058267497,
+      "maxStep": 6.170287740411569,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1772828863712448
+    },
+    {
+      "time": 10.6,
+      "amount": 0.16763058327194252,
+      "maxStep": 6.314887145718295,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1425946950396337
+    },
+    {
+      "time": 10.616666666666667,
+      "amount": 0.17537269040304013,
+      "maxStep": 6.443348475721377,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1072470740089102
+    },
+    {
+      "time": 10.633333333333333,
+      "amount": 0.18316835733233688,
+      "maxStep": 6.556775253282989,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.071313697423193
+    },
+    {
+      "time": 10.65,
+      "amount": 0.1910129574629174,
+      "maxStep": 6.656506875637896,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0348307901722364
+    },
+    {
+      "time": 10.666666666666666,
+      "amount": 0.198902233675763,
+      "maxStep": 6.74392905421223,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9978334731158611
+    },
+    {
+      "time": 10.683333333333334,
+      "amount": 0.2068322730594812,
+      "maxStep": 6.820591126871497,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9603384990100494
+    },
+    {
+      "time": 10.7,
+      "amount": 0.2147994827251603,
+      "maxStep": 6.888164241960903,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9223759386571828
+    },
+    {
+      "time": 10.716666666666667,
+      "amount": 0.22280056677381654,
+      "maxStep": 6.948210600812407,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.8839421478683107
+    },
+    {
+      "time": 10.733333333333333,
+      "amount": 0.2308325044558368,
+      "maxStep": 7.002279125947429,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.8467439628219608
+    },
+    {
+      "time": 10.75,
+      "amount": 0.23889252953921317,
+      "maxStep": 7.051828707168386,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.8682038472898057
+    },
+    {
+      "time": 10.766666666666667,
+      "amount": 0.24697811088516525,
+      "maxStep": 7.098076872647204,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.889183970537033
+    },
+    {
+      "time": 10.783333333333333,
+      "amount": 0.25508693421543915,
+      "maxStep": 7.1421589415236255,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9095922803311396
+    },
+    {
+      "time": 10.8,
+      "amount": 0.26321688504436636,
+      "maxStep": 7.184959194109547,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.929240595723968
+    },
+    {
+      "time": 10.816666666666666,
+      "amount": 0.2713660327402413,
+      "maxStep": 7.2271113656736885,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9480218550748987
+    },
+    {
+      "time": 10.833333333333334,
+      "amount": 0.2795326156742868,
+      "maxStep": 7.26910053770742,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9657677676841558
+    },
+    {
+      "time": 10.85,
+      "amount": 0.28771502741092847,
+      "maxStep": 7.310963120204255,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9823316873877275
+    },
+    {
+      "time": 10.866666666666667,
+      "amount": 0.29591180389015337,
+      "maxStep": 7.352910376724204,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.99756558265085
+    },
+    {
+      "time": 10.883333333333333,
+      "amount": 0.30412161155089096,
+      "maxStep": 7.3944885016768325,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0113336334399037
+    },
+    {
+      "time": 10.9,
+      "amount": 0.3123432363436221,
+      "maxStep": 7.4355256557701255,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0234834836921891
+    },
+    {
+      "time": 10.916666666666666,
+      "amount": 0.3205755735803661,
+      "maxStep": 7.47538212477728,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0338906161450723
+    },
+    {
+      "time": 10.933333333333334,
+      "amount": 0.32881761857088293,
+      "maxStep": 7.513527107562608,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0424244872524469
+    },
+    {
+      "time": 10.95,
+      "amount": 0.3370684579949923,
+      "maxStep": 7.54908241381475,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0489696524132341
+    },
+    {
+      "time": 10.966666666666667,
+      "amount": 0.34532726196245994,
+      "maxStep": 7.581637162591582,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0534058686630488
+    },
+    {
+      "time": 10.983333333333333,
+      "amount": 0.3535932767136181,
+      "maxStep": 7.6101364195333545,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0556522316818473
+    },
+    {
+      "time": 11,
+      "amount": 0.3618658179159149,
+      "maxStep": 7.643018624153061,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0556232984697544
+    },
+    {
+      "time": 11.016666666666667,
+      "amount": 0.3701442645136347,
+      "maxStep": 7.673427008267525,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.053223165334316
+    },
+    {
+      "time": 11.033333333333333,
+      "amount": 0.3784280530902674,
+      "maxStep": 7.696593365512063,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0439763637549504
+    },
+    {
+      "time": 11.05,
+      "amount": 0.38671667270519305,
+      "maxStep": 7.712079621501938,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0244083396344195
+    },
+    {
+      "time": 11.066666666666666,
+      "amount": 0.3950096601685746,
+      "maxStep": 7.719397444223644,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9944144088649409
+    },
+    {
+      "time": 11.083333333333334,
+      "amount": 0.40330659572057914,
+      "maxStep": 7.718247661843408,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.961919601286354
+    },
+    {
+      "time": 11.1,
+      "amount": 0.41160709908315274,
+      "maxStep": 7.70835258957249,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9597381353898982
+    },
+    {
+      "time": 11.116666666666667,
+      "amount": 0.41991082585471734,
+      "maxStep": 7.689573181701828,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9454036967724733
+    },
+    {
+      "time": 11.133333333333333,
+      "amount": 0.42821746422011764,
+      "maxStep": 7.6619568293260905,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9152151984324064
+    },
+    {
+      "time": 11.15,
+      "amount": 0.4365267319501309,
+      "maxStep": 7.625480620342029,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.8562691948043266
+    },
+    {
+      "time": 11.166666666666666,
+      "amount": 0.4448383736666378,
+      "maxStep": 7.5803031069153555,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.786474190127251
+    },
+    {
+      "time": 11.183333333333334,
+      "amount": 0.45315215835135525,
+      "maxStep": 7.523927374185166,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.7188952178466934
+    },
+    {
+      "time": 11.2,
+      "amount": 0.46146787707762743,
+      "maxStep": 7.328720520609659,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.6540962828779584
+    },
+    {
+      "time": 11.216666666666667,
+      "amount": 0.4697853409463836,
+      "maxStep": 7.055061607233208,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.5925950695399251
+    },
+    {
+      "time": 11.233333333333333,
+      "amount": 0.478104379208777,
+      "maxStep": 6.787696293253974,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.5348809005823796
+    },
+    {
+      "time": 11.25,
+      "amount": 0.4864248375594451,
+      "maxStep": 6.54243092725449,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.481497114094509
+    },
+    {
+      "time": 11.266666666666667,
+      "amount": 0.494746576585554,
+      "maxStep": 6.331308494555839,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.43793586287392827
+    },
+    {
+      "time": 11.283333333333333,
+      "amount": 0.5030694703580332,
+      "maxStep": 6.16120860427397,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.39649892795807773
+    },
+    {
+      "time": 11.3,
+      "amount": 0.5113934051524857,
+      "maxStep": 6.03274342563887,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.35777766237004016
+    },
+    {
+      "time": 11.316666666666666,
+      "amount": 0.519718278288287,
+      "maxStep": 5.977892230057562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.3222778014759342
+    },
+    {
+      "time": 11.333333333333334,
+      "amount": 0.528043997075375,
+      "maxStep": 5.94775742676353,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.2903797469741676
+    },
+    {
+      "time": 11.35,
+      "amount": 0.5363704778590654,
+      "maxStep": 5.925882926678512,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.2623266584777184
+    },
+    {
+      "time": 11.366666666666667,
+      "amount": 0.5446976451541004,
+      "maxStep": 5.908306531118565,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.23822213178732454
+    },
+    {
+      "time": 11.383333333333333,
+      "amount": 0.5530254308598352,
+      "maxStep": 5.893744834053429,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.21800517865813163
+    },
+    {
+      "time": 11.4,
+      "amount": 0.5613537735492201,
+      "maxStep": 5.859577094179443,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.2006740919910044
+    },
+    {
+      "time": 11.416666666666666,
+      "amount": 0.5696826178248146,
+      "maxStep": 5.810696422326381,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.18275774892799745
+    },
+    {
+      "time": 11.433333333333334,
+      "amount": 0.57801191373572,
+      "maxStep": 5.757710838883708,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.17122014293420307
+    },
+    {
+      "time": 11.45,
+      "amount": 0.5863416162497972,
+      "maxStep": 5.7014039025437215,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.16294664813187865
+    },
+    {
+      "time": 11.466666666666667,
+      "amount": 0.594671684776088,
+      "maxStep": 5.642748561085625,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.15484451768372764
+    },
+    {
+      "time": 11.483333333333333,
+      "amount": 0.6030020827327601,
+      "maxStep": 5.582833460907095,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.146583764535535
+    },
+    {
+      "time": 11.5,
+      "amount": 0.6113327771563645,
+      "maxStep": 5.522695937589654,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.13788621213564056
+    },
+    {
+      "time": 11.516666666666667,
+      "amount": 0.6196637383485223,
+      "maxStep": 5.463312702712089,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.12852367176492407
+    },
+    {
+      "time": 11.533333333333333,
+      "amount": 0.6279949395565549,
+      "maxStep": 5.405859538448359,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.11829994728032034
+    },
+    {
+      "time": 11.55,
+      "amount": 0.6363263566848596,
+      "maxStep": 5.3511470555970115,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.10852991893557373
+    },
+    {
+      "time": 11.566666666666666,
+      "amount": 0.644657968034122,
+      "maxStep": 5.300235707335262,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.0986159913281881
+    },
+    {
+      "time": 11.583333333333334,
+      "amount": 0.6529897540657569,
+      "maxStep": 5.253585808504522,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.08762475562207328
+    },
+    {
+      "time": 11.6,
+      "amount": 0.6613216971891565,
+      "maxStep": 5.212125502157558,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.07543777705336652
+    },
+    {
+      "time": 11.616666666666667,
+      "amount": 0.6696537815696064,
+      "maxStep": 5.176026319247762,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.06195775172272988
+    },
+    {
+      "time": 11.633333333333333,
+      "amount": 0.6779859929548724,
+      "maxStep": 5.145878201686828,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.04709219118126384
+    },
+    {
+      "time": 11.65,
+      "amount": 0.6863183185186982,
+      "maxStep": 5.1217271769666235,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.030771719951872
+    },
+    {
+      "time": 11.666666666666666,
+      "amount": 0.6946507467195702,
+      "maxStep": 5.1037469438011716,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.012928373013210148
+    },
+    {
+      "time": 11.683333333333334,
+      "amount": 0.7029832671733081,
+      "maxStep": 5.0916315782020485,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.00649434443289465
+    },
+    {
+      "time": 11.7,
+      "amount": 0.7113158705381242,
+      "maxStep": 5.085472321964766,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.027536137807260275
+    },
+    {
+      "time": 11.716666666666667,
+      "amount": 0.7196485484109756,
+      "maxStep": 5.084435689912607,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.05023267817705346
+    },
+    {
+      "time": 11.733333333333333,
+      "amount": 0.727981293234091,
+      "maxStep": 5.088265998920922,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.07460697405576866
+    },
+    {
+      "time": 11.75,
+      "amount": 0.7363140982107127,
+      "maxStep": 5.096118243360209,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.10066606448049242
+    },
+    {
+      "time": 11.766666666666667,
+      "amount": 0.7446469572291341,
+      "maxStep": 5.107117742977647,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.12840810972818417
+    },
+    {
+      "time": 11.783333333333333,
+      "amount": 0.7529798647942461,
+      "maxStep": 5.12039496485512,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.1578142104165181
+    },
+    {
+      "time": 11.8,
+      "amount": 0.7613128159658533,
+      "maxStep": 5.134605421947206,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.1888459541873999
+    },
+    {
+      "time": 11.816666666666666,
+      "amount": 0.76964580630309,
+      "maxStep": 5.148563906460436,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.221445573396295
+    },
+    {
+      "time": 11.833333333333334,
+      "amount": 0.7779788318143604,
+      "maxStep": 5.160720522489208,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.25554259778743926
+    },
+    {
+      "time": 11.85,
+      "amount": 0.7863118889122376,
+      "maxStep": 5.169590923779106,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.2910392631832792
+    },
+    {
+      "time": 11.866666666666667,
+      "amount": 0.7946449743728584,
+      "maxStep": 5.17351581986916,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.3278112087059526
+    },
+    {
+      "time": 11.883333333333333,
+      "amount": 0.8029780852993491,
+      "maxStep": 5.170590804778286,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.3657165558166753
+    },
+    {
+      "time": 11.9,
+      "amount": 0.8113112190889087,
+      "maxStep": 5.158999400081777,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.4035566189656947
+    },
+    {
+      "time": 11.916666666666666,
+      "amount": 0.8196443734031651,
+      "maxStep": 5.13689102069543,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.441734122091475
+    },
+    {
+      "time": 11.933333333333334,
+      "amount": 0.8279775461415061,
+      "maxStep": 5.102018731665135,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.480615919056504
+    },
+    {
+      "time": 11.95,
+      "amount": 0.8363107354170647,
+      "maxStep": 5.053329385039489,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.519994559151371
+    },
+    {
+      "time": 11.966666666666667,
+      "amount": 0.844643939535123,
+      "maxStep": 5.050195729511545,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.5596397226597105
+    },
+    {
+      "time": 11.983333333333333,
+      "amount": 0.8529771569736678,
+      "maxStep": 5.044335216517318,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.5993010591510028
+    },
+    {
+      "time": 12,
+      "amount": 0.8613103863659117,
+      "maxStep": 4.9825926392344995,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.6379407801972548
+    },
+    {
+      "time": 12.016666666666667,
+      "amount": 0.8695911374090285,
+      "maxStep": 4.836382672387075,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.6735328632487381
+    },
+    {
+      "time": 12.033333333333333,
+      "amount": 0.877729918806138,
+      "maxStep": 4.594257234540271,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.7079932304250747
+    },
+    {
+      "time": 12.05,
+      "amount": 0.8856575848603514,
+      "maxStep": 4.283701775057862,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.7408134339698336
+    },
+    {
+      "time": 12.066666666666666,
+      "amount": 0.8933219398055331,
+      "maxStep": 3.930778854559595,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.7716188712237226
+    },
+    {
+      "time": 12.083333333333334,
+      "amount": 0.9006848432759988,
+      "maxStep": 3.5576800281093126,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.8001548436823214
+    },
+    {
+      "time": 12.1,
+      "amount": 0.9077197477220302,
+      "maxStep": 3.182130047079554,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.8262720597670636
+    },
+    {
+      "time": 12.116666666666667,
+      "amount": 0.9144096077401567,
+      "maxStep": 2.8169885384565734,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.8498628533416763
+    },
+    {
+      "time": 12.133333333333333,
+      "amount": 0.9207451092703517,
+      "maxStep": 2.4713738137086088,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.8710766259554248
+    },
+    {
+      "time": 12.15,
+      "amount": 0.9267231735653194,
+      "maxStep": 2.1506654621383694,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.890001492284398
+    },
+    {
+      "time": 12.166666666666666,
+      "amount": 0.9323456968898185,
+      "maxStep": 1.8579112004207825,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9067153866084254
+    },
+    {
+      "time": 12.183333333333334,
+      "amount": 0.9376184921745976,
+      "maxStep": 1.7264120354338661,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9213387296739484
+    },
+    {
+      "time": 12.2,
+      "amount": 0.9425504034295936,
+      "maxStep": 1.7117017019026437,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9340339551783927
+    },
+    {
+      "time": 12.216666666666667,
+      "amount": 0.9471525677020514,
+      "maxStep": 1.6918197129124466,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9449818848921154
+    },
+    {
+      "time": 12.233333333333333,
+      "amount": 0.9514378028234254,
+      "maxStep": 1.6668468818060627,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9543682061206482
+    },
+    {
+      "time": 12.25,
+      "amount": 0.9554201021913157,
+      "maxStep": 1.6369980696409367,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9623666317608581
+    },
+    {
+      "time": 12.266666666666667,
+      "amount": 0.9591142204376047,
+      "maxStep": 1.6027082903938512,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9691558818829549
+    },
+    {
+      "time": 12.283333333333333,
+      "amount": 0.9625353360926362,
+      "maxStep": 1.5644473918019257,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9748808991005831
+    },
+    {
+      "time": 12.3,
+      "amount": 0.9656987793122948,
+      "maxStep": 1.522530329178399,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9796973919691254
+    },
+    {
+      "time": 12.316666666666666,
+      "amount": 0.968619814429303,
+      "maxStep": 1.4775409470894045,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9834399006209082
+    },
+    {
+      "time": 12.333333333333334,
+      "amount": 0.9713134685560401,
+      "maxStep": 1.4299430883388817,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9862699013964971
+    },
+    {
+      "time": 12.35,
+      "amount": 0.9737943987334373,
+      "maxStep": 1.3802364579874637,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9886456702560054
+    },
+    {
+      "time": 12.366666666666667,
+      "amount": 0.9760767912150745,
+      "maxStep": 1.3289211966706966,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.990631632882355
+    },
+    {
+      "time": 12.383333333333333,
+      "amount": 0.9781742874200813,
+      "maxStep": 1.2763072309520165,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9922938806425918
+    },
+    {
+      "time": 12.4,
+      "amount": 0.9800999319026917,
+      "maxStep": 1.2230424663374977,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9936774559491823
+    },
+    {
+      "time": 12.416666666666666,
+      "amount": 0.981866138387473,
+      "maxStep": 1.1692755780241961,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9948270303112849
+    },
+    {
+      "time": 12.433333333333334,
+      "amount": 0.9834846705224356,
+      "maxStep": 1.115500529475121,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.995779715785261
+    },
+    {
+      "time": 12.45,
+      "amount": 0.9849666345204635,
+      "maxStep": 1.0620686627388707,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9965703657499603
+    },
+    {
+      "time": 12.466666666666667,
+      "amount": 0.9863224813042174,
+      "maxStep": 1.0091513539671562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9972261829787499
+    },
+    {
+      "time": 12.483333333333333,
+      "amount": 0.9875620161507227,
+      "maxStep": 0.9571696963896066,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9977434296445153
+    },
+    {
+      "time": 12.5,
+      "amount": 0.988694414157936,
+      "maxStep": 0.9061123115457088,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9979494108051767
+    },
+    {
+      "time": 12.516666666666667,
+      "amount": 0.989728240134122,
+      "maxStep": 0.856407559454975,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9981411358324976
+    },
+    {
+      "time": 12.533333333333333,
+      "amount": 0.9906714717484327,
+      "maxStep": 0.8080992663257148,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9983150057792045
+    },
+    {
+      "time": 12.55,
+      "amount": 0.9915315249832728,
+      "maxStep": 0.7612020166628451,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9984728270723053
+    },
+    {
+      "time": 12.566666666666666,
+      "amount": 0.9923152811007879,
+      "maxStep": 0.7160597462201528,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9986193379120323
+    },
+    {
+      "time": 12.583333333333334,
+      "amount": 0.9930291144813781,
+      "maxStep": 0.6725556853356001,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9987497789694544
+    },
+    {
+      "time": 12.6,
+      "amount": 0.9936789208151849,
+      "maxStep": 0.6308284541538027,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9988689139305507
+    },
+    {
+      "time": 12.616666666666667,
+      "amount": 0.9942701452312475,
+      "maxStep": 0.5909990780967946,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9989749463784392
+    },
+    {
+      "time": 12.633333333333333,
+      "amount": 0.9948078100362002,
+      "maxStep": 0.5527310379968354,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.999078012793575
+    },
+    {
+      "time": 12.65,
+      "amount": 0.9952965418074154,
+      "maxStep": 0.5165289167229624,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9991602325669646
+    },
+    {
+      "time": 12.666666666666666,
+      "amount": 0.995740597646401,
+      "maxStep": 0.48205622313268603,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.999243642837655
+    },
+    {
+      "time": 12.683333333333334,
+      "amount": 0.9961438904488665,
+      "maxStep": 0.44932783103818935,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9993193112819654
+    },
+    {
+      "time": 12.7,
+      "amount": 0.9965100130896724,
+      "maxStep": 0.41848200711680156,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9993818751922845
+    },
+    {
+      "time": 12.716666666666667,
+      "amount": 0.9968422614552195,
+      "maxStep": 0.3891357415950184,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.999439673728375
+    },
+    {
+      "time": 12.733333333333333,
+      "amount": 0.9971436562838475,
+      "maxStep": 0.36167193074986764,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9994944958805263
+    },
+    {
+      "time": 12.75,
+      "amount": 0.9974169637974706,
+      "maxStep": 0.3357543671002895,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9995409766730745
+    },
+    {
+      "time": 12.766666666666667,
+      "amount": 0.9976647151258267,
+      "maxStep": 0.31139052127337047,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9995874588298648
+    },
+    {
+      "time": 12.783333333333333,
+      "amount": 0.9978892245390714,
+      "maxStep": 0.2884814199102808,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9996261930211858
+    },
+    {
+      "time": 12.8,
+      "amount": 0.9980926065156236,
+      "maxStep": 0.2671110493692655,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9996613534610788
+    },
+    {
+      "time": 12.816666666666666,
+      "amount": 0.9982767916806933,
+      "maxStep": 0.24708142256524776,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9996935359907866
+    },
+    {
+      "time": 12.833333333333334,
+      "amount": 0.9984435416572445,
+      "maxStep": 0.2283385426306325,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9997239293852545
+    },
+    {
+      "time": 12.85,
+      "amount": 0.998594462875643,
+      "maxStep": 0.21083740675601656,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9997513438804617
+    },
+    {
+      "time": 12.866666666666667,
+      "amount": 0.9987310193912415,
+      "maxStep": 0.19459299984560996,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.999775183694851
+    },
+    {
+      "time": 12.883333333333333,
+      "amount": 0.9988545447609344,
+      "maxStep": 0.17941486212976912,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9997960423845598
+    },
+    {
+      "time": 12.9,
+      "amount": 0.9989662530305051,
+      "maxStep": 0.16539445258717678,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9998186899110806
+    },
+    {
+      "time": 12.916666666666666,
+      "amount": 0.9990672488845866,
+      "maxStep": 0.15219601310316058,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9998329943556428
+    },
+    {
+      "time": 12.933333333333334,
+      "amount": 0.9991585370104251,
+      "maxStep": 0.14010262059986445,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9998490861875098
+    },
+    {
+      "time": 12.95,
+      "amount": 0.9992410307255173,
+      "maxStep": 0.12882369711327107,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9998633908367083
+    },
+    {
+      "time": 12.966666666666667,
+      "amount": 0.9993155599176985,
+      "maxStep": 0.11838292216056322,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9998765025926559
+    },
+    {
+      "time": 12.983333333333333,
+      "amount": 0.9993828783444858,
+      "maxStep": 0.10874156468442295,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9998890189848453
+    },
+    {
+      "time": 13,
+      "amount": 0.9994436703365092,
+      "maxStep": 0.09986949065093648,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9999003431062192
+    },
+    {
+      "time": 13.016666666666667,
+      "amount": 0.9994460678722332,
+      "maxStep": 0.09592554473861538,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9999003431062192
+    },
+    {
+      "time": 13.033333333333333,
+      "amount": 0.9993011441716994,
+      "maxStep": 0.10117154712127781,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9998747146852338
+    },
+    {
+      "time": 13.05,
+      "amount": 0.9989402654665899,
+      "maxStep": 0.11241549467684343,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9998121345489608
+    },
+    {
+      "time": 13.066666666666666,
+      "amount": 0.9983117000675222,
+      "maxStep": 0.1268024696209457,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9997018775550259
+    },
+    {
+      "time": 13.083333333333334,
+      "amount": 0.997377728164797,
+      "maxStep": 0.14219957997605864,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9995344218566515
+    },
+    {
+      "time": 13.1,
+      "amount": 0.9961121832013727,
+      "maxStep": 0.15681569297891945,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9993032207802344
+    },
+    {
+      "time": 13.116666666666667,
+      "amount": 0.9944983648167522,
+      "maxStep": 0.16870499860060426,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9990047413566572
+    },
+    {
+      "time": 13.133333333333333,
+      "amount": 0.992527271341694,
+      "maxStep": 0.17693371437708016,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.998630075383744
+    },
+    {
+      "time": 13.15,
+      "amount": 0.9901961067746954,
+      "maxStep": 0.18036958355704363,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9981751223335777
+    },
+    {
+      "time": 13.166666666666666,
+      "amount": 0.9875070232221723,
+      "maxStep": 0.17848704223039197,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9968538406553762
+    },
+    {
+      "time": 13.183333333333334,
+      "amount": 0.984466065049078,
+      "maxStep": 0.17061059935923056,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.994816463855841
+    },
+    {
+      "time": 13.2,
+      "amount": 0.9810822855651758,
+      "maxStep": 0.15781459427128758,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9920151900487895
+    },
+    {
+      "time": 13.216666666666667,
+      "amount": 0.9773670110515735,
+      "maxStep": 0.22558731386187497,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9883021846405882
+    },
+    {
+      "time": 13.233333333333333,
+      "amount": 0.9733332303889125,
+      "maxStep": 0.33281337386863186,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.983511670474968
+    },
+    {
+      "time": 13.25,
+      "amount": 0.9689950915495722,
+      "maxStep": 0.45970223373593805,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9774901800412295
+    },
+    {
+      "time": 13.266666666666667,
+      "amount": 0.9643674888199305,
+      "maxStep": 0.6060950262365093,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9700818947322887
+    },
+    {
+      "time": 13.283333333333333,
+      "amount": 0.9594657268761537,
+      "maxStep": 0.7714556195288177,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9611522569713316
+    },
+    {
+      "time": 13.3,
+      "amount": 0.9543052497929221,
+      "maxStep": 0.9550821448469016,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9505682954795702
+    },
+    {
+      "time": 13.316666666666666,
+      "amount": 0.9489014247579218,
+      "maxStep": 1.1556932008150185,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9382301166084517
+    },
+    {
+      "time": 13.333333333333334,
+      "amount": 0.943269371729935,
+      "maxStep": 1.3721432791856973,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.924036017639196
+    },
+    {
+      "time": 13.35,
+      "amount": 0.9374238315447694,
+      "maxStep": 1.6027798321721587,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.9079325374301561
+    },
+    {
+      "time": 13.366666666666667,
+      "amount": 0.9313790660669667,
+      "maxStep": 1.845740769877385,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.889876565548775
+    },
+    {
+      "time": 13.383333333333333,
+      "amount": 0.9251487849290083,
+      "maxStep": 2.0990962631247676,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.869860460163352
+    },
+    {
+      "time": 13.4,
+      "amount": 0.9187460942132262,
+      "maxStep": 2.3603259563021393,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.847900338280283
+    },
+    {
+      "time": 13.416666666666666,
+      "amount": 0.9121834631322178,
+      "maxStep": 2.6267717685290712,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.8240385735689415
+    },
+    {
+      "time": 13.433333333333334,
+      "amount": 0.9054727053661021,
+      "maxStep": 2.895330832760632,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.798356815033685
+    },
+    {
+      "time": 13.45,
+      "amount": 0.8986249722327001,
+      "maxStep": 3.162232363920359,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.7709579779358933
+    },
+    {
+      "time": 13.466666666666667,
+      "amount": 0.8916507553108828,
+      "maxStep": 3.423176259425306,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.7419638101822557
+    },
+    {
+      "time": 13.483333333333333,
+      "amount": 0.8845598965179948,
+      "maxStep": 3.673287900868828,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.7115342332397745
+    },
+    {
+      "time": 13.5,
+      "amount": 0.8773616039678618,
+      "maxStep": 3.9070152924766455,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.679837766894309
+    },
+    {
+      "time": 13.516666666666667,
+      "amount": 0.870064472214107,
+      "maxStep": 4.118408377312141,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.6467884395448209
+    },
+    {
+      "time": 13.533333333333333,
+      "amount": 0.8626765057206632,
+      "maxStep": 4.301194233739799,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.6123963494985674
+    },
+    {
+      "time": 13.55,
+      "amount": 0.8552051446032672,
+      "maxStep": 4.44923821535573,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.5772189999788679
+    },
+    {
+      "time": 13.566666666666666,
+      "amount": 0.8476572918571875,
+      "maxStep": 4.557210398709005,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.5414688705343451
+    },
+    {
+      "time": 13.583333333333334,
+      "amount": 0.8400393414317037,
+      "maxStep": 4.621079727836195,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.5053758350470616
+    },
+    {
+      "time": 13.6,
+      "amount": 0.8323572066347089,
+      "maxStep": 4.647491511852807,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.46916530855725114
+    },
+    {
+      "time": 13.616666666666667,
+      "amount": 0.824616348454276,
+      "maxStep": 4.715518849406437,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.4330480214036925
+    },
+    {
+      "time": 13.633333333333333,
+      "amount": 0.8168218034710627,
+      "maxStep": 4.785899434508645,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.3972388488591605
+    },
+    {
+      "time": 13.65,
+      "amount": 0.8089782111082173,
+      "maxStep": 4.84278058636018,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.3614184388823105
+    },
+    {
+      "time": 13.666666666666666,
+      "amount": 0.8010898400262481,
+      "maxStep": 4.887383838912039,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.32522652086299786
+    },
+    {
+      "time": 13.683333333333334,
+      "amount": 0.7931606135207094,
+      "maxStep": 4.921180221333748,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.28979960527522053
+    },
+    {
+      "time": 13.7,
+      "amount": 0.7851941338222814,
+      "maxStep": 4.945714409121583,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.2553052765506436
+    },
+    {
+      "time": 13.716666666666667,
+      "amount": 0.7771937052329763,
+      "maxStep": 4.96250355019938,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.2218943139695284
+    },
+    {
+      "time": 13.733333333333333,
+      "amount": 0.7691623560601625,
+      "maxStep": 4.9731447791018155,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.1896902845231807
+    },
+    {
+      "time": 13.75,
+      "amount": 0.7611028593325946,
+      "maxStep": 4.979026098961569,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.15880816162052724
+    },
+    {
+      "time": 13.766666666666667,
+      "amount": 0.7530177523007473,
+      "maxStep": 4.981768315363171,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.12933291429817473
+    },
+    {
+      "time": 13.783333333333333,
+      "amount": 0.7449093547379726,
+      "maxStep": 4.982623179241019,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.10133655555648602
+    },
+    {
+      "time": 13.8,
+      "amount": 0.7367797860701271,
+      "maxStep": 4.9830862453853975,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.07486545874542117
+    },
+    {
+      "time": 13.816666666666666,
+      "amount": 0.7286309813697721,
+      "maxStep": 4.984224414242238,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.04923565615797543
+    },
+    {
+      "time": 13.833333333333334,
+      "amount": 0.7204647062572749,
+      "maxStep": 4.987187036589191,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.024031849159200647
+    },
+    {
+      "time": 13.85,
+      "amount": 0.7122825707556286,
+      "maxStep": 4.992773673991857,
+      "cuffAlpha": 1,
+      "minimumSignedArea": 0.0003357488282063059
+    },
+    {
+      "time": 13.866666666666667,
+      "amount": 0.7040860421487054,
+      "maxStep": 5.001896168586113,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.021844519886826674
+    },
+    {
+      "time": 13.883333333333333,
+      "amount": 0.6958764568944426,
+      "maxStep": 5.015354473741706,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.04250680717063915
+    },
+    {
+      "time": 13.9,
+      "amount": 0.6876550316451572,
+      "maxStep": 5.033490201337385,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.06165789385192966
+    },
+    {
+      "time": 13.916666666666666,
+      "amount": 0.6794228734271962,
+      "maxStep": 5.056802341139548,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.07931502683220515
+    },
+    {
+      "time": 13.933333333333334,
+      "amount": 0.6711809890314099,
+      "maxStep": 5.085386991820607,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.0955085434867442
+    },
+    {
+      "time": 13.95,
+      "amount": 0.6629302936648405,
+      "maxStep": 5.119354858217339,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.11027381555948068
+    },
+    {
+      "time": 13.966666666666667,
+      "amount": 0.6546716189124391,
+      "maxStep": 5.158751766089105,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.12366900999154495
+    },
+    {
+      "time": 13.983333333333333,
+      "amount": 0.6464057200558819,
+      "maxStep": 5.20318692740879,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.1357539093618243
+    },
+    {
+      "time": 14,
+      "amount": 0.6381332827945079,
+      "maxStep": 5.252242631804867,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.14661435450022964
+    },
+    {
+      "time": 14.016666666666667,
+      "amount": 0.6298549294113276,
+      "maxStep": 5.3055995123092625,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.1563529937328667
+    },
+    {
+      "time": 14.033333333333333,
+      "amount": 0.6215712244248017,
+      "maxStep": 5.362451703996362,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.16509880438775326
+    },
+    {
+      "time": 14.05,
+      "amount": 0.6132826797648794,
+      "maxStep": 5.422016036228431,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.17301053822222912
+    },
+    {
+      "time": 14.066666666666666,
+      "amount": 0.6049897595095466,
+      "maxStep": 5.483453513662505,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.1802860612542645
+    },
+    {
+      "time": 14.083333333333334,
+      "amount": 0.5966928842158918,
+      "maxStep": 5.545869953562621,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.18715387818701856
+    },
+    {
+      "time": 14.1,
+      "amount": 0.5883924348775798,
+      "maxStep": 5.608155919319728,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.1938999267622421
+    },
+    {
+      "time": 14.116666666666667,
+      "amount": 0.5800887565384677,
+      "maxStep": 5.669216175042354,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.20085622258534386
+    },
+    {
+      "time": 14.133333333333333,
+      "amount": 0.5717821615901316,
+      "maxStep": 5.728154748577562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.2084134418538497
+    },
+    {
+      "time": 14.15,
+      "amount": 0.5634729327790726,
+      "maxStep": 5.783902158636355,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.21978465605343445
+    },
+    {
+      "time": 14.166666666666666,
+      "amount": 0.5551613259475814,
+      "maxStep": 5.835704669938865,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.23862235165097445
+    },
+    {
+      "time": 14.183333333333334,
+      "amount": 0.5468475725304291,
+      "maxStep": 5.878088540517146,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.26235148085334004
+    },
+    {
+      "time": 14.2,
+      "amount": 0.5385318818279496,
+      "maxStep": 5.896007900449452,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.28683432768161765
+    },
+    {
+      "time": 14.216666666666667,
+      "amount": 0.5302144430744594,
+      "maxStep": 5.914363384252752,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.31276069118462146
+    },
+    {
+      "time": 14.233333333333333,
+      "amount": 0.5218954273195515,
+      "maxStep": 5.9365418795781615,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.341202182556799
+    },
+    {
+      "time": 14.25,
+      "amount": 0.5135749891383685,
+      "maxStep": 5.965545215002456,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.37443199565529994
+    },
+    {
+      "time": 14.266666666666667,
+      "amount": 0.505253268185731,
+      "maxStep": 6.007636264150298,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.41292661322245294
+    },
+    {
+      "time": 14.283333333333333,
+      "amount": 0.4969303906077524,
+      "maxStep": 6.123394074105227,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.45668192406367325
+    },
+    {
+      "time": 14.3,
+      "amount": 0.48860647032348825,
+      "maxStep": 6.284033536247759,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.5055680556438347
+    },
+    {
+      "time": 14.316666666666666,
+      "amount": 0.4802816101881351,
+      "maxStep": 6.4865581879225225,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.5593423114248708
+    },
+    {
+      "time": 14.333333333333334,
+      "amount": 0.4719559030483039,
+      "maxStep": 6.726021305982772,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.6176609410005085
+    },
+    {
+      "time": 14.35,
+      "amount": 0.4636294326990573,
+      "maxStep": 6.991362844883981,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.6801002177979854
+    },
+    {
+      "time": 14.366666666666667,
+      "amount": 0.45530227475152396,
+      "maxStep": 7.2676478614239555,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.7461588953702858
+    },
+    {
+      "time": 14.383333333333333,
+      "amount": 0.4469744974192044,
+      "maxStep": 7.505450872452558,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.8153020272089861
+    },
+    {
+      "time": 14.4,
+      "amount": 0.43864616223032993,
+      "maxStep": 7.58204382339331,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.8869450692742475
+    },
+    {
+      "time": 14.416666666666666,
+      "amount": 0.43031732467305017,
+      "maxStep": 7.63215839728814,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9562440266478234
+    },
+    {
+      "time": 14.433333333333334,
+      "amount": 0.4219880347795803,
+      "maxStep": 7.673832992546759,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9948161579842463
+    },
+    {
+      "time": 14.45,
+      "amount": 0.4136583376549523,
+      "maxStep": 7.70686930045861,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0146135469454975
+    },
+    {
+      "time": 14.466666666666667,
+      "amount": 0.40532827395546217,
+      "maxStep": 7.7312772371567515,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0183980989069141
+    },
+    {
+      "time": 14.483333333333333,
+      "amount": 0.3969978803215054,
+      "maxStep": 7.746930899528615,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0686187162377792
+    },
+    {
+      "time": 14.5,
+      "amount": 0.38866718976901904,
+      "maxStep": 7.75408939548538,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.103211080658184
+    },
+    {
+      "time": 14.516666666666667,
+      "amount": 0.3803362320434228,
+      "maxStep": 7.752947439916305,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1271470425811003
+    },
+    {
+      "time": 14.533333333333333,
+      "amount": 0.3720050339395521,
+      "maxStep": 7.743823536686579,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1403638341846545
+    },
+    {
+      "time": 14.55,
+      "amount": 0.3636736195907878,
+      "maxStep": 7.727144808304497,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.143050291150871
+    },
+    {
+      "time": 14.566666666666666,
+      "amount": 0.3553420107302964,
+      "maxStep": 7.7035256684494815,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1392331861230787
+    },
+    {
+      "time": 14.583333333333334,
+      "amount": 0.34701022692699657,
+      "maxStep": 7.674723534257061,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1330727695622045
+    },
+    {
+      "time": 14.6,
+      "amount": 0.33867828579867465,
+      "maxStep": 7.653466938576958,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1246821195186385
+    },
+    {
+      "time": 14.616666666666667,
+      "amount": 0.3303462032043957,
+      "maxStep": 7.628467176398905,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1141295757710168
+    },
+    {
+      "time": 14.633333333333333,
+      "amount": 0.3220139934182108,
+      "maxStep": 7.6008601421443815,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1015455791550721
+    },
+    {
+      "time": 14.65,
+      "amount": 0.31368166928592095,
+      "maxStep": 7.571276013314899,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0870576016600353
+    },
+    {
+      "time": 14.666666666666666,
+      "amount": 0.3053492423665488,
+      "maxStep": 7.540508544474205,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0708008572976269
+    },
+    {
+      "time": 14.683333333333334,
+      "amount": 0.2970167230599593,
+      "maxStep": 7.509389928730249,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0529238309572975
+    },
+    {
+      "time": 14.7,
+      "amount": 0.2886841207219897,
+      "maxStep": 7.478539152550627,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0335430425186587
+    },
+    {
+      "time": 14.716666666666667,
+      "amount": 0.28035144376826737,
+      "maxStep": 7.448433957938084,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.012861097947848
+    },
+    {
+      "time": 14.733333333333333,
+      "amount": 0.27201869976783544,
+      "maxStep": 7.419470801612172,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.990986063052901
+    },
+    {
+      "time": 14.75,
+      "amount": 0.26368589552754695,
+      "maxStep": 7.391825143206215,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9680993856505893
+    },
+    {
+      "time": 14.766666666666667,
+      "amount": 0.25535303716815017,
+      "maxStep": 7.365434918575441,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9443413110773236
+    },
+    {
+      "time": 14.783333333333333,
+      "amount": 0.24702013019285154,
+      "maxStep": 7.339982286862026,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.919864696814443
+    },
+    {
+      "time": 14.8,
+      "amount": 0.23868717954909796,
+      "maxStep": 7.314982026297449,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.8948177165336801
+    },
+    {
+      "time": 14.816666666666666,
+      "amount": 0.23035418968424898,
+      "maxStep": 7.289582165698043,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.869338689125243
+    },
+    {
+      "time": 14.833333333333334,
+      "amount": 0.22202116459571494,
+      "maxStep": 7.262644895142544,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.878694118998169
+    },
+    {
+      "time": 14.85,
+      "amount": 0.21368810787612988,
+      "maxStep": 7.232929058219785,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9121659756743838
+    },
+    {
+      "time": 14.866666666666667,
+      "amount": 0.2053550227540189,
+      "maxStep": 7.198800529421833,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9455357705803635
+    },
+    {
+      "time": 14.883333333333333,
+      "amount": 0.19702191213043024,
+      "maxStep": 7.15856210114672,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -0.9788301519847664
+    },
+    {
+      "time": 14.9,
+      "amount": 0.1886887786119021,
+      "maxStep": 7.110221819025977,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0120311299516516
+    },
+    {
+      "time": 14.916666666666666,
+      "amount": 0.18035562454015266,
+      "maxStep": 7.051786072388994,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0451554631629278
+    },
+    {
+      "time": 14.933333333333334,
+      "amount": 0.17202245201878982,
+      "maxStep": 6.981103291609812,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.0781748168653849
+    },
+    {
+      "time": 14.95,
+      "amount": 0.16368926293736233,
+      "maxStep": 6.896073472534596,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.111058964050926
+    },
+    {
+      "time": 14.966666666666667,
+      "amount": 0.1553560589929887,
+      "maxStep": 6.794547170897237,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1437778956576494
+    },
+    {
+      "time": 14.983333333333333,
+      "amount": 0.14702284170983101,
+      "maxStep": 6.674522034383257,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.1762637251933938
+    },
+    {
+      "time": 15,
+      "amount": 0.13868961245660058,
+      "maxStep": 6.534038753827563,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.2084527172731896
+    },
+    {
+      "time": 15.016666666666667,
+      "amount": 0.13040886153784537,
+      "maxStep": 6.331851468534705,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.2400822911388332
+    },
+    {
+      "time": 15.033333333333333,
+      "amount": 0.12227008025198667,
+      "maxStep": 6.044262245251165,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.2707681902810464
+    },
+    {
+      "time": 15.05,
+      "amount": 0.11434241429729287,
+      "maxStep": 5.694569498860055,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.3002057004086964
+    },
+    {
+      "time": 15.066666666666666,
+      "amount": 0.10667805944113415,
+      "maxStep": 5.303295189717674,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.3281949831849715
+    },
+    {
+      "time": 15.083333333333334,
+      "amount": 0.09931515605029967,
+      "maxStep": 4.888111560485853,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.3545925513483326
+    },
+    {
+      "time": 15.1,
+      "amount": 0.09228025167549678,
+      "maxStep": 4.463877265360206,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.3792846995357877
+    },
+    {
+      "time": 15.116666666666667,
+      "amount": 0.085590391721081,
+      "maxStep": 4.042666223873261,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.4022588176914041
+    },
+    {
+      "time": 15.133333333333333,
+      "amount": 0.07925489024787091,
+      "maxStep": 3.63393587509245,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.4235143038348497
+    },
+    {
+      "time": 15.15,
+      "amount": 0.07327682600387098,
+      "maxStep": 3.2446621741741235,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.4430796202759666
+    },
+    {
+      "time": 15.166666666666666,
+      "amount": 0.06765430272495679,
+      "maxStep": 2.8796696050489365,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.461038613024357
+    },
+    {
+      "time": 15.183333333333334,
+      "amount": 0.06238150748094716,
+      "maxStep": 2.6652855015367596,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.4774592753241222
+    },
+    {
+      "time": 15.2,
+      "amount": 0.05744959626241293,
+      "maxStep": 2.592687503203018,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.4924435007088732
+    },
+    {
+      "time": 15.216666666666667,
+      "amount": 0.052847432022563555,
+      "maxStep": 2.516145572165114,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5060809380088358
+    },
+    {
+      "time": 15.233333333333333,
+      "amount": 0.048562196930351166,
+      "maxStep": 2.436226559488293,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5184810661480697
+    },
+    {
+      "time": 15.25,
+      "amount": 0.04457989758853935,
+      "maxStep": 2.3534174134582804,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5297533938337438
+    },
+    {
+      "time": 15.266666666666667,
+      "amount": 0.04088577936557107,
+      "maxStep": 2.2684190822812997,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5399887944823831
+    },
+    {
+      "time": 15.283333333333333,
+      "amount": 0.03746466373139374,
+      "maxStep": 2.181884829733238,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.549264443420384
+    },
+    {
+      "time": 15.3,
+      "amount": 0.03430122053038317,
+      "maxStep": 2.0940920010187836,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5577030955483906
+    },
+    {
+      "time": 15.316666666666666,
+      "amount": 0.03138018543004982,
+      "maxStep": 2.0059512672341624,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5653686636198927
+    },
+    {
+      "time": 15.333333333333334,
+      "amount": 0.028686531318222925,
+      "maxStep": 1.917617044965994,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.572329939429551
+    },
+    {
+      "time": 15.35,
+      "amount": 0.026205601154157553,
+      "maxStep": 1.8298021734137153,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.57867788397823
+    },
+    {
+      "time": 15.366666666666667,
+      "amount": 0.023923208684440766,
+      "maxStep": 1.7426331902894878,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5844478784231342
+    },
+    {
+      "time": 15.383333333333333,
+      "amount": 0.02182571249009216,
+      "maxStep": 1.6568192434944635,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5897193517503183
+    },
+    {
+      "time": 15.4,
+      "amount": 0.019900068017010965,
+      "maxStep": 1.5724272629635887,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5945208033770086
+    },
+    {
+      "time": 15.416666666666666,
+      "amount": 0.018133861540749516,
+      "maxStep": 1.489909090564052,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.5989148017240495
+    },
+    {
+      "time": 15.433333333333334,
+      "amount": 0.016515329413404153,
+      "maxStep": 1.409450548156257,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.602940632511718
+    },
+    {
+      "time": 15.45,
+      "amount": 0.015033365422186145,
+      "maxStep": 1.331218027809532,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6066288194963363
+    },
+    {
+      "time": 15.466666666666667,
+      "amount": 0.013677518644520412,
+      "maxStep": 1.2554849030308652,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6100057105148835
+    },
+    {
+      "time": 15.483333333333333,
+      "amount": 0.012437983803457847,
+      "maxStep": 1.1824491947223374,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6130972649619935
+    },
+    {
+      "time": 15.5,
+      "amount": 0.011305585801110223,
+      "maxStep": 1.111928562379797,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6159549840494947
+    },
+    {
+      "time": 15.516666666666667,
+      "amount": 0.010271759829273893,
+      "maxStep": 1.0443190456491762,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6185795948757686
+    },
+    {
+      "time": 15.533333333333333,
+      "amount": 0.009328528218851427,
+      "maxStep": 0.9795734271617732,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6209943001626925
+    },
+    {
+      "time": 15.55,
+      "amount": 0.008468474987487165,
+      "maxStep": 0.9175408144078928,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6232196250939523
+    },
+    {
+      "time": 15.566666666666666,
+      "amount": 0.007684718873079113,
+      "maxStep": 0.8585858337665093,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6252619753231556
+    },
+    {
+      "time": 15.583333333333334,
+      "amount": 0.006970885495266299,
+      "maxStep": 0.8023123809901911,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6271392704766185
+    },
+    {
+      "time": 15.6,
+      "amount": 0.006321079163941967,
+      "maxStep": 0.7490253598437929,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.628871494364148
+    },
+    {
+      "time": 15.616666666666667,
+      "amount": 0.0057298547500985,
+      "maxStep": 0.6984041478749474,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.630474036599594
+    },
+    {
+      "time": 15.633333333333333,
+      "amount": 0.00519218994712917,
+      "maxStep": 0.6506624772337187,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6319556387855982
+    },
+    {
+      "time": 15.65,
+      "amount": 0.004703458177686741,
+      "maxStep": 0.6053444112294067,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6333141419920594
+    },
+    {
+      "time": 15.666666666666666,
+      "amount": 0.004259402340285689,
+      "maxStep": 0.5628431468090133,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.634572967270742
+    },
+    {
+      "time": 15.683333333333334,
+      "amount": 0.003856109539236342,
+      "maxStep": 0.5226585964702046,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6357253133037375
+    },
+    {
+      "time": 15.7,
+      "amount": 0.003489986899696226,
+      "maxStep": 0.4850173081048576,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6367941917422968
+    },
+    {
+      "time": 15.716666666666667,
+      "amount": 0.0031577385352803337,
+      "maxStep": 0.44966138026917185,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.637772345969779
+    },
+    {
+      "time": 15.733333333333333,
+      "amount": 0.0028563437076633198,
+      "maxStep": 0.4164397140440346,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6386836387283665
+    },
+    {
+      "time": 15.75,
+      "amount": 0.0025830361949437516,
+      "maxStep": 0.38548501757560333,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6395236988159922
+    },
+    {
+      "time": 15.766666666666667,
+      "amount": 0.0023352848673951223,
+      "maxStep": 0.3564066111558343,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6402933381357343
+    },
+    {
+      "time": 15.783333333333333,
+      "amount": 0.0021107754548720116,
+      "maxStep": 0.32936855041696994,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6410016078964418
+    },
+    {
+      "time": 15.8,
+      "amount": 0.0019073934789647225,
+      "maxStep": 0.30409724578569625,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.641654123957892
+    },
+    {
+      "time": 15.816666666666666,
+      "amount": 0.0017232083144713682,
+      "maxStep": 0.28053276460893056,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6422551207057268
+    },
+    {
+      "time": 15.833333333333334,
+      "amount": 0.0015564583384351414,
+      "maxStep": 0.2587194047952014,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6428015329438495
+    },
+    {
+      "time": 15.85,
+      "amount": 0.001405537120496828,
+      "maxStep": 0.23830797663080627,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6433042527978614
+    },
+    {
+      "time": 15.866666666666667,
+      "amount": 0.001268980605309564,
+      "maxStep": 0.21944964298169017,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6437681407296623
+    },
+    {
+      "time": 15.883333333333333,
+      "amount": 0.0011454552359841887,
+      "maxStep": 0.20184205121157447,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6442028714749313
+    },
+    {
+      "time": 15.9,
+      "amount": 0.0010337469667418408,
+      "maxStep": 0.18572507196543125,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.644600723764711
+    },
+    {
+      "time": 15.916666666666666,
+      "amount": 0.000932751112953749,
+      "maxStep": 0.17058518144403556,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6449667701152748
+    },
+    {
+      "time": 15.933333333333334,
+      "amount": 0.000841462987377496,
+      "maxStep": 0.15666228478337854,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6452887044579256
+    },
+    {
+      "time": 15.95,
+      "amount": 0.000758969272519632,
+      "maxStep": 0.14383643446896144,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6455982055504137
+    },
+    {
+      "time": 15.966666666666667,
+      "amount": 0.000684440080547699,
+      "maxStep": 0.13200079518155763,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.64587864792054
+    },
+    {
+      "time": 15.983333333333333,
+      "amount": 0.0006171216539474367,
+      "maxStep": 0.12097292298599932,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6461279020205666
+    },
+    {
+      "time": 16,
+      "amount": 0.0005563296620911713,
+      "maxStep": 0.11084404148521643,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6463521524542557
+    },
+    {
+      "time": 16.016666666666666,
+      "amount": 0.0005014430509882532,
+      "maxStep": 0.10155172472694111,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6465710294539804
+    },
+    {
+      "time": 16.033333333333335,
+      "amount": 0.00045189840567245353,
+      "maxStep": 0.0929759612249892,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6467643266935283
+    },
+    {
+      "time": 16.05,
+      "amount": 0.00040718478690326303,
+      "maxStep": 0.08510113572227423,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.646948360499323
+    },
+    {
+      "time": 16.066666666666666,
+      "amount": 0.0003668390060814714,
+      "maxStep": 0.07780483717531375,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6471116165149624
+    },
+    {
+      "time": 16.083333333333332,
+      "amount": 0.00033044130447877266,
+      "maxStep": 0.07111825296615312,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6472551627543908
+    },
+    {
+      "time": 16.1,
+      "amount": 0.00029761140503304707,
+      "maxStep": 0.06499460354164785,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6473878273558284
+    },
+    {
+      "time": 16.116666666666667,
+      "amount": 0.0002680049070506341,
+      "maxStep": 0.05937385482231238,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.647517095676676
+    },
+    {
+      "time": 16.133333333333333,
+      "amount": 0.0002413099961708981,
+      "maxStep": 0.05424042180531923,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6476373070332784
+    },
+    {
+      "time": 16.15,
+      "amount": 0.000217244443878888,
+      "maxStep": 0.04942740444979669,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6477379827421146
+    },
+    {
+      "time": 16.166666666666668,
+      "amount": 0.0001955528726919991,
+      "maxStep": 0.04510170184715897,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.647831562712554
+    },
+    {
+      "time": 16.183333333333334,
+      "amount": 0.0001760042648935794,
+      "maxStep": 0.04115649721049237,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6479135255906385
+    },
+    {
+      "time": 16.2,
+      "amount": 0.0001583896943379084,
+      "maxStep": 0.037500571781016206,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6479988880917062
+    },
+    {
+      "time": 16.216666666666665,
+      "amount": 0.0001425202624073388,
+      "maxStep": 0.03416505505061618,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6480618771765876
+    },
+    {
+      "time": 16.233333333333334,
+      "amount": 0.00012822522066397647,
+      "maxStep": 0.03111881727432763,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6481315772580274
+    },
+    {
+      "time": 16.25,
+      "amount": 0.00011535026410762977,
+      "maxStep": 0.028286238173536024,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.64819880410505
+    },
+    {
+      "time": 16.266666666666666,
+      "amount": 0.00010375598023103326,
+      "maxStep": 0.025802919120504062,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6482430999701592
+    },
+    {
+      "time": 16.283333333333335,
+      "amount": 0.00009331644025615427,
+      "maxStep": 0.023449832367190403,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6482966439639313
+    },
+    {
+      "time": 16.3,
+      "amount": 0.0000839179200448906,
+      "maxStep": 0.021370406067841356,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6483377335532623
+    },
+    {
+      "time": 16.316666666666666,
+      "amount": 0.00007545773920781908,
+      "maxStep": 0.019405598070387945,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6483804147441106
+    },
+    {
+      "time": 16.333333333333332,
+      "amount": 0.00006784320788977983,
+      "maxStep": 0.017638836612243258,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6484144061138295
+    },
+    {
+      "time": 16.35,
+      "amount": 0.00006099067159489671,
+      "maxStep": 0.016038939351868474,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6484538798522408
+    },
+    {
+      "time": 16.366666666666667,
+      "amount": 0.00005482464523049863,
+      "maxStep": 0.014577003976963836,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6484810754718637
+    },
+    {
+      "time": 16.383333333333333,
+      "amount": 0.00004927702830314066,
+      "maxStep": 0.013208278704558887,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648506007941819
+    },
+    {
+      "time": 16.4,
+      "amount": 0.0000442863938947041,
+      "maxStep": 0.01201807598946656,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648528961663942
+    },
+    {
+      "time": 16.416666666666668,
+      "amount": 0.000039797344686044706,
+      "maxStep": 0.01092107836407315,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6485547346860585
+    },
+    {
+      "time": 16.433333333333334,
+      "amount": 0.00003575992988378024,
+      "maxStep": 0.009930904704720458,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648582310878055
+    },
+    {
+      "time": 16.45,
+      "amount": 0.000032129117445984473,
+      "maxStep": 0.008971858251923754,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648594577699214
+    },
+    {
+      "time": 16.466666666666665,
+      "amount": 0.000028864316498329305,
+      "maxStep": 0.008167997229539554,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6486115045495353
+    },
+    {
+      "time": 16.483333333333334,
+      "amount": 0.00002592894528669947,
+      "maxStep": 0.007387522137533112,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6486312317624652
+    },
+    {
+      "time": 16.5,
+      "amount": 0.000023290040428690315,
+      "maxStep": 0.006702183659364724,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6486451074598563
+    },
+    {
+      "time": 16.516666666666666,
+      "amount": 0.00002091790360747664,
+      "maxStep": 0.006096390838695956,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648660037000127
+    },
+    {
+      "time": 16.533333333333335,
+      "amount": 0.000018785782200114058,
+      "maxStep": 0.0055139381651013895,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6486644742826684
+    },
+    {
+      "time": 16.55,
+      "amount": 0.000016869580650866687,
+      "maxStep": 0.005011088446377904,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6486771205251216
+    },
+    {
+      "time": 16.566666666666666,
+      "amount": 0.000015147599691091542,
+      "maxStep": 0.004523754123407105,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6486879826800305
+    },
+    {
+      "time": 16.583333333333332,
+      "amount": 0.000013600300772754184,
+      "maxStep": 0.004127688994787853,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648689406624726
+    },
+    {
+      "time": 16.6,
+      "amount": 0.000012210093324834638,
+      "maxStep": 0.003731631033097403,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487059258139425
+    },
+    {
+      "time": 16.616666666666667,
+      "amount": 0.000010961142662679932,
+      "maxStep": 0.003351091829682362,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487014984136295
+    },
+    {
+      "time": 16.633333333333333,
+      "amount": 0.000009839196581501069,
+      "maxStep": 0.0030462590851366217,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.64871801756874
+    },
+    {
+      "time": 16.65,
+      "amount": 0.000008831428848385755,
+      "maxStep": 0.0027569690825506948,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487286852338912
+    },
+    {
+      "time": 16.666666666666668,
+      "amount": 0.000007926297973885071,
+      "maxStep": 0.002467724636700849,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487260417761718
+    },
+    {
+      "time": 16.683333333333334,
+      "amount": 0.000007113419795877087,
+      "maxStep": 0.002269678709048523,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487367093986904
+    },
+    {
+      "time": 16.7,
+      "amount": 0.000006383452546276779,
+      "maxStep": 0.0020561534010476697,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487310524325949
+    },
+    {
+      "time": 16.716666666666665,
+      "amount": 0.0000057279931964689966,
+      "maxStep": 0.0018735890844548827,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487322821774342
+    },
+    {
+      "time": 16.733333333333334,
+      "amount": 0.000005139483991159703,
+      "maxStep": 0.001675545914841181,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487370983440996
+    },
+    {
+      "time": 16.75,
+      "amount": 0.000004611128183703822,
+      "maxStep": 0.0015536852936546513,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648748801204647
+    },
+    {
+      "time": 16.766666666666666,
+      "amount": 0.0000041368140797800046,
+      "maxStep": 0.0013746083372696187,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487441795618452
+    },
+    {
+      "time": 16.783333333333335,
+      "amount": 0.000003711046581409029,
+      "maxStep": 0.0012642284992349319,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648748995702931
+    },
+    {
+      "time": 16.8,
+      "amount": 0.0000033288855005138317,
+      "maxStep": 0.001089271946657165,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487548471332047
+    },
+    {
+      "time": 16.816666666666666,
+      "amount": 0.0000029858899812196137,
+      "maxStep": 0.0009902472242337864,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487606985634784
+    },
+    {
+      "time": 16.833333333333332,
+      "amount": 0.0000026780684335395155,
+      "maxStep": 0.0008912225018104077,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487683525497232
+    },
+    {
+      "time": 16.85,
+      "amount": 0.000002401833438573137,
+      "maxStep": 0.0007961958777514119,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487655146704583
+    },
+    {
+      "time": 16.866666666666667,
+      "amount": 0.0000021539611374156547,
+      "maxStep": 0.0007768426468273257,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487608930788156
+    },
+    {
+      "time": 16.883333333333333,
+      "amount": 0.000001931554663120779,
+      "maxStep": 0.0006853844670158899,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487580552080772
+    },
+    {
+      "time": 16.9,
+      "amount": 0.000001732011217741826,
+      "maxStep": 0.0005941483345402718,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487639066383508
+    },
+    {
+      "time": 16.916666666666668,
+      "amount": 0.0000015529924350959015,
+      "maxStep": 0.0005789684828674249,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487628713065305
+    },
+    {
+      "time": 16.933333333333334,
+      "amount": 0.0000013923977048403051,
+      "maxStep": 0.0004951236121168932,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487610876112058
+    },
+    {
+      "time": 16.95,
+      "amount": 0.000001248340165053505,
+      "maxStep": 0.0004873940030698418,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648771560599016
+    },
+    {
+      "time": 16.966666666666665,
+      "amount": 0.0000011191250990922708,
+      "maxStep": 0.0003960988896935145,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487687415633445
+    },
+    {
+      "time": 16.983333333333334,
+      "amount": 0.0000010032304983297252,
+      "maxStep": 0.00038842132341366283,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487669390414794
+    },
+    {
+      "time": 17,
+      "amount": 8.992895757289418e-7,
+      "maxStep": 0.0003053338381473264,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487745929850917
+    },
+    {
+      "time": 17.016666666666666,
+      "amount": 8.060750363033192e-7,
+      "maxStep": 0.0002970741672701359,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487630658389207
+    },
+    {
+      "time": 17.033333333333335,
+      "amount": 7.224849295744697e-7,
+      "maxStep": 0.00028948424143371244,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487717551228798
+    },
+    {
+      "time": 17.05,
+      "amount": 6.475299263506475e-7,
+      "maxStep": 0.00028948424143371244,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487717551228798
+    },
+    {
+      "time": 17.066666666666666,
+      "amount": 5.803218776917305e-7,
+      "maxStep": 0.00020213936614882133,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487689172606679
+    },
+    {
+      "time": 17.083333333333332,
+      "amount": 5.200635279589228e-7,
+      "maxStep": 0.00019804944484675725,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648769971444608
+    },
+    {
+      "time": 17.1,
+      "amount": 4.660392665116694e-7,
+      "maxStep": 0.00019804944484675725,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487689172606679
+    },
+    {
+      "time": 17.116666666666667,
+      "amount": 4.1760681404376956e-7,
+      "maxStep": 0.00019804944484675725,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487689172606679
+    },
+    {
+      "time": 17.133333333333333,
+      "amount": 3.7418974986203436e-7,
+      "maxStep": 0.00018734726027327885,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648777606544627
+    },
+    {
+      "time": 17.15,
+      "amount": 3.352707957131799e-7,
+      "maxStep": 0.00018435295556813155,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648776571187227
+    },
+    {
+      "time": 17.166666666666668,
+      "amount": 3.0038578015369476e-7,
+      "maxStep": 0.00010788440704345703,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648777606544627
+    },
+    {
+      "time": 17.183333333333334,
+      "amount": 2.691182150228866e-7,
+      "maxStep": 0.00010788440704345703,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648777606544627
+    },
+    {
+      "time": 17.2,
+      "amount": 2.410944223997591e-7,
+      "maxStep": 0.00010788440704345703,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487671335909226
+    },
+    {
+      "time": 17.216666666666665,
+      "amount": 2.1597915657306222e-7,
+      "maxStep": 0.00009902472242337863,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487642957372373
+    },
+    {
+      "time": 17.233333333333334,
+      "amount": 1.9347167109510594e-7,
+      "maxStep": 0.00009367363013663942,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487729850211963
+    },
+    {
+      "time": 17.25,
+      "amount": 1.7330218598382856e-7,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487747875174819
+    },
+    {
+      "time": 17.266666666666666,
+      "amount": 1.552287146368146e-7,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487747875174819
+    },
+    {
+      "time": 17.283333333333335,
+      "amount": 1.3903421407445277e-7,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648776571187227
+    },
+    {
+      "time": 17.3,
+      "amount": 1.2452402578024387e-7,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648776571187227
+    },
+    {
+      "time": 17.316666666666666,
+      "amount": 1.1152357769436983e-7,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487737333250152
+    },
+    {
+      "time": 17.333333333333332,
+      "amount": 9.987632087754506e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487737333250152
+    },
+    {
+      "time": 17.35,
+      "amount": 8.944187702783287e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.366666666666667,
+      "amount": 8.009437543301138e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.383333333333333,
+      "amount": 7.172096010109735e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.4,
+      "amount": 6.422044975578905e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.416666666666668,
+      "amount": 5.750213513294098e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.433333333333334,
+      "amount": 5.1484699588324694e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.45,
+      "amount": 4.6095250443025876e-8,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.466666666666665,
+      "amount": 4.126844976677479e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.483333333333334,
+      "amount": 3.694573444526173e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.5,
+      "amount": 3.307461640800371e-8,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.516666666666666,
+      "amount": 2.9608054819955577e-8,
+      "maxStep": 0.00008668597701423953,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648774768682415
+    },
+    {
+      "time": 17.533333333333335,
+      "amount": 2.6503892873295044e-8,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.55,
+      "amount": 2.3724352564879587e-8,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.566666666666666,
+      "amount": 2.1235581518288493e-8,
+      "maxStep": 0.00009217647778406578,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.583333333333332,
+      "amount": 1.9007246514686817e-8,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.6,
+      "amount": 1.7012168940763646e-8,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.616666666666667,
+      "amount": 1.522599785093712e-8,
+      "maxStep": 0.00008640229388520372,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.633333333333333,
+      "amount": 1.362691678035415e-8,
+      "maxStep": 0.00008640229388520372,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.65,
+      "amount": 1.2195380839992575e-8,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.666666666666668,
+      "amount": 1.0913880979829695e-8,
+      "maxStep": 0.00008640229388520372,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.683333333333334,
+      "amount": 9.766732624673328e-9,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.7,
+      "amount": 8.739886173453037e-9,
+      "maxStep": 0.00008640229388520372,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.648783457966374
+    },
+    {
+      "time": 17.716666666666665,
+      "amount": 7.820757109852402e-9,
+      "maxStep": 0.00004315376281738281,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.733333333333334,
+      "amount": 6.998073703036546e-9,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.75,
+      "amount": 6.261740484579584e-9,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.766666666666666,
+      "amount": 5.602715873879728e-9,
+      "maxStep": 0.00008668597701423953,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.783333333333335,
+      "amount": 5.012902491534297e-9,
+      "maxStep": 0.000016182661056518555,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.8,
+      "amount": 4.48504885023892e-9,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.816666666666666,
+      "amount": 4.012661247527154e-9,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.833333333333332,
+      "amount": 3.589924805633974e-9,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.85,
+      "amount": 3.2116327123420327e-9,
+      "maxStep": 0.000008091330528259277,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.866666666666667,
+      "amount": 2.8731228141289217e-9,
+      "maxStep": 0.000016182661056518555,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.883333333333333,
+      "amount": 2.5702208003967254e-9,
+      "maxStep": 0.000008091330528259277,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.9,
+      "amount": 2.2991892960617228e-9,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.916666666666668,
+      "amount": 2.0566822502162398e-9,
+      "maxStep": 0.000008091330528259277,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.933333333333334,
+      "amount": 1.8397040717796782e-9,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.95,
+      "amount": 1.6455730197620627e-9,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.966666666666665,
+      "amount": 1.4718884066423286e-9,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487806201041622
+    },
+    {
+      "time": 17.983333333333334,
+      "amount": 1.3165012190043126e-9,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18,
+      "amount": 1.1774878005187975e-9,
+      "maxStep": 0.000004045665264129639,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.016666666666666,
+      "amount": 1.0531262790857514e-9,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.033333333333335,
+      "amount": 9.418754528940087e-10,
+      "maxStep": 0.000016182661056518555,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.05,
+      "amount": 8.423558796998708e-10,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.066666666666666,
+      "amount": 7.533329401234952e-10,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.083333333333332,
+      "amount": 6.737016695246527e-10,
+      "maxStep": 0.000008091330528259277,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.1,
+      "amount": 6.024731743267509e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.116666666666667,
+      "amount": 5.387624677651008e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.133333333333333,
+      "amount": 4.81777577166217e-10,
+      "maxStep": 0.00003236532211303711,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.15,
+      "amount": 4.3080979022494497e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.166666666666668,
+      "amount": 3.8522492151575604e-10,
+      "maxStep": 0.00008630752563476562,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.183333333333334,
+      "amount": 3.444554928194635e-10,
+      "maxStep": 0.000004045665264129639,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.2,
+      "amount": 3.0799373191224063e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.216666666666665,
+      "amount": 2.753853043834233e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.233333333333334,
+      "amount": 2.4622370193915635e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.25,
+      "amount": 2.2014521861798105e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.266666666666666,
+      "amount": 1.9682445348619381e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.283333333333335,
+      "amount": 1.7597028478157494e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.3,
+      "amount": 1.5732226620973726e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.316666666666666,
+      "amount": 1.4064740123729932e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.333333333333332,
+      "amount": 1.2573725583187362e-10,
+      "maxStep": 0.000016182661056518555,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.35,
+      "amount": 1.1240537422548089e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.366666666666667,
+      "amount": 1.00484965975608e-10,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.383333333333333,
+      "amount": 8.982683591075102e-11,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.4,
+      "amount": 8.029753151522899e-11,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.416666666666668,
+      "amount": 7.177768496670567e-11,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.433333333333334,
+      "amount": 6.416052942167777e-11,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.45,
+      "amount": 5.7350571277640964e-11,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.466666666666665,
+      "amount": 5.1262402051773334e-11,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.483333333333334,
+      "amount": 4.581963522764544e-11,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    },
+    {
+      "time": 18.5,
+      "amount": 4.0953954954645177e-11,
+      "maxStep": 0,
+      "cuffAlpha": 1,
+      "minimumSignedArea": -1.6487824226004477
+    }
+  ],
+  "newInvertedCells": 13,
+  "invertedLocations": [
+    {
+      "time": 11.333333333333334,
+      "row": 41,
+      "col": 26,
+      "areas": [
+        0.0017340759654871363,
+        -0.0030637557728141473
+      ]
+    },
+    {
+      "time": 11.416666666666666,
+      "row": 37,
+      "col": 24,
+      "areas": [
+        0.0002900613338852054,
+        -0.00411047414559107
+      ]
+    },
+    {
+      "time": 11.433333333333334,
+      "row": 37,
+      "col": 24,
+      "areas": [
+        0.005379733906352158,
+        -0.0001891020161792767
+      ]
+    },
+    {
+      "time": 11.433333333333334,
+      "row": 40,
+      "col": 25,
+      "areas": [
+        0.00359414804051994,
+        -0.0020568322725011967
+      ]
+    },
+    {
+      "time": 11.483333333333333,
+      "row": 40,
+      "col": 26,
+      "areas": [
+        0.002237360087065099,
+        -0.0016156403830791533
+      ]
+    },
+    {
+      "time": 13.916666666666666,
+      "row": 38,
+      "col": 26,
+      "areas": [
+        0.002387478809851018,
+        -0.0010184861594098038
+      ]
+    },
+    {
+      "time": 13.95,
+      "row": 37,
+      "col": 28,
+      "areas": [
+        0.0001489763320705606,
+        -0.0007066075937700589
+      ]
+    },
+    {
+      "time": 13.966666666666667,
+      "row": 38,
+      "col": 24,
+      "areas": [
+        0.006432032813563637,
+        -0.0013931892397067713
+      ]
+    },
+    {
+      "time": 14,
+      "row": 38,
+      "col": 23,
+      "areas": [
+        0.002317850470490157,
+        -0.0064460585861070285
+      ]
+    },
+    {
+      "time": 14.05,
+      "row": 37,
+      "col": 25,
+      "areas": [
+        0.0006261319526856823,
+        -0.004401466480885574
+      ]
+    },
+    {
+      "time": 14.083333333333334,
+      "row": 37,
+      "col": 24,
+      "areas": [
+        0.005439947585728078,
+        -0.0014887277757225093
+      ]
+    },
+    {
+      "time": 14.15,
+      "row": 41,
+      "col": 25,
+      "areas": [
+        0.0008842737827308156,
+        -0.003518395925539153
+      ]
+    },
+    {
+      "time": 14.216666666666667,
+      "row": 41,
+      "col": 24,
+      "areas": [
+        0.0034747716597394174,
+        -0.004104884095568195
+      ]
+    }
+  ],
+  "maximumClothVertexStep": 7.75408939548538,
+  "cuffAlphaChanges": 0,
+  "shoulderGeometryChanges": 0
+}

@@ -1,0 +1,33 @@
+{
+  "state": "UNCONFIGURED, PERMISSION PENDING",
+  "baseline_commit": "c92ef24c284c8c02e54d2a7efa5f626c2cbac544",
+  "actual_model_downloaded": false,
+  "actual_model_started": false,
+  "actual_ai_reply_verified": false,
+  "browser_e2e_verified": false,
+  "engine_or_account_credentials_created": false,
+  "prepared_official_sources": {
+    "engine": {
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/llama-b11669-bin-ubuntu-x64.tar.gz",
+      "sha256": "cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac",
+      "bytes": 17851611,
+      "filename": "llama-b11669-bin-ubuntu-x64.tar.gz"
+    },
+    "model": {
+      "url": "https://huggingface.co/Qwen/Qwen3-1.7B-GGUF/resolve/90862c4b9d2787eaed51d12237eafdfe7c5f6077/Qwen3-1.7B-Q8_0.gguf",
+      "sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a",
+      "bytes": 1834426016,
+      "filename": "Qwen3-1.7B-Q8_0.gguf"
+    }
+  },
+  "model_api": "local llama.cpp /v1/chat/completions, no credentials",
+  "next_action_requires_permission": "Download pinned official CPU runner and model, then run actual model→VOICEVOX verification in one session",
+  "existing_voice_engine": "VOICEVOX0.25.2 installed and fresh speech verified in v20",
+  "art_motion_changes": false,
+  "tests": {
+    "node": 160,
+    "python_targeted": 94,
+    "scope": "147 initial plus13 history-clear JS;43 runtime+18 speech+27 conversation+6 setup/launcher Python"
+  },
+  "no_actual_model_claim": true
+}

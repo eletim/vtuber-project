@@ -1,0 +1,20 @@
+{
+  "same_all_six_role_mesh_streams_before_after_art_and_alpha_corrections": true,
+  "rejected_candidate02_mesh_hashes": {
+    "root": "67e344207186d10b0832c286dc790c2ccfa0bfc3be0725ec1b08e8d5d60734e7",
+    "skirt": "23839b6a55810bacb5c915d7e17be8b41c99dcc6b6c50b19c3db850741f4702f",
+    "torso": "a19e3c0b0774bc5508aa7553c3ae4e94883ecd099b0f18569db6e94ff2827e72",
+    "armLeft": "d276d54fc5555eb05447f7097c40a36d8242f028c5b623d1ccc00e1128523d9a",
+    "armRight": "a4a749a180efc040bdb1b6c60798e69bbc5e9b061963f67ac8d458db3f46b33f",
+    "head": "50b539a13dbbbb0bcd81312ed7cfdbf2d3e8d6da6642baf18ddae43e5557f035"
+  },
+  "accepted_candidate05_mesh_hashes": {
+    "root": "67e344207186d10b0832c286dc790c2ccfa0bfc3be0725ec1b08e8d5d60734e7",
+    "skirt": "23839b6a55810bacb5c915d7e17be8b41c99dcc6b6c50b19c3db850741f4702f",
+    "torso": "a19e3c0b0774bc5508aa7553c3ae4e94883ecd099b0f18569db6e94ff2827e72",
+    "armLeft": "d276d54fc5555eb05447f7097c40a36d8242f028c5b623d1ccc00e1128523d9a",
+    "armRight": "a4a749a180efc040bdb1b6c60798e69bbc5e9b061963f67ac8d458db3f46b33f",
+    "head": "50b539a13dbbbb0bcd81312ed7cfdbf2d3e8d6da6642baf18ddae43e5557f035"
+  },
+  "note": "Corrections preserve actual arm/skirt/body motion exactly; updated ordered crop/art metadata is independently applied."
+}

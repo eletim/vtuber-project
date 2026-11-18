@@ -1,0 +1,8 @@
+{
+  "duration": 18.5,
+  "wallDuration": 18.54369999998808,
+  "rate": 1,
+  "total": 555,
+  "dropped": 0,
+  "note": "Isolated 1x playback without concurrent full-frame decoding/PNG extraction."
+}

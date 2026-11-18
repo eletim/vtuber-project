@@ -1,0 +1,40 @@
+{
+  "baseline": "7833f3ca2b2de3ab0268f8ee8273adab681fb4cd",
+  "tests": {
+    "passed": 187,
+    "failed": 0
+  },
+  "library_import": "WSL regular helper; verified xattrs and SHA256",
+  "shoulder_redraw": "held; untouched",
+  "native_frames": 181,
+  "native_times": [
+    10,
+    16
+  ],
+  "videos": [
+    {
+      "kind": "single",
+      "encoded": 555,
+      "decoded": 555,
+      "fps": 30,
+      "physics_hz": 60,
+      "seconds": 18.5,
+      "playback_dropped": 0
+    },
+    {
+      "kind": "comparison",
+      "encoded": 555,
+      "decoded": 555,
+      "fps": 30,
+      "physics_hz": 60,
+      "seconds": 18.5,
+      "playback_dropped": 0
+    }
+  ],
+  "visual_review": "181 consecutive hand contact cells, native comparison at 11.4s, half gesture preview, expression contact and three background video panels",
+  "limitations": [
+    "Two authored views interpolated; not a full 3D hand",
+    "Intermediate internal lines soften; oblique contour is stronger",
+    "Shoulder redraw held; knee/foot art absent"
+  ]
+}

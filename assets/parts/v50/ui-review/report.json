@@ -1,0 +1,173 @@
+{
+  "errors": [],
+  "events": [
+    {
+      "variant": "thinking",
+      "states": [
+        {
+          "acting": {
+            "id": "4b9abda1e7464f61bdb6ef9cdb018a75",
+            "variant": "thinking",
+            "running": true,
+            "weight": 0.9999999999999999,
+            "age": 1.3282667156219485
+          },
+          "pose": {
+            "ParamAngleX": 0,
+            "ParamAngleY": 0,
+            "ParamAngleZ": -4.499760325853758,
+            "ParamBodyAngleX": -0.2639273840630199,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamEyeBallX": -0.6199850111670032,
+            "ParamEyeBallY": 0.183242822729392,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.31436160660146645,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 2.1175081598718194e-9,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.10996974335959164,
+            "ParamBodyBounce": 6.620706124564729e-18,
+            "ParamSkirtSway": 0
+          },
+          "expression": "thinking"
+        },
+        {
+          "acting": {
+            "id": "4b9abda1e7464f61bdb6ef9cdb018a75",
+            "variant": "thinking",
+            "running": true,
+            "weight": 0.9999993968567529,
+            "age": 1.2842665363073342
+          },
+          "pose": {
+            "ParamAngleX": 0,
+            "ParamAngleY": 0,
+            "ParamAngleZ": -4.2257798249396386,
+            "ParamBodyAngleX": -0.22348654891651537,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamEyeBallX": -0.6199413110249479,
+            "ParamEyeBallY": 0.17483477714495288,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5445564742657011,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.09311939538188142,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "expression": "thinking"
+        }
+      ]
+    },
+    {
+      "variant": "surprised",
+      "states": [
+        {
+          "acting": {
+            "id": "5980588ce5d3476ea028483cbccda408",
+            "variant": "surprised",
+            "running": true,
+            "weight": 0.9999999999999999,
+            "age": 1.3188983573913582
+          },
+          "pose": {
+            "ParamAngleX": 0,
+            "ParamAngleY": 0,
+            "ParamAngleZ": -3.1858717584023895,
+            "ParamBodyAngleX": -1.007022227726092,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamEyeBallX": -6.969277503314186e-13,
+            "ParamEyeBallY": 2.2481540333271595e-13,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9350890861528302,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 5.7583225595824975e-22,
+            "ParamShoulderY": 0.2198756919028306,
+            "ParamBodyShiftX": -0.4195925948858717,
+            "ParamBodyBounce": -0.29991339632547825,
+            "ParamSkirtSway": 0
+          },
+          "expression": "surprised"
+        },
+        {
+          "acting": {
+            "id": "5980588ce5d3476ea028483cbccda408",
+            "variant": "surprised",
+            "running": true,
+            "weight": 0.9999999999988253,
+            "age": 1.2858983345150952
+          },
+          "pose": {
+            "ParamAngleX": 0,
+            "ParamAngleY": 0,
+            "ParamAngleZ": -3.1781995537982297,
+            "ParamBodyAngleX": -1.0065208814475803,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamEyeBallX": -7.974199204112277e-13,
+            "ParamEyeBallY": 2.572322323907184e-13,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.012206663051727884,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0.21981742217280986,
+            "ParamBodyShiftX": -0.41938370060315844,
+            "ParamBodyBounce": -0.29987274351987103,
+            "ParamSkirtSway": 0
+          },
+          "expression": "surprised"
+        }
+      ]
+    }
+  ],
+  "repeat": true,
+  "join": [
+    {
+      "id": "077db6aaf4d34362928d9ba029c8f6aa",
+      "variant": "joyful",
+      "running": true,
+      "weight": 0.9999999999999892,
+      "age": 5.827461553573609
+    },
+    {
+      "id": "077db6aaf4d34362928d9ba029c8f6aa",
+      "variant": "joyful",
+      "running": true,
+      "weight": 0.9849794097127227,
+      "age": 5.838361566936969
+    }
+  ],
+  "reconnect": [
+    {
+      "id": "5980588ce5d3476ea028483cbccda408",
+      "variant": "surprised",
+      "running": true,
+      "weight": 0.9999999999999999,
+      "age": 3.0744983573913576
+    },
+    {
+      "id": "5980588ce5d3476ea028483cbccda408",
+      "variant": "surprised",
+      "running": true,
+      "weight": 0.3505741841180958,
+      "age": 3.0746983345150944
+    }
+  ],
+  "manualExpression": true,
+  "manualStop": true,
+  "stop": true,
+  "modeStop": true,
+  "playback": {
+    "rate": 1,
+    "total": 690,
+    "dropped": 0
+  }
+}

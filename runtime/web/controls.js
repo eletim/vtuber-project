@@ -1,7 +1,14 @@
 export const limits = {
   ParamAngleX: [-15,15,0], ParamAngleY: [-10,10,0], ParamAngleZ: [-8,8,0],
   ParamBodyAngleX: [-5,5,0], ParamEyeLOpen: [0,1,1], ParamEyeROpen: [0,1,1],
-  ParamMouthOpenY: [0,1,0], ParamBreath: [0,1,.5]
+  ParamEyeBallX: [-1,1,0], ParamEyeBallY: [-1,1,0],
+  ParamMouthOpenY: [0,1,0], ParamBreath: [0,1,.5],
+  // Screen-left/right, positive outward; shoulder up and posture right.
+  ParamArmLOpen: [-1,1,0], ParamArmROpen: [-1,1,0],
+  ParamHandToCheek: [0,1,0],
+  ParamShoulderY: [-1,1,0], ParamBodyShiftX: [-1,1,0],
+  ParamBodyBounce: [-1,1,0],
+  ParamSkirtSway: [-1,1,0]
 };
 export const neutral = () => Object.fromEntries(Object.entries(limits).map(([k,v])=>[k,v[2]]));
 export const clamp = (x,lo=0,hi=1) => Math.min(hi, Math.max(lo,x));
@@ -31,7 +38,8 @@ export function smoothParameters(current,target,dt) {
   for(const [key,[lo,hi,def]] of Object.entries(limits)) {
     const value=Number.isFinite(target[key])?clamp(target[key],lo,hi):def;
     const speed=key.includes('Eye')?35:key.includes('Mouth')?22:12;
-    result[key]+=(value-result[key])*(1-Math.exp(-speed*dt));
+    const previous=Number.isFinite(current[key])?current[key]:def;
+    result[key]=previous+(value-previous)*(1-Math.exp(-speed*Math.max(0,dt)));
   }
   return result;
 }

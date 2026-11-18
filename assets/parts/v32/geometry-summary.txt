@@ -1,0 +1,7 @@
+{
+  "baseline": "23db0404b944b7e8fb4c98df466854d012319d95",
+  "newInvertedCells": 13,
+  "maximumClothVertexStep": 7.75408939548538,
+  "cuffAlphaChanges": 0,
+  "shoulderGeometryChanges": 0
+}

@@ -1,0 +1,138 @@
+{
+  "all_states_finite": true,
+  "strands": {
+    "rear_left_outer": {
+      "peak_frame": 139,
+      "peak_value": 27.990095516378915,
+      "maximum_frame_delta": 3.8433527673013916,
+      "maximum_delta_frame": 119
+    },
+    "rear_left_inner": {
+      "peak_frame": 126,
+      "peak_value": 12,
+      "maximum_frame_delta": 1.6883783070663922,
+      "maximum_delta_frame": 117
+    },
+    "rear_right_inner": {
+      "peak_frame": 124,
+      "peak_value": 12,
+      "maximum_frame_delta": 1.819349294791579,
+      "maximum_delta_frame": 152
+    },
+    "rear_right_outer": {
+      "peak_frame": 127,
+      "peak_value": 33.33407050729211,
+      "maximum_frame_delta": 5.161949241387302,
+      "maximum_delta_frame": 117
+    },
+    "bang_left": {
+      "peak_frame": 104,
+      "peak_value": -1,
+      "maximum_frame_delta": 0.2183576612198559,
+      "maximum_delta_frame": 112
+    },
+    "bang_center": {
+      "peak_frame": 106,
+      "peak_value": -0.966507492530872,
+      "maximum_frame_delta": 0.19983339994500876,
+      "maximum_delta_frame": 113
+    },
+    "bang_right": {
+      "peak_frame": 105,
+      "peak_value": -1,
+      "maximum_frame_delta": 0.21254091142764536,
+      "maximum_delta_frame": 112
+    },
+    "side_left_front": {
+      "peak_frame": 123,
+      "peak_value": 20,
+      "maximum_frame_delta": 3.5671211917047563,
+      "maximum_delta_frame": 115
+    },
+    "side_right_front": {
+      "peak_frame": 0,
+      "peak_value": 0,
+      "maximum_frame_delta": 0,
+      "maximum_delta_frame": 1
+    },
+    "side_left_outer": {
+      "peak_frame": 0,
+      "peak_value": 0,
+      "maximum_frame_delta": 0,
+      "maximum_delta_frame": 1
+    },
+    "side_left_inner": {
+      "peak_frame": 120,
+      "peak_value": 12,
+      "maximum_frame_delta": 2.575543391745809,
+      "maximum_delta_frame": 114
+    },
+    "side_right_outer": {
+      "peak_frame": 121,
+      "peak_value": 12,
+      "maximum_frame_delta": 2.192149906673173,
+      "maximum_delta_frame": 115
+    }
+  },
+  "visual_indices": [
+    0,
+    60,
+    66,
+    72,
+    78,
+    84,
+    90,
+    96,
+    102,
+    104,
+    105,
+    106,
+    108,
+    114,
+    120,
+    121,
+    123,
+    124,
+    126,
+    127,
+    132,
+    138,
+    139,
+    144,
+    150,
+    156,
+    162,
+    168,
+    174,
+    180,
+    186,
+    192,
+    198,
+    204,
+    210,
+    216,
+    222,
+    228,
+    234,
+    240,
+    246,
+    252,
+    258,
+    264,
+    270,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    288,
+    294,
+    300
+  ],
+  "visual_frames": 58
+}

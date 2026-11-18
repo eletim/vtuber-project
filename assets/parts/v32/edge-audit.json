@@ -1,0 +1,101 @@
+{
+  "method": "hair strands only; local native chroma, original luminance and alpha retained; no shoulder/face edits",
+  "layers": [
+    {
+      "id": "rear_left_outer",
+      "source": "body_v31/rear_left_outer.png",
+      "file": "body_v32/rear_left_outer.png",
+      "changed_rgb_pixels": 378,
+      "unresolved": 39,
+      "alpha_changed": 0
+    },
+    {
+      "id": "rear_left_inner",
+      "source": "body_v31/rear_left_inner.png",
+      "file": "body_v32/rear_left_inner.png",
+      "changed_rgb_pixels": 69,
+      "unresolved": 0,
+      "alpha_changed": 0
+    },
+    {
+      "id": "rear_right_inner",
+      "source": "body_v31/rear_right_inner.png",
+      "file": "body_v32/rear_right_inner.png",
+      "changed_rgb_pixels": 172,
+      "unresolved": 1,
+      "alpha_changed": 0
+    },
+    {
+      "id": "rear_right_outer",
+      "source": "body_v31/rear_right_outer.png",
+      "file": "body_v32/rear_right_outer.png",
+      "changed_rgb_pixels": 399,
+      "unresolved": 59,
+      "alpha_changed": 0
+    },
+    {
+      "id": "bang_left",
+      "source": "body_v22/bang_left.png",
+      "file": "body_v32/bang_left.png",
+      "changed_rgb_pixels": 229,
+      "unresolved": 39,
+      "alpha_changed": 0
+    },
+    {
+      "id": "bang_center",
+      "source": "body_v22/bang_center.png",
+      "file": "body_v32/bang_center.png",
+      "changed_rgb_pixels": 212,
+      "unresolved": 0,
+      "alpha_changed": 0
+    },
+    {
+      "id": "bang_right",
+      "source": "body_v22/bang_right.png",
+      "file": "body_v32/bang_right.png",
+      "changed_rgb_pixels": 139,
+      "unresolved": 0,
+      "alpha_changed": 0
+    },
+    {
+      "id": "side_left_front",
+      "source": "body_v29/side_left_front.png",
+      "file": "body_v32/side_left_front.png",
+      "changed_rgb_pixels": 136,
+      "unresolved": 0,
+      "alpha_changed": 0
+    },
+    {
+      "id": "side_right_front",
+      "source": "body_v29/side_right_front.png",
+      "file": "body_v32/side_right_front.png",
+      "changed_rgb_pixels": 111,
+      "unresolved": 0,
+      "alpha_changed": 0
+    },
+    {
+      "id": "side_left_outer",
+      "source": "body_v31/side_left_outer.png",
+      "file": "body_v32/side_left_outer.png",
+      "changed_rgb_pixels": 259,
+      "unresolved": 1,
+      "alpha_changed": 0
+    },
+    {
+      "id": "side_left_inner",
+      "source": "body_v31/side_left_inner.png",
+      "file": "body_v32/side_left_inner.png",
+      "changed_rgb_pixels": 204,
+      "unresolved": 80,
+      "alpha_changed": 0
+    },
+    {
+      "id": "side_right_outer",
+      "source": "body_v31/side_right_outer.png",
+      "file": "body_v32/side_right_outer.png",
+      "changed_rgb_pixels": 654,
+      "unresolved": 47,
+      "alpha_changed": 0
+    }
+  ]
+}

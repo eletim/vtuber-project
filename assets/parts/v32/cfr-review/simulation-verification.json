@@ -1,0 +1,11 @@
+{
+  "frames": 555,
+  "physics_step_seconds": "1/60",
+  "output_step_seconds": "1/30",
+  "frame_zero_time": 0,
+  "last_output_time": 18.466666666666665,
+  "physics_updates": 1109,
+  "baseline_and_current_hair_and_arm_states_exactly_equal": true,
+  "cuff_alpha": 1,
+  "missing_or_duplicate_frame_indices": 0
+}

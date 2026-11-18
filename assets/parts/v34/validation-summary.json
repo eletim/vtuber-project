@@ -1,0 +1,61 @@
+{
+  "baseline": "7a1d2f0d97f179991bddfde30ef4f55f87df7a1e",
+  "tests_passed": 186,
+  "tests_failed": 0,
+  "physics_hz": 60,
+  "video_fps": 30,
+  "frames_each": 555,
+  "seconds": 18.5,
+  "decoded_each": 555,
+  "timestamp_mismatch_each": 0,
+  "native_comparison": {
+    "frames": 181,
+    "seconds": [
+      10,
+      16
+    ],
+    "source_canvas": [
+      1086,
+      1448
+    ],
+    "crop_each": [
+      150,
+      400,
+      500,
+      900
+    ],
+    "rescaling": false,
+    "all_frames_checked_for_missing_and_pixel_delta": true,
+    "visual_native_times": [
+      11,
+      11.4,
+      14,
+      14.6
+    ]
+  },
+  "visual_review": {
+    "arm_sequence_contact_frames": 181,
+    "expression_extremes": 16,
+    "backgrounds": [
+      "white",
+      "black",
+      "teal"
+    ],
+    "findings": "Palm and finger silhouette varies with axial projection. No visible ghosting, cuff transparency, wrist pop or new waist gap in reviewed samples. Full side-facing hand appearance is NOT solved."
+  },
+  "assets_changed": false,
+  "shoulder_redraw_held": true,
+  "generation_blocker": {
+    "operation": "image_gen.imagegen edit hand-only reference",
+    "target": "runtime/model/body_v31/left_raised_hand.png",
+    "error": "AbsolutePathBuf deserialized without a base path at line 1 column 146",
+    "status": "failed before generation; no image produced; no retry or alternative API",
+    "required_to_finish_authored_angles": "Working built-in image edit reference-path support, or an approved hand-only side-angle material supplied through the supported reference workflow."
+  },
+  "limitations": [
+    "Existing single dorsal painting still limits side/palm visibility. Geometry is a partial improvement, not an authored angle-pose replacement.",
+    "No knees/feet: support height is stylized pelvis loading; ground contact remains unverified.",
+    "Shoulder boundary held and no retry/bypass.",
+    "Headless 1x playback dropped 77 of 555 presentation frames for each file; all encoded samples decoded separately."
+  ]
+}

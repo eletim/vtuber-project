@@ -1,0 +1,18 @@
+{
+  "source": "C:\\Users\\rext7\\Documents\\Codex\\2026-10-22\\task\\vtuber-project\\assets\\parts\\v36\\koma_hand_angle_v36.psd",
+  "output": "C:\\Users\\rext7\\Documents\\Codex\\2026-10-22\\task\\vtuber-project\\assets\\parts\\v43\\koma_face_directions_v43.psd",
+  "sha256": "27d251b793e9823e183df797afe02d19035cc425ed0e4e726bc2d4d3d2473a22",
+  "bytes": 25737744,
+  "original_composite_changed_pixels": 0,
+  "roundtrip_changed_values": 0,
+  "expressions": 8,
+  "new_layers": 4,
+  "overlay_rect": [
+    515,
+    281,
+    590,
+    346
+  ],
+  "runtime_mapping": "runtime/web/face-angle-rig.js",
+  "limitation": "PSD stores source parts and registered nose overlays; animated geometry remains in runtime, not a flattened replacement head."
+}

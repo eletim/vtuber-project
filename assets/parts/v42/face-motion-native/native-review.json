@@ -1,0 +1,30 @@
+{
+  "baseline": "e3b7b789f61a5f1af0323b68cfbbe72d43b0b9f1",
+  "errors": [],
+  "samples": [],
+  "frames": 555,
+  "ranges": [
+    [
+      0,
+      18.466667
+    ]
+  ],
+  "additionalFrames": [
+    60,
+    75,
+    90,
+    105,
+    120,
+    135,
+    180,
+    210,
+    240,
+    540
+  ],
+  "sourceCanvas": [
+    1086,
+    1448
+  ],
+  "crop": "420x440 face-following crop, no scaling",
+  "rescaled": false
+}

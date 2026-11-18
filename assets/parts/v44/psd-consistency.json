@@ -1,0 +1,15 @@
+{
+  "source_psd": "assets\\parts\\v36\\koma_hand_angle_v36.psd",
+  "bytes": 25717470,
+  "sha256": "45e685d78f8b5a78b8fec41b26b380d0750d757cdfb5cfb773a222a6d4283b9e",
+  "v42_source_fields_identical": [
+    "base",
+    "parts",
+    "expressions",
+    "bodyLayers",
+    "hairExport"
+  ],
+  "angle_materials_runtime_disabled": true,
+  "psd_changed": false,
+  "note": "Reuse original accepted PSD; v43 angle groups and candidates retained only as archived work."
+}

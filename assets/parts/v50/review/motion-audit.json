@@ -1,0 +1,24 @@
+{
+  "max_per_30fps_step": {
+    "ParamAngleX": 0,
+    "ParamAngleY": 0,
+    "ParamAngleZ": 0.2902857778890826,
+    "ParamBodyAngleX": 0.1116415180612707,
+    "ParamEyeLOpen": 0.5714699074074309,
+    "ParamEyeROpen": 0.5714699074074309,
+    "ParamEyeBallX": 0.051613511659807876,
+    "ParamEyeBallY": 0.016649519890260603,
+    "ParamMouthOpenY": 0,
+    "ParamBreath": 0.0,
+    "ParamArmLOpen": 0,
+    "ParamArmROpen": 0,
+    "ParamHandToCheek": 0.07492283950617262,
+    "ParamShoulderY": 0.024366204338769418,
+    "ParamBodyShiftX": 0.04651729919219613,
+    "ParamBodyBounce": 0.10515033064326222,
+    "ParamSkirtSway": 0
+  },
+  "no_yaw_pitch_commands": true,
+  "eye_renderer_sha256": "f03aa72e6e79cd36b38f59d0f1bc8c714b29345ec7722452c7b5f655736d0277",
+  "note": "Step measurements supplement visual inspection; not a naturalness score."
+}

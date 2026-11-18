@@ -1,0 +1,7 @@
+import {createRequire} from 'node:module';import {spawn} from 'node:child_process';import {mkdir,writeFile} from 'node:fs/promises';
+const require=createRequire(import.meta.url),{chromium}=require(process.env.PLAYWRIGHT_MODULE),out='assets/parts/v43';await mkdir(out,{recursive:true});let browser;
+const server=spawn(process.env.PYTHON,['runtime/server.py','--port','18784'],{windowsHide:true});
+try{for(let i=0;i<100;i++){try{if((await fetch('http://127.0.0.1:18784/api/state')).ok)break}catch{}await new Promise(r=>setTimeout(r,100))}
+browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH});const page=await browser.newPage();await page.route('**/face-reference',r=>r.fulfill({contentType:'text/html',body:'<!doctype html><canvas width="1086" height="1448"></canvas>'}));await page.goto('http://127.0.0.1:18784/face-reference');
+const image=await page.evaluate(async()=>{const {AvatarRenderer}=await import('/web/renderer.js'),{neutral}=await import('/web/controls.js');const r=new AvatarRenderer();await r.load(document.querySelector('canvas'));r.render(neutral(),0,'neutral',{ambient:false,onlyRoles:['head']});const c=document.createElement('canvas');c.width=620;c.height=450;c.getContext('2d').drawImage(r.canvas,230,5,620,450,0,0,620,450);return c.toDataURL().split(',')[1]});await writeFile(out+'/approved-frontal-head.png',Buffer.from(image,'base64'));console.log(out+'/approved-frontal-head.png');
+}finally{await browser?.close();server.kill()}

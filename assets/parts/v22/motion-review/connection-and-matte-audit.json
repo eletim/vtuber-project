@@ -1,0 +1,183 @@
+{
+  "isolated_arm": [
+    {
+      "amount": 0.0,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36209
+      ]
+    },
+    {
+      "amount": 0.05,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36112
+      ]
+    },
+    {
+      "amount": 0.1,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        35988
+      ]
+    },
+    {
+      "amount": 0.15,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36076
+      ]
+    },
+    {
+      "amount": 0.2,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36106
+      ]
+    },
+    {
+      "amount": 0.25,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36142
+      ]
+    },
+    {
+      "amount": 0.3,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36269
+      ]
+    },
+    {
+      "amount": 0.35,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36369
+      ]
+    },
+    {
+      "amount": 0.4,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36373
+      ]
+    },
+    {
+      "amount": 0.45,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        36223
+      ]
+    },
+    {
+      "amount": 0.5,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        35929
+      ]
+    },
+    {
+      "amount": 0.55,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        35604
+      ]
+    },
+    {
+      "amount": 0.6,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        35203
+      ]
+    },
+    {
+      "amount": 0.65,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        34698
+      ]
+    },
+    {
+      "amount": 0.7,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        34187
+      ]
+    },
+    {
+      "amount": 0.75,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        33665
+      ]
+    },
+    {
+      "amount": 0.8,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        33208
+      ]
+    },
+    {
+      "amount": 0.85,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        32824
+      ]
+    },
+    {
+      "amount": 0.9,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        32445
+      ]
+    },
+    {
+      "amount": 0.95,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        32040
+      ]
+    },
+    {
+      "amount": 1.0,
+      "major_components": 1,
+      "component_pixels_at_half_resolution": [
+        31566
+      ]
+    }
+  ],
+  "all_poses_have_one_connected_major_arm": true,
+  "hair_matte_comparison": {
+    "original_white_pixels": 16403,
+    "samples": [
+      {
+        "time": 0,
+        "new_transparent_pixels_in_original_opaque_interior": 75,
+        "white_pixels_farther_than_20px_from_original_white": 0
+      },
+      {
+        "time": 1,
+        "new_transparent_pixels_in_original_opaque_interior": 332,
+        "white_pixels_farther_than_20px_from_original_white": 0
+      },
+      {
+        "time": 2,
+        "new_transparent_pixels_in_original_opaque_interior": 766,
+        "white_pixels_farther_than_20px_from_original_white": 0
+      },
+      {
+        "time": 3,
+        "new_transparent_pixels_in_original_opaque_interior": 538,
+        "white_pixels_farther_than_20px_from_original_white": 0
+      },
+      {
+        "time": 4,
+        "new_transparent_pixels_in_original_opaque_interior": 846,
+        "white_pixels_farther_than_20px_from_original_white": 0
+      }
+    ],
+    "note": "Original hair white matte and lower-leg cutouts have not been repaired. Motion changes silhouettes; this diagnostic flags interior changes for visual review, not automatic acceptance."
+  }
+}

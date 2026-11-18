@@ -1,0 +1,40 @@
+{
+  "errors": [],
+  "poses": [
+    {
+      "name": "neutral-mouth0-x0-y0.png",
+      "x": 0,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x-15-y0.png",
+      "x": -15,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x15-y0.png",
+      "x": 15,
+      "y": 0,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x-15-y-10.png",
+      "x": -15,
+      "y": -10,
+      "expression": "neutral",
+      "mouth": 0
+    },
+    {
+      "name": "neutral-mouth0-x15-y10.png",
+      "x": 15,
+      "y": 10,
+      "expression": "neutral",
+      "mouth": 0
+    }
+  ]
+}

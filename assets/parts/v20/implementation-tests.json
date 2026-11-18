@@ -1,0 +1,16 @@
+{
+  "status": "PASS for targeted v20 regression scope",
+  "node_tests": 116,
+  "python_targeted_tests": 61,
+  "python_scope": [
+    "test_*runtime*.py (43)",
+    "test_speech*.py (18)"
+  ],
+  "real_engine_runtime_integration": "PASS twice, latest 2026-10-21T15:54:19Z",
+  "packaged_runtime": "98 file hashes, static routes, health, speech, scoped stop, stale playback: PASS",
+  "split_delivery": "99 members reconstructed byte-identically",
+  "art_motion_preservation": "77 tracked model/core files byte-identical; video snapshot separately checks81",
+  "browser_e2e": "NOT RUN; no permitted route",
+  "whole_historical_python_suite": "Not completed: interrupted during unrelated legacy PSD composition after targeted runtime tests passed. No full-suite claim.",
+  "video": "15 sec,450 frames, full decode, AAC correlation0.9999692604,2700 role meshes without folds"
+}

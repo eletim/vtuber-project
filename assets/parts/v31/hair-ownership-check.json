@@ -1,0 +1,86 @@
+[
+  {
+    "file": "body_v31/rear_left_outer.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/rear_left_inner.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/rear_right_inner.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/rear_right_outer.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_fixed_v22.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_neutral.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_soft_smile.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_big_smile.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_worried.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_surprised.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_bashful.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_displeased.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/face_thinking.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v22/bang_left.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v22/bang_center.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v22/bang_right.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v29/side_left_front.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v29/side_right_front.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/side_left_outer.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/side_left_inner.png",
+    "alpha_changed_values": 0
+  },
+  {
+    "file": "body_v31/side_right_outer.png",
+    "alpha_changed_values": 0
+  }
+]

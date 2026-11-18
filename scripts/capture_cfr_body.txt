@@ -1,0 +1,36 @@
+ await page.evaluate(async()=>{
+  window.encoders=[];window.encoded=[[],[]];window.descriptions=[];window.encodeErrors=[];window.audit=[];
+  window.outputCanvases=[document.createElement('canvas'),document.createElement('canvas')];
+  for(let kind=0;kind<2;kind++){
+   const c=outputCanvases[kind];c.width=kind?1620:1600;c.height=kind?780:620;
+   const encoder=new VideoEncoder({error:e=>encodeErrors.push(e.message),output:(chunk,meta)=>{const data=new Uint8Array(chunk.byteLength);chunk.copyTo(data);let s='';for(const byte of data)s+=String.fromCharCode(byte);encoded[kind].push({timestamp:chunk.timestamp,type:chunk.type,data:btoa(s)});if(meta.decoderConfig?.description)descriptions[kind]=Array.from(new Uint8Array(meta.decoderConfig.description));}});
+   const config={codec:'avc1.420028',width:c.width,height:c.height,framerate:30,bitrate:4500000,latencyMode:'realtime',avc:{format:'avc'}};
+   if(!(await VideoEncoder.isConfigSupported(config)).supported)throw Error('AVC encoding unavailable');encoder.configure(config);encoders.push(encoder);
+  }
+  window.captureFrame=async frame=>{
+   // Both versions start at t=0 and integrate the same 1/60s input sequence.
+   if(frame===0)draw(0);else{draw((frame*2-1)/60);draw(frame*2/60)}
+   const t=frame/30;
+   for(let kind=0;kind<2;kind++){
+    const c=outputCanvases[kind],ctx=c.getContext('2d'),cw=kind?540:400;
+    for(let col=0;col<(kind?3:4);col++){
+     const bg=kind?['white','black','#397e91'][col]:(col>=2?'black':'white');ctx.fillStyle=bg;ctx.fillRect(col*cw,0,cw,c.height);ctx.drawImage(pair[kind?1:col%2].canvas,col*cw,45,cw,1448*cw/1086);
+     ctx.fillStyle=bg==='black'?'white':'#222';ctx.font='18px sans-serif';ctx.fillText(kind?'KOMA v32 / fixed capture':col%2?'v32 cuff + hair':'v31 baseline',col*cw+8,23);ctx.font='13px sans-serif';ctx.fillText(`frame ${frame} / t=${t.toFixed(3)}s / 30 fps`,col*cw+8,42);
+    }
+    const videoFrame=new VideoFrame(c,{timestamp:Math.round(frame*1e6/30),duration:Math.round((frame+1)*1e6/30)-Math.round(frame*1e6/30)});encoders[kind].encode(videoFrame,{keyFrame:frame%60===0});videoFrame.close();
+   }
+   audit.push({frame,time:t,physicsStep:frame*2,versions:pair.map(r=>({armAmount:r.articulatedArm.amount,cuffAlpha:r.articulatedArm.opacity(r.model.bodyLayers.find(l=>l.id==='left_raised_cuff')),hair:Object.fromEntries([...r.hairRig.states].map(([id,s])=>[id,s.x]))}))});
+   while(encoders.some(e=>e.encodeQueueSize>4))await new Promise(r=>setTimeout(r,5));if(encodeErrors.length)throw Error(encodeErrors.join(';'));
+  };
+ });
+ for(let start=0;start<555;start+=15){await page.evaluate(async start=>{for(let i=start;i<Math.min(start+15,555);i++)await captureFrame(i)},start);if(start%60===0)console.log('rendered '+Math.min(start+15,555)+'/555');}
+ const result=await page.evaluate(async()=>{for(const e of encoders){await e.flush();e.close()}return{encoded,descriptions,audit,errors:encodeErrors}});
+ const {muxCfr}=await import('./cfr_mp4.mjs');const {samples}=await import('./mp4_samples.mjs');
+ report.frames=result.audit;report.errors.push(...result.errors);report.physicsHz=60;report.outputFps=30;report.videos=[];
+ for(let kind=0;kind<2;kind++){
+  const bytes=muxCfr({width:kind?1620:1600,height:kind?780:620,description:Buffer.from(result.descriptions[kind]),chunks:result.encoded[kind].map(c=>({...c,data:Buffer.from(c.data,'base64')}))});
+  const name=kind?'koma-v32-cfr-motion-sample.mp4':'koma-v31-v32-cfr-comparison.mp4';await writeFile(resolve(out,name),bytes);
+  const table=samples(bytes);if(table.samples.length!==555||table.samples.some((s,i)=>s.timestamp!==Math.round(i*1e6/30)||s.duration!==33333))throw Error('CFR table mismatch');
+  report.videos.push({file:name,bytes:bytes.length,samples:table.samples.length,timescale:table.timescale,firstTimestamp:table.samples[0].timestamp,lastTimestamp:table.samples.at(-1).timestamp,duration:18.5,missingOrDuplicateTimestamps:0});
+ }
+}catch(e){report.errors.push(e.stack);process.exitCode=1}finally{if(browser)await browser.close();server.kill();await writeFile(resolve(out,'capture-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({errors:report.errors,videos:report.videos}))}

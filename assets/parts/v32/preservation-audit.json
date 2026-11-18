@@ -1,0 +1,182 @@
+[
+  {
+    "id": "rear_left_outer",
+    "alpha_changed": 0,
+    "rgb_changed": 378,
+    "metadata_changed": true
+  },
+  {
+    "id": "rear_left_inner",
+    "alpha_changed": 0,
+    "rgb_changed": 69,
+    "metadata_changed": true
+  },
+  {
+    "id": "rear_right_inner",
+    "alpha_changed": 0,
+    "rgb_changed": 172,
+    "metadata_changed": true
+  },
+  {
+    "id": "rear_right_outer",
+    "alpha_changed": 0,
+    "rgb_changed": 399,
+    "metadata_changed": true
+  },
+  {
+    "id": "thigh_left",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "thigh_right",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "skirt",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "left_body_reveal_painted",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "chest_clothing",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "abdomen_clothing",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "pelvis_clothing",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "arm_screen_right",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "left_shoulder_underlap",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "left_shoulder_original_support",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "left_raised_upper",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "hair_reveal_native",
+    "alpha_changed": 325,
+    "rgb_changed": 325,
+    "metadata_changed": true
+  },
+  {
+    "id": "face_fixed_v22",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "bang_left",
+    "alpha_changed": 0,
+    "rgb_changed": 229,
+    "metadata_changed": true
+  },
+  {
+    "id": "bang_center",
+    "alpha_changed": 0,
+    "rgb_changed": 212,
+    "metadata_changed": true
+  },
+  {
+    "id": "bang_right",
+    "alpha_changed": 0,
+    "rgb_changed": 139,
+    "metadata_changed": true
+  },
+  {
+    "id": "side_left_front",
+    "alpha_changed": 0,
+    "rgb_changed": 136,
+    "metadata_changed": true
+  },
+  {
+    "id": "side_right_front",
+    "alpha_changed": 0,
+    "rgb_changed": 111,
+    "metadata_changed": true
+  },
+  {
+    "id": "side_left_outer",
+    "alpha_changed": 0,
+    "rgb_changed": 259,
+    "metadata_changed": true
+  },
+  {
+    "id": "side_left_inner",
+    "alpha_changed": 0,
+    "rgb_changed": 204,
+    "metadata_changed": true
+  },
+  {
+    "id": "side_right_outer",
+    "alpha_changed": 0,
+    "rgb_changed": 654,
+    "metadata_changed": true
+  },
+  {
+    "id": "left_raised_forearm",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "left_raised_cuff",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "left_raised_drape",
+    "alpha_changed": 464,
+    "rgb_changed": 420,
+    "metadata_changed": true
+  },
+  {
+    "id": "left_rest_cuff",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  },
+  {
+    "id": "left_raised_hand",
+    "alpha_changed": 0,
+    "rgb_changed": 0,
+    "metadata_changed": false
+  }
+]

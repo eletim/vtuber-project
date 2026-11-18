@@ -1,0 +1,7 @@
+{
+  "baseline": "225fe5499ea8a81447b273a896516088d3943fae",
+  "scenario": "Same start time and camera; each version uses its own normal UI acting controller/sequence. Includes choreography and rig differences.",
+  "errors": [],
+  "samples": [],
+  "probeOnly": true
+}

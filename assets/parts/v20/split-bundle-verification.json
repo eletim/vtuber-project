@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "source_zip_sha256": "391b797d5fce7ec0684b17fac232a1bed4d438116c017474653a030b6b0d0c5e",
+  "files_reconstructed_byte_identically": 99,
+  "image_quality_and_source_files_unchanged": true,
+  "maximum_attachment_bytes": 19500000,
+  "archives": [
+    {
+      "file": "koma-v20-runtime-core.zip",
+      "bytes": 2416451,
+      "sha256": "63c60fd0de694d51d02a9230daf7eeae1752d6f124a45aea778f3fdf6cc2bba3"
+    },
+    {
+      "file": "koma-v20-runtime-model.zip",
+      "bytes": 19247470,
+      "sha256": "842cce673814140a3af51373373309e378b0de832c9fc35d532695e1ed2be56e"
+    }
+  ]
+}

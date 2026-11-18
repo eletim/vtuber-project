@@ -1,0 +1,5854 @@
+{
+  "errors": [],
+  "samples": [
+    {
+      "frame": 0,
+      "wallSeconds": 0.057,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.29726666100869814,
+            "age": 0.07765202559828666
+          },
+          "pose": {
+            "ParamAngleX": 1.9433081436832767e-12,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 4.1284372648505084e-13,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.4115266806092338,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 1.5290508388335232e-13,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 615
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.34695622233035156,
+            "age": 0.07775196266174333
+          },
+          "pose": {
+            "ParamAngleX": 1.9532196901800404e-12,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 4.149494417264018e-13,
+            "ParamEyeLOpen": 0.9999994871577649,
+            "ParamEyeROpen": 0.9999994871577649,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.590450189765782,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 1.5368497841718563e-13,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 291
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "wallSeconds": 0.136,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.6019235119417075,
+            "age": 0.17995202559828805
+          },
+          "pose": {
+            "ParamAngleX": 5.693794186484774e-13,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 1.2096111558159585e-13,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.44333054137673106,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 4.480041317836887e-14,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 618
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.6036888149760365,
+            "age": 0.16765196266174254
+          },
+          "pose": {
+            "ParamAngleX": 6.641011107580527e-13,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 1.4108417324706388e-13,
+            "ParamEyeLOpen": 0.9999999779465674,
+            "ParamEyeROpen": 0.9999999779465674,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5620212638210234,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 5.225339749891248e-14,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 294
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "wallSeconds": 0.242,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.7766217796657138,
+            "age": 0.28395202559828725
+          },
+          "pose": {
+            "ParamAngleX": 1.6345652102309238e-13,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 3.4725321085493196e-14,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.4728831876523084,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 1.2861230031664157e-14,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 622
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.7926471470607609,
+            "age": 0.2842519626617426
+          },
+          "pose": {
+            "ParamAngleX": 1.638963823361932e-13,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 3.4818772662030396e-14,
+            "ParamEyeLOpen": 0.9999999996275051,
+            "ParamEyeROpen": 0.9999999996275051,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5290756085281192,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 1.289584172667791e-14,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 299
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "wallSeconds": 0.332,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.8650401264619623,
+            "age": 0.3746520255982855
+          },
+          "pose": {
+            "ParamAngleX": 5.5044779599489294e-14,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 1.1693921011584671e-14,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.4991420557599312,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 4.331081856142473e-15,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 626
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.8747222770037645,
+            "age": 0.3749519626617426
+          },
+          "pose": {
+            "ParamAngleX": 5.519290503910058e-14,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 1.1725391285156485e-14,
+            "ParamEyeLOpen": 0.9999999999844241,
+            "ParamEyeROpen": 0.9999999999844241,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.50256942223344,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 4.342737513020916e-15,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 303
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "wallSeconds": 0.439,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9240574220665754,
+            "age": 0.47815202559828585
+          },
+          "pose": {
+            "ParamAngleX": 1.5897264151986392e-14,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 3.3772748777678846e-15,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5288584659515976,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 1.2508425473214395e-15,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 631
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9294272446917035,
+            "age": 0.4782519626617425
+          },
+          "pose": {
+            "ParamAngleX": 1.597834572071542e-14,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 3.3945007158468482e-15,
+            "ParamEyeLOpen": 0.9999999999995809,
+            "ParamEyeROpen": 0.9999999999995809,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.47266309281668983,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 1.257222487350683e-15,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 308
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "wallSeconds": 0.537,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9540407433509566,
+            "age": 0.5685520255982883
+          },
+          "pose": {
+            "ParamAngleX": 5.372788398027108e-15,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 1.1414154729228935e-15,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5552888192286942,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 4.227464714529239e-16,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 635
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9602883669828997,
+            "age": 0.5817519626617429
+          },
+          "pose": {
+            "ParamAngleX": 4.614642559788378e-15,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 9.803522683997612e-16,
+            "ParamEyeLOpen": 0.9999999999999888,
+            "ParamEyeROpen": 0.9999999999999888,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.4424023664501184,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 3.630934327406518e-16,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 313
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "wallSeconds": 0.632,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9741959087029666,
+            "age": 0.6724520255982878
+          },
+          "pose": {
+            "ParamAngleX": -0.007641848891462959,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 3.280691515640644e-16,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5853518651530162,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 1.2150709317187582e-16,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 640
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9760204898146209,
+            "age": 0.6725519626617427
+          },
+          "pose": {
+            "ParamAngleX": -0.011122172283123746,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 3.297424728920853e-16,
+            "ParamEyeLOpen": 0.9999999999999996,
+            "ParamEyeROpen": 0.9999999999999996,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.41602868499341494,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 1.221268418118833e-16,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 317
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "wallSeconds": 0.739,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9864163564323624,
+            "age": 0.7879520255982868
+          },
+          "pose": {
+            "ParamAngleX": -0.6670068381910492,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 8.204143414541497e-17,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6187270991755812,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 3.0385716350153725e-17,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 645
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9864465087919269,
+            "age": 0.7752519626617431
+          },
+          "pose": {
+            "ParamAngleX": -0.5314528983600364,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 9.615023966294431e-17,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.3865463778298797,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 3.561119987516452e-17,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 322
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "wallSeconds": 0.844,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9922838862692246,
+            "age": 0.8897520255982858
+          },
+          "pose": {
+            "ParamAngleX": -2.340405728705815,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 2.4182383513848428e-17,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6476665890649749,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 8.956438338462389e-18,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 650
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9928294848414234,
+            "age": 0.8898519626617434
+          },
+          "pose": {
+            "ParamAngleX": -2.3224627251399967,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 2.4305726101541e-17,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.3541847413953796,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 9.002120778348503e-18,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 328
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "wallSeconds": 0.93,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9952990938924169,
+            "age": 0.9789520255982875
+          },
+          "pose": {
+            "ParamAngleX": -4.501258169925044,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 8.29144627482157e-18,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6726800639103037,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 3.0709060277116957e-18,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 654
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": true,
+            "weight": 0.9953043142207058,
+            "age": 0.9660519626617434
+          },
+          "pose": {
+            "ParamAngleX": -4.109156391669657,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": 9.740690073947539e-18,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.33301642535896614,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": 3.607662990350935e-18,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 332
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "wallSeconds": 1.254,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.8079917549700071,
+            "age": 1.2992520255982871
+          },
+          "pose": {
+            "ParamAngleX": -11.663705529008443,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.32716701680578597,
+            "ParamEyeLOpen": 0.27719031294325924,
+            "ParamEyeROpen": 0.27719031294325924,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7568202915336938,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.1211729691873281,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 671
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.808497700013022,
+            "age": 1.2994519626617427
+          },
+          "pose": {
+            "ParamAngleX": -11.669352545460697,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.32847148236072143,
+            "ParamEyeLOpen": 0.270338372990368,
+            "ParamEyeROpen": 0.270338372990368,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.24452967403319853,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.12165610457804496,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 350
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "wallSeconds": 1.291,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.7020441534276161,
+            "age": 1.3245520255982868
+          },
+          "pose": {
+            "ParamAngleX": -11.083338729260204,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.3287813070940826,
+            "ParamEyeLOpen": 0.31833042104378373,
+            "ParamEyeROpen": 0.31833042104378373,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7632930755079333,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.12177085447928983,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 672
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.6546277301481795,
+            "age": 1.337451962661743
+          },
+          "pose": {
+            "ParamAngleX": -10.763002380628459,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.3269825305825132,
+            "ParamEyeLOpen": 0.3454199562156905,
+            "ParamEyeROpen": 0.3454199562156905,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.23499699091948004,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.12110464095648636,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 352
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "wallSeconds": 1.329,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.5276539879915423,
+            "age": 1.3759520255982878
+          },
+          "pose": {
+            "ParamAngleX": -9.462368857517403,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.3002562741168401,
+            "ParamEyeLOpen": 0.459589985049996,
+            "ParamEyeROpen": 0.459589985049996,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.776185112648234,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.11120602745068149,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 674
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.5662675802666564,
+            "age": 1.3635519626617434
+          },
+          "pose": {
+            "ParamAngleX": -9.917895827786742,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.3113549640053498,
+            "ParamEyeLOpen": 0.42210465715325585,
+            "ParamEyeROpen": 0.42210465715325585,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.2283879387490943,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.11531665333531473,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 353
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "wallSeconds": 1.366,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.49198131745204404,
+            "age": 1.3885520255982868
+          },
+          "pose": {
+            "ParamAngleX": -9.063582653630808,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.29090191326861303,
+            "ParamEyeLOpen": 0.48917059669692486,
+            "ParamEyeROpen": 0.48917059669692486,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.779090922633043,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.10774144935874555,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 675
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.42726313150900264,
+            "age": 1.4142519626617425
+          },
+          "pose": {
+            "ParamAngleX": -8.186218204630055,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.26784076378733496,
+            "ParamEyeLOpen": 0.5575759920212446,
+            "ParamEyeROpen": 0.5575759920212446,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.21587280060560796,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.09920028288419813,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 355
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "wallSeconds": 1.433,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.29956446366316414,
+            "age": 1.4778520255982865
+          },
+          "pose": {
+            "ParamAngleX": -6.13752257209919,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.20665865273771827,
+            "ParamEyeLOpen": 0.6896116219849555,
+            "ParamEyeROpen": 0.6896116219849555,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8009401457353722,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07654024175471047,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 678
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.2997520437399661,
+            "age": 1.478051962661743
+          },
+          "pose": {
+            "ParamAngleX": -6.159641640991995,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.2075687103840146,
+            "ParamEyeLOpen": 0.6885969641173629,
+            "ParamEyeROpen": 0.6885969641173629,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.20045195227831228,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07687730014222761,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 358
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "wallSeconds": 1.532,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.16950546828309546,
+            "age": 1.5803520255982875
+          },
+          "pose": {
+            "ParamAngleX": -3.7258567271568044,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.12856918993645775,
+            "ParamEyeLOpen": 0.8230982168821201,
+            "ParamEyeROpen": 0.8230982168821201,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8241447786098427,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.04761821849498435,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 683
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.16970586338964289,
+            "age": 1.5804519626617424
+          },
+          "pose": {
+            "ParamAngleX": -3.7243544577981673,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.128550644025268,
+            "ParamEyeLOpen": 0.8229505546839799,
+            "ParamEyeROpen": 0.8229505546839799,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.17701021219151733,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.047611349638988144,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 363
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "wallSeconds": 1.628,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.10332560209301217,
+            "age": 1.6694520255982876
+          },
+          "pose": {
+            "ParamAngleX": -2.352499788824008,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.08201165323308666,
+            "ParamEyeLOpen": 0.890805395147976,
+            "ParamEyeROpen": 0.890805395147976,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8432866795188751,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.030374686382624694,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 688
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.10339030210495455,
+            "age": 1.6696519626617423
+          },
+          "pose": {
+            "ParamAngleX": -2.350789958084953,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.08196433021911438,
+            "ParamEyeLOpen": 0.8911067373675344,
+            "ParamEyeROpen": 0.8911067373675344,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.15780949496071753,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.030357159340412734,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 368
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "wallSeconds": 1.733,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.05801275878086964,
+            "age": 1.773352025598287
+          },
+          "pose": {
+            "ParamAngleX": -1.3449063539861752,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.047167674593478585,
+            "ParamEyeLOpen": 0.9389614541756195,
+            "ParamEyeROpen": 0.9389614541756195,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8648484149049348,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.017469509108695772,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 693
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.05804908497795768,
+            "age": 1.7735519626617435
+          },
+          "pose": {
+            "ParamAngleX": -1.3505896351961117,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.04737193897114963,
+            "ParamEyeLOpen": 0.9384365493743859,
+            "ParamEyeROpen": 0.9384365493743859,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.13645031949905312,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.01754516258190727,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 374
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "wallSeconds": 1.847,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.03036955854656554,
+            "age": 1.8898520255982874
+          },
+          "pose": {
+            "ParamAngleX": -0.7115617173694081,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.025035895512118704,
+            "ParamEyeLOpen": 0.9681825972173229,
+            "ParamEyeROpen": 0.9681825972173229,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.887355117116912,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.009272553893377297,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 699
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.030388575235177354,
+            "age": 1.890051962661743
+          },
+          "pose": {
+            "ParamAngleX": -0.7137638762523659,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.025114519110706002,
+            "ParamEyeLOpen": 0.967965464549646,
+            "ParamEyeROpen": 0.967965464549646,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.11377879519303791,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.009301673744705927,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 380
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "wallSeconds": 1.934,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.01990992838016667,
+            "age": 1.965852025598286
+          },
+          "pose": {
+            "ParamAngleX": -0.466790616852693,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.01644169318631476,
+            "ParamEyeLOpen": 0.9790973303436514,
+            "ParamEyeROpen": 0.9790973303436514,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9011708945842257,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.006089515994931392,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 703
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.01991133057580191,
+            "age": 1.9661519626617423
+          },
+          "pose": {
+            "ParamAngleX": -0.46752864396687116,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.01646813796651123,
+            "ParamEyeLOpen": 0.9790824492845176,
+            "ParamEyeROpen": 0.9790824492845176,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.09982002878932122,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.006099310357967122,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 384
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "wallSeconds": 2.036,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.01060975728650982,
+            "age": 2.0791520255982867
+          },
+          "pose": {
+            "ParamAngleX": -0.24860852577546025,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.008764512336837681,
+            "ParamEyeLOpen": 0.9889156342828397,
+            "ParamEyeROpen": 0.9889156342828397,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9201869066487327,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.003246115680310252,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 708
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.010610504499411547,
+            "age": 2.079451962661743
+          },
+          "pose": {
+            "ParamAngleX": -0.24886586758151635,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.008773696144819525,
+            "ParamEyeLOpen": 0.9888682626023082,
+            "ParamEyeROpen": 0.9888682626023082,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0807053957977297,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.003249517090673899,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 389
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "wallSeconds": 2.119,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.006982735483725707,
+            "age": 2.154452025598287
+          },
+          "pose": {
+            "ParamAngleX": -0.16376515532587282,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0057752657191944565,
+            "ParamEyeLOpen": 0.992669019117171,
+            "ParamEyeROpen": 0.992669019117171,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9317060845355618,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.002138987303405354,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 712
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.006496664850944061,
+            "age": 2.167751962661743
+          },
+          "pose": {
+            "ParamAngleX": -0.153322161988459,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.00540726167223885,
+            "ParamEyeLOpen": 0.9931296862738087,
+            "ParamEyeROpen": 0.9931296862738087,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.06739193859607556,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.002002689508236611,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 394
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "wallSeconds": 2.231,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.0036595113662147047,
+            "age": 2.270752025598286
+          },
+          "pose": {
+            "ParamAngleX": -0.08635524879413181,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0030461878730841684,
+            "ParamEyeLOpen": 0.9961220659239205,
+            "ParamEyeROpen": 0.9961220659239205,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9476654450935765,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0011282177307719143,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 718
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.0036618028643942186,
+            "age": 2.2709519626617425
+          },
+          "pose": {
+            "ParamAngleX": -0.0868325468341587,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0030630381903940496,
+            "ParamEyeLOpen": 0.9961152261150963,
+            "ParamEyeROpen": 0.9961152261150963,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.053159944549936555,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0011344585890348331,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 400
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "wallSeconds": 2.338,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.001910432453741313,
+            "age": 2.387752025598287
+          },
+          "pose": {
+            "ParamAngleX": -0.04516921973890232,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0015935500840852858,
+            "ParamEyeLOpen": 0.9979864797615831,
+            "ParamEyeROpen": 0.9979864797615831,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9618223763936379,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0005902037348464021,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 724
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.0020536573539975587,
+            "age": 2.3750519626617432
+          },
+          "pose": {
+            "ParamAngleX": -0.048805337082266385,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0017218178557478678,
+            "ParamEyeLOpen": 0.9978214328502969,
+            "ParamEyeROpen": 0.9978214328502969,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.040372468267280574,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0006377103169436547,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 406
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "wallSeconds": 2.427,
+      "states": [
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.0011561637468921913,
+            "age": 2.478152025598286
+          },
+          "pose": {
+            "ParamAngleX": -0.02738046426449315,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0009660187356990589,
+            "ParamEyeLOpen": 0.9987821573106307,
+            "ParamEyeROpen": 0.9987821573106307,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9712575725579439,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0003577847169255773,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 729
+        },
+        {
+          "acting": {
+            "id": "5e6cbafc30934e4297c368eaa66b9e5e",
+            "running": false,
+            "weight": 0.0012442229115187848,
+            "age": 2.4652519626617426
+          },
+          "pose": {
+            "ParamAngleX": -0.02956547242639367,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0010431041437987912,
+            "ParamEyeLOpen": 0.9986842803046327,
+            "ParamEyeROpen": 0.9986842803046327,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.030634513784820072,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.00038633486807362633,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 411
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "wallSeconds": 2.881,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.13112460726324726,
+            "age": 0.03442652394771528
+          },
+          "pose": {
+            "ParamAngleX": -0.0001290076426551506,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0000045515824334160675,
+            "ParamEyeLOpen": 0.9999999997714476,
+            "ParamEyeROpen": 0.9999999997714476,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9981475757994811,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0000016857712716355797,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 756
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.07019256905717497,
+            "age": 0.02202640953660051
+          },
+          "pose": {
+            "ParamAngleX": -0.00016256104246549632,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.000005735427337606361,
+            "ParamEyeLOpen": 0.9999999994905218,
+            "ParamEyeROpen": 0.9999999994905218,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.002277186829225573,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.000002124232347261615,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 441
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "wallSeconds": 2.914,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.1894157540298082,
+            "age": 0.04692652394771635
+          },
+          "pose": {
+            "ParamAngleX": -0.00011103790705308165,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0000039175833057973836,
+            "ParamEyeLOpen": 0.9999999998524355,
+            "ParamEyeROpen": 0.9999999998524355,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9983917822811169,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0000014509567799249564,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 757
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.24505555189657233,
+            "age": 0.059526409536600156
+          },
+          "pose": {
+            "ParamAngleX": -0.00010365349703298301,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0000036570699320389325,
+            "ParamEyeLOpen": 0.9999999998628758,
+            "ParamEyeROpen": 0.9999999998628758,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0014900948364360968,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0000013544703451996044,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 443
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "wallSeconds": 2.942,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.29765695999281805,
+            "age": 0.07272652394771661
+          },
+          "pose": {
+            "ParamAngleX": -0.00008147299763568063,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0000028744891171105153,
+            "ParamEyeLOpen": 0.9999999999401845,
+            "ParamEyeROpen": 0.9999999999401845,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9988184861436906,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.00000106462559892982,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 758
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.3465933194346211,
+            "age": 0.08552640953660084
+          },
+          "pose": {
+            "ParamAngleX": -0.00007587244516441178,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0000026769076376916695,
+            "ParamEyeLOpen": 0.9999999999448042,
+            "ParamEyeROpen": 0.9999999999448042,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0010907291993207124,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -9.914472732191365e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 444
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "wallSeconds": 2.977,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.4732931310594757,
+            "age": 0.12452652394771668
+          },
+          "pose": {
+            "ParamAngleX": -0.000043757877248714034,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0000015438433050142372,
+            "ParamEyeLOpen": 0.9999999999902403,
+            "ParamEyeROpen": 0.9999999999902403,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9993159115759359,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -5.717938166719394e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 760
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.4341602932125803,
+            "age": 0.11142640953660088
+          },
+          "pose": {
+            "ParamAngleX": -0.0000556039130387034,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0000019617996912621646,
+            "ParamEyeLOpen": 0.9999999999777044,
+            "ParamEyeROpen": 0.9999999999777044,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0008141891386305015,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -7.265924782452459e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 445
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "wallSeconds": 3.012,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.50999188820623,
+            "age": 0.13752652394771658
+          },
+          "pose": {
+            "ParamAngleX": -0.000037437454031264185,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.000001320849328097698,
+            "ParamEyeLOpen": 0.999999999993808,
+            "ParamEyeROpen": 0.999999999993808,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9993745116781635,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -4.89203454850999e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 761
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.5758965118802878,
+            "age": 0.16332640953660071
+          },
+          "pose": {
+            "ParamAngleX": -0.00002982817978858768,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.0000010523884148123287,
+            "ParamEyeLOpen": 0.9999999999963749,
+            "ParamEyeROpen": 0.9999999999963749,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0006195451013771993,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -3.89773486967529e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 447
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "wallSeconds": 3.047,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.6564193250534318,
+            "age": 0.20142652394771687
+          },
+          "pose": {
+            "ParamAngleX": -0.000017389588203229402,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -6.135306603635406e-7,
+            "ParamEyeLOpen": 0.9999999999993385,
+            "ParamEyeROpen": 0.9999999999993385,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9991649350819799,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.2723357791242234e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 763
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.6043487834912105,
+            "age": 0.1758264095366
+          },
+          "pose": {
+            "ParamAngleX": -0.00002567335226627811,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -9.057991029262938e-7,
+            "ParamEyeLOpen": 0.9999999999976594,
+            "ParamEyeROpen": 0.9999999999976594,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0006302598519275705,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -3.354811492319605e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 448
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "wallSeconds": 3.134,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.7769937666243608,
+            "age": 0.27922652394771674
+          },
+          "pose": {
+            "ParamAngleX": -0.000006836470898643479,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -2.4120091033679145e-7,
+            "ParamEyeLOpen": 0.9999999999999566,
+            "ParamEyeROpen": 0.9999999999999566,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9980718653009764,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -8.933367049510792e-8,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 768
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.7768698398515697,
+            "age": 0.27892640953659953
+          },
+          "pose": {
+            "ParamAngleX": -0.0000074502946144553545,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -2.6285894059788824e-7,
+            "ParamEyeLOpen": 0.9999999999999366,
+            "ParamEyeROpen": 0.9999999999999366,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0018464392665260036,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -9.7355163184403e-8,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 453
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "wallSeconds": 3.242,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.8747918564093593,
+            "age": 0.3831265239477162
+          },
+          "pose": {
+            "ParamAngleX": -0.000001964959526671752,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -6.932670871197897e-8,
+            "ParamEyeLOpen": 0.9999999999999989,
+            "ParamEyeROpen": 0.9999999999999989,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9949432978652227,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.5676558782214413e-8,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 774
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.8747918564093605,
+            "age": 0.3829264095366005
+          },
+          "pose": {
+            "ParamAngleX": -0.0000021388185072909995,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -7.546111879479928e-8,
+            "ParamEyeLOpen": 0.9999999999999983,
+            "ParamEyeROpen": 0.9999999999999983,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.004824693164978959,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.7948562516592312e-8,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 460
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "wallSeconds": 3.334,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9292309367365804,
+            "age": 0.48582652394771664
+          },
+          "pose": {
+            "ParamAngleX": -5.729663144708327e-7,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -2.021510786656072e-8,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9898743960681365,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -7.487076987615076e-9,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 779
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9241417558479469,
+            "age": 0.4731264095366017
+          },
+          "pose": {
+            "ParamAngleX": -7.245920857411566e-7,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -2.5564829027564357e-8,
+            "ParamEyeLOpen": 0.9999999999999999,
+            "ParamEyeROpen": 0.9999999999999999,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.009054596550861743,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -9.4684551953942e-9,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 465
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "wallSeconds": 3.434,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9601114780407938,
+            "age": 0.5890265239477159
+          },
+          "pose": {
+            "ParamAngleX": -1.660729130193901e-7,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -5.859300565516625e-9,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9831757222227485,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.1701113205617112e-9,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 785
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9571478731329597,
+            "age": 0.5759264095366001
+          },
+          "pose": {
+            "ParamAngleX": -2.1103180488230156e-7,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -7.445557462411472e-9,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.01540649122300367,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.7576138749672105e-9,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 471
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "wallSeconds": 3.582,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9758600923492313,
+            "age": 0.6794265239477166
+          },
+          "pose": {
+            "ParamAngleX": -0.018584611821792676,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -1.980264138407017e-9,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9757594282115231,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -7.334311623729688e-10,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 790
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9758600923492314,
+            "age": 0.679226409536601
+          },
+          "pose": {
+            "ParamAngleX": -0.018324080995846953,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -2.1554888465026605e-9,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.023702602806154372,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -7.983292024083924e-10,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 477
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "wallSeconds": 3.641,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9863026864354565,
+            "age": 0.7814265239477169
+          },
+          "pose": {
+            "ParamAngleX": -0.5969799027932181,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -5.822998481268359e-10,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9657007122738247,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.1566661041734647e-10,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 795
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9863026864354566,
+            "age": 0.7812264095366013
+          },
+          "pose": {
+            "ParamAngleX": -0.8485538110330292,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -6.338249547695492e-10,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.035584902740078854,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.3474998324798103e-10,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 479
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "wallSeconds": 3.736,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9922149928522719,
+            "age": 0.8831265239477162
+          },
+          "pose": {
+            "ParamAngleX": -2.1993883173044453,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -1.7184373012093238e-10,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9540228119753776,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -6.364582597071566e-11,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 800
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9922106666466884,
+            "age": 0.882826409536599
+          },
+          "pose": {
+            "ParamAngleX": -2.2294799820498565,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -1.8727400649071103e-10,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.04565160100665714,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -6.936074314470774e-11,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 485
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "wallSeconds": 3.826,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9952253969741088,
+            "age": 0.9711265239477171
+          },
+          "pose": {
+            "ParamAngleX": -4.233814671377958,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -5.977488073002321e-11,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9428206588018991,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.2138844714823405e-11,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 805
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9952253969741087,
+            "age": 0.9709264095365997
+          },
+          "pose": {
+            "ParamAngleX": -4.224973468277031,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -6.50640923176242e-11,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.056480794335987385,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -2.4097811969490422e-11,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 490
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "wallSeconds": 3.948,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9972938335027854,
+            "age": 1.0733265239477152
+          },
+          "pose": {
+            "ParamAngleX": -7.048552457472507,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.012848094142997165,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9282236889246511,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.004758553386295246,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 811
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.997292329659258,
+            "age": 1.0730264095365998
+          },
+          "pose": {
+            "ParamAngleX": -6.993558435791457,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.012327516671459714,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.07071478002044575,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.004565746915355449,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 497
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "wallSeconds": 4.03,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9984704439938918,
+            "age": 1.1760265239477157
+          },
+          "pose": {
+            "ParamAngleX": -9.944706818517094,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.11999309808661958,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9114758827191413,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.04444188818022947,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 815
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9984704439938917,
+            "age": 1.1758264095366
+          },
+          "pose": {
+            "ParamAngleX": -9.889691666995628,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.1161138203133492,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.08727662874852347,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.04300511863457378,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 502
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "wallSeconds": 4.132,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9991407446745326,
+            "age": 1.2798265239477153
+          },
+          "pose": {
+            "ParamAngleX": -12.240822837650642,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.3371969308515946,
+            "ParamEyeLOpen": 0.21181526567444714,
+            "ParamEyeROpen": 0.21181526567444714,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.893512889966962,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.12488775216725725,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 820
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9991407446745326,
+            "age": 1.2796264095366015
+          },
+          "pose": {
+            "ParamAngleX": -12.192988574494732,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.3291589028191787,
+            "ParamEyeLOpen": 0.2274087936586678,
+            "ParamEyeROpen": 0.2274087936586678,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.1050026412683947,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.12191070474784396,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 508
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "wallSeconds": 4.235,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9994837342413315,
+            "age": 1.3715265239477166
+          },
+          "pose": {
+            "ParamAngleX": -13.379916443466632,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.5999506173431479,
+            "ParamEyeLOpen": 0.1504240461538764,
+            "ParamEyeROpen": 0.1504240461538764,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.876917643144555,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.22220393234931402,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 826
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9995197055050795,
+            "age": 1.384326409536599
+          },
+          "pose": {
+            "ParamAngleX": -13.454708938213674,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.6452881071937667,
+            "ParamEyeLOpen": 0.2883763131031074,
+            "ParamEyeROpen": 0.2883763131031074,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.12464640646319164,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.23899559525695063,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 514
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "wallSeconds": 4.336,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9997111041872725,
+            "age": 1.4760265239477164
+          },
+          "pose": {
+            "ParamAngleX": -13.819542993671977,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.9722382464356409,
+            "ParamEyeLOpen": 0.9480253590336342,
+            "ParamEyeROpen": 0.9480253590336342,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8561248837186537,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.3600882394206077,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 832
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.9997111041872725,
+            "age": 1.475826409536599
+          },
+          "pose": {
+            "ParamAngleX": -13.814913330225686,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -0.9696417948007188,
+            "ParamEyeLOpen": 0.9460271960093647,
+            "ParamEyeROpen": 0.9460271960093647,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.14264023447976318,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.3591265906669328,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 520
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "wallSeconds": 4.437,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.999837797769797,
+            "age": 1.5799265239477158
+          },
+          "pose": {
+            "ParamAngleX": -13.946170406211198,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -1.3768247446132054,
+            "ParamEyeLOpen": 0.9986307598842727,
+            "ParamEyeROpen": 0.9986307598842727,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8340774727750506,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.5099350905974834,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 838
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": true,
+            "weight": 0.999837707632411,
+            "age": 1.5796264095366004
+          },
+          "pose": {
+            "ParamAngleX": -13.944773899748872,
+            "ParamAngleY": 0,
+            "ParamAngleZ": 0,
+            "ParamBodyAngleX": -1.374145251633383,
+            "ParamEyeLOpen": 0.9985731342010379,
+            "ParamEyeROpen": 0.9985731342010379,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.16461711300205512,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.5089426857901417,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 526
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "wallSeconds": 4.712,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.7523960642741246,
+            "age": 1.850426523947716
+          },
+          "pose": {
+            "ParamAngleX": -12.826006554023891,
+            "ParamAngleY": 0.02314701746850876,
+            "ParamAngleZ": -0.0022035021504193796,
+            "ParamBodyAngleX": -2.08796038286429,
+            "ParamEyeLOpen": 0.9999998941242239,
+            "ParamEyeROpen": 0.9999998941242239,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7711814652227623,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.7782140498199309,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 855
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.8056096888871306,
+            "age": 1.8502264095366003
+          },
+          "pose": {
+            "ParamAngleX": -13.28260710823066,
+            "ParamAngleY": 0.028987874826303814,
+            "ParamAngleZ": -0.0029116853918570644,
+            "ParamBodyAngleX": -2.1742694323079186,
+            "ParamEyeLOpen": 0.9999998900538338,
+            "ParamEyeROpen": 0.9999998900538338,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.22726021074148678,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.8114329190087558,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 544
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "wallSeconds": 4.75,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.6512010467298137,
+            "age": 1.8764265239477158
+          },
+          "pose": {
+            "ParamAngleX": -11.850723232719474,
+            "ParamAngleY": 0.07726958730869724,
+            "ParamAngleZ": -0.006168243187866918,
+            "ParamBodyAngleX": -1.9387883334139775,
+            "ParamEyeLOpen": 0.9999999573824354,
+            "ParamEyeROpen": 0.9999999573824354,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7644506976702165,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.734281715749269,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 856
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.6497575986958332,
+            "age": 1.8889264095366007
+          },
+          "pose": {
+            "ParamAngleX": -11.89913526302354,
+            "ParamAngleY": 0.09532413454874958,
+            "ParamAngleZ": -0.007494421341668165,
+            "ParamBodyAngleX": -1.962928557591563,
+            "ParamEyeLOpen": 0.9999999716255003,
+            "ParamEyeROpen": 0.9999999716255003,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.23715777701909702,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.7469990998500219,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 546
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "wallSeconds": 4.785,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.49107467305737645,
+            "age": 1.9272265239477164
+          },
+          "pose": {
+            "ParamAngleX": -9.811258996519664,
+            "ParamAngleY": 0.1819307497507235,
+            "ParamAngleZ": -0.010511757044330662,
+            "ParamBodyAngleX": -1.594797751824502,
+            "ParamEyeLOpen": 0.9999999927986646,
+            "ParamEyeROpen": 0.9999999927986646,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7513514678802166,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.6284201413589603,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 858
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.5639314500157127,
+            "age": 1.9144264095366
+          },
+          "pose": {
+            "ParamAngleX": -10.859270814807637,
+            "ParamAngleY": 0.14403048475400887,
+            "ParamAngleZ": -0.009302995437675592,
+            "ParamBodyAngleX": -1.787447366292873,
+            "ParamEyeLOpen": 0.9999999883769425,
+            "ParamEyeROpen": 0.9999999883769425,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.24379901873562868,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.6920087763652278,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 547
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "wallSeconds": 4.824,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.4276319375106349,
+            "age": 1.952126523947717
+          },
+          "pose": {
+            "ParamAngleX": -8.834424228924744,
+            "ParamAngleY": 0.2293754555982222,
+            "ParamAngleZ": -0.01044773700128076,
+            "ParamBodyAngleX": -1.4235000305110375,
+            "ParamEyeLOpen": 0.9999999969875115,
+            "ParamEyeROpen": 0.9999999969875115,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7449193663749412,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.5745472043878262,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 859
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.4255004624786417,
+            "age": 1.9651264095366008
+          },
+          "pose": {
+            "ParamAngleX": -8.817367413593407,
+            "ParamAngleY": 0.23768249696946492,
+            "ParamAngleZ": -0.009480294099565802,
+            "ParamBodyAngleX": -1.4284780147729836,
+            "ParamEyeLOpen": 0.9999999980290989,
+            "ParamEyeROpen": 0.9999999980290989,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.2569994601740048,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.5779767353252354,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 549
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "wallSeconds": 4.936,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.22151384401750734,
+            "age": 2.0705265239477164
+          },
+          "pose": {
+            "ParamAngleX": -5.0187259208880945,
+            "ParamAngleY": 0.40141863784223647,
+            "ParamAngleZ": 0.005108531586087891,
+            "ParamBodyAngleX": -0.7460572110411489,
+            "ParamEyeLOpen": 0.9999999999522241,
+            "ParamEyeROpen": 0.9999999999522241,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7143491570507469,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.35706834482785227,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 865
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.22126855527700245,
+            "age": 2.0828264095366
+          },
+          "pose": {
+            "ParamAngleX": -5.030432275448756,
+            "ParamAngleY": 0.40129215153824943,
+            "ParamAngleZ": 0.00790717173826259,
+            "ParamBodyAngleX": -0.7537608398961377,
+            "ParamEyeLOpen": 0.9999999999679676,
+            "ParamEyeROpen": 0.9999999999679676,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.28721630881862026,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.3596761324224908,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 556
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "wallSeconds": 5.041,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.1349533999353707,
+            "age": 2.1597265239477164
+          },
+          "pose": {
+            "ParamAngleX": -3.0585889955885803,
+            "ParamAngleY": 0.476181934563356,
+            "ParamAngleZ": 0.03179236138936934,
+            "ParamBodyAngleX": -0.4126740570851956,
+            "ParamEyeLOpen": 0.9999999999978946,
+            "ParamEyeROpen": 0.9999999999978946,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6905835671372507,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.2467559051285562,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 870
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.13435536363849607,
+            "age": 2.1726264095366004
+          },
+          "pose": {
+            "ParamAngleX": -3.037039703937796,
+            "ParamAngleY": 0.47554999400498316,
+            "ParamAngleZ": 0.035431995532545196,
+            "ParamBodyAngleX": -0.41412899949867626,
+            "ParamEyeLOpen": 0.9999999999986178,
+            "ParamEyeROpen": 0.9999999999986178,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.3114778878923873,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.24692619282220568,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 561
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "wallSeconds": 5.134,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.0704518524958003,
+            "age": 2.2767265239477172
+          },
+          "pose": {
+            "ParamAngleX": -1.3695421296633776,
+            "ParamAngleY": 0.5233446426333156,
+            "ParamAngleZ": 0.07620293578325527,
+            "ParamBodyAngleX": -0.15166804116564736,
+            "ParamEyeLOpen": 0.999999999999965,
+            "ParamEyeROpen": 0.999999999999965,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6576550908893972,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.15701919737130277,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 875
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.07543459843243651,
+            "age": 2.2765264095366
+          },
+          "pose": {
+            "ParamAngleX": -1.5192574294236671,
+            "ParamAngleY": 0.5174912301398759,
+            "ParamAngleZ": 0.07498730703420342,
+            "ParamBodyAngleX": -0.17884720507182683,
+            "ParamEyeLOpen": 0.9999999999999636,
+            "ParamEyeROpen": 0.9999999999999636,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.3399575157472625,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.16598159984472136,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 567
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "wallSeconds": 5.234,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.03975387461582693,
+            "age": 2.379726523947717
+          },
+          "pose": {
+            "ParamAngleX": -0.4822137947344041,
+            "ParamAngleY": 0.5308532894570284,
+            "ParamAngleZ": 0.11807805824178896,
+            "ParamBodyAngleX": -0.03959866918561088,
+            "ParamEyeLOpen": 0.9999999999999991,
+            "ParamEyeROpen": 0.9999999999999991,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6291771341230886,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.11528982943734149,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 881
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.042541848291241136,
+            "age": 2.379626409536601
+          },
+          "pose": {
+            "ParamAngleX": -0.5572734326955519,
+            "ParamAngleY": 0.5277512704663788,
+            "ParamAngleZ": 0.1176361150291426,
+            "ParamBodyAngleX": -0.05345973999296583,
+            "ParamEyeLOpen": 0.999999999999999,
+            "ParamEyeROpen": 0.999999999999999,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.3690913154345435,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.11982976643176226,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 573
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "wallSeconds": 5.342,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.02249432075628336,
+            "age": 2.482226523947718
+          },
+          "pose": {
+            "ParamAngleX": 0.11882163443618231,
+            "ParamAngleY": 0.5180200354947814,
+            "ParamAngleZ": 0.16289641674063934,
+            "ParamBodyAngleX": 0.013626848132873445,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5990404773532043,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.09189441731476872,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 885
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.022419535550786338,
+            "age": 2.4949264095366006
+          },
+          "pose": {
+            "ParamAngleX": 0.12218372446485438,
+            "ParamAngleY": 0.5157938394294403,
+            "ParamAngleZ": 0.16546065626123208,
+            "ParamBodyAngleX": 0.01068902189858755,
+            "ParamEyeLOpen": 0.9999999999999999,
+            "ParamEyeROpen": 0.9999999999999999,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.4019567965539738,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.09248567176414378,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 580
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "wallSeconds": 5.433,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.013567908170898865,
+            "age": 2.5732265239477172
+          },
+          "pose": {
+            "ParamAngleX": 0.477526771600069,
+            "ParamAngleY": 0.4974225671251739,
+            "ParamAngleZ": 0.20002169105075918,
+            "ParamBodyAngleX": 0.031098042669979963,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5733723081419201,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0809294482708168,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 890
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.014527505923296213,
+            "age": 2.5730264095366
+          },
+          "pose": {
+            "ParamAngleX": 0.4443018860672073,
+            "ParamAngleY": 0.4972776393114661,
+            "ParamAngleZ": 0.19860418873052796,
+            "ParamBodyAngleX": 0.0266641723698208,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.4243952671044704,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.08256312539553343,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 585
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "wallSeconds": 5.546,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.007138374495513015,
+            "age": 2.688826523947716
+          },
+          "pose": {
+            "ParamAngleX": 0.817691380004,
+            "ParamAngleY": 0.4595229876536923,
+            "ParamAngleZ": 0.24826979047400075,
+            "ParamBodyAngleX": 0.029922583494257388,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5396040447431429,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07412808064536137,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 896
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.007647487373891213,
+            "age": 2.6885264095366006
+          },
+          "pose": {
+            "ParamAngleX": 0.7952129514476924,
+            "ParamAngleY": 0.4607938964664996,
+            "ParamAngleZ": 0.24625051265196785,
+            "ParamBodyAngleX": 0.02837360226721621,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.4580544217326469,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07493190092331682,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 592
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "wallSeconds": 5.628,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.004669446976857011,
+            "age": 2.7652265239477174
+          },
+          "pose": {
+            "ParamAngleX": 0.9931875345393797,
+            "ParamAngleY": 0.4296279095664126,
+            "ParamAngleZ": 0.2796296480503947,
+            "ParamBodyAngleX": 0.020723172431751574,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5171076213611228,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07227473938646532,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 900
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.004651338017038221,
+            "age": 2.7780264095366
+          },
+          "pose": {
+            "ParamAngleX": 1.0070299600448418,
+            "ParamAngleY": 0.42512023302578084,
+            "ParamAngleZ": 0.28367364429055153,
+            "ParamBodyAngleX": 0.01787368110235231,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.48466408772568514,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07256032053697026,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 597
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "wallSeconds": 5.742,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.0024526075271897063,
+            "age": 2.8811265239477173
+          },
+          "pose": {
+            "ParamAngleX": 1.205528750544029,
+            "ParamAngleY": 0.3806475229615673,
+            "ParamAngleZ": 0.3246486135054608,
+            "ParamBodyAngleX": 0.0005488509600217232,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.4835185413278351,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07164949990819636,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 907
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.0026275288735669,
+            "age": 2.8808264095366
+          },
+          "pose": {
+            "ParamAngleX": 1.2008231136759782,
+            "ParamAngleY": 0.38018240056808345,
+            "ParamAngleZ": 0.3247575187143462,
+            "ParamBodyAngleX": -0.0004913413187248089,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5144107811899888,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07196265008627688,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 604
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "wallSeconds": 5.836,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.0013816284870443334,
+            "age": 2.9844265239477146
+          },
+          "pose": {
+            "ParamAngleX": 1.3644899878270635,
+            "ParamAngleY": 0.3316102313895443,
+            "ParamAngleZ": 0.3645653464705188,
+            "ParamBodyAngleX": -0.02212799546761026,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.452987933213653,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07241901776059141,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 912
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0.001589256083795386,
+            "age": 2.9713264095366005
+          },
+          "pose": {
+            "ParamAngleX": 1.3438393019445223,
+            "ParamAngleY": 0.337296438333059,
+            "ParamAngleZ": 0.35994953447284744,
+            "ParamBodyAngleX": -0.019976640924296792,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5408920958976003,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0724886197143091,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 610
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "wallSeconds": 5.927,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.075626523947715
+          },
+          "pose": {
+            "ParamAngleX": 1.4856783071576416,
+            "ParamAngleY": 0.28783698581972844,
+            "ParamAngleZ": 0.39751053089571414,
+            "ParamBodyAngleX": -0.04203831837286699,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.42690011001683287,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0732845697756674,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 918
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.0754264095365995
+          },
+          "pose": {
+            "ParamAngleX": 1.4856343842096593,
+            "ParamAngleY": 0.28645278682107267,
+            "ParamAngleZ": 0.39838314576399814,
+            "ParamBodyAngleX": -0.04317985646322472,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.5717611596863789,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0735018694147507,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 615
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "wallSeconds": 6.032,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.1791265239477156
+          },
+          "pose": {
+            "ParamAngleX": 1.6075375283145983,
+            "ParamAngleY": 0.23317366446337232,
+            "ParamAngleZ": 0.4355056614660051,
+            "ParamBodyAngleX": -0.06741870039680593,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.39688801957515957,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07487130232564303,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 924
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.1789264095366
+          },
+          "pose": {
+            "ParamAngleX": 1.6045064749401796,
+            "ParamAngleY": 0.23444595974462706,
+            "ParamAngleZ": 0.4346592915973713,
+            "ParamBodyAngleX": -0.06693917972233047,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6012730431456438,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07486778850008953,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 622
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "wallSeconds": 6.138,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.2820265239477173
+          },
+          "pose": {
+            "ParamAngleX": 1.7065018934619782,
+            "ParamAngleY": 0.17718669058579944,
+            "ParamAngleZ": 0.47163399420812774,
+            "ParamBodyAngleX": -0.09362049512175677,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.367399668921742,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0768511261401856,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 930
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.281726409536602
+          },
+          "pose": {
+            "ParamAngleX": 1.7063388027572237,
+            "ParamAngleY": 0.17708271181951044,
+            "ParamAngleZ": 0.47167986841496123,
+            "ParamBodyAngleX": -0.09370173963989964,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6309362579795871,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07686789233867661,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 628
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "wallSeconds": 6.234,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.371026523947716
+          },
+          "pose": {
+            "ParamAngleX": 1.7823486529349002,
+            "ParamAngleY": 0.12524205644957842,
+            "ParamAngleZ": 0.5031884524945877,
+            "ParamBodyAngleX": -0.11742390227310617,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.34222321723777954,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07870927168428457,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 935
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.3838264095366
+          },
+          "pose": {
+            "ParamAngleX": 1.7892566545248902,
+            "ParamAngleY": 0.12024154717559687,
+            "ParamAngleZ": 0.506183416260714,
+            "ParamBodyAngleX": -0.11971178064605506,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6596128307520908,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.07889095429748225,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 634
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "wallSeconds": 6.339,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.4867265239477163
+          },
+          "pose": {
+            "ParamAngleX": 1.860801929731267,
+            "ParamAngleY": 0.05999948552473023,
+            "ParamAngleZ": 0.5407529691509098,
+            "ParamBodyAngleX": -0.1465654525796241,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.3104835967848144,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.08097672271780927,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 941
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.4865264095366006
+          },
+          "pose": {
+            "ParamAngleX": 1.85861553166324,
+            "ParamAngleY": 0.062037214677196514,
+            "ParamAngleZ": 0.5396135308972602,
+            "ParamBodyAngleX": -0.14567112781131103,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.6879827111157174,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.08090824905215559,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 640
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "wallSeconds": 6.428,
+      "states": [
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.5769265239477193
+          },
+          "pose": {
+            "ParamAngleX": 1.9105506908254453,
+            "ParamAngleY": 0.007690107518002873,
+            "ParamAngleZ": 0.569345032795994,
+            "ParamBodyAngleX": -0.16935548927335814,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.2862613431868873,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.08272742217851088,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 946
+        },
+        {
+          "acting": {
+            "id": "dbc40427364045e3979ccd18156cd7b9",
+            "running": false,
+            "weight": 0,
+            "age": 3.576726409536602
+          },
+          "pose": {
+            "ParamAngleX": 1.909264383043492,
+            "ParamAngleY": 0.009044738102177128,
+            "ParamAngleZ": 0.5686057808792455,
+            "ParamBodyAngleX": -0.16876681768747617,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7123774206130616,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.08268244271796099,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 645
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "wallSeconds": 6.955,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.13593830900381976,
+            "age": 0.02909152183532626
+          },
+          "pose": {
+            "ParamAngleX": 0.09421342878066229,
+            "ParamAngleY": -0.00691666523083158,
+            "ParamAngleZ": 0.030571165019614557,
+            "ParamBodyAngleX": -0.011074235801028221,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.15931688321052018,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.004137329022902925,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 978
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.13641820995843046,
+            "age": 0.02859143792986707
+          },
+          "pose": {
+            "ParamAngleX": 0.09419396579826873,
+            "ParamAngleY": -0.0068304064358689015,
+            "ParamAngleZ": 0.03052996271211903,
+            "ParamBodyAngleX": -0.011038373863898816,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.839178202293497,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.00413469588100086,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 681
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "wallSeconds": 6.99,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.19658901891873246,
+            "age": 0.042191521835327706
+          },
+          "pose": {
+            "ParamAngleX": 0.0805084966643507,
+            "ParamAngleY": -0.005910519624131657,
+            "ParamAngleZ": 0.026124073487835242,
+            "ParamBodyAngleX": -0.009463301437876468,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.15659269526603062,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0035354847408766597,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 979
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.3050315908347299,
+            "age": 0.06769143792986831
+          },
+          "pose": {
+            "ParamAngleX": 0.05891855828017304,
+            "ParamAngleY": -0.004272436097773979,
+            "ParamAngleZ": 0.019096567090060416,
+            "ParamBodyAngleX": -0.0069045301183233,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8477521082763831,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.002586262486890833,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 683
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "wallSeconds": 7.024,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.3968296123318684,
+            "age": 0.09379152183532824
+          },
+          "pose": {
+            "ParamAngleX": 0.043343759100673174,
+            "ParamAngleY": -0.0031820757977412675,
+            "ParamAngleZ": 0.01406454715836726,
+            "ParamBodyAngleX": -0.005094804583551465,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.1454192684566207,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0019034164748044455,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 981
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.3534541164872337,
+            "age": 0.08069143792986821
+          },
+          "pose": {
+            "ParamAngleX": 0.050408314020012515,
+            "ParamAngleY": -0.003655321968723419,
+            "ParamAngleZ": 0.016338243478437924,
+            "ParamBodyAngleX": -0.005907234197924995,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8504154834596226,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.002212700639371258,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 684
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "wallSeconds": 7.059,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.4776641172299123,
+            "age": 0.11969152183532827
+          },
+          "pose": {
+            "ParamAngleX": 0.03176492607535924,
+            "ParamAngleY": -0.0023320174479253067,
+            "ParamAngleZ": 0.010307350124645771,
+            "ParamBodyAngleX": -0.0037337806946790685,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.1399971211070236,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.001394938622475065,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 982
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.5127066076244045,
+            "age": 0.1315914379298686
+          },
+          "pose": {
+            "ParamAngleX": 0.027367498472640757,
+            "ParamAngleY": -0.0019845341059479367,
+            "ParamAngleZ": 0.00887029971413576,
+            "ParamBodyAngleX": -0.0032071341014313776,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8612454030099103,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0012013113817764837,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 686
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "wallSeconds": 7.093,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.6074141344684785,
+            "age": 0.17109152183532572
+          },
+          "pose": {
+            "ParamAngleX": 0.017142533724538077,
+            "ParamAngleY": -0.001258516630966807,
+            "ParamAngleZ": 0.005562553386813244,
+            "ParamBodyAngleX": -0.002015004263718919,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.12957232389727608,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0007528045972060098,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 984
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.5466591966650258,
+            "age": 0.1445914379298685
+          },
+          "pose": {
+            "ParamAngleX": 0.023414514835732612,
+            "ParamAngleY": -0.0016978863929484897,
+            "ParamAngleZ": 0.007589066441774268,
+            "ParamBodyAngleX": -0.002743893055231913,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8637703778401086,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0010277929931761778,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 687
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "wallSeconds": 7.129,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.6333447821267627,
+            "age": 0.18339152183532903
+          },
+          "pose": {
+            "ParamAngleX": 0.014790169357671738,
+            "ParamAngleY": -0.0010858181416205498,
+            "ParamAngleZ": 0.004799238430798261,
+            "ParamBodyAngleX": -0.001738497633764259,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.12729694759858828,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0006495018568913891,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 985
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.6828350626542731,
+            "age": 0.20889143792986964
+          },
+          "pose": {
+            "ParamAngleX": 0.010823894264311563,
+            "ParamAngleY": -0.0007848867644287787,
+            "ParamAngleZ": 0.0035082192950349764,
+            "ParamBodyAngleX": -0.0012684272345923142,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8770052873228062,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0004751207856231955,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 689
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "wallSeconds": 7.164,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.7420527055481744,
+            "age": 0.24669152183532717
+          },
+          "pose": {
+            "ParamAngleX": 0.0069196329580602355,
+            "ParamAngleY": -0.0005080038515799686,
+            "ParamAngleZ": 0.0022453406459551645,
+            "ParamBodyAngleX": -0.0008133622565900504,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.11470654345559905,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.00030387173713705684,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 987
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.7041130365347299,
+            "age": 0.22139143792986893
+          },
+          "pose": {
+            "ParamAngleX": 0.009316212129274394,
+            "ParamAngleY": -0.0006755582987343051,
+            "ParamAngleZ": 0.0030195523302848975,
+            "ParamBodyAngleX": -0.0010917454383283828,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8792447347317894,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0004089402499512243,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 690
+        }
+      ]
+    },
+    {
+      "frame": 72,
+      "wallSeconds": 7.228,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.805155905494093,
+            "age": 0.29719152183533026
+          },
+          "pose": {
+            "ParamAngleX": 0.003774857854217535,
+            "ParamAngleY": -0.00027713064272804597,
+            "ParamAngleZ": 0.0012248975956022006,
+            "ParamBodyAngleX": -0.00044371239359403055,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.10576378826709697,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.00016577073098514482,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 990
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.8052641221502931,
+            "age": 0.2966914379298675
+          },
+          "pose": {
+            "ParamAngleX": 0.003774078029166077,
+            "ParamAngleY": -0.00027367450389652456,
+            "ParamAngleZ": 0.0012232467390728098,
+            "ParamBodyAngleX": -0.0004422755101604105,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.893035932279582,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.00016566522865369822,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 694
+        }
+      ]
+    },
+    {
+      "frame": 73,
+      "wallSeconds": 7.342,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.8954754527588648,
+            "age": 0.40929152183532835
+          },
+          "pose": {
+            "ParamAngleX": 0.0009833036821469741,
+            "ParamAngleY": -0.00007218909743204901,
+            "ParamAngleZ": 0.0003190706412065099,
+            "ParamBodyAngleX": -0.00011558157877330092,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.08682128716543341,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.00004318122071478005,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 997
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.8955335058244316,
+            "age": 0.40879143792986916
+          },
+          "pose": {
+            "ParamAngleX": 0.0009831005473868787,
+            "ParamAngleY": -0.0000712888161048316,
+            "ParamAngleZ": 0.00031864061354275054,
+            "ParamBodyAngleX": -0.00011520728844882538,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9122904216293152,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.000043153738665125063,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 701
+        }
+      ]
+    },
+    {
+      "frame": 74,
+      "wallSeconds": 7.426,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9357159956382745,
+            "age": 0.49679152183532693
+          },
+          "pose": {
+            "ParamAngleX": 0.00034409507722322303,
+            "ParamAngleY": -0.00002526169026573712,
+            "ParamAngleZ": 0.00011165486199125915,
+            "ParamBodyAngleX": -0.00004044635751464262,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.07293382853964188,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.000015110739180802126,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1002
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9357516990554967,
+            "age": 0.49629143792986774
+          },
+          "pose": {
+            "ParamAngleX": 0.000344023992702509,
+            "ParamAngleY": -0.00002494664784452385,
+            "ParamAngleZ": 0.00011150437907854764,
+            "ParamBodyAngleX": -0.00004031537920098156,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.926337207829127,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.000015101122174204894,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 706
+        }
+      ]
+    },
+    {
+      "frame": 75,
+      "wallSeconds": 7.541,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.965838864386747,
+            "age": 0.6105915218353246
+          },
+          "pose": {
+            "ParamAngleX": 0.000087822524099761,
+            "ParamAngleY": -0.000006447477889153789,
+            "ParamAngleZ": 0.000028497390567786505,
+            "ParamBodyAngleX": -0.000010323022451358446,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.056624643631509326,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.000003856676086680248,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1009
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9658388643867475,
+            "age": 0.6099914379298674
+          },
+          "pose": {
+            "ParamAngleX": 0.00008790980987781062,
+            "ParamAngleY": -0.000006374715472235119,
+            "ParamAngleZ": 0.00002849315446965033,
+            "ParamBodyAngleX": -0.000010301948107947419,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9426908703086629,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.000003858849404215582,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 713
+        }
+      ]
+    },
+    {
+      "frame": 76,
+      "wallSeconds": 7.639,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9804216973450868,
+            "age": 0.7107915218353256
+          },
+          "pose": {
+            "ParamAngleX": -0.08700594033853731,
+            "ParamAngleY": -0.000001937287946717408,
+            "ParamAngleZ": 0.00000856267399578736,
+            "ParamBodyAngleX": -0.0000031017813961568573,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.043834266414146665,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0000011588239968511957,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1015
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9804434389338065,
+            "age": 0.7103914379298697
+          },
+          "pose": {
+            "ParamAngleX": -0.07822307388602831,
+            "ParamAngleY": -0.0000019108333546589498,
+            "ParamAngleZ": 0.000008540878440331033,
+            "ParamBodyAngleX": -0.0000030880289713902273,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9555819683447035,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0000011566976101594687,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 719
+        }
+      ]
+    },
+    {
+      "frame": 77,
+      "wallSeconds": 7.732,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.98887247302979,
+            "age": 0.8124915218353266
+          },
+          "pose": {
+            "ParamAngleX": -0.9499344970149749,
+            "ParamAngleY": -5.717171113012679e-7,
+            "ParamAngleZ": 0.0000025269486914327708,
+            "ParamBodyAngleX": -9.153732168228314e-7,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.032475022102297454,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -3.4198298147105377e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1021
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9880457290964174,
+            "age": 0.7989914379298675
+          },
+          "pose": {
+            "ParamAngleX": -0.778491809571109,
+            "ParamAngleY": -6.599042424018312e-7,
+            "ParamAngleZ": 0.0000029495831768222086,
+            "ParamBodyAngleX": -0.0000010664474816245219,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9656831642698633,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -3.994642747151178e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 724
+        }
+      ]
+    },
+    {
+      "frame": 78,
+      "wallSeconds": 7.834,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9932094424149719,
+            "age": 0.901391521835329
+          },
+          "pose": {
+            "ParamAngleX": -2.5378457451053884,
+            "ParamAngleY": -1.9673237613778736e-7,
+            "ParamAngleZ": 8.695430145729469e-7,
+            "ParamBodyAngleX": -3.1498715787701887e-7,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.023926961777391335,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -1.1767904653116531e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1026
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.993213213899232,
+            "age": 0.9008914379298698
+          },
+          "pose": {
+            "ParamAngleX": -2.515707041472631,
+            "ParamAngleY": -1.9427889644353883e-7,
+            "ParamAngleZ": 8.683710874107511e-7,
+            "ParamBodyAngleX": -3.139671281562112e-7,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9755755131067206,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -1.1760415144143701e-7,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 730
+        }
+      ]
+    },
+    {
+      "frame": 79,
+      "wallSeconds": 7.933,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9961852833472408,
+            "age": 1.0051915218353287
+          },
+          "pose": {
+            "ParamAngleX": -5.11987678231077,
+            "ParamAngleY": -5.661332085888779e-8,
+            "ParamAngleZ": 2.502268241305879e-7,
+            "ParamBodyAngleX": -0.000031394562771337437,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.015613672574902421,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.000011627908540686666,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1032
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.996189519567408,
+            "age": 1.0047914379298692
+          },
+          "pose": {
+            "ParamAngleX": -5.1173408480328355,
+            "ParamAngleY": -5.584023892703981e-8,
+            "ParamAngleZ": 2.495898931176081e-7,
+            "ParamBodyAngleX": -0.000026762460536631328,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9840304018238663,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.000009912401828035619,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 736
+        }
+      ]
+    },
+    {
+      "frame": 80,
+      "wallSeconds": 8.051,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9979818127178928,
+            "age": 1.119791521835328
+          },
+          "pose": {
+            "ParamAngleX": -8.33287443065576,
+            "ParamAngleY": -1.4311226631555934e-8,
+            "ParamAngleZ": 6.325459688813041e-8,
+            "ParamBodyAngleX": -0.04442786534099811,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.008546846683085692,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.016454765015101618,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1039
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.927790364564479,
+            "age": 1.1192914379298688
+          },
+          "pose": {
+            "ParamAngleX": -8.175699924303395,
+            "ParamAngleY": -1.4132749125058576e-8,
+            "ParamAngleZ": 6.31693454641229e-8,
+            "ParamBodyAngleX": -0.03985584605019037,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.991190434105918,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.014761424559058576,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 743
+        }
+      ]
+    },
+    {
+      "frame": 81,
+      "wallSeconds": 8.138,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9987690880973263,
+            "age": 1.2087915218353267
+          },
+          "pose": {
+            "ParamAngleX": -10.682808790614594,
+            "ParamAngleY": -4.918700198885474e-9,
+            "ParamAngleZ": 2.1740302652187197e-8,
+            "ParamBodyAngleX": -0.17056430664322308,
+            "ParamEyeLOpen": 0.9881929323550324,
+            "ParamEyeROpen": 0.9881929323550324,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.004561406591684838,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.06317196544884637,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1044
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.5658682982759762,
+            "age": 1.2082914379298693
+          },
+          "pose": {
+            "ParamAngleX": -7.219862813820524,
+            "ParamAngleY": -4.857358332859158e-9,
+            "ParamAngleZ": 2.1711002145178495e-8,
+            "ParamBodyAngleX": -0.0508006094735234,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9952343184428095,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.018815040578752776,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 748
+        }
+      ]
+    },
+    {
+      "frame": 82,
+      "wallSeconds": 8.23,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9993046610344711,
+            "age": 1.3115915218353251
+          },
+          "pose": {
+            "ParamAngleX": -12.708626810869305,
+            "ParamAngleY": -1.4325331466793566e-9,
+            "ParamAngleZ": 6.331693924983703e-9,
+            "ParamBodyAngleX": -0.4159751729297556,
+            "ParamEyeLOpen": 0.07238646864832976,
+            "ParamEyeROpen": 0.07238646864832976,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0016699291755085152,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.15406487887027884,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1050
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.3437889766720511,
+            "age": 1.297991437929868
+          },
+          "pose": {
+            "ParamAngleX": -5.153248083286159,
+            "ParamAngleY": -1.655486191894934e-9,
+            "ParamAngleZ": 7.3995496729984504e-9,
+            "ParamBodyAngleX": -0.03996755257376248,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9979452983172608,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.014802797260789877,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 753
+        }
+      ]
+    },
+    {
+      "frame": 83,
+      "wallSeconds": 8.339,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9996065496036273,
+            "age": 1.4140915218353278
+          },
+          "pose": {
+            "ParamAngleX": -13.615175841932006,
+            "ParamAngleY": -4.1871880605618177e-10,
+            "ParamAngleZ": 1.8507071384197244e-9,
+            "ParamBodyAngleX": -0.7474314390355516,
+            "ParamEyeLOpen": 0.5831854219968794,
+            "ParamEyeROpen": 0.5831854219968794,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.0006082263732458967,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.276826458904221,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1056
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.18087493164037846,
+            "age": 1.4135914379298686
+          },
+          "pose": {
+            "ParamAngleX": -2.987123112757713,
+            "ParamAngleY": -4.1349689948224244e-10,
+            "ParamAngleZ": 1.8482128466728309e-9,
+            "ParamBodyAngleX": -0.02428542331247926,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9993932100189834,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.008994601229653681,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 760
+        }
+      ]
+    },
+    {
+      "frame": 84,
+      "wallSeconds": 8.441,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9997784805141248,
+            "age": 1.5174915218353284
+          },
+          "pose": {
+            "ParamAngleX": -13.886061838969715,
+            "ParamAngleY": -1.2107371649981626e-10,
+            "ParamAngleZ": 5.3513715687074e-10,
+            "ParamBodyAngleX": -1.134717404097422,
+            "ParamEyeLOpen": 0.9873520437946244,
+            "ParamEyeROpen": 0.9873520437946244,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.001378551358386814,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.4202657052218933,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1062
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.10183576439134288,
+            "age": 1.5169914379298675
+          },
+          "pose": {
+            "ParamAngleX": -1.7436668788288863,
+            "ParamAngleY": -1.1956378757621367e-10,
+            "ParamAngleZ": 5.34415925420281e-10,
+            "ParamBodyAngleX": -0.01442541226839247,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9987271834780834,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.005342745285402181,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 766
+        }
+      ]
+    },
+    {
+      "frame": 85,
+      "wallSeconds": 8.528,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9998562992833517,
+            "age": 1.595391521835328
+          },
+          "pose": {
+            "ParamAngleX": -13.95384760480544,
+            "ParamAngleY": -4.754133710185423e-11,
+            "ParamAngleZ": 2.1012930556697917e-10,
+            "ParamBodyAngleX": -1.4370114485121706,
+            "ParamEyeLOpen": 0.9991722171046583,
+            "ParamEyeROpen": 0.9991722171046583,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.003134505968372079,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.5322264624121607,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1067
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.06145845158804944,
+            "age": 1.6078914379298688
+          },
+          "pose": {
+            "ParamAngleX": -1.0675515710796022,
+            "ParamAngleY": -4.016717083957593e-11,
+            "ParamAngleZ": 1.7953576254903615e-10,
+            "ParamBodyAngleX": -0.008899511099558171,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9965906471916022,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.003296115222331498,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 771
+        }
+      ]
+    },
+    {
+      "frame": 86,
+      "wallSeconds": 8.632,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999192287028539,
+            "age": 1.699091521835328
+          },
+          "pose": {
+            "ParamAngleX": -13.985726987441316,
+            "ParamAngleY": -1.3697311700856903e-11,
+            "ParamAngleZ": 6.054113685673478e-11,
+            "ParamBodyAngleX": -1.8358241846589232,
+            "ParamEyeLOpen": 0.9999780393785305,
+            "ParamEyeROpen": 0.9999780393785305,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.00713578268327526,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.6799348832070793,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1073
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.03713175278124312,
+            "age": 1.698591437929867
+          },
+          "pose": {
+            "ParamAngleX": -0.6551130193326966,
+            "ParamAngleY": -1.3526490421799267e-11,
+            "ParamAngleZ": 6.045954250024556e-11,
+            "ParamBodyAngleX": -0.005484035875675292,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9931458971656825,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.002031124398490162,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 777
+        }
+      ]
+    },
+    {
+      "frame": 87,
+      "wallSeconds": 8.738,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999575516375626,
+            "age": 1.814891521835328
+          },
+          "pose": {
+            "ParamAngleX": -13.995895512283775,
+            "ParamAngleY": -3.4130270223288993e-12,
+            "ParamAngleZ": 1.5085335032685368e-11,
+            "ParamBodyAngleX": -2.2310886187933434,
+            "ParamEyeLOpen": 0.9999996185399239,
+            "ParamEyeROpen": 0.9999996185399239,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.01383858499490528,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.8263291180716262,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1079
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.019514136279630286,
+            "age": 1.814391437929869
+          },
+          "pose": {
+            "ParamAngleX": -0.34557191465524106,
+            "ParamAngleY": -3.370462637861031e-12,
+            "ParamAngleZ": 1.506500376260517e-11,
+            "ParamBodyAngleX": -0.0029005336306309848,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9865489249093962,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0010742717150714132,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 783
+        }
+      ]
+    },
+    {
+      "frame": 88,
+      "wallSeconds": 8.836,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999741964892574,
+            "age": 1.9044915218353289
+          },
+          "pose": {
+            "ParamAngleX": -13.998324812518371,
+            "ParamAngleY": -1.1646255131058237e-12,
+            "ParamAngleZ": 5.14756136938708e-12,
+            "ParamBodyAngleX": -2.467379483169172,
+            "ParamEyeLOpen": 0.9999999834231658,
+            "ParamEyeROpen": 0.9999999834231658,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.02070631280870209,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9138442530256252,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1083
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.011862253246345811,
+            "age": 1.903991437929868
+          },
+          "pose": {
+            "ParamAngleX": -0.21062392390642887,
+            "ParamAngleY": -1.150101289366423e-12,
+            "ParamAngleZ": 5.140623740210885e-12,
+            "ParamBodyAngleX": -0.001769707967354615,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.979952622256132,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0006554473953243382,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 788
+        }
+      ]
+    },
+    {
+      "frame": 89,
+      "wallSeconds": 8.936,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999853749943393,
+            "age": 2.0066915218353287
+          },
+          "pose": {
+            "ParamAngleX": -13.999336071716305,
+            "ParamAngleY": -3.4163908278957403e-13,
+            "ParamAngleZ": 1.5100202812409537e-12,
+            "ParamBodyAngleX": -2.625442780703153,
+            "ParamEyeLOpen": 0.9999999995365207,
+            "ParamEyeROpen": 0.9999999995365207,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.029930703071964167,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9723862150752436,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1088
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.006286228966648926,
+            "age": 2.018291437929868
+          },
+          "pose": {
+            "ParamAngleX": -0.11133108887777293,
+            "ParamAngleY": -2.917815177107043e-13,
+            "ParamAngleZ": 1.304179910731782e-12,
+            "ParamBodyAngleX": -0.0009360751223902185,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.969479066011253,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.00034669448977613744,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 794
+        }
+      ]
+    },
+    {
+      "frame": 90,
+      "wallSeconds": 9.033,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.999991701571882,
+            "age": 2.108691521835329
+          },
+          "pose": {
+            "ParamAngleX": -13.999705764612228,
+            "ParamAngleY": -1.0045952060849356e-13,
+            "ParamAngleZ": 4.440238872084872e-13,
+            "ParamBodyAngleX": -2.6780572359501695,
+            "ParamEyeLOpen": 0.9999999999869503,
+            "ParamEyeROpen": 0.9999999999869503,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.04072215779807641,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9918730503519151,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1094
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.0038127906022462424,
+            "age": 2.108291437929868
+          },
+          "pose": {
+            "ParamAngleX": -0.06799937681280177,
+            "ParamAngleY": -9.908769788044472e-14,
+            "ParamAngleZ": 4.428936623205293e-13,
+            "ParamBodyAngleX": -0.000571902766575997,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9600461697732043,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0002118158394732647,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 800
+        }
+      ]
+    },
+    {
+      "frame": 91,
+      "wallSeconds": 9.136,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999953148429039,
+            "age": 2.2115915218353273
+          },
+          "pose": {
+            "ParamAngleX": -13.999858152607494,
+            "ParamAngleY": -2.922296481230241e-14,
+            "ParamAngleZ": 1.2916341182120168e-13,
+            "ParamBodyAngleX": -2.6936061555125366,
+            "ParamEyeLOpen": 0.999999999999644,
+            "ParamEyeROpen": 0.999999999999644,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.05337286606504395,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9976319094490879,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1100
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.002153835597320385,
+            "age": 2.211091437929868
+          },
+          "pose": {
+            "ParamAngleX": -0.038339360688674516,
+            "ParamAngleY": -2.885852072749839e-14,
+            "ParamAngleZ": 1.2898933174909387e-13,
+            "ParamBodyAngleX": -0.0003225051017323173,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9473603905911533,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0001194463339751284,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 806
+        }
+      ]
+    },
+    {
+      "frame": 92,
+      "wallSeconds": 9.245,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999973694913655,
+            "age": 2.3154915218353267
+          },
+          "pose": {
+            "ParamAngleX": -13.989099811373551,
+            "ParamAngleY": -8.399354572974143e-15,
+            "ParamAngleZ": 3.712454573687306e-14,
+            "ParamBodyAngleX": -2.6981562260847145,
+            "ParamEyeLOpen": 0.9999999999999907,
+            "ParamEyeROpen": 0.9999999999999907,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.06813420987684174,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9993171207721165,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1105
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": false,
+            "weight": 0.0012099555032886763,
+            "age": 2.3148914379298695
+          },
+          "pose": {
+            "ParamAngleX": -0.02166002079893921,
+            "ParamAngleY": -8.304564431806744e-15,
+            "ParamAngleZ": 3.7119027223919054e-14,
+            "ParamBodyAngleX": -0.00018221730526322687,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9331799497349527,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.0000674878908382886,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 813
+        }
+      ]
+    },
+    {
+      "frame": 93,
+      "wallSeconds": 9.33,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999984018545052,
+            "age": 2.4051915218353273
+          },
+          "pose": {
+            "ParamAngleX": -13.297443686548593,
+            "ParamAngleY": -2.8626703165634343e-15,
+            "ParamAngleZ": 1.2652797804107567e-14,
+            "ParamBodyAngleX": -2.6993682893210034,
+            "ParamEyeLOpen": 0.9999999999999996,
+            "ParamEyeROpen": 0.9999999999999996,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.08192427772650658,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9997660330818532,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1109
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.1349777068892566,
+            "age": 2.404691437929868
+          },
+          "pose": {
+            "ParamAngleX": -0.4547706476096734,
+            "ParamAngleY": -2.826969515145278e-15,
+            "ParamAngleZ": 1.2635744987655814e-14,
+            "ParamBodyAngleX": -0.09806412907485393,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9192068601611781,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.03632004780550148,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 818
+        }
+      ]
+    },
+    {
+      "frame": 94,
+      "wallSeconds": 9.44,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999990977131333,
+            "age": 2.5080915218353255
+          },
+          "pose": {
+            "ParamAngleX": -10.54578493245594,
+            "ParamAngleY": -8.327305707158925e-16,
+            "ParamAngleZ": 3.6806094909370995e-15,
+            "ParamBodyAngleX": -2.6998141800533335,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.09926540776877683,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.999931177797531,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1114
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.5113511331359232,
+            "age": 2.5074914379298683
+          },
+          "pose": {
+            "ParamAngleX": -2.8071938161380836,
+            "ParamAngleY": -8.233328666819959e-16,
+            "ParamAngleZ": 3.680062373369699e-15,
+            "ParamBodyAngleX": -0.8007738506421417,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.9023037062554374,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.29658290764523765,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 825
+        }
+      ]
+    },
+    {
+      "frame": 95,
+      "wallSeconds": 9.53,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999994931242843,
+            "age": 2.6118915218353287
+          },
+          "pose": {
+            "ParamAngleX": -5.814792613270223,
+            "ParamAngleY": -2.396333735933889e-16,
+            "ParamAngleZ": 1.0591623511970465e-15,
+            "ParamBodyAngleX": -2.699945374488237,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.11847797173635938,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9999797683289766,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1118
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.7046057707479345,
+            "age": 2.5980914379298685
+          },
+          "pose": {
+            "ParamAngleX": -2.906742716469812,
+            "ParamAngleY": -2.775942663805885e-16,
+            "ParamAngleZ": 1.240766956003152e-15,
+            "ParamBodyAngleX": -1.4379884058664787,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8856944356106684,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.5325882984690662,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 830
+        }
+      ]
+    },
+    {
+      "frame": 96,
+      "wallSeconds": 9.642,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999997136672129,
+            "age": 2.714691521835327
+          },
+          "pose": {
+            "ParamAngleX": -0.19838014295450002,
+            "ParamAngleY": -6.979135479753609e-17,
+            "ParamAngleZ": 3.084727904637107e-16,
+            "ParamBodyAngleX": -2.6737475228851273,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.138526842265127,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9902768603278247,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1123
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.8450177127569932,
+            "age": 2.714191437929868
+          },
+          "pose": {
+            "ParamAngleX": 0.3858469552823075,
+            "ParamAngleY": -6.892097608717098e-17,
+            "ParamAngleZ": 3.08057046060174e-16,
+            "ParamBodyAngleX": -1.9815994801835843,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8630014154311628,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.7339257334013275,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 836
+        }
+      ]
+    },
+    {
+      "frame": 97,
+      "wallSeconds": 9.736,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999998258472994,
+            "age": 2.804191521835328
+          },
+          "pose": {
+            "ParamAngleX": 4.794190113101045,
+            "ParamAngleY": -2.3843464278333414e-17,
+            "ParamAngleZ": 1.0538640468574163e-16,
+            "ParamBodyAngleX": -2.486776197476953,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.15717212289811086,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.9210282212877602,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1127
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9056846299002965,
+            "age": 2.8035914379298674
+          },
+          "pose": {
+            "ParamAngleX": 4.297002387560063,
+            "ParamAngleY": -2.357438106185259e-17,
+            "ParamAngleZ": 1.0537073914080886e-16,
+            "ParamBodyAngleX": -2.085961174516463,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8448348879232976,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.7725782127838753,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 842
+        }
+      ]
+    },
+    {
+      "frame": 98,
+      "wallSeconds": 9.828,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.999999894605518,
+            "age": 2.894591521835327
+          },
+          "pose": {
+            "ParamAngleX": 9.13225030197129,
+            "ParamAngleY": -8.058360672543905e-18,
+            "ParamAngleZ": 3.5617377115459013e-17,
+            "ParamBodyAngleX": -2.0950654383214484,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.17677802132899445,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.775950162341277,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1131
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9469282820415671,
+            "age": 2.907091437929868
+          },
+          "pose": {
+            "ParamAngleX": 8.932021540719113,
+            "ParamAngleY": -6.808423354343542e-18,
+            "ParamAngleZ": 3.043170462666419e-17,
+            "ParamBodyAngleX": -1.8338136266007716,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.8221498288518643,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.6791902320743599,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 848
+        }
+      ]
+    },
+    {
+      "frame": 99,
+      "wallSeconds": 9.934,
+      "states": [
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9999999406610549,
+            "age": 2.9979915218353277
+          },
+          "pose": {
+            "ParamAngleX": 12.399586664627291,
+            "ParamAngleY": -2.330097577203017e-18,
+            "ParamAngleZ": 1.0298864433534706e-17,
+            "ParamBodyAngleX": -1.4222380038688647,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.20053224765456135,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.5267548162477277,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 1136
+        },
+        {
+          "acting": {
+            "id": "d574018e03d64baab1958877b57b4196",
+            "running": true,
+            "weight": 0.9701196903471158,
+            "age": 3.0104914379298666
+          },
+          "pose": {
+            "ParamAngleX": 12.031351543750892,
+            "ParamAngleY": -1.968674697892438e-18,
+            "ParamAngleZ": 8.799412697218572e-18,
+            "ParamBodyAngleX": -1.2685387169657514,
+            "ParamEyeLOpen": 1,
+            "ParamEyeROpen": 1,
+            "ParamMouthOpenY": 0,
+            "ParamBreath": 0.7985812493534693,
+            "ParamArmLOpen": 0,
+            "ParamArmROpen": 0,
+            "ParamHandToCheek": 0,
+            "ParamShoulderY": 0,
+            "ParamBodyShiftX": -0.4698291544317597,
+            "ParamBodyBounce": 0,
+            "ParamSkirtSway": 0
+          },
+          "frames": 855
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "n": 10,
+      "action": "stop"
+    },
+    {
+      "n": 25,
+      "action": "restart"
+    },
+    {
+      "n": 45,
+      "action": "AI mode"
+    },
+    {
+      "n": 65,
+      "action": "human/start"
+    },
+    {
+      "n": 80,
+      "action": "overlay reconnect"
+    }
+  ],
+  "join": [
+    {
+      "id": "063e1deef41240ffabdcddf146fd92df",
+      "running": true,
+      "weight": 0.9999999999905657,
+      "age": 4.582913272476197
+    },
+    {
+      "id": "063e1deef41240ffabdcddf146fd92df",
+      "running": true,
+      "weight": 0.9822454083340985,
+      "age": 4.583713343048096
+    }
+  ],
+  "reconnected": true,
+  "mouthAndExpression": [
+    {
+      "mouth": 0.628617509998094,
+      "expression": "worried"
+    },
+    {
+      "mouth": 0.628617509998094,
+      "expression": "worried"
+    }
+  ],
+  "settled": true,
+  "note": "Live UI capture at nominal 10 samples/sec; actual wall times retained. Not fixed-dt rig simulation. Separate browser contexts share only the existing server WebSocket."
+}

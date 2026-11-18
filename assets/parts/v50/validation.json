@@ -1,0 +1,41 @@
+{
+  "base": "474c8cb7699730581f71ae154fa4a116bdeeaae5",
+  "files": {
+    "runtime/web/performance-sequence.js": {
+      "bytes": 3134,
+      "sha256": "37bbec80b18319e1bae29e453f75d2e75e34bcdd94e54f8c4b901b1d78933ac1"
+    },
+    "runtime/web/acting-controller.js": {
+      "bytes": 4892,
+      "sha256": "a8349ceb96507394296ad3d5019672a92c8e97aebfe906f1392b3cae36d3d596"
+    },
+    "runtime/web/app.js": {
+      "bytes": 37336,
+      "sha256": "fc992b66ec0c3d060e06aa817fc63bf409b67b70935388fdb918822c4246244a"
+    },
+    "runtime/server.py": {
+      "bytes": 26798,
+      "sha256": "6bd04631a742c097ae65507750d647fdcef00c2bd77e71f31692d5c070dafb0c"
+    },
+    "runtime/web/eye-components.js": {
+      "bytes": 15634,
+      "sha256": "f03aa72e6e79cd36b38f59d0f1bc8c714b29345ec7722452c7b5f655736d0277"
+    },
+    "runtime/model/model.json": {
+      "bytes": 46009,
+      "sha256": "30f9d139654b62ab518ff6d2b086a2cb3b23bbd0206828a7b26c1a998a62559c"
+    },
+    "assets/parts/v47/koma_aligned_eyes_v47.psd": {
+      "bytes": 27075106,
+      "sha256": "10dcb1d4e03f58153074c37ec48f54a552cc8fb708fb41e56380a540c7d2c77e"
+    }
+  },
+  "source_art_changed": false,
+  "runtime_sources_precede_final_capture": true,
+  "tests": {
+    "javascript": 221,
+    "python_runtime": 98
+  },
+  "ui_report": "ui-review/report.json",
+  "dense_frames": "review/frames/face-000.png ... face-689.png"
+}

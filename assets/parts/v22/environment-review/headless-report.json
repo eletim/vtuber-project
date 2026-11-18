@@ -1,0 +1,23 @@
+{
+  "baseline": "b77f2fd6c6c4d1918615f0c6b14b59d2c38be6b4",
+  "new_motion_implemented": false,
+  "headless": true,
+  "errors": [],
+  "checks": [
+    "Restored v19 appearance loads in real headless Chrome; black/white baseline screenshots captured.",
+    "Four-second real browser baseline recording; this is NOT new v22 motion."
+  ],
+  "renderer": {
+    "frames": 7,
+    "layers": [
+      "hair_back",
+      "legs_static",
+      "skirt",
+      "torso_clothing",
+      "arm_screen_left",
+      "arm_screen_right",
+      "head_hair_front"
+    ],
+    "webgl": true
+  }
+}
