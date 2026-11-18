@@ -129,3 +129,7 @@ assets/parts/v49/audit/dense/
 
 assets/parts/v50/review/frames/
 assets/parts/v50/pre-final/
+
+# v50 audible lip-sync review: dense frames and the pre-mux video stay local.
+assets/parts/v50/voice-review/frames/
+assets/parts/v50/voice-review/koma-v50-voice-video-only.mp4

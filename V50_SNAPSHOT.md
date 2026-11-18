@@ -24,6 +24,10 @@ Open http://127.0.0.1:8766/ in a WebGL-capable browser. This direct server comma
 
 Camera tracking requires the vendor files specified in runtime/vendor-manifest.json. VOICEVOX and a local conversation model are optional separate dependencies; they are not bundled or newly validated by this snapshot. Read scripts/run_runtime.py and the existing voice/conversation docs before setting those up.
 
+## Audible lip-sync review
+
+`assets/parts/v50/voice-review/koma-v50-voice-lipsync.mp4` adds the one thing the silent v50 review pair does not have: real VOICEVOX speech with the mouth driven only by the measured volume of that speech. Read [docs/v50-voice-lipsync.md](docs/v50-voice-lipsync.md) for the method, the sample lines and the verification numbers. It is regenerated with `scripts/capture_voice_lipsync_v50.mjs` and checked with `scripts/verify_voice_lipsync_v50.mjs`; VOICEVOX remains an optional separate dependency.
+
 ## Tests and comparison
 
     node --test runtime/tests/*.test.js
