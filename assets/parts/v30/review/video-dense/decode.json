@@ -1,0 +1,375 @@
+{
+  "interval": [
+    9,
+    18
+  ],
+  "step": 0.125,
+  "frames": [
+    {
+      "requested": 9,
+      "decoded": 9,
+      "file": "video-9.000.jpg"
+    },
+    {
+      "requested": 9.125,
+      "decoded": 9.125,
+      "file": "video-9.125.jpg"
+    },
+    {
+      "requested": 9.25,
+      "decoded": 9.25,
+      "file": "video-9.250.jpg"
+    },
+    {
+      "requested": 9.375,
+      "decoded": 9.375,
+      "file": "video-9.375.jpg"
+    },
+    {
+      "requested": 9.5,
+      "decoded": 9.5,
+      "file": "video-9.500.jpg"
+    },
+    {
+      "requested": 9.625,
+      "decoded": 9.625,
+      "file": "video-9.625.jpg"
+    },
+    {
+      "requested": 9.75,
+      "decoded": 9.75,
+      "file": "video-9.750.jpg"
+    },
+    {
+      "requested": 9.875,
+      "decoded": 9.875,
+      "file": "video-9.875.jpg"
+    },
+    {
+      "requested": 10,
+      "decoded": 10,
+      "file": "video-10.000.jpg"
+    },
+    {
+      "requested": 10.125,
+      "decoded": 10.125,
+      "file": "video-10.125.jpg"
+    },
+    {
+      "requested": 10.25,
+      "decoded": 10.25,
+      "file": "video-10.250.jpg"
+    },
+    {
+      "requested": 10.375,
+      "decoded": 10.375,
+      "file": "video-10.375.jpg"
+    },
+    {
+      "requested": 10.5,
+      "decoded": 10.5,
+      "file": "video-10.500.jpg"
+    },
+    {
+      "requested": 10.625,
+      "decoded": 10.625,
+      "file": "video-10.625.jpg"
+    },
+    {
+      "requested": 10.75,
+      "decoded": 10.75,
+      "file": "video-10.750.jpg"
+    },
+    {
+      "requested": 10.875,
+      "decoded": 10.875,
+      "file": "video-10.875.jpg"
+    },
+    {
+      "requested": 11,
+      "decoded": 11,
+      "file": "video-11.000.jpg"
+    },
+    {
+      "requested": 11.125,
+      "decoded": 11.125,
+      "file": "video-11.125.jpg"
+    },
+    {
+      "requested": 11.25,
+      "decoded": 11.25,
+      "file": "video-11.250.jpg"
+    },
+    {
+      "requested": 11.375,
+      "decoded": 11.375,
+      "file": "video-11.375.jpg"
+    },
+    {
+      "requested": 11.5,
+      "decoded": 11.5,
+      "file": "video-11.500.jpg"
+    },
+    {
+      "requested": 11.625,
+      "decoded": 11.625,
+      "file": "video-11.625.jpg"
+    },
+    {
+      "requested": 11.75,
+      "decoded": 11.75,
+      "file": "video-11.750.jpg"
+    },
+    {
+      "requested": 11.875,
+      "decoded": 11.875,
+      "file": "video-11.875.jpg"
+    },
+    {
+      "requested": 12,
+      "decoded": 12,
+      "file": "video-12.000.jpg"
+    },
+    {
+      "requested": 12.125,
+      "decoded": 12.125,
+      "file": "video-12.125.jpg"
+    },
+    {
+      "requested": 12.25,
+      "decoded": 12.25,
+      "file": "video-12.250.jpg"
+    },
+    {
+      "requested": 12.375,
+      "decoded": 12.375,
+      "file": "video-12.375.jpg"
+    },
+    {
+      "requested": 12.5,
+      "decoded": 12.5,
+      "file": "video-12.500.jpg"
+    },
+    {
+      "requested": 12.625,
+      "decoded": 12.625,
+      "file": "video-12.625.jpg"
+    },
+    {
+      "requested": 12.75,
+      "decoded": 12.75,
+      "file": "video-12.750.jpg"
+    },
+    {
+      "requested": 12.875,
+      "decoded": 12.875,
+      "file": "video-12.875.jpg"
+    },
+    {
+      "requested": 13,
+      "decoded": 13,
+      "file": "video-13.000.jpg"
+    },
+    {
+      "requested": 13.125,
+      "decoded": 13.125,
+      "file": "video-13.125.jpg"
+    },
+    {
+      "requested": 13.25,
+      "decoded": 13.25,
+      "file": "video-13.250.jpg"
+    },
+    {
+      "requested": 13.375,
+      "decoded": 13.375,
+      "file": "video-13.375.jpg"
+    },
+    {
+      "requested": 13.5,
+      "decoded": 13.5,
+      "file": "video-13.500.jpg"
+    },
+    {
+      "requested": 13.625,
+      "decoded": 13.625,
+      "file": "video-13.625.jpg"
+    },
+    {
+      "requested": 13.75,
+      "decoded": 13.75,
+      "file": "video-13.750.jpg"
+    },
+    {
+      "requested": 13.875,
+      "decoded": 13.875,
+      "file": "video-13.875.jpg"
+    },
+    {
+      "requested": 14,
+      "decoded": 14,
+      "file": "video-14.000.jpg"
+    },
+    {
+      "requested": 14.125,
+      "decoded": 14.125,
+      "file": "video-14.125.jpg"
+    },
+    {
+      "requested": 14.25,
+      "decoded": 14.25,
+      "file": "video-14.250.jpg"
+    },
+    {
+      "requested": 14.375,
+      "decoded": 14.375,
+      "file": "video-14.375.jpg"
+    },
+    {
+      "requested": 14.5,
+      "decoded": 14.5,
+      "file": "video-14.500.jpg"
+    },
+    {
+      "requested": 14.625,
+      "decoded": 14.625,
+      "file": "video-14.625.jpg"
+    },
+    {
+      "requested": 14.75,
+      "decoded": 14.75,
+      "file": "video-14.750.jpg"
+    },
+    {
+      "requested": 14.875,
+      "decoded": 14.875,
+      "file": "video-14.875.jpg"
+    },
+    {
+      "requested": 15,
+      "decoded": 15,
+      "file": "video-15.000.jpg"
+    },
+    {
+      "requested": 15.125,
+      "decoded": 15.125,
+      "file": "video-15.125.jpg"
+    },
+    {
+      "requested": 15.25,
+      "decoded": 15.25,
+      "file": "video-15.250.jpg"
+    },
+    {
+      "requested": 15.375,
+      "decoded": 15.375,
+      "file": "video-15.375.jpg"
+    },
+    {
+      "requested": 15.5,
+      "decoded": 15.5,
+      "file": "video-15.500.jpg"
+    },
+    {
+      "requested": 15.625,
+      "decoded": 15.625,
+      "file": "video-15.625.jpg"
+    },
+    {
+      "requested": 15.75,
+      "decoded": 15.75,
+      "file": "video-15.750.jpg"
+    },
+    {
+      "requested": 15.875,
+      "decoded": 15.875,
+      "file": "video-15.875.jpg"
+    },
+    {
+      "requested": 16,
+      "decoded": 16,
+      "file": "video-16.000.jpg"
+    },
+    {
+      "requested": 16.125,
+      "decoded": 16.125,
+      "file": "video-16.125.jpg"
+    },
+    {
+      "requested": 16.25,
+      "decoded": 16.25,
+      "file": "video-16.250.jpg"
+    },
+    {
+      "requested": 16.375,
+      "decoded": 16.375,
+      "file": "video-16.375.jpg"
+    },
+    {
+      "requested": 16.5,
+      "decoded": 16.5,
+      "file": "video-16.500.jpg"
+    },
+    {
+      "requested": 16.625,
+      "decoded": 16.625,
+      "file": "video-16.625.jpg"
+    },
+    {
+      "requested": 16.75,
+      "decoded": 16.75,
+      "file": "video-16.750.jpg"
+    },
+    {
+      "requested": 16.875,
+      "decoded": 16.875,
+      "file": "video-16.875.jpg"
+    },
+    {
+      "requested": 17,
+      "decoded": 17,
+      "file": "video-17.000.jpg"
+    },
+    {
+      "requested": 17.125,
+      "decoded": 17.125,
+      "file": "video-17.125.jpg"
+    },
+    {
+      "requested": 17.25,
+      "decoded": 17.25,
+      "file": "video-17.250.jpg"
+    },
+    {
+      "requested": 17.375,
+      "decoded": 17.375,
+      "file": "video-17.375.jpg"
+    },
+    {
+      "requested": 17.5,
+      "decoded": 17.5,
+      "file": "video-17.500.jpg"
+    },
+    {
+      "requested": 17.625,
+      "decoded": 17.625,
+      "file": "video-17.625.jpg"
+    },
+    {
+      "requested": 17.75,
+      "decoded": 17.75,
+      "file": "video-17.750.jpg"
+    },
+    {
+      "requested": 17.875,
+      "decoded": 17.875,
+      "file": "video-17.875.jpg"
+    },
+    {
+      "requested": 18,
+      "decoded": 18,
+      "file": "video-18.000.jpg"
+    }
+  ],
+  "scenarioTime": "visible in each decoded frame; media timestamps may include capture-start offset"
+}

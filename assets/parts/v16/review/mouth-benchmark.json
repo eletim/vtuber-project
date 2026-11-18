@@ -1,0 +1,85 @@
+{
+  "measurement": "Node CPU helper only; not browser FPS. Includes allocation and sampling, excludes Canvas/GPU/encoding. Concurrent workloads can affect timing.",
+  "node": "v24.19.0",
+  "warmupPasses": 5,
+  "measuredPasses": 20,
+  "openings": [
+    0.141,
+    0.16,
+    0.2,
+    0.214,
+    0.25,
+    0.35,
+    0.65,
+    1
+  ],
+  "samples": 1280,
+  "median_ms": 0.9993849999998474,
+  "p95_ms": 2.256309999999985,
+  "perExpression": [
+    {
+      "id": "neutral",
+      "width": 147,
+      "height": 95,
+      "samples": 160,
+      "median_ms": 1.7757180000000403,
+      "p95_ms": 3.6655059999999935
+    },
+    {
+      "id": "soft_smile",
+      "width": 91,
+      "height": 69,
+      "samples": 160,
+      "median_ms": 0.991694999999936,
+      "p95_ms": 1.978915000000029
+    },
+    {
+      "id": "big_smile",
+      "width": 91,
+      "height": 69,
+      "samples": 160,
+      "median_ms": 1.1014470000000074,
+      "p95_ms": 2.3977710000000343
+    },
+    {
+      "id": "worried",
+      "width": 91,
+      "height": 69,
+      "samples": 160,
+      "median_ms": 0.8703800000000683,
+      "p95_ms": 1.5610119999998915
+    },
+    {
+      "id": "surprised",
+      "width": 91,
+      "height": 69,
+      "samples": 160,
+      "median_ms": 0.9323120000001381,
+      "p95_ms": 1.6170399999998608
+    },
+    {
+      "id": "bashful",
+      "width": 91,
+      "height": 69,
+      "samples": 160,
+      "median_ms": 1.0352720000000772,
+      "p95_ms": 1.9412340000001223
+    },
+    {
+      "id": "displeased",
+      "width": 91,
+      "height": 69,
+      "samples": 160,
+      "median_ms": 0.9107280000000628,
+      "p95_ms": 2.070205999999871
+    },
+    {
+      "id": "thinking",
+      "width": 91,
+      "height": 69,
+      "samples": 160,
+      "median_ms": 0.9003060000000005,
+      "p95_ms": 1.5098649999999907
+    }
+  ]
+}

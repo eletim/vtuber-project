@@ -1,0 +1,394 @@
+{
+  "source_coordinates": true,
+  "preview_camera_scale": 0.94,
+  "layers": [
+    {
+      "id": "rear_left_outer",
+      "rect": [
+        149,
+        448,
+        260,
+        748
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "rear_left_inner",
+      "rect": [
+        260,
+        448,
+        373,
+        707
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "rear_right_inner",
+      "rect": [
+        733,
+        448,
+        825,
+        598
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "rear_right_outer",
+      "rect": [
+        825,
+        448,
+        940,
+        775
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "thigh_left",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ],
+      "role": "legLeft",
+      "articulation": null
+    },
+    {
+      "id": "thigh_right",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ],
+      "role": "legRight",
+      "articulation": null
+    },
+    {
+      "id": "skirt",
+      "rect": [
+        182,
+        970,
+        914,
+        1445
+      ],
+      "role": "skirt",
+      "articulation": null
+    },
+    {
+      "id": "left_body_reveal_painted",
+      "rect": [
+        150,
+        940,
+        365,
+        1376
+      ],
+      "role": "torso",
+      "articulation": null
+    },
+    {
+      "id": "chest_clothing",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "role": "chest",
+      "articulation": null
+    },
+    {
+      "id": "abdomen_clothing",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "role": "abdomen",
+      "articulation": null
+    },
+    {
+      "id": "pelvis_clothing",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "role": "pelvis",
+      "articulation": null
+    },
+    {
+      "id": "arm_screen_right",
+      "rect": [
+        731,
+        489,
+        1027,
+        1412
+      ],
+      "role": "armRight",
+      "articulation": null
+    },
+    {
+      "id": "left_shoulder_underlap",
+      "rect": [
+        330,
+        478,
+        405,
+        520
+      ],
+      "role": "armLeft",
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      }
+    },
+    {
+      "id": "left_shoulder_original_support",
+      "rect": [
+        279,
+        486,
+        399,
+        630
+      ],
+      "role": "armLeft",
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      }
+    },
+    {
+      "id": "left_raised_upper",
+      "rect": [
+        251,
+        592,
+        386,
+        650
+      ],
+      "role": "armLeft",
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      }
+    },
+    {
+      "id": "hair_reveal_native",
+      "rect": [
+        281,
+        43,
+        826,
+        681
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "face_fixed_v22",
+      "rect": [
+        235,
+        1,
+        865,
+        683
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "bang_left",
+      "rect": [
+        406,
+        53,
+        500,
+        283
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "bang_center",
+      "rect": [
+        476,
+        43,
+        580,
+        271
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "bang_right",
+      "rect": [
+        556,
+        48,
+        651,
+        270
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "side_left_front",
+      "rect": [
+        390,
+        347,
+        512,
+        681
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "side_right_front",
+      "rect": [
+        644,
+        335,
+        702,
+        450
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "side_left_outer",
+      "rect": [
+        235,
+        211,
+        357,
+        550
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "side_left_inner",
+      "rect": [
+        333,
+        239,
+        427,
+        679
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "side_right_outer",
+      "rect": [
+        731,
+        356,
+        865,
+        550
+      ],
+      "role": "head",
+      "articulation": null
+    },
+    {
+      "id": "left_raised_forearm",
+      "rect": [
+        289,
+        771,
+        473,
+        966
+      ],
+      "role": "armLeft",
+      "articulation": {
+        "joint": "forearm",
+        "bind": "raised",
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ]
+      }
+    },
+    {
+      "id": "left_raised_drape",
+      "rect": [
+        174,
+        626,
+        528,
+        972
+      ],
+      "role": "armLeft",
+      "articulation": {
+        "joint": "drape",
+        "bind": "raised",
+        "variant": "raised"
+      }
+    },
+    {
+      "id": "left_rest_cuff",
+      "rect": [
+        365,
+        565,
+        481,
+        721
+      ],
+      "role": "armLeft",
+      "articulation": {
+        "joint": "cuff",
+        "bind": "raised",
+        "variant": "raised",
+        "poseWeight": "rest-cuff"
+      }
+    },
+    {
+      "id": "left_raised_cuff",
+      "rect": [
+        329,
+        754,
+        480,
+        931
+      ],
+      "role": "armLeft",
+      "articulation": {
+        "joint": "cuff",
+        "bind": "raised",
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ],
+        "poseWeight": "forward-cuff"
+      }
+    },
+    {
+      "id": "left_raised_hand",
+      "rect": [
+        422,
+        694,
+        568,
+        826
+      ],
+      "role": "armLeft",
+      "articulation": {
+        "joint": "hand",
+        "bind": "raised",
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ]
+      }
+    }
+  ]
+}

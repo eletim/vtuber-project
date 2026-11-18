@@ -1,0 +1,710 @@
+{
+  "psd_sha256": "aeedcf0e025b7d18f61586be3e070b12987be9890c01bec26475677b300a3c10",
+  "method": "Independent raw PSD channel decoder and NumPy compositor with no builder/helper imports, plus psd-tools 1.25.0 composite(ignore_preview=True, apply_icc=False).",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "original_layers_names_bounds_visibility_order_pixels_exact": 66,
+  "merged_neutral_full_pixel_exact": true,
+  "original_alpha_preserved_for_all_combinations": true,
+  "new_layers_only_over_opaque_original": true,
+  "expression_groups": 7,
+  "new_feature_and_plate_layers": 49,
+  "states": {
+    "neutral": {
+      "endpoint_combinations": 8,
+      "authored_v14_face_pixel_exact": true,
+      "face_alpha_exact": true,
+      "hidden_psd_matches_runtime": true
+    },
+    "soft_smile": {
+      "endpoint_combinations": 8,
+      "authored_v14_face_pixel_exact": true,
+      "face_alpha_exact": true,
+      "hidden_psd_matches_runtime": true
+    },
+    "big_smile": {
+      "endpoint_combinations": 8,
+      "authored_v14_face_pixel_exact": true,
+      "face_alpha_exact": true,
+      "hidden_psd_matches_runtime": true
+    },
+    "worried": {
+      "endpoint_combinations": 8,
+      "authored_v14_face_pixel_exact": true,
+      "face_alpha_exact": true,
+      "hidden_psd_matches_runtime": true
+    },
+    "surprised": {
+      "endpoint_combinations": 8,
+      "authored_v14_face_pixel_exact": true,
+      "face_alpha_exact": true,
+      "hidden_psd_matches_runtime": true
+    },
+    "bashful": {
+      "endpoint_combinations": 8,
+      "authored_v14_face_pixel_exact": true,
+      "face_alpha_exact": true,
+      "hidden_psd_matches_runtime": true
+    },
+    "displeased": {
+      "endpoint_combinations": 8,
+      "authored_v14_face_pixel_exact": true,
+      "face_alpha_exact": true,
+      "hidden_psd_matches_runtime": true
+    },
+    "thinking": {
+      "endpoint_combinations": 8,
+      "authored_v14_face_pixel_exact": true,
+      "face_alpha_exact": true,
+      "hidden_psd_matches_runtime": true
+    }
+  },
+  "artifacts": "/tmp/v15-independent-review",
+  "visual_review": {
+    "status": "PASS endpoints and clean underpaint",
+    "reviewed": "All eight expression endpoint sheets; all 64 states rendered independently; clean feature-hidden PSD crops viewed enlarged 3x. Big-smile eyes intentionally stay closed.",
+    "resolved_before_final_snapshot": [
+      "Surprised upper-eye remnants",
+      "Big-smile upper-right mouth-corner fleck"
+    ],
+    "evidence": [
+      "/tmp/v15-independent-review/psd_endpoints_all.png",
+      "/tmp/v15-independent-review/final_hidden_3x_neutral.png",
+      "/tmp/v15-independent-review/final_hidden_3x_surprised.png"
+    ]
+  },
+  "runtime_intermediates": {
+    "status": "PASS WITH LIMITATIONS; usable for final video",
+    "sample_count": 120,
+    "modes": [
+      "eye-only",
+      "mouth-only",
+      "simultaneous"
+    ],
+    "checked_openings": [
+      0,
+      0.15,
+      0.35,
+      0.65,
+      1
+    ],
+    "expression_js_sha256": "bf714f61c2738de340dcbbd54f8d2f1b02c163b335fe9ba718c947af30a8c3ca",
+    "renderer_js_sha256": "54df913ad3abfb9c2feb48f80b35ab1c72412b32bb35ad3f9540309f759049e6",
+    "model_sha256": "bb9810be07b74ec2591485bf3f3c44e804c337720027d4033c93b0ac5efddee1",
+    "method": "Actual AvatarRenderer.drawPart called in Node with recorded ctx.drawImage calls, independently rasterized with bilinear premultiplied alpha. Final captured draw-call JSON exactly equals the reviewed binary-eye/core-only-mouth120-frame capture. Not a browser screenshot.",
+    "eyes": "Untouched authored open/closed sprites, threshold0.4, scale1 for all10,001 sampled parameter values. No malformed eye cores, hair/brow stretch, or rectangular eye cutouts. Big-smile eyes stay closed.",
+    "mouths": "Core-only interpolation sampled in all eight states, eye-only/mouth-only/both. No critical doubled lips or malformed mouth deformation at normal preview scale. Faint rectangular skin-tone boundaries can be visible on enlarged crops.",
+    "critical_visual_defects_remaining": 0,
+    "limitations": [
+      "Eyes use two authored endpoints, not continuous geometric eyelid interpolation.",
+      "Mouth restoration may reveal a faint skin-tone boundary when enlarged.",
+      "Offline renderer capture is not a browser E2E or Photoshop-native test."
+    ],
+    "evidence": [
+      "/tmp/v15-independent-review/draw_calls_binary_core_mouth.json",
+      "/tmp/v15-independent-review/calls_all_eye.png",
+      "/tmp/v15-independent-review/core_only_all_mouth.png"
+    ],
+    "sources": [
+      "runtime/web/expressions.js:featureOpening and featureBands",
+      "runtime/web/renderer.js:drawPart"
+    ]
+  },
+  "limitations": [
+    "Eyes use authored open/closed endpoints rather than continuous geometric interpolation.",
+    "Faint mouth skin-tone boundaries can be visible enlarged; no critical lip ghost/deform at normal preview scale.",
+    "No Photoshop-native operation or browser E2E was tested.",
+    "Third-party PSD compositor allows at most one-byte rounding; exact byte preservation separately verified by raw channel decoding.",
+    "Existing thigh/hair matte unchanged and outside this review."
+  ],
+  "third_party_psd_review": {
+    "psd_sha256": "aeedcf0e025b7d18f61586be3e070b12987be9890c01bec26475677b300a3c10",
+    "psd_tools_version": "1.25.0",
+    "method": "psd-tools composite(ignore_preview=True, apply_icc=False), reread layers, not merged preview",
+    "original_layers_exact_pixels_names_positions_visibility_relative_order": 66,
+    "neutral_fullbody": {
+      "max_rgba_error": 1,
+      "visible_rgba_different_pixels": 43059,
+      "alpha_different_pixels": 42521,
+      "alpha_support_exact": true
+    },
+    "states": {
+      "neutral": {
+        "all_8_endpoint_combinations": [
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 9222,
+            "alpha_different_pixels": 2266,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 7763,
+            "alpha_different_pixels": 2164,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 6725,
+            "alpha_different_pixels": 1520,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4843,
+            "alpha_different_pixels": 1276,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 6081,
+            "alpha_different_pixels": 1349,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4039,
+            "alpha_different_pixels": 1055,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 2716,
+            "alpha_different_pixels": 492,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 0,
+            "visible_rgba_different_pixels": 0,
+            "alpha_different_pixels": 0,
+            "alpha_support_exact": true
+          }
+        ],
+        "authored_v14": {
+          "max_rgba_error": 0,
+          "visible_rgba_different_pixels": 0,
+          "alpha_different_pixels": 0,
+          "alpha_support_exact": true
+        },
+        "hidden_base": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 7124,
+          "alpha_different_pixels": 1010,
+          "alpha_support_exact": true
+        }
+      },
+      "soft_smile": {
+        "all_8_endpoint_combinations": [
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3804,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4527,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3737,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4460,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3772,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4495,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3705,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4428,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          }
+        ],
+        "authored_v14": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3705,
+          "alpha_different_pixels": 370,
+          "alpha_support_exact": true
+        },
+        "hidden_base": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3527,
+          "alpha_different_pixels": 375,
+          "alpha_support_exact": true
+        }
+      },
+      "big_smile": {
+        "all_8_endpoint_combinations": [
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4608,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3835,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4608,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3835,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4608,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3835,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4608,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3835,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          }
+        ],
+        "authored_v14": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3835,
+          "alpha_different_pixels": 370,
+          "alpha_support_exact": true
+        },
+        "hidden_base": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3710,
+          "alpha_different_pixels": 375,
+          "alpha_support_exact": true
+        }
+      },
+      "worried": {
+        "all_8_endpoint_combinations": [
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3755,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4497,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3706,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4448,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3739,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4481,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3690,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4432,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          }
+        ],
+        "authored_v14": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3690,
+          "alpha_different_pixels": 370,
+          "alpha_support_exact": true
+        },
+        "hidden_base": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3540,
+          "alpha_different_pixels": 375,
+          "alpha_support_exact": true
+        }
+      },
+      "surprised": {
+        "all_8_endpoint_combinations": [
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4289,
+            "alpha_different_pixels": 346,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3648,
+            "alpha_different_pixels": 346,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4233,
+            "alpha_different_pixels": 346,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3592,
+            "alpha_different_pixels": 346,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4231,
+            "alpha_different_pixels": 346,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3590,
+            "alpha_different_pixels": 346,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4175,
+            "alpha_different_pixels": 346,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3534,
+            "alpha_different_pixels": 346,
+            "alpha_support_exact": true
+          }
+        ],
+        "authored_v14": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3534,
+          "alpha_different_pixels": 346,
+          "alpha_support_exact": true
+        },
+        "hidden_base": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3593,
+          "alpha_different_pixels": 375,
+          "alpha_support_exact": true
+        }
+      },
+      "bashful": {
+        "all_8_endpoint_combinations": [
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3789,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4523,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3738,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4472,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3764,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4498,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3713,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4447,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          }
+        ],
+        "authored_v14": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3713,
+          "alpha_different_pixels": 370,
+          "alpha_support_exact": true
+        },
+        "hidden_base": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3522,
+          "alpha_different_pixels": 375,
+          "alpha_support_exact": true
+        }
+      },
+      "displeased": {
+        "all_8_endpoint_combinations": [
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3774,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4498,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3697,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4421,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3725,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4449,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3648,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4372,
+            "alpha_different_pixels": 370,
+            "alpha_support_exact": true
+          }
+        ],
+        "authored_v14": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3648,
+          "alpha_different_pixels": 370,
+          "alpha_support_exact": true
+        },
+        "hidden_base": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3454,
+          "alpha_different_pixels": 375,
+          "alpha_support_exact": true
+        }
+      },
+      "thinking": {
+        "all_8_endpoint_combinations": [
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3618,
+            "alpha_different_pixels": 363,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4355,
+            "alpha_different_pixels": 363,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3553,
+            "alpha_different_pixels": 363,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4290,
+            "alpha_different_pixels": 363,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3586,
+            "alpha_different_pixels": 363,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4323,
+            "alpha_different_pixels": 363,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 3521,
+            "alpha_different_pixels": 363,
+            "alpha_support_exact": true
+          },
+          {
+            "max_rgba_error": 1,
+            "visible_rgba_different_pixels": 4258,
+            "alpha_different_pixels": 363,
+            "alpha_support_exact": true
+          }
+        ],
+        "authored_v14": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3521,
+          "alpha_different_pixels": 363,
+          "alpha_support_exact": true
+        },
+        "hidden_base": {
+          "max_rgba_error": 1,
+          "visible_rgba_different_pixels": 3508,
+          "alpha_different_pixels": 375,
+          "alpha_support_exact": true
+        }
+      }
+    },
+    "verified_combinations": 64,
+    "tolerance_note": "Independent floating-point compositor may differ by one byte; exact custom endpoint preservation is separately verified."
+  },
+  "overall_status": "PASS WITH LIMITATIONS: PSD/endpoints preserved; clean binary eyes and usable interpolated mouths; ready for video rendering",
+  "runtime_review_history": [
+    {
+      "status": "BLOCKED visual defect",
+      "checked_openings": [
+        0,
+        0.15,
+        0.35,
+        0.65,
+        1
+      ],
+      "expression_js_sha256": "85eb3647afeb5c1b677ed5e4f2c705f30a5951afeaa56d94b5c877b8658d5057",
+      "model_sha256": "bb9810be07b74ec2591485bf3f3c44e804c337720027d4033c93b0ac5efddee1",
+      "method": "Actual runtime featureOpening, expressionParameters, featureBands outputs from Node; independent bilinear premultiplied rasterization of the current PNG sprites. Not a browser screenshot.",
+      "finding": "At intermediate eye openings, moving transition/core strips stretch opaque restoration pixels containing brow/bang artwork, yielding vertical streaks and hard horizontal seams in every expression with animated eyes, including neutral. Endpoints are unaffected; big-smile eyes remain closed by design.",
+      "evidence": [
+        "/tmp/v15-independent-review/motion_all.png",
+        "/tmp/v15-independent-review/neutral_motion.png",
+        "/tmp/v15-independent-review/thinking_motion.png"
+      ],
+      "sources": [
+        "runtime/web/expressions.js:featureBands",
+        "runtime/web/renderer.js:drawPart",
+        "runtime/model/model.json:expressions[*].parts[*].motion"
+      ]
+    },
+    {
+      "status": "BLOCKED visual defect after core-only correction",
+      "sample_count": 120,
+      "modes": [
+        "eye-only",
+        "mouth-only",
+        "simultaneous"
+      ],
+      "checked_openings": [
+        0,
+        0.15,
+        0.35,
+        0.65,
+        1
+      ],
+      "expression_js_sha256": "62fb7958b81bdb3ea92c8f9a3f09c1cd38f76c0f9b315e4d17320d284acdf6b4",
+      "renderer_js_sha256": "4577b79dd81efdb129e72f93a145a1bfa508aa3fcd860f65083cf52404e10c68",
+      "model_sha256": "bb9810be07b74ec2591485bf3f3c44e804c337720027d4033c93b0ac5efddee1",
+      "method": "Actual AvatarRenderer.drawPart invoked in Node with recorded ctx.drawImage calls; exact source/destination calls independently rasterized with bilinear premultiplied alpha. Not a browser screenshot.",
+      "eyes": "Vertical transition streaks removed, but compressed cores still create hard rectangular skin cutouts cutting bangs/eye corners and leave stationary lid contours above the flattened eye. All animated-eye states affected; big-smile remains closed.",
+      "mouths": "All eight mouths sampled. No doubled lips or severe deformation; faint rectangular skin-tone discontinuities visible in some enlarged crops.",
+      "evidence": [
+        "/tmp/v15-independent-review/calls_all_eye.png",
+        "/tmp/v15-independent-review/calls_all_mouth.png",
+        "/tmp/v15-independent-review/calls_all_both.png",
+        "/tmp/v15-independent-review/core_only_enlarged.png"
+      ],
+      "sources": [
+        "runtime/web/expressions.js:featureBands",
+        "runtime/web/renderer.js:drawPart"
+      ]
+    }
+  ],
+  "legacy_runtime_textures_byte_exact_vs_git_HEAD": 7
+}

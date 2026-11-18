@@ -1,0 +1,61 @@
+{
+  "generated_at_utc": "2026-10-21T15:45:09.014412+00:00",
+  "completed_at_utc": "2026-10-21T15:45:18.831385+00:00",
+  "freshly_synthesized": true,
+  "input_text": "こんにちは、羽月こまです。今入力してもらった文章から、新しく声を作っています。声に合わせて、表情や腕も動かしますね。",
+  "engine_version": "0.25.2",
+  "speaker": "雨晴はう",
+  "speaker_uuid": "3474ee95-c274-47f9-aa1a-8322163d96f1",
+  "style": {
+    "name": "ノーマル",
+    "id": 10,
+    "type": "talk"
+  },
+  "credit": "VOICEVOX:雨晴はう",
+  "engine_command": [
+    "/workspace/scratch/f1d5e45451e6/vtuber-project/runtime/vendor/voicevox/linux-cpu-x64/run",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "50021",
+    "--cpu_num_threads",
+    "4",
+    "--output_log_utf8"
+  ],
+  "http_status": {
+    "version": 200,
+    "speakers": 200,
+    "audio_query": 200,
+    "synthesis": 200
+  },
+  "audio_content_type": "audio/wav",
+  "output_file": "/workspace/scratch/f1d5e45451e6/vtuber-v20-evidence/koma-v20-fresh-voice.wav",
+  "duration_seconds": 10.485333333333333,
+  "frames": 251648,
+  "sample_rate_hz": 24000,
+  "sample_width_bytes": 2,
+  "channels": 1,
+  "rms_normalized": 0.04929085702273388,
+  "peak_normalized": 0.366790771484375,
+  "synthesis_elapsed_seconds": 9.784718803999567,
+  "wav_bytes": 503340,
+  "wav_sha256": "09e68a6e1f141e87ffffe8a9109a9ebe613b760a1f21dd3e5e493d94b2d1e8ec",
+  "prior_v12_wav_sha256": "dd10f1395abb9dce388339e8cf4701911b637429e2174a77737ebd8058e7db7b",
+  "different_from_prior_sample": true,
+  "archive_sha256": "bab016a966131b89bad398e7b898f8c742617dc80a7da49bf494cd07133dbc7a",
+  "sources": {
+    "release": "https://github.com/VOICEVOX/voicevox_engine/releases/tag/0.25.2",
+    "release_metadata": "https://api.github.com/repos/VOICEVOX/voicevox_engine/releases/tags/0.25.2",
+    "archive": "https://github.com/VOICEVOX/voicevox_engine/releases/download/0.25.2/voicevox_engine-linux-cpu-x64-0.25.2.7z.001",
+    "engine_source_license": "https://github.com/VOICEVOX/voicevox_engine/blob/0.25.2/LICENSE",
+    "voicevox_terms": "https://voicevox.hiroshiba.jp/term/",
+    "speaker_terms": "https://amehau.com/rules/amehare-hau-rule"
+  },
+  "scope": "Fresh local synthesis only. No speaker playback, browser integration, or physical audio output verified by this script.",
+  "session_isolation": {
+    "same_session_engine_synthesis": "passed",
+    "separate_exec_loopback_probe": "curl exit 7: Failed to connect to 127.0.0.1 port 50021; Could not connect to server",
+    "integration_requirement": "Start engine, runtime, and HTTP probes together in one exec session",
+    "verification_session_ended": true
+  }
+}

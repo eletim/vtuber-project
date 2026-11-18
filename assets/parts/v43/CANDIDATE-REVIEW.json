@@ -1,0 +1,45 @@
+{
+  "status": "material-import-and-rejected-prototype-checkpoint; not a v43 release",
+  "production": "v42 runtime preserved byte-for-byte; no PSD change",
+  "inspection": [
+    "All three Library candidate PNGs and approved frontal reference viewed at native image detail",
+    "Five static cage probe poses rendered in dedicated headless Chrome; report errors empty",
+    "Native positive compound and negative yaw comparisons inspected; angle remains frontal with local feature displacement"
+  ],
+  "decision": "Reject cage prototype: hand-selected offsets are not measured authored correspondences; feature sliding does not meet visible natural angle request",
+  "candidate_findings": {
+    "left": "Useful nose direction and ear reveal; rounded eye drawing and elongated lower face differ from approved front",
+    "right": "Clear screen-right nose and cheek direction; larger angle and near/far eye shape differ from approved front",
+    "vertical": "Use center up and right down only. Left is not a valid right endpoint. Hair, face, lids and mouth are baked together"
+  },
+  "required_work": [
+    "Register matching eye corners, nose, mouth, chin and temple anchors after identity correction; do not normalize only by image bounding box",
+    "Separate face skin/nose/jaw and hidden temple fill from hair ownership; current endpoint PNGs do not supply underpaint behind eyes or mouth",
+    "Provide registered blink/open-mouth shapes or derive validated expression-compatible topology before adopting endpoints",
+    "Implement single-contour interpolation and inspect both travel directions and compound angles before widening range"
+  ],
+  "not_completed": [
+    "Angle endpoint integration",
+    "PSD synchronization",
+    "8-expression and mouth angle regression",
+    "CFR closeup and full-body videos",
+    "Continuous playback review"
+  ],
+  "block_status": "No new safety denial or pending transfer. Import succeeded. Quality/integration unresolved; no claim that assets are technically unusable.",
+  "shoulder": "Not accessed or retried",
+  "tests": {
+    "prototype": {
+      "pass": 200,
+      "fail": 2,
+      "failures": [
+        "face-integrity-v42: portrait ratio changed -15,-5",
+        "motion-phrasing: face chord proportions"
+      ]
+    },
+    "restored_v42": {
+      "pass": 202,
+      "fail": 0,
+      "duration_ms": 14212.3205
+    }
+  }
+}

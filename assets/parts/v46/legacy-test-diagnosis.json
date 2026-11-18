@@ -1,0 +1,6 @@
+{
+  "path": "assets/parts/v10/integration.json",
+  "git_head_equals_baseline": true,
+  "checkout_matches_after_CRLF_normalization": true,
+  "worktree_modified": false
+}

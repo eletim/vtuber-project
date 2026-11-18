@@ -1,0 +1,11 @@
+笨・v26 manifest loads explicit PSD layers for every separately rendered body role (33.7674ms)
+笨・only the head owns unchanged eye/mouth overlays and all eight head variants (0.2211ms)
+笨・rig configuration respects approved limited under-hem coverage (0.0737ms)
+邃ｹ tests 3
+邃ｹ suites 0
+邃ｹ pass 3
+邃ｹ fail 0
+邃ｹ cancelled 0
+邃ｹ skipped 0
+邃ｹ todo 0
+邃ｹ duration_ms 114.9646

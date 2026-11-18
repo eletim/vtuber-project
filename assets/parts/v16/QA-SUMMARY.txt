@@ -1,0 +1,32 @@
+羽月こま v16 口元修正確認動画
+
+Main video: koma-v16-mouth-motion.mp4
+Same-frame comparison: koma-v16-mouth-before-after.png
+Additional reproducible preview files, retained separately from this compact recovery commit:
+Full-face comparison: koma-v16-sameframe-before-after.png
+Eight-expression overview: koma-v16-expression-face-sheet.png
+
+42.000 seconds, 1600 × 1080, 30 fps, 1260 frames, H.264/yuv420p with AAC mono at 24 kHz. File size: 18,363,267 bytes.
+Video SHA256: 395ba4940ae0dfc6a5a16d4f68acbfa9d44d73ba5ce47e67bb5949c43b14b3a8
+
+What changed
+The renderer now deforms the mouth along its authored lip direction and closed-lip curve, rather than squashing a rectangular strip vertically. Intermediate sampling uses premultiplied color and alpha. Existing open/closed paintings are preserved; no artwork or new dialogue was generated.
+
+Visual check
+The encoded before/after comparison uses the exact same timestamps (6, 6.5, 7, 12, 12.5 and 13 seconds) and crop coordinates. The corrected lips retain the face/lip angle, and the isolated dark corner flecks visible in the old 12–13 second samples no longer appear in those samples. All eight expression overview frames were reviewed. The old dark flecks were reproduced before video encoding and were compressed lip corners, not transparent holes in the mouth base.
+
+Motion and voice preservation
+All 1260 head/body/voice parameter arrays are exactly equal to the frozen v15 timeline. Final mesh.bin is byte-identical (SHA256 5e2d1fb36d84925ecb31c8e6d036d61c3f63faaddf55ed42a0354db9b34b6255). Audio PCM is byte-identical (SHA256 7b1aea86672c9e4f50c4243d51a722970ffb1e390cb1d947ddf872312d7bfb4a). Head motion was not reduced, and defects were not hidden by changing the camera/crop.
+The previously approved 8.170667-second VOICEVOX:雨晴はう sample repeats four times. No new dialogue was synthesized. AAC decoded audio correlation with the intended PCM is 0.9999623686; decoded peak is 0.36323, with no clipping. Complete video and audio decode passed.
+
+Reproducible source
+Base repository revision: d80adf55d7a35edec81b370431d44c6aa7f30677, plus the frozen v16 worktree changes recorded in source-provenance.json.
+expressions.js SHA256: 1e67114be41e7f0309d148428be96fa4e281f30c4bb8657e96fc66c7318f1d01
+renderer.js SHA256: d9e5a89872fbe719d110631b157a59b0361f4248875de652c52c3f555fa501e9
+model.json SHA256: bb9810be07b74ec2591485bf3f3c44e804c337720027d4033c93b0ac5efddee1
+The offline generator directly calls the frozen production deformMouthPixels helper with both original open and closed RGBA sprites. It does not reimplement the mouth geometry.
+
+Scope and remaining limitations
+This is an offline OpenGL re-render, not a recording of the browser UI or a browser E2E test. Eyes use authored open/closed sprites, not continuously morphed eyelids. The mouth remains a 2D two-endpoint deformation. Existing thigh cutout gaps and rough hair matte are unchanged and visible. No official Cubism export is claimed.
+
+Detailed reports: verification.json, before-after-verification.json, source-provenance.json. Rerun steps: scripts/video_v16/RERUN.txt at the repository root.

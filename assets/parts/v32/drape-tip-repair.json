@@ -1,0 +1,12 @@
+{
+  "source": "body_v22/left_raised_drape.png",
+  "file": "body_v32/left_raised_drape.png",
+  "changed_pixels": 464,
+  "bounds": [
+    466,
+    626,
+    510,
+    706
+  ],
+  "method": "rounded native alpha mask with two-pixel antialias; no RGB repaint, no shoulder material touched"
+}

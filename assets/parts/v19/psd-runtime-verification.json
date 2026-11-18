@@ -1,0 +1,535 @@
+{
+  "pass": true,
+  "source_sha256": "82684e48370b8008f49976aad154952e19c4d0cfb97b5d3b5824006be9a98069",
+  "psd_sha256": "0f1d28279d0256f2a7ba860422709041f701dade3becf361c2b54bf5342ba3f4",
+  "endpoint_scope": "Full neutral frame plus64 expression ROI composites; all state-dependent source/support pixels proven confined to ROI and complete exterior invariant.",
+  "endpoint_roi": [
+    300,
+    150,
+    720,
+    450
+  ],
+  "endpoint_cases": 64,
+  "endpoints": [
+    {
+      "expression": "neutral",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "neutral",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "neutral",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "neutral",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "neutral",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "neutral",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "neutral",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "neutral",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "soft_smile",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "soft_smile",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "soft_smile",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "soft_smile",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "soft_smile",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "soft_smile",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "soft_smile",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "soft_smile",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "big_smile",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "big_smile",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "big_smile",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "big_smile",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "big_smile",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "big_smile",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "big_smile",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "big_smile",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "worried",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "worried",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "worried",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "worried",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "worried",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "worried",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "worried",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "worried",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "surprised",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "surprised",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "surprised",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "surprised",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "surprised",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "surprised",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "surprised",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "surprised",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "bashful",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "bashful",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "bashful",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "bashful",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "bashful",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "bashful",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "bashful",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "bashful",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "displeased",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "displeased",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "displeased",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "displeased",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "displeased",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "displeased",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "displeased",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "displeased",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "thinking",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "thinking",
+      "left_open": false,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "thinking",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "thinking",
+      "left_open": false,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "thinking",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "thinking",
+      "left_open": true,
+      "right_open": false,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "thinking",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": false,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    },
+    {
+      "expression": "thinking",
+      "left_open": true,
+      "right_open": true,
+      "mouth_open": true,
+      "psd_changed_pixels": 0,
+      "runtime_changed_pixels": 0
+    }
+  ],
+  "face_expression_pixels_preserved": true,
+  "semantic_sentinels_pass": true,
+  "anatomical_boundary_strip_samples": 5202,
+  "anatomical_boundary_strips_pass": true,
+  "outer_cuff_boundary_strip_samples": 1182,
+  "outer_cuff_boundary_strips_pass": true,
+  "original_backup_exact": true,
+  "source_ownership_exclusive": true
+}

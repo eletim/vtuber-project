@@ -1,0 +1,83 @@
+{
+  "status": "right-material diagnostic prototype, NOT accepted for runtime",
+  "import": {
+    "file": "library-input/right-underpaint.png",
+    "size": [
+      1461,
+      1076
+    ],
+    "bytes": 768699,
+    "sha256": "b7f50b341fc25e1840a79108d34c8975ec3042d3ef2d7739e9c820f0856e99bf",
+    "library_file_id": "libfile_950917e892988191a64aeefce8965a50"
+  },
+  "registration": [
+    "Source right candidate is 1461x1077; underpaint is 1461x1076, not an exact registered edit",
+    "Underpaint nose tip manually estimated near1005,691 vs candidate1006,722: approximately31px vertical discrepancy",
+    "Candidate chin963,945 has alpha17 in underpaint. Underpaint opaque chin ends near955,935. Registration was corrected from measured alpha row bounds."
+  ],
+  "implemented": [
+    "Isolated diagnostic renderer route leaves runtime files unchanged",
+    "Skin-only landmark correspondence and pixel barycentric sampling remove canvas triangle raster seams",
+    "Original eye and mouth pixels remain independent; mouth clip tightened to prevent a rectangular skin patch",
+    "Corrected neck UV sampling to stay inside the actual concave underpaint alpha silhouette"
+  ],
+  "viewed": [
+    "Six static poses t=0,0.01,0.25,0.5,0.75,1 via dedicated headless Chrome, errors0",
+    "Compared original and after-mask face textures to isolate ownership problems",
+    "Native t0,t0.01,t0.5,t1 viewed over teal after successive corrections"
+  ],
+  "remaining": [
+    "The original face base still contains cheek hair and brow/fringe boundaries. Moving only the skin patch leaves a hard material boundary and facial contour changes insufficiently integrated with hair.",
+    "Eye sprites include hair and skin beyond the eye. Restricting their draw polygons removes that context; it requires a clean underlying frontal skin and separate retained hair ownership rather than a hard-cut workaround.",
+    "Nose/skin shading and jaw silhouette of the target are not yet accepted as the same face. This is not a completed natural turn."
+  ],
+  "requested_next_material": {
+    "reference_library": "libfile_1a0c629a3e308191a659d45f8d8367b3",
+    "reference_file": "approved-frontal-head.png",
+    "canvas": [
+      620,
+      450
+    ],
+    "request": "An exactly registered frontal skin underpaint only: preserve every visible skin/nose/jaw/ear/upper-neck pixel and their coordinates, remove hair/ornament, eyebrows, eyes and mouth line, fill hidden forehead and temples beneath fringe/side-hair with matching skin. Do not change face proportions or create shoulders. Keep true alpha outside skin silhouette. Original eye and mouth pixels stay available in runtime; do not regenerate them.",
+    "regions_approximate_reference_pixels": {
+      "forehead_and_fringe_overlap": [
+        190,
+        175,
+        425,
+        300
+      ],
+      "left_temple_cheek_hair": [
+        175,
+        280,
+        245,
+        385
+      ],
+      "right_temple_cheek_hair": [
+        390,
+        255,
+        455,
+        385
+      ],
+      "eyebrow_eye_skin": [
+        195,
+        245,
+        420,
+        345
+      ],
+      "mouth_skin": [
+        285,
+        350,
+        365,
+        399
+      ]
+    },
+    "reason": "Paired clean frontal/side skin surfaces are needed for material correspondence. The current front source includes hair and incomplete skin ownership; simply clipping that texture causes discontinuities."
+  },
+  "not_done": [
+    "production integration",
+    "8 expressions and mouth animation",
+    "CFR delivery videos",
+    "PSD synchronization"
+  ],
+  "permissions": "No new denial or uncertain tool outcome. No uploads/push/shoulder edit. Next image edit must be executed by parent because Windows imagegen path resolution previously failed; not retried."
+}

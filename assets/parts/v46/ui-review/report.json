@@ -1,0 +1,54 @@
+{
+  "errors": [],
+  "expressions": [
+    {
+      "expression": "neutral",
+      "mouth": 0.7,
+      "gaze": 0.6
+    },
+    {
+      "expression": "soft_smile",
+      "mouth": 0.7,
+      "gaze": 0.6
+    },
+    {
+      "expression": "big_smile",
+      "mouth": 0.7,
+      "gaze": 0.6
+    },
+    {
+      "expression": "worried",
+      "mouth": 0.7,
+      "gaze": 0.6
+    },
+    {
+      "expression": "surprised",
+      "mouth": 0.7,
+      "gaze": 0.6
+    },
+    {
+      "expression": "bashful",
+      "mouth": 0.7,
+      "gaze": 0.6
+    },
+    {
+      "expression": "displeased",
+      "mouth": 0.7,
+      "gaze": 0.6
+    },
+    {
+      "expression": "thinking",
+      "mouth": 0.7,
+      "gaze": 0.6
+    }
+  ],
+  "manual": {
+    "gaze": 0.6,
+    "mouth": 0.7
+  },
+  "playback": {
+    "rate": 1,
+    "total": 360,
+    "dropped": 0
+  }
+}

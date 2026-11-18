@@ -1,0 +1,195 @@
+{
+  "source_sha256": "c97aed49a98b3fd1437b91b30570a726ae5854fc3a8bedcb2a562c2af707bc65",
+  "method": "RGB-only local decontamination using clean brown pixels from imagegen repair; unchanged native alpha/geometry",
+  "layers": [
+    {
+      "id": "rear_left_outer",
+      "source": "body_v29/rear_left_outer.png",
+      "file": "body_v31/rear_left_outer.png",
+      "changed_rgb_pixels": 124,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "rear_left_inner",
+      "source": "body_v29/rear_left_inner.png",
+      "file": "body_v31/rear_left_inner.png",
+      "changed_rgb_pixels": 5,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "rear_right_inner",
+      "source": "body_v29/rear_right_inner.png",
+      "file": "body_v31/rear_right_inner.png",
+      "changed_rgb_pixels": 3,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "rear_right_outer",
+      "source": "body_v29/rear_right_outer.png",
+      "file": "body_v31/rear_right_outer.png",
+      "changed_rgb_pixels": 100,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_fixed_v22.png",
+      "file": "body_v31/face_fixed_v22.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_neutral.png",
+      "file": "body_v31/face_neutral.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_soft_smile.png",
+      "file": "body_v31/face_soft_smile.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_big_smile.png",
+      "file": "body_v31/face_big_smile.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_worried.png",
+      "file": "body_v31/face_worried.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_surprised.png",
+      "file": "body_v31/face_surprised.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_bashful.png",
+      "file": "body_v31/face_bashful.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_displeased.png",
+      "file": "body_v31/face_displeased.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "face_fixed_v22",
+      "source": "body_v29/face_thinking.png",
+      "file": "body_v31/face_thinking.png",
+      "changed_rgb_pixels": 44,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "bang_left",
+      "source": "body_v22/bang_left.png",
+      "file": "body_v22/bang_left.png",
+      "changed_rgb_pixels": 0,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "bang_center",
+      "source": "body_v22/bang_center.png",
+      "file": "body_v22/bang_center.png",
+      "changed_rgb_pixels": 0,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "bang_right",
+      "source": "body_v22/bang_right.png",
+      "file": "body_v22/bang_right.png",
+      "changed_rgb_pixels": 0,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "side_left_front",
+      "source": "body_v29/side_left_front.png",
+      "file": "body_v29/side_left_front.png",
+      "changed_rgb_pixels": 0,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "side_right_front",
+      "source": "body_v29/side_right_front.png",
+      "file": "body_v29/side_right_front.png",
+      "changed_rgb_pixels": 0,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "side_left_outer",
+      "source": "body_v29/side_left_outer.png",
+      "file": "body_v31/side_left_outer.png",
+      "changed_rgb_pixels": 38,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "side_left_inner",
+      "source": "body_v29/side_left_inner.png",
+      "file": "body_v31/side_left_inner.png",
+      "changed_rgb_pixels": 1,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    },
+    {
+      "id": "side_right_outer",
+      "source": "body_v29/side_right_outer.png",
+      "file": "body_v31/side_right_outer.png",
+      "changed_rgb_pixels": 60,
+      "unresolved": 0,
+      "alpha_changed": 0,
+      "outside_mask_changed": 0
+    }
+  ]
+}

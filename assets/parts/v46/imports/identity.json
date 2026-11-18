@@ -1,0 +1,29 @@
+[
+  {
+    "file": "exec-d0b7b85a-2a84-48d1-ab14-5a5f9be55756.png",
+    "wsl_original": "/tmp/koma-v46-library-current/exec-d0b7b85a-2a84-48d1-ab14-5a5f9be55756.png",
+    "attributes": {
+      "user.library-file-version": "0",
+      "user.library-file-id": "libfile_98461e6793288191a1bf3f83ff1c30aa"
+    },
+    "sha256": "e0071a2adf5776d0b497a5c51fd0a441085bfb0ff41f3b3b9cf8a0e4dca058cc"
+  },
+  {
+    "file": "exec-3c991b31-6fe2-4990-8554-a994034f6b01.png",
+    "wsl_original": "/tmp/koma-v46-library-current/exec-3c991b31-6fe2-4990-8554-a994034f6b01.png",
+    "attributes": {
+      "user.library-file-version": "0",
+      "user.library-file-id": "libfile_6838a33aa9908191a2be114690985118"
+    },
+    "sha256": "e8d94dadd63e97bb2bd5481d0bc7d8e1c87655f9e83c62264fec759ace5d32e2"
+  },
+  {
+    "file": "exec-a3c37419-ff36-4b99-9f61-759e0a0f7e84.png",
+    "wsl_original": "/tmp/koma-v46-library-current/exec-a3c37419-ff36-4b99-9f61-759e0a0f7e84.png",
+    "attributes": {
+      "user.library-file-version": "0",
+      "user.library-file-id": "libfile_1a595278c2d88191b69769c6d719d885"
+    },
+    "sha256": "0bc7e121434778fd42601afa7ff9d75c34d6856537bfe19f7fa1f9d5e8a03473"
+  }
+]

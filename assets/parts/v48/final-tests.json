@@ -1,0 +1,10 @@
+{
+  "js": {
+    "exit_code": 0,
+    "log": "js-final-tests.txt"
+  },
+  "python": {
+    "exit_code": 0,
+    "log": "python-final-tests.txt"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "baseline": "7833f3ca2b2de3ab0268f8ee8273adab681fb4cd",
+  "errors": [],
+  "samples": [],
+  "frames": 181,
+  "range": [
+    10,
+    16
+  ],
+  "sourceCanvas": [
+    1086,
+    1448
+  ],
+  "crop": [
+    150,
+    400,
+    500,
+    900
+  ],
+  "rescaled": false
+}

@@ -1,0 +1,17 @@
+{
+  "status": "authoring checkpoint; NOT a finished or active v22 rig",
+  "source_sha256": "0f1d28279d0256f2a7ba860422709041f701dade3becf361c2b54bf5342ba3f4",
+  "output_sha256": "8470276bbf4baf346f81c11bf8b44348e4f7220a961f8a721aa432f10dc90622",
+  "rest_changed_rgba_values": 0,
+  "native_backup_retained": true,
+  "expression_groups_retained": 7,
+  "source_paint": "built-in imagegen; single-arm pose source; generated face and body excluded",
+  "pending": [
+    "authored joint overlap and anatomy review",
+    "hair reveal paint and hair-only ownership refinement",
+    "eight runtime expression bases without baked hair",
+    "articulated runtime rig",
+    "intermediate pose and black/white combination QA",
+    "sample video of new motion"
+  ]
+}

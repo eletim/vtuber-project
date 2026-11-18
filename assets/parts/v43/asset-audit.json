@@ -1,0 +1,835 @@
+{
+  "baseline": "d9617c32ffccbc512a4e8f3cc6fe895649eb3946",
+  "status": "blocked_before_generation",
+  "runtimeChanged": false,
+  "faceLayer": {
+    "id": "face_fixed_v22",
+    "role": "head",
+    "file": "body_v31/face_fixed_v22.png",
+    "rect": [
+      235,
+      1,
+      865,
+      683
+    ],
+    "psdGroup": "v22 face and fixed crown",
+    "features": true,
+    "expressionFiles": {
+      "neutral": "body_v31/face_neutral.png",
+      "soft_smile": "body_v31/face_soft_smile.png",
+      "big_smile": "body_v31/face_big_smile.png",
+      "worried": "body_v31/face_worried.png",
+      "surprised": "body_v31/face_surprised.png",
+      "bashful": "body_v31/face_bashful.png",
+      "displeased": "body_v31/face_displeased.png",
+      "thinking": "body_v31/face_thinking.png"
+    },
+    "movingHairMask": "body_v22/face_hair_ownership.png"
+  },
+  "headLayersInDrawOrder": [
+    {
+      "id": "rear_left_outer",
+      "role": "head",
+      "file": "body_v32/rear_left_outer.png",
+      "rect": [
+        149,
+        448,
+        260,
+        748
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 12,
+        "speed": 4.8,
+        "phase": 0.0
+      },
+      "psdGroup": "v22 exclusive hair/rear_left_outer",
+      "sampling": "linear"
+    },
+    {
+      "id": "rear_left_inner",
+      "role": "head",
+      "file": "body_v32/rear_left_inner.png",
+      "rect": [
+        260,
+        448,
+        373,
+        707
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 9,
+        "speed": 5.2,
+        "phase": 0.7
+      },
+      "psdGroup": "v22 exclusive hair/rear_left_inner",
+      "sampling": "linear"
+    },
+    {
+      "id": "rear_right_inner",
+      "role": "head",
+      "file": "body_v32/rear_right_inner.png",
+      "rect": [
+        733,
+        448,
+        825,
+        598
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 10,
+        "speed": 5.6,
+        "phase": 1.4
+      },
+      "psdGroup": "v22 exclusive hair/rear_right_inner",
+      "sampling": "linear"
+    },
+    {
+      "id": "rear_right_outer",
+      "role": "head",
+      "file": "body_v32/rear_right_outer.png",
+      "rect": [
+        825,
+        448,
+        940,
+        775
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 13,
+        "speed": 6.0,
+        "phase": 2.0999999999999996
+      },
+      "psdGroup": "v22 exclusive hair/rear_right_outer",
+      "sampling": "linear"
+    },
+    {
+      "id": "hair_reveal_native",
+      "role": "head",
+      "file": "body_v32/hair_reveal_native.png",
+      "rect": [
+        281,
+        43,
+        826,
+        681
+      ],
+      "psdGroup": "v22 hair reveal/native and newly painted scalp and skin"
+    },
+    {
+      "id": "face_fixed_v22",
+      "role": "head",
+      "file": "body_v31/face_fixed_v22.png",
+      "rect": [
+        235,
+        1,
+        865,
+        683
+      ],
+      "psdGroup": "v22 face and fixed crown",
+      "features": true,
+      "expressionFiles": {
+        "neutral": "body_v31/face_neutral.png",
+        "soft_smile": "body_v31/face_soft_smile.png",
+        "big_smile": "body_v31/face_big_smile.png",
+        "worried": "body_v31/face_worried.png",
+        "surprised": "body_v31/face_surprised.png",
+        "bashful": "body_v31/face_bashful.png",
+        "displeased": "body_v31/face_displeased.png",
+        "thinking": "body_v31/face_thinking.png"
+      },
+      "movingHairMask": "body_v22/face_hair_ownership.png"
+    },
+    {
+      "id": "bang_left",
+      "role": "head",
+      "file": "body_v32/bang_left.png",
+      "rect": [
+        406,
+        53,
+        500,
+        283
+      ],
+      "hairMotion": {
+        "rootY": 70,
+        "tipY": 276,
+        "amplitude": 2.4,
+        "speed": 9,
+        "phase": 0.1
+      },
+      "psdGroup": "v22 exclusive hair/bang_left",
+      "sampling": "linear"
+    },
+    {
+      "id": "bang_center",
+      "role": "head",
+      "file": "body_v32/bang_center.png",
+      "rect": [
+        476,
+        43,
+        580,
+        271
+      ],
+      "hairMotion": {
+        "rootY": 65,
+        "tipY": 273,
+        "amplitude": 3.5,
+        "speed": 7.5,
+        "phase": 0.8
+      },
+      "psdGroup": "v22 exclusive hair/bang_center",
+      "sampling": "linear"
+    },
+    {
+      "id": "bang_right",
+      "role": "head",
+      "file": "body_v32/bang_right.png",
+      "rect": [
+        556,
+        48,
+        651,
+        270
+      ],
+      "hairMotion": {
+        "rootY": 65,
+        "tipY": 248,
+        "amplitude": 2.5,
+        "speed": 8.3,
+        "phase": 1.6
+      },
+      "psdGroup": "v22 exclusive hair/bang_right",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_left_front",
+      "role": "head",
+      "file": "body_v32/side_left_front.png",
+      "rect": [
+        390,
+        347,
+        512,
+        681
+      ],
+      "hairMotion": {
+        "rootY": 365,
+        "tipY": 682,
+        "amplitude": 7,
+        "speed": 6.1,
+        "phase": 0.4
+      },
+      "psdGroup": "v22 exclusive hair/side_left_front",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_right_front",
+      "role": "head",
+      "file": "body_v32/side_right_front.png",
+      "rect": [
+        644,
+        335,
+        702,
+        450
+      ],
+      "hairMotion": {
+        "rootY": 335,
+        "tipY": 503,
+        "amplitude": 5.5,
+        "speed": 6.7,
+        "phase": 1.1
+      },
+      "psdGroup": "v22 exclusive hair/side_right_front",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_left_outer",
+      "role": "head",
+      "file": "body_v32/side_left_outer.png",
+      "rect": [
+        235,
+        211,
+        357,
+        550
+      ],
+      "hairMotion": {
+        "rootY": 210,
+        "tipY": 530,
+        "amplitude": 6.5,
+        "speed": 5.7,
+        "phase": 1.7
+      },
+      "psdGroup": "v22 exclusive hair/side_left_outer",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_left_inner",
+      "role": "head",
+      "file": "body_v32/side_left_inner.png",
+      "rect": [
+        333,
+        239,
+        427,
+        679
+      ],
+      "hairMotion": {
+        "rootY": 250,
+        "tipY": 515,
+        "amplitude": 4.5,
+        "speed": 7,
+        "phase": 2.2
+      },
+      "psdGroup": "v22 exclusive hair/side_left_inner",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_right_outer",
+      "role": "head",
+      "file": "body_v32/side_right_outer.png",
+      "rect": [
+        731,
+        356,
+        865,
+        550
+      ],
+      "hairMotion": {
+        "rootY": 355,
+        "tipY": 650,
+        "amplitude": 8,
+        "speed": 5.5,
+        "phase": 2.7
+      },
+      "psdGroup": "v22 exclusive hair/side_right_outer",
+      "sampling": "linear"
+    }
+  ],
+  "featureFiles": [
+    {
+      "file": "body_v31/face_bashful.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "0bcb4993a6c3b90472153603146bb7c97d76b342b40cac798c82ed55e66878de"
+    },
+    {
+      "file": "body_v31/face_big_smile.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "d472e49c78786767c5c612391a659ef146afb1eb1b36f6a3a1956bb6039ac06b"
+    },
+    {
+      "file": "body_v31/face_displeased.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "215343a328946dd07aef1dc03f439271f353be94246ab75879caef0152a46ff0"
+    },
+    {
+      "file": "body_v31/face_fixed_v22.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "2eae51a85ea3eadac831d52b0cd7aa843259a40bd7128f70f19b3590a97d21ef"
+    },
+    {
+      "file": "body_v31/face_neutral.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "2eae51a85ea3eadac831d52b0cd7aa843259a40bd7128f70f19b3590a97d21ef"
+    },
+    {
+      "file": "body_v31/face_soft_smile.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "ac2c6a40f507432d01bc1a1ecb7e4b4901255e5e4919e5b924a13f0d85f3317c"
+    },
+    {
+      "file": "body_v31/face_surprised.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "99f60fe7a454862a35246db58c52e52e33ad1d28ce5444e1b1a8e649204900e8"
+    },
+    {
+      "file": "body_v31/face_thinking.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "d8143badc8e76eda09f8761a546f7cb3b8368733ada189e80a088da4b25a7080"
+    },
+    {
+      "file": "body_v31/face_worried.png",
+      "size": [
+        630,
+        682
+      ],
+      "mode": "RGBA",
+      "sha256": "cee23206b46a30894a4d9092cd9a32a9bd8263e39bc3ce64ffd6ad14307fea03"
+    },
+    {
+      "file": "expressions/bashful/eye_screen_left_closed.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "99ae0d48157d972b6d9393a1da058435a3c1b792ab93a6d65b165621941b0d3e"
+    },
+    {
+      "file": "expressions/bashful/eye_screen_left_open.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "cd1595469fbeae2f2c03b663a41e6f7b767d4c489869621da4c55f490ade15a6"
+    },
+    {
+      "file": "expressions/bashful/eye_screen_right_closed.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "27584750d44f3e7f32d878312ba878836437857f6a4093e1993a2434ea5a1254"
+    },
+    {
+      "file": "expressions/bashful/eye_screen_right_open.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "b4df10aef1eed3342847b0ac6077bb9354c0ec2176a81876c9bdd729958d9e94"
+    },
+    {
+      "file": "expressions/bashful/mouth_closed.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "2123120f57b2793bbed38ce34c42a3d511063cd6f32b13cd7fb679654e300e52"
+    },
+    {
+      "file": "expressions/bashful/mouth_open.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "a75a4e774eb1be6949a969543193fe4e7c4cc48d30394cc16c762b843a707ce2"
+    },
+    {
+      "file": "expressions/big_smile/eye_screen_left_closed.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2"
+    },
+    {
+      "file": "expressions/big_smile/eye_screen_left_open.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2"
+    },
+    {
+      "file": "expressions/big_smile/eye_screen_right_closed.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f"
+    },
+    {
+      "file": "expressions/big_smile/eye_screen_right_open.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f"
+    },
+    {
+      "file": "expressions/big_smile/mouth_closed.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "795dd2fdab28b65656b7bc8d0d0f840fd3846e8e26d2d59c7b4ec00249f31085"
+    },
+    {
+      "file": "expressions/big_smile/mouth_open.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "1dbb5e48723f51eeaf86282dd07f26bd4290937a9da2d745e1f6d875d2d08b44"
+    },
+    {
+      "file": "expressions/displeased/eye_screen_left_closed.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "15532ec0af676df9538935a7ae273b0f4c5c87313959da2f648f0d663cd01c57"
+    },
+    {
+      "file": "expressions/displeased/eye_screen_left_open.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "b12826786ffa51d31c73a4ad907846dc12214432f87415082145eab97ef79e58"
+    },
+    {
+      "file": "expressions/displeased/eye_screen_right_closed.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "9958b7294a6d6747b05623d79111a3d8162d207b9a4c151b0e121d1ae9e15134"
+    },
+    {
+      "file": "expressions/displeased/eye_screen_right_open.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "bc87c9f857b3c4f2646564f11882b0641357dba13e7096accf8da9df920a52f3"
+    },
+    {
+      "file": "expressions/displeased/mouth_closed.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "349bfd0ae63f027705007663502b988930d9f419c8b4b7b1a1400b7536cf6cdd"
+    },
+    {
+      "file": "expressions/displeased/mouth_open.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "ec99fdc6928f2fd66ef1f0f89ec1a250344990d6661668e89b1682115a8ad0ae"
+    },
+    {
+      "file": "expressions/soft_smile/eye_screen_left_closed.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "546c32b34f62ac8eb682dda09e945a46218d3ab795bcdbebabd44750829107a1"
+    },
+    {
+      "file": "expressions/soft_smile/eye_screen_left_open.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "8197c3b72fbc9430c62e98653f6d1c7b523c83fc260f3aafb3d409e8c704f9b0"
+    },
+    {
+      "file": "expressions/soft_smile/eye_screen_right_closed.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "8876845d71eee8fa78b39ddcf1e6c4aebdc7013be3670104378fe4f320c1e481"
+    },
+    {
+      "file": "expressions/soft_smile/eye_screen_right_open.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "09a447b1a2924736e016453fde22891cd3a2e7122a9ce83ed4980ea73e5ea9b2"
+    },
+    {
+      "file": "expressions/soft_smile/mouth_closed.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "852590b6590c57d80ae3e03f815c228272b06b079ffb5e9f45eee74f1aec6f92"
+    },
+    {
+      "file": "expressions/soft_smile/mouth_open.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "e93256b4333f16e65db4f14421ffb2d66199c107ba6ba727afaad8cbd54bd402"
+    },
+    {
+      "file": "expressions/surprised/eye_screen_left_closed.png",
+      "size": [
+        100,
+        91
+      ],
+      "mode": "RGBA",
+      "sha256": "ba02f4d7ef996472d84ef293e74289386707fb0e9dd12b77943b46ee6ecd1d23"
+    },
+    {
+      "file": "expressions/surprised/eye_screen_left_open.png",
+      "size": [
+        100,
+        91
+      ],
+      "mode": "RGBA",
+      "sha256": "72a4dc3559ab25530b7e3dffb7cc1260e3ff399366a3a003917bdf86564ac5ed"
+    },
+    {
+      "file": "expressions/surprised/eye_screen_right_closed.png",
+      "size": [
+        97,
+        90
+      ],
+      "mode": "RGBA",
+      "sha256": "05880a5b9bf3272fc841fcadd58ba2e6c42df9437816764c85f5deb248af5d5b"
+    },
+    {
+      "file": "expressions/surprised/eye_screen_right_open.png",
+      "size": [
+        97,
+        90
+      ],
+      "mode": "RGBA",
+      "sha256": "6d80d79cea82d493ba309e84a25b4ef494b7a84dc13d8ae0ca7be8ccb8d93145"
+    },
+    {
+      "file": "expressions/surprised/mouth_closed_skin_v17.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74"
+    },
+    {
+      "file": "expressions/surprised/mouth_open.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "94c624622c2b8217bb30dfb7a02f9003ffa9d9aaf9f842ac2b2d6d9d7ade4190"
+    },
+    {
+      "file": "expressions/thinking/eye_screen_left_closed.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "c49728b5c3a2befdff8d1ba5cdaf8c07b4c767a574cd730bcd558492f5df042c"
+    },
+    {
+      "file": "expressions/thinking/eye_screen_left_open.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "87930d8705db7cb0c12df8d3b1e03566c5b541794a38172e61101b0da2b84d19"
+    },
+    {
+      "file": "expressions/thinking/eye_screen_right_closed.png",
+      "size": [
+        97,
+        88
+      ],
+      "mode": "RGBA",
+      "sha256": "d5d4c9e9abe0aeec4edab8d85ebeb1f054a4b66d1669173cfaa8aadfca724108"
+    },
+    {
+      "file": "expressions/thinking/eye_screen_right_open.png",
+      "size": [
+        97,
+        88
+      ],
+      "mode": "RGBA",
+      "sha256": "7e464813010c23633fcde2bf0552e59c2f495c7ee2396ec8ede87fb70018ff5d"
+    },
+    {
+      "file": "expressions/thinking/mouth_closed.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "024db87e355ded577adafc61ea913f28009fdd581ff9cbcfcd33d7fffe376080"
+    },
+    {
+      "file": "expressions/thinking/mouth_open.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "23ae09a9b19b3c0b94ea0f424f80a85b74f29aa2ea4ea6bb191cbc2baec18787"
+    },
+    {
+      "file": "expressions/worried/eye_screen_left_closed.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "29ca6e119dd642b2c1ec56e610ff315b3c956365822b2f0ab73d027125ca596b"
+    },
+    {
+      "file": "expressions/worried/eye_screen_left_open.png",
+      "size": [
+        100,
+        76
+      ],
+      "mode": "RGBA",
+      "sha256": "d4095264e8179643ece08b039fed4252393685d14a75163fec431a089c26499b"
+    },
+    {
+      "file": "expressions/worried/eye_screen_right_closed.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "87dff968d824860e34a7166b58a1a8d2fadd0809924bef0e7531dc8de90258af"
+    },
+    {
+      "file": "expressions/worried/eye_screen_right_open.png",
+      "size": [
+        97,
+        71
+      ],
+      "mode": "RGBA",
+      "sha256": "69b8ba526fefdd090da59a78611308c3e46730cfe2ca100648b968d450d26a8f"
+    },
+    {
+      "file": "expressions/worried/mouth_closed.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "b960d330ceb01eb93807125683e5b20b767e41c62123d97c509ca01e8a37797c"
+    },
+    {
+      "file": "expressions/worried/mouth_open.png",
+      "size": [
+        91,
+        69
+      ],
+      "mode": "RGBA",
+      "sha256": "b2579a0cded2a20360a3da1dad383613f643677165f4244bdb2acded606cdd13"
+    },
+    {
+      "file": "eye_screen_left_closed.png",
+      "size": [
+        203,
+        150
+      ],
+      "mode": "RGBA",
+      "sha256": "a6538777a06d680011ed952b7b27507d72de8ca0205517c47b84e7b796328bc6"
+    },
+    {
+      "file": "eye_screen_left_open.png",
+      "size": [
+        179,
+        125
+      ],
+      "mode": "RGBA",
+      "sha256": "177f3320d850e3d03a928e113683ff0ddf097f10fe4f0622dea6ad6489f6a2ee"
+    },
+    {
+      "file": "eye_screen_right_closed.png",
+      "size": [
+        173,
+        145
+      ],
+      "mode": "RGBA",
+      "sha256": "db067f50468c0cf4fdf9b504630129360788846b28cb73fe3dacc5468641c7dd"
+    },
+    {
+      "file": "eye_screen_right_open.png",
+      "size": [
+        146,
+        116
+      ],
+      "mode": "RGBA",
+      "sha256": "4a43f45ed58338938f403b6eebc0f64ff7b4723c850d70fa71163639a0e3fda1"
+    },
+    {
+      "file": "mouth_closed.png",
+      "size": [
+        156,
+        110
+      ],
+      "mode": "RGBA",
+      "sha256": "217da54a84ed2fc385ccd7c80d6f20131e6b262885a507cbfb1e31921e4aa9b4"
+    },
+    {
+      "file": "mouth_open.png",
+      "size": [
+        147,
+        95
+      ],
+      "mode": "RGBA",
+      "sha256": "066d5cbbf610d899207dc69a5f8a58d8a26a53407c2515a754467cd2a9dd38ae"
+    }
+  ],
+  "reference": {
+    "path": "C:\\Users\\rext7\\Documents\\Codex\\2026-10-22\\task\\vtuber-project\\assets\\parts\\v43\\approved-frontal-head.png",
+    "bytes": 389130,
+    "sha256": "f96d25a1a20c3e404992dfe77d2c321c2c9ab71ef87260215ffa79d4463e4a2f"
+  },
+  "generationAttempt": {
+    "tool": "built-in image_gen",
+    "referencePath": "C:\\Users\\rext7\\Documents\\Codex\\2026-10-22\\task\\vtuber-project\\assets\\parts\\v43\\approved-frontal-head.png",
+    "requestedAngle": "screen-left12degrees, head only, identity preserved",
+    "error": "AbsolutePathBuf deserialized without a base path at line 1 column 134",
+    "outcome": "failed before generation; no image produced",
+    "safetyDenial": false
+  }
+}

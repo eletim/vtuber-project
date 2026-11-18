@@ -1,0 +1,30 @@
+Koma v18 portrait body-motion preview
+
+Copy the six scripts (prepare_source.py, generate_expression_frames.mjs, measure_body_motion.py, test_egl.py, render_v18.py, verify_video.py) into a new output directory. Preserve the frozen v17 preview as a baseline, including frames.json, mesh.bin, mouth-frames.rgba, timeline-audio.wav and source-provenance.json.
+
+Requirements: Node24+, Python3, NumPy, Pillow, ffmpeg/ffprobe, libEGL.so.1, libGL.so.1, NotoSansCJK fonts. No npm packages or browser required.
+
+python /OUTPUT/prepare_source.py --source /FINAL/REPOSITORY
+node /OUTPUT/generate_expression_frames.mjs
+python /OUTPUT/measure_body_motion.py --baseline /FROZEN/V17/PREVIEW
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -u /OUTPUT/render_v18.py --baseline /FROZEN/V17/PREVIEW
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python /OUTPUT/verify_video.py
+
+Snapshot only after runtime and independent geometry review freeze. The actual PerformanceMotion stateful driver and BodyRig generate chronological poses and mesh frames; the original exact expression/mouth helpers generate the face. The original voice repeats at .5, 10.5, 20.5 and 30.5 seconds. Face/model hashes and voice must equal approved v17; body mesh is intentionally different.
+
+Output: 1080x1440 portrait, 42 seconds at30fps, H264/AAC. The avatar has a fixed margin around the entire available artwork so arm movement is not clipped. The drawing ends at the thighs; this preview does not invent lower legs. Same-time v17/v18 motion comparisons use identical stage framing. Motion metrics track approximate hand landmarks relative to the moving chest-waist coordinate frame, not simply global sway.
+
+The video is an offline OpenGL re-render, not browser UI/E2E capture. No new dialogue or artwork. Existing thigh cutout gaps and hair matte remain visible. No official Cubism export. verify_video.py enforces the under20MB MP4 limit, complete decode/audio checks and exact encoded keyframe/gesture-window extraction.
+
+Rebuild the v17 baseline from repository history when the preview cache is unavailable
+
+The baseline can be regenerated without encoding a v17 video. Use a NEW detached worktree and a NEW output folder; do not overwrite an existing checkout or preview:
+
+git -C /YOUR/VTUBER/REPOSITORY worktree add --detach /NEW/V17/SOURCE e70184fb6c5bc6fe33e1d0da0cd47f0fc2970415
+mkdir -p /NEW/V17/PREVIEW
+cp /NEW/V17/SOURCE/scripts/video_v17/prepare_source.py /NEW/V17/PREVIEW/
+cp /NEW/V17/SOURCE/scripts/video_v17/generate_expression_frames.mjs /NEW/V17/PREVIEW/
+python /NEW/V17/PREVIEW/prepare_source.py --source /NEW/V17/SOURCE
+node /NEW/V17/PREVIEW/generate_expression_frames.mjs
+
+These two scripts recreate source-provenance.json, frames.json, mesh.bin, mouth-frames.rgba and the original timeline audio. No v17 MP4 encoding is needed. Pass /NEW/V17/PREVIEW as --baseline in the v18 measure_body_motion.py and render_v18.py commands above. The repository or imported recovery bundle must contain the named v17 commit; do not substitute a newer worktree with modified motion code.

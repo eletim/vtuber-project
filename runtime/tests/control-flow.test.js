@@ -3,31 +3,35 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFileSync} from 'node:fs';
 import * as controls from '../web/controls.js';
-import {performancePose} from '../web/performance.js';
+import {PerformanceMotion} from '../web/performance.js';
+import {ActingController} from '../web/acting-controller.js';
+import {expressionLabels} from '../web/expressions.js';
 
 // Exercise the real UI handlers without WebGL, a media device, or wall-clock waits.
 const source=readFileSync(new URL('../web/app.js',import.meta.url),'utf8')
-  .replace(/^import .*;\n/gm,'')
+  .replace(/^import .*;\r?\n/gm,'')
   .replace(/^try\{await renderer\.load.*$/m,'');
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
 function harness(){
   const elements=new Map(),requests=[],intervals=new Map(),timeouts=new Map(),sent=[],mediaRequests=[];
   let sequence=0,now=0,socket;
-  let state={mode:'human',parameters:controls.neutral(),performance:{enabled:false,emotion:'neutral'}};
+  let state={mode:'human',parameters:controls.neutral(),performance:{enabled:false,emotion:'neutral'},expression:{id:'neutral',owner:'idle'}};
   function element(id){
     if(!elements.has(id))elements.set(id,{
-      value:'auto',checked:true,textContent:'',paused:true,ended:false,currentTime:0,files:[],listeners:{},
+      value:'auto',checked:true,textContent:'',dataset:{},disabled:false,paused:true,ended:false,currentTime:0,playbackRate:1,readyState:4,seeking:false,error:null,src:'',files:[],listeners:{},
       classList:{toggle(){},add(){},remove(){}},append(){},
       addEventListener(type,callback){(this.listeners[type]||=[]).push(callback);},
       fire(type){for(const callback of this.listeners[type]||[])callback();},
-      pause(){this.paused=true;},play(){this.paused=false;return Promise.resolve();},
+      pause(){this.paused=true;},play(){this.paused=false;this.ended=false;return Promise.resolve();},
+      removeAttribute(name){if(name==='src')this.src='';},load(){this.currentTime=0;this.ended=false;},
       querySelector(){return{value:0,nextElementSibling:{value:0}};}
     });
     return elements.get(id);
   }
   const context=vm.createContext({
-    ...controls,performancePose,AvatarRenderer:class{},console,Date,URLSearchParams,
-    document:{getElementById:element,createElement:()=>element(`row${sequence++}`),body:element('body')},
+    ...controls,PerformanceMotion,ActingController,mountActingControls:()=>()=>{},expressionLabels,AvatarRenderer:class{},console,Date,URLSearchParams,AbortController,
+    URL:{createObjectURL:()=> 'blob:test',revokeObjectURL(){}},
+    document:{addEventListener(){},getElementById:element,createElement:()=>element(`row${sequence++}`),body:element('body')},
     window:{addEventListener(){}},location:{protocol:'http:',host:'test',search:''},
     performance:{now:()=>now},
     navigator:{mediaDevices:{getUserMedia:()=>new Promise(resolve=>mediaRequests.push(resolve))}},
@@ -38,9 +42,13 @@ function harness(){
     },
     WebSocket:class{
       constructor(){socket=this;this.readyState=1;}
-      send(data){const message=JSON.parse(data);sent.push(message);if(message.source===state.mode){Object.assign(state.parameters,message.parameters);emit({type:'state',...state});}}
+      send(data){const message=JSON.parse(data);sent.push(message);if(message.source===state.mode){Object.assign(state.parameters,message.parameters);if(message.expression)state.expression={id:message.expression,owner:'manual'};emit({type:'state',...state});}}
     },
-    fetch:(path,options)=>new Promise(resolve=>requests.push({path,body:JSON.parse(options.body),resolve})),
+    fetch:(path,options={})=>new Promise((resolve,reject)=>{
+      const request={path,body:options.body?JSON.parse(options.body):undefined,signal:options.signal,resolve,reject};
+      requests.push(request);
+      options.signal?.addEventListener('abort',()=>{if(!request.ignoreAbort)reject(options.signal.reason);});
+    }),
     setInterval:fn=>{const id=++sequence;intervals.set(id,fn);return id;},
     clearInterval:id=>intervals.delete(id),
     setTimeout:(fn,delay)=>{const id=++sequence;timeouts.set(id,{fn,at:now+delay});return id;},
@@ -51,8 +59,8 @@ function harness(){
   const emit=event=>socket.onmessage({data:JSON.stringify(event)});
   function publish(request){
     if(request.path==='/api/mode'){
-      state={...state,mode:request.body.mode,parameters:controls.neutral()};
-      emit({type:'cancel_speech'});
+      state={...state,mode:request.body.mode,parameters:controls.neutral(),expression:{id:'neutral',owner:'idle'}};
+      emit({type:'cancel_speech',reason:'mode_change'});
     }else if(request.path==='/api/performance'){
       state.performance={...state.performance,...request.body};
     }
@@ -62,9 +70,28 @@ function harness(){
   function complete(request){publish(request);respond(request);}
   emit({type:'state',...state});
   return{element,requests,intervals,timeouts,sent,mediaRequests,emit,publish,respond,complete,
+    open:()=>socket.onopen(),
+    reconnect:()=>{vm.runInContext('connect();',context);emit({type:'state',...state});},
+    motion:vm.runInContext('naturalMotion',context),
+    acting:vm.runInContext('acting',context),
+    actingBlocked:()=>vm.runInContext('actingBlocked()',context),
+    prepareCamera:()=>vm.runInContext('landmarker={detectForVideo(){}};',context),
+    slider:key=>vm.runInContext('sliders['+JSON.stringify(key)+']',context),
     disconnect:()=>{socket.readyState=3;socket.onclose();},
     advance:time=>{now=time;for(const callback of [...intervals.values()])callback();for(const [id,timer] of [...timeouts])if(timer.at<=now){timeouts.delete(id);timer.fn();}}};
 }
+
+for(const action of ['reset','human','disconnect'])test(`${action} clears speech accents and cannot revive an old gesture`,()=>{
+  const h=harness();
+  for(let i=0;i<40;i++)h.motion.frame(controls.neutral(),i/60,{enabled:true},.8);
+  assert.ok(h.motion.pose.accent>.2);
+  if(action==='disconnect')h.disconnect();else h.element(action).onclick();
+  assert.equal(h.motion.gesture,null);assert.equal(h.motion.pose.accent,0);
+  for(let i=40;i<100;i++){
+    const pose=h.motion.frame(controls.neutral(),i/60,{enabled:action==='reset'},0);
+    assert.equal(pose.ParamArmLOpen,0);assert.equal(pose.ParamArmROpen,0);
+  }
+});
 
 test('gesture preview selects AI and enables disabled natural motion',async()=>{
   const h=harness();h.element('emotion').value='thoughtful';
@@ -231,4 +258,686 @@ test('old queued pause/end events do not stop new playing speech',async()=>{
   assert.equal(h.requests.at(-1).body.clip_id,'new');
   assert.equal(h.requests.at(-1).body.state,'paused');
   assert.equal(h.element('subtitle').textContent,'');
+});
+
+
+test('eight-state picker keeps latest selection and reset explicitly returns neutral',()=>{
+  const h=harness();
+  for(const id of Object.keys(expressionLabels)){h.element('expression').value=id;h.element('expression').onchange();}
+  assert.equal(h.sent.at(-1).expression,'thinking');
+  assert.equal(h.sent.at(-1).source,'human');
+  assert.equal(h.sent.at(-1).expression_duration,30);
+  h.element('reset').onclick();assert.equal(h.sent.at(-1).expression,'neutral');
+  assert.equal(h.element('expression').value,'neutral');
+});
+
+test('selected closed-eye smile is passed to speech across the AI mode reset',async()=>{
+  const h=harness();h.element('expression').value='big_smile';h.element('expression').onchange();
+  const pending=h.element('speak').onclick();h.complete(h.requests[0]);await flush();
+  assert.equal(h.requests[1].path,'/api/speech');assert.equal(h.requests[1].body.expression,'big_smile');
+  h.complete(h.requests[1]);await pending;
+});
+
+test('overlapping speech clicks share AI selection and only latest synthesizes',async()=>{
+  const h=harness();const first=h.element('speak').onclick(),second=h.element('speak').onclick();
+  assert.equal(h.requests.length,1);h.respond(h.requests[0]);await flush();assert.equal(h.requests.length,1);
+  h.publish(h.requests[0]);await flush();assert.equal(h.requests.length,2);
+  h.complete(h.requests[1]);await Promise.all([first,second]);
+  assert.equal(h.requests.filter(request=>request.path==='/api/speech').length,1);
+});
+
+for(const button of ['speak','audiofile'])test(`human mode interrupts pending ${button} without stale playback`,async()=>{
+  const h=harness();h.element('audiofile').files=[{name:'voice.wav'}];
+  const pending=button==='speak'?h.element(button).onclick():h.element(button).onchange();
+  h.publish(h.requests[0]);
+  const human=h.element('human').onclick();h.complete(h.requests[1]);await human;
+  h.respond(h.requests[0]);await pending;
+  assert.equal(h.requests.length,2);assert.equal(h.element('audio').paused,true);
+});
+
+test('disconnected expression picker reports the problem instead of queueing stale state',()=>{
+  const h=harness();h.disconnect();h.element('expression').value='worried';h.element('expression').onchange();
+  assert.equal(h.sent.length,0);assert.match(h.element('status').textContent,/接続/);
+});
+
+
+test('disconnect clears selected face, stops audible speech and closes local mouth',async()=>{
+  const h=harness();const ai=h.element('ai').onclick();h.complete(h.requests[0]);await ai;
+  h.element('expression').value='surprised';h.element('expression').onchange();
+  h.emit({type:'speech',play:true,text:'test',url:'/speech/test.wav',credit:'TEST',clip_id:'clip1'});
+  assert.equal(h.element('audio').paused,false);
+  h.disconnect();assert.equal(h.element('audio').paused,true);
+  assert.equal(h.element('expression').value,'neutral');assert.equal(h.element('subtitle').textContent,'');
+});
+
+
+test('camera permission resolving after AI then human override cannot revive old tracking',async()=>{
+  const h=harness();h.prepareCamera();const camera=h.element('camera').onclick();
+  assert.equal(h.mediaRequests.length,1);
+  const ai=h.element('ai').onclick();h.complete(h.requests[0]);await ai;
+  const human=h.element('human').onclick();h.complete(h.requests[1]);await human;
+  const stream=fakeStream();h.mediaRequests[0](stream);await camera;
+  assert.equal(stream.getTracks()[0].readyState,'ended');assert.equal(h.element('video').srcObject,null);
+});
+
+test('camera startup waits for both mode acknowledgments and repeated clicks acquire one stream',async()=>{
+  const h=harness();h.prepareCamera();const ai=h.element('ai').onclick();h.complete(h.requests[0]);await ai;
+  const first=h.element('camera').onclick(),second=h.element('camera').onclick();
+  assert.equal(h.requests.length,2);h.respond(h.requests[1]);await flush();assert.equal(h.mediaRequests.length,0);
+  h.publish(h.requests[1]);await flush();assert.equal(h.mediaRequests.length,1);
+  const stream=fakeStream();h.mediaRequests[0](stream);await Promise.all([first,second]);
+  assert.equal(stream.getTracks()[0].readyState,'live');assert.equal(h.element('video').srcObject,stream);
+});
+
+
+test('new picker choice wins over an audiofile awaiting its AI-mode response',async()=>{
+  const h=harness();h.element('expression').value='big_smile';h.element('expression').onchange();
+  h.element('audiofile').files=[{name:'voice.wav'}];const pending=h.element('audiofile').onchange();
+  h.publish(h.requests[0]);h.element('expression').value='thinking';h.element('expression').onchange();
+  h.respond(h.requests[0]);await pending;
+  assert.equal(h.sent.at(-1).expression,'thinking');assert.equal(h.requests.length,1);
+  assert.equal(h.element('audio').paused,false);
+});
+
+test('manual eye change during blink cancels stale restoration and restores only the other eye',()=>{
+  const h=harness();h.element('blink').onclick();const stale=[...h.timeouts.values()][0].fn;
+  const input=h.slider('ParamEyeLOpen');input.value=.4;input.oninput();
+  assert.equal(h.sent.at(-1).parameters.ParamEyeLOpen,.4);assert.equal(h.sent.at(-1).parameters.ParamEyeROpen,1);
+  const count=h.sent.length;stale();h.advance(400);assert.equal(h.sent.length,count);
+});
+
+
+test('superseded speech responses do not overwrite the newer UI status',async()=>{
+  for(const ok of [true,false]){
+    const h=harness();const speech=h.element('speak').onclick();h.complete(h.requests[0]);await flush();
+    const human=h.element('human').onclick();h.complete(h.requests.findLast(request=>request.path==='/api/mode'));await human;
+    h.element('status').textContent='newer operation';
+    h.requests[1].resolve({ok,status:409,json:async()=>({}),text:async()=> 'speech was superseded or cancelled'});
+    await speech;assert.equal(h.element('status').textContent,'newer operation');
+  }
+});
+
+
+// v20: request-scoped text synthesis, real audio lifecycle, and engine health.
+async function beginSynthesis(h,text='新しい文章です。'){
+  h.element('speech').value=text;
+  const pending=h.element('speak').onclick();
+  h.complete(h.requests.findLast(request=>request.path==='/api/mode'));await flush();
+  const request=h.requests.findLast(request=>request.path==='/api/speech');
+  return{pending,request};
+}
+function speechEvent(request,overrides={}){
+  return{type:'speech',play:true,text:request.body.text,request_id:request.body.request_id,url:'/speech/fresh.wav',clip_id:'fresh',credit:'VOICEVOX:雨晴はう',...overrides};
+}
+function resolveJSON(request,data){request.resolve({ok:true,json:async()=>data});}
+
+for(const ordering of ['before-mode','http-first','ws-first'])test(`Stop ${ordering} prevents synthesis without requesting human mode`,async()=>{
+  const h=harness();const pending=h.element('speak').onclick(),request=h.requests[0];
+  if(ordering==='http-first')h.respond(request);
+  if(ordering==='ws-first')h.publish(request);
+  h.element('stop-speech').onclick();
+  assert.equal(h.element('audio').paused,true);assert.equal(h.element('audio').src,'');
+  assert.equal(h.element('stop-speech').disabled,true);
+  h.complete(request);await pending;
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech').length,0);
+  assert.ok(h.requests.filter(r=>r.path==='/api/mode').every(r=>r.body.mode==='ai'));
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+});
+
+test('retry immediately after Stop shares the unfinished AI selection and only new text synthesizes',async()=>{
+  const h=harness();const first=h.element('speak').onclick();
+  h.element('stop-speech').onclick();h.element('speech').value='新しい発話';
+  const latest=h.element('speak').onclick();
+  assert.equal(h.requests.length,1);h.complete(h.requests[0]);await flush();
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech').length,1);
+  const speech=h.requests.at(-1);assert.equal(speech.body.text,'新しい発話');
+  resolveJSON(speech,{});await Promise.all([first,latest]);
+});
+
+for(const outcome of ['success','failure'])test(`Stop aborts pending synthesis and ignores late ${outcome} and its WS event`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  request.ignoreAbort=true;h.element('stop-speech').onclick();
+  assert.equal(request.signal.aborted,true);
+  const cancellation=h.requests.find(r=>r.path==='/api/speech/cancel');
+  assert.deepEqual(cancellation.body,{request_id:request.body.request_id});
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+  if(outcome==='success')resolveJSON(request,speechEvent(request));
+  else request.resolve({ok:false,status:503,text:async()=> 'late failure'});
+  await pending;h.emit(speechEvent(request));
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('subtitle').textContent,'');
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+  assert.equal(h.element('stop-speech').disabled,true);
+});
+
+test('own superseded broadcast preserves the pending request, followed by ready and playing feedback',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  assert.equal(h.element('audio-status').dataset.state,'generating');
+  h.emit({type:'cancel_speech',reason:'superseded',request_id:request.body.request_id});
+  assert.equal(request.signal.aborted,false);assert.equal(h.element('stop-speech').disabled,false);
+  h.emit(speechEvent(request));assert.equal(h.element('audio-status').dataset.state,'ready');
+  h.element('audio').fire('playing');assert.equal(h.element('audio-status').dataset.state,'playing');
+  resolveJSON(request,speechEvent(request));await pending;
+  assert.equal(h.element('audio-status').dataset.state,'playing');
+  assert.match(h.element('audio-status').textContent,/入力文から生成/);
+});
+
+for(const phase of ['ready','playing'])test(`Stop clears a ${phase} generated source and late play rejection cannot restore it`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  let rejectPlay;h.element('audio').play=function(){this.paused=false;return new Promise((_,reject)=>{rejectPlay=reject;});};
+  h.emit(speechEvent(request));if(phase==='playing')h.element('audio').fire('playing');
+  h.element('stop-speech').onclick();rejectPlay(Error('old autoplay failure'));await pending;await flush();
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('audio').paused,true);
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+  h.emit(speechEvent(request));h.element('audio').fire('playing');
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+});
+
+test('new generation cannot be cancelled or overwritten by an old scoped response/event',async()=>{
+  const h=harness();const old=await beginSynthesis(h,'古い文章');old.request.ignoreAbort=true;
+  const latest=await beginSynthesis(h,'新しい文章');
+  assert.equal(old.request.signal.aborted,true);
+  assert.notEqual(old.request.body.request_id,latest.request.body.request_id);
+  h.emit({type:'cancel_speech',reason:'stopped',request_id:old.request.body.request_id});
+  h.emit({type:'cancel_speech',reason:'superseded',request_id:old.request.body.request_id});
+  h.emit(speechEvent(old.request));
+  assert.equal(h.element('audio').src,'');assert.equal(latest.request.signal.aborted,false);
+  h.emit(speechEvent(latest.request,{clip_id:'latest',url:'/latest.wav'}));h.element('audio').fire('playing');
+  resolveJSON(old.request,speechEvent(old.request));resolveJSON(latest.request,speechEvent(latest.request));
+  await Promise.all([old.pending,latest.pending]);
+  assert.equal(h.element('audio').src,'/latest.wav');assert.equal(h.element('subtitle').textContent,'新しい文章');
+  assert.equal(h.element('audio-status').dataset.state,'playing');
+});
+
+for(const action of ['human','reset','disconnect'])test(`${action} cancels in-flight synthesis immediately and ignores late speech`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  if(action==='disconnect')h.disconnect();else h.element(action).onclick();
+  assert.equal(request.signal.aborted,true);await pending;
+  h.emit(speechEvent(request));assert.equal(h.element('audio').paused,true);assert.equal(h.element('audio').src,'');
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+});
+
+test('disconnect then reconnect allows a new request but never revives old speech',async()=>{
+  const h=harness();const first=await beginSynthesis(h);h.disconnect();await first.pending;
+  h.reconnect();const latest=await beginSynthesis(h,'接続後の新しい文章');
+  h.emit(speechEvent(first.request));assert.equal(h.element('audio').src,'');
+  h.emit(speechEvent(latest.request,{clip_id:'reconnected'}));resolveJSON(latest.request,{});await latest.pending;
+  assert.equal(h.element('subtitle').textContent,'接続後の新しい文章');assert.equal(h.element('audio').paused,false);
+});
+
+test('synthesis errors show provider instructions, allow retry, and never fall back to a saved clip',async()=>{
+  const h=harness();const first=await beginSynthesis(h);
+  first.request.resolve({ok:false,status:503,text:async()=> 'VOICEVOXを起動してください。'});await first.pending;
+  assert.match(h.element('audio-status').textContent,/VOICEVOXを起動してください/);
+  assert.equal(h.element('audio-status').dataset.state,'error');assert.equal(h.element('audio').src,'');
+  assert.equal(h.element('stop-speech').disabled,true);
+  const latest=await beginSynthesis(h);h.emit(speechEvent(latest.request));resolveJSON(latest.request,{});await latest.pending;
+  assert.equal(h.element('audio').paused,false);assert.equal(h.element('audio-status').dataset.state,'ready');
+});
+
+test('empty input is explained without switching mode or making a synthesis request',async()=>{
+  const h=harness();h.element('speech').value='  ';await h.element('speak').onclick();
+  assert.equal(h.requests.length,0);assert.equal(h.element('audio-status').dataset.state,'error');
+});
+
+test('uploaded audio is labeled as saved media, not generated speech, and Stop clears its source',async()=>{
+  const h=harness();h.element('audiofile').files=[{name:'saved.wav'}];
+  const pending=h.element('audiofile').onchange();h.complete(h.requests[0]);await pending;
+  assert.match(h.element('audio-status').textContent,/保存済み音声ファイル/);
+  assert.match(h.element('audio-status').textContent,/文章からの音声生成ではありません/);
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech').length,0);
+  h.element('audio').fire('playing');assert.match(h.element('audio-status').textContent,/保存済み音声ファイル/);
+  h.element('stop-speech').onclick();assert.equal(h.element('audio').src,'');
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech\/cancel').length,0);
+});
+
+test('a file replacing synthesis ignores its old generated event and never gains generated credit',async()=>{
+  const h=harness();const first=await beginSynthesis(h);
+  h.element('audiofile').files=[{name:'saved.wav'}];const file=h.element('audiofile').onchange();
+  h.complete(h.requests.findLast(r=>r.path==='/api/mode'));await file;await first.pending;
+  h.emit(speechEvent(first.request));assert.equal(h.element('audio').src,'blob:test');
+  assert.match(h.element('audio-status').textContent,/保存済み音声ファイル/);
+  assert.doesNotMatch(h.element('audio-status').textContent,/VOICEVOX/);
+});
+
+test('seeking, buffering, rate changes and audio failure report actual playback to the server',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;
+  const audio=h.element('audio');audio.fire('playing');audio.currentTime=.5;audio.seeking=true;audio.fire('seeking');
+  audio.currentTime=1;audio.seeking=false;audio.fire('seeked');audio.playbackRate=1.5;audio.fire('ratechange');
+  audio.readyState=2;audio.fire('waiting');audio.readyState=4;audio.fire('playing');audio.error={code:3};audio.fire('error');
+  const reports=h.requests.filter(r=>r.path==='/api/playback').map(r=>r.body);
+  assert.deepEqual(reports.map(r=>r.state),['playing','paused','playing','playing','paused','playing','paused']);
+  assert.equal(reports[3].playback_rate,1.5);assert.equal(reports[2].position,1);
+  assert.deepEqual(reports.map(r=>r.sequence),[1,2,3,4,5,6,7]);
+  assert.equal(h.element('audio-status').dataset.state,'error');
+});
+
+test('engine health check displays availability and stale checks cannot overwrite the latest result',async()=>{
+  const h=harness();const old=h.element('check-voice').onclick(),first=h.requests[0];first.ignoreAbort=true;
+  const latest=h.element('check-voice').onclick();assert.equal(first.signal.aborted,true);
+  resolveJSON(h.requests[1],{available:true,provider:'VOICEVOX',credit:'VOICEVOX:雨晴はう',version:'1.0'});await latest;
+  resolveJSON(first,{available:false,message:'old unavailable'});await old;
+  assert.match(h.element('voice-status').textContent,/利用可能.*雨晴はう.*v1.0/);
+  assert.doesNotMatch(h.element('voice-status').textContent,/old/);
+  const unavailable=h.element('check-voice').onclick();resolveJSON(h.requests.at(-1),{available:false,message:'VOICEVOXを起動してください。'});await unavailable;
+  assert.match(h.element('voice-status').textContent,/利用できません.*VOICEVOXを起動/);
+});
+
+test('failed engine health check offers a retry without changing speech state',async()=>{
+  const h=harness();const check=h.element('check-voice').onclick();h.requests[0].reject(Error('offline'));await check;
+  assert.match(h.element('voice-status').textContent,/確認できません/);
+  const retry=h.element('check-voice').onclick();resolveJSON(h.requests[1],{available:true,credit:'VOICEVOX:雨晴はう'});await retry;
+  assert.match(h.element('voice-status').textContent,/利用可能/);assert.equal(h.element('audio').src,'');
+});
+
+
+test('old queued error, waiting and seeking events do not pause healthy replacement audio',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;h.element('audio').fire('playing');
+  const count=h.requests.length;
+  for(const event of ['error','waiting','seeking'])h.element('audio').fire(event);
+  assert.equal(h.requests.length,count);assert.equal(h.element('audio-status').dataset.state,'playing');
+});
+
+test('Stop is available while a saved file awaits AI-mode selection',async()=>{
+  const h=harness();h.element('audiofile').files=[{name:'saved.wav'}];
+  const pending=h.element('audiofile').onchange();assert.equal(h.element('stop-speech').disabled,false);
+  h.element('stop-speech').onclick();h.complete(h.requests[0]);await pending;
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('stop-speech').disabled,true);
+  assert.equal(h.element('audio-status').dataset.state,'stopped');
+});
+
+test('stale controller-disconnect cancellation does not stop a newer local synthesis',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit({type:'cancel_speech',reason:'controller_disconnected',request_id:'some-other-old-controller'});
+  assert.equal(request.signal.aborted,false);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;
+  assert.equal(h.element('audio').paused,false);
+});
+
+
+test('confirmed WS playback wins over a late HTTP transport error and duplicate speech event',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit(speechEvent(request));h.element('audio').fire('playing');h.element('audio').currentTime=1;
+  const count=h.requests.length;h.emit(speechEvent(request));
+  assert.equal(h.requests.length,count);assert.equal(h.element('audio').currentTime,1);
+  request.reject(Error('HTTP response disconnected'));await pending;
+  assert.equal(h.element('audio').paused,false);assert.equal(h.element('audio-status').dataset.state,'playing');
+});
+
+
+for(const name of ['NotAllowedError','NotSupportedError','NetworkError'])test(`${name} explains autoplay vs actual generated audio failure`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.element('audio').play=()=>Promise.reject(Object.assign(Error('audio playback failed'),{name}));
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;await flush();
+  if(name==='NotAllowedError'){
+    assert.equal(h.element('audio-status').dataset.state,'ready');assert.match(h.element('audio-status').textContent,/再生ボタン/);
+  }else{
+    assert.equal(h.element('audio-status').dataset.state,'error');assert.doesNotMatch(h.element('audio-status').textContent,/再生ボタン/);
+  }
+});
+
+test('an audio decode error is not overwritten by later autoplay rejection advice',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  let rejectPlay;h.element('audio').play=()=>new Promise((_,reject)=>{rejectPlay=reject;});
+  h.emit(speechEvent(request));const audio=h.element('audio');audio.error={code:3};audio.fire('error');
+  rejectPlay(Object.assign(Error('not allowed'),{name:'NotAllowedError'}));resolveJSON(request,{});await pending;await flush();
+  assert.equal(h.element('audio-status').dataset.state,'error');assert.doesNotMatch(h.element('audio-status').textContent,/再生ボタン/);
+});
+
+
+for(const reason of ['stopped','controller_disconnected','history_cleared'])test(`${reason} tombstones an external request before its delayed first speech event`,async()=>{
+  const h=harness();const ai=h.element('ai').onclick();h.complete(h.requests[0]);await ai;
+  const request_id='external-ai-client-utterance';
+  h.emit({type:'cancel_speech',reason,request_id});
+  h.emit({type:'state',mode:'ai',parameters:controls.neutral(),performance:{enabled:true,emotion:'neutral'},speech:{phase:'idle'}});
+  h.emit({type:'speech',play:true,request_id,text:'cancelled external speech',clip_id:'late-external',url:'/late-external.wav',credit:'VOICEVOX:雨晴はう'});
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('audio').paused,true);
+  assert.equal(h.element('subtitle').textContent,'');
+  assert.equal(h.requests.filter(r=>r.path==='/api/playback').length,0);
+});
+
+test('tombstoning an unseen external stop neither cancels nor blocks a different new utterance',async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  h.emit({type:'cancel_speech',reason:'stopped',request_id:'external-old'});
+  assert.equal(request.signal.aborted,false);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;
+  h.emit({type:'speech',play:true,request_id:'external-old',text:'late',clip_id:'late',url:'/late.wav',credit:'VOICEVOX:雨晴はう'});
+  assert.equal(h.element('audio').src,'/speech/fresh.wav');assert.equal(h.element('audio').paused,false);
+});
+
+
+// v21: opt-in conversation uses the same request-scoped cancellation and audio lifecycle.
+async function enableConversation(h,overrides={}){
+  const pending=h.element('check-conversation').onclick();
+  resolveJSON(h.requests.at(-1),{configured:true,available:true,provider:'llama.cpp',model:'local-test',max_input_chars:500,...overrides});
+  await pending;
+}
+async function beginConversation(h,text='今日は何から練習しよう？'){
+  h.element('conversation-input').value=text;
+  const pending=h.element('conversation-send').onclick();
+  h.complete(h.requests.findLast(request=>request.path==='/api/mode'));await flush();
+  const request=h.requests.findLast(request=>request.path==='/api/conversation'&&request.body);
+  return{pending,request};
+}
+function conversationEvent(request,overrides={}){
+  return speechEvent(request,{kind:'conversation',user_text:request.body.text,text:'まずは詰将棋を一問、一緒に考えよう。',...overrides});
+}
+function conversationPhase(h,request,phase,overrides={}){
+  h.emit({type:'state',mode:'ai',parameters:controls.neutral(),performance:{enabled:true,emotion:'neutral'},speech:{kind:'conversation',request_id:request.body.request_id,phase,...overrides}});
+}
+
+test('conversation is disabled until confirmed configured and available, without disabling raw text speech',async()=>{
+  const h=harness();assert.equal(h.element('conversation-send').disabled,true);
+  await h.element('conversation-send').onclick();assert.equal(h.requests.length,0);
+  assert.match(h.element('conversation-status').textContent,/未確認|利用できません/);
+  await enableConversation(h,{configured:false,available:false,provider:'unconfigured',status:'unconfigured',message:'モデルは未設定です。'});
+  assert.equal(h.element('conversation-send').disabled,true);
+  assert.match(h.element('conversation-engine-status').textContent,/未設定/);
+  const {pending,request}=await beginSynthesis(h);
+  assert.equal(request.path,'/api/speech');h.emit(speechEvent(request));resolveJSON(request,{});await pending;
+  assert.equal(h.element('audio').paused,false);
+  assert.equal(h.requests.filter(r=>r.path==='/api/conversation'&&r.body).length,0);
+});
+
+test('conversation health requires explicit configuration and uses the actual provider name',async()=>{
+  const h=harness();await enableConversation(h,{configured:false});
+  assert.equal(h.element('conversation-send').disabled,true);
+  await enableConversation(h);
+  assert.equal(h.element('conversation-send').disabled,false);
+  assert.match(h.element('conversation-engine-status').textContent,/利用可能.*llama\.cpp.*local-test.*VOICEVOX/);
+  assert.equal(h.element('conversation-engine-status').dataset.state,'available');
+  assert.ok(h.requests.every(r=>r.path==='/api/conversation'&&!r.body));
+});
+
+test('connection opening checks voice and conversation status but never starts a conversation',async()=>{
+  const h=harness();h.open();
+  assert.deepEqual(h.requests.map(r=>r.path),['/api/voice','/api/conversation']);
+  assert.equal(h.element('conversation-send').disabled,true);
+  resolveJSON(h.requests[0],{available:false});resolveJSON(h.requests[1],{configured:false,available:false});await flush();
+  assert.equal(h.element('conversation-send').disabled,true);assert.equal(h.element('audio').src,'');
+});
+
+test('stale conversation status cannot overwrite a newer check or restore availability after disconnect',async()=>{
+  const h=harness();const old=h.element('check-conversation').onclick(),first=h.requests[0];first.ignoreAbort=true;
+  await enableConversation(h);assert.equal(first.signal.aborted,true);
+  resolveJSON(first,{configured:false,available:false,message:'old unavailable'});await old;
+  assert.equal(h.element('conversation-send').disabled,false);assert.doesNotMatch(h.element('conversation-engine-status').textContent,/old/);
+  const late=h.element('check-conversation').onclick(),request=h.requests.at(-1);request.ignoreAbort=true;
+  h.disconnect();resolveJSON(request,{configured:true,available:true,provider:'old'});await late;
+  assert.equal(h.element('conversation-send').disabled,true);
+  assert.equal(h.element('conversation-engine-status').dataset.state,'unknown');
+  assert.match(h.element('conversation-engine-status').textContent,/再接続/);
+});
+
+test('failed conversation status stays unavailable and can be retried',async()=>{
+  const h=harness();const check=h.element('check-conversation').onclick();h.requests[0].reject(Error('offline'));await check;
+  assert.equal(h.element('conversation-send').disabled,true);assert.match(h.element('conversation-engine-status').textContent,/確認できません/);
+  await enableConversation(h);assert.equal(h.element('conversation-send').disabled,false);
+});
+
+for(const text of ['  ','長'.repeat(33)])test(`conversation rejects ${text.trim()?'over-limit':'empty'} input before changing mode`,async()=>{
+  const h=harness();await enableConversation(h,{max_input_chars:32});h.element('conversation-input').value=text;
+  const count=h.requests.length;await h.element('conversation-send').onclick();
+  assert.equal(h.requests.length,count);assert.equal(h.element('conversation-input').maxLength,32);
+  assert.equal(h.element('conversation-status').dataset.state,'error');assert.equal(h.element('stop-conversation').disabled,true);
+});
+
+test('conversation preserves separate user and reply text through thinking, synthesis and actual playback',async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h,'  あなたは誰？  ');
+  assert.deepEqual(Object.keys(request.body).sort(),['request_id','text']);assert.equal(request.body.text,'あなたは誰？');
+  assert.equal(h.element('conversation-status').dataset.state,'thinking');assert.equal(h.element('stop-conversation').disabled,false);
+  assert.equal(h.element('conversation-user').textContent,'あなたは誰？');assert.equal(h.element('conversation-reply').textContent,'');
+  assert.equal(h.element('audio').src,'');
+  h.emit({type:'cancel_speech',reason:'superseded',request_id:request.body.request_id});
+  assert.equal(request.signal.aborted,false);
+  conversationPhase(h,request,'thinking');assert.equal(h.element('conversation-status').dataset.state,'thinking');
+  conversationPhase(h,request,'synthesizing');assert.equal(h.element('conversation-status').dataset.state,'synthesizing');
+  h.emit(conversationEvent(request));assert.equal(h.element('conversation-status').dataset.state,'ready');
+  assert.equal(h.element('conversation-user').textContent,'あなたは誰？');
+  assert.equal(h.element('conversation-reply').textContent,'まずは詰将棋を一問、一緒に考えよう。');
+  assert.equal(h.element('subtitle').textContent,h.element('conversation-reply').textContent);
+  h.element('audio').fire('playing');assert.equal(h.element('conversation-status').dataset.state,'playing');
+  assert.match(h.element('audio-status').textContent,/AIの返答から生成/);assert.doesNotMatch(h.element('audio-status').textContent,/入力文から生成/);
+  conversationPhase(h,request,'thinking');assert.equal(h.element('conversation-status').dataset.state,'playing');
+  resolveJSON(request,conversationEvent(request));await pending;assert.equal(h.element('conversation-status').dataset.state,'playing');
+});
+
+for(const ordering of ['before-mode','http-first','ws-first'])test(`conversation Stop ${ordering} prevents reply generation without requesting human mode`,async()=>{
+  const h=harness();await enableConversation(h);h.element('conversation-input').value='hello';
+  const pending=h.element('conversation-send').onclick(),request=h.requests.at(-1);
+  if(ordering==='http-first')h.respond(request);if(ordering==='ws-first')h.publish(request);
+  h.element('stop-conversation').onclick();h.complete(request);await pending;
+  assert.equal(h.requests.filter(r=>r.path==='/api/conversation'&&r.body).length,0);
+  assert.ok(h.requests.filter(r=>r.path==='/api/mode').every(r=>r.body.mode==='ai'));
+  assert.equal(h.element('stop-conversation').disabled,true);assert.equal(h.element('stop-speech').disabled,true);
+  assert.equal(h.element('conversation-status').dataset.state,'stopped');assert.equal(h.element('audio').src,'');
+});
+
+for(const phase of ['thinking','synthesizing'])for(const outcome of ['success','failure'])test(`Stop during conversation ${phase} ignores late ${outcome} and cannot revive audio`,async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h);request.ignoreAbort=true;
+  conversationPhase(h,request,phase);h.element('stop-conversation').onclick();
+  assert.equal(request.signal.aborted,true);
+  assert.deepEqual(h.requests.find(r=>r.path==='/api/speech/cancel').body,{request_id:request.body.request_id});
+  assert.equal(h.element('conversation-status').dataset.state,'stopped');assert.match(h.element('conversation-status').textContent,/操作モードはそのまま/);
+  if(outcome==='success')resolveJSON(request,conversationEvent(request));else request.resolve({ok:false,status:503,text:async()=> 'late failure'});
+  await pending;conversationPhase(h,request,'synthesizing');h.emit(conversationEvent(request));
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('conversation-reply').textContent,'');
+  assert.equal(h.element('conversation-status').dataset.state,'stopped');
+  assert.ok(h.requests.filter(r=>r.path==='/api/mode').every(r=>r.body.mode==='ai'));
+});
+
+test('conversation retry after Stop shares unfinished mode selection and only newest question generates',async()=>{
+  const h=harness();await enableConversation(h);h.element('conversation-input').value='old';const first=h.element('conversation-send').onclick();
+  h.element('stop-conversation').onclick();h.element('conversation-input').value='new';const latest=h.element('conversation-send').onclick();
+  assert.equal(h.requests.filter(r=>r.path==='/api/mode').length,1);
+  h.complete(h.requests.at(-1));await flush();const request=h.requests.at(-1);
+  assert.equal(request.path,'/api/conversation');assert.equal(request.body.text,'new');
+  h.emit(conversationEvent(request));resolveJSON(request,{});await Promise.all([first,latest]);
+  assert.equal(h.requests.filter(r=>r.path==='/api/conversation'&&r.body).length,1);
+  assert.equal(h.element('conversation-user').textContent,'new');
+});
+
+test('new conversation wins over old reply, status, scoped cancellation and HTTP failure',async()=>{
+  const h=harness();await enableConversation(h);const first=await beginConversation(h,'old');first.request.ignoreAbort=true;
+  const latest=await beginConversation(h,'new');assert.equal(first.request.signal.aborted,true);
+  for(const phase of ['thinking','synthesizing','error'])conversationPhase(h,first.request,phase);
+  for(const reason of ['stopped','superseded','controller_disconnected','history_cleared'])h.emit({type:'cancel_speech',reason,request_id:first.request.body.request_id});
+  h.emit(conversationEvent(first.request));assert.equal(latest.request.signal.aborted,false);
+  assert.equal(h.element('conversation-status').dataset.state,'thinking');assert.equal(h.element('audio').src,'');
+  h.emit(conversationEvent(latest.request,{clip_id:'latest',text:'new reply',url:'/latest.wav'}));h.element('audio').fire('playing');
+  first.request.resolve({ok:false,status:503,text:async()=> 'old failure'});resolveJSON(latest.request,{});await Promise.all([first.pending,latest.pending]);
+  assert.equal(h.element('conversation-user').textContent,'new');assert.equal(h.element('conversation-reply').textContent,'new reply');
+  assert.equal(h.element('audio').src,'/latest.wav');assert.equal(h.element('conversation-status').dataset.state,'playing');
+});
+
+for(const action of ['human','reset','disconnect'])test(`${action} stops pending conversation and ignores its late response`,async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h);
+  if(action==='disconnect')h.disconnect();else h.element(action).onclick();
+  assert.equal(request.signal.aborted,true);await pending;
+  h.emit(conversationEvent(request));assert.equal(h.element('audio').paused,true);assert.equal(h.element('audio').src,'');
+  assert.equal(h.element('conversation-status').dataset.state,'stopped');assert.equal(h.element('stop-conversation').disabled,true);
+});
+
+test('conversation provider errors are shown without fake replies or saved-audio fallback',async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h);
+  conversationPhase(h,request,'error',{error:'model_missing'});assert.equal(h.element('conversation-status').dataset.state,'error');
+  request.resolve({ok:false,status:503,text:async()=> '設定したローカルモデルが見つかりません。'});await pending;
+  assert.match(h.element('conversation-status').textContent,/モデルが見つかりません/);
+  assert.equal(h.element('conversation-status').dataset.state,'error');assert.equal(h.element('conversation-reply').textContent,'');
+  assert.equal(h.element('audio').src,'');assert.equal(h.element('stop-conversation').disabled,true);
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech').length,0);
+});
+
+test('raw text generation replaces conversation but remains a distinct non-AI reply workflow',async()=>{
+  const h=harness();await enableConversation(h);const first=await beginConversation(h);
+  const latest=await beginSynthesis(h,'そのまま読んでください。');await first.pending;
+  h.emit(conversationEvent(first.request));assert.equal(h.element('conversation-reply').textContent,'');
+  h.emit(speechEvent(latest.request));resolveJSON(latest.request,{});await latest.pending;h.element('audio').fire('playing');
+  assert.match(h.element('audio-status').textContent,/入力文から生成/);assert.equal(h.element('conversation-status').dataset.state,'stopped');
+  assert.equal(h.element('stop-conversation').disabled,true);assert.equal(h.element('stop-speech').disabled,false);
+});
+
+test('conversation replaces raw speech and old raw reply cannot overwrite the conversation',async()=>{
+  const h=harness();await enableConversation(h);const first=await beginSynthesis(h);const latest=await beginConversation(h);await first.pending;
+  h.emit(speechEvent(first.request));assert.equal(h.element('audio').src,'');
+  h.emit(conversationEvent(latest.request));resolveJSON(latest.request,{});await latest.pending;h.element('audio').fire('playing');
+  assert.match(h.element('audio-status').textContent,/AIの返答から生成/);assert.equal(h.element('conversation-status').dataset.state,'playing');
+});
+
+test('shared audio Stop also cancels conversation playback and ignores late autoplay rejection',async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h);
+  let rejectPlay;h.element('audio').play=function(){this.paused=false;return new Promise((_,reject)=>{rejectPlay=reject;});};
+  h.emit(conversationEvent(request));h.element('audio').fire('playing');h.element('stop-speech').onclick();
+  rejectPlay(Object.assign(Error('late autoplay error'),{name:'NotAllowedError'}));await pending;await flush();
+  assert.equal(h.element('conversation-status').dataset.state,'stopped');assert.equal(h.element('audio').src,'');
+  assert.equal(h.element('audio').paused,true);assert.equal(h.element('stop-conversation').disabled,true);
+});
+
+test('conversation autoplay denial keeps real reply visible and offers the shared player',async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h);
+  h.element('audio').play=()=>Promise.reject(Object.assign(Error('blocked'),{name:'NotAllowedError'}));
+  h.emit(conversationEvent(request));resolveJSON(request,{});await pending;await flush();
+  assert.equal(h.element('conversation-status').dataset.state,'ready');assert.match(h.element('conversation-status').textContent,/AIの返答から生成済み.*再生ボタン/);
+  assert.notEqual(h.element('conversation-reply').textContent,'');assert.equal(h.element('stop-conversation').disabled,false);
+});
+
+test('conversation markup clearly distinguishes user input, reply and raw speech with safe defaults',()=>{
+  const html=readFileSync(new URL('../web/index.html',import.meta.url),'utf8');
+  assert.match(html,/<button id="conversation-send" disabled>AIに話しかける<\/button>/);
+  assert.match(html,/<button id="speak">文章から音声を生成<\/button>/);
+  assert.match(html,/<button id="clear-conversation"[^>]*>履歴を消去<\/button>/);
+  assert.match(html,/入力した文章をそのまま読み上げる（AIの返答ではありません）/);
+  assert.match(html,/<textarea id="conversation-input"[^>]*maxlength="500"/);
+  for(const id of ['conversation-user','conversation-reply'])assert.match(html,new RegExp(`id="${id}"`));
+  assert.match(html,/この画面ではモデルの導入やダウンロードは行いません/);
+  assert.doesNotMatch(html,/<\/option\s+value=/);
+});
+
+test('conversation readiness cannot raise its hard input bound above 500 characters',async()=>{
+  const h=harness();await enableConversation(h,{max_input_chars:100000});assert.equal(h.element('conversation-input').maxLength,500);
+  h.element('conversation-input').value='長'.repeat(501);await h.element('conversation-send').onclick();
+  assert.match(h.element('conversation-status').textContent,/500文字以内/);assert.equal(h.requests.length,1);
+});
+
+test('invalid conversation input does not relabel or stop already playing raw speech',async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginSynthesis(h);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;h.element('audio').fire('playing');
+  h.element('conversation-input').value=' ';await h.element('conversation-send').onclick();
+  assert.equal(h.element('conversation-status').dataset.state,'error');assert.equal(h.element('audio-status').dataset.state,'playing');
+  assert.match(h.element('audio-status').textContent,/入力文から生成/);assert.equal(h.element('audio').paused,false);
+});
+
+test('over-limit raw input does not cancel or relabel a pending conversation',async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h);
+  h.element('speech').value='長'.repeat(2001);await h.element('speak').onclick();
+  assert.equal(h.element('conversation-status').dataset.state,'thinking');assert.equal(request.signal.aborted,false);
+  assert.equal(h.requests.filter(r=>r.path==='/api/speech').length,0);
+  h.emit(conversationEvent(request));resolveJSON(request,{});await pending;
+  assert.equal(h.element('conversation-status').dataset.state,'ready');
+});
+
+test('history clearing an older external reply cannot stop a newer local conversation',async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h);
+  h.emit({type:'cancel_speech',reason:'history_cleared',request_id:'another-controller-old-reply'});
+  assert.equal(request.signal.aborted,false);assert.equal(h.element('conversation-status').dataset.state,'thinking');
+  h.emit(conversationEvent(request));resolveJSON(request,{});await pending;
+  assert.equal(h.element('audio').paused,false);
+});
+
+test('history clear preserves transcript until confirmed success and prevents racing local questions',async()=>{
+  const h=harness();await enableConversation(h);
+  h.element('conversation-user').textContent='old question';h.element('conversation-reply').textContent='old reply';
+  const first=h.element('clear-conversation').onclick(),request=h.requests.at(-1);
+  assert.equal(request.path,'/api/conversation/clear');assert.deepEqual(request.body,{});
+  assert.equal(h.element('conversation-status').dataset.state,'clearing');
+  assert.equal(h.element('conversation-user').textContent,'old question');assert.equal(h.element('conversation-reply').textContent,'old reply');
+  assert.equal(h.element('clear-conversation').disabled,true);assert.equal(h.element('conversation-send').disabled,true);
+  await h.element('clear-conversation').onclick();h.element('conversation-input').value='new';await h.element('conversation-send').onclick();
+  assert.equal(h.requests.filter(r=>r.path==='/api/conversation/clear').length,1);assert.equal(h.requests.filter(r=>r.path==='/api/mode').length,0);
+  await enableConversation(h);assert.equal(h.element('conversation-send').disabled,true);
+  resolveJSON(request,{cleared:true,history_turns:0});await first;
+  assert.equal(h.element('conversation-user').textContent,'');assert.equal(h.element('conversation-reply').textContent,'');
+  assert.match(h.element('conversation-status').textContent,/会話履歴を消去しました/);
+  assert.equal(h.element('clear-conversation').disabled,false);assert.equal(h.element('conversation-send').disabled,false);
+});
+
+for(const outcome of ['http-error','network-error','unconfirmed'])test(`history clear ${outcome} retains transcript and never claims success`,async()=>{
+  const h=harness();h.element('conversation-user').textContent='question';h.element('conversation-reply').textContent='reply';
+  const pending=h.element('clear-conversation').onclick(),request=h.requests.at(-1);
+  if(outcome==='http-error')request.resolve({ok:false,status:503,text:async()=> 'unavailable'});
+  else if(outcome==='network-error')request.reject(Error('disconnected'));
+  else resolveJSON(request,{cleared:false});
+  await pending;
+  assert.equal(h.element('conversation-user').textContent,'question');assert.equal(h.element('conversation-reply').textContent,'reply');
+  assert.equal(h.element('conversation-status').dataset.state,'error');assert.match(h.element('conversation-status').textContent,/消去を確認できません/);
+  assert.doesNotMatch(h.element('conversation-status').textContent,/消去しました/);
+  assert.equal(h.element('clear-conversation').disabled,false);assert.equal(h.element('conversation-send').disabled,true);
+});
+
+for(const phase of ['thinking','synthesizing','playing'])test(`history clear stops only the active conversation during ${phase}`,async()=>{
+  const h=harness();await enableConversation(h);const {pending,request}=await beginConversation(h);
+  if(phase==='playing'){h.emit(conversationEvent(request));h.element('audio').fire('playing');}
+  else conversationPhase(h,request,phase);
+  const oldQuestion=h.element('conversation-user').textContent,oldReply=h.element('conversation-reply').textContent;
+  const clear=h.element('clear-conversation').onclick(),clearRequest=h.requests.at(-1);await pending;
+  assert.equal(request.signal.aborted,true);assert.equal(h.element('audio').paused,true);assert.equal(h.element('audio').src,'');
+  assert.deepEqual(h.requests.find(r=>r.path==='/api/speech/cancel').body,{request_id:request.body.request_id});
+  assert.equal(h.element('conversation-user').textContent,oldQuestion);assert.equal(h.element('conversation-reply').textContent,oldReply);
+  h.emit(conversationEvent(request));assert.equal(h.element('audio').src,'');
+  resolveJSON(clearRequest,{cleared:true});await clear;
+  assert.equal(h.element('conversation-user').textContent,'');assert.equal(h.element('conversation-reply').textContent,'');
+  assert.ok(h.requests.filter(r=>r.path==='/api/mode').every(r=>r.body.mode==='ai'));
+});
+
+test('history clear cancels a conversation waiting for mode selection without sending the question',async()=>{
+  const h=harness();await enableConversation(h);h.element('conversation-input').value='question';
+  const pending=h.element('conversation-send').onclick(),modeRequest=h.requests.at(-1);
+  const clear=h.element('clear-conversation').onclick(),clearRequest=h.requests.at(-1);
+  h.complete(modeRequest);await pending;assert.equal(h.requests.filter(r=>r.path==='/api/conversation'&&r.body).length,0);
+  resolveJSON(clearRequest,{cleared:true});await clear;assert.equal(h.element('conversation-user').textContent,'');
+});
+
+for(const phase of ['generating','playing'])test(`history clear preserves unrelated raw readout while ${phase}`,async()=>{
+  const h=harness();const {pending,request}=await beginSynthesis(h);
+  if(phase==='playing'){h.emit(speechEvent(request));h.element('audio').fire('playing');}
+  const before=h.element('audio-status').textContent;
+  const clear=h.element('clear-conversation').onclick(),clearRequest=h.requests.at(-1);
+  assert.equal(request.signal.aborted,false);assert.equal(h.requests.filter(r=>r.path==='/api/speech/cancel').length,0);
+  assert.equal(h.element('audio-status').textContent,before);
+  resolveJSON(clearRequest,{cleared:true});await clear;
+  assert.equal(h.element('audio-status').textContent,before);assert.equal(request.signal.aborted,false);
+  h.emit(speechEvent(request));resolveJSON(request,{});await pending;assert.equal(h.element('audio').paused,false);
+});
+
+for(const outcome of ['success','error'])test(`late history-clear ${outcome} does not erase or relabel a newer external reply`,async()=>{
+  const h=harness();await enableConversation(h);const first=await beginConversation(h);
+  const clear=h.element('clear-conversation').onclick(),clearRequest=h.requests.at(-1);await first.pending;
+  h.emit({type:'speech',kind:'conversation',play:true,request_id:'new-external',clip_id:'new-external',url:'/new-external.wav',user_text:'new question',text:'new reply'});
+  h.element('audio').fire('playing');
+  if(outcome==='success')resolveJSON(clearRequest,{cleared:true});else clearRequest.reject(Error('old failure'));
+  await clear;
+  assert.equal(h.element('conversation-user').textContent,'new question');assert.equal(h.element('conversation-reply').textContent,'new reply');
+  assert.equal(h.element('conversation-status').dataset.state,'playing');assert.equal(h.element('audio').paused,false);
+  assert.equal(h.element('clear-conversation').disabled,false);
+});
+
+test('disconnect during history clear retains transcript and does not accept a late result',async()=>{
+  const h=harness();await enableConversation(h);h.element('conversation-user').textContent='old question';h.element('conversation-reply').textContent='old reply';
+  const pending=h.element('clear-conversation').onclick(),request=h.requests.at(-1);request.ignoreAbort=true;
+  h.disconnect();assert.equal(request.signal.aborted,true);resolveJSON(request,{cleared:true});await pending;
+  assert.equal(h.element('conversation-user').textContent,'old question');assert.equal(h.element('conversation-reply').textContent,'old reply');
+  assert.equal(h.element('conversation-status').dataset.state,'error');assert.equal(h.element('conversation-send').disabled,true);
+});
+
+for(const action of ['reset','slider','disconnect'])test(`acting is released by ${action} without an immediate weight reset`,()=>{
+ const h=harness();h.acting.start(0);for(let i=0;i<60;i++)h.acting.frame(controls.neutral(),i/60);
+ const weight=h.acting.weight;
+ if(action==='reset')h.element('reset').onclick();
+ if(action==='slider'){h.slider('ParamBodyShiftX').value=.3;h.slider('ParamBodyShiftX').oninput();}
+ if(action==='disconnect')h.disconnect();
+ assert.equal(h.acting.running,false);assert.equal(h.acting.weight,weight);
+});
+test('pending ordinary gesture owns input and prevents local acting from competing',()=>{
+ const h=harness();h.element('gesture').onclick();assert.equal(h.actingBlocked(),true);
 });

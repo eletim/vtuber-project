@@ -1,0 +1,75 @@
+{
+  "version": 44,
+  "policy": "v43 facial direction approval withdrawn; rigid 2D roll only",
+  "changes": [
+    "No active angle rig, nose overlays or angle source image loading.",
+    "Face plane uses rigid roll/translation through neck, chest and pelvis.",
+    "Below-face legacy neck/shoulder coverage retains torso attachment; long hair follows existing root/strand fields.",
+    "Normal acting sequence includes left/right roll; source art and expression/mouth/blink controllers retained."
+  ],
+  "numeric_geometry": {
+    "frames": 600,
+    "geometryPoints": 36,
+    "maxDistanceErrorPixels": 0.0001222556144000464,
+    "maxRelativeDistanceError": 1.5929318177843044e-06,
+    "faceBand": "sampled model y=144.8..416.3; same affine transform throughout complete face region",
+    "note": "Float32 raster geometry error; expression/blink/mouth local changes tested separately."
+  },
+  "tests": {
+    "javascript": 208,
+    "python": 95
+  },
+  "visual_review": "Final near-view dense sheets: every fifth frame across all 240 frames (48 viewed images); 8-expression open-mouth grid, selected native black/white blink and roll extrema; final whole-body native frames 74,194,344. Not a claim of individually viewing every native frame. Dedicated headless 1x playback measured separately.",
+  "static_conditions": 84,
+  "psd": "No pixel edits. Active v42/v36 source restored; v43 sources and PSD retained as archives.",
+  "limits": [
+    "Only 2D roll; no anatomical yaw/pitch, as explicitly requested.",
+    "Existing shoulder cut/underpainting constraints and fine hair alpha edges remain; no shoulder generation retried.",
+    "No user display, external stream or live camera tested."
+  ],
+  "source_hashes": {
+    "runtime\\web\\body-rig.js": "b222a7cade6cf3355e38498ddc6811326acee9c67ba66b3a8c72f2b699b5c263",
+    "runtime\\web\\renderer.js": "5f94bd36affd7ec2bd6c881582a543e62230c6227af66a5197c1b8c7093727e0",
+    "runtime\\web\\performance-sequence.js": "0ca7dac5442a41b2b0a7f31783c0e45de79731c5621842c37debdca541f8b864",
+    "runtime\\model\\model.json": "e6d79026496322d0ff573715f3c7814011c26ad07a9e2b93b9e95511f31758ee"
+  },
+  "uploads": false,
+  "near_video": {
+    "frames": 240,
+    "fps": 30,
+    "seconds": 8,
+    "bytes": 2872679,
+    "missingOrDuplicateTimestamps": 0
+  },
+  "near_playback": {
+    "rate": 1,
+    "ended": true,
+    "total": 240,
+    "dropped": 0
+  },
+  "full_playback": {
+    "duration": 18.5,
+    "wallDuration": 18.54369999998808,
+    "rate": 1,
+    "total": 555,
+    "dropped": 0,
+    "note": "Isolated 1x playback without concurrent full-frame decoding/PNG extraction."
+  },
+  "two_context_sync": {
+    "errors": [],
+    "reconnected": true,
+    "settled": true,
+    "roll": [
+      {
+        "0": 11.951031870442394,
+        "1": -4.979566549494737,
+        "2": 5.959116561073402
+      },
+      {
+        "0": 11.955530664079689,
+        "1": -4.981443793971491,
+        "2": 5.962563222641664
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+VTuber v16 confirmation video rerun
+
+Requirements already present in this environment: Node24+, Python3.12+, NumPy, Pillow, ffmpeg/ffprobe, libEGL.so.1, libGL.so.1, NotoSansCJK-Regular.ttc and Bold.ttc under /usr/share/fonts/opentype/noto/. No npm packages or browser required.
+
+Copy prepare_source.py, generate_expression_frames.mjs, test_egl.py, render_v16.py and verify_video.py into a NEW output directory to preserve earlier deliveries. Every script reads/writes relative to its own location. v16 changes only mouth geometry/sampling; original model/art, body/head trajectory and voice timeline are preserved. Then run:
+
+python /YOUR/OUTPUT/prepare_source.py --source /YOUR/FINALIZED/VTUBER/REPOSITORY
+node /YOUR/OUTPUT/generate_expression_frames.mjs
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -u /YOUR/OUTPUT/render_v16.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python /YOUR/OUTPUT/verify_video.py
+
+prepare_source verifies all8 expression IDs and original approved voice hash. It snapshots runtime/web, runtime/model, runtime/package.json, runtime/server.py and assets/parts/v13/koma-free-voice.wav into output/source and refuses source changes during copy. To reproduce the exact existing output, keep the existing source snapshot and skip prepare_source.
+
+Method: actual JS expression/motion helpers produce every pose and tangent/normal mouth patch. OpenGL composites authored PNGs in manifest order with premultiplied source-over, then deforms the source mesh. This is an offline re-render, NOT a browser/GUI recording or UI E2E. Eye art is two-state. Mouth/body motion is continuous. Original VOICEVOX:雨晴はう sample repeats4 times; no new dialogue. 42sec at30fps,1600x1080 H264/AAC.
+
+Known artwork limitations: existing thigh cutout gaps, rough hair matte, and mouth deformation remains an authored two-endpoint 2D approximation. No official Cubism export.
+
+Optional exact before/after verification when the frozen old rendering pipeline is available:
+python /YOUR/OUTPUT/compare_v15_v16.py --before /PATH/TO/ORIGINAL_V15.mp4 --old-pipeline /PATH/TO/FROZEN_V15_PIPELINE
+This asserts1260 p arrays,mesh.bin and42sec audio PCM are identical before generating fixed-location same-frame crops.

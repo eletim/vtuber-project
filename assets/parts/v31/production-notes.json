@@ -1,0 +1,41 @@
+{
+  "status": "v31 independent-review candidate; shoulder repaint blocked",
+  "baseline": "e5aa8efc9d0a89a9fb19ed61724dc81b027a5119",
+  "changes": [
+    "375 hair-edge RGB pixels decontaminated per pose; native alpha, roots, mesh ownership and twelve-strand motion unchanged.",
+    "New gently extended hand paint replaces hooked fingers; distal hand calibrated to 0.88 length and 0.94 width.",
+    "v30 hidden elbow reused only beneath cuff, behind new paint; internal duplicate outline removed.",
+    "Opaque cuff ordering and face/waist/thigh repairs preserved."
+  ],
+  "checks": {
+    "node_tests": "179 passed",
+    "protected_face": "zero changed values in all eight expressions",
+    "temporal_sampling": "scenario 10.5-15.5 seconds at 24 Hz plus keyframes; MP4 media times 9-18 every 0.125 seconds",
+    "equal_speed_playback": "not claimed"
+  },
+  "imagegen": {
+    "hair": {
+      "file": "hair-edge-paint.png",
+      "prompt": "Precise edge color cleanup of this registered anime animation source. Change ONLY the tiny artificial saturated red, yellow, green or white contamination pixels along the brown hair's cutout edges. Replace contamination inside actual hair with the immediately adjacent warm brown hair color and remove contamination outside the hair into transparency. Keep every real fine hair strand, curls, natural warm highlights, every pose, face, hand, clothing, dimensions and alignment unchanged. No dark outline, no black fringe, no eroding or shortening hair tips. Do not redesign, blur, repaint large areas, or add content. Keep the transparent background. Focus on the crown outline, left outer curls and right rear curls; these show colored cutout residue. This is texture restoration, not a new illustration.",
+      "selection": "Whole output still contains transparency fringe. Only nearby clean brown RGB used inside native narrow contamination masks."
+    },
+    "hand": {
+      "file": "extended-hand.png",
+      "prompt": "Animation hand pose correction. Preserve the isolated forearm, rounded elbow, wrist location, skin shading, exact canvas registration and scale. Change ONLY the fingers and hand above the wrist to a gently extended relaxed hand seen three-quarter from the back: fingers gathered close and pointing mostly along the forearm's upward-right direction, with only a soft 20 to 30 degree curl. The existing fingers curl nearly 90 degrees and look like a claw; remove that hooked appearance. Thumb rests naturally near index side. Five anatomically correct fingers, no clenched fist, no wide spread, no long exaggerated fingers. Keep the hand compact. Same polished anime linework and transparent background. This hand should look calm while the forearm lifts horizontally in front of the torso and then near the cheek. Do not rotate or recenter the entire arm."
+    }
+  },
+  "blocker": {
+    "action": "imagegen localized repaint of top shoulder patch seam",
+    "target": "shoulder-composite-reference.png",
+    "status": "denied; no output image obtained; not retried or routed elsewhere",
+    "reason": "HTTP 400 moderation_blocked, output safety category sexual",
+    "request_id": "586774b3-fcd3-479c-bc10-6f45dc7d376c",
+    "consequence": "Shoulder top rectangular patch remains v30; independent hair and hand work continued."
+  },
+  "remaining_review": [
+    "Shoulder top seam unresolved.",
+    "Hand and small rolled cuff require independent naturalness review.",
+    "Natural warm hair edges and fine texture retained, not claiming flawless matte."
+  ],
+  "upload": "none"
+}

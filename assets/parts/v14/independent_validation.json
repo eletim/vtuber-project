@@ -1,0 +1,358 @@
+{
+  "psd": "assets/parts/v14/koma_expression_collection_v14.psd",
+  "psd_sha256": "b73f652330933d92597e26d072089d630acf5d5e4cca3dee5a05a02e155c766e",
+  "source_psd_sha256": "25e5cdba8fb464bf58f730ae2572a9d52325c9e8ef27516172dcc8c7c6f42540",
+  "psd_tools_version": "1.25.0",
+  "render_method": "psd-tools composite(ignore_preview=True, apply_icc=False) from reopened PSD layers",
+  "original_layers_exact_pixels_names_positions_visibility_relative_order": 66,
+  "expression_folders": 7,
+  "pixel_layers": 73,
+  "merged_neutral_byte_exact": true,
+  "states": {
+    "neutral": {
+      "visible_rgba_exact": false,
+      "visible_rgb_different_pixels": 538,
+      "alpha_different_pixels": 42521,
+      "max_visible_rgba_error": 1,
+      "max_alpha_error": 1,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true,
+      "outside_face_mask_changed_pixels_vs_independent_neutral": 0,
+      "folder": null
+    },
+    "soft_smile": {
+      "visible_rgba_exact": false,
+      "visible_rgb_different_pixels": 3986,
+      "alpha_different_pixels": 42896,
+      "max_visible_rgba_error": 1,
+      "max_alpha_error": 1,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true,
+      "outside_face_mask_changed_pixels_vs_independent_neutral": 0,
+      "folder": "EXP 01 Soft smile | 微笑み"
+    },
+    "big_smile": {
+      "visible_rgba_exact": false,
+      "visible_rgb_different_pixels": 4180,
+      "alpha_different_pixels": 42896,
+      "max_visible_rgba_error": 1,
+      "max_alpha_error": 1,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true,
+      "outside_face_mask_changed_pixels_vs_independent_neutral": 0,
+      "folder": "EXP 02 Big smile | にっこり"
+    },
+    "worried": {
+      "visible_rgba_exact": false,
+      "visible_rgb_different_pixels": 4032,
+      "alpha_different_pixels": 42896,
+      "max_visible_rgba_error": 1,
+      "max_alpha_error": 1,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true,
+      "outside_face_mask_changed_pixels_vs_independent_neutral": 0,
+      "folder": "EXP 03 Worried | 困り顔"
+    },
+    "surprised": {
+      "visible_rgba_exact": false,
+      "visible_rgb_different_pixels": 4070,
+      "alpha_different_pixels": 42896,
+      "max_visible_rgba_error": 1,
+      "max_alpha_error": 1,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true,
+      "outside_face_mask_changed_pixels_vs_independent_neutral": 0,
+      "folder": "EXP 04 Surprised | 驚き"
+    },
+    "bashful": {
+      "visible_rgba_exact": false,
+      "visible_rgb_different_pixels": 3989,
+      "alpha_different_pixels": 42896,
+      "max_visible_rgba_error": 1,
+      "max_alpha_error": 1,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true,
+      "outside_face_mask_changed_pixels_vs_independent_neutral": 0,
+      "folder": "EXP 05 Bashful | 照れ"
+    },
+    "displeased": {
+      "visible_rgba_exact": false,
+      "visible_rgb_different_pixels": 3923,
+      "alpha_different_pixels": 42896,
+      "max_visible_rgba_error": 1,
+      "max_alpha_error": 1,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true,
+      "outside_face_mask_changed_pixels_vs_independent_neutral": 0,
+      "folder": "EXP 06 Displeased | 不満"
+    },
+    "thinking": {
+      "visible_rgba_exact": false,
+      "visible_rgb_different_pixels": 3993,
+      "alpha_different_pixels": 42896,
+      "max_visible_rgba_error": 1,
+      "max_alpha_error": 1,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true,
+      "outside_face_mask_changed_pixels_vs_independent_neutral": 0,
+      "folder": "EXP 07 Thinking | 考え顔"
+    }
+  },
+  "mixed_folder_checks": [
+    {
+      "folders": [
+        "EXP 01 Soft smile | 微笑み",
+        "EXP 02 Big smile | にっこり"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 01 Soft smile | 微笑み",
+        "EXP 03 Worried | 困り顔"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 01 Soft smile | 微笑み",
+        "EXP 04 Surprised | 驚き"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 01 Soft smile | 微笑み",
+        "EXP 05 Bashful | 照れ"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 01 Soft smile | 微笑み",
+        "EXP 06 Displeased | 不満"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 01 Soft smile | 微笑み",
+        "EXP 07 Thinking | 考え顔"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 02 Big smile | にっこり",
+        "EXP 03 Worried | 困り顔"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 02 Big smile | にっこり",
+        "EXP 04 Surprised | 驚き"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 02 Big smile | にっこり",
+        "EXP 05 Bashful | 照れ"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 02 Big smile | にっこり",
+        "EXP 06 Displeased | 不満"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 02 Big smile | にっこり",
+        "EXP 07 Thinking | 考え顔"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 03 Worried | 困り顔",
+        "EXP 04 Surprised | 驚き"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 03 Worried | 困り顔",
+        "EXP 05 Bashful | 照れ"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 03 Worried | 困り顔",
+        "EXP 06 Displeased | 不満"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 03 Worried | 困り顔",
+        "EXP 07 Thinking | 考え顔"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 04 Surprised | 驚き",
+        "EXP 05 Bashful | 照れ"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 04 Surprised | 驚き",
+        "EXP 06 Displeased | 不満"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 04 Surprised | 驚き",
+        "EXP 07 Thinking | 考え顔"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 05 Bashful | 照れ",
+        "EXP 06 Displeased | 不満"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 05 Bashful | 照れ",
+        "EXP 07 Thinking | 考え顔"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    },
+    {
+      "folders": [
+        "EXP 06 Displeased | 不満",
+        "EXP 07 Thinking | 考え顔"
+      ],
+      "top_folder_opaque_region_max_error": 0,
+      "outside_face_mask_changed_pixels": 0
+    }
+  ],
+  "all_folders_on_confined_to_face_support": true,
+  "all_folders_off_reset_exact": true,
+  "original_neutral_blink_states": {
+    "blink_left": {
+      "visible_rgba_exact": true,
+      "visible_rgb_different_pixels": 0,
+      "alpha_different_pixels": 0,
+      "max_visible_rgba_error": 0,
+      "max_alpha_error": 0,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true
+    },
+    "blink_right": {
+      "visible_rgba_exact": true,
+      "visible_rgb_different_pixels": 0,
+      "alpha_different_pixels": 0,
+      "max_visible_rgba_error": 0,
+      "max_alpha_error": 0,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true
+    },
+    "blink_both": {
+      "visible_rgba_exact": true,
+      "visible_rgb_different_pixels": 0,
+      "alpha_different_pixels": 0,
+      "max_visible_rgba_error": 0,
+      "max_alpha_error": 0,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true
+    },
+    "closed_mouth": {
+      "visible_rgba_exact": true,
+      "visible_rgb_different_pixels": 0,
+      "alpha_different_pixels": 0,
+      "max_visible_rgba_error": 0,
+      "max_alpha_error": 0,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true
+    },
+    "all_closed": {
+      "visible_rgba_exact": true,
+      "visible_rgb_different_pixels": 0,
+      "alpha_different_pixels": 0,
+      "max_visible_rgba_error": 0,
+      "max_alpha_error": 0,
+      "alpha_support_exact": true,
+      "pass_with_one_byte_tolerance": true,
+      "fully_transparent_rgb_ignored": true
+    }
+  },
+  "legacy_render_reference_stack_corrected_in_memory": true,
+  "limitations": [
+    "True psd-tools renders have up to one byte of RGB/alpha quantization relative to the exact stored PNG previews.",
+    "Only one expression folder should be enabled. PSD folders do not automatically enforce mutual exclusion.",
+    "Original independent blink/mouth controls are supported in neutral only, not combined with painted expression folders.",
+    "This is not a Live2D/Cubism rig or a Photoshop-application interaction test."
+  ],
+  "pass": true,
+  "visual_review": {
+    "status": "PASS: independently rendered native-size face panels inspected",
+    "reviewed_psd_sha256": "b73f652330933d92597e26d072089d630acf5d5e4cca3dee5a05a02e155c766e",
+    "images": "All eight 400x300 face crops in the psd-tools contact sheet, plus the individual big-smile crop.",
+    "findings": "All eight expressions are distinguishable and coherent. No obvious duplicated eyes or mouths, abrupt facial-support seams, or unintended outline/costume changes were visible in these face panels.",
+    "state_notes": {
+      "neutral": "Original open-eyed, open-mouth expression retained.",
+      "soft_smile": "Softened gaze and closed small smile read clearly.",
+      "big_smile": "Closed crescent eyes and open grin read clearly; no old open-eye features show through.",
+      "worried": "Raised/slanted brows and downturned mouth read as concerned.",
+      "surprised": "Wider eyes and rounded open mouth read as surprise.",
+      "bashful": "Stronger blush, lowered eyelids and small smile read as bashful.",
+      "displeased": "Lowered brows and small pout read as displeased.",
+      "thinking": "Shifted gaze and asymmetric small mouth read as a thinking expression."
+    },
+    "limits": "Visual review concerns the added facial expression artwork. Pre-existing hair matte and body cutout issues are unchanged and were not represented as repaired. No Photoshop GUI test was performed."
+  }
+}

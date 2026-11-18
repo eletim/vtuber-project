@@ -1,0 +1,24 @@
+{
+  "source_sha256": {
+    "rig": "15c8f78c03c398a57482f2742c81ca0c985970bce020e982369864ac8b5c61f3",
+    "performance": "525fdc976db942ae40930acbc2c87d31eeadd52ff608c664e2f412c9993a81fb"
+  },
+  "relative_hand_peak_pixels": 24.106338078041208,
+  "maximum_60fps_hand_step_pixels": 0.892937842766213,
+  "maximum_arm_angle_degrees": 1.9592161071611822,
+  "maximum_shoulder_lift_pixels": 1.6577469952708015,
+  "settled_pose": {
+    "body": 1.163340781719128e-14,
+    "arms": [
+      2.100368292830213e-9,
+      2.0569323020146345e-9
+    ],
+    "elbows": [
+      -2.6562489943692585e-7,
+      -2.3968897472150577e-7
+    ],
+    "shoulder": 4.4386781025281045e-15,
+    "shift": 1.3498121868893982e-9
+  },
+  "scope": "Deterministic 7 s neutral-emotion test: voice0.8 from1–3s, disabled at3s. Runtime driver+parameter smoothing+BodyRig, source artwork coordinates."
+}

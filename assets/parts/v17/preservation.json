@@ -1,0 +1,1372 @@
+{
+  "status": "PASS",
+  "baseline_commit": "78ede7b68d5729915f8916582973fb385bbfec05",
+  "preserved_file_count": 340,
+  "all_original_artwork_files_unchanged": true,
+  "all_runtime_functions_unchanged": true,
+  "neutral_original_pixels_unchanged": true,
+  "model_manifest_only_two_file_references_changed": true,
+  "new_sprite_sha256": "08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74",
+  "files": [
+    {
+      "file": "assets/expression_references/eyes_closed_mouth_open.png",
+      "git_blob": "b8535b093fef93118e1b744133ab2ea9228604d0"
+    },
+    {
+      "file": "assets/expression_references/eyes_open_mouth_closed.png",
+      "git_blob": "572709a74596f8b9e2a70c6ecdc00acd55c912fb"
+    },
+    {
+      "file": "assets/original/koma_confirmed.png",
+      "git_blob": "648ed7588e3e0eee3dcabb5192c3c989a32b129e"
+    },
+    {
+      "file": "assets/parts/v10/control_room.png",
+      "git_blob": "6c6fdde5ab524cf7d341a52abb482a4c126b652c"
+    },
+    {
+      "file": "assets/parts/v10/hair_hidden_painted_source.png",
+      "git_blob": "ef18db09fb028017acf79dfb5978c8a8be8a2d87"
+    },
+    {
+      "file": "assets/parts/v10/hair_review.png",
+      "git_blob": "5d0b6c0cac7dc5502a67cc84bfb4403ccc0282af"
+    },
+    {
+      "file": "assets/parts/v10/hands_review.png",
+      "git_blob": "0b692770fec82658a2a72390a8a5ed3ce63a5557"
+    },
+    {
+      "file": "assets/parts/v10/integration.json",
+      "git_blob": "31ccb9542520cde081d5a976d846dee18d2afab8"
+    },
+    {
+      "file": "assets/parts/v10/koma_integrated_v10.psd",
+      "git_blob": "942556c07adac8eface192695d18a9fb914f8f87"
+    },
+    {
+      "file": "assets/parts/v10/normal.png",
+      "git_blob": "5210069c09e1866c48cf462de032edab5f539410"
+    },
+    {
+      "file": "assets/parts/v10/painting_provenance.json",
+      "git_blob": "a28e56cd8bb8f4d4959caaa1c1cfc1a7d0761b43"
+    },
+    {
+      "file": "assets/parts/v10/runtime_e2e.json",
+      "git_blob": "f8bf20db2306ef18211ed6b05765d2803823025a"
+    },
+    {
+      "file": "assets/parts/v10/runtime_motion.gif",
+      "git_blob": "096accafc6ea40e4785f7e280677b8897d320d92"
+    },
+    {
+      "file": "assets/parts/v10/sleeves_review.png",
+      "git_blob": "5f5931da2fec24fcc49cbd0df02938855ad62798"
+    },
+    {
+      "file": "assets/parts/v10/vest_hidden_painted_source.png",
+      "git_blob": "47c9aabee24a10a94a4fa7fef89b326b7b35667d"
+    },
+    {
+      "file": "assets/parts/v10/vest_review.png",
+      "git_blob": "95fef3f3d101e90705603b1c204dad966e3a3e13"
+    },
+    {
+      "file": "assets/parts/v10/visual_review.json",
+      "git_blob": "477d4bb92149a19566586eb490e79534c7bde97f"
+    },
+    {
+      "file": "assets/parts/v11/body_before_after.gif",
+      "git_blob": "95543f6b4bf25d6b8bd3461e68d69866bb388cb6"
+    },
+    {
+      "file": "assets/parts/v11/body_compare.png",
+      "git_blob": "6c80c42a42100e9856fb44c731232048d4829feb"
+    },
+    {
+      "file": "assets/parts/v11/body_motion.gif",
+      "git_blob": "0ca26263b78c968d774161b63398a17928d4cc4d"
+    },
+    {
+      "file": "assets/parts/v11/comparison_capture.json",
+      "git_blob": "09f62e9f47faf399be9d63d4c853eed1573ec13a"
+    },
+    {
+      "file": "assets/parts/v11/review.json",
+      "git_blob": "51e7e61b8fc5642e0e2d7182dd9334e19449f957"
+    },
+    {
+      "file": "assets/parts/v11/runtime_e2e.json",
+      "git_blob": "f8bf20db2306ef18211ed6b05765d2803823025a"
+    },
+    {
+      "file": "assets/parts/v12/free-voice-control.png",
+      "git_blob": "2052ec2e159942c7ea81c760eeb2adc1c573df8a"
+    },
+    {
+      "file": "assets/parts/v12/koma-free-voice.mp4",
+      "git_blob": "7a292f4f7443333ec8f1d8fad8b0ebb99e683bd0"
+    },
+    {
+      "file": "assets/parts/v12/koma-free-voice.wav",
+      "git_blob": "0d7d019e6410bad6c18a2deda9f6ad236c12bdcf"
+    },
+    {
+      "file": "assets/parts/v12/voice-verification.json",
+      "git_blob": "cf87ae8dde1fe2ab8665d919eb6c654d8b0d23a7"
+    },
+    {
+      "file": "assets/parts/v13/free-voice-control.png",
+      "git_blob": "cd7b4cea081f3dfae2fd22ea03402a38b565d842"
+    },
+    {
+      "file": "assets/parts/v13/koma-free-voice.wav",
+      "git_blob": "0d7d019e6410bad6c18a2deda9f6ad236c12bdcf"
+    },
+    {
+      "file": "assets/parts/v13/koma-lively.mp4",
+      "git_blob": "bf33fe2133bd307efdeb772bdfed750b1fa669cc"
+    },
+    {
+      "file": "assets/parts/v13/voice-verification.json",
+      "git_blob": "80c653a97731cb35931d8b3f06e72aa47958d954"
+    },
+    {
+      "file": "assets/parts/v14/Switch_Koma_Expression.jsx",
+      "git_blob": "e70a0daef84618fe008e7c3baa7108cdba85e599"
+    },
+    {
+      "file": "assets/parts/v14/expression_contact_sheet.png",
+      "git_blob": "2c51c65fbb4ccddf558432310e0fac5ba4e5f2af"
+    },
+    {
+      "file": "assets/parts/v14/expression_cycle.gif",
+      "git_blob": "ccab151e0a138cc22d843a53f3d289380971c85e"
+    },
+    {
+      "file": "assets/parts/v14/independent_validation.json",
+      "git_blob": "05fea967454b89b196d251c6715cd59573795c7c"
+    },
+    {
+      "file": "assets/parts/v14/koma_expression_collection_v14.psd",
+      "git_blob": "b10ebf2310599e4612960507ad779dd161519df3"
+    },
+    {
+      "file": "assets/parts/v14/previews/bashful_face.png",
+      "git_blob": "4c99ad642c05e7417eeeaaa377988b8c54caf454"
+    },
+    {
+      "file": "assets/parts/v14/previews/bashful_full.png",
+      "git_blob": "3ed8c91c36ab9685a70dc95fd635a9cf4aaae610"
+    },
+    {
+      "file": "assets/parts/v14/previews/big_smile_face.png",
+      "git_blob": "8062df70397577413c3bb7e7ebe1485638dd0909"
+    },
+    {
+      "file": "assets/parts/v14/previews/big_smile_full.png",
+      "git_blob": "5c1dcb89dccb6c5a54a27ff0dfcf11e2e49e8daa"
+    },
+    {
+      "file": "assets/parts/v14/previews/displeased_face.png",
+      "git_blob": "8d9eaaea6ce06ecbd632e418927bd3235acd5b50"
+    },
+    {
+      "file": "assets/parts/v14/previews/displeased_full.png",
+      "git_blob": "824a28bdca760cd9dd7b7d1e4db0ef86d0dacae2"
+    },
+    {
+      "file": "assets/parts/v14/previews/neutral_face.png",
+      "git_blob": "973188e039b14be213da1d77c4a4a17d16e67860"
+    },
+    {
+      "file": "assets/parts/v14/previews/neutral_full.png",
+      "git_blob": "5210069c09e1866c48cf462de032edab5f539410"
+    },
+    {
+      "file": "assets/parts/v14/previews/soft_smile_face.png",
+      "git_blob": "7a9737c2c3b3d9b39dc9d835e524aa9920248ec3"
+    },
+    {
+      "file": "assets/parts/v14/previews/soft_smile_full.png",
+      "git_blob": "98b9b674793f64185e8572e4b32aa1b5362a1811"
+    },
+    {
+      "file": "assets/parts/v14/previews/surprised_face.png",
+      "git_blob": "5e2117bb64ed9e528084ce472fceb3e1991d328b"
+    },
+    {
+      "file": "assets/parts/v14/previews/surprised_full.png",
+      "git_blob": "563ea8c43aac438ff1f3b9a558a28b3625e18bac"
+    },
+    {
+      "file": "assets/parts/v14/previews/thinking_face.png",
+      "git_blob": "255cbbe1eaacd4a146f97a47c3e7df4e65a544fa"
+    },
+    {
+      "file": "assets/parts/v14/previews/thinking_full.png",
+      "git_blob": "c84452e489f0dbbc14bb893be3a22ad5237b7fae"
+    },
+    {
+      "file": "assets/parts/v14/previews/worried_face.png",
+      "git_blob": "bf15a140406e2339932f8a8fcb4a44e61c73dce7"
+    },
+    {
+      "file": "assets/parts/v14/previews/worried_full.png",
+      "git_blob": "1dc23829d5acb6ca4581606de154e92722fb43b0"
+    },
+    {
+      "file": "assets/parts/v14/sources/bashful_painted.png",
+      "git_blob": "af7eba16f657cdd3dec51843fb00d53d998f4c79"
+    },
+    {
+      "file": "assets/parts/v14/sources/big_smile_painted.png",
+      "git_blob": "f95a2ec22b6b1b1f0587cea27bfac889b1cb4d3a"
+    },
+    {
+      "file": "assets/parts/v14/sources/displeased_painted.png",
+      "git_blob": "07d35662d4444547b038939c43e919079733674c"
+    },
+    {
+      "file": "assets/parts/v14/sources/expression_support_mask.png",
+      "git_blob": "240fefea8a4fc31402049c7ddb84b2072e9904a1"
+    },
+    {
+      "file": "assets/parts/v14/sources/generation_prompts.json",
+      "git_blob": "e1c7f0019682b891f4d4c479a053db5f9370c957"
+    },
+    {
+      "file": "assets/parts/v14/sources/neutral_reference.png",
+      "git_blob": "973188e039b14be213da1d77c4a4a17d16e67860"
+    },
+    {
+      "file": "assets/parts/v14/sources/soft_smile_painted.png",
+      "git_blob": "c439f0bdf125ae58d79102d9ce97449e49667f72"
+    },
+    {
+      "file": "assets/parts/v14/sources/surprised_painted.png",
+      "git_blob": "fb0ba3dbc138631c36ef113e4dde31f131395375"
+    },
+    {
+      "file": "assets/parts/v14/sources/thinking_painted.png",
+      "git_blob": "ca5c5b779edf67a83a7b899bf70c586dd1e79f34"
+    },
+    {
+      "file": "assets/parts/v14/sources/worried_painted.png",
+      "git_blob": "93b00ec3c6e1bc54eb28627b0e5869cd61d1dfd0"
+    },
+    {
+      "file": "assets/parts/v14/validation.json",
+      "git_blob": "133708b75942a0ee1b745c87224692c310c6c46e"
+    },
+    {
+      "file": "assets/parts/v14/使い方.txt",
+      "git_blob": "6613301dd958817c1a254b109c1789cddb1473d0"
+    },
+    {
+      "file": "assets/parts/v15/Switch_Koma_Expression.jsx",
+      "git_blob": "b440c211af35d3f1871a7724a9b52e5b106be4d4"
+    },
+    {
+      "file": "assets/parts/v15/bundle_verification.json",
+      "git_blob": "7d155cebbd9555209b9e386929cc65d60bc29666"
+    },
+    {
+      "file": "assets/parts/v15/expression_motion_contact_sheet.png",
+      "git_blob": "7fc972d7795247385a14a0b7a79d3d9696847498"
+    },
+    {
+      "file": "assets/parts/v15/independent_art_review.json",
+      "git_blob": "e22ef288ab5d3495dc1640a9e94250a8212cf280"
+    },
+    {
+      "file": "assets/parts/v15/koma-v15-expression-face-sheet.png",
+      "git_blob": "2af30e5437af7a3155426996c17ca5b418ed559a"
+    },
+    {
+      "file": "assets/parts/v15/koma-v15-expression-motion.mp4",
+      "git_blob": "8a11cc87ae1f66136fc858fc0b3b7711d1f5f321"
+    },
+    {
+      "file": "assets/parts/v15/koma_expression_motion_v15.psd",
+      "git_blob": "d2e9b9679b6693ab55b39ebdc3af6679427d7eb1"
+    },
+    {
+      "file": "assets/parts/v15/painted_underpaint_contact_sheet.png",
+      "git_blob": "741c1339f1d6ae873fbb64de172d5a9dee23cbe1"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_L0_R0_M0_face.png",
+      "git_blob": "048572471ca26489fbb37aa88fcf96a2dcaf1f69"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_L0_R0_M1_face.png",
+      "git_blob": "05e3aa725c4188615d85b2c6a8b82a84f121b88e"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_L0_R1_M0_face.png",
+      "git_blob": "15c18e03cc1549effe65179243115a201a7a4eee"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_L0_R1_M1_face.png",
+      "git_blob": "41879f9de932788727ab5ccabc3ada441174745f"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_L1_R0_M0_face.png",
+      "git_blob": "195f33d56f6c56f61c9e88bfd0fecc2ac2d33923"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_L1_R0_M1_face.png",
+      "git_blob": "6c459b00affd58f33a97c8b75829920c40a4359a"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_L1_R1_M0_face.png",
+      "git_blob": "4c99ad642c05e7417eeeaaa377988b8c54caf454"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_L1_R1_M1_face.png",
+      "git_blob": "b188501823247d71be9f77c5a71cdefec64ba128"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_authored_full.png",
+      "git_blob": "3ed8c91c36ab9685a70dc95fd635a9cf4aaae610"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_features_hidden.png",
+      "git_blob": "d2b36d5be978e46beb8be0c4aeef929d04fec6eb"
+    },
+    {
+      "file": "assets/parts/v15/previews/bashful_state_contact_sheet.png",
+      "git_blob": "28a01e4656c8a53945b29951b40f5adb023a2853"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_L0_R0_M0_face.png",
+      "git_blob": "5f86382703bad20dfd1759dcb5392a8f064e8cdb"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_L0_R0_M1_face.png",
+      "git_blob": "8062df70397577413c3bb7e7ebe1485638dd0909"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_L0_R1_M0_face.png",
+      "git_blob": "5f86382703bad20dfd1759dcb5392a8f064e8cdb"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_L0_R1_M1_face.png",
+      "git_blob": "8062df70397577413c3bb7e7ebe1485638dd0909"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_L1_R0_M0_face.png",
+      "git_blob": "5f86382703bad20dfd1759dcb5392a8f064e8cdb"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_L1_R0_M1_face.png",
+      "git_blob": "8062df70397577413c3bb7e7ebe1485638dd0909"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_L1_R1_M0_face.png",
+      "git_blob": "5f86382703bad20dfd1759dcb5392a8f064e8cdb"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_L1_R1_M1_face.png",
+      "git_blob": "8062df70397577413c3bb7e7ebe1485638dd0909"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_authored_full.png",
+      "git_blob": "5c1dcb89dccb6c5a54a27ff0dfcf11e2e49e8daa"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_features_hidden.png",
+      "git_blob": "0646ffb47efea2eaf9794603f593154095b0f5e5"
+    },
+    {
+      "file": "assets/parts/v15/previews/big_smile_state_contact_sheet.png",
+      "git_blob": "e37880e5386012cd375915e565a5c58376f104c8"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_L0_R0_M0_face.png",
+      "git_blob": "75f308aa27e2b3980d74c71008da1f9d6a7bcf88"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_L0_R0_M1_face.png",
+      "git_blob": "404bc2be51d97cfe201e12661170b9af53146e33"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_L0_R1_M0_face.png",
+      "git_blob": "c3ab71b0e39bb78eb929f67c73438a259470facd"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_L0_R1_M1_face.png",
+      "git_blob": "18a36c0ee47c1dd504d349b03964cf1791b041d7"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_L1_R0_M0_face.png",
+      "git_blob": "3768524d11bdde32a982095a929fa515da6c5812"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_L1_R0_M1_face.png",
+      "git_blob": "3b2ba928a8389953df77ddfde32bf491c33b783b"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_L1_R1_M0_face.png",
+      "git_blob": "8d9eaaea6ce06ecbd632e418927bd3235acd5b50"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_L1_R1_M1_face.png",
+      "git_blob": "c883e2fcbda17b5df049dbc31a36455a18a7616c"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_authored_full.png",
+      "git_blob": "824a28bdca760cd9dd7b7d1e4db0ef86d0dacae2"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_features_hidden.png",
+      "git_blob": "ad21c94e6aed619b62eb569eb4824ac41f45bfb8"
+    },
+    {
+      "file": "assets/parts/v15/previews/displeased_state_contact_sheet.png",
+      "git_blob": "741b5e96190b8c0ac3e5382ce83084c0298d1059"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_L0_R0_M0_face.png",
+      "git_blob": "b6a078528056229753b83f82f20da972fd561e78"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_L0_R0_M1_face.png",
+      "git_blob": "65f6828af53d3075650877cef646b4d8c4116e75"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_L0_R1_M0_face.png",
+      "git_blob": "250f6cb657a16f294a2733fa1356ad9ba6213cd6"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_L0_R1_M1_face.png",
+      "git_blob": "8e5b81abb7c72494bc25bdfede710be421a71bdd"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_L1_R0_M0_face.png",
+      "git_blob": "081978dc58521ce09d79654a8915c9c460f2ebcd"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_L1_R0_M1_face.png",
+      "git_blob": "dd9bc139f11c545b96b9ff99f67ccb7f6cfc8887"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_L1_R1_M0_face.png",
+      "git_blob": "a7255fc9df5e1d21c453a6f0072b7439e0effe0f"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_L1_R1_M1_face.png",
+      "git_blob": "973188e039b14be213da1d77c4a4a17d16e67860"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_authored_full.png",
+      "git_blob": "5210069c09e1866c48cf462de032edab5f539410"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_features_hidden.png",
+      "git_blob": "d919e344fb0d368cacc3f942c0172ce815d527c4"
+    },
+    {
+      "file": "assets/parts/v15/previews/neutral_state_contact_sheet.png",
+      "git_blob": "a908324c28a986011a1c25f2e7322e12910b1af2"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_L0_R0_M0_face.png",
+      "git_blob": "b66c4d0c796d9ec2b6feef42dd5f0c7eff46600a"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_L0_R0_M1_face.png",
+      "git_blob": "1068870e120cd25f0f2a41d58e0348182a7c0756"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_L0_R1_M0_face.png",
+      "git_blob": "b1c11a42da2596cfe3132da6f825d5f23ccb6a55"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_L0_R1_M1_face.png",
+      "git_blob": "a4494235097689b325ffbf0c01860033c012ce88"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_L1_R0_M0_face.png",
+      "git_blob": "fe34bba0b115c43e51023321fbb113677ad0433c"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_L1_R0_M1_face.png",
+      "git_blob": "70398bed54a2850102849e5616db14cf7562abec"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_L1_R1_M0_face.png",
+      "git_blob": "7a9737c2c3b3d9b39dc9d835e524aa9920248ec3"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_L1_R1_M1_face.png",
+      "git_blob": "b8bd4e1f16e992b644b7fdb63fc30ae91d797e2d"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_authored_full.png",
+      "git_blob": "98b9b674793f64185e8572e4b32aa1b5362a1811"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_features_hidden.png",
+      "git_blob": "0abf770ce3a45a7d4c2d06bcf65beb17aa420c42"
+    },
+    {
+      "file": "assets/parts/v15/previews/soft_smile_state_contact_sheet.png",
+      "git_blob": "ef3c310b9ad6d558cb98ecfd3eb9097af5dbba78"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_L0_R0_M0_face.png",
+      "git_blob": "2ebb0c604dd43919578732f353f67d62c6ae4965"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_L0_R0_M1_face.png",
+      "git_blob": "fb7c1cb049a13b83a2ad0f5af58b57d10fe4eef8"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_L0_R1_M0_face.png",
+      "git_blob": "e45bd8c93a50f8a29aa55f3a0235ac67ec076d50"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_L0_R1_M1_face.png",
+      "git_blob": "75233c85ee881ad5e72c48e934943b5a9fccca9b"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_L1_R0_M0_face.png",
+      "git_blob": "67fc871f6b530d60236424dfe86a3803484db365"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_L1_R0_M1_face.png",
+      "git_blob": "fbaeb3c4f32124e74a610132a84bdaee81af0daa"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_L1_R1_M0_face.png",
+      "git_blob": "4c2755fda84c06cf79349f9d7b86f9ea9833feab"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_L1_R1_M1_face.png",
+      "git_blob": "5e2117bb64ed9e528084ce472fceb3e1991d328b"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_authored_full.png",
+      "git_blob": "563ea8c43aac438ff1f3b9a558a28b3625e18bac"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_features_hidden.png",
+      "git_blob": "a525ab01e926f97dbd74f4ff2f73e8d081b5aec9"
+    },
+    {
+      "file": "assets/parts/v15/previews/surprised_state_contact_sheet.png",
+      "git_blob": "6b79882e7b0e424cfdcb416b2dc8e9273731d4a6"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_L0_R0_M0_face.png",
+      "git_blob": "3a51519096f80f0756af4e16df21fcfe6df1c8a5"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_L0_R0_M1_face.png",
+      "git_blob": "cd4afaffec568d17307aa308971642da6140211a"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_L0_R1_M0_face.png",
+      "git_blob": "1a172b32a0fe58a9737eb5ff8b4ffa619158d63d"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_L0_R1_M1_face.png",
+      "git_blob": "7137c1c4d1fc7c7cf8f47bf1a861adc16b2e835a"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_L1_R0_M0_face.png",
+      "git_blob": "8d72d6260b35c67006fa76623288defcd1a4d4d0"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_L1_R0_M1_face.png",
+      "git_blob": "b91d1b5c264e7b83e3d20dc43824d5527d42a40e"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_L1_R1_M0_face.png",
+      "git_blob": "255cbbe1eaacd4a146f97a47c3e7df4e65a544fa"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_L1_R1_M1_face.png",
+      "git_blob": "2a4a29a638bc241fab12c2ac53b1aa60134d66dc"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_authored_full.png",
+      "git_blob": "c84452e489f0dbbc14bb893be3a22ad5237b7fae"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_features_hidden.png",
+      "git_blob": "1041fe32b1563e6819a1aea10bdc881a291b2363"
+    },
+    {
+      "file": "assets/parts/v15/previews/thinking_state_contact_sheet.png",
+      "git_blob": "717b3dc1eeb6be3d0a34086c3cbd718121ff2ae2"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_L0_R0_M0_face.png",
+      "git_blob": "ec7c65fc07bab4b830cdd604d815d73f2d1c33b0"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_L0_R0_M1_face.png",
+      "git_blob": "03fa46f420d0214785b376a7d96b719983b90ed0"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_L0_R1_M0_face.png",
+      "git_blob": "18ac97931800922d586874beed60e1e59936c16d"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_L0_R1_M1_face.png",
+      "git_blob": "158c59bdee63faa4b8ddc1b0efbb5c4fca9a0405"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_L1_R0_M0_face.png",
+      "git_blob": "43b8207c5091caf62c4891848d1d52600280f48f"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_L1_R0_M1_face.png",
+      "git_blob": "98e44e1115573c3526fb1be2d6a167ac7e982ba8"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_L1_R1_M0_face.png",
+      "git_blob": "bf15a140406e2339932f8a8fcb4a44e61c73dce7"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_L1_R1_M1_face.png",
+      "git_blob": "55ee59c90d94cb60bb1e509a659e285390814bed"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_authored_full.png",
+      "git_blob": "1dc23829d5acb6ca4581606de154e92722fb43b0"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_features_hidden.png",
+      "git_blob": "9b9a67d401d1d92c3b32842b33d2c48eabba8673"
+    },
+    {
+      "file": "assets/parts/v15/previews/worried_state_contact_sheet.png",
+      "git_blob": "2d9aad5e4fb439fbf5bcc57628b37c9e56d14577"
+    },
+    {
+      "file": "assets/parts/v15/release_validation.json",
+      "git_blob": "f2eea5717246160325bb0dd3e5a353b249e0910b"
+    },
+    {
+      "file": "assets/parts/v15/sources/bashful_blink_speech.png",
+      "git_blob": "1b83a6b9e8e0181953afdd885118244cce3d31ee"
+    },
+    {
+      "file": "assets/parts/v15/sources/big_smile_blink_speech.png",
+      "git_blob": "cd8d09b00f13bc5c8632750e7efc0b300690c84f"
+    },
+    {
+      "file": "assets/parts/v15/sources/displeased_blink_speech.png",
+      "git_blob": "71bbaf593423d716c3bd00bde7fef0180838cf14"
+    },
+    {
+      "file": "assets/parts/v15/sources/generation_prompts.json",
+      "git_blob": "cda6716eb401c5c8b47019e5d0fa41a5726139a5"
+    },
+    {
+      "file": "assets/parts/v15/sources/soft_smile_blink_speech.png",
+      "git_blob": "5c81c9a14b8f04a0a0f5b150b29ebe5da15f4c48"
+    },
+    {
+      "file": "assets/parts/v15/sources/surprised_blink_speech.png",
+      "git_blob": "b7f1dbf450fea94ed4118fd3836beb2eaae18903"
+    },
+    {
+      "file": "assets/parts/v15/sources/thinking_blink_speech.png",
+      "git_blob": "ffb2ba8ef2c0076823e5b3a2d80b4ad7463f1bfb"
+    },
+    {
+      "file": "assets/parts/v15/sources/worried_blink_speech.png",
+      "git_blob": "f30565d0f010f3f3e8e452bc94ce8b24730c31d8"
+    },
+    {
+      "file": "assets/parts/v15/supports/bashful/eye_screen_left.png",
+      "git_blob": "249e55a1ef305f0d1e707ecc7c2ca198bd799636"
+    },
+    {
+      "file": "assets/parts/v15/supports/bashful/eye_screen_left_underpaint.png",
+      "git_blob": "7f84059f7da1503682dc86190386282238d556a0"
+    },
+    {
+      "file": "assets/parts/v15/supports/bashful/eye_screen_right.png",
+      "git_blob": "2331e14912d49ef919d878c889be1a343910dc48"
+    },
+    {
+      "file": "assets/parts/v15/supports/bashful/eye_screen_right_underpaint.png",
+      "git_blob": "7d3df01614f631e79cc20153f163a8658d04cf49"
+    },
+    {
+      "file": "assets/parts/v15/supports/bashful/mouth.png",
+      "git_blob": "1a2c6ea5ef384cc212a1cf8db0e4e60f095f6b71"
+    },
+    {
+      "file": "assets/parts/v15/supports/bashful/mouth_underpaint.png",
+      "git_blob": "7160dc79d1cc0e0a5472a418772da9cf9cd2f148"
+    },
+    {
+      "file": "assets/parts/v15/supports/big_smile/eye_screen_left.png",
+      "git_blob": "249e55a1ef305f0d1e707ecc7c2ca198bd799636"
+    },
+    {
+      "file": "assets/parts/v15/supports/big_smile/eye_screen_left_underpaint.png",
+      "git_blob": "7f84059f7da1503682dc86190386282238d556a0"
+    },
+    {
+      "file": "assets/parts/v15/supports/big_smile/eye_screen_right.png",
+      "git_blob": "2331e14912d49ef919d878c889be1a343910dc48"
+    },
+    {
+      "file": "assets/parts/v15/supports/big_smile/eye_screen_right_underpaint.png",
+      "git_blob": "7d3df01614f631e79cc20153f163a8658d04cf49"
+    },
+    {
+      "file": "assets/parts/v15/supports/big_smile/mouth.png",
+      "git_blob": "1a2c6ea5ef384cc212a1cf8db0e4e60f095f6b71"
+    },
+    {
+      "file": "assets/parts/v15/supports/big_smile/mouth_underpaint.png",
+      "git_blob": "7160dc79d1cc0e0a5472a418772da9cf9cd2f148"
+    },
+    {
+      "file": "assets/parts/v15/supports/displeased/eye_screen_left.png",
+      "git_blob": "249e55a1ef305f0d1e707ecc7c2ca198bd799636"
+    },
+    {
+      "file": "assets/parts/v15/supports/displeased/eye_screen_left_underpaint.png",
+      "git_blob": "7f84059f7da1503682dc86190386282238d556a0"
+    },
+    {
+      "file": "assets/parts/v15/supports/displeased/eye_screen_right.png",
+      "git_blob": "2331e14912d49ef919d878c889be1a343910dc48"
+    },
+    {
+      "file": "assets/parts/v15/supports/displeased/eye_screen_right_underpaint.png",
+      "git_blob": "7d3df01614f631e79cc20153f163a8658d04cf49"
+    },
+    {
+      "file": "assets/parts/v15/supports/displeased/mouth.png",
+      "git_blob": "1a2c6ea5ef384cc212a1cf8db0e4e60f095f6b71"
+    },
+    {
+      "file": "assets/parts/v15/supports/displeased/mouth_underpaint.png",
+      "git_blob": "7160dc79d1cc0e0a5472a418772da9cf9cd2f148"
+    },
+    {
+      "file": "assets/parts/v15/supports/eye_screen_left.png",
+      "git_blob": "249e55a1ef305f0d1e707ecc7c2ca198bd799636"
+    },
+    {
+      "file": "assets/parts/v15/supports/eye_screen_left_underpaint.png",
+      "git_blob": "7f84059f7da1503682dc86190386282238d556a0"
+    },
+    {
+      "file": "assets/parts/v15/supports/eye_screen_right.png",
+      "git_blob": "2331e14912d49ef919d878c889be1a343910dc48"
+    },
+    {
+      "file": "assets/parts/v15/supports/eye_screen_right_underpaint.png",
+      "git_blob": "7d3df01614f631e79cc20153f163a8658d04cf49"
+    },
+    {
+      "file": "assets/parts/v15/supports/mouth.png",
+      "git_blob": "1a2c6ea5ef384cc212a1cf8db0e4e60f095f6b71"
+    },
+    {
+      "file": "assets/parts/v15/supports/mouth_underpaint.png",
+      "git_blob": "7160dc79d1cc0e0a5472a418772da9cf9cd2f148"
+    },
+    {
+      "file": "assets/parts/v15/supports/soft_smile/eye_screen_left.png",
+      "git_blob": "249e55a1ef305f0d1e707ecc7c2ca198bd799636"
+    },
+    {
+      "file": "assets/parts/v15/supports/soft_smile/eye_screen_left_underpaint.png",
+      "git_blob": "7f84059f7da1503682dc86190386282238d556a0"
+    },
+    {
+      "file": "assets/parts/v15/supports/soft_smile/eye_screen_right.png",
+      "git_blob": "2331e14912d49ef919d878c889be1a343910dc48"
+    },
+    {
+      "file": "assets/parts/v15/supports/soft_smile/eye_screen_right_underpaint.png",
+      "git_blob": "7d3df01614f631e79cc20153f163a8658d04cf49"
+    },
+    {
+      "file": "assets/parts/v15/supports/soft_smile/mouth.png",
+      "git_blob": "1a2c6ea5ef384cc212a1cf8db0e4e60f095f6b71"
+    },
+    {
+      "file": "assets/parts/v15/supports/soft_smile/mouth_underpaint.png",
+      "git_blob": "7160dc79d1cc0e0a5472a418772da9cf9cd2f148"
+    },
+    {
+      "file": "assets/parts/v15/supports/surprised/eye_screen_left.png",
+      "git_blob": "cfbabfffba8c11bebf71b2bda823a5186dc78eed"
+    },
+    {
+      "file": "assets/parts/v15/supports/surprised/eye_screen_left_underpaint.png",
+      "git_blob": "1b6087da2bbba6f0ce019aba649894d167665177"
+    },
+    {
+      "file": "assets/parts/v15/supports/surprised/eye_screen_right.png",
+      "git_blob": "5aae5aac25559551c28b3f35bb7c37f9f3186f22"
+    },
+    {
+      "file": "assets/parts/v15/supports/surprised/eye_screen_right_underpaint.png",
+      "git_blob": "2949162f1ffc6a1c30240cd14acfaba121261889"
+    },
+    {
+      "file": "assets/parts/v15/supports/surprised/mouth.png",
+      "git_blob": "1a2c6ea5ef384cc212a1cf8db0e4e60f095f6b71"
+    },
+    {
+      "file": "assets/parts/v15/supports/surprised/mouth_underpaint.png",
+      "git_blob": "7160dc79d1cc0e0a5472a418772da9cf9cd2f148"
+    },
+    {
+      "file": "assets/parts/v15/supports/thinking/eye_screen_left.png",
+      "git_blob": "249e55a1ef305f0d1e707ecc7c2ca198bd799636"
+    },
+    {
+      "file": "assets/parts/v15/supports/thinking/eye_screen_left_underpaint.png",
+      "git_blob": "7f84059f7da1503682dc86190386282238d556a0"
+    },
+    {
+      "file": "assets/parts/v15/supports/thinking/eye_screen_right.png",
+      "git_blob": "e479fe6ea0a27d4774294c8642ff0573b4f86412"
+    },
+    {
+      "file": "assets/parts/v15/supports/thinking/eye_screen_right_underpaint.png",
+      "git_blob": "a3c7e229600bcda3537fd7732ba2cf46b72ce55f"
+    },
+    {
+      "file": "assets/parts/v15/supports/thinking/mouth.png",
+      "git_blob": "1a2c6ea5ef384cc212a1cf8db0e4e60f095f6b71"
+    },
+    {
+      "file": "assets/parts/v15/supports/thinking/mouth_underpaint.png",
+      "git_blob": "7160dc79d1cc0e0a5472a418772da9cf9cd2f148"
+    },
+    {
+      "file": "assets/parts/v15/supports/worried/eye_screen_left.png",
+      "git_blob": "249e55a1ef305f0d1e707ecc7c2ca198bd799636"
+    },
+    {
+      "file": "assets/parts/v15/supports/worried/eye_screen_left_underpaint.png",
+      "git_blob": "7f84059f7da1503682dc86190386282238d556a0"
+    },
+    {
+      "file": "assets/parts/v15/supports/worried/eye_screen_right.png",
+      "git_blob": "2331e14912d49ef919d878c889be1a343910dc48"
+    },
+    {
+      "file": "assets/parts/v15/supports/worried/eye_screen_right_underpaint.png",
+      "git_blob": "7d3df01614f631e79cc20153f163a8658d04cf49"
+    },
+    {
+      "file": "assets/parts/v15/supports/worried/mouth.png",
+      "git_blob": "1a2c6ea5ef384cc212a1cf8db0e4e60f095f6b71"
+    },
+    {
+      "file": "assets/parts/v15/supports/worried/mouth_underpaint.png",
+      "git_blob": "7160dc79d1cc0e0a5472a418772da9cf9cd2f148"
+    },
+    {
+      "file": "assets/parts/v15/validation.json",
+      "git_blob": "0e39922b76e1621b8de54421297a786935a9ed56"
+    },
+    {
+      "file": "assets/parts/v15/video_source_provenance.json",
+      "git_blob": "ab4228fb3a2718c27df562ee345684bbd93d23fd"
+    },
+    {
+      "file": "assets/parts/v15/video_verification.json",
+      "git_blob": "663107c52943e0b874f32904fe544ccfed6f508b"
+    },
+    {
+      "file": "assets/parts/v15/使い方.txt",
+      "git_blob": "b9d193861e1efc18138210766b24bfbc45f76266"
+    },
+    {
+      "file": "assets/parts/v16/QA-SUMMARY.txt",
+      "git_blob": "0b0c606b56c7e26db2443f61356efe588554c21d"
+    },
+    {
+      "file": "assets/parts/v16/before-after-verification.json",
+      "git_blob": "654557c20eb293aebb34ffaf1740f418aeed117a"
+    },
+    {
+      "file": "assets/parts/v16/koma-v16-mouth-before-after.png",
+      "git_blob": "377d5bd9352407601e9801739a821ac93a99a21b"
+    },
+    {
+      "file": "assets/parts/v16/koma-v16-mouth-motion.mp4",
+      "git_blob": "95272357ab8043a5d285fa661dc726efc26ff98a"
+    },
+    {
+      "file": "assets/parts/v16/review/BASELINE_REVIEW.md",
+      "git_blob": "88736f005b74fe2395ea4b06f42f782a18674e73"
+    },
+    {
+      "file": "assets/parts/v16/review/FINAL_REVIEW.json",
+      "git_blob": "646a398254f7f7139ba6c5386f49b02c429fac21"
+    },
+    {
+      "file": "assets/parts/v16/review/FINAL_REVIEW.md",
+      "git_blob": "5325bf57347222ea7f94460d63c1d200d8525ea1"
+    },
+    {
+      "file": "assets/parts/v16/review/README.md",
+      "git_blob": "cd4067f0e2d85f089d859f2cb3116d89509d21ba"
+    },
+    {
+      "file": "assets/parts/v16/review/all240_alpha_stats.json",
+      "git_blob": "cecee9d464a8ad7e3c6548f142f62c8c167d9cc6"
+    },
+    {
+      "file": "assets/parts/v16/review/mouth-benchmark.json",
+      "git_blob": "9c549c83f0089539f45a47d287cb1f9b29ce241c"
+    },
+    {
+      "file": "assets/parts/v16/review/preservation.json",
+      "git_blob": "2c7293ab8359575e4b510d4c9f00c4c79781f508"
+    },
+    {
+      "file": "assets/parts/v16/review/source-provenance.json",
+      "git_blob": "8cf781eabd21112b14fe49082de879d928369a16"
+    },
+    {
+      "file": "assets/parts/v16/review/test-summary.json",
+      "git_blob": "dd758a6dcc5cd74f046ff81e531c43cf2862aeb3"
+    },
+    {
+      "file": "assets/parts/v16/runtime-bundle-verification.json",
+      "git_blob": "6644ecb5190706bf203e47a5024ccb830007f3fc"
+    },
+    {
+      "file": "assets/parts/v16/source-provenance.json",
+      "git_blob": "2b61f6bff0adfbfb77e2c7bd38e2dc213f106cb0"
+    },
+    {
+      "file": "assets/parts/v16/verification.json",
+      "git_blob": "d29272c65abe46390c4ff60fdc3515acb996eb56"
+    },
+    {
+      "file": "assets/parts/v7/koma_illustrated_underlayers_v7.psd",
+      "git_blob": "ad2e8b3878e390f8e8747084e133704724a9ff49"
+    },
+    {
+      "file": "assets/parts/v8/README.md",
+      "git_blob": "4003e622acdb25a6c3151c8281a2f1fcbb029c25"
+    },
+    {
+      "file": "assets/parts/v8/arms_painted_underlayer_v8.png",
+      "git_blob": "8c3fa3fd741153dc64ccff3f99378259e50aa8c5"
+    },
+    {
+      "file": "assets/parts/v8/audit_report.json",
+      "git_blob": "c7e9ae8232e07bd125274f32446e2d0361a315a3"
+    },
+    {
+      "file": "assets/parts/v8/expression_comparison_v8.png",
+      "git_blob": "78fc05cdef56d475f4fa52f3ce0fc41b9802f733"
+    },
+    {
+      "file": "assets/parts/v8/hair_head_audit_v8.json",
+      "git_blob": "6b22f79c2f8d5c31a6209283dd243c08c182c9ac"
+    },
+    {
+      "file": "assets/parts/v8/hair_head_comparison_v8.png",
+      "git_blob": "32b288d13f1d4399fae3b75ac09df25aaebb78e3"
+    },
+    {
+      "file": "assets/parts/v8/inner_cuffs_painted_underlayer_v8.png",
+      "git_blob": "f3170d4a190afb642a860fc378c4851f78aec45e"
+    },
+    {
+      "file": "assets/parts/v8/koma_expression_repaired_v8.psd",
+      "git_blob": "8d8ce616c07b8fdd432173343ea47e0dacbf5c19"
+    },
+    {
+      "file": "assets/parts/v8/koma_expression_v8.gif",
+      "git_blob": "f20c151ff4bc7923538e5e4e24e186f2fd18fd4a"
+    },
+    {
+      "file": "assets/parts/v8/koma_hair_head_cleaned_v8.psd",
+      "git_blob": "71754a63a1ceebbb195da14ee99e18d98c6fb700"
+    },
+    {
+      "file": "assets/parts/v8/koma_neck_clothing_cleaned_v8.psd",
+      "git_blob": "1f2b0e423a55902b558f27412726ae0d93577490"
+    },
+    {
+      "file": "assets/parts/v8/koma_sleeves_arms_hands_cleaned_v8.json",
+      "git_blob": "94a64b96cb19c34c308514250fa40900b8fb2bff"
+    },
+    {
+      "file": "assets/parts/v8/koma_sleeves_arms_hands_cleaned_v8.png",
+      "git_blob": "ff023fccd2cced0bbd279fd38e589408a8a75be6"
+    },
+    {
+      "file": "assets/parts/v8/koma_sleeves_arms_hands_cleaned_v8.psd",
+      "git_blob": "dd4f0844e2ca2a2b1a01d2a163a2690cd4f6289e"
+    },
+    {
+      "file": "assets/parts/v8/koma_sleeves_arms_hands_cleaned_v8_wrists.png",
+      "git_blob": "b90383f3e2481f10d0b2cb56fbf17a4f2c1e5085"
+    },
+    {
+      "file": "assets/parts/v8/neck_clothing_audit_v8.json",
+      "git_blob": "ea72c28c274f9a2f012a178e9b26fa6d531fecee"
+    },
+    {
+      "file": "assets/parts/v8/neck_clothing_comparison_v8.png",
+      "git_blob": "3ba970610c6ee19d6088d6ab86934473b34df016"
+    },
+    {
+      "file": "assets/parts/v8/neck_clothing_underpainting_v8.png",
+      "git_blob": "8714210e89c2d3e7f9da80a5a3fe350b251c9ddf"
+    },
+    {
+      "file": "assets/parts/v8/remnant_masks/accessory_v8.png",
+      "git_blob": "a9b80d1afdf3dda6b168cf241805004abea1438a"
+    },
+    {
+      "file": "assets/parts/v8/remnant_masks/crown_v8.png",
+      "git_blob": "54373b4fe4750d65f11ca3765c00f3bcb6dabb59"
+    },
+    {
+      "file": "assets/parts/v8/remnant_masks/side_hair_v8.png",
+      "git_blob": "93fee0e82e5fbb80a62c5e62a5b624893bbec540"
+    },
+    {
+      "file": "assets/parts/v8/review_references/side_hair_displaced_v8.png",
+      "git_blob": "bb4e2d045e4ae6837df0baa7f760a45e1fae4990"
+    },
+    {
+      "file": "assets/parts/v8/review_references/side_hair_hidden_v8.png",
+      "git_blob": "363a60eaca5ba37d67b1989b28ef8c2fb3c327e1"
+    },
+    {
+      "file": "assets/parts/v8/side_hair_underlayer_paint_v8.png",
+      "git_blob": "9b33960f580f4ddebb76f88c03eb7638aff0ee4c"
+    },
+    {
+      "file": "assets/parts/v9/both_closed.png",
+      "git_blob": "322d247297f7763c00b39de7204efb53e9681351"
+    },
+    {
+      "file": "assets/parts/v9/expression_cycle.gif",
+      "git_blob": "639c3e197450fcb9953f78051060f706ae8cc87f"
+    },
+    {
+      "file": "assets/parts/v9/eyes_closed.png",
+      "git_blob": "4b1c87656436212437a108e5c81428208b905547"
+    },
+    {
+      "file": "assets/parts/v9/face_skin_painted_source.png",
+      "git_blob": "56bcb32ad5a2d1aaade3a190918568a2cfae9bba"
+    },
+    {
+      "file": "assets/parts/v9/features_hidden.png",
+      "git_blob": "6914dfc0e3e4ba90d07052e27651eab9a50b00e7"
+    },
+    {
+      "file": "assets/parts/v9/four_expressions.png",
+      "git_blob": "d85a7c47f4d8bffa317faf4fedbdd1746a19ebbc"
+    },
+    {
+      "file": "assets/parts/v9/independent_blinks.png",
+      "git_blob": "6706fda70d5f0d03e63b4298d0e5d24f0f9052da"
+    },
+    {
+      "file": "assets/parts/v9/koma_expressions_v9.psd",
+      "git_blob": "d42d6491c2a5019b1329dfc1bca31e91d9d91d1b"
+    },
+    {
+      "file": "assets/parts/v9/mouth_closed.png",
+      "git_blob": "a4218629ba456502695b7b3f7bd7430d4b9c7d74"
+    },
+    {
+      "file": "assets/parts/v9/normal.png",
+      "git_blob": "5210069c09e1866c48cf462de032edab5f539410"
+    },
+    {
+      "file": "assets/parts/v9/review.json",
+      "git_blob": "48fd084671d3860f32cd2af826b2643d8aacb8fb"
+    },
+    {
+      "file": "assets/parts/v9/skin_reveal_detail.png",
+      "git_blob": "f211eb673e97d572b197c58fae69ff98859f99b5"
+    },
+    {
+      "file": "assets/parts/v9/visual_review.json",
+      "git_blob": "ab7b782cb2b671e16cdcfe71d815243dd258b219"
+    },
+    {
+      "file": "runtime/model/base.png",
+      "git_blob": "6914dfc0e3e4ba90d07052e27651eab9a50b00e7"
+    },
+    {
+      "file": "runtime/model/expressions/bashful/base.png",
+      "git_blob": "ba0d5f866ece550821907ec79cdbf70415ffc5f3"
+    },
+    {
+      "file": "runtime/model/expressions/bashful/eye_screen_left_closed.png",
+      "git_blob": "ade4e9792c32ffb5fd15c6ae0a3ffdba17e72935"
+    },
+    {
+      "file": "runtime/model/expressions/bashful/eye_screen_left_open.png",
+      "git_blob": "03e84f1f64c1de49e8690548f61ed6db3cfe3dc4"
+    },
+    {
+      "file": "runtime/model/expressions/bashful/eye_screen_right_closed.png",
+      "git_blob": "33ad8e9d83eea1506ae22bd558ca7424892b8c53"
+    },
+    {
+      "file": "runtime/model/expressions/bashful/eye_screen_right_open.png",
+      "git_blob": "8fe98d417f73d222397dc72ca45d3887bc67d948"
+    },
+    {
+      "file": "runtime/model/expressions/bashful/mouth_closed.png",
+      "git_blob": "edcc8cdeba1c46c335dea3277ed3374f9691617b"
+    },
+    {
+      "file": "runtime/model/expressions/bashful/mouth_open.png",
+      "git_blob": "bc848a3371915c4559690bee5b8858b3549354ef"
+    },
+    {
+      "file": "runtime/model/expressions/big_smile/base.png",
+      "git_blob": "0362a3222e2be85071c0f41bdafde758a7b6ac4c"
+    },
+    {
+      "file": "runtime/model/expressions/big_smile/eye_screen_left_closed.png",
+      "git_blob": "7a681354e683ffa844f5af1967aee729cbd5a928"
+    },
+    {
+      "file": "runtime/model/expressions/big_smile/eye_screen_left_open.png",
+      "git_blob": "7a681354e683ffa844f5af1967aee729cbd5a928"
+    },
+    {
+      "file": "runtime/model/expressions/big_smile/eye_screen_right_closed.png",
+      "git_blob": "dccfa678ef0e379a16a1f557d84185e473f5f6fc"
+    },
+    {
+      "file": "runtime/model/expressions/big_smile/eye_screen_right_open.png",
+      "git_blob": "dccfa678ef0e379a16a1f557d84185e473f5f6fc"
+    },
+    {
+      "file": "runtime/model/expressions/big_smile/mouth_closed.png",
+      "git_blob": "b8e0112408bf6a54b59305c48c92c6216c574353"
+    },
+    {
+      "file": "runtime/model/expressions/big_smile/mouth_open.png",
+      "git_blob": "882c53425e38af40b42a305ef05be1c6e94283a0"
+    },
+    {
+      "file": "runtime/model/expressions/displeased/base.png",
+      "git_blob": "7f7788cb48cfb3f605ebacfb541948f502ad59c5"
+    },
+    {
+      "file": "runtime/model/expressions/displeased/eye_screen_left_closed.png",
+      "git_blob": "18091c20268e93d98d276ff94883b49ca3c0102b"
+    },
+    {
+      "file": "runtime/model/expressions/displeased/eye_screen_left_open.png",
+      "git_blob": "05fad3fa4a71b500dd618c687497a14ec938a137"
+    },
+    {
+      "file": "runtime/model/expressions/displeased/eye_screen_right_closed.png",
+      "git_blob": "a2286739d08802cb744c4a7893e00b0e274b731d"
+    },
+    {
+      "file": "runtime/model/expressions/displeased/eye_screen_right_open.png",
+      "git_blob": "3d0ad6821c6190cb19e5c09383bb77e031379e53"
+    },
+    {
+      "file": "runtime/model/expressions/displeased/mouth_closed.png",
+      "git_blob": "0bc99e5b371c4101444a19b1a4091b8455ad788f"
+    },
+    {
+      "file": "runtime/model/expressions/displeased/mouth_open.png",
+      "git_blob": "fcfa5fc6585c81a836cd25c9309f15320539026f"
+    },
+    {
+      "file": "runtime/model/expressions/soft_smile/base.png",
+      "git_blob": "ca3b5bc0ee970c33f288ab68a05bf887ea1caa8e"
+    },
+    {
+      "file": "runtime/model/expressions/soft_smile/eye_screen_left_closed.png",
+      "git_blob": "29cda06d66fa32b31f264d27a329e2a5bc9d5d48"
+    },
+    {
+      "file": "runtime/model/expressions/soft_smile/eye_screen_left_open.png",
+      "git_blob": "1cf75433fb3c137c5d80c80b8859c866a0f965e0"
+    },
+    {
+      "file": "runtime/model/expressions/soft_smile/eye_screen_right_closed.png",
+      "git_blob": "69bc3ba9f21302f067bb60f6b1146394abd26f7c"
+    },
+    {
+      "file": "runtime/model/expressions/soft_smile/eye_screen_right_open.png",
+      "git_blob": "6ac9077b994c3ad037c2d7a709732d106c14d3e2"
+    },
+    {
+      "file": "runtime/model/expressions/soft_smile/mouth_closed.png",
+      "git_blob": "91cb36056a7ee6349b4d1c701a93fefc6233da08"
+    },
+    {
+      "file": "runtime/model/expressions/soft_smile/mouth_open.png",
+      "git_blob": "bc72d38036f2236a26405913d33c1ede8c0f25e0"
+    },
+    {
+      "file": "runtime/model/expressions/surprised/base.png",
+      "git_blob": "ce0341d100b080b006afa1a84b6279e4ce1db857"
+    },
+    {
+      "file": "runtime/model/expressions/surprised/eye_screen_left_closed.png",
+      "git_blob": "1141b80d4520b58b843f6767719bd69562d490b8"
+    },
+    {
+      "file": "runtime/model/expressions/surprised/eye_screen_left_open.png",
+      "git_blob": "2aad4471d4692b5f1bdca464ff73f81fb44aca26"
+    },
+    {
+      "file": "runtime/model/expressions/surprised/eye_screen_right_closed.png",
+      "git_blob": "3658df4ae1b4a4883cf9915a35e217c4764d78f0"
+    },
+    {
+      "file": "runtime/model/expressions/surprised/eye_screen_right_open.png",
+      "git_blob": "38ae7b80959588aff1d205e333719e0ace3a2428"
+    },
+    {
+      "file": "runtime/model/expressions/surprised/mouth_closed.png",
+      "git_blob": "5ec2ba433efbac2e231f78bc7f2b98fb01662b4d"
+    },
+    {
+      "file": "runtime/model/expressions/surprised/mouth_open.png",
+      "git_blob": "0edfe3206d9054fc7908bcc92d70fd317e8b038c"
+    },
+    {
+      "file": "runtime/model/expressions/thinking/base.png",
+      "git_blob": "3e7ab31635ebd689bd86f5d4cfa4f5fc94a394b5"
+    },
+    {
+      "file": "runtime/model/expressions/thinking/eye_screen_left_closed.png",
+      "git_blob": "4677878e422d3d882c58c1f8e75761c25123fa25"
+    },
+    {
+      "file": "runtime/model/expressions/thinking/eye_screen_left_open.png",
+      "git_blob": "130420b96b4b006c212d5f9fedb4a016677c9133"
+    },
+    {
+      "file": "runtime/model/expressions/thinking/eye_screen_right_closed.png",
+      "git_blob": "1aae874444bb7cbeaf36c4e74e3b39d4aca1102b"
+    },
+    {
+      "file": "runtime/model/expressions/thinking/eye_screen_right_open.png",
+      "git_blob": "b6bd825b0fbf4d355cf2ab6ded97f456c7fd137a"
+    },
+    {
+      "file": "runtime/model/expressions/thinking/mouth_closed.png",
+      "git_blob": "d4deb7ec94e980b417852e67310c7f270b706464"
+    },
+    {
+      "file": "runtime/model/expressions/thinking/mouth_open.png",
+      "git_blob": "c76e533b02726b5c421fa96837605c59e14d762a"
+    },
+    {
+      "file": "runtime/model/expressions/worried/base.png",
+      "git_blob": "14fe73f70b2c87f552133ba1cabcbd53a7598cd2"
+    },
+    {
+      "file": "runtime/model/expressions/worried/eye_screen_left_closed.png",
+      "git_blob": "f78c7f353954c710ba49097029fe0d746c6d1e2d"
+    },
+    {
+      "file": "runtime/model/expressions/worried/eye_screen_left_open.png",
+      "git_blob": "4d2f23e9d569a407e3b9d0ece330663ec1ea5ad9"
+    },
+    {
+      "file": "runtime/model/expressions/worried/eye_screen_right_closed.png",
+      "git_blob": "29ab805f341467c56f229a04b53b5cbf71757dc1"
+    },
+    {
+      "file": "runtime/model/expressions/worried/eye_screen_right_open.png",
+      "git_blob": "8456069eac0520abca88a8ec32738f2bdd7259ba"
+    },
+    {
+      "file": "runtime/model/expressions/worried/mouth_closed.png",
+      "git_blob": "6a3b581da807794e1c75391c45c43684dfa277cd"
+    },
+    {
+      "file": "runtime/model/expressions/worried/mouth_open.png",
+      "git_blob": "ac524d446c44b2ca5cc9d197d1f88829ef9f8199"
+    },
+    {
+      "file": "runtime/model/eye_screen_left_closed.png",
+      "git_blob": "16de27d907ba0b41b380011ff55c9fc91ad5d1ac"
+    },
+    {
+      "file": "runtime/model/eye_screen_left_open.png",
+      "git_blob": "6c63d01206573ee2ef790dbeee355428c68fd75e"
+    },
+    {
+      "file": "runtime/model/eye_screen_right_closed.png",
+      "git_blob": "f04475cae13062b66b404ae588b546cfbb70fa00"
+    },
+    {
+      "file": "runtime/model/eye_screen_right_open.png",
+      "git_blob": "f36a3fc5a7f21d53a86ba880e066d8aac4172f5b"
+    },
+    {
+      "file": "runtime/model/mouth_closed.png",
+      "git_blob": "0bd5b0f338aa825c826a76b7be18f8c0edb936d8"
+    },
+    {
+      "file": "runtime/model/mouth_open.png",
+      "git_blob": "9d2584a45e8751ee417664d27715d9f03b810a12"
+    },
+    {
+      "file": "runtime/model/skinning.json",
+      "git_blob": "58cfcf0b7a71b9ac9ddf1c70cf3a512cd8752a84"
+    },
+    {
+      "file": "runtime/web/app.js",
+      "git_blob": "d74a16066e44c829f3141fbef6acd8c19588d73f"
+    },
+    {
+      "file": "runtime/web/body-rig.js",
+      "git_blob": "73e9dcb735156ad68e91ae8f8d08fc24148e4889"
+    },
+    {
+      "file": "runtime/web/controls.js",
+      "git_blob": "a529ddc502968b11614ef797d5705fd5aa09310d"
+    },
+    {
+      "file": "runtime/web/expressions.js",
+      "git_blob": "0f4a9d5a147d62ef29123a4cafd9733d0a54d021"
+    },
+    {
+      "file": "runtime/web/index.html",
+      "git_blob": "7819187ca2fac74aa04f904e0069b3755bc21950"
+    },
+    {
+      "file": "runtime/web/performance.js",
+      "git_blob": "e0663d33f2adb401c04bb293cc51d8b3761d8909"
+    },
+    {
+      "file": "runtime/web/renderer.js",
+      "git_blob": "01d4c5d20b4cc14bd3a5a1e3dcfc9e496ee35827"
+    },
+    {
+      "file": "runtime/web/style.css",
+      "git_blob": "83d6f656c84825922684eb17f0cf83ba7d53a9bf"
+    }
+  ]
+}

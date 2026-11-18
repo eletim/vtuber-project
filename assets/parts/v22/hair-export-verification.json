@@ -1,0 +1,39 @@
+{
+  "expressions": {
+    "neutral": {
+      "changed_outside_hair_ownership": 0,
+      "remaining_selected_hair_alpha": 0
+    },
+    "soft_smile": {
+      "changed_outside_hair_ownership": 0,
+      "remaining_selected_hair_alpha": 0
+    },
+    "big_smile": {
+      "changed_outside_hair_ownership": 0,
+      "remaining_selected_hair_alpha": 0
+    },
+    "worried": {
+      "changed_outside_hair_ownership": 0,
+      "remaining_selected_hair_alpha": 0
+    },
+    "surprised": {
+      "changed_outside_hair_ownership": 0,
+      "remaining_selected_hair_alpha": 0
+    },
+    "bashful": {
+      "changed_outside_hair_ownership": 0,
+      "remaining_selected_hair_alpha": 0
+    },
+    "displeased": {
+      "changed_outside_hair_ownership": 0,
+      "remaining_selected_hair_alpha": 0
+    },
+    "thinking": {
+      "changed_outside_hair_ownership": 0,
+      "remaining_selected_hair_alpha": 0
+    }
+  },
+  "front_strands": 8,
+  "rear_strands": 4,
+  "moving_hair_in_fixed_base_pixels": 0
+}

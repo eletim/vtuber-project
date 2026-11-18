@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "isolated_components": 39,
+  "changed_pixels": 413,
+  "alpha_changed": 0,
+  "source_sha256": "13d2318105e3f125f4342eb6f141faa4865fce4656b3ff8af5088c15bba33c6e"
+}

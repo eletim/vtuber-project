@@ -1,0 +1,53 @@
+{
+  "source_psd": "assets/parts/v17/koma_expression_skin_v17.psd",
+  "source_sha256": "82684e48370b8008f49976aad154952e19c4d0cfb97b5d3b5824006be9a98069",
+  "output_psd": "assets/parts/v19/koma_separated_body_v19.psd",
+  "output_sha256": "0f1d28279d0256f2a7ba860422709041f701dade3becf361c2b54bf5342ba3f4",
+  "rest_rgba_changed_pixels": 0,
+  "runtime_rest_rgba_changed_pixels": 0,
+  "semantic_groups": {
+    "head_hair_front": 35,
+    "arm_screen_right": 18,
+    "arm_screen_left": 22,
+    "torso_clothing": 25,
+    "skirt": 23,
+    "legs_static": 5,
+    "hair_back": 16
+  },
+  "native_layer_count": 144,
+  "paint_sources": {
+    "body_hidden_paint_v19.png": "2d9eded045985453e42bc9c4d43a496a29c60739bf4aeab0aa4f459efd4f1923",
+    "shoulder_hidden_paint_v19.png": "4f25107e874a8105fc1ef65bd3d096805fb3f326b9075ffcb695e5296a2680de"
+  },
+  "hidden_overlap_pixels": {
+    "arm_screen_left": 522,
+    "arm_screen_right": 2232,
+    "legs_static": 0,
+    "skirt": 4776,
+    "head_hair_front": 0,
+    "hair_back": 1390,
+    "torso_clothing": 17483
+  },
+  "sampling_edge_gutter_pixels": {
+    "hair_back": 0,
+    "legs_static": 0,
+    "skirt": 0,
+    "torso_clothing": 0,
+    "arm_screen_left": 0,
+    "arm_screen_right": 0,
+    "head_hair_front": 0
+  },
+  "sampling_edge_gutter_width": 0,
+  "sampling_edge_gutter_method": "No alpha-expanding native gutters; runtime compositor handles filtered cut seams.",
+  "expression_folders_preserved": true,
+  "original_v17_backup_hidden": true,
+  "thigh_underpaint": {
+    "new_pixels_added": false,
+    "handling": "Existing original thigh transparency is preserved. Conservative skirt reveal limits require runtime visual validation."
+  },
+  "limitations": [
+    "PSD-derived preview rig, not Cubism moc3.",
+    "Original transparent cutouts within lower legs are preserved intentionally.",
+    "Skirt horizontal hem displacement should stay within 3 source pixels until larger authored underpaint is approved."
+  ]
+}

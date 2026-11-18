@@ -1,0 +1,23 @@
+{
+  "scope": "capture pipeline only; runtime, PSD and materials unchanged from 23ce0abd5063c2fad5d2ede0f5c772355e97b9f3",
+  "method": "render fresh canvas frames; integrate both versions at 60 Hz; encode each output frame directly with WebCodecs AVC at 30 fps; mux exact 1000/30000 ticks; no prior MP4 re-encoding or frame duplication",
+  "frame_count_each": 555,
+  "duration_seconds_each": 18.5,
+  "first_pts": 0,
+  "last_pts_seconds": 18.466666666666665,
+  "missing_duplicate_or_mismatched_timestamps": 0,
+  "decoded_each": 555,
+  "visual_review": {
+    "arm_frames": 181,
+    "arm_media_range": [
+      10,
+      16
+    ],
+    "hair_frames": 58,
+    "finding": "No evident discontinuous pop, sleeve transparency, or new hair separation in inspected images."
+  },
+  "playback_limitation": "Dedicated headless HTMLVideoElement 1x playback dropped 77/555 frames on each file. This is separate from file timing; both files contain all 555 correctly timed decoded samples. Drop-free realtime playback is not claimed.",
+  "shoulder": "held; no retry or change",
+  "tests": "cfr_mp4.test.mjs passes: 555-sample timestamp/payload roundtrip and missing/duplicate timestamp rejection. Real AVC decoding validated independently in Chrome.",
+  "upload": false
+}

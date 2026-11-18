@@ -1,0 +1,54 @@
+{
+  "frames": 360,
+  "largest_deltas": [
+    {
+      "frame": 180,
+      "mean_abs_delta": 28.50858444940476
+    },
+    {
+      "frame": 13,
+      "mean_abs_delta": 11.218289930555555
+    },
+    {
+      "frame": 92,
+      "mean_abs_delta": 10.631465153769842
+    },
+    {
+      "frame": 16,
+      "mean_abs_delta": 10.301850818452381
+    },
+    {
+      "frame": 15,
+      "mean_abs_delta": 10.282408854166667
+    },
+    {
+      "frame": 14,
+      "mean_abs_delta": 10.216595362103174
+    },
+    {
+      "frame": 17,
+      "mean_abs_delta": 10.206423611111111
+    },
+    {
+      "frame": 94,
+      "mean_abs_delta": 10.12484871031746
+    },
+    {
+      "frame": 12,
+      "mean_abs_delta": 10.069880952380952
+    },
+    {
+      "frame": 18,
+      "mean_abs_delta": 10.063013392857142
+    },
+    {
+      "frame": 19,
+      "mean_abs_delta": 9.91956783234127
+    },
+    {
+      "frame": 93,
+      "mean_abs_delta": 9.79565662202381
+    }
+  ],
+  "note": "Includes intentional background change and expression changes. This metric is not visual approval."
+}

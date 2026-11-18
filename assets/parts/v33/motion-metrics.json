@@ -1,0 +1,42 @@
+{
+  "v32": {
+    "shift_peak": 42.911279285250785,
+    "pelvis_peak_degrees": 3.633054605365301,
+    "chest_peak_degrees": 3.2798481935307136,
+    "leg_difference_peak_degrees": 5.485670836449762,
+    "hair_peaks": {
+      "rear_left_outer": 27.990095516378915,
+      "rear_left_inner": 12,
+      "rear_right_inner": 12,
+      "rear_right_outer": 33.33407050729211,
+      "bang_left": 1,
+      "bang_center": 0.966507492530872,
+      "bang_right": 1,
+      "side_left_front": 20,
+      "side_right_front": 0,
+      "side_left_outer": 0,
+      "side_left_inner": 12,
+      "side_right_outer": 12
+    }
+  },
+  "v33": {
+    "shift_peak": 43.165007816365794,
+    "pelvis_peak_degrees": 3.7592408253817013,
+    "chest_peak_degrees": 3.5282417213144965,
+    "leg_difference_peak_degrees": 7.735573168962334,
+    "hair_peaks": {
+      "rear_left_outer": 31.1537229152858,
+      "rear_left_inner": 12,
+      "rear_right_inner": 12,
+      "rear_right_outer": 38,
+      "bang_left": 0.9991846567275399,
+      "bang_center": 0.9754813008687612,
+      "bang_right": 1,
+      "side_left_front": 19.959947655435407,
+      "side_right_front": 0,
+      "side_left_outer": 0,
+      "side_left_inner": 12,
+      "side_right_outer": 12
+    }
+  }
+}

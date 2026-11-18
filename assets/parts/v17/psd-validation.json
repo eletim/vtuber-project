@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "applied": true,
+  "target_layer": "surprised.mouth.closed",
+  "target_rect": [
+    510,
+    321,
+    601,
+    390
+  ],
+  "source_psd": "assets/parts/v15/koma_expression_motion_v15.psd",
+  "output_psd": "assets/parts/v17/koma_expression_skin_v17.psd",
+  "source_sha256": "aeedcf0e025b7d18f61586be3e070b12987be9890c01bec26475677b300a3c10",
+  "output_sha256": "82684e48370b8008f49976aad154952e19c4d0cfb97b5d3b5824006be9a98069",
+  "candidate_sha256": "08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74",
+  "protected_mask_sha256": "969d5345fcb61d68fb1d880640540ab96e0af1e078fd64c7d978ef5c321ae5c5",
+  "runtime_sprite": "runtime/model/expressions/surprised/mouth_closed_skin_v17.png",
+  "manifest_only_changed_fields": [
+    "expression_source_psd",
+    "expressions[surprised].parts[mouth.closed].file"
+  ],
+  "changed_rgb_pixels": 4616,
+  "protected_lip_pixels": 409,
+  "protected_lip_changes": 0,
+  "alpha_changes": 0,
+  "transparent_pixel_changes": 0,
+  "canvas": [
+    1086,
+    1448
+  ],
+  "total_layer_records": 129,
+  "pixel_layers": 115,
+  "unchanged_other_pixel_layers": 114,
+  "folder_tree_and_all_layer_metadata_exact": true,
+  "unchanged_channels_byte_exact": true,
+  "neutral_merged_bytes_exact": true,
+  "regression_tests": {
+    "command": "python -m unittest discover -s tests -p 'test_skin_v17.py' -v",
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 35.766,
+    "independent_reader": "scripts/psd_groups_v14.py:parse_psd_groups",
+    "runtime_endpoint_combinations_exact": 64,
+    "preexisting_files_byte_exact": 340,
+    "preexisting_file_scope": [
+      "assets/**",
+      "runtime/model/** except separately checked model.json",
+      "runtime/web/**"
+    ]
+  }
+}

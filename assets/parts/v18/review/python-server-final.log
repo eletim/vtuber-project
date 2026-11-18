@@ -1,0 +1,8 @@
+test_arm_body_parameters_clamp_reset_and_expire (test_runtime_server.Controls.test_arm_body_parameters_clamp_reset_and_expire) ... ok
+test_bad_commands_and_expiry (test_runtime_server.Controls.test_bad_commands_and_expiry) ... ok
+test_source_ownership_and_switch_reset (test_runtime_server.Controls.test_source_ownership_and_switch_reset) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.480s
+
+OK

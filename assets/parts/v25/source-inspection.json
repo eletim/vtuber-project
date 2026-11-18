@@ -1,0 +1,5300 @@
+{
+  "baseline": "3da848cf3d58c9dc1d13c92ebab53c3ba82b1393",
+  "bodyRig": {
+    "shoulders": [
+      [
+        353,
+        510
+      ],
+      [
+        775,
+        530
+      ]
+    ],
+    "elbows": [
+      [
+        275,
+        935
+      ],
+      [
+        850,
+        955
+      ]
+    ],
+    "waist": [
+      555,
+      995
+    ],
+    "skirtTop": 995,
+    "skirtHem": 1395,
+    "skirtRevealLimitPixels": 3
+  },
+  "layers": [
+    {
+      "id": "rear_left_outer",
+      "role": "head",
+      "file": "body_v22/rear_left_outer.png",
+      "rect": [
+        149,
+        448,
+        260,
+        748
+      ]
+    },
+    {
+      "id": "rear_left_inner",
+      "role": "head",
+      "file": "body_v22/rear_left_inner.png",
+      "rect": [
+        260,
+        448,
+        373,
+        707
+      ]
+    },
+    {
+      "id": "rear_right_inner",
+      "role": "head",
+      "file": "body_v22/rear_right_inner.png",
+      "rect": [
+        733,
+        448,
+        825,
+        598
+      ]
+    },
+    {
+      "id": "rear_right_outer",
+      "role": "head",
+      "file": "body_v22/rear_right_outer.png",
+      "rect": [
+        825,
+        448,
+        940,
+        775
+      ]
+    },
+    {
+      "id": "legs_static",
+      "role": "root",
+      "file": "body_v19/legs_static.png",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ]
+    },
+    {
+      "id": "skirt",
+      "role": "skirt",
+      "file": "body_v19/skirt.png",
+      "rect": [
+        182,
+        970,
+        914,
+        1445
+      ]
+    },
+    {
+      "id": "left_body_reveal_painted",
+      "role": "torso",
+      "file": "body_v22/left_body_reveal_painted.png",
+      "rect": [
+        150,
+        940,
+        365,
+        1376
+      ]
+    },
+    {
+      "id": "torso_clothing",
+      "role": "torso",
+      "file": "body_v19/torso_clothing.png",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ]
+    },
+    {
+      "id": "arm_screen_right",
+      "role": "armRight",
+      "file": "body_v19/arm_screen_right.png",
+      "rect": [
+        731,
+        489,
+        1027,
+        1412
+      ]
+    },
+    {
+      "id": "left_shoulder_original_support",
+      "role": "armLeft",
+      "file": "body_v22/left_shoulder_original_support.png",
+      "rect": [
+        279,
+        486,
+        399,
+        630
+      ]
+    },
+    {
+      "id": "left_raised_upper",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_upper.png",
+      "rect": [
+        251,
+        592,
+        386,
+        650
+      ]
+    },
+    {
+      "id": "hair_reveal_native",
+      "role": "head",
+      "file": "body_v22/hair_reveal_native.png",
+      "rect": [
+        281,
+        43,
+        826,
+        681
+      ]
+    },
+    {
+      "id": "face_fixed_v22",
+      "role": "head",
+      "file": "body_v22/face_fixed_v22.png",
+      "rect": [
+        235,
+        1,
+        865,
+        683
+      ]
+    },
+    {
+      "id": "bang_left",
+      "role": "head",
+      "file": "body_v22/bang_left.png",
+      "rect": [
+        406,
+        53,
+        500,
+        283
+      ]
+    },
+    {
+      "id": "bang_center",
+      "role": "head",
+      "file": "body_v22/bang_center.png",
+      "rect": [
+        476,
+        43,
+        580,
+        271
+      ]
+    },
+    {
+      "id": "bang_right",
+      "role": "head",
+      "file": "body_v22/bang_right.png",
+      "rect": [
+        556,
+        48,
+        651,
+        270
+      ]
+    },
+    {
+      "id": "side_left_front",
+      "role": "head",
+      "file": "body_v22/side_left_front.png",
+      "rect": [
+        390,
+        347,
+        512,
+        681
+      ]
+    },
+    {
+      "id": "side_right_front",
+      "role": "head",
+      "file": "body_v22/side_right_front.png",
+      "rect": [
+        644,
+        335,
+        702,
+        450
+      ]
+    },
+    {
+      "id": "side_left_outer",
+      "role": "head",
+      "file": "body_v22/side_left_outer.png",
+      "rect": [
+        235,
+        211,
+        357,
+        550
+      ]
+    },
+    {
+      "id": "side_left_inner",
+      "role": "head",
+      "file": "body_v22/side_left_inner.png",
+      "rect": [
+        333,
+        239,
+        427,
+        679
+      ]
+    },
+    {
+      "id": "side_right_outer",
+      "role": "head",
+      "file": "body_v22/side_right_outer.png",
+      "rect": [
+        731,
+        356,
+        865,
+        550
+      ]
+    },
+    {
+      "id": "left_raised_forearm",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_forearm.png",
+      "rect": [
+        398,
+        477,
+        496,
+        695
+      ]
+    },
+    {
+      "id": "left_raised_drape",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_drape.png",
+      "rect": [
+        174,
+        626,
+        528,
+        972
+      ]
+    },
+    {
+      "id": "left_raised_cuff",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_cuff.png",
+      "rect": [
+        365,
+        565,
+        481,
+        721
+      ]
+    },
+    {
+      "id": "left_raised_hand",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_hand.png",
+      "rect": [
+        366,
+        333,
+        499,
+        477
+      ]
+    }
+  ],
+  "psd": {
+    "path": "assets\\parts\\v22\\koma_articulated_v22.psd",
+    "sha256": "b159cbc45f04e835f4aa56fa3f28fcea35eea4e1906033c9a861f1d0b2907ce3",
+    "size": [
+      1086,
+      1448
+    ],
+    "layers": [
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "body_remaining",
+        "bbox": [
+          249,
+          233,
+          796,
+          1362
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing_base_FULL_beneath_torso_parts",
+        "bbox": [
+          245,
+          429,
+          888,
+          1448
+        ],
+        "visible": true
+      },
+      {
+        "name": "waist_fixed_painted_underlayer",
+        "bbox": [
+          314,
+          834,
+          871,
+          1321
+        ],
+        "visible": true
+      },
+      {
+        "name": "blouse_fixed_painted_underlayer",
+        "bbox": [
+          459,
+          473,
+          706,
+          847
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_sleeve_base_FULL_beneath_right_sleeve",
+        "bbox": [
+          767,
+          615,
+          888,
+          1250
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_sleeve_base_FULL_beneath_left_sleeve",
+        "bbox": [
+          196,
+          623,
+          380,
+          1301
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_hand_base_FULL_beneath_right_hand",
+        "bbox": [
+          871,
+          1211,
+          913,
+          1379
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_hand_base_FULL_beneath_left_hand",
+        "bbox": [
+          182,
+          1199,
+          253,
+          1360
+        ],
+        "visible": true
+      },
+      {
+        "name": "neck_base_FULL_beneath_neck",
+        "bbox": [
+          445,
+          379,
+          668,
+          520
+        ],
+        "visible": true
+      },
+      {
+        "name": "neck_collar_fixed_painted_underlayer",
+        "bbox": [
+          483,
+          380,
+          660,
+          433
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_base_FULL_beneath_hair_parts",
+        "bbox": [
+          282,
+          1,
+          863,
+          720
+        ],
+        "visible": true
+      },
+      {
+        "name": "side_hair_fixed_painted_underlayer",
+        "bbox": [
+          282,
+          15,
+          863,
+          754
+        ],
+        "visible": true
+      },
+      {
+        "name": "face_skin_FULL_beneath_eyes_mouth",
+        "bbox": [
+          330,
+          164,
+          701,
+          445
+        ],
+        "visible": true
+      },
+      {
+        "name": "lower_body",
+        "bbox": [
+          258,
+          1206,
+          885,
+          1448
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt_and_belt",
+        "bbox": [
+          245,
+          834,
+          888,
+          1321
+        ],
+        "visible": true
+      },
+      {
+        "name": "blouse",
+        "bbox": [
+          459,
+          429,
+          706,
+          847
+        ],
+        "visible": true
+      },
+      {
+        "name": "vest_right.illustrated_underpaint",
+        "bbox": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "visible": true
+      },
+      {
+        "name": "vest_continuous_painted_reveal_v10",
+        "bbox": [
+          314,
+          459,
+          831,
+          1182
+        ],
+        "visible": true
+      },
+      {
+        "name": "vest_right",
+        "bbox": [
+          678,
+          479,
+          831,
+          1182
+        ],
+        "visible": true
+      },
+      {
+        "name": "vest_left.illustrated_underpaint",
+        "bbox": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "visible": true
+      },
+      {
+        "name": "vest_left",
+        "bbox": [
+          314,
+          459,
+          475,
+          1155
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_arm_sleeve.illustrated_underpaint",
+        "bbox": [
+          860,
+          693,
+          863,
+          698
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_arm_sleeve.outside_ownership",
+        "bbox": [
+          860,
+          693,
+          863,
+          698
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_arm_sleeve.illustrated_underpaint",
+        "bbox": [
+          282,
+          634,
+          289,
+          640
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_arm_sleeve.outside_ownership",
+        "bbox": [
+          244,
+          634,
+          289,
+          1294
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_hand.illustrated_underpaint",
+        "bbox": [
+          884,
+          1257,
+          913,
+          1346
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_hand.outside_ownership",
+        "bbox": [
+          884,
+          1257,
+          913,
+          1346
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_hand.illustrated_underpaint",
+        "bbox": [
+          182,
+          1199,
+          253,
+          1360
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_hand.outside_ownership",
+        "bbox": [
+          182,
+          1199,
+          253,
+          1360
+        ],
+        "visible": true
+      },
+      {
+        "name": "neck.illustrated_underpaint",
+        "bbox": [
+          453,
+          379,
+          668,
+          433
+        ],
+        "visible": true
+      },
+      {
+        "name": "neck",
+        "bbox": [
+          453,
+          379,
+          668,
+          433
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_continuous_painted_reveal_v10",
+        "bbox": [
+          281,
+          218,
+          865,
+          737
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back_right",
+        "bbox": [
+          619,
+          340,
+          940,
+          776
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back_left",
+        "bbox": [
+          149,
+          181,
+          314,
+          780
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_crown.illustrated_underpaint",
+        "bbox": [
+          306,
+          1,
+          759,
+          219
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_crown",
+        "bbox": [
+          306,
+          1,
+          759,
+          219
+        ],
+        "visible": true
+      },
+      {
+        "name": "face_details_without_expression",
+        "bbox": [
+          330,
+          164,
+          701,
+          445
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_eyebrow",
+        "bbox": [
+          531,
+          213,
+          574,
+          218
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_eyebrow",
+        "bbox": [
+          325,
+          207,
+          436,
+          240
+        ],
+        "visible": true
+      },
+      {
+        "name": "scalp_reveal_when_bangs_move",
+        "bbox": [
+          321,
+          74,
+          714,
+          280
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_boundary_fixed_underpainting",
+        "bbox": [
+          311,
+          620,
+          796,
+          706
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_side_right.illustrated_underpaint",
+        "bbox": [
+          680,
+          234,
+          699,
+          337
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_side_right",
+        "bbox": [
+          679,
+          234,
+          937,
+          780
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_side_left.illustrated_underpaint",
+        "bbox": [
+          344,
+          302,
+          392,
+          367
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_side_left",
+        "bbox": [
+          149,
+          209,
+          523,
+          780
+        ],
+        "visible": true
+      },
+      {
+        "name": "front_bangs.illustrated_underpaint",
+        "bbox": [
+          309,
+          47,
+          714,
+          281
+        ],
+        "visible": true
+      },
+      {
+        "name": "front_bangs",
+        "bbox": [
+          309,
+          47,
+          714,
+          281
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_accessory.illustrated_underpaint",
+        "bbox": [
+          688,
+          159,
+          775,
+          387
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_accessory",
+        "bbox": [
+          688,
+          159,
+          775,
+          387
+        ],
+        "visible": true
+      },
+      {
+        "name": "face_expression_painted_skin_v9",
+        "bbox": [
+          356,
+          204,
+          684,
+          412
+        ],
+        "visible": true
+      },
+      {
+        "name": "mouth.open",
+        "bbox": [
+          467,
+          317,
+          614,
+          412
+        ],
+        "visible": true
+      },
+      {
+        "name": "eye_screen_right.open",
+        "bbox": [
+          538,
+          204,
+          684,
+          320
+        ],
+        "visible": true
+      },
+      {
+        "name": "eye_screen_right.closed",
+        "bbox": [
+          526,
+          192,
+          699,
+          337
+        ],
+        "visible": false
+      },
+      {
+        "name": "eye_screen_left.open",
+        "bbox": [
+          356,
+          229,
+          535,
+          354
+        ],
+        "visible": true
+      },
+      {
+        "name": "eye_screen_left.closed",
+        "bbox": [
+          344,
+          217,
+          547,
+          367
+        ],
+        "visible": false
+      },
+      {
+        "name": "mouth.closed",
+        "bbox": [
+          461,
+          314,
+          617,
+          424
+        ],
+        "visible": false
+      },
+      {
+        "name": "right_torso_join",
+        "bbox": [
+          791,
+          898,
+          874,
+          1206
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_inner_cuff",
+        "bbox": [
+          894,
+          1240,
+          953,
+          1252
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_arm_wrist_join",
+        "bbox": [
+          782,
+          667,
+          1016,
+          1273
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_arm_sleeve",
+        "bbox": [
+          782,
+          667,
+          1027,
+          1305
+        ],
+        "visible": true
+      },
+      {
+        "name": "right_hand",
+        "bbox": [
+          889,
+          1240,
+          1018,
+          1412
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_torso_join",
+        "bbox": [
+          230,
+          695,
+          375,
+          1235
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_inner_cuff",
+        "bbox": [
+          168,
+          1213,
+          222,
+          1224
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_arm_wrist_join",
+        "bbox": [
+          133,
+          638,
+          362,
+          1234
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_arm_sleeve",
+        "bbox": [
+          47,
+          638,
+          376,
+          1289
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_hand",
+        "bbox": [
+          93,
+          1213,
+          222,
+          1406
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "thinking.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.eye_screen_right.open",
+        "bbox": [
+          567,
+          207,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.eye_screen_right.closed",
+        "bbox": [
+          567,
+          207,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "thinking.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 07 Thinking | ???",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "displeased.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "displeased.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 06 Displeased | ??",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "bashful.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "bashful.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 05 Bashful | ??",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "surprised.eye_screen_right.open",
+        "bbox": [
+          567,
+          205,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.eye_screen_right.closed",
+        "bbox": [
+          567,
+          205,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "surprised.eye_screen_left.open",
+        "bbox": [
+          417,
+          236,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.eye_screen_left.closed",
+        "bbox": [
+          417,
+          236,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 04 Surprised | ??",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "worried.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "worried.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 03 Worried | ???",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "EXP 02 Big smile | ????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "soft_smile.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "soft_smile.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 01 Soft smile | ???",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "99 SOURCE V17 BACKUP | ?????????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/painted_hidden_overlap_v19",
+        "bbox": [
+          235,
+          448,
+          865,
+          550
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/torso_clothing_base_FULL_beneath_torso_parts",
+        "bbox": [
+          830,
+          649,
+          831,
+          653
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/right_sleeve_base_FULL_beneath_right_sleeve",
+        "bbox": [
+          828,
+          615,
+          863,
+          698
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/hair_base_FULL_beneath_hair_parts",
+        "bbox": [
+          818,
+          550,
+          863,
+          698
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/side_hair_fixed_painted_underlayer",
+        "bbox": [
+          818,
+          550,
+          863,
+          698
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/right_arm_sleeve.illustrated_underpaint",
+        "bbox": [
+          860,
+          693,
+          863,
+          698
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/right_arm_sleeve.outside_ownership",
+        "bbox": [
+          860,
+          693,
+          863,
+          698
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/hair_continuous_painted_reveal_v10",
+        "bbox": [
+          815,
+          550,
+          865,
+          694
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/hair_back_right",
+        "bbox": [
+          863,
+          647,
+          940,
+          775
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/hair_back_left",
+        "bbox": [
+          149,
+          450,
+          267,
+          748
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/hair_side_right",
+        "bbox": [
+          735,
+          450,
+          937,
+          768
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/hair_side_left",
+        "bbox": [
+          149,
+          450,
+          371,
+          655
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/right_arm_wrist_join",
+        "bbox": [
+          830,
+          668,
+          864,
+          767
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/right_arm_sleeve",
+        "bbox": [
+          830,
+          668,
+          864,
+          767
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/left_arm_wrist_join",
+        "bbox": [
+          257,
+          656,
+          268,
+          701
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_back/left_arm_sleeve",
+        "bbox": [
+          257,
+          656,
+          268,
+          701
+        ],
+        "visible": true
+      },
+      {
+        "name": "07 Rear hair | ???",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "legs_static/torso_clothing_base_FULL_beneath_torso_parts",
+        "bbox": [
+          285,
+          1218,
+          790,
+          1448
+        ],
+        "visible": true
+      },
+      {
+        "name": "legs_static/waist_fixed_painted_underlayer",
+        "bbox": [
+          314,
+          1226,
+          790,
+          1321
+        ],
+        "visible": true
+      },
+      {
+        "name": "legs_static/left_sleeve_base_FULL_beneath_left_sleeve",
+        "bbox": [
+          285,
+          1218,
+          325,
+          1262
+        ],
+        "visible": true
+      },
+      {
+        "name": "legs_static/lower_body",
+        "bbox": [
+          285,
+          1230,
+          790,
+          1448
+        ],
+        "visible": true
+      },
+      {
+        "name": "legs_static/skirt_and_belt",
+        "bbox": [
+          302,
+          1218,
+          790,
+          1321
+        ],
+        "visible": true
+      },
+      {
+        "name": "06 Legs fixed | ????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/painted_hidden_overlap_v19",
+        "bbox": [
+          206,
+          970,
+          710,
+          1259
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/body_remaining",
+        "bbox": [
+          249,
+          1281,
+          272,
+          1362
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/torso_clothing_base_FULL_beneath_torso_parts",
+        "bbox": [
+          252,
+          985,
+          888,
+          1445
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/waist_fixed_painted_underlayer",
+        "bbox": [
+          326,
+          985,
+          871,
+          1300
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/right_sleeve_base_FULL_beneath_right_sleeve",
+        "bbox": [
+          847,
+          1176,
+          886,
+          1250
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/left_sleeve_base_FULL_beneath_left_sleeve",
+        "bbox": [
+          201,
+          1104,
+          351,
+          1301
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/right_hand_base_FULL_beneath_right_hand",
+        "bbox": [
+          871,
+          1211,
+          913,
+          1379
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/left_hand_base_FULL_beneath_left_hand",
+        "bbox": [
+          182,
+          1205,
+          253,
+          1360
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/lower_body",
+        "bbox": [
+          258,
+          1206,
+          885,
+          1445
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/skirt_and_belt",
+        "bbox": [
+          252,
+          985,
+          888,
+          1300
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/vest_continuous_painted_reveal_v10",
+        "bbox": [
+          314,
+          985,
+          807,
+          1182
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/vest_right",
+        "bbox": [
+          719,
+          993,
+          807,
+          1182
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/vest_left",
+        "bbox": [
+          314,
+          985,
+          420,
+          1155
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/left_arm_sleeve.outside_ownership",
+        "bbox": [
+          245,
+          1203,
+          265,
+          1294
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/right_hand.illustrated_underpaint",
+        "bbox": [
+          884,
+          1257,
+          913,
+          1346
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/right_hand.outside_ownership",
+        "bbox": [
+          884,
+          1257,
+          913,
+          1346
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/left_hand.illustrated_underpaint",
+        "bbox": [
+          182,
+          1205,
+          253,
+          1360
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/left_hand.outside_ownership",
+        "bbox": [
+          182,
+          1205,
+          253,
+          1360
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/right_torso_join",
+        "bbox": [
+          857,
+          1177,
+          874,
+          1206
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/right_arm_sleeve",
+        "bbox": [
+          857,
+          1177,
+          908,
+          1305
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/right_hand",
+        "bbox": [
+          891,
+          1256,
+          914,
+          1321
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/left_torso_join",
+        "bbox": [
+          230,
+          1107,
+          324,
+          1235
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt/left_arm_sleeve",
+        "bbox": [
+          213,
+          1107,
+          324,
+          1266
+        ],
+        "visible": true
+      },
+      {
+        "name": "05 Skirt independent | ???????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/painted_hidden_overlap_v19",
+        "bbox": [
+          273,
+          466,
+          858,
+          1120
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/torso_clothing_base_FULL_beneath_torso_parts",
+        "bbox": [
+          281,
+          450,
+          856,
+          1177
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/waist_fixed_painted_underlayer",
+        "bbox": [
+          420,
+          834,
+          846,
+          1176
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/blouse_fixed_painted_underlayer",
+        "bbox": [
+          459,
+          473,
+          706,
+          847
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/right_sleeve_base_FULL_beneath_right_sleeve",
+        "bbox": [
+          767,
+          623,
+          856,
+          1177
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/left_sleeve_base_FULL_beneath_left_sleeve",
+        "bbox": [
+          281,
+          632,
+          380,
+          1172
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/neck_base_FULL_beneath_neck",
+        "bbox": [
+          464,
+          450,
+          667,
+          518
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/hair_base_FULL_beneath_hair_parts",
+        "bbox": [
+          360,
+          450,
+          768,
+          720
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/side_hair_fixed_painted_underlayer",
+        "bbox": [
+          360,
+          450,
+          768,
+          754
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/skirt_and_belt",
+        "bbox": [
+          281,
+          834,
+          856,
+          1177
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/blouse",
+        "bbox": [
+          459,
+          450,
+          706,
+          847
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/vest_continuous_painted_reveal_v10",
+        "bbox": [
+          323,
+          459,
+          828,
+          1142
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/vest_right",
+        "bbox": [
+          678,
+          479,
+          828,
+          1142
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/vest_left",
+        "bbox": [
+          323,
+          459,
+          475,
+          1105
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/hair_continuous_painted_reveal_v10",
+        "bbox": [
+          367,
+          458,
+          768,
+          737
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/hair_back_right",
+        "bbox": [
+          645,
+          450,
+          692,
+          484
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/hair_boundary_fixed_underpainting",
+        "bbox": [
+          360,
+          623,
+          768,
+          706
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/hair_side_right",
+        "bbox": [
+          685,
+          450,
+          768,
+          623
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/hair_side_left",
+        "bbox": [
+          341,
+          450,
+          489,
+          737
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/right_torso_join",
+        "bbox": [
+          836,
+          1080,
+          870,
+          1178
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/right_arm_wrist_join",
+        "bbox": [
+          782,
+          672,
+          871,
+          1160
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/right_arm_sleeve",
+        "bbox": [
+          782,
+          672,
+          878,
+          1178
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/left_torso_join",
+        "bbox": [
+          281,
+          695,
+          369,
+          1168
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/left_arm_wrist_join",
+        "bbox": [
+          357,
+          658,
+          362,
+          726
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing/left_arm_sleeve",
+        "bbox": [
+          281,
+          658,
+          369,
+          1168
+        ],
+        "visible": true
+      },
+      {
+        "name": "04 Torso clothing fixed | ??????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/painted_hidden_overlap_v19",
+        "bbox": [
+          282,
+          489,
+          341,
+          550
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/torso_clothing_base_FULL_beneath_torso_parts",
+        "bbox": [
+          245,
+          492,
+          397,
+          1202
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_sleeve_base_FULL_beneath_left_sleeve",
+        "bbox": [
+          196,
+          623,
+          367,
+          1297
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_hand_base_FULL_beneath_left_hand",
+        "bbox": [
+          183,
+          1199,
+          245,
+          1316
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/hair_base_FULL_beneath_hair_parts",
+        "bbox": [
+          282,
+          492,
+          397,
+          655
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/side_hair_fixed_painted_underlayer",
+        "bbox": [
+          282,
+          494,
+          397,
+          653
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/skirt_and_belt",
+        "bbox": [
+          245,
+          1168,
+          282,
+          1202
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/vest_continuous_painted_reveal_v10",
+        "bbox": [
+          347,
+          773,
+          385,
+          979
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/vest_left",
+        "bbox": [
+          347,
+          773,
+          385,
+          979
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_arm_sleeve.illustrated_underpaint",
+        "bbox": [
+          282,
+          634,
+          289,
+          640
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_arm_sleeve.outside_ownership",
+        "bbox": [
+          244,
+          634,
+          289,
+          1205
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_hand.illustrated_underpaint",
+        "bbox": [
+          183,
+          1199,
+          245,
+          1316
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_hand.outside_ownership",
+        "bbox": [
+          183,
+          1199,
+          245,
+          1316
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/hair_continuous_painted_reveal_v10",
+        "bbox": [
+          282,
+          490,
+          399,
+          644
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/hair_back_left",
+        "bbox": [
+          214,
+          689,
+          269,
+          780
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/hair_boundary_fixed_underpainting",
+        "bbox": [
+          311,
+          623,
+          367,
+          655
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/hair_side_left",
+        "bbox": [
+          258,
+          486,
+          399,
+          780
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_torso_join",
+        "bbox": [
+          236,
+          733,
+          375,
+          1208
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_inner_cuff",
+        "bbox": [
+          168,
+          1213,
+          222,
+          1224
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_arm_wrist_join",
+        "bbox": [
+          133,
+          638,
+          360,
+          1234
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_arm_sleeve",
+        "bbox": [
+          47,
+          638,
+          376,
+          1289
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_left/left_hand",
+        "bbox": [
+          93,
+          1213,
+          222,
+          1406
+        ],
+        "visible": true
+      },
+      {
+        "name": "03 Screen-left arm | ?????????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/painted_hidden_overlap_v19",
+        "bbox": [
+          743,
+          489,
+          839,
+          550
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/torso_clothing_base_FULL_beneath_torso_parts",
+        "bbox": [
+          755,
+          510,
+          888,
+          1241
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/right_sleeve_base_FULL_beneath_right_sleeve",
+        "bbox": [
+          768,
+          620,
+          888,
+          1241
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/right_hand_base_FULL_beneath_right_hand",
+        "bbox": [
+          885,
+          1240,
+          888,
+          1241
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/hair_base_FULL_beneath_hair_parts",
+        "bbox": [
+          755,
+          510,
+          822,
+          653
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/side_hair_fixed_painted_underlayer",
+        "bbox": [
+          755,
+          510,
+          774,
+          630
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/skirt_and_belt",
+        "bbox": [
+          828,
+          1049,
+          888,
+          1241
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/vest_continuous_painted_reveal_v10",
+        "bbox": [
+          760,
+          626,
+          831,
+          1059
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/vest_right",
+        "bbox": [
+          760,
+          626,
+          831,
+          1059
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/hair_continuous_painted_reveal_v10",
+        "bbox": [
+          733,
+          509,
+          830,
+          669
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/hair_back_right",
+        "bbox": [
+          863,
+          769,
+          875,
+          776
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/hair_boundary_fixed_underpainting",
+        "bbox": [
+          768,
+          620,
+          796,
+          653
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/hair_side_right",
+        "bbox": [
+          731,
+          498,
+          863,
+          780
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/right_torso_join",
+        "bbox": [
+          791,
+          898,
+          865,
+          1144
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/right_inner_cuff",
+        "bbox": [
+          894,
+          1240,
+          953,
+          1252
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/right_arm_wrist_join",
+        "bbox": [
+          784,
+          667,
+          1016,
+          1273
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/right_arm_sleeve",
+        "bbox": [
+          784,
+          667,
+          1027,
+          1299
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right/right_hand",
+        "bbox": [
+          889,
+          1240,
+          1018,
+          1412
+        ],
+        "visible": true
+      },
+      {
+        "name": "02 Screen-right arm | ?????????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/body_remaining",
+        "bbox": [
+          786,
+          233,
+          796,
+          282
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/torso_clothing_base_FULL_beneath_torso_parts",
+        "bbox": [
+          422,
+          429,
+          644,
+          648
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/blouse_fixed_painted_underlayer",
+        "bbox": [
+          489,
+          518,
+          515,
+          632
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/neck_base_FULL_beneath_neck",
+        "bbox": [
+          445,
+          379,
+          668,
+          520
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/neck_collar_fixed_painted_underlayer",
+        "bbox": [
+          483,
+          380,
+          660,
+          433
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_base_FULL_beneath_hair_parts",
+        "bbox": [
+          283,
+          1,
+          820,
+          648
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/side_hair_fixed_painted_underlayer",
+        "bbox": [
+          289,
+          15,
+          820,
+          550
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/face_skin_FULL_beneath_eyes_mouth",
+        "bbox": [
+          330,
+          164,
+          701,
+          445
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/blouse",
+        "bbox": [
+          465,
+          429,
+          644,
+          648
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/neck.illustrated_underpaint",
+        "bbox": [
+          453,
+          379,
+          668,
+          433
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/neck",
+        "bbox": [
+          453,
+          379,
+          668,
+          433
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_continuous_painted_reveal_v10",
+        "bbox": [
+          281,
+          218,
+          826,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_back_right",
+        "bbox": [
+          619,
+          340,
+          692,
+          450
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_back_left",
+        "bbox": [
+          235,
+          181,
+          314,
+          450
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_crown.illustrated_underpaint",
+        "bbox": [
+          306,
+          1,
+          759,
+          219
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_crown",
+        "bbox": [
+          306,
+          1,
+          759,
+          219
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/face_details_without_expression",
+        "bbox": [
+          330,
+          164,
+          701,
+          445
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/right_eyebrow",
+        "bbox": [
+          531,
+          213,
+          574,
+          218
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/left_eyebrow",
+        "bbox": [
+          325,
+          207,
+          436,
+          240
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/scalp_reveal_when_bangs_move",
+        "bbox": [
+          321,
+          74,
+          714,
+          280
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_side_right.illustrated_underpaint",
+        "bbox": [
+          680,
+          234,
+          699,
+          337
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_side_right",
+        "bbox": [
+          679,
+          234,
+          865,
+          550
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_side_left.illustrated_underpaint",
+        "bbox": [
+          344,
+          302,
+          392,
+          367
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_side_left",
+        "bbox": [
+          238,
+          209,
+          523,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/front_bangs.illustrated_underpaint",
+        "bbox": [
+          309,
+          47,
+          714,
+          281
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/front_bangs",
+        "bbox": [
+          309,
+          47,
+          714,
+          281
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_accessory.illustrated_underpaint",
+        "bbox": [
+          688,
+          159,
+          775,
+          387
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/hair_accessory",
+        "bbox": [
+          688,
+          159,
+          775,
+          387
+        ],
+        "visible": true
+      },
+      {
+        "name": "head_hair_front/face_expression_painted_skin_v9",
+        "bbox": [
+          356,
+          204,
+          684,
+          412
+        ],
+        "visible": true
+      },
+      {
+        "name": "mouth.open",
+        "bbox": [
+          467,
+          317,
+          614,
+          412
+        ],
+        "visible": true
+      },
+      {
+        "name": "eye_screen_right.open",
+        "bbox": [
+          538,
+          204,
+          684,
+          320
+        ],
+        "visible": true
+      },
+      {
+        "name": "eye_screen_right.closed",
+        "bbox": [
+          526,
+          192,
+          699,
+          337
+        ],
+        "visible": false
+      },
+      {
+        "name": "eye_screen_left.open",
+        "bbox": [
+          356,
+          229,
+          535,
+          354
+        ],
+        "visible": true
+      },
+      {
+        "name": "eye_screen_left.closed",
+        "bbox": [
+          344,
+          217,
+          547,
+          367
+        ],
+        "visible": false
+      },
+      {
+        "name": "mouth.closed",
+        "bbox": [
+          461,
+          314,
+          617,
+          424
+        ],
+        "visible": false
+      },
+      {
+        "name": "01 Head and front hair | ????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "thinking.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.eye_screen_right.open",
+        "bbox": [
+          567,
+          207,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.eye_screen_right.closed",
+        "bbox": [
+          567,
+          207,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "thinking.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 07 Thinking | ???",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "displeased.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "displeased.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 06 Displeased | ??",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "bashful.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "bashful.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 05 Bashful | ??",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "surprised.eye_screen_right.open",
+        "bbox": [
+          567,
+          205,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.eye_screen_right.closed",
+        "bbox": [
+          567,
+          205,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "surprised.eye_screen_left.open",
+        "bbox": [
+          417,
+          236,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised.eye_screen_left.closed",
+        "bbox": [
+          417,
+          236,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 04 Surprised | ??",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "worried.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "worried.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 03 Worried | ???",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "EXP 02 Big smile | ????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.face_plate.brows_cheeks",
+        "bbox": [
+          416,
+          185,
+          670,
+          407
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "soft_smile.mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.eye_screen_right.open",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.eye_screen_right.closed",
+        "bbox": [
+          567,
+          224,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "soft_smile.eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile.eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXP 01 Soft smile | ???",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "ORIGINAL v19 / native backup DO NOT DELETE",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "rear_left_outer",
+        "bbox": [
+          149,
+          448,
+          260,
+          748
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/rear_left_outer",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "rear_left_inner",
+        "bbox": [
+          260,
+          448,
+          373,
+          707
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/rear_left_inner",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "rear_right_inner",
+        "bbox": [
+          733,
+          448,
+          825,
+          598
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/rear_right_inner",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "rear_right_outer",
+        "bbox": [
+          825,
+          448,
+          940,
+          775
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/rear_right_outer",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "legs_static",
+        "bbox": [
+          285,
+          1218,
+          790,
+          1448
+        ],
+        "visible": true
+      },
+      {
+        "name": "06 Legs fixed | ????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "skirt",
+        "bbox": [
+          182,
+          970,
+          914,
+          1445
+        ],
+        "visible": true
+      },
+      {
+        "name": "05 Skirt independent | ???????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_body_reveal_painted",
+        "bbox": [
+          150,
+          940,
+          365,
+          1376
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 torso/painted former arm occlusion",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "torso_clothing",
+        "bbox": [
+          273,
+          450,
+          878,
+          1178
+        ],
+        "visible": true
+      },
+      {
+        "name": "04 Torso clothing fixed | ??????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "arm_screen_right",
+        "bbox": [
+          731,
+          489,
+          1027,
+          1412
+        ],
+        "visible": true
+      },
+      {
+        "name": "02 Screen-right arm | ?????????",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_shoulder_original_support",
+        "bbox": [
+          279,
+          486,
+          399,
+          630
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 articulated arm/left_shoulder_original_support",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_raised_upper",
+        "bbox": [
+          251,
+          592,
+          386,
+          650
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 articulated arm/left_raised_upper",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "hair_reveal_native",
+        "bbox": [
+          281,
+          43,
+          826,
+          681
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 hair reveal/native and newly painted scalp and skin",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "neutral/fixed face without moving hair",
+        "bbox": [
+          295,
+          1,
+          796,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "neutral/mouth.closed",
+        "bbox": [
+          461,
+          314,
+          617,
+          424
+        ],
+        "visible": true
+      },
+      {
+        "name": "neutral/eye_screen_left.closed",
+        "bbox": [
+          345,
+          217,
+          547,
+          367
+        ],
+        "visible": false
+      },
+      {
+        "name": "neutral/eye_screen_left.open",
+        "bbox": [
+          377,
+          231,
+          535,
+          354
+        ],
+        "visible": true
+      },
+      {
+        "name": "neutral/eye_screen_right.closed",
+        "bbox": [
+          526,
+          192,
+          699,
+          337
+        ],
+        "visible": false
+      },
+      {
+        "name": "neutral/eye_screen_right.open",
+        "bbox": [
+          538,
+          208,
+          684,
+          320
+        ],
+        "visible": true
+      },
+      {
+        "name": "neutral/mouth.open",
+        "bbox": [
+          467,
+          317,
+          614,
+          412
+        ],
+        "visible": false
+      },
+      {
+        "name": "v22 face and fixed crown",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "bang_left",
+        "bbox": [
+          406,
+          53,
+          500,
+          283
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/bang_left",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "bang_center",
+        "bbox": [
+          476,
+          43,
+          580,
+          271
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/bang_center",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "bang_right",
+        "bbox": [
+          556,
+          48,
+          651,
+          270
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/bang_right",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "side_left_front",
+        "bbox": [
+          390,
+          347,
+          512,
+          681
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/side_left_front",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "side_right_front",
+        "bbox": [
+          644,
+          335,
+          702,
+          450
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/side_right_front",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "side_left_outer",
+        "bbox": [
+          235,
+          211,
+          357,
+          550
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/side_left_outer",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "side_left_inner",
+        "bbox": [
+          333,
+          239,
+          427,
+          679
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/side_left_inner",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "side_right_outer",
+        "bbox": [
+          731,
+          356,
+          865,
+          550
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 exclusive hair/side_right_outer",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_raised_forearm",
+        "bbox": [
+          398,
+          477,
+          496,
+          695
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 articulated arm/left_raised_forearm",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_raised_drape",
+        "bbox": [
+          174,
+          626,
+          528,
+          972
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 articulated arm/left_raised_drape",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_raised_cuff",
+        "bbox": [
+          365,
+          565,
+          481,
+          721
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 articulated arm/left_raised_cuff",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "left_raised_hand",
+        "bbox": [
+          366,
+          333,
+          499,
+          477
+        ],
+        "visible": true
+      },
+      {
+        "name": "v22 articulated arm/left_raised_hand",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking/fixed face without moving hair",
+        "bbox": [
+          295,
+          1,
+          796,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking/mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "thinking/mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking/eye_screen_right.open",
+        "bbox": [
+          568,
+          211,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking/eye_screen_right.closed",
+        "bbox": [
+          568,
+          211,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "thinking/eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "thinking/eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXPRESSION thinking",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased/fixed face without moving hair",
+        "bbox": [
+          295,
+          1,
+          796,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased/mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "displeased/mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased/eye_screen_right.open",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased/eye_screen_right.closed",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "displeased/eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "displeased/eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXPRESSION displeased",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful/fixed face without moving hair",
+        "bbox": [
+          295,
+          1,
+          796,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful/mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "bashful/mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful/eye_screen_right.open",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful/eye_screen_right.closed",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "bashful/eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "bashful/eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXPRESSION bashful",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised/fixed face without moving hair",
+        "bbox": [
+          295,
+          1,
+          796,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised/mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "surprised/mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised/eye_screen_right.open",
+        "bbox": [
+          568,
+          210,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised/eye_screen_right.closed",
+        "bbox": [
+          568,
+          210,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "surprised/eye_screen_left.open",
+        "bbox": [
+          417,
+          236,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "surprised/eye_screen_left.closed",
+        "bbox": [
+          417,
+          236,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXPRESSION surprised",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried/fixed face without moving hair",
+        "bbox": [
+          295,
+          1,
+          796,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried/mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "worried/mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried/eye_screen_right.open",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried/eye_screen_right.closed",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "worried/eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "worried/eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXPRESSION worried",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile/fixed face without moving hair",
+        "bbox": [
+          295,
+          1,
+          796,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile/mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile/mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile/eye_screen_right.open",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile/eye_screen_right.closed",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "big_smile/eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "big_smile/eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "EXPRESSION big_smile",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      },
+      {
+        "name": "</Layer group>",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile/fixed face without moving hair",
+        "bbox": [
+          295,
+          1,
+          796,
+          683
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile/mouth.open",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": false
+      },
+      {
+        "name": "soft_smile/mouth.closed",
+        "bbox": [
+          510,
+          321,
+          601,
+          390
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile/eye_screen_right.open",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile/eye_screen_right.closed",
+        "bbox": [
+          568,
+          227,
+          664,
+          295
+        ],
+        "visible": false
+      },
+      {
+        "name": "soft_smile/eye_screen_left.open",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": true
+      },
+      {
+        "name": "soft_smile/eye_screen_left.closed",
+        "bbox": [
+          417,
+          251,
+          517,
+          327
+        ],
+        "visible": false
+      },
+      {
+        "name": "EXPRESSION soft_smile",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false
+      }
+    ]
+  },
+  "decision": "Reuse separate torso clothing, skirt and legs. No new silhouette or hidden-area exposure is required; no PSD/raster edit. Root is now the pelvis parent, upper lumbar bend limited to 35% of body rotation."
+}

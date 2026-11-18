@@ -1,0 +1,32 @@
+[
+  {
+    "file": "left.png",
+    "wsl_original": "/tmp/koma-v43-library-current/left.png",
+    "bytes": 1747138,
+    "sha256": "3067752849233d6910730de6d653ab106e27723c31d7f8a856844aa1084cad37",
+    "xattrs": {
+      "user.library-file-version": "0",
+      "user.library-file-id": "libfile_39069a478a808191bb71f24b978bb9f0"
+    }
+  },
+  {
+    "file": "right.png",
+    "wsl_original": "/tmp/koma-v43-library-current/right.png",
+    "bytes": 1783698,
+    "sha256": "a08e936680477595107ade3344ee4657318cc44bdba6c35569d61d238eb91fdf",
+    "xattrs": {
+      "user.library-file-version": "0",
+      "user.library-file-id": "libfile_f9b1f943711881918182788872e11f62"
+    }
+  },
+  {
+    "file": "vertical.png",
+    "wsl_original": "/tmp/koma-v43-library-current/vertical.png",
+    "bytes": 2374099,
+    "sha256": "37820e7fdc14973ffa60f126f3b0bb06cbb6a3abc389b825102283c365e35c6c",
+    "xattrs": {
+      "user.library-file-version": "0",
+      "user.library-file-id": "libfile_3863357381a48191907803a8e7cab996"
+    }
+  }
+]

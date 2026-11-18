@@ -1,12 +1,12 @@
 {
   "name": "羽月こま",
-  "format": "koma-part-mesh-2",
+  "format": "koma-part-mesh-3",
   "size": [
     1086,
     1448
   ],
   "base": "base.png",
-  "source_psd": "assets/parts/v10/koma_integrated_v10.psd",
+  "source_psd": "assets/parts/v47/koma_aligned_eyes_v47.psd",
   "parts": [
     {
       "name": "eye_screen_left.closed",
@@ -86,5 +86,1969 @@
     80
   ],
   "skinning": "skinning.json",
-  "note": "PSD-derived preview mesh, not a Cubism moc3 export."
+  "note": "PSD-derived preview mesh, not a Cubism moc3 export.",
+  "expressions": [
+    {
+      "id": "neutral",
+      "label": "00 Neutral",
+      "label_ja": "通常（元の表情）",
+      "base": "base.png",
+      "parts": [
+        {
+          "name": "mouth.open",
+          "parameter": "ParamMouthOpenY",
+          "state": "open",
+          "rect": [
+            467,
+            317,
+            614,
+            412
+          ],
+          "file": "mouth_open.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.open",
+          "parameter": "ParamEyeLOpen",
+          "state": "open",
+          "rect": [
+            538,
+            204,
+            684,
+            320
+          ],
+          "file": "eye_screen_right_open.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.closed",
+          "parameter": "ParamEyeLOpen",
+          "state": "closed",
+          "rect": [
+            526,
+            192,
+            699,
+            337
+          ],
+          "file": "eye_screen_right_closed.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.open",
+          "parameter": "ParamEyeROpen",
+          "state": "open",
+          "rect": [
+            356,
+            229,
+            535,
+            354
+          ],
+          "file": "eye_screen_left_open.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.closed",
+          "parameter": "ParamEyeROpen",
+          "state": "closed",
+          "rect": [
+            344,
+            217,
+            547,
+            367
+          ],
+          "file": "eye_screen_left_closed.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "mouth.closed",
+          "parameter": "ParamMouthOpenY",
+          "state": "closed",
+          "rect": [
+            461,
+            314,
+            617,
+            424
+          ],
+          "file": "mouth_closed.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        }
+      ],
+      "defaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "authoredDefaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 1
+      },
+      "eyeOpenMax": 1,
+      "folder": "All EXP folders off"
+    },
+    {
+      "id": "soft_smile",
+      "label": "01 Soft smile",
+      "label_ja": "微笑み",
+      "base": "expressions/soft_smile/base.png",
+      "parts": [
+        {
+          "name": "eye_screen_left.closed",
+          "parameter": "ParamEyeROpen",
+          "state": "closed",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/soft_smile/eye_screen_left_closed.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.open",
+          "parameter": "ParamEyeROpen",
+          "state": "open",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/soft_smile/eye_screen_left_open.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.closed",
+          "parameter": "ParamEyeLOpen",
+          "state": "closed",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/soft_smile/eye_screen_right_closed.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.open",
+          "parameter": "ParamEyeLOpen",
+          "state": "open",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/soft_smile/eye_screen_right_open.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "mouth.closed",
+          "parameter": "ParamMouthOpenY",
+          "state": "closed",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/soft_smile/mouth_closed.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        },
+        {
+          "name": "mouth.open",
+          "parameter": "ParamMouthOpenY",
+          "state": "open",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/soft_smile/mouth_open.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        }
+      ],
+      "defaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "authoredDefaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "eyeOpenMax": 1,
+      "folder": "EXP 01 Soft smile | 微笑み"
+    },
+    {
+      "id": "big_smile",
+      "label": "02 Big smile",
+      "label_ja": "にっこり",
+      "base": "expressions/big_smile/base.png",
+      "parts": [
+        {
+          "name": "eye_screen_left.closed",
+          "parameter": "ParamEyeROpen",
+          "state": "closed",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/big_smile/eye_screen_left_closed.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.open",
+          "parameter": "ParamEyeROpen",
+          "state": "open",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/big_smile/eye_screen_left_open.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.closed",
+          "parameter": "ParamEyeLOpen",
+          "state": "closed",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/big_smile/eye_screen_right_closed.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.open",
+          "parameter": "ParamEyeLOpen",
+          "state": "open",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/big_smile/eye_screen_right_open.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "mouth.closed",
+          "parameter": "ParamMouthOpenY",
+          "state": "closed",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/big_smile/mouth_closed.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        },
+        {
+          "name": "mouth.open",
+          "parameter": "ParamMouthOpenY",
+          "state": "open",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/big_smile/mouth_open.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        }
+      ],
+      "defaults": {
+        "ParamEyeLOpen": 0,
+        "ParamEyeROpen": 0,
+        "ParamMouthOpenY": 0
+      },
+      "authoredDefaults": {
+        "ParamEyeLOpen": 0,
+        "ParamEyeROpen": 0,
+        "ParamMouthOpenY": 1
+      },
+      "eyeOpenMax": 0,
+      "folder": "EXP 02 Big smile | にっこり"
+    },
+    {
+      "id": "worried",
+      "label": "03 Worried",
+      "label_ja": "困り顔",
+      "base": "expressions/worried/base.png",
+      "parts": [
+        {
+          "name": "eye_screen_left.closed",
+          "parameter": "ParamEyeROpen",
+          "state": "closed",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/worried/eye_screen_left_closed.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.open",
+          "parameter": "ParamEyeROpen",
+          "state": "open",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/worried/eye_screen_left_open.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.closed",
+          "parameter": "ParamEyeLOpen",
+          "state": "closed",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/worried/eye_screen_right_closed.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.open",
+          "parameter": "ParamEyeLOpen",
+          "state": "open",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/worried/eye_screen_right_open.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "mouth.closed",
+          "parameter": "ParamMouthOpenY",
+          "state": "closed",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/worried/mouth_closed.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        },
+        {
+          "name": "mouth.open",
+          "parameter": "ParamMouthOpenY",
+          "state": "open",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/worried/mouth_open.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        }
+      ],
+      "defaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "authoredDefaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "eyeOpenMax": 1,
+      "folder": "EXP 03 Worried | 困り顔"
+    },
+    {
+      "id": "surprised",
+      "label": "04 Surprised",
+      "label_ja": "驚き",
+      "base": "expressions/surprised/base.png",
+      "parts": [
+        {
+          "name": "eye_screen_left.closed",
+          "parameter": "ParamEyeROpen",
+          "state": "closed",
+          "rect": [
+            417,
+            236,
+            517,
+            327
+          ],
+          "file": "expressions/surprised/eye_screen_left_closed.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              243,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.open",
+          "parameter": "ParamEyeROpen",
+          "state": "open",
+          "rect": [
+            417,
+            236,
+            517,
+            327
+          ],
+          "file": "expressions/surprised/eye_screen_left_open.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              243,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.closed",
+          "parameter": "ParamEyeLOpen",
+          "state": "closed",
+          "rect": [
+            567,
+            205,
+            664,
+            295
+          ],
+          "file": "expressions/surprised/eye_screen_right_closed.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              219,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.open",
+          "parameter": "ParamEyeLOpen",
+          "state": "open",
+          "rect": [
+            567,
+            205,
+            664,
+            295
+          ],
+          "file": "expressions/surprised/eye_screen_right_open.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              219,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "mouth.closed",
+          "parameter": "ParamMouthOpenY",
+          "state": "closed",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/surprised/mouth_closed_skin_v17.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        },
+        {
+          "name": "mouth.open",
+          "parameter": "ParamMouthOpenY",
+          "state": "open",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/surprised/mouth_open.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        }
+      ],
+      "defaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "authoredDefaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 1
+      },
+      "eyeOpenMax": 1,
+      "folder": "EXP 04 Surprised | 驚き"
+    },
+    {
+      "id": "bashful",
+      "label": "05 Bashful",
+      "label_ja": "照れ",
+      "base": "expressions/bashful/base.png",
+      "parts": [
+        {
+          "name": "eye_screen_left.closed",
+          "parameter": "ParamEyeROpen",
+          "state": "closed",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/bashful/eye_screen_left_closed.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.open",
+          "parameter": "ParamEyeROpen",
+          "state": "open",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/bashful/eye_screen_left_open.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.closed",
+          "parameter": "ParamEyeLOpen",
+          "state": "closed",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/bashful/eye_screen_right_closed.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.open",
+          "parameter": "ParamEyeLOpen",
+          "state": "open",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/bashful/eye_screen_right_open.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "mouth.closed",
+          "parameter": "ParamMouthOpenY",
+          "state": "closed",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/bashful/mouth_closed.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        },
+        {
+          "name": "mouth.open",
+          "parameter": "ParamMouthOpenY",
+          "state": "open",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/bashful/mouth_open.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        }
+      ],
+      "defaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "authoredDefaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "eyeOpenMax": 1,
+      "folder": "EXP 05 Bashful | 照れ"
+    },
+    {
+      "id": "displeased",
+      "label": "06 Displeased",
+      "label_ja": "不満",
+      "base": "expressions/displeased/base.png",
+      "parts": [
+        {
+          "name": "eye_screen_left.closed",
+          "parameter": "ParamEyeROpen",
+          "state": "closed",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/displeased/eye_screen_left_closed.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.open",
+          "parameter": "ParamEyeROpen",
+          "state": "open",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/displeased/eye_screen_left_open.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.closed",
+          "parameter": "ParamEyeLOpen",
+          "state": "closed",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/displeased/eye_screen_right_closed.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.open",
+          "parameter": "ParamEyeLOpen",
+          "state": "open",
+          "rect": [
+            567,
+            224,
+            664,
+            295
+          ],
+          "file": "expressions/displeased/eye_screen_right_open.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "mouth.closed",
+          "parameter": "ParamMouthOpenY",
+          "state": "closed",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/displeased/mouth_closed.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        },
+        {
+          "name": "mouth.open",
+          "parameter": "ParamMouthOpenY",
+          "state": "open",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/displeased/mouth_open.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        }
+      ],
+      "defaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "authoredDefaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "eyeOpenMax": 1,
+      "folder": "EXP 06 Displeased | 不満"
+    },
+    {
+      "id": "thinking",
+      "label": "07 Thinking",
+      "label_ja": "考え顔",
+      "base": "expressions/thinking/base.png",
+      "parts": [
+        {
+          "name": "eye_screen_left.closed",
+          "parameter": "ParamEyeROpen",
+          "state": "closed",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/thinking/eye_screen_left_closed.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_left.open",
+          "parameter": "ParamEyeROpen",
+          "state": "open",
+          "rect": [
+            417,
+            251,
+            517,
+            327
+          ],
+          "file": "expressions/thinking/eye_screen_left_open.png",
+          "motion": {
+            "anchor": [
+              469,
+              290
+            ],
+            "bounds": [
+              423,
+              264,
+              508,
+              318
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.closed",
+          "parameter": "ParamEyeLOpen",
+          "state": "closed",
+          "rect": [
+            567,
+            207,
+            664,
+            295
+          ],
+          "file": "expressions/thinking/eye_screen_right_closed.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "eye_screen_right.open",
+          "parameter": "ParamEyeLOpen",
+          "state": "open",
+          "rect": [
+            567,
+            207,
+            664,
+            295
+          ],
+          "file": "expressions/thinking/eye_screen_right_open.png",
+          "motion": {
+            "anchor": [
+              610,
+              263
+            ],
+            "bounds": [
+              575,
+              233,
+              656,
+              288
+            ]
+          }
+        },
+        {
+          "name": "mouth.closed",
+          "parameter": "ParamMouthOpenY",
+          "state": "closed",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/thinking/mouth_closed.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        },
+        {
+          "name": "mouth.open",
+          "parameter": "ParamMouthOpenY",
+          "state": "open",
+          "rect": [
+            510,
+            321,
+            601,
+            390
+          ],
+          "file": "expressions/thinking/mouth_open.png",
+          "motion": {
+            "anchor": [
+              553,
+              356
+            ],
+            "bounds": [
+              521,
+              336,
+              590,
+              380
+            ]
+          }
+        }
+      ],
+      "defaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "authoredDefaults": {
+        "ParamEyeLOpen": 1,
+        "ParamEyeROpen": 1,
+        "ParamMouthOpenY": 0
+      },
+      "eyeOpenMax": 1,
+      "folder": "EXP 07 Thinking | 考え顔"
+    }
+  ],
+  "expression_source_psd": "assets/parts/v36/koma_hand_angle_v36.psd",
+  "bodyLayers": [
+    {
+      "id": "rear_left_outer",
+      "role": "head",
+      "file": "body_v32/rear_left_outer.png",
+      "rect": [
+        149,
+        448,
+        260,
+        748
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 12,
+        "speed": 4.8,
+        "phase": 0.0
+      },
+      "psdGroup": "v22 exclusive hair/rear_left_outer",
+      "sampling": "linear"
+    },
+    {
+      "id": "rear_left_inner",
+      "role": "head",
+      "file": "body_v32/rear_left_inner.png",
+      "rect": [
+        260,
+        448,
+        373,
+        707
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 9,
+        "speed": 5.2,
+        "phase": 0.7
+      },
+      "psdGroup": "v22 exclusive hair/rear_left_inner",
+      "sampling": "linear"
+    },
+    {
+      "id": "rear_right_inner",
+      "role": "head",
+      "file": "body_v32/rear_right_inner.png",
+      "rect": [
+        733,
+        448,
+        825,
+        598
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 10,
+        "speed": 5.6,
+        "phase": 1.4
+      },
+      "psdGroup": "v22 exclusive hair/rear_right_inner",
+      "sampling": "linear"
+    },
+    {
+      "id": "rear_right_outer",
+      "role": "head",
+      "file": "body_v32/rear_right_outer.png",
+      "rect": [
+        825,
+        448,
+        940,
+        775
+      ],
+      "hairMotion": {
+        "rootY": 448,
+        "tipY": 775,
+        "amplitude": 13,
+        "speed": 6.0,
+        "phase": 2.0999999999999996
+      },
+      "psdGroup": "v22 exclusive hair/rear_right_outer",
+      "sampling": "linear"
+    },
+    {
+      "id": "thigh_left",
+      "role": "legLeft",
+      "file": "body_v29/thigh_left.png",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ],
+      "psdGroup": "v26 articulated body/thigh_left"
+    },
+    {
+      "id": "thigh_right",
+      "role": "legRight",
+      "file": "body_v29/thigh_right.png",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ],
+      "psdGroup": "v26 articulated body/thigh_right"
+    },
+    {
+      "id": "skirt",
+      "role": "skirt",
+      "file": "body_v19/skirt.png",
+      "rect": [
+        182,
+        970,
+        914,
+        1445
+      ],
+      "psdGroup": "05 Skirt independent | スカート・独立"
+    },
+    {
+      "id": "left_body_reveal_painted",
+      "role": "torso",
+      "file": "body_v22/left_body_reveal_painted.png",
+      "rect": [
+        150,
+        940,
+        365,
+        1376
+      ],
+      "psdGroup": "v22 torso/painted former arm occlusion"
+    },
+    {
+      "id": "chest_clothing",
+      "role": "chest",
+      "file": "body_v26/chest_clothing.png",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "psdGroup": "v26 articulated body/chest_clothing"
+    },
+    {
+      "id": "abdomen_clothing",
+      "role": "abdomen",
+      "file": "body_v26/abdomen_clothing.png",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "psdGroup": "v26 articulated body/abdomen_clothing"
+    },
+    {
+      "id": "pelvis_clothing",
+      "role": "pelvis",
+      "file": "body_v26/pelvis_clothing.png",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "psdGroup": "v26 articulated body/pelvis_clothing"
+    },
+    {
+      "id": "arm_screen_right",
+      "role": "armRight",
+      "file": "body_v19/arm_screen_right.png",
+      "rect": [
+        731,
+        489,
+        1027,
+        1412
+      ],
+      "psdGroup": "02 Screen-right arm | 画面右の腕・袖・手"
+    },
+    {
+      "id": "left_shoulder_underlap",
+      "role": "armLeft",
+      "file": "body_v29/left_shoulder_underlap.png",
+      "rect": [
+        330,
+        478,
+        405,
+        520
+      ],
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v29 shoulder/retained painted underlap",
+      "sampling": "linear"
+    },
+    {
+      "id": "left_shoulder_original_support",
+      "role": "armLeft",
+      "file": "body_v30/left_shoulder_original_support.png",
+      "rect": [
+        279,
+        486,
+        399,
+        630
+      ],
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_shoulder_original_support",
+      "sampling": "linear"
+    },
+    {
+      "id": "left_raised_upper",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_upper.png",
+      "rect": [
+        251,
+        592,
+        386,
+        650
+      ],
+      "articulation": {
+        "joint": "upper",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_raised_upper"
+    },
+    {
+      "id": "hair_reveal_native",
+      "role": "head",
+      "file": "body_v32/hair_reveal_native.png",
+      "rect": [
+        281,
+        43,
+        826,
+        681
+      ],
+      "psdGroup": "v22 hair reveal/native and newly painted scalp and skin"
+    },
+    {
+      "id": "face_fixed_v22",
+      "role": "head",
+      "file": "body_v31/face_fixed_v22.png",
+      "rect": [
+        235,
+        1,
+        865,
+        683
+      ],
+      "psdGroup": "v22 face and fixed crown",
+      "features": true,
+      "expressionFiles": {
+        "neutral": "body_v31/face_neutral.png",
+        "soft_smile": "body_v31/face_soft_smile.png",
+        "big_smile": "body_v31/face_big_smile.png",
+        "worried": "body_v31/face_worried.png",
+        "surprised": "body_v31/face_surprised.png",
+        "bashful": "body_v31/face_bashful.png",
+        "displeased": "body_v31/face_displeased.png",
+        "thinking": "body_v31/face_thinking.png"
+      },
+      "movingHairMask": "body_v22/face_hair_ownership.png"
+    },
+    {
+      "id": "bang_left",
+      "role": "head",
+      "file": "body_v32/bang_left.png",
+      "rect": [
+        406,
+        53,
+        500,
+        283
+      ],
+      "hairMotion": {
+        "rootY": 70,
+        "tipY": 276,
+        "amplitude": 2.4,
+        "speed": 9,
+        "phase": 0.1
+      },
+      "psdGroup": "v22 exclusive hair/bang_left",
+      "sampling": "linear"
+    },
+    {
+      "id": "bang_center",
+      "role": "head",
+      "file": "body_v32/bang_center.png",
+      "rect": [
+        476,
+        43,
+        580,
+        271
+      ],
+      "hairMotion": {
+        "rootY": 65,
+        "tipY": 273,
+        "amplitude": 3.5,
+        "speed": 7.5,
+        "phase": 0.8
+      },
+      "psdGroup": "v22 exclusive hair/bang_center",
+      "sampling": "linear"
+    },
+    {
+      "id": "bang_right",
+      "role": "head",
+      "file": "body_v32/bang_right.png",
+      "rect": [
+        556,
+        48,
+        651,
+        270
+      ],
+      "hairMotion": {
+        "rootY": 65,
+        "tipY": 248,
+        "amplitude": 2.5,
+        "speed": 8.3,
+        "phase": 1.6
+      },
+      "psdGroup": "v22 exclusive hair/bang_right",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_left_front",
+      "role": "head",
+      "file": "body_v32/side_left_front.png",
+      "rect": [
+        390,
+        347,
+        512,
+        681
+      ],
+      "hairMotion": {
+        "rootY": 365,
+        "tipY": 682,
+        "amplitude": 7,
+        "speed": 6.1,
+        "phase": 0.4
+      },
+      "psdGroup": "v22 exclusive hair/side_left_front",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_right_front",
+      "role": "head",
+      "file": "body_v32/side_right_front.png",
+      "rect": [
+        644,
+        335,
+        702,
+        450
+      ],
+      "hairMotion": {
+        "rootY": 335,
+        "tipY": 503,
+        "amplitude": 5.5,
+        "speed": 6.7,
+        "phase": 1.1
+      },
+      "psdGroup": "v22 exclusive hair/side_right_front",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_left_outer",
+      "role": "head",
+      "file": "body_v32/side_left_outer.png",
+      "rect": [
+        235,
+        211,
+        357,
+        550
+      ],
+      "hairMotion": {
+        "rootY": 210,
+        "tipY": 530,
+        "amplitude": 6.5,
+        "speed": 5.7,
+        "phase": 1.7
+      },
+      "psdGroup": "v22 exclusive hair/side_left_outer",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_left_inner",
+      "role": "head",
+      "file": "body_v32/side_left_inner.png",
+      "rect": [
+        333,
+        239,
+        427,
+        679
+      ],
+      "hairMotion": {
+        "rootY": 250,
+        "tipY": 515,
+        "amplitude": 4.5,
+        "speed": 7,
+        "phase": 2.2
+      },
+      "psdGroup": "v22 exclusive hair/side_left_inner",
+      "sampling": "linear"
+    },
+    {
+      "id": "side_right_outer",
+      "role": "head",
+      "file": "body_v32/side_right_outer.png",
+      "rect": [
+        731,
+        356,
+        865,
+        550
+      ],
+      "hairMotion": {
+        "rootY": 355,
+        "tipY": 650,
+        "amplitude": 8,
+        "speed": 5.5,
+        "phase": 2.7
+      },
+      "psdGroup": "v22 exclusive hair/side_right_outer",
+      "sampling": "linear"
+    },
+    {
+      "id": "left_raised_forearm",
+      "role": "armLeft",
+      "file": "body_v31/left_raised_forearm.png",
+      "rect": [
+        289,
+        776,
+        479,
+        977
+      ],
+      "articulation": {
+        "joint": "forearm",
+        "bind": "raised",
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ]
+      },
+      "psdGroup": "v29 forward-pose paint/left_raised_forearm",
+      "sampling": "linear"
+    },
+    {
+      "id": "left_raised_cuff",
+      "role": "armLeft",
+      "file": "body_v31/left_raised_cuff.png",
+      "rect": [
+        329,
+        754,
+        480,
+        931
+      ],
+      "articulation": {
+        "joint": "cuff",
+        "bind": "raised",
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ],
+        "poseWeight": "forward-cuff"
+      },
+      "psdGroup": "v29 forward-pose paint/left_raised_cuff"
+    },
+    {
+      "id": "left_raised_drape",
+      "role": "armLeft",
+      "file": "body_v32/left_raised_drape.png",
+      "rect": [
+        174,
+        626,
+        528,
+        972
+      ],
+      "articulation": {
+        "joint": "drape",
+        "bind": "raised",
+        "variant": "raised"
+      },
+      "psdGroup": "v22 articulated arm/left_raised_drape"
+    },
+    {
+      "id": "left_rest_cuff",
+      "role": "armLeft",
+      "file": "body_v22/left_raised_cuff.png",
+      "rect": [
+        365,
+        565,
+        481,
+        721
+      ],
+      "articulation": {
+        "joint": "cuff",
+        "bind": "raised",
+        "variant": "raised",
+        "poseWeight": "rest-cuff"
+      },
+      "psdGroup": "v29 cuff/down-facing original"
+    },
+    {
+      "id": "left_raised_hand",
+      "role": "armLeft",
+      "file": "body_v31/left_raised_hand.png",
+      "rect": [
+        428,
+        680,
+        591,
+        835
+      ],
+      "articulation": {
+        "joint": "hand",
+        "bind": "raised",
+        "variant": "raised",
+        "sourceElbow": [
+          325,
+          925
+        ],
+        "sourceWrist": [
+          455,
+          807
+        ]
+      },
+      "psdGroup": "v29 forward-pose paint/left_raised_hand",
+      "sampling": "linear",
+      "angleSideFile": "body_v35/left_raised_hand_side.png",
+      "angleSourceLibrary": "libfile_f54582935e3881918c471077b21eec9c"
+    }
+  ],
+  "bodyRig": {
+    "shoulders": [
+      [
+        353,
+        510
+      ],
+      [
+        775,
+        530
+      ]
+    ],
+    "elbows": [
+      [
+        275,
+        935
+      ],
+      [
+        850,
+        955
+      ]
+    ],
+    "waist": [
+      555,
+      995
+    ],
+    "skirtTop": 995,
+    "skirtHem": 1395,
+    "skirtRevealLimitPixels": 3,
+    "segmentOwnership": {
+      "chest": [
+        450,
+        820
+      ],
+      "abdomen": [
+        820,
+        980
+      ],
+      "pelvis": [
+        980,
+        1178
+      ],
+      "hips": [
+        [
+          400,
+          1225
+        ],
+        [
+          650,
+          1225
+        ]
+      ],
+      "note": "Exact source partitions; common attachment strip at torso joins and inner thigh split. No knee artwork exists."
+    }
+  },
+  "bodySampling": "coverage-2x",
+  "articulatedArm": {
+    "shoulder": [
+      353,
+      510
+    ],
+    "elbow": [
+      275,
+      800
+    ],
+    "wristRest": [
+      185,
+      1190
+    ],
+    "wristRaised": [
+      476,
+      470
+    ],
+    "parameter": "ParamHandToCheek",
+    "source": "assets/parts/v22/sources/bent-arm-clean-painted.png",
+    "forwardPosePaint": true,
+    "extendedHandPose": true
+  },
+  "hairExport": {
+    "exclusiveOwnership": true,
+    "expressionBasesWithoutMovingHair": 8,
+    "strandCount": 12,
+    "source": "v19 approved head; native and newly painted hidden scalp/skin",
+    "matteCorrection": "native-layer white-matte coverage inversion, protected face/accessory and warm highlights"
+  },
+  "headMotion": {
+    "version": 44,
+    "mode": "rigid-2d-roll",
+    "pivot": [
+      540,
+      425
+    ],
+    "yaw_pitch_enabled": false
+  },
+  "eyeComponents": [
+    {
+      "name": "eye_screen_left",
+      "parameter": "ParamEyeROpen",
+      "directory": "eyes_v46",
+      "profile": "left-neutral.json"
+    },
+    {
+      "name": "eye_screen_right",
+      "parameter": "ParamEyeLOpen",
+      "directory": "eyes_v46/right",
+      "profile": "right-neutral.json"
+    }
+  ]
 }

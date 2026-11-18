@@ -1,0 +1,38 @@
+{
+  "frame_count": 1260,
+  "all_pose_arrays_exactly_identical": true,
+  "mesh_sha256_identical": "5e2d1fb36d84925ecb31c8e6d036d61c3f63faaddf55ed42a0354db9b34b6255",
+  "audio_pcm_sha256_identical": "7b1aea86672c9e4f50c4243d51a722970ffb1e390cb1d947ddf872312d7bfb4a",
+  "before_video_sha256": "395ba4940ae0dfc6a5a16d4f68acbfa9d44d73ba5ce47e67bb5949c43b14b3a8",
+  "after_video_sha256": "8b8f10dafd8a165f21ad671db3a84102608205a83ae4f3a875493cb1ab7f19cb",
+  "sameframe_times_seconds": [
+    6,
+    12,
+    13,
+    21,
+    21.766666666666666,
+    22.5
+  ],
+  "sameframe_numbers": [
+    180,
+    360,
+    390,
+    630,
+    653,
+    675
+  ],
+  "extraction": "exact decoded frame index, not approximate seek",
+  "fixed_face_crop": [
+    1138,
+    430,
+    1522,
+    786
+  ],
+  "fixed_mouth_crop": [
+    1240,
+    555,
+    1470,
+    735
+  ],
+  "note": "No reduction or removal of head/body motion; same 42 sec audio and poses. Only the selected surprised closed-mouth skin asset, model pointer, and title labels changed."
+}

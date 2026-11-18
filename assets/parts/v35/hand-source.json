@@ -1,0 +1,37 @@
+{
+  "library_file_id": "libfile_f54582935e3881918c471077b21eec9c",
+  "file_id": "file_00000000ac8c822fbf6849c43916a215",
+  "version": 0,
+  "original_bytes": 531220,
+  "original_sha256": "7ec3d949672336d1e805c91566eac65052e7027479c031726ca47da7b060756f",
+  "metadata_original": "/home/koji/koma-v35-library-import/exec-402d1d9f-09fe-4fa9-a65f-a33bc599640c.png",
+  "registration": {
+    "source_wrist": [
+      600.0,
+      850.0
+    ],
+    "source_middle_tip": [
+      1155.0,
+      135.0
+    ],
+    "target_wrist": [
+      27.0,
+      127.0
+    ],
+    "target_middle_tip": [
+      156.0,
+      22.0
+    ],
+    "matrix": [
+      [
+        0.17902960024412573,
+        -0.041452548062252056
+      ],
+      [
+        0.041452548062252056,
+        0.17902960024412573
+      ]
+    ]
+  },
+  "original_preserved": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "bundle": "koma-v15-runtime.zip",
+  "sha256": "cc9a8dca8f81cd586dfc2fe08dc55f5052f6bee55461c50d78a6387f1d78c99d",
+  "file_hashes_verified": 78,
+  "model_http_assets_verified": 57,
+  "expression_api_states_verified": 8,
+  "reset_to_neutral": true,
+  "voice_duration_seconds": 8.170666666666667,
+  "limitations": "HTTP/API and archive verification only; no browser/WebGL/camera/microphone/Photoshop E2E."
+}

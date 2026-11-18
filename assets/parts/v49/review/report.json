@@ -1,0 +1,158 @@
+{
+  "errors": [],
+  "samples": [
+    {
+      "frame": 0,
+      "expression": "neutral",
+      "roll": 0
+    },
+    {
+      "frame": 15,
+      "expression": "neutral",
+      "roll": 3.115346738469204
+    },
+    {
+      "frame": 30,
+      "expression": "neutral",
+      "roll": 5.738848727196182
+    },
+    {
+      "frame": 45,
+      "expression": "soft_smile",
+      "roll": 7.456312687737811
+    },
+    {
+      "frame": 60,
+      "expression": "soft_smile",
+      "roll": 7.996588824332041
+    },
+    {
+      "frame": 75,
+      "expression": "soft_smile",
+      "roll": 7.274379414605454
+    },
+    {
+      "frame": 90,
+      "expression": "big_smile",
+      "roll": 5.403705444409205
+    },
+    {
+      "frame": 105,
+      "expression": "big_smile",
+      "roll": 2.6799052012472373
+    },
+    {
+      "frame": 120,
+      "expression": "big_smile",
+      "roll": -0.4669931474206407
+    },
+    {
+      "frame": 135,
+      "expression": "worried",
+      "roll": -3.5401635463588197
+    },
+    {
+      "frame": 150,
+      "expression": "worried",
+      "roll": -6.054419962463426
+    },
+    {
+      "frame": 165,
+      "expression": "worried",
+      "roll": -7.612816591116128
+    },
+    {
+      "frame": 180,
+      "expression": "surprised",
+      "roll": -7.969316870686725
+    },
+    {
+      "frame": 195,
+      "expression": "surprised",
+      "roll": -7.067637245761225
+    },
+    {
+      "frame": 210,
+      "expression": "surprised",
+      "roll": -5.050133102978567
+    },
+    {
+      "frame": 225,
+      "expression": "bashful",
+      "roll": -2.235323985591407
+    },
+    {
+      "frame": 240,
+      "expression": "bashful",
+      "roll": 0.9323936388039491
+    },
+    {
+      "frame": 255,
+      "expression": "bashful",
+      "roll": 3.9529068091088715
+    },
+    {
+      "frame": 270,
+      "expression": "displeased",
+      "roll": 6.349342910793225
+    },
+    {
+      "frame": 285,
+      "expression": "displeased",
+      "roll": 7.743357376251892
+    },
+    {
+      "frame": 300,
+      "expression": "displeased",
+      "roll": 7.914865972987054
+    },
+    {
+      "frame": 315,
+      "expression": "thinking",
+      "roll": 6.836791264706243
+    },
+    {
+      "frame": 330,
+      "expression": "thinking",
+      "roll": 4.679337543134094
+    },
+    {
+      "frame": 345,
+      "expression": "thinking",
+      "roll": 1.7831193128019673
+    }
+  ],
+  "eyeAudit": [
+    {
+      "name": "eye_screen_left",
+      "exactCentralOpen": true,
+      "gazeStartMaximum": 0,
+      "gazeStartPixelsOver8": 0
+    },
+    {
+      "name": "eye_screen_right",
+      "exactCentralOpen": true,
+      "gazeStartMaximum": 0,
+      "gazeStartPixelsOver8": 0
+    }
+  ],
+  "videos": [
+    {
+      "name": "v49-eyes-comparison-cfr.mp4",
+      "bytes": 3908339,
+      "frames": 360,
+      "fps": 30
+    },
+    {
+      "name": "v49-eyes-full-sample.mp4",
+      "bytes": 3920403,
+      "frames": 360,
+      "fps": 30
+    }
+  ],
+  "sync": {
+    "gaze": 0.7,
+    "reconnect": 0.7,
+    "vertical": -0.5
+  }
+}

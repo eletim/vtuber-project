@@ -1,0 +1,8 @@
+{
+  "frames": 600,
+  "geometryPoints": 36,
+  "maxDistanceErrorPixels": 0.0001222556144000464,
+  "maxRelativeDistanceError": 0.0000015929318177843044,
+  "faceBand": "sampled model y=144.8..416.3; same affine transform throughout complete face region",
+  "note": "Float32 raster geometry error; expression/blink/mouth local changes tested separately."
+}

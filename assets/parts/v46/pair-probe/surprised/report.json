@@ -1,0 +1,26 @@
+{
+  "errors": [],
+  "faces": [
+    {
+      "roll": 0,
+      "opening": 0,
+      "gaze": 0,
+      "name": "face-0-0-0.png",
+      "sha256": "ef6c8330155e43d9e0d85758aa20b60380e672ae27bdd6ee288289b8e5028459"
+    },
+    {
+      "roll": 0,
+      "opening": 0.5,
+      "gaze": 0,
+      "name": "face-0-0.5-0.png",
+      "sha256": "52441941499ad56a8962de66123bc0a36bc264522efe37e2e1906f923ce830f4"
+    },
+    {
+      "roll": 0,
+      "opening": 1,
+      "gaze": 0,
+      "name": "face-0-1-0.png",
+      "sha256": "9b538707bac4c143574103cb7735c21b002c4a75525a0e17555ba0fd842259e6"
+    }
+  ]
+}

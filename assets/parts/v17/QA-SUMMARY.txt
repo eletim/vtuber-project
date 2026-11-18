@@ -1,0 +1,28 @@
+羽月こま v17 口まわりの肌色修正確認
+
+Video: koma-v17-mouth-motion.mp4
+Phone-friendly exact frame comparison: koma-v17-frame653-before-after.png
+Six-time comparison: koma-v17-mouth-before-after.png
+All-eight-expression skin check: koma-v17-all8-skin-before-after.png
+
+42.000 seconds, 1600 × 1080, 30 fps, 1260 frames, H.264/yuv420p and AAC mono 24 kHz. 18,355,114 bytes, below the 20 MB delivery limit.
+MP4 SHA256: 8b8f10dafd8a165f21ad671db3a84102608205a83ae4f3a875493cb1ab7f19cb
+
+Correction and actual encoded review
+The user-reported diffuse gray oval around the surprised mouth was present in the closed-mouth source skin. A corrected skin-only asset is now selected; the lips and mouth core are preserved. The exact reported frame is decoded frame 653, 21.766667 seconds. Comparisons retain the surrounding nose, cheeks and chin, with unchanged colors and identical crop coordinates. The oval is visibly absent in v17 at frame 653 and the adjacent 21/22.5-second samples. Independent review also passed all 24 closed/small/open mouth samples across eight expressions, with no new skin seam or mouth geometry issue. Other expressions remain visually unchanged. This review explicitly checks diffuse skin shading, not only dark lip flecks.
+
+Preservation
+All 1260 head/body/voice parameter arrays match v16 exactly. Mesh SHA256 remains 5e2d1fb36d84925ecb31c8e6d036d61c3f63faaddf55ed42a0354db9b34b6255. Audio PCM SHA256 remains 7b1aea86672c9e4f50c4243d51a722970ffb1e390cb1d947ddf872312d7bfb4a. No reduction of head motion or change of camera framing. Source comparison shows only model.json changed and one corrected surprised closed-mouth skin PNG was added; all existing runtime JavaScript and original artwork files retain identical bytes.
+
+Full video/audio decode: PASS. Decoded AAC correlation with intended audio: 0.9999623686; peak 0.36323, no clipping. The same approved VOICEVOX:雨晴はう recording is reused four times; no new dialogue.
+
+Source
+Base revision: 78ede7b68d5729915f8916582973fb385bbfec05, plus the frozen v17 worktree recorded in source-provenance.json.
+Corrected skin asset SHA256: 08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74
+Model manifest SHA256: 7c2f9e576cede07d77f229cb4b4d3136a1ba62381c809561bee0b36cd2d859ba
+Production expression helper SHA256: 1e67114be41e7f0309d148428be96fa4e281f30c4bb8657e96fc66c7318f1d01
+
+Method and remaining limitations
+Actual frozen runtime JavaScript helpers plus offline premultiplied OpenGL mesh rendering. Not a browser UI recording or browser E2E test. Eyes remain authored two-state sprites, and mouth animation remains a two-endpoint 2D approximation. Existing thigh cutout gaps and rough hair matte are unchanged and visible. No official Cubism export is claimed.
+
+Detailed reports: verification.json, before-after-verification.json, source-delta.json, source-provenance.json. Reproduction: RERUN.txt and seven pipeline scripts.

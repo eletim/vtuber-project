@@ -1,0 +1,92 @@
+{
+  "errors": [],
+  "happy": {
+    "high": 5.08080072417125,
+    "low": -1.1137187840136529,
+    "shift": 35.74952930133254,
+    "mode": "ai"
+  },
+  "reset": true,
+  "expressions": [
+    {
+      "expression": "neutral",
+      "sign": -1,
+      "file": "extreme-neutral--1.png"
+    },
+    {
+      "expression": "neutral",
+      "sign": 1,
+      "file": "extreme-neutral-1.png"
+    },
+    {
+      "expression": "soft_smile",
+      "sign": -1,
+      "file": "extreme-soft_smile--1.png"
+    },
+    {
+      "expression": "soft_smile",
+      "sign": 1,
+      "file": "extreme-soft_smile-1.png"
+    },
+    {
+      "expression": "big_smile",
+      "sign": -1,
+      "file": "extreme-big_smile--1.png"
+    },
+    {
+      "expression": "big_smile",
+      "sign": 1,
+      "file": "extreme-big_smile-1.png"
+    },
+    {
+      "expression": "worried",
+      "sign": -1,
+      "file": "extreme-worried--1.png"
+    },
+    {
+      "expression": "worried",
+      "sign": 1,
+      "file": "extreme-worried-1.png"
+    },
+    {
+      "expression": "surprised",
+      "sign": -1,
+      "file": "extreme-surprised--1.png"
+    },
+    {
+      "expression": "surprised",
+      "sign": 1,
+      "file": "extreme-surprised-1.png"
+    },
+    {
+      "expression": "bashful",
+      "sign": -1,
+      "file": "extreme-bashful--1.png"
+    },
+    {
+      "expression": "bashful",
+      "sign": 1,
+      "file": "extreme-bashful-1.png"
+    },
+    {
+      "expression": "displeased",
+      "sign": -1,
+      "file": "extreme-displeased--1.png"
+    },
+    {
+      "expression": "displeased",
+      "sign": 1,
+      "file": "extreme-displeased-1.png"
+    },
+    {
+      "expression": "thinking",
+      "sign": -1,
+      "file": "extreme-thinking--1.png"
+    },
+    {
+      "expression": "thinking",
+      "sign": 1,
+      "file": "extreme-thinking-1.png"
+    }
+  ]
+}

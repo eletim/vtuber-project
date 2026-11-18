@@ -1,0 +1,25 @@
+{
+  "status": "v30 independent-review candidate, not final approval",
+  "baseline": "2122ed7ad066fab1805b370f1fb22aa19739b0f8",
+  "fixes": [
+    "Removed sleeve image crossfade entirely: one opaque cuff is behind drape, with continuous position and occlusion. Archived rest cuff retained but opacity always zero.",
+    "Wrist curve starts earlier, palm orientation changes smoothly while preserving the cheek endpoint.",
+    "Premultiplied linear sampling on moving hair, shoulder, hand and forearm reduces stepped edges without changing face sampling.",
+    "Imagegen shoulder repair applied only to 39 isolated dotted defects / 413 RGB pixels; original alpha and continuous hair contours retained."
+  ],
+  "verified": [
+    "179 tests passed including constant opaque cuff and continuous geometry across raising/lowering.",
+    "Real headless app: eight expressions and both extreme poses, no errors.",
+    "Face texture and protected face ROI both zero changes for all eight expressions.",
+    "Native scenario 10.5 to 15.5 seconds sampled at 24 Hz plus keyframes, 123 sequential crops visually reviewed.",
+    "Three-background sample and same-input v29/v30 comparison rendered; actual scenario timestamps burned into video.",
+    "Final MP4 media times 9.000 to 18.000 inclusive decoded every 0.125 seconds (73 frames); all arm crops viewed, no ghost cuff seen. Media time 11.125 is distinct from scenario time; use burned-in scenario label."
+  ],
+  "remaining": [
+    "Fine original hair texture and tiny colored edge speckles can still be seen at native resolution; not claiming flawless matte.",
+    "No continuous equal-speed human playback claim: inspection uses dense temporal images and decoded MP4 frames.",
+    "Independent review of cloth overlap and hand naturalness still required."
+  ],
+  "uploads": "none",
+  "blocked": false
+}

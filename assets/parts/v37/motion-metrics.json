@@ -1,0 +1,118 @@
+{
+  "v36": {
+    "max_shift": 43.165007816365794,
+    "max_bounce": 4.945365368709275,
+    "hip_angle_max": 4.741207402141805,
+    "chest_angle_max": 4.582691495168981,
+    "hair_max": {
+      "rear_left_outer": 34.21699277453122,
+      "rear_left_inner": 12,
+      "rear_right_inner": 12,
+      "rear_right_outer": 38,
+      "bang_left": 1,
+      "bang_center": 0.9972597504714628,
+      "bang_right": 1,
+      "side_left_front": 20,
+      "side_right_front": 0,
+      "side_left_outer": 0,
+      "side_left_inner": 12,
+      "side_right_outer": 12
+    },
+    "poses": {
+      "2.4": {
+        "shift": -36.522,
+        "pelvisAngle": -2.307,
+        "body": 0.992,
+        "headLag": 0.456
+      },
+      "3.6": {
+        "shift": 29.845,
+        "pelvisAngle": -0.163,
+        "body": 3.168,
+        "headLag": -0.52
+      },
+      "4.6": {
+        "shift": 20.851,
+        "pelvisAngle": 4.159,
+        "body": -4.144,
+        "headLag": -0.167
+      },
+      "9.2": {
+        "shift": -8.388,
+        "pelvisAngle": -2.095,
+        "body": 1.914,
+        "headLag": 0.136
+      },
+      "9.6": {
+        "shift": -0.599,
+        "pelvisAngle": -0.415,
+        "body": 1.507,
+        "headLag": -0.063
+      },
+      "10": {
+        "shift": -0.035,
+        "pelvisAngle": -0.042,
+        "body": 0.619,
+        "headLag": -0.029
+      }
+    }
+  },
+  "v37": {
+    "max_shift": 43.165007816365794,
+    "max_bounce": 4.945365368709275,
+    "hip_angle_max": 4.762591625669444,
+    "chest_angle_max": 4.596488547445086,
+    "hair_max": {
+      "rear_left_outer": 29.971746701602083,
+      "rear_left_inner": 12,
+      "rear_right_inner": 12,
+      "rear_right_outer": 36.5380308411819,
+      "bang_left": 1,
+      "bang_center": 1,
+      "bang_right": 1,
+      "side_left_front": 20,
+      "side_right_front": 0,
+      "side_left_outer": 0,
+      "side_left_inner": 12,
+      "side_right_outer": 12
+    },
+    "poses": {
+      "2.4": {
+        "shift": -36.522,
+        "pelvisAngle": -2.782,
+        "body": 0.99,
+        "headLag": 0.265
+      },
+      "3.6": {
+        "shift": 29.845,
+        "pelvisAngle": 0.784,
+        "body": 3.149,
+        "headLag": -0.6
+      },
+      "4.6": {
+        "shift": 20.851,
+        "pelvisAngle": 3.93,
+        "body": -4.155,
+        "headLag": -0.009
+      },
+      "9.2": {
+        "shift": -8.388,
+        "pelvisAngle": -1.867,
+        "body": 1.937,
+        "headLag": 0.05
+      },
+      "9.6": {
+        "shift": -0.599,
+        "pelvisAngle": -0.255,
+        "body": 1.418,
+        "headLag": -0.249
+      },
+      "10": {
+        "shift": -0.035,
+        "pelvisAngle": -0.019,
+        "body": 0.582,
+        "headLag": -0.127
+      }
+    }
+  }
+}

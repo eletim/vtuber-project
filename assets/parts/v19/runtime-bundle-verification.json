@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "bundle": "koma-v19-runtime.zip",
+  "sha256": "4678083c12872480d43ca1d3540ff540f5bdd3ea144baf25cd42f25444f72988",
+  "file_hashes_verified": 95,
+  "model_http_assets_verified": 72,
+  "expression_api_states_verified": 8,
+  "reset_to_neutral": true,
+  "voice_duration_seconds": 8.170666666666667,
+  "limitations": "HTTP/API and archive verification only; no browser/WebGL/camera/microphone/Photoshop E2E.",
+  "body_parameter_ids": [
+    "ParamArmLOpen",
+    "ParamArmROpen",
+    "ParamShoulderY",
+    "ParamBodyShiftX"
+  ],
+  "both_control_modes_verified": true,
+  "body_parameter_clamps_and_validation_verified": true,
+  "body_parameters_reset_on_mode_change": true,
+  "body_sampling": "coverage-2x",
+  "skirt_limit_source_pixels": 3,
+  "body_layers": 7,
+  "roles": [
+    "armLeft",
+    "armRight",
+    "head",
+    "root",
+    "skirt",
+    "torso"
+  ],
+  "skirt_control_modes_clamps_validation_and_reset_verified": true,
+  "skirt_control_does_not_set_arm_inputs": true
+}

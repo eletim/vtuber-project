@@ -1,0 +1,3 @@
+import {followHairGeometry} from '../assets/parts/v43/experiments/paired-skin.js';
+globalThis.window={}; const point=(x,y,t)=>{const r=followHairGeometry(new Float32Array([(x+235)/1086,(y+1)/1448]),t);return[r[0]*1086-235,r[1]*1448-1]};
+const result={};for(const direction of ['left','right','up','down']){window.faceDirection=direction;result[direction]=[];for(const [cx,cy,sx,sy]of [[234,289,40,22],[375,262,34,22]]){let max=0,at;const c=point(cx,cy,1);for(let y=-sy;y<=sy;y+=2)for(let x=-sx;x<=sx;x+=2){const p=point(cx+x,cy+y,1),d=Math.hypot(p[0]-c[0]-x,p[1]-c[1]-y);if(d>max){max=d;at=[x,y]}}result[direction].push({maxInteriorWarp:max,at});}}console.log(JSON.stringify(result));

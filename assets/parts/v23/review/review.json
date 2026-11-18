@@ -1,0 +1,111 @@
+{
+  "errors": [],
+  "baseline": "d7d37e37647a114b13476176145ccce9b239d4e9",
+  "frames": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    3,
+    3.5,
+    4,
+    4.5,
+    5,
+    5.5,
+    6,
+    6.5,
+    7,
+    7.5,
+    8,
+    8.5,
+    9,
+    9.5,
+    10
+  ],
+  "peaks": {
+    "v22": {
+      "rear_left_outer": 10.825294017791748,
+      "rear_left_inner": 8.205418288707733,
+      "rear_right_inner": 9.287552833557129,
+      "rear_right_outer": 12.251051187515259,
+      "bang_left": 2.2445027232170105,
+      "bang_center": 3.282685160636902,
+      "bang_right": 2.3824113607406616,
+      "side_left_front": 6.440699100494385,
+      "side_right_front": 5.154274642467499,
+      "side_left_outer": 6.071216583251953,
+      "side_left_inner": 4.288146257400513,
+      "side_right_outer": 7.524937391281128
+    },
+    "v23": {
+      "rear_left_outer": 22.600283682346344,
+      "rear_left_inner": 17.169479727745056,
+      "rear_right_inner": 19.512405395507812,
+      "rear_right_outer": 25.824678897857666,
+      "bang_left": 2.2445027232170105,
+      "bang_center": 3.282685160636902,
+      "bang_right": 2.3824113607406616,
+      "side_left_front": 10.627088785171509,
+      "side_right_front": 8.504570960998535,
+      "side_left_outer": 12.142433166503906,
+      "side_left_inner": 7.0754477977752686,
+      "side_right_outer": 15.04981005191803
+    }
+  },
+  "rootDelta": 0,
+  "facePreservation": [
+    {
+      "expression": "neutral",
+      "changedFaceTextureValues": 0
+    },
+    {
+      "expression": "soft_smile",
+      "changedFaceTextureValues": 0
+    },
+    {
+      "expression": "big_smile",
+      "changedFaceTextureValues": 0
+    },
+    {
+      "expression": "worried",
+      "changedFaceTextureValues": 0
+    },
+    {
+      "expression": "surprised",
+      "changedFaceTextureValues": 0
+    },
+    {
+      "expression": "bashful",
+      "changedFaceTextureValues": 0
+    },
+    {
+      "expression": "displeased",
+      "changedFaceTextureValues": 0
+    },
+    {
+      "expression": "thinking",
+      "changedFaceTextureValues": 0
+    }
+  ],
+  "video": {
+    "file": "C:\\Users\\rext7\\Documents\\Codex\\2026-10-22\\task\\vtuber-project\\assets\\parts\\v23\\review\\koma-v22-v23-hair-comparison.mp4",
+    "mime": "video/mp4;codecs=avc1.42001f",
+    "bytes": 3806641
+  },
+  "decode": {
+    "width": 1600,
+    "height": 560,
+    "duration": 9.769733,
+    "frames": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      9.5
+    ]
+  }
+}

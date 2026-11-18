@@ -1,0 +1,34 @@
+{
+  "verified_at_utc": "2026-10-21T15:54:19.001136+00:00",
+  "freshly_synthesized": true,
+  "input_text": "こんにちは、羽月こまです。今入力してもらった文章から、新しく声を作っています。声に合わせて、表情や腕も動かしますね。",
+  "provider": {
+    "provider": "VOICEVOX",
+    "speaker": "雨晴はう",
+    "style": "ノーマル",
+    "credit": "VOICEVOX:雨晴はう",
+    "available": true,
+    "version": "0.25.2",
+    "message": "VOICEVOX接続済み。入力した文章から新しく音声を合成できます。"
+  },
+  "duration_seconds": 10.485333333333333,
+  "wav_bytes": 503340,
+  "wav_sha256": "09e68a6e1f141e87ffffe8a9109a9ebe613b760a1f21dd3e5e493d94b2d1e8ec",
+  "elapsed_seconds": 9.092799768000987,
+  "controller_and_overlay": [
+    {
+      "role": "controller",
+      "play": true
+    },
+    {
+      "role": "overlay",
+      "play": false
+    }
+  ],
+  "play_pause_resume_stop": "pass",
+  "stale_playback_after_stop": 409,
+  "expression_during_playback": "soft_smile",
+  "final_mode": "ai",
+  "final_speech": "idle",
+  "scope": "Actual local VOICEVOX -> runtime HTTP/WS -> downloaded PCM. Playback status is exercised by HTTP. Browser audio output and GUI E2E are not claimed."
+}

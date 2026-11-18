@@ -1,0 +1,123 @@
+{
+  "measurement": "Manual visual landmark estimates; not segmentation or precision ground truth. Coordinates in original PNG pixels. Eye-pair similarity registration only; not an accepted warp.",
+  "reference": "approved-frontal-head.png",
+  "candidate": "library-input/right.png",
+  "frontal_landmarks": {
+    "pupil_left": [
+      257,
+      315
+    ],
+    "pupil_right": [
+      385,
+      285
+    ],
+    "nose": [
+      318,
+      338
+    ],
+    "mouth_center": [
+      327,
+      377
+    ],
+    "chin": [
+      334,
+      426
+    ]
+  },
+  "right_landmarks": {
+    "pupil_left": [
+      790,
+      660
+    ],
+    "pupil_right": [
+      1047,
+      621
+    ],
+    "nose": [
+      1006,
+      722
+    ],
+    "mouth_center": [
+      958,
+      816
+    ],
+    "chin": [
+      963,
+      945
+    ]
+  },
+  "right_registered_by_pupil_pair": {
+    "pupil_left": [
+      257.0,
+      315.0
+    ],
+    "pupil_right": [
+      385.0,
+      285.0
+    ],
+    "nose": [
+      368.39,
+      337.57
+    ],
+    "mouth_center": [
+      347.97,
+      386.89
+    ],
+    "chin": [
+      355.68,
+      451.73
+    ]
+  },
+  "interpretation": [
+    "Eye-pair registration leaves the candidate chin lower than original: direct transplant changes lower-face proportions.",
+    "The offset nose is partly the intended yaw; it must not be forced to the frontal coordinate.",
+    "A two-point fit does not prove identity, eye shape, facial perspective, or an acceptable continuous transition."
+  ],
+  "missing_pixel_regions_right_approximate": {
+    "brow_and_eye_underpaint_left": [
+      650,
+      505,
+      910,
+      725
+    ],
+    "brow_and_eye_underpaint_right": [
+      1000,
+      485,
+      1140,
+      690
+    ],
+    "mouth_underpaint": [
+      895,
+      785,
+      1020,
+      845
+    ],
+    "temple_and_cheek_under_sidehair": [
+      555,
+      565,
+      800,
+      860
+    ],
+    "forehead_under_fringe": [
+      720,
+      330,
+      1055,
+      640
+    ]
+  },
+  "layer_requirements": [
+    "Skin/nose/jaw/ear underpaint with hair, eyes, eyebrows and mouth removed, canvas and nose/chin registration unchanged",
+    "Original eyes and closed mouth retained as separate source artwork for registration experiments; do not erase originals",
+    "Hair and facial ownership must be separated before runtime use; no whole-head alpha crossfade"
+  ],
+  "imagegen_attempt": {
+    "input": "C:/Users/rext7/Documents/Codex/2026-10-22/task/vtuber-project/assets/parts/v43/library-input/right.png",
+    "tool": "image_gen.imagegen",
+    "outcome": "failed before generation",
+    "error": "AbsolutePathBuf deserialized without a base path at line 1 column 132",
+    "safety_denial": false,
+    "output_created": false
+  },
+  "runtime": "v42 unchanged",
+  "not_implemented": "No angle transition or video yet. Material editing is blocked on executor reference path resolution."
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "python": {
+    "total": 77,
+    "passed": 76,
+    "skipped": 1,
+    "reason": "Optional psd-tools dependency unavailable; independent PSD parser and 64 endpoint render checks passed.",
+    "elapsed_seconds": 262.118
+  },
+  "runtime_node": {
+    "tests": 56,
+    "passed": 56,
+    "failed": 0
+  },
+  "psd_runtime_endpoint_compositions": 64,
+  "pale_skin_opening_scales": 23,
+  "encoded_expression_aperture_pairs_reviewed": 24,
+  "sameframe_reported_frame": 653,
+  "original_assets_and_runtime_functions_preserved": 340,
+  "video_kept_separate_from_git": true,
+  "video_sha256": "8b8f10dafd8a165f21ad671db3a84102608205a83ae4f3a875493cb1ab7f19cb",
+  "limitations": [
+    "Offline OpenGL preview; no browser GUI E2E.",
+    "Eyes remain two-state artwork.",
+    "Original thigh cutouts and hair matte remain unchanged."
+  ]
+}

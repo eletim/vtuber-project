@@ -1,0 +1,202 @@
+{
+  "passed": true,
+  "all_48_face_part_files_unchanged": true,
+  "parts": {
+    "expressions/bashful/eye_screen_left_closed.png": {
+      "approved_sha256": "99ae0d48157d972b6d9393a1da058435a3c1b792ab93a6d65b165621941b0d3e",
+      "current_sha256": "99ae0d48157d972b6d9393a1da058435a3c1b792ab93a6d65b165621941b0d3e"
+    },
+    "expressions/bashful/eye_screen_left_open.png": {
+      "approved_sha256": "cd1595469fbeae2f2c03b663a41e6f7b767d4c489869621da4c55f490ade15a6",
+      "current_sha256": "cd1595469fbeae2f2c03b663a41e6f7b767d4c489869621da4c55f490ade15a6"
+    },
+    "expressions/bashful/eye_screen_right_closed.png": {
+      "approved_sha256": "27584750d44f3e7f32d878312ba878836437857f6a4093e1993a2434ea5a1254",
+      "current_sha256": "27584750d44f3e7f32d878312ba878836437857f6a4093e1993a2434ea5a1254"
+    },
+    "expressions/bashful/eye_screen_right_open.png": {
+      "approved_sha256": "b4df10aef1eed3342847b0ac6077bb9354c0ec2176a81876c9bdd729958d9e94",
+      "current_sha256": "b4df10aef1eed3342847b0ac6077bb9354c0ec2176a81876c9bdd729958d9e94"
+    },
+    "expressions/bashful/mouth_closed.png": {
+      "approved_sha256": "2123120f57b2793bbed38ce34c42a3d511063cd6f32b13cd7fb679654e300e52",
+      "current_sha256": "2123120f57b2793bbed38ce34c42a3d511063cd6f32b13cd7fb679654e300e52"
+    },
+    "expressions/bashful/mouth_open.png": {
+      "approved_sha256": "a75a4e774eb1be6949a969543193fe4e7c4cc48d30394cc16c762b843a707ce2",
+      "current_sha256": "a75a4e774eb1be6949a969543193fe4e7c4cc48d30394cc16c762b843a707ce2"
+    },
+    "expressions/big_smile/eye_screen_left_closed.png": {
+      "approved_sha256": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2",
+      "current_sha256": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2"
+    },
+    "expressions/big_smile/eye_screen_left_open.png": {
+      "approved_sha256": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2",
+      "current_sha256": "65276d3805fa29a61bed4eb754dd598a1fe3fbf16cff2ec995819ed80bf3c9e2"
+    },
+    "expressions/big_smile/eye_screen_right_closed.png": {
+      "approved_sha256": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f",
+      "current_sha256": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f"
+    },
+    "expressions/big_smile/eye_screen_right_open.png": {
+      "approved_sha256": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f",
+      "current_sha256": "eb60f0f98badada33b61ca4b4f6b54a1a37b002fdf3c23ec8825dad959bd6c0f"
+    },
+    "expressions/big_smile/mouth_closed.png": {
+      "approved_sha256": "795dd2fdab28b65656b7bc8d0d0f840fd3846e8e26d2d59c7b4ec00249f31085",
+      "current_sha256": "795dd2fdab28b65656b7bc8d0d0f840fd3846e8e26d2d59c7b4ec00249f31085"
+    },
+    "expressions/big_smile/mouth_open.png": {
+      "approved_sha256": "1dbb5e48723f51eeaf86282dd07f26bd4290937a9da2d745e1f6d875d2d08b44",
+      "current_sha256": "1dbb5e48723f51eeaf86282dd07f26bd4290937a9da2d745e1f6d875d2d08b44"
+    },
+    "expressions/displeased/eye_screen_left_closed.png": {
+      "approved_sha256": "15532ec0af676df9538935a7ae273b0f4c5c87313959da2f648f0d663cd01c57",
+      "current_sha256": "15532ec0af676df9538935a7ae273b0f4c5c87313959da2f648f0d663cd01c57"
+    },
+    "expressions/displeased/eye_screen_left_open.png": {
+      "approved_sha256": "b12826786ffa51d31c73a4ad907846dc12214432f87415082145eab97ef79e58",
+      "current_sha256": "b12826786ffa51d31c73a4ad907846dc12214432f87415082145eab97ef79e58"
+    },
+    "expressions/displeased/eye_screen_right_closed.png": {
+      "approved_sha256": "9958b7294a6d6747b05623d79111a3d8162d207b9a4c151b0e121d1ae9e15134",
+      "current_sha256": "9958b7294a6d6747b05623d79111a3d8162d207b9a4c151b0e121d1ae9e15134"
+    },
+    "expressions/displeased/eye_screen_right_open.png": {
+      "approved_sha256": "bc87c9f857b3c4f2646564f11882b0641357dba13e7096accf8da9df920a52f3",
+      "current_sha256": "bc87c9f857b3c4f2646564f11882b0641357dba13e7096accf8da9df920a52f3"
+    },
+    "expressions/displeased/mouth_closed.png": {
+      "approved_sha256": "349bfd0ae63f027705007663502b988930d9f419c8b4b7b1a1400b7536cf6cdd",
+      "current_sha256": "349bfd0ae63f027705007663502b988930d9f419c8b4b7b1a1400b7536cf6cdd"
+    },
+    "expressions/displeased/mouth_open.png": {
+      "approved_sha256": "ec99fdc6928f2fd66ef1f0f89ec1a250344990d6661668e89b1682115a8ad0ae",
+      "current_sha256": "ec99fdc6928f2fd66ef1f0f89ec1a250344990d6661668e89b1682115a8ad0ae"
+    },
+    "expressions/soft_smile/eye_screen_left_closed.png": {
+      "approved_sha256": "546c32b34f62ac8eb682dda09e945a46218d3ab795bcdbebabd44750829107a1",
+      "current_sha256": "546c32b34f62ac8eb682dda09e945a46218d3ab795bcdbebabd44750829107a1"
+    },
+    "expressions/soft_smile/eye_screen_left_open.png": {
+      "approved_sha256": "8197c3b72fbc9430c62e98653f6d1c7b523c83fc260f3aafb3d409e8c704f9b0",
+      "current_sha256": "8197c3b72fbc9430c62e98653f6d1c7b523c83fc260f3aafb3d409e8c704f9b0"
+    },
+    "expressions/soft_smile/eye_screen_right_closed.png": {
+      "approved_sha256": "8876845d71eee8fa78b39ddcf1e6c4aebdc7013be3670104378fe4f320c1e481",
+      "current_sha256": "8876845d71eee8fa78b39ddcf1e6c4aebdc7013be3670104378fe4f320c1e481"
+    },
+    "expressions/soft_smile/eye_screen_right_open.png": {
+      "approved_sha256": "09a447b1a2924736e016453fde22891cd3a2e7122a9ce83ed4980ea73e5ea9b2",
+      "current_sha256": "09a447b1a2924736e016453fde22891cd3a2e7122a9ce83ed4980ea73e5ea9b2"
+    },
+    "expressions/soft_smile/mouth_closed.png": {
+      "approved_sha256": "852590b6590c57d80ae3e03f815c228272b06b079ffb5e9f45eee74f1aec6f92",
+      "current_sha256": "852590b6590c57d80ae3e03f815c228272b06b079ffb5e9f45eee74f1aec6f92"
+    },
+    "expressions/soft_smile/mouth_open.png": {
+      "approved_sha256": "e93256b4333f16e65db4f14421ffb2d66199c107ba6ba727afaad8cbd54bd402",
+      "current_sha256": "e93256b4333f16e65db4f14421ffb2d66199c107ba6ba727afaad8cbd54bd402"
+    },
+    "expressions/surprised/eye_screen_left_closed.png": {
+      "approved_sha256": "ba02f4d7ef996472d84ef293e74289386707fb0e9dd12b77943b46ee6ecd1d23",
+      "current_sha256": "ba02f4d7ef996472d84ef293e74289386707fb0e9dd12b77943b46ee6ecd1d23"
+    },
+    "expressions/surprised/eye_screen_left_open.png": {
+      "approved_sha256": "72a4dc3559ab25530b7e3dffb7cc1260e3ff399366a3a003917bdf86564ac5ed",
+      "current_sha256": "72a4dc3559ab25530b7e3dffb7cc1260e3ff399366a3a003917bdf86564ac5ed"
+    },
+    "expressions/surprised/eye_screen_right_closed.png": {
+      "approved_sha256": "05880a5b9bf3272fc841fcadd58ba2e6c42df9437816764c85f5deb248af5d5b",
+      "current_sha256": "05880a5b9bf3272fc841fcadd58ba2e6c42df9437816764c85f5deb248af5d5b"
+    },
+    "expressions/surprised/eye_screen_right_open.png": {
+      "approved_sha256": "6d80d79cea82d493ba309e84a25b4ef494b7a84dc13d8ae0ca7be8ccb8d93145",
+      "current_sha256": "6d80d79cea82d493ba309e84a25b4ef494b7a84dc13d8ae0ca7be8ccb8d93145"
+    },
+    "expressions/surprised/mouth_closed_skin_v17.png": {
+      "approved_sha256": "08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74",
+      "current_sha256": "08dea08ede27630a516166980325e859eb3d43143b7656db08995d3102381e74"
+    },
+    "expressions/surprised/mouth_open.png": {
+      "approved_sha256": "94c624622c2b8217bb30dfb7a02f9003ffa9d9aaf9f842ac2b2d6d9d7ade4190",
+      "current_sha256": "94c624622c2b8217bb30dfb7a02f9003ffa9d9aaf9f842ac2b2d6d9d7ade4190"
+    },
+    "expressions/thinking/eye_screen_left_closed.png": {
+      "approved_sha256": "c49728b5c3a2befdff8d1ba5cdaf8c07b4c767a574cd730bcd558492f5df042c",
+      "current_sha256": "c49728b5c3a2befdff8d1ba5cdaf8c07b4c767a574cd730bcd558492f5df042c"
+    },
+    "expressions/thinking/eye_screen_left_open.png": {
+      "approved_sha256": "87930d8705db7cb0c12df8d3b1e03566c5b541794a38172e61101b0da2b84d19",
+      "current_sha256": "87930d8705db7cb0c12df8d3b1e03566c5b541794a38172e61101b0da2b84d19"
+    },
+    "expressions/thinking/eye_screen_right_closed.png": {
+      "approved_sha256": "d5d4c9e9abe0aeec4edab8d85ebeb1f054a4b66d1669173cfaa8aadfca724108",
+      "current_sha256": "d5d4c9e9abe0aeec4edab8d85ebeb1f054a4b66d1669173cfaa8aadfca724108"
+    },
+    "expressions/thinking/eye_screen_right_open.png": {
+      "approved_sha256": "7e464813010c23633fcde2bf0552e59c2f495c7ee2396ec8ede87fb70018ff5d",
+      "current_sha256": "7e464813010c23633fcde2bf0552e59c2f495c7ee2396ec8ede87fb70018ff5d"
+    },
+    "expressions/thinking/mouth_closed.png": {
+      "approved_sha256": "024db87e355ded577adafc61ea913f28009fdd581ff9cbcfcd33d7fffe376080",
+      "current_sha256": "024db87e355ded577adafc61ea913f28009fdd581ff9cbcfcd33d7fffe376080"
+    },
+    "expressions/thinking/mouth_open.png": {
+      "approved_sha256": "23ae09a9b19b3c0b94ea0f424f80a85b74f29aa2ea4ea6bb191cbc2baec18787",
+      "current_sha256": "23ae09a9b19b3c0b94ea0f424f80a85b74f29aa2ea4ea6bb191cbc2baec18787"
+    },
+    "expressions/worried/eye_screen_left_closed.png": {
+      "approved_sha256": "29ca6e119dd642b2c1ec56e610ff315b3c956365822b2f0ab73d027125ca596b",
+      "current_sha256": "29ca6e119dd642b2c1ec56e610ff315b3c956365822b2f0ab73d027125ca596b"
+    },
+    "expressions/worried/eye_screen_left_open.png": {
+      "approved_sha256": "d4095264e8179643ece08b039fed4252393685d14a75163fec431a089c26499b",
+      "current_sha256": "d4095264e8179643ece08b039fed4252393685d14a75163fec431a089c26499b"
+    },
+    "expressions/worried/eye_screen_right_closed.png": {
+      "approved_sha256": "87dff968d824860e34a7166b58a1a8d2fadd0809924bef0e7531dc8de90258af",
+      "current_sha256": "87dff968d824860e34a7166b58a1a8d2fadd0809924bef0e7531dc8de90258af"
+    },
+    "expressions/worried/eye_screen_right_open.png": {
+      "approved_sha256": "69b8ba526fefdd090da59a78611308c3e46730cfe2ca100648b968d450d26a8f",
+      "current_sha256": "69b8ba526fefdd090da59a78611308c3e46730cfe2ca100648b968d450d26a8f"
+    },
+    "expressions/worried/mouth_closed.png": {
+      "approved_sha256": "b960d330ceb01eb93807125683e5b20b767e41c62123d97c509ca01e8a37797c",
+      "current_sha256": "b960d330ceb01eb93807125683e5b20b767e41c62123d97c509ca01e8a37797c"
+    },
+    "expressions/worried/mouth_open.png": {
+      "approved_sha256": "b2579a0cded2a20360a3da1dad383613f643677165f4244bdb2acded606cdd13",
+      "current_sha256": "b2579a0cded2a20360a3da1dad383613f643677165f4244bdb2acded606cdd13"
+    },
+    "eye_screen_left_closed.png": {
+      "approved_sha256": "a6538777a06d680011ed952b7b27507d72de8ca0205517c47b84e7b796328bc6",
+      "current_sha256": "a6538777a06d680011ed952b7b27507d72de8ca0205517c47b84e7b796328bc6"
+    },
+    "eye_screen_left_open.png": {
+      "approved_sha256": "177f3320d850e3d03a928e113683ff0ddf097f10fe4f0622dea6ad6489f6a2ee",
+      "current_sha256": "177f3320d850e3d03a928e113683ff0ddf097f10fe4f0622dea6ad6489f6a2ee"
+    },
+    "eye_screen_right_closed.png": {
+      "approved_sha256": "db067f50468c0cf4fdf9b504630129360788846b28cb73fe3dacc5468641c7dd",
+      "current_sha256": "db067f50468c0cf4fdf9b504630129360788846b28cb73fe3dacc5468641c7dd"
+    },
+    "eye_screen_right_open.png": {
+      "approved_sha256": "4a43f45ed58338938f403b6eebc0f64ff7b4723c850d70fa71163639a0e3fda1",
+      "current_sha256": "4a43f45ed58338938f403b6eebc0f64ff7b4723c850d70fa71163639a0e3fda1"
+    },
+    "mouth_closed.png": {
+      "approved_sha256": "217da54a84ed2fc385ccd7c80d6f20131e6b262885a507cbfb1e31921e4aa9b4",
+      "current_sha256": "217da54a84ed2fc385ccd7c80d6f20131e6b262885a507cbfb1e31921e4aa9b4"
+    },
+    "mouth_open.png": {
+      "approved_sha256": "066d5cbbf610d899207dc69a5f8a58d8a26a53407c2515a754467cd2a9dd38ae",
+      "current_sha256": "066d5cbbf610d899207dc69a5f8a58d8a26a53407c2515a754467cd2a9dd38ae"
+    }
+  },
+  "expressions_helper_unchanged": true,
+  "expression_helper_sha256": "1e67114be41e7f0309d148428be96fa4e281f30c4bb8657e96fc66c7318f1d01",
+  "voice_sha256": "dd10f1395abb9dce388339e8cf4701911b637429e2174a77737ebd8058e7db7b",
+  "source_psd_sha256": "0f1d28279d0256f2a7ba860422709041f701dade3becf361c2b54bf5342ba3f4"
+}

@@ -1,0 +1,28 @@
+{
+  "baseline": "bae6d6981520e3ce9b1305997d1787f14eb42316",
+  "code_sha256": {
+    "runtime/web/eye-components.js": "a9bd82abaaacf74ad3021a2d97593872522a085cfa0e2f892ce78b5198815fca",
+    "runtime/web/renderer.js": "ec09ec6daaddcff6190e40ba36569c67b432f51405159d1149c8d4e0b53c0969"
+  },
+  "visual_review": "8 native half-open expression comparisons; original-size four reported times and their neighboring frames; all 360 frames retained with 60-frame contact sheet. Actual headless 1x playback measurement is separate from static visual inspection.",
+  "independent_acceptance": false,
+  "regression_frames": {
+    "11": "27646fdc293ab69c36415a73271006003967d5bbef9b4d68ff2656f553709fc3",
+    "12": "4b9756a597159a8e9694391c8a07f4afe1c0a9c17220718966e9e5900c5ae3f6",
+    "13": "248da627baa4e6c1e4c962e4a84988e24b7e4d07e4cedb8566698afe900413fd",
+    "146": "2ba9b0c961ae677fe9f6e3c102264a5fb2052020caf83890faf2fd3a37f7d212",
+    "147": "86676a4fb9f38be455bb52522b18836cbd9ed487068dec488a998a4072fc88df",
+    "148": "d3f0bf3b38c4893112ba1266ed3404662d12015260a107af82cb878e35b8add8",
+    "281": "781ad9b00aca1a0cfafa9a9d1cf1b9af3fb26d169d87448a9352f0313f67a1e8",
+    "282": "36d7af42b6e816cdbe70b8098628aa841b2376a4e8d4b329da9859c7a745eba8",
+    "283": "6c15eb1be16bf26e6ef01aed6b02687ef351b9a632391b3d6a440e7ea41f8573",
+    "326": "ccc2832cd44406a5d70966b2fda0e12b6401b8830b7edc4edb3b5867c3978142",
+    "327": "f643c36895e5f1c70df0da4b67bcd46195cea6f198ade551594d6f451c39e2c0",
+    "328": "ee4c047a9341dd01201cdbae4aef5040a3dcb65a4b397ec5f46e905d3d137c94",
+    "22": "a6896bba761ac0a67b6c6f15cf5f8d59b3829ab9e2ff74d26de1b9f04249992b",
+    "237": "1ada0b950e2cc3ed5f079fa35df85c64ad135614870d1db951e6fdf0bbf5d865",
+    "247": "ba3aa8dfbf9cbb83c7f5b587682181fddedff43e5832fb9b6f004320932c854c",
+    "315": "578a6c89a474123dfe669bcc4f110b440c9a12953f205dcee9f54e86e30acffd"
+  },
+  "psd_changed": false
+}

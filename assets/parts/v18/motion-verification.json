@@ -1,0 +1,94 @@
+{
+  "method": "Fixed original-art landmark positions interpolated through actual mesh triangles; hands expressed in chest-to-waist torso coordinates to exclude simple global translation/rotation. Approximate artwork landmarks, not anatomical tracking.",
+  "landmarks_original_px": {
+    "left_hand": [
+      185,
+      1305
+    ],
+    "right_hand": [
+      980,
+      1320
+    ],
+    "left_shoulder": [
+      365,
+      565
+    ],
+    "right_shoulder": [
+      780,
+      585
+    ],
+    "waist": [
+      543,
+      1000
+    ],
+    "chest": [
+      543,
+      700
+    ]
+  },
+  "hand_motion": {
+    "left_hand": {
+      "v17": {
+        "voiced_axis_span_source_px": [
+          1.940002428821515,
+          0.42470077615797663
+        ],
+        "voiced_span_diagonal_source_px": 1.9859456621727003,
+        "final_half_second_step_max_source_px": 0.008358406690679365
+      },
+      "v18": {
+        "voiced_axis_span_source_px": [
+          23.48730540145391,
+          7.682100179476095
+        ],
+        "voiced_span_diagonal_source_px": 24.711701240276287,
+        "final_half_second_step_max_source_px": 0.010919608857464558
+      },
+      "matched_frame_difference_max_source_px": 22.68515684698844,
+      "largest_difference_frame": 186
+    },
+    "right_hand": {
+      "v17": {
+        "voiced_axis_span_source_px": [
+          2.120703828222929,
+          0.5176734944481609
+        ],
+        "voiced_span_diagonal_source_px": 2.1829728752079256,
+        "final_half_second_step_max_source_px": 0.019012995734002225
+      },
+      "v18": {
+        "voiced_axis_span_source_px": [
+          24.76490764667733,
+          8.599411090110038
+        ],
+        "voiced_span_diagonal_source_px": 26.215463410841412,
+        "final_half_second_step_max_source_px": 0.020061867421226228
+      },
+      "matched_frame_difference_max_source_px": 24.048006616902313,
+      "largest_difference_frame": 745
+    }
+  },
+  "review_frame_indices": [
+    0,
+    48,
+    186,
+    348,
+    468,
+    653,
+    745,
+    1044,
+    1230,
+    1259
+  ],
+  "same_audio_sha256": "3ba9e8e05bf11a97d2b111dde5244f823694e70106dd269c372ec8bdfba755e1",
+  "approved_v17_model_files_identical": true,
+  "mesh_intentionally_changed": true,
+  "approved_face_parameter_timeline_identical": {
+    "ParamAngleX": true,
+    "ParamAngleY": true,
+    "ParamAngleZ": true,
+    "ParamEyeLOpen": true,
+    "ParamEyeROpen": true,
+    "ParamMouthOpenY": true
+  }
+}

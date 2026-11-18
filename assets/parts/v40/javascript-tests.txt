@@ -1,0 +1,1232 @@
+TAP version 13
+# Subtest: repeat start is idempotent, interruption releases continuously without resetting rig
+ok 1 - repeat start is idempotent, interruption releases continuously without resetting rig
+  ---
+  duration_ms: 63.0932
+  type: 'test'
+  ...
+# Subtest: speech mouth and explicit expressions win, blocking cancels, time gaps cannot replay
+ok 2 - speech mouth and explicit expressions win, blocking cancels, time gaps cannot replay
+  ---
+  duration_ms: 22.4843
+  type: 'test'
+  ...
+# Subtest: a queued RAF just before the click timestamp does not cancel the start
+ok 3 - a queued RAF just before the click timestamp does not cancel the start
+  ---
+  duration_ms: 0.2932
+  type: 'test'
+  ...
+# Subtest: complete phrase settles back to live input and can restart
+ok 4 - complete phrase settles back to live input and can restart
+  ---
+  duration_ms: 4.7803
+  type: 'test'
+  ...
+# Subtest: shared epoch joins at current age and repeated snapshots do not restart; reconnect resumes
+ok 5 - shared epoch joins at current age and repeated snapshots do not restart; reconnect resumes
+  ---
+  duration_ms: 0.2236
+  type: 'test'
+  ...
+# Subtest: forearm shaft remains straight during both trajectories; wrist shaping cannot bow its middle
+ok 6 - forearm shaft remains straight during both trajectories; wrist shaping cannot bow its middle
+  ---
+  duration_ms: 63.7786
+  type: 'test'
+  ...
+# Subtest: yaw changes relative face feature projection, while the face mesh stays oriented at control limits
+ok 7 - yaw changes relative face feature projection, while the face mesh stays oriented at control limits
+  ---
+  duration_ms: 1174.9324
+  type: 'test'
+  ...
+# Subtest: arm deformation keeps rigid bone lengths and never feeds back into torso or skirt
+ok 8 - arm deformation keeps rigid bone lengths and never feeds back into torso or skirt
+  ---
+  duration_ms: 1607.5883
+  type: 'test'
+  ...
+# Subtest: arm spring raises and lowers continuously, settling back to rest
+ok 9 - arm spring raises and lowers continuously, settling back to rest
+  ---
+  duration_ms: 2826.0544
+  type: 'test'
+  ...
+# Subtest: hair has fixed roots, distinct lag, and does not move the face surface
+ok 10 - hair has fixed roots, distinct lag, and does not move the face surface
+  ---
+  duration_ms: 853.2322
+  type: 'test'
+  ...
+# Subtest: larger hair swing returns to its rest surface after motion stops
+ok 11 - larger hair swing returns to its rest surface after motion stops
+  ---
+  duration_ms: 3261.0384
+  type: 'test'
+  ...
+# Subtest: thoughtful gesture raises, holds, and lowers the hand within six seconds
+ok 12 - thoughtful gesture raises, holds, and lowers the hand within six seconds
+  ---
+  duration_ms: 0.8488
+  type: 'test'
+  ...
+# Subtest: depth projection preserves forearm cross-section while narrowing its forward arc
+ok 13 - depth projection preserves forearm cross-section while narrowing its forward arc
+  ---
+  duration_ms: 532.8989
+  type: 'test'
+  ...
+# Subtest: projected distal hand cannot elongate the authored fingers
+ok 14 - projected distal hand cannot elongate the authored fingers
+  ---
+  duration_ms: 527.4692
+  type: 'test'
+  ...
+# Subtest: head acceleration drives a delayed hair reversal and decays after the body stops
+ok 15 - head acceleration drives a delayed hair reversal and decays after the body stops
+  ---
+  duration_ms: 2023.8527
+  type: 'test'
+  ...
+# Subtest: shared pelvis weight shifts and bounce preserve rigid face width and skirt coverage
+ok 16 - shared pelvis weight shifts and bounce preserve rigid face width and skirt coverage
+  ---
+  duration_ms: 1597.8442
+  type: 'test'
+  ...
+# Subtest: happy hops include anticipation and a quiet interval while neutral never bounces
+ok 17 - happy hops include anticipation and a quiet interval while neutral never bounces
+  ---
+  duration_ms: 4.242
+  type: 'test'
+  ...
+# Subtest: v26 manifest loads explicit PSD layers for every separately rendered body role
+ok 18 - v26 manifest loads explicit PSD layers for every separately rendered body role
+  ---
+  duration_ms: 108.0854
+  type: 'test'
+  ...
+# Subtest: only the head owns unchanged eye/mouth overlays and all eight head variants
+ok 19 - only the head owns unchanged eye/mouth overlays and all eight head variants
+  ---
+  duration_ms: 0.2574
+  type: 'test'
+  ...
+# Subtest: rig configuration respects approved limited under-hem coverage
+ok 20 - rig configuration respects approved limited under-hem coverage
+  ---
+  duration_ms: 0.0899
+  type: 'test'
+  ...
+# Subtest: neutral mesh preserves the original drawing; pelvis/base follows the shared parent
+ok 21 - neutral mesh preserves the original drawing; pelvis/base follows the shared parent
+  ---
+  duration_ms: 629.8127
+  type: 'test'
+  ...
+# Subtest: head tilt keeps chest attached; arm springs follow torso with independent lag
+ok 22 - head tilt keeps chest attached; arm springs follow torso with independent lag
+  ---
+  duration_ms: 407.4952
+  type: 'test'
+  ...
+# Subtest: range extremes and reversals do not invert or collapse mesh triangles
+ok 23 - range extremes and reversals do not invert or collapse mesh triangles
+  ---
+  duration_ms: 777.7622
+  type: 'test'
+  ...
+# Subtest: reset clears speech accents and cannot revive an old gesture
+ok 24 - reset clears speech accents and cannot revive an old gesture
+  ---
+  duration_ms: 15.474
+  type: 'test'
+  ...
+# Subtest: human clears speech accents and cannot revive an old gesture
+ok 25 - human clears speech accents and cannot revive an old gesture
+  ---
+  duration_ms: 1.3676
+  type: 'test'
+  ...
+# Subtest: disconnect clears speech accents and cannot revive an old gesture
+ok 26 - disconnect clears speech accents and cannot revive an old gesture
+  ---
+  duration_ms: 1.7798
+  type: 'test'
+  ...
+# Subtest: gesture preview selects AI and enables disabled natural motion
+ok 27 - gesture preview selects AI and enables disabled natural motion
+  ---
+  duration_ms: 21.4738
+  type: 'test'
+  ...
+# Subtest: an in-flight human control frame does not cancel an intended AI selection
+ok 28 - an in-flight human control frame does not cancel an intended AI selection
+  ---
+  duration_ms: 1.841
+  type: 'test'
+  ...
+# Subtest: overlapping demo clicks share mode selection and start exactly one timer
+ok 29 - overlapping demo clicks share mode selection and start exactly one timer
+  ---
+  duration_ms: 1.127
+  type: 'test'
+  ...
+# Subtest: demo tolerates HTTP before WebSocket acknowledgment
+ok 30 - demo tolerates HTTP before WebSocket acknowledgment
+  ---
+  duration_ms: 1.1938
+  type: 'test'
+  ...
+# Subtest: gesture tolerates HTTP before WebSocket acknowledgment
+ok 31 - gesture tolerates HTTP before WebSocket acknowledgment
+  ---
+  duration_ms: 1.0504
+  type: 'test'
+  ...
+# Subtest: a replacement gesture wins over a pending demo without a stray timer
+ok 32 - a replacement gesture wins over a pending demo without a stray timer
+  ---
+  duration_ms: 1.0079
+  type: 'test'
+  ...
+# Subtest: human selection invalidates pending demo
+ok 33 - human selection invalidates pending demo
+  ---
+  duration_ms: 1.0537
+  type: 'test'
+  ...
+# Subtest: human selection invalidates pending gesture
+ok 34 - human selection invalidates pending gesture
+  ---
+  duration_ms: 1.5654
+  type: 'test'
+  ...
+# Subtest: cancellation after own mode reset invalidates a pending preview
+ok 35 - cancellation after own mode reset invalidates a pending preview
+  ---
+  duration_ms: 0.7688
+  type: 'test'
+  ...
+# Subtest: a running demo stops on human mode and never sends stale frames
+ok 36 - a running demo stops on human mode and never sends stale frames
+  ---
+  duration_ms: 0.842
+  type: 'test'
+  ...
+# Subtest: disconnect invalidates a preview waiting for WebSocket acknowledgment
+ok 37 - disconnect invalidates a preview waiting for WebSocket acknowledgment
+  ---
+  duration_ms: 1.3886
+  type: 'test'
+  ...
+# Subtest: repeated blink restores the original eyes and ignores stale restoration
+ok 38 - repeated blink restores the original eyes and ignores stale restoration
+  ---
+  duration_ms: 0.8613
+  type: 'test'
+  ...
+# Subtest: reset cancels pending blink restoration
+ok 39 - reset cancels pending blink restoration
+  ---
+  duration_ms: 0.7455
+  type: 'test'
+  ...
+# Subtest: rapid microphone starts acquire one stream and mode switch stops it
+ok 40 - rapid microphone starts acquire one stream and mode switch stops it
+  ---
+  duration_ms: 2.079
+  type: 'test'
+  ...
+# Subtest: microphone permission resolving after cancellation stops the late stream
+ok 41 - microphone permission resolving after cancellation stops the late stream
+  ---
+  duration_ms: 1.1389
+  type: 'test'
+  ...
+# Subtest: microphone can intentionally switch from AI into human mode
+ok 42 - microphone can intentionally switch from AI into human mode
+  ---
+  duration_ms: 31.2296
+  type: 'test'
+  ...
+# Subtest: microphone startup tolerates HTTP before human-mode WebSocket state
+ok 43 - microphone startup tolerates HTTP before human-mode WebSocket state
+  ---
+  duration_ms: 3.8539
+  type: 'test'
+  ...
+# Subtest: speech playback reports actual playing, pause, resume, and end with ordered sequences
+ok 44 - speech playback reports actual playing, pause, resume, and end with ordered sequences
+  ---
+  duration_ms: 7.6368
+  type: 'test'
+  ...
+# Subtest: old queued pause/end events do not stop new playing speech
+ok 45 - old queued pause/end events do not stop new playing speech
+  ---
+  duration_ms: 1.4427
+  type: 'test'
+  ...
+# Subtest: eight-state picker keeps latest selection and reset explicitly returns neutral
+ok 46 - eight-state picker keeps latest selection and reset explicitly returns neutral
+  ---
+  duration_ms: 2.1768
+  type: 'test'
+  ...
+# Subtest: selected closed-eye smile is passed to speech across the AI mode reset
+ok 47 - selected closed-eye smile is passed to speech across the AI mode reset
+  ---
+  duration_ms: 2.9064
+  type: 'test'
+  ...
+# Error: 接続が切れています。
+#     at setExpression (evalmachine.<anonymous>:142:31)
+#     at $.onchange (evalmachine.<anonymous>:146:35)
+#     at TestContext.<anonymous> (file:///C:/Users/rext7/Documents/Codex/2026-10-22/task/vtuber-project/runtime/tests/control-flow.test.js:299:100)
+#     at Test.runInAsyncScope (node:async_hooks:227:14)
+#     at Test.run (node:internal/test_runner/test:1382:25)
+#     at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+#     at Test.postRun (node:internal/test_runner/test:1522:19)
+#     at Test.run (node:internal/test_runner/test:1447:12)
+#     at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+# Subtest: overlapping speech clicks share AI selection and only latest synthesizes
+ok 48 - overlapping speech clicks share AI selection and only latest synthesizes
+  ---
+  duration_ms: 19.369
+  type: 'test'
+  ...
+# Subtest: human mode interrupts pending speak without stale playback
+ok 49 - human mode interrupts pending speak without stale playback
+  ---
+  duration_ms: 1.4624
+  type: 'test'
+  ...
+# Subtest: human mode interrupts pending audiofile without stale playback
+ok 50 - human mode interrupts pending audiofile without stale playback
+  ---
+  duration_ms: 1.278
+  type: 'test'
+  ...
+# Subtest: disconnected expression picker reports the problem instead of queueing stale state
+ok 51 - disconnected expression picker reports the problem instead of queueing stale state
+  ---
+  duration_ms: 7.6892
+  type: 'test'
+  ...
+# Subtest: disconnect clears selected face, stops audible speech and closes local mouth
+ok 52 - disconnect clears selected face, stops audible speech and closes local mouth
+  ---
+  duration_ms: 2.9312
+  type: 'test'
+  ...
+# Subtest: camera permission resolving after AI then human override cannot revive old tracking
+ok 53 - camera permission resolving after AI then human override cannot revive old tracking
+  ---
+  duration_ms: 10.405
+  type: 'test'
+  ...
+# Subtest: camera startup waits for both mode acknowledgments and repeated clicks acquire one stream
+ok 54 - camera startup waits for both mode acknowledgments and repeated clicks acquire one stream
+  ---
+  duration_ms: 29.3505
+  type: 'test'
+  ...
+# Subtest: new picker choice wins over an audiofile awaiting its AI-mode response
+ok 55 - new picker choice wins over an audiofile awaiting its AI-mode response
+  ---
+  duration_ms: 1.0457
+  type: 'test'
+  ...
+# Subtest: manual eye change during blink cancels stale restoration and restores only the other eye
+ok 56 - manual eye change during blink cancels stale restoration and restores only the other eye
+  ---
+  duration_ms: 0.8425
+  type: 'test'
+  ...
+# Subtest: superseded speech responses do not overwrite the newer UI status
+ok 57 - superseded speech responses do not overwrite the newer UI status
+  ---
+  duration_ms: 1.9169
+  type: 'test'
+  ...
+# Subtest: Stop before-mode prevents synthesis without requesting human mode
+ok 58 - Stop before-mode prevents synthesis without requesting human mode
+  ---
+  duration_ms: 0.8981
+  type: 'test'
+  ...
+# Subtest: Stop http-first prevents synthesis without requesting human mode
+ok 59 - Stop http-first prevents synthesis without requesting human mode
+  ---
+  duration_ms: 0.8368
+  type: 'test'
+  ...
+# Subtest: Stop ws-first prevents synthesis without requesting human mode
+ok 60 - Stop ws-first prevents synthesis without requesting human mode
+  ---
+  duration_ms: 2.3747
+  type: 'test'
+  ...
+# Subtest: retry immediately after Stop shares the unfinished AI selection and only new text synthesizes
+ok 61 - retry immediately after Stop shares the unfinished AI selection and only new text synthesizes
+  ---
+  duration_ms: 2.402
+  type: 'test'
+  ...
+# Subtest: Stop aborts pending synthesis and ignores late success and its WS event
+ok 62 - Stop aborts pending synthesis and ignores late success and its WS event
+  ---
+  duration_ms: 1.9397
+  type: 'test'
+  ...
+# Subtest: Stop aborts pending synthesis and ignores late failure and its WS event
+ok 63 - Stop aborts pending synthesis and ignores late failure and its WS event
+  ---
+  duration_ms: 1.8033
+  type: 'test'
+  ...
+# Subtest: own superseded broadcast preserves the pending request, followed by ready and playing feedback
+ok 64 - own superseded broadcast preserves the pending request, followed by ready and playing feedback
+  ---
+  duration_ms: 1.246
+  type: 'test'
+  ...
+# Subtest: Stop clears a ready generated source and late play rejection cannot restore it
+ok 65 - Stop clears a ready generated source and late play rejection cannot restore it
+  ---
+  duration_ms: 2.0873
+  type: 'test'
+  ...
+# Subtest: Stop clears a playing generated source and late play rejection cannot restore it
+ok 66 - Stop clears a playing generated source and late play rejection cannot restore it
+  ---
+  duration_ms: 1.0956
+  type: 'test'
+  ...
+# Subtest: new generation cannot be cancelled or overwritten by an old scoped response/event
+ok 67 - new generation cannot be cancelled or overwritten by an old scoped response/event
+  ---
+  duration_ms: 1.2122
+  type: 'test'
+  ...
+# Subtest: human cancels in-flight synthesis immediately and ignores late speech
+ok 68 - human cancels in-flight synthesis immediately and ignores late speech
+  ---
+  duration_ms: 0.9134
+  type: 'test'
+  ...
+# Subtest: reset cancels in-flight synthesis immediately and ignores late speech
+ok 69 - reset cancels in-flight synthesis immediately and ignores late speech
+  ---
+  duration_ms: 0.9043
+  type: 'test'
+  ...
+# Subtest: disconnect cancels in-flight synthesis immediately and ignores late speech
+ok 70 - disconnect cancels in-flight synthesis immediately and ignores late speech
+  ---
+  duration_ms: 1.0928
+  type: 'test'
+  ...
+# Subtest: disconnect then reconnect allows a new request but never revives old speech
+ok 71 - disconnect then reconnect allows a new request but never revives old speech
+  ---
+  duration_ms: 2.4101
+  type: 'test'
+  ...
+# Subtest: synthesis errors show provider instructions, allow retry, and never fall back to a saved clip
+ok 72 - synthesis errors show provider instructions, allow retry, and never fall back to a saved clip
+  ---
+  duration_ms: 3.939
+  type: 'test'
+  ...
+# Subtest: empty input is explained without switching mode or making a synthesis request
+ok 73 - empty input is explained without switching mode or making a synthesis request
+  ---
+  duration_ms: 1.417
+  type: 'test'
+  ...
+# Subtest: uploaded audio is labeled as saved media, not generated speech, and Stop clears its source
+ok 74 - uploaded audio is labeled as saved media, not generated speech, and Stop clears its source
+  ---
+  duration_ms: 1.6859
+  type: 'test'
+  ...
+# Subtest: a file replacing synthesis ignores its old generated event and never gains generated credit
+ok 75 - a file replacing synthesis ignores its old generated event and never gains generated credit
+  ---
+  duration_ms: 4.1621
+  type: 'test'
+  ...
+# Subtest: seeking, buffering, rate changes and audio failure report actual playback to the server
+ok 76 - seeking, buffering, rate changes and audio failure report actual playback to the server
+  ---
+  duration_ms: 4.1784
+  type: 'test'
+  ...
+# Subtest: engine health check displays availability and stale checks cannot overwrite the latest result
+ok 77 - engine health check displays availability and stale checks cannot overwrite the latest result
+  ---
+  duration_ms: 2.0933
+  type: 'test'
+  ...
+# Subtest: failed engine health check offers a retry without changing speech state
+ok 78 - failed engine health check offers a retry without changing speech state
+  ---
+  duration_ms: 4.0252
+  type: 'test'
+  ...
+# Subtest: old queued error, waiting and seeking events do not pause healthy replacement audio
+ok 79 - old queued error, waiting and seeking events do not pause healthy replacement audio
+  ---
+  duration_ms: 4.0829
+  type: 'test'
+  ...
+# Subtest: Stop is available while a saved file awaits AI-mode selection
+ok 80 - Stop is available while a saved file awaits AI-mode selection
+  ---
+  duration_ms: 3.0996
+  type: 'test'
+  ...
+# Subtest: stale controller-disconnect cancellation does not stop a newer local synthesis
+ok 81 - stale controller-disconnect cancellation does not stop a newer local synthesis
+  ---
+  duration_ms: 3.3034
+  type: 'test'
+  ...
+# Subtest: confirmed WS playback wins over a late HTTP transport error and duplicate speech event
+ok 82 - confirmed WS playback wins over a late HTTP transport error and duplicate speech event
+  ---
+  duration_ms: 4.1131
+  type: 'test'
+  ...
+# Subtest: NotAllowedError explains autoplay vs actual generated audio failure
+ok 83 - NotAllowedError explains autoplay vs actual generated audio failure
+  ---
+  duration_ms: 2.7184
+  type: 'test'
+  ...
+# Subtest: NotSupportedError explains autoplay vs actual generated audio failure
+ok 84 - NotSupportedError explains autoplay vs actual generated audio failure
+  ---
+  duration_ms: 3.3533
+  type: 'test'
+  ...
+# Subtest: NetworkError explains autoplay vs actual generated audio failure
+ok 85 - NetworkError explains autoplay vs actual generated audio failure
+  ---
+  duration_ms: 3.6306
+  type: 'test'
+  ...
+# Subtest: an audio decode error is not overwritten by later autoplay rejection advice
+ok 86 - an audio decode error is not overwritten by later autoplay rejection advice
+  ---
+  duration_ms: 4.7457
+  type: 'test'
+  ...
+# Subtest: stopped tombstones an external request before its delayed first speech event
+ok 87 - stopped tombstones an external request before its delayed first speech event
+  ---
+  duration_ms: 2.1291
+  type: 'test'
+  ...
+# Subtest: controller_disconnected tombstones an external request before its delayed first speech event
+ok 88 - controller_disconnected tombstones an external request before its delayed first speech event
+  ---
+  duration_ms: 2.2056
+  type: 'test'
+  ...
+# Subtest: history_cleared tombstones an external request before its delayed first speech event
+ok 89 - history_cleared tombstones an external request before its delayed first speech event
+  ---
+  duration_ms: 3.723
+  type: 'test'
+  ...
+# Subtest: tombstoning an unseen external stop neither cancels nor blocks a different new utterance
+ok 90 - tombstoning an unseen external stop neither cancels nor blocks a different new utterance
+  ---
+  duration_ms: 2.3378
+  type: 'test'
+  ...
+# Subtest: conversation is disabled until confirmed configured and available, without disabling raw text speech
+ok 91 - conversation is disabled until confirmed configured and available, without disabling raw text speech
+  ---
+  duration_ms: 9.3352
+  type: 'test'
+  ...
+# Subtest: conversation health requires explicit configuration and uses the actual provider name
+ok 92 - conversation health requires explicit configuration and uses the actual provider name
+  ---
+  duration_ms: 1.6785
+  type: 'test'
+  ...
+# Subtest: connection opening checks voice and conversation status but never starts a conversation
+ok 93 - connection opening checks voice and conversation status but never starts a conversation
+  ---
+  duration_ms: 14.2423
+  type: 'test'
+  ...
+# Subtest: stale conversation status cannot overwrite a newer check or restore availability after disconnect
+ok 94 - stale conversation status cannot overwrite a newer check or restore availability after disconnect
+  ---
+  duration_ms: 2.3978
+  type: 'test'
+  ...
+# Subtest: failed conversation status stays unavailable and can be retried
+ok 95 - failed conversation status stays unavailable and can be retried
+  ---
+  duration_ms: 2.1879
+  type: 'test'
+  ...
+# Subtest: conversation rejects empty input before changing mode
+ok 96 - conversation rejects empty input before changing mode
+  ---
+  duration_ms: 1.6108
+  type: 'test'
+  ...
+# Subtest: conversation rejects over-limit input before changing mode
+ok 97 - conversation rejects over-limit input before changing mode
+  ---
+  duration_ms: 1.4871
+  type: 'test'
+  ...
+# Subtest: conversation preserves separate user and reply text through thinking, synthesis and actual playback
+ok 98 - conversation preserves separate user and reply text through thinking, synthesis and actual playback
+  ---
+  duration_ms: 10.4869
+  type: 'test'
+  ...
+# Subtest: conversation Stop before-mode prevents reply generation without requesting human mode
+ok 99 - conversation Stop before-mode prevents reply generation without requesting human mode
+  ---
+  duration_ms: 2.9195
+  type: 'test'
+  ...
+# Subtest: conversation Stop http-first prevents reply generation without requesting human mode
+ok 100 - conversation Stop http-first prevents reply generation without requesting human mode
+  ---
+  duration_ms: 4.4549
+  type: 'test'
+  ...
+# Subtest: conversation Stop ws-first prevents reply generation without requesting human mode
+ok 101 - conversation Stop ws-first prevents reply generation without requesting human mode
+  ---
+  duration_ms: 10.4419
+  type: 'test'
+  ...
+# Subtest: Stop during conversation thinking ignores late success and cannot revive audio
+ok 102 - Stop during conversation thinking ignores late success and cannot revive audio
+  ---
+  duration_ms: 4.8847
+  type: 'test'
+  ...
+# Subtest: Stop during conversation thinking ignores late failure and cannot revive audio
+ok 103 - Stop during conversation thinking ignores late failure and cannot revive audio
+  ---
+  duration_ms: 5.0116
+  type: 'test'
+  ...
+# Subtest: Stop during conversation synthesizing ignores late success and cannot revive audio
+ok 104 - Stop during conversation synthesizing ignores late success and cannot revive audio
+  ---
+  duration_ms: 2.6776
+  type: 'test'
+  ...
+# Subtest: Stop during conversation synthesizing ignores late failure and cannot revive audio
+ok 105 - Stop during conversation synthesizing ignores late failure and cannot revive audio
+  ---
+  duration_ms: 2.783
+  type: 'test'
+  ...
+# Subtest: conversation retry after Stop shares unfinished mode selection and only newest question generates
+ok 106 - conversation retry after Stop shares unfinished mode selection and only newest question generates
+  ---
+  duration_ms: 3.0229
+  type: 'test'
+  ...
+# Subtest: new conversation wins over old reply, status, scoped cancellation and HTTP failure
+ok 107 - new conversation wins over old reply, status, scoped cancellation and HTTP failure
+  ---
+  duration_ms: 3.7525
+  type: 'test'
+  ...
+# Subtest: human stops pending conversation and ignores its late response
+ok 108 - human stops pending conversation and ignores its late response
+  ---
+  duration_ms: 5.4801
+  type: 'test'
+  ...
+# Subtest: reset stops pending conversation and ignores its late response
+ok 109 - reset stops pending conversation and ignores its late response
+  ---
+  duration_ms: 3.1252
+  type: 'test'
+  ...
+# Subtest: disconnect stops pending conversation and ignores its late response
+ok 110 - disconnect stops pending conversation and ignores its late response
+  ---
+  duration_ms: 2.6872
+  type: 'test'
+  ...
+# Subtest: conversation provider errors are shown without fake replies or saved-audio fallback
+ok 111 - conversation provider errors are shown without fake replies or saved-audio fallback
+  ---
+  duration_ms: 3.9212
+  type: 'test'
+  ...
+# Subtest: raw text generation replaces conversation but remains a distinct non-AI reply workflow
+ok 112 - raw text generation replaces conversation but remains a distinct non-AI reply workflow
+  ---
+  duration_ms: 6.3219
+  type: 'test'
+  ...
+# Subtest: conversation replaces raw speech and old raw reply cannot overwrite the conversation
+ok 113 - conversation replaces raw speech and old raw reply cannot overwrite the conversation
+  ---
+  duration_ms: 2.3851
+  type: 'test'
+  ...
+# Subtest: shared audio Stop also cancels conversation playback and ignores late autoplay rejection
+ok 114 - shared audio Stop also cancels conversation playback and ignores late autoplay rejection
+  ---
+  duration_ms: 2.7651
+  type: 'test'
+  ...
+# Subtest: conversation autoplay denial keeps real reply visible and offers the shared player
+ok 115 - conversation autoplay denial keeps real reply visible and offers the shared player
+  ---
+  duration_ms: 2.6634
+  type: 'test'
+  ...
+# Subtest: conversation markup clearly distinguishes user input, reply and raw speech with safe defaults
+ok 116 - conversation markup clearly distinguishes user input, reply and raw speech with safe defaults
+  ---
+  duration_ms: 1.785
+  type: 'test'
+  ...
+# Subtest: conversation readiness cannot raise its hard input bound above 500 characters
+ok 117 - conversation readiness cannot raise its hard input bound above 500 characters
+  ---
+  duration_ms: 1.2511
+  type: 'test'
+  ...
+# Subtest: invalid conversation input does not relabel or stop already playing raw speech
+ok 118 - invalid conversation input does not relabel or stop already playing raw speech
+  ---
+  duration_ms: 3.8903
+  type: 'test'
+  ...
+# Subtest: over-limit raw input does not cancel or relabel a pending conversation
+ok 119 - over-limit raw input does not cancel or relabel a pending conversation
+  ---
+  duration_ms: 3.1832
+  type: 'test'
+  ...
+# Subtest: history clearing an older external reply cannot stop a newer local conversation
+ok 120 - history clearing an older external reply cannot stop a newer local conversation
+  ---
+  duration_ms: 2.5052
+  type: 'test'
+  ...
+# Subtest: history clear preserves transcript until confirmed success and prevents racing local questions
+ok 121 - history clear preserves transcript until confirmed success and prevents racing local questions
+  ---
+  duration_ms: 2.3098
+  type: 'test'
+  ...
+# Subtest: history clear http-error retains transcript and never claims success
+ok 122 - history clear http-error retains transcript and never claims success
+  ---
+  duration_ms: 1.7684
+  type: 'test'
+  ...
+# Subtest: history clear network-error retains transcript and never claims success
+ok 123 - history clear network-error retains transcript and never claims success
+  ---
+  duration_ms: 1.7394
+  type: 'test'
+  ...
+# Subtest: history clear unconfirmed retains transcript and never claims success
+ok 124 - history clear unconfirmed retains transcript and never claims success
+  ---
+  duration_ms: 1.6396
+  type: 'test'
+  ...
+# Subtest: history clear stops only the active conversation during thinking
+ok 125 - history clear stops only the active conversation during thinking
+  ---
+  duration_ms: 7.9498
+  type: 'test'
+  ...
+# Subtest: history clear stops only the active conversation during synthesizing
+ok 126 - history clear stops only the active conversation during synthesizing
+  ---
+  duration_ms: 7.27
+  type: 'test'
+  ...
+# Subtest: history clear stops only the active conversation during playing
+ok 127 - history clear stops only the active conversation during playing
+  ---
+  duration_ms: 1.3063
+  type: 'test'
+  ...
+# Subtest: history clear cancels a conversation waiting for mode selection without sending the question
+ok 128 - history clear cancels a conversation waiting for mode selection without sending the question
+  ---
+  duration_ms: 0.9512
+  type: 'test'
+  ...
+# Subtest: history clear preserves unrelated raw readout while generating
+ok 129 - history clear preserves unrelated raw readout while generating
+  ---
+  duration_ms: 1.0082
+  type: 'test'
+  ...
+# Subtest: history clear preserves unrelated raw readout while playing
+ok 130 - history clear preserves unrelated raw readout while playing
+  ---
+  duration_ms: 0.9377
+  type: 'test'
+  ...
+# Subtest: late history-clear success does not erase or relabel a newer external reply
+ok 131 - late history-clear success does not erase or relabel a newer external reply
+  ---
+  duration_ms: 1.1116
+  type: 'test'
+  ...
+# Subtest: late history-clear error does not erase or relabel a newer external reply
+ok 132 - late history-clear error does not erase or relabel a newer external reply
+  ---
+  duration_ms: 1.0125
+  type: 'test'
+  ...
+# Subtest: disconnect during history clear retains transcript and does not accept a late result
+ok 133 - disconnect during history clear retains transcript and does not accept a late result
+  ---
+  duration_ms: 0.8454
+  type: 'test'
+  ...
+# Subtest: acting is released by reset without an immediate weight reset
+ok 134 - acting is released by reset without an immediate weight reset
+  ---
+  duration_ms: 1.6913
+  type: 'test'
+  ...
+# Subtest: acting is released by slider without an immediate weight reset
+ok 135 - acting is released by slider without an immediate weight reset
+  ---
+  duration_ms: 1.2415
+  type: 'test'
+  ...
+# Subtest: acting is released by disconnect without an immediate weight reset
+ok 136 - acting is released by disconnect without an immediate weight reset
+  ---
+  duration_ms: 1.1589
+  type: 'test'
+  ...
+# Subtest: pending ordinary gesture owns input and prevents local acting from competing
+ok 137 - pending ordinary gesture owns input and prevents local acting from competing
+  ---
+  duration_ms: 0.9912
+  type: 'test'
+  ...
+# Subtest: face blendshapes preserve independent eyes and clamp jaw
+ok 138 - face blendshapes preserve independent eyes and clamp jaw
+  ---
+  duration_ms: 0.7886
+  type: 'test'
+  ...
+# Subtest: silence, audio signal and parameter interpolation
+ok 139 - silence, audio signal and parameter interpolation
+  ---
+  duration_ms: 1.5868
+  type: 'test'
+  ...
+# Subtest: ribcage counterbalances the loaded pelvis and left/right thighs have distinct lag
+ok 140 - ribcage counterbalances the loaded pelvis and left/right thighs have distinct lag
+  ---
+  duration_ms: 903.394
+  type: 'test'
+  ...
+# Subtest: independent chest-abdomen and abdomen-pelvis cut strips stay coincident; thigh roots stay under skirt
+ok 141 - independent chest-abdomen and abdomen-pelvis cut strips stay coincident; thigh roots stay under skirt
+  ---
+  duration_ms: 1819.3298
+  type: 'test'
+  ...
+# Subtest: cloth trails the raised arm while wrist and forearm lengths remain rigid
+ok 142 - cloth trails the raised arm while wrist and forearm lengths remain rigid
+  ---
+  duration_ms: 4854.5216
+  type: 'test'
+  ...
+# Subtest: happy gesture no longer opens both arms in phase
+ok 143 - happy gesture no longer opens both arms in phase
+  ---
+  duration_ms: 3.2479
+  type: 'test'
+  ...
+# Subtest: v15 manifest has eight complete runtime expressions and original neutral textures
+ok 144 - v15 manifest has eight complete runtime expressions and original neutral textures
+  ---
+  duration_ms: 16.1516
+  type: 'test'
+  ...
+# Subtest: all authored parts have continuous non-inverting local warp bands
+ok 145 - all authored parts have continuous non-inverting local warp bands
+  ---
+  duration_ms: 23.8132
+  type: 'test'
+  ...
+# Subtest: big smile stays closed while every expression has an independent mouth range
+ok 146 - big smile stays closed while every expression has an independent mouth range
+  ---
+  duration_ms: 0.6961
+  type: 'test'
+  ...
+# Subtest: all eight expressions change only while eyes and mouth are closed, without face blending
+ok 147 - all eight expressions change only while eyes and mouth are closed, without face blending
+  ---
+  duration_ms: 0.952
+  type: 'test'
+  ...
+# Subtest: rapid replacement coalesces pending states and never gets stuck
+ok 148 - rapid replacement coalesces pending states and never gets stuck
+  ---
+  duration_ms: 0.2193
+  type: 'test'
+  ...
+# Subtest: closed smile retains both eyes while lipsync amplitude remains independent
+ok 149 - closed smile retains both eyes while lipsync amplitude remains independent
+  ---
+  duration_ms: 0.2527
+  type: 'test'
+  ...
+# Subtest: feature warp preserves exact endpoints and fixed patch boundaries
+ok 150 - feature warp preserves exact endpoints and fixed patch boundaries
+  ---
+  duration_ms: 2.0347
+  type: 'test'
+  ...
+# Subtest: renderer paints one opaque endpoint per feature and never fades a face
+ok 151 - renderer paints one opaque endpoint per feature and never fades a face
+  ---
+  duration_ms: 1.2611
+  type: 'test'
+  ...
+# Subtest: edge-touching metadata safely preserves the opaque endpoint
+ok 152 - edge-touching metadata safely preserves the opaque endpoint
+  ---
+  duration_ms: 0.1065
+  type: 'test'
+  ...
+# Subtest: eye interpolation always selects one unchanged authored endpoint, never warps brows or hair
+ok 153 - eye interpolation always selects one unchanged authored endpoint, never warps brows or hair
+  ---
+  duration_ms: 0.1116
+  type: 'test'
+  ...
+# Subtest: angle material moves a registered contour while keeping its interior opaque and wrist unchanged
+ok 154 - angle material moves a registered contour while keeping its interior opaque and wrist unchanged
+  ---
+  duration_ms: 199.5453
+  type: 'test'
+  ...
+# Subtest: internal ink correspondence is monotone and transports a shifted crease as one line
+ok 155 - internal ink correspondence is monotone and transports a shifted crease as one line
+  ---
+  duration_ms: 142.7483
+  type: 'test'
+  ...
+# Subtest: palm projection carries thickness and finger crowns rather than uniform width scaling
+ok 156 - palm projection carries thickness and finger crowns rather than uniform width scaling
+  ---
+  duration_ms: 1.5688
+  type: 'test'
+  ...
+# Subtest: dense hand draw contains every triangle once, finite vertices and an opaque layer across the full arc
+ok 157 - dense hand draw contains every triangle once, finite vertices and an opaque layer across the full arc
+  ---
+  duration_ms: 1284.1878
+  type: 'test'
+  ...
+# Subtest: support height is shared by both hips and loading creates tilt without stretching their distance
+ok 158 - support height is shared by both hips and loading creates tilt without stretching their distance
+  ---
+  duration_ms: 719.5721
+  type: 'test'
+  ...
+# Subtest: neck accepts the initial pose, but subsequent command changes have a continuous response
+ok 159 - neck accepts the initial pose, but subsequent command changes have a continuous response
+  ---
+  duration_ms: 556.2429
+  type: 'test'
+  ...
+# Subtest: root sensors respond differently to rotation, and a still avatar generates no hair motion
+ok 160 - root sensors respond differently to rotation, and a still avatar generates no hair motion
+  ---
+  duration_ms: 578.9828
+  type: 'test'
+  ...
+# Subtest: acting sequence overlaps hand preparation with happy settling and preserves large shifts
+ok 161 - acting sequence overlaps hand preparation with happy settling and preserves large shifts
+  ---
+  duration_ms: 4.9816
+  type: 'test'
+  ...
+# Subtest: renderer issues ordered, distinct geometry/texture draw calls for all PSD layers
+ok 162 - renderer issues ordered, distinct geometry/texture draw calls for all PSD layers
+  ---
+  duration_ms: 5.6538
+  type: 'test'
+  ...
+# Subtest: diagnostic onlyRoles uses actual production surfaces and cannot draw omitted clothes
+ok 163 - diagnostic onlyRoles uses actual production surfaces and cannot draw omitted clothes
+  ---
+  duration_ms: 1.9716
+  type: 'test'
+  ...
+# Subtest: coverage resolve happens only after independently transformed layers are composited
+ok 164 - coverage resolve happens only after independently transformed layers are composited
+  ---
+  duration_ms: 1.0451
+  type: 'test'
+  ...
+# Subtest: cheek response preserves the projected face chord while the shared waist and skirt remain connected
+ok 165 - cheek response preserves the projected face chord while the shared waist and skirt remain connected
+  ---
+  duration_ms: 3158.252
+  type: 'test'
+  ...
+# Subtest: lowering takes a continuous deeper arc, preserving opaque sleeve and bone length
+ok 166 - lowering takes a continuous deeper arc, preserving opaque sleeve and bone length
+  ---
+  duration_ms: 7675.0335
+  type: 'test'
+  ...
+# Subtest: hair cannot accumulate outward velocity at its limit and still settles after a stopped torso
+ok 167 - hair cannot accumulate outward velocity at its limit and still settles after a stopped torso
+  ---
+  duration_ms: 2995.0067
+  type: 'test'
+  ...
+# Subtest: all eight mouth frames retain their authored slant and closed-lip curvature at both head tilts
+ok 168 - all eight mouth frames retain their authored slant and closed-lip curvature at both head tilts
+  ---
+  duration_ms: 3.3118
+  type: 'test'
+  ...
+# Subtest: normal deformation is continuous, invertible, tangent preserving, and has a fixed exterior
+ok 169 - normal deformation is continuous, invertible, tangent preserving, and has a fixed exterior
+  ---
+  duration_ms: 109.7109
+  type: 'test'
+  ...
+# Subtest: full-open RGBA endpoints and input sources remain byte-exact for every expression
+ok 170 - full-open RGBA endpoints and input sources remain byte-exact for every expression
+  ---
+  duration_ms: 99.0326
+  type: 'test'
+  ...
+# Subtest: near closure uses the actual closed contour and has no detached dark second lip
+ok 171 - near closure uses the actual closed contour and has no detached dark second lip
+  ---
+  duration_ms: 82.9449
+  type: 'test'
+  ...
+# Subtest: premultiplied resampling cannot turn transparent black RGB into a mouth halo
+ok 172 - premultiplied resampling cannot turn transparent black RGB into a mouth halo
+  ---
+  duration_ms: 5.9562
+  type: 'test'
+  ...
+# Subtest: strong normal minification averages details instead of picking a dark or white scanline
+ok 173 - strong normal minification averages details instead of picking a dark or white scanline
+  ---
+  duration_ms: 5.1078
+  type: 'test'
+  ...
+# Subtest: actual renderer drawPart consumes the shared warp once, without face alpha or strip overlays
+ok 174 - actual renderer drawPart consumes the shared warp once, without face alpha or strip overlays
+  ---
+  duration_ms: 3.1551
+  type: 'test'
+  ...
+# Subtest: mouth and neighboring face receive the same unchanged full head rotation at runtime extremes
+ok 175 - mouth and neighboring face receive the same unchanged full head rotation at runtime extremes
+  ---
+  duration_ms: 37.494
+  type: 'test'
+  ...
+# Subtest: speech accents alternate sparsely, ease in/out and leave silent arms alone
+ok 176 - speech accents alternate sparsely, ease in/out and leave silent arms alone
+  ---
+  duration_ms: 13.9484
+  type: 'test'
+  ...
+# Subtest: short audio spikes do not trigger arms; silence and changed speech settle them
+ok 177 - short audio spikes do not trigger arms; silence and changed speech settle them
+  ---
+  duration_ms: 1.6028
+  type: 'test'
+  ...
+# Subtest: disable and time discontinuities drop stale gestures without changing external commands
+ok 178 - disable and time discontinuities drop stale gestures without changing external commands
+  ---
+  duration_ms: 1.412
+  type: 'test'
+  ...
+# Subtest: new controls default safely for legacy clients, clamp and preserve disabled poses
+ok 179 - new controls default safely for legacy clients, clamp and preserve disabled poses
+  ---
+  duration_ms: 33.1172
+  type: 'test'
+  ...
+# Subtest: autonomous accents respect saturated manual limbs and use only remaining headroom
+ok 180 - autonomous accents respect saturated manual limbs and use only remaining headroom
+  ---
+  duration_ms: 1.5239
+  type: 'test'
+  ...
+# Subtest: all 512 settled control corners retain positive triangle area and a shared pelvis
+ok 181 - all 512 settled control corners retain positive triangle area and a shared pelvis
+  ---
+  duration_ms: 1445.9051
+  type: 'test'
+  ...
+# Subtest: rapid multi-axis reversals keep every triangle oriented and limbs within their caps
+ok 182 - rapid multi-axis reversals keep every triangle oriented and limbs within their caps
+  ---
+  duration_ms: 6664.5819
+  type: 'test'
+  ...
+# Subtest: gesture speed and amplitude are consistent at 20, 30, 60 and 120 fps
+ok 183 - gesture speed and amplitude are consistent at 20, 30, 60 and 120 fps
+  ---
+  duration_ms: 7784.3232
+  type: 'test'
+  ...
+# Subtest: speech visibly moves hands relative to shoulders, stays smooth, then settles when disabled
+ok 184 - speech visibly moves hands relative to shoulders, stays smooth, then settles when disabled
+  ---
+  duration_ms: 1537.8691
+  type: 'test'
+  ...
+# Subtest: bounce transports every attachment without stretching chest, waist or legs
+ok 185 - bounce transports every attachment without stretching chest, waist or legs
+  ---
+  duration_ms: 587.8762
+  type: 'test'
+  ...
+# Subtest: all waist attachment vertices stay coincident through mixed reversals and lower body follows
+ok 186 - all waist attachment vertices stay coincident through mixed reversals and lower body follows
+  ---
+  duration_ms: 1783.0941
+  type: 'test'
+  ...
+# Subtest: idle and speech gestures preserve mouth and remain inside pose limits
+ok 187 - idle and speech gestures preserve mouth and remain inside pose limits
+  ---
+  duration_ms: 23.3852
+  type: 'test'
+  ...
+# Subtest: disabled motion preserves external commands; expired emotion returns idle
+ok 188 - disabled motion preserves external commands; expired emotion returns idle
+  ---
+  duration_ms: 0.7438
+  type: 'test'
+  ...
+# Subtest: production renderer loads cropped textures and preserves independent draws across repeated FBO resolves
+ok 189 - production renderer loads cropped textures and preserves independent draws across repeated FBO resolves
+  ---
+  duration_ms: 177.8679
+  type: 'test'
+  ...
+# Subtest: every render role has a distinct surface and exactly preserves rest geometry
+ok 190 - every render role has a distinct surface and exactly preserves rest geometry
+  ---
+  duration_ms: 20.811
+  type: 'test'
+  ...
+# Subtest: isolated arm or skirt input changes only its own independent surface
+ok 191 - isolated arm or skirt input changes only its own independent surface
+  ---
+  duration_ms: 6551.9664
+  type: 'test'
+  ...
+# Subtest: torso never receives ambient hair sway and diagnostic neutral stays pixel-fixed
+ok 192 - torso never receives ambient hair sway and diagnostic neutral stays pixel-fixed
+  ---
+  duration_ms: 644.418
+  type: 'test'
+  ...
+# Subtest: skirt has a locked waist and delayed hem, then settles after interruption
+ok 193 - skirt has a locked waist and delayed hem, then settles after interruption
+  ---
+  duration_ms: 1603.8947
+  type: 'test'
+  ...
+# Subtest: body motion drives skirt inertia but arms cannot drive it
+ok 194 - body motion drives skirt inertia but arms cannot drive it
+  ---
+  duration_ms: 760.5516
+  type: 'test'
+  ...
+# Subtest: all independent surfaces retain positive triangles through extreme reversals
+ok 195 - all independent surfaces retain positive triangles through extreme reversals
+  ---
+  duration_ms: 1746.6301
+  type: 'test'
+  ...
+# Subtest: skirt control defaults, smoothing, and draw-plan source coordinates are explicit
+ok 196 - skirt control defaults, smoothing, and draw-plan source coordinates are explicit
+  ---
+  duration_ms: 1.2573
+  type: 'test'
+  ...
+# Subtest: all 1024 settled control corners keep every render role non-inverting
+ok 197 - all 1024 settled control corners keep every render role non-inverting
+  ---
+  duration_ms: 2744.0951
+  type: 'test'
+  ...
+# Subtest: seam-safe sampling resolves the complete avatar once within device texture limits
+ok 198 - seam-safe sampling resolves the complete avatar once within device texture limits
+  ---
+  duration_ms: 0.3675
+  type: 'test'
+  ...
+# Subtest: wrist correction is continuous across the hand-forearm seam and keeps visible mesh triangles positive
+ok 199 - wrist correction is continuous across the hand-forearm seam and keeps visible mesh triangles positive
+  ---
+  duration_ms: 929.3487
+  type: 'test'
+  ...
+# Subtest: larger weight transfer moves pelvis and differentiates thighs without changing hip radii
+ok 200 - larger weight transfer moves pelvis and differentiates thighs without changing hip radii
+  ---
+  duration_ms: 694.7395
+  type: 'test'
+  ...
+# Subtest: one opaque cuff stays behind drape through lift and lowering without an alpha transition
+ok 201 - one opaque cuff stays behind drape through lift and lowering without an alpha transition
+  ---
+  duration_ms: 5138.8593
+  type: 'test'
+  ...
+# Subtest: all frame times and sample bytes survive exact 30fps mux without initial hold
+ok 202 - all frame times and sample bytes survive exact 30fps mux without initial hold
+  ---
+  duration_ms: 17.7111
+  type: 'test'
+  ...
+1..202
+# tests 202
+# suites 0
+# pass 202
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20170.9319

@@ -1,0 +1,33 @@
+{
+  "psd": "assets/parts/v30/koma_material_repair_v30.psd",
+  "sha256": "54fb6aa4fd46e26bab01473d1689d1184fd984de78eef702983d3ed75f32a7bd",
+  "saved_default": "runtime half-raised reference; editable source groups hidden beneath, source anchors defined in model.json",
+  "native_v19_backup": true,
+  "roundtrip_changed_values": 0,
+  "expressions": 8,
+  "runtime_groups": 30,
+  "articulated_groups": [
+    "left_shoulder_underlap",
+    "left_shoulder_original_support",
+    "left_raised_upper",
+    "left_raised_forearm",
+    "left_raised_cuff",
+    "left_raised_drape",
+    "left_rest_cuff",
+    "left_raised_hand"
+  ],
+  "hair_groups": [
+    "rear_left_outer",
+    "rear_left_inner",
+    "rear_right_inner",
+    "rear_right_outer",
+    "bang_left",
+    "bang_center",
+    "bang_right",
+    "side_left_front",
+    "side_right_front",
+    "side_left_outer",
+    "side_left_inner",
+    "side_right_outer"
+  ]
+}

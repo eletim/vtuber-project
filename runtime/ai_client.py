@@ -21,8 +21,17 @@ class KomaClient:
     def pose(self,**parameters):
         return self._post('/api/control',{'source':'ai','parameters':parameters,'ttl_ms':2000})
 
-    def say(self,text,emotion="auto"):
-        return self._post('/api/speech',{'text':text,'emotion':emotion},timeout=125)
+    def say(self,text,emotion="auto",request_id=None):
+        payload={'text':text,'emotion':emotion}
+        if request_id is not None: payload['request_id']=request_id
+        return self._post('/api/speech',payload,timeout=125)
+
+    def stop(self,request_id=None):
+        return self._post('/api/speech/cancel',{} if request_id is None else {'request_id':request_id})
+
+    def voice_status(self):
+        with urlopen(self.url+'/api/voice',timeout=6) as response:
+            return json.load(response)
 
 
 if __name__=='__main__':
@@ -31,8 +40,13 @@ if __name__=='__main__':
     parser.add_argument('--say')
     parser.add_argument('--emotion',choices=['auto','neutral','happy','thoughtful','surprised'],default='auto')
     parser.add_argument('--demo',action='store_true')
+    parser.add_argument('--stop',action='store_true',help='Stop synthesis and playback without switching mode')
+    parser.add_argument('--voice-status',action='store_true')
     args=parser.parse_args()
-    client=KomaClient(args.url);client.select()
+    client=KomaClient(args.url)
+    if args.voice_status: print(client.voice_status())
+    if args.stop: print(client.stop())
+    if args.say or args.demo: client.select()
     if args.say:print(client.say(args.say,args.emotion))
     if args.demo:
         for i in range(120):

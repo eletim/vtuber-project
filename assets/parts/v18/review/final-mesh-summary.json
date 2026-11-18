@@ -1,0 +1,188 @@
+{
+  "frames": 1260,
+  "mesh_sha256": "ca8f39ffafd5ce1a15bfd101d4c96b7548e82f7b67725ac6ad8885d604779cf9",
+  "fps": 30,
+  "minimum_area": {
+    "frame": 468,
+    "t": 15.6,
+    "min_area": 0.7241094155112638,
+    "max_area": 1.271191786350268,
+    "min_at": [
+      838.6333333333333,
+      6.033333333333334
+    ],
+    "min_painted_body_area": 0.8182948409540843,
+    "min_body_at": [
+      772.2666666666665,
+      500.76666666666665
+    ],
+    "body_p01_smin": 0.871777137758064,
+    "body_p99_smax": 1.1255076554406256,
+    "body_min_smin": 0.812074779752948,
+    "body_max_smax": 1.1848490702484213,
+    "inverted": 0
+  },
+  "minimum_body_area": {
+    "frame": 468,
+    "t": 15.6,
+    "min_area": 0.7241094155112638,
+    "max_area": 1.271191786350268,
+    "min_at": [
+      838.6333333333333,
+      6.033333333333334
+    ],
+    "min_painted_body_area": 0.8182948409540843,
+    "min_body_at": [
+      772.2666666666665,
+      500.76666666666665
+    ],
+    "body_p01_smin": 0.871777137758064,
+    "body_p99_smax": 1.1255076554406256,
+    "body_min_smin": 0.812074779752948,
+    "body_max_smax": 1.1848490702484213,
+    "inverted": 0
+  },
+  "maximum_body_stretch": {
+    "frame": 1044,
+    "t": 34.8,
+    "min_area": 0.8274454058550748,
+    "max_area": 1.2232135161923574,
+    "min_at": [
+      1073.9333333333332,
+      1291.1333333333332
+    ],
+    "min_painted_body_area": 0.9349054193592146,
+    "min_body_at": [
+      917.0666666666666,
+      681.7666666666667
+    ],
+    "body_p01_smin": 0.9609996200836349,
+    "body_p99_smax": 1.1882996764843912,
+    "body_min_smin": 0.9387298536330032,
+    "body_max_smax": 1.2254518185626113,
+    "inverted": 0
+  },
+  "maximum_area": {
+    "frame": 468,
+    "t": 15.6,
+    "min_area": 0.7241094155112638,
+    "max_area": 1.271191786350268,
+    "min_at": [
+      838.6333333333333,
+      6.033333333333334
+    ],
+    "min_painted_body_area": 0.8182948409540843,
+    "min_body_at": [
+      772.2666666666665,
+      500.76666666666665
+    ],
+    "body_p01_smin": 0.871777137758064,
+    "body_p99_smax": 1.1255076554406256,
+    "body_min_smin": 0.812074779752948,
+    "body_max_smax": 1.1848490702484213,
+    "inverted": 0
+  },
+  "inverted_triangle_instances": 0,
+  "warning_frames": 0,
+  "anchors": {
+    "left_hand": {
+      "rest": [
+        126.7,
+        1321.3
+      ],
+      "max_displacement_px": 23.574363817400652,
+      "max_displacement_frame": 48,
+      "max_step_px": 1.9282244801582418,
+      "range_x": 27.760764375329018,
+      "range_y": 13.036320209503174
+    },
+    "right_hand": {
+      "rest": [
+        977.4,
+        1357.5
+      ],
+      "max_displacement_px": 24.565362820235638,
+      "max_displacement_frame": 1044,
+      "max_step_px": 1.7616931353043241,
+      "range_x": 27.13100802898407,
+      "range_y": 12.70101547241211
+    },
+    "left_cuff": {
+      "rest": [
+        181.0,
+        1194.6
+      ],
+      "max_displacement_px": 20.353508260060348,
+      "max_displacement_frame": 49,
+      "max_step_px": 1.6470480118652349,
+      "range_x": 23.271427184343338,
+      "range_y": 11.134965419769287
+    },
+    "right_cuff": {
+      "rest": [
+        923.1,
+        1230.8
+      ],
+      "max_displacement_px": 21.52394801552882,
+      "max_displacement_frame": 1044,
+      "max_step_px": 1.5420532795093589,
+      "range_x": 23.15363359451294,
+      "range_y": 11.215749263763428
+    },
+    "left_shoulder": {
+      "rest": [
+        343.9,
+        561.1
+      ],
+      "max_displacement_px": 7.378480960783199,
+      "max_displacement_frame": 746,
+      "max_step_px": 0.48080405667155945,
+      "range_x": 12.154117047786713,
+      "range_y": 7.158820867538452
+    },
+    "right_shoulder": {
+      "rest": [
+        778.3,
+        579.2
+      ],
+      "max_displacement_px": 7.208587517891592,
+      "max_displacement_frame": 949,
+      "max_step_px": 0.5823180411262684,
+      "range_x": 12.233573913574219,
+      "range_y": 6.182035446166992
+    },
+    "sternum": {
+      "rest": [
+        543.0,
+        705.9
+      ],
+      "max_displacement_px": 5.002857721761276,
+      "max_displacement_frame": 745,
+      "max_step_px": 0.3754395302402189,
+      "range_x": 9.048923313617706,
+      "range_y": 3.1964423656463623
+    },
+    "belt": {
+      "rest": [
+        543.0,
+        977.4000000000001
+      ],
+      "max_displacement_px": 1.829671739415915,
+      "max_displacement_frame": 1086,
+      "max_step_px": 0.09701354602962144,
+      "range_x": 3.6301268935203552,
+      "range_y": 0.09899473190307617
+    },
+    "pelvis": {
+      "rest": [
+        543.0,
+        1448.0
+      ],
+      "max_displacement_px": 0.0,
+      "max_displacement_frame": 0,
+      "max_step_px": 0.0,
+      "range_x": 0.0,
+      "range_y": 0.0
+    }
+  }
+}

@@ -1,0 +1,15 @@
+# v38: explicit runtime acting controls
+
+The normal Control Room now includes Japanese start/settle buttons. The existing v37 phrase runs through ActingController in app.js. Duplicate start is disabled; no timers are stacked. Stop freezes the current authored input and releases its influence continuously into the live base pose. BodyRig/HairRig are never reset by this controller. The app keeps its existing smoothParameters stage.
+
+Priority: microphone/camera, pending or active speech/conversation and existing motion actions block or release this phrase. Manual sliders, reset, mode changes, disconnect and page hiding release it. Mouth and breath are never overwritten. Manual/server-owned expressions take precedence; otherwise accepted phrase expressions are used. No new face deformation or independent gaze was introduced.
+
+Scope: this is explicitly a local preview performance, labelled as such in the UI. It is not broadcast to separately opened overlay clients or remote controllers. Existing server/API and diagnostic captures are unchanged. No artwork/PSD, hand material, head/hair rig or shoulder changes in this revision.
+
+An actual browser test exposed a queued requestAnimationFrame timestamp preceding the start click's performance.now(). That initially cancelled the phrase. The first frame now establishes the clock baseline and this case has a regression test. A hidden page cancels; a clock reversal or gap over two seconds also releases rather than jumping forward. Ordinary slow frames do not immediately cancel.
+
+Verification: full suite 195/195 before four additional UI-handler tests; final focused control suite is saved separately. Headless real UI confirms start, repeat disabled, manual worried expression, settle, AI/human switch, reset and a complete 20.5-second observation (822 RAF samples) without page errors. UI screenshots and the full state trace are in ui-review. No camera/mic hardware was acquired and no real speech provider request was needed; priority logic is tested independently.
+
+CFR videos compare identical v37 phrase input with a stop at 12 seconds: baseline raw helper returns to neutral immediately; v38 releases its influence through the new controller. 60Hz simulation, 30fps output, 555 frames each. These are controller-interruption videos, not a claim of new rig/artwork improvement. Real app smoothing adds another layer; actual app lifecycle is verified separately. Start-clock fixes do not change this capture because its first timestamp equals start=0. All frames decode; single-video initial playback drop0. Comparison initial playback had 30 drops while other tests ran; that result is retained as comparison-playback-concurrent.json and a separate idle-host retry is saved in comparison-frames/temporal-report.json.
+
+The release contact sheet was visually inspected around 11.6–16 seconds on white/black/teal. No obvious newly detached hand, waist tear or ghost sleeve was seen. This review does not claim individual native-resolution inspection of every frame. The larger v37 loading/leg limitations and held shoulder boundary remain. No installs, credentials, external upload, push or main merge.

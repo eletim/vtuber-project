@@ -1,0 +1,10 @@
+/review/extreme-*.png
+/cfr-review/sample-frames/frame-*.jpg
+/cfr-review/sample-frames/overview-frame-*.jpg
+/cfr-review/comparison-frames/frame-*.jpg
+/cfr-review/comparison-frames/overview-frame-*.jpg
+/native-review/frame-*.png
+!/native-review/frame-0330.png
+!/native-review/frame-0342.png
+!/native-review/frame-0420.png
+!/native-review/frame-0438.png

@@ -1,0 +1,39 @@
+{
+  "psd_sha256": "b159cbc45f04e835f4aa56fa3f28fcea35eea4e1906033c9a861f1d0b2907ce3",
+  "model_sha256": "453dbefa6e9cabaa123bd41bc7c3de8f2bb3ebc83463b36556b255514cfd6261",
+  "psd_webgl_bind_pose": {
+    "0": {
+      "mean_absolute_rgb_difference_0_to_255": 0.010178441952906573,
+      "pixels_any_channel_difference_over_16": 11,
+      "total_pixels": 1572528
+    },
+    "255": {
+      "mean_absolute_rgb_difference_0_to_255": 0.010178441952906575,
+      "pixels_any_channel_difference_over_16": 11,
+      "total_pixels": 1572528
+    }
+  },
+  "note": "PSD integer-alpha compositing and WebGL bilinear sampling differ at edges. This compares the same neutral, raised bind pose with motion disabled.",
+  "deep_hair_gap_diagnostic": [
+    {
+      "time": 0,
+      "transparent_pixels_inside_20px_eroded_original": 11
+    },
+    {
+      "time": 1,
+      "transparent_pixels_inside_20px_eroded_original": 26
+    },
+    {
+      "time": 2,
+      "transparent_pixels_inside_20px_eroded_original": 78
+    },
+    {
+      "time": 3,
+      "transparent_pixels_inside_20px_eroded_original": 134
+    },
+    {
+      "time": 4,
+      "transparent_pixels_inside_20px_eroded_original": 215
+    }
+  ]
+}

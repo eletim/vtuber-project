@@ -1,0 +1,89 @@
+Diffuse mouth skin halo: independent source audit
+================================================
+
+Audited source snapshot: clean repository commit 78ede7b68d5729915f8916582973fb385bbfec05.
+No production files changed. This directory preserves the before model, runtime
+mouth deformation, all 32 diagnostic states and their fixed measurement masks.
+
+Finding
+-------
+The broad gray oval is present in the static surprised CLOSED mouth endpoint.
+It is already painted into the skin RGB of the generated v15 source, not created
+by alpha holes, black fringe pixels, MP4 compression, or runtime interpolation.
+All 3,932 opaque mouth-closed sprite RGB pixels exactly equal the corresponding
+Lanczos-registered RGB in assets/parts/v15/sources/surprised_blink_speech.png.
+The source has translucent-but-complete facial pixels; packaging deliberately
+copies their RGB and replaces alpha with the broad mouth support's opaque alpha.
+Source alpha in the measured skin ring ranges 214–240, median 232. The skin RGB
+itself is dark; simply restoring source alpha would not correct the artwork and
+would risk ghosting old marks. A proper fix needs consistent underlying skin,
+with only authored lip/cavity/highlight artwork moving or replacing that skin.
+
+At PSD coordinate (530,370):
+  v15 source closed: RGBA [242,230,222,228]
+  runtime closed:    RGBA [242,230,222,255]
+  clean base:        RGBA [254,239,230,255]
+
+scripts/build_expressions_v15.py builds each endpoint from the entire rest_crop
+or generated RGB inside SUPPORT_POLYGONS['mouth']. Its narrower NEW_ART_POLYGONS
+only gate eyes, not mouths. This admits independently generated skin tones into
+a broad restoration sprite. The base underpaint is not the main outlier.
+
+Exact user frame
+----------------
+Decoded video frame 653 is t=21.7666667 s, surprised, mouth scale
+0.078751456973431. mouthBlend gives 86.0935% closed endpoint and 13.9065% warped
+open endpoint. The independently generated near_closed RGBA is byte-identical
+to the frame's original mouth-frames.rgba payload (zero differing channels).
+Thus the runtime exposes the bad source heavily at this instant; it does not
+invent the gray skin. See frame653.png and frame653-encoded-lower-face.png.
+
+Measurement
+-----------
+Each expression has a frozen pale-skin ring mask in PSD coordinates: fixed oval
+center (554,360), radii (43,29), y=334..388, minus the union of all tested
+lip/cavity/highlight footprints dilated by 5 pixels. RGB skin gates exclude
+colored marks. Nose, chin outline, hair and strong cheek blush are excluded.
+The same mask is used for all four states within an expression. 1,407–3,199
+skin pixels remain, depending on mouth size. See skin-measurement-masks.png.
+
+Values below are mean sRGB luma differences from that expression's base at
+the SAME pixel coordinates; this removes the ordinary positional skin gradient.
+Negative means darker. It is not an alpha test or RGB<80 test.
+
+Expression     Closed    Near closed*  Small(.25)   Open
+neutral         +1.209      +1.203       +0.600     +0.620
+soft_smile      +0.470      +0.490       +0.636     +0.511
+big_smile       -0.758      -0.727       -0.193     -0.546
+worried         -0.178      -0.177       -0.731     -0.953
+surprised       -6.527      -5.662       -0.476     -0.456
+bashful         -0.612      -0.604       -0.139     -0.028
+displeased      -0.265      -0.242       +0.374     +0.523
+thinking        -0.321      -0.339       -1.748     -1.861
+* Uses exact frame653 scale 0.078751456973431 for every expression.
+
+Surprised closed: mean L* shift -2.281; 88.2% of its skin ring is >3 luma units
+darker than base. At frame653 scale: mean L* shift -1.978; 86.7% is >3 darker.
+Other expression sources have smaller skin mismatches; thinking open is the
+next broadest dark shift, with 20.0% >3 units darker. Do not accidentally worsen
+these when fixing surprised. Full Lab/luma/pixel-count/hash data is in
+skin-metrics.json; skin-tone-heatmap.png makes the coherent source-tone island
+visible without allowing lip pixels to dominate the diagnostic.
+
+Proposed after-fix acceptance
+-----------------------------
+1. Re-use these frozen masks, not newly fitted masks that could exclude defects.
+2. For surprised closed and exact frame653 scale, target |mean skin dY| <1 and
+   <5% of measured skin >3Y darker than common clean base. Also inspect heatmap:
+   averages alone can hide alternating bright/dark bands or a smaller ring.
+3. Inspect unchanged lip shape/cavity/highlights and corners at all apertures.
+4. Verify no new skin patch, skin pulsing, alpha seam or hole at threshold .14
+   and at blending scales .06..14. Do not whiten away the intended skin gradient.
+5. Compare all eight closed/small/open state crops and exact same MP4 frame653.
+   The final encoded image must lose the broad gray oval while nose/chin/hair,
+   body, timing, voice and approved facial artwork remain unaffected.
+
+Caveat: base-relative metrics measure endpoint-induced changes. A gray artifact
+already placed identically in every base and endpoint would evade this metric;
+therefore also compare base/source crops to the before original art and review
+the final face at normal user-visible size.

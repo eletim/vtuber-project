@@ -1,0 +1,85 @@
+{
+  "geometry_verdict": "PASS",
+  "encoded_video_verdict": "PASS",
+  "method": "Independent exported runtime RGBA and EGL/llvmpipe pixel audit; not browser E2E.",
+  "frozen_runtime_sha256": {
+    "web/expressions.js": "1e67114be41e7f0309d148428be96fa4e281f30c4bb8657e96fc66c7318f1d01",
+    "web/renderer.js": "d9e5a89872fbe719d110631b157a59b0361f4248875de652c52c3f555fa501e9",
+    "web/body-rig.js": "de7db32a18b8d99f77d0a90f3317088dce8e24d50c1b871c341c8822073f0173",
+    "web/controls.js": "54e060821207a89041c69879db9a81e79cfec21178681c233b1a3895e7fc1bc6",
+    "web/performance.js": "c59266ebe8a74976b627bca193dde87646e2b9474c551c5814436bc563d367d6",
+    "model/model.json": "bb9810be07b74ec2591485bf3f3c44e804c337720027d4033c93b0ac5efddee1",
+    "model/skinning.json": "c23251b51b622b521c780f6a6f5233ed2a0861affdc610e52aa84981592409b3"
+  },
+  "cases": 240,
+  "expressions": [
+    "neutral",
+    "soft_smile",
+    "big_smile",
+    "worried",
+    "surprised",
+    "bashful",
+    "displeased",
+    "thinking"
+  ],
+  "head_tilt_degrees": [
+    -8,
+    0,
+    8
+  ],
+  "mouth_amounts": [
+    0,
+    0.141,
+    0.15,
+    0.16,
+    0.2,
+    0.214,
+    0.25,
+    0.35,
+    0.65,
+    1
+  ],
+  "standard_matrix_cases": 168,
+  "additional_threshold_cases": 72,
+  "minimum_mouth_roi_alpha": 255,
+  "endpoint_cases_pixel_identical_to_v15": 48,
+  "motion_files_unchanged": {
+    "web/body-rig.js": true,
+    "web/controls.js": true,
+    "web/performance.js": true,
+    "model/model.json": true,
+    "model/skinning.json": true
+  },
+  "visual_findings": [
+    "Authored lip direction remains consistent with the tilted face at intermediate openings.",
+    "No reproduced detached corner flecks or doubled/ghosted contours in the checked cases.",
+    "No mouth restoration holes, dark rectangular halos, or patch-edge seams observed in the checked cases.",
+    "Small connected lip-corner hooks in displeased at tiny opening are not detached or doubled and are not a release blocker."
+  ],
+  "limitations": [
+    "Offline EGL testing and video re-rendering are not browser UI/E2E recording.",
+    "Visual signoff covers the specified 240-case grid and encoded sample set, not a claim that every video pixel was manually inspected."
+  ],
+  "evidence": {
+    "before": "before/*_matrix.png",
+    "after": "after/*_matrix.png",
+    "near_threshold": "threshold/*_threshold.png",
+    "pre_mesh": "after/all_mouths_pre_mesh.png",
+    "reproduction": "scripts/",
+    "encoded": "encoded_examples/"
+  },
+  "encoded_video_sha256": "395ba4940ae0dfc6a5a16d4f68acbfa9d44d73ba5ce47e67bb5949c43b14b3a8",
+  "encoded_sameframe_times_seconds": [
+    6,
+    6.5,
+    7,
+    12,
+    12.5,
+    13
+  ],
+  "encoded_additional_all8_samples": 24,
+  "encoded_visual_scope": "Six exact same-frame old/new comparisons plus 24 independently decoded intermediate-opening frames across all eight expressions.",
+  "all_1260_pose_arrays_exactly_identical": true,
+  "mesh_sha256_identical": "5e2d1fb36d84925ecb31c8e6d036d61c3f63faaddf55ed42a0354db9b34b6255",
+  "timeline_wav_sha256_identical": "3ba9e8e05bf11a97d2b111dde5244f823694e70106dd269c372ec8bdfba755e1"
+}

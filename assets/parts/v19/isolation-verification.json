@@ -1,0 +1,212 @@
+{
+  "passed": true,
+  "sections": {
+    "left_arm": {
+      "frames": [
+        0,
+        149
+      ],
+      "moving_role": "armLeft",
+      "all_other_role_arrays_identical": {
+        "root": true,
+        "skirt": true,
+        "torso": true,
+        "armRight": true,
+        "head": true
+      },
+      "moving_role_peak_frame": 73,
+      "max_source_pixel_displacement": 36.80233924883638
+    },
+    "right_arm": {
+      "frames": [
+        150,
+        299
+      ],
+      "moving_role": "armRight",
+      "all_other_role_arrays_identical": {
+        "root": true,
+        "skirt": true,
+        "torso": true,
+        "armLeft": true,
+        "head": true
+      },
+      "moving_role_peak_frame": 223,
+      "max_source_pixel_displacement": 37.002598265131454
+    },
+    "skirt": {
+      "frames": [
+        300,
+        479
+      ],
+      "moving_role": "skirt",
+      "all_other_role_arrays_identical": {
+        "root": true,
+        "torso": true,
+        "armLeft": true,
+        "armRight": true,
+        "head": true
+      },
+      "moving_role_peak_frame": 367,
+      "max_source_pixel_displacement": 1.453871483547528,
+      "waist_and_above_grid_vertices_bit_identical": true,
+      "waist_threshold_source_y": 1003
+    }
+  },
+  "torso_identical_across_all_540_diagnostic_frames": true,
+  "mesh_sha256": {
+    "root": "67e344207186d10b0832c286dc790c2ccfa0bfc3be0725ec1b08e8d5d60734e7",
+    "skirt": "23839b6a55810bacb5c915d7e17be8b41c99dcc6b6c50b19c3db850741f4702f",
+    "torso": "a19e3c0b0774bc5508aa7553c3ae4e94883ecd099b0f18569db6e94ff2827e72",
+    "armLeft": "d276d54fc5555eb05447f7097c40a36d8242f028c5b623d1ccc00e1128523d9a",
+    "armRight": "a4a749a180efc040bdb1b6c60798e69bbc5e9b061963f67ac8d458db3f46b33f",
+    "head": "50b539a13dbbbb0bcd81312ed7cfdbf2d3e8d6da6642baf18ddae43e5557f035"
+  },
+  "roles": [
+    "root",
+    "skirt",
+    "torso",
+    "armLeft",
+    "armRight",
+    "head"
+  ],
+  "layers": [
+    {
+      "id": "hair_back",
+      "role": "head",
+      "file": "body_v19/hair_back.png",
+      "rect": [
+        149,
+        448,
+        940,
+        775
+      ],
+      "psdGroup": "07 Rear hair | \u5f8c\u308d\u9aea",
+      "textureRect": [
+        0.13720073664825047,
+        0.30939226519337015,
+        0.7283609576427256,
+        0.22582872928176795
+      ]
+    },
+    {
+      "id": "legs_static",
+      "role": "root",
+      "file": "body_v19/legs_static.png",
+      "rect": [
+        285,
+        1218,
+        790,
+        1448
+      ],
+      "psdGroup": "06 Legs fixed | \u811a\u30fb\u56fa\u5b9a",
+      "textureRect": [
+        0.26243093922651933,
+        0.8411602209944752,
+        0.46500920810313073,
+        0.15883977900552487
+      ]
+    },
+    {
+      "id": "skirt",
+      "role": "skirt",
+      "file": "body_v19/skirt.png",
+      "rect": [
+        182,
+        970,
+        914,
+        1445
+      ],
+      "psdGroup": "05 Skirt independent | \u30b9\u30ab\u30fc\u30c8\u30fb\u72ec\u7acb",
+      "textureRect": [
+        0.16758747697974216,
+        0.669889502762431,
+        0.6740331491712708,
+        0.3280386740331492
+      ]
+    },
+    {
+      "id": "torso_clothing",
+      "role": "torso",
+      "file": "body_v19/torso_clothing.png",
+      "rect": [
+        273,
+        450,
+        878,
+        1178
+      ],
+      "psdGroup": "04 Torso clothing fixed | \u80f4\u4f53\u670d\u30fb\u56fa\u5b9a",
+      "textureRect": [
+        0.2513812154696133,
+        0.31077348066298344,
+        0.5570902394106814,
+        0.5027624309392266
+      ]
+    },
+    {
+      "id": "arm_screen_left",
+      "role": "armLeft",
+      "file": "body_v19/arm_screen_left.png",
+      "rect": [
+        47,
+        486,
+        399,
+        1406
+      ],
+      "psdGroup": "03 Screen-left arm | \u753b\u9762\u5de6\u306e\u8155\u30fb\u8896\u30fb\u624b",
+      "textureRect": [
+        0.0432780847145488,
+        0.3356353591160221,
+        0.3241252302025783,
+        0.6353591160220995
+      ]
+    },
+    {
+      "id": "arm_screen_right",
+      "role": "armRight",
+      "file": "body_v19/arm_screen_right.png",
+      "rect": [
+        731,
+        489,
+        1027,
+        1412
+      ],
+      "psdGroup": "02 Screen-right arm | \u753b\u9762\u53f3\u306e\u8155\u30fb\u8896\u30fb\u624b",
+      "textureRect": [
+        0.6731123388581952,
+        0.337707182320442,
+        0.27255985267034993,
+        0.6374309392265194
+      ]
+    },
+    {
+      "id": "head_hair_front",
+      "role": "head",
+      "file": "body_v19/head_hair_front.png",
+      "rect": [
+        235,
+        1,
+        865,
+        683
+      ],
+      "psdGroup": "01 Head and front hair | \u982d\u30fb\u524d\u9aea",
+      "features": true,
+      "expressionFiles": {
+        "neutral": "body_v19/head_neutral.png",
+        "soft_smile": "body_v19/head_soft_smile.png",
+        "big_smile": "body_v19/head_big_smile.png",
+        "worried": "body_v19/head_worried.png",
+        "surprised": "body_v19/head_surprised.png",
+        "bashful": "body_v19/head_bashful.png",
+        "displeased": "body_v19/head_displeased.png",
+        "thinking": "body_v19/head_thinking.png"
+      },
+      "textureRect": [
+        0.21639042357274402,
+        0.0006906077348066298,
+        0.580110497237569,
+        0.47099447513812154
+      ]
+    }
+  ],
+  "method": "Float32 output from chronological production BodyRig.frames; each diagnostic scene initializes a resting rig, then simulates every 1/30 s frame. Natural section uses one uninterrupted PerformanceMotion/BodyRig instance."
+}

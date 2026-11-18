@@ -1,0 +1,22 @@
+{
+  "frame": 653,
+  "time_seconds": 21.766666666666666,
+  "skin_pixels": 1696,
+  "mapping": "Original frozen PSD skin mask forward-mapped through exact frame653 mesh and the renderer face-inset transform, then eroded 1 final pixel.",
+  "mean_after_minus_before_Y": 6.981299646226414,
+  "median_after_minus_before_Y": 7.289999999999999,
+  "p05_after_minus_before_Y": 2.8556,
+  "p95_after_minus_before_Y": 9.0734,
+  "fraction_brightened_gt3": 0.9404481132075472,
+  "before_mean_RGB": [
+    246.5943396226415,
+    231.43337264150944,
+    224.59846698113208
+  ],
+  "after_mean_RGB": [
+    251.87971698113208,
+    239.04304245283018,
+    230.3490566037736
+  ],
+  "video_sha256": "8b8f10dafd8a165f21ad671db3a84102608205a83ae4f3a875493cb1ab7f19cb"
+}

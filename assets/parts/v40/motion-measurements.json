@@ -1,0 +1,50 @@
+{
+  "v39": {
+    "pelvisShiftRange": [
+      -42.20442678052874,
+      42.08649305264276
+    ],
+    "yawRange": [
+      -2.778577323401955,
+      1.999999837947478
+    ],
+    "hairMax": {
+      "rear_left_outer": 22.639243238988165,
+      "rear_left_inner": 12,
+      "rear_right_inner": 12,
+      "rear_right_outer": 30.963206349552593,
+      "bang_left": 1,
+      "bang_center": 1,
+      "bang_right": 0.9985053550057857,
+      "side_left_front": 18.167712726737964,
+      "side_right_front": 0,
+      "side_left_outer": 0,
+      "side_left_inner": 11.935437755190678,
+      "side_right_outer": 12
+    }
+  },
+  "v40": {
+    "pelvisShiftRange": [
+      -47.959575886964494,
+      47.82556028709405
+    ],
+    "yawRange": [
+      -6.999954072142331,
+      6.999999432816173
+    ],
+    "hairMax": {
+      "rear_left_outer": 25.97343075211293,
+      "rear_left_inner": 12,
+      "rear_right_inner": 12,
+      "rear_right_outer": 32.18294463571971,
+      "bang_left": 1,
+      "bang_center": 1,
+      "bang_right": 1,
+      "side_left_front": 19.013423738939366,
+      "side_right_front": 0,
+      "side_left_outer": 0,
+      "side_left_inner": 11.963719480874662,
+      "side_right_outer": 12
+    }
+  }
+}

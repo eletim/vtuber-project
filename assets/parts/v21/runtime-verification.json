@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "files_hash_verified": 100,
+  "sample_duration_seconds": 10.485333333333333,
+  "sample_sha256": "09e68a6e1f141e87ffffe8a9109a9ebe613b760a1f21dd3e5e493d94b2d1e8ec",
+  "packaged_static_assets_and_health_speech_stop_api": "PASS (fixture provider)",
+  "actual_engine_evidence": "samples/runtime-fresh-speech-verification.json",
+  "separated_v19_model_roles": [
+    "armLeft",
+    "armRight",
+    "head",
+    "root",
+    "skirt",
+    "torso"
+  ],
+  "browser_e2e": "NOT RUN; no permitted browser path",
+  "conversation_state": "UNCONFIGURED",
+  "unconfigured_status_no_generation_and_clear_api": "PASS",
+  "actual_model_inference": "NOT RUN; installation permission pending",
+  "runtime_installation": "Opt-in only; no bundled model or automatic download"
+}

@@ -1,0 +1,31 @@
+{
+  "psd": "assets/parts/v26/koma_counterbalance_v26.psd",
+  "sha256": "1bafb61a7a91bca82d97dc787f7828554e9d93d40ae364cc584f700e2a9818cd",
+  "saved_default": "raised hand bind pose; runtime starts with lowered articulated pose",
+  "native_v19_backup": true,
+  "roundtrip_changed_values": 0,
+  "expressions": 8,
+  "runtime_groups": 28,
+  "articulated_groups": [
+    "left_shoulder_original_support",
+    "left_raised_upper",
+    "left_raised_forearm",
+    "left_raised_drape",
+    "left_raised_cuff",
+    "left_raised_hand"
+  ],
+  "hair_groups": [
+    "rear_left_outer",
+    "rear_left_inner",
+    "rear_right_inner",
+    "rear_right_outer",
+    "bang_left",
+    "bang_center",
+    "bang_right",
+    "side_left_front",
+    "side_right_front",
+    "side_left_outer",
+    "side_left_inner",
+    "side_right_outer"
+  ]
+}

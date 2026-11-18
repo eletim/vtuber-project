@@ -1,0 +1,9 @@
+{
+  "path": "C:\\Users\\rext7\\Documents\\Codex\\2026-10-22\\task\\vtuber-project\\assets\\parts\\v47\\koma_aligned_eyes_v47.psd",
+  "bytes": 27075106,
+  "sha256": "10dcb1d4e03f58153074c37ec48f54a552cc8fb708fb41e56380a540c7d2c77e",
+  "original_merged_difference": 0,
+  "roundtrip_difference": 0,
+  "source_groups": 10,
+  "procedural_runtime": "eye-components.js: registered opaque endpoints, premultiplied lid correspondence, unscaled iris"
+}

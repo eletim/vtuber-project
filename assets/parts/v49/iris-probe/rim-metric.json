@@ -1,0 +1,15 @@
+{
+  "before/": {
+    "white_pixels": 38
+  },
+  "v49": {
+    "white_pixels": 16
+  },
+  "roi": [
+    114,
+    89,
+    169,
+    108
+  ],
+  "note": "Diagnostic threshold, not a standalone visual acceptance criterion. Exact displeased eye crop; gaze -0.84,-0.68."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "runtime_js": {
+    "tests": 56,
+    "passed": 56,
+    "failed": 0,
+    "new_mouth_regressions": 8,
+    "command": "node --test runtime/tests/*.test.js"
+  },
+  "python": {
+    "tests": 59,
+    "passed": 58,
+    "skipped": 1,
+    "failed": 0,
+    "command": "python -m unittest discover -s tests -v",
+    "optional_skip": "Independent psd-tools parser unavailable in this restored environment; PSD unchanged and custom parser/endpoint tests pass."
+  },
+  "photoshop_selector_js": {
+    "tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "command": "node tests/test_expression_selector_v14.js && node tests/test_expression_selector_v15.js"
+  },
+  "source_sha256": {
+    "runtime/web/expressions.js": "1e67114be41e7f0309d148428be96fa4e281f30c4bb8657e96fc66c7318f1d01",
+    "runtime/web/renderer.js": "d9e5a89872fbe719d110631b157a59b0361f4248875de652c52c3f555fa501e9",
+    "runtime/tests/mouth-geometry.test.js": "f191bb44c478d91a6cdc82c1cc2c7ac449db38547f286da260066c2225133644"
+  },
+  "limits": [
+    "No browser GUI E2E in this environment.",
+    "No camera, microphone, OBS, or Photoshop application test."
+  ]
+}

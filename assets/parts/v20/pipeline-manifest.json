@@ -1,0 +1,13 @@
+{
+  "frozen": true,
+  "files": {
+    "prepare_source.py": "75476a4106a9ab461efb866357435a9378c1dca22836a5071f5390426edc32ad",
+    "generate_fresh_speech_frames.mjs": "4766e6ee33c276f2c860600ca67efee4d86b048461d829ec73a709495dc88be2",
+    "layered_egl.py": "73a0d03e4e4e6b5bfe268de07159cf52f74186e73b6ef31fe0cbbcdecc94eef5",
+    "test_egl.py": "535ddae94ea4f51c11b5123532623623b67034bcc5fb45d8179057dd4225729d",
+    "test_layer_alpha.py": "0fcfdaf1c3b28d04e5bc791e4c326677eb4f27553593966e61fc74c05f4a230a",
+    "render_fresh_speech.py": "4d58329bd075ef7aa2a4020e6df5c666aca7eff6e471b1598b98bd1978d85a55",
+    "verify_fresh_preview.py": "2c0450a8615a9e014bb0d02cced25e3848510ff215e0e23d500f8c1ff14ed85b",
+    "RERUN.md": "343fb7f7f266ed7659563f076ef55f2fb4d21879e28e02c38fefb442248ab22f"
+  }
+}

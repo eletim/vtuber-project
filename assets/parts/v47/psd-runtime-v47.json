@@ -1,0 +1,37 @@
+{
+  "psd": "assets/parts/v47/koma_aligned_eyes_v47.psd",
+  "sha256": "10dcb1d4e03f58153074c37ec48f54a552cc8fb708fb41e56380a540c7d2c77e",
+  "saved_default": "runtime half-raised reference; editable source groups hidden beneath, source anchors defined in model.json",
+  "native_v19_backup": true,
+  "roundtrip_changed_values": 0,
+  "expressions": 8,
+  "runtime_groups": 30,
+  "articulated_groups": [
+    "left_shoulder_underlap",
+    "left_shoulder_original_support",
+    "left_raised_upper",
+    "left_raised_forearm",
+    "left_raised_cuff",
+    "left_raised_drape",
+    "left_rest_cuff",
+    "left_raised_hand"
+  ],
+  "hair_groups": [
+    "rear_left_outer",
+    "rear_left_inner",
+    "rear_right_inner",
+    "rear_right_outer",
+    "bang_left",
+    "bang_center",
+    "bang_right",
+    "side_left_front",
+    "side_right_front",
+    "side_left_outer",
+    "side_left_inner",
+    "side_right_outer"
+  ],
+  "eye_source_groups": [
+    "eye_screen_left",
+    "eye_screen_right"
+  ]
+}
