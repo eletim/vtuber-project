@@ -7,10 +7,10 @@
   "statistics": {
     "full_files": 8841,
     "full_bytes": 4484978733,
-    "excluded_generated_media_files": 6712,
-    "excluded_bytes": 3419205529,
-    "retained_files": 2129,
-    "retained_bytes": 1065773204,
+    "excluded_generated_media_files": 6580,
+    "excluded_bytes": 3350769333,
+    "retained_files": 2261,
+    "retained_bytes": 1134209400,
     "psd_total": 27,
     "psd_retained": 27,
     "runtime_changed_or_excluded": false,
@@ -25,25 +25,21 @@
       "assets/parts/v50/review/v50-emotions-full-cfr.mp4"
     ],
     "excluded_by_folder": {
-      "assets/parts/v14/previews": 16,
-      "assets/parts/v15/previews": 88,
-      "assets/parts/v17/previews": 4,
-      "assets/parts/v17/review": 3,
+      "assets/parts/v17/review": 2,
       "assets/parts/v18/review": 4,
-      "assets/parts/v19/review": 8,
       "assets/parts/v22/environment-review": 3,
-      "assets/parts/v22/motion-review": 110,
+      "assets/parts/v22/motion-review": 109,
       "assets/parts/v23/review": 55,
       "assets/parts/v24/review": 80,
       "assets/parts/v25/review": 83,
       "assets/parts/v26/review": 105,
       "assets/parts/v27/review": 108,
       "assets/parts/v28/review": 104,
-      "assets/parts/v29/review": 230,
-      "assets/parts/v30/review": 526,
-      "assets/parts/v31/review": 526,
+      "assets/parts/v29/review": 229,
+      "assets/parts/v30/review": 525,
+      "assets/parts/v31/review": 525,
       "assets/parts/v32/cfr-review": 1676,
-      "assets/parts/v32/review": 2322,
+      "assets/parts/v32/review": 2321,
       "assets/parts/v33/cfr-review": 22,
       "assets/parts/v33/review": 1,
       "assets/parts/v34/cfr-review": 11,
@@ -51,14 +47,14 @@
       "assets/parts/v34/review": 1,
       "assets/parts/v35/cfr-review": 2,
       "assets/parts/v35/native-review": 10,
-      "assets/parts/v35/review": 2,
+      "assets/parts/v35/review": 1,
       "assets/parts/v36/cfr-review": 2,
       "assets/parts/v36/native-review": 10,
-      "assets/parts/v36/review": 2,
+      "assets/parts/v36/review": 1,
       "assets/parts/v37/acting-review": 3,
       "assets/parts/v37/cfr-review": 3,
       "assets/parts/v37/native-review": 12,
-      "assets/parts/v37/review": 2,
+      "assets/parts/v37/review": 1,
       "assets/parts/v38/cfr-review": 3,
       "assets/parts/v38/ui-review": 2,
       "assets/parts/v39/cfr-review": 3,
@@ -67,11 +63,11 @@
       "assets/parts/v40/cfr-review": 2,
       "assets/parts/v40/native-review": 8,
       "assets/parts/v40/performance-review": 1,
-      "assets/parts/v40/review": 18,
+      "assets/parts/v40/review": 17,
       "assets/parts/v40/sync-review": 4,
       "assets/parts/v41/acting-native": 16,
       "assets/parts/v41/performance-review": 2,
-      "assets/parts/v41/review": 18,
+      "assets/parts/v41/review": 17,
       "assets/parts/v41/sync-review": 4,
       "assets/parts/v42/acting-native": 4,
       "assets/parts/v42/before-face-review": 5,
@@ -81,8 +77,8 @@
       "assets/parts/v42/sync-review": 4,
       "assets/parts/v43/acting-native": 4,
       "assets/parts/v43/performance-review": 7,
-      "assets/parts/v43/review": 17,
-      "assets/parts/v43/runtime-face-final-review": 27,
+      "assets/parts/v43/review": 16,
+      "assets/parts/v43/runtime-face-final-review": 23,
       "assets/parts/v43/sync-review": 4,
       "assets/parts/v44/performance-review": 7,
       "assets/parts/v44/roll-review": 85,
@@ -104,7 +100,7 @@
     }
   },
   "filters": {
-    "asset_subdirectory": "review, names ending in -review, previews, acting-native, face-motion-native",
+    "asset_subdirectory": "review, names ending in -review, acting-native, face-motion-native; all previews directories retained",
     "extensions": [
       ".gif",
       ".jpeg",
@@ -114,7 +110,7 @@
       ".webm",
       ".webp"
     ],
-    "exceptions": "The six v48, v49 and v50 comparison/full/face MP4s listed in retained_videos are kept. Reports, code, PSDs, source/import/reference directories remain."
+    "exceptions": "The six v48, v49 and v50 comparison/full/face MP4s listed in retained_videos are kept. Reports, code, PSDs, source/import/reference directories remain. All previews directories and the exact media in retained_build_input_media are kept for authoring/build compatibility."
   },
   "retained_videos": [
     {
@@ -424,654 +420,6 @@
   ],
   "excluded_generated_media": [
     {
-      "path": "assets/parts/v14/previews/bashful_face.png",
-      "mode": "100644",
-      "sha": "4c99ad642c05e7417eeeaaa377988b8c54caf454",
-      "bytes": 231095
-    },
-    {
-      "path": "assets/parts/v14/previews/bashful_full.png",
-      "mode": "100644",
-      "sha": "3ed8c91c36ab9685a70dc95fd635a9cf4aaae610",
-      "bytes": 1677201
-    },
-    {
-      "path": "assets/parts/v14/previews/big_smile_face.png",
-      "mode": "100644",
-      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
-      "bytes": 227807
-    },
-    {
-      "path": "assets/parts/v14/previews/big_smile_full.png",
-      "mode": "100644",
-      "sha": "5c1dcb89dccb6c5a54a27ff0dfcf11e2e49e8daa",
-      "bytes": 1673875
-    },
-    {
-      "path": "assets/parts/v14/previews/displeased_face.png",
-      "mode": "100644",
-      "sha": "8d9eaaea6ce06ecbd632e418927bd3235acd5b50",
-      "bytes": 229720
-    },
-    {
-      "path": "assets/parts/v14/previews/displeased_full.png",
-      "mode": "100644",
-      "sha": "824a28bdca760cd9dd7b7d1e4db0ef86d0dacae2",
-      "bytes": 1675406
-    },
-    {
-      "path": "assets/parts/v14/previews/neutral_face.png",
-      "mode": "100644",
-      "sha": "973188e039b14be213da1d77c4a4a17d16e67860",
-      "bytes": 230036
-    },
-    {
-      "path": "assets/parts/v14/previews/neutral_full.png",
-      "mode": "100644",
-      "sha": "5210069c09e1866c48cf462de032edab5f539410",
-      "bytes": 1676150
-    },
-    {
-      "path": "assets/parts/v14/previews/soft_smile_face.png",
-      "mode": "100644",
-      "sha": "7a9737c2c3b3d9b39dc9d835e524aa9920248ec3",
-      "bytes": 231445
-    },
-    {
-      "path": "assets/parts/v14/previews/soft_smile_full.png",
-      "mode": "100644",
-      "sha": "98b9b674793f64185e8572e4b32aa1b5362a1811",
-      "bytes": 1677736
-    },
-    {
-      "path": "assets/parts/v14/previews/surprised_face.png",
-      "mode": "100644",
-      "sha": "5e2117bb64ed9e528084ce472fceb3e1991d328b",
-      "bytes": 231690
-    },
-    {
-      "path": "assets/parts/v14/previews/surprised_full.png",
-      "mode": "100644",
-      "sha": "563ea8c43aac438ff1f3b9a558a28b3625e18bac",
-      "bytes": 1677593
-    },
-    {
-      "path": "assets/parts/v14/previews/thinking_face.png",
-      "mode": "100644",
-      "sha": "255cbbe1eaacd4a146f97a47c3e7df4e65a544fa",
-      "bytes": 230674
-    },
-    {
-      "path": "assets/parts/v14/previews/thinking_full.png",
-      "mode": "100644",
-      "sha": "c84452e489f0dbbc14bb893be3a22ad5237b7fae",
-      "bytes": 1676841
-    },
-    {
-      "path": "assets/parts/v14/previews/worried_face.png",
-      "mode": "100644",
-      "sha": "bf15a140406e2339932f8a8fcb4a44e61c73dce7",
-      "bytes": 230703
-    },
-    {
-      "path": "assets/parts/v14/previews/worried_full.png",
-      "mode": "100644",
-      "sha": "1dc23829d5acb6ca4581606de154e92722fb43b0",
-      "bytes": 1676682
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "048572471ca26489fbb37aa88fcf96a2dcaf1f69",
-      "bytes": 227305
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "05e3aa725c4188615d85b2c6a8b82a84f121b88e",
-      "bytes": 227858
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_L0_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "15c18e03cc1549effe65179243115a201a7a4eee",
-      "bytes": 229146
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_L0_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "41879f9de932788727ab5ccabc3ada441174745f",
-      "bytes": 229679
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_L1_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "195f33d56f6c56f61c9e88bfd0fecc2ac2d33923",
-      "bytes": 229266
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_L1_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "6c459b00affd58f33a97c8b75829920c40a4359a",
-      "bytes": 229793
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "4c99ad642c05e7417eeeaaa377988b8c54caf454",
-      "bytes": 231095
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "b188501823247d71be9f77c5a71cdefec64ba128",
-      "bytes": 231619
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_authored_full.png",
-      "mode": "100644",
-      "sha": "3ed8c91c36ab9685a70dc95fd635a9cf4aaae610",
-      "bytes": 1677201
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_features_hidden.png",
-      "mode": "100644",
-      "sha": "d2b36d5be978e46beb8be0c4aeef929d04fec6eb",
-      "bytes": 220091
-    },
-    {
-      "path": "assets/parts/v15/previews/bashful_state_contact_sheet.png",
-      "mode": "100644",
-      "sha": "28a01e4656c8a53945b29951b40f5adb023a2853",
-      "bytes": 484092
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "5f86382703bad20dfd1759dcb5392a8f064e8cdb",
-      "bytes": 226367
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
-      "bytes": 227807
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_L0_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "5f86382703bad20dfd1759dcb5392a8f064e8cdb",
-      "bytes": 226367
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_L0_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
-      "bytes": 227807
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_L1_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "5f86382703bad20dfd1759dcb5392a8f064e8cdb",
-      "bytes": 226367
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_L1_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
-      "bytes": 227807
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "5f86382703bad20dfd1759dcb5392a8f064e8cdb",
-      "bytes": 226367
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
-      "bytes": 227807
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_authored_full.png",
-      "mode": "100644",
-      "sha": "5c1dcb89dccb6c5a54a27ff0dfcf11e2e49e8daa",
-      "bytes": 1673875
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_features_hidden.png",
-      "mode": "100644",
-      "sha": "0646ffb47efea2eaf9794603f593154095b0f5e5",
-      "bytes": 218692
-    },
-    {
-      "path": "assets/parts/v15/previews/big_smile_state_contact_sheet.png",
-      "mode": "100644",
-      "sha": "e37880e5386012cd375915e565a5c58376f104c8",
-      "bytes": 461126
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "75f308aa27e2b3980d74c71008da1f9d6a7bcf88",
-      "bytes": 224921
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "404bc2be51d97cfe201e12661170b9af53146e33",
-      "bytes": 225564
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_L0_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "c3ab71b0e39bb78eb929f67c73438a259470facd",
-      "bytes": 227342
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_L0_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "18a36c0ee47c1dd504d349b03964cf1791b041d7",
-      "bytes": 227979
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_L1_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "3768524d11bdde32a982095a929fa515da6c5812",
-      "bytes": 227306
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_L1_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "3b2ba928a8389953df77ddfde32bf491c33b783b",
-      "bytes": 227933
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "8d9eaaea6ce06ecbd632e418927bd3235acd5b50",
-      "bytes": 229720
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "c883e2fcbda17b5df049dbc31a36455a18a7616c",
-      "bytes": 230333
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_authored_full.png",
-      "mode": "100644",
-      "sha": "824a28bdca760cd9dd7b7d1e4db0ef86d0dacae2",
-      "bytes": 1675406
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_features_hidden.png",
-      "mode": "100644",
-      "sha": "ad21c94e6aed619b62eb569eb4824ac41f45bfb8",
-      "bytes": 218912
-    },
-    {
-      "path": "assets/parts/v15/previews/displeased_state_contact_sheet.png",
-      "mode": "100644",
-      "sha": "741b5e96190b8c0ac3e5382ce83084c0298d1059",
-      "bytes": 480877
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "b6a078528056229753b83f82f20da972fd561e78",
-      "bytes": 223260
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "65f6828af53d3075650877cef646b4d8c4116e75",
-      "bytes": 223093
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_L0_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "250f6cb657a16f294a2733fa1356ad9ba6213cd6",
-      "bytes": 227101
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_L0_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "8e5b81abb7c72494bc25bdfede710be421a71bdd",
-      "bytes": 226844
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_L1_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "081978dc58521ce09d79654a8915c9c460f2ebcd",
-      "bytes": 226517
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_L1_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "dd9bc139f11c545b96b9ff99f67ccb7f6cfc8887",
-      "bytes": 226319
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "a7255fc9df5e1d21c453a6f0072b7439e0effe0f",
-      "bytes": 230369
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "973188e039b14be213da1d77c4a4a17d16e67860",
-      "bytes": 230036
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_authored_full.png",
-      "mode": "100644",
-      "sha": "5210069c09e1866c48cf462de032edab5f539410",
-      "bytes": 1676150
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_features_hidden.png",
-      "mode": "100644",
-      "sha": "d919e344fb0d368cacc3f942c0172ce815d527c4",
-      "bytes": 215812
-    },
-    {
-      "path": "assets/parts/v15/previews/neutral_state_contact_sheet.png",
-      "mode": "100644",
-      "sha": "a908324c28a986011a1c25f2e7322e12910b1af2",
-      "bytes": 570019
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "b66c4d0c796d9ec2b6feef42dd5f0c7eff46600a",
-      "bytes": 226284
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "1068870e120cd25f0f2a41d58e0348182a7c0756",
-      "bytes": 226795
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_L0_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "b1c11a42da2596cfe3132da6f825d5f23ccb6a55",
-      "bytes": 228610
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_L0_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "a4494235097689b325ffbf0c01860033c012ce88",
-      "bytes": 229113
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_L1_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "fe34bba0b115c43e51023321fbb113677ad0433c",
-      "bytes": 229114
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_L1_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "70398bed54a2850102849e5616db14cf7562abec",
-      "bytes": 229625
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "7a9737c2c3b3d9b39dc9d835e524aa9920248ec3",
-      "bytes": 231445
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "b8bd4e1f16e992b644b7fdb63fc30ae91d797e2d",
-      "bytes": 231933
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_authored_full.png",
-      "mode": "100644",
-      "sha": "98b9b674793f64185e8572e4b32aa1b5362a1811",
-      "bytes": 1677736
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_features_hidden.png",
-      "mode": "100644",
-      "sha": "0abf770ce3a45a7d4c2d06bcf65beb17aa420c42",
-      "bytes": 219285
-    },
-    {
-      "path": "assets/parts/v15/previews/soft_smile_state_contact_sheet.png",
-      "mode": "100644",
-      "sha": "ef3c310b9ad6d558cb98ecfd3eb9097af5dbba78",
-      "bytes": 483966
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "2ebb0c604dd43919578732f353f67d62c6ae4965",
-      "bytes": 225056
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "fb7c1cb049a13b83a2ad0f5af58b57d10fe4eef8",
-      "bytes": 224705
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_L0_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "e45bd8c93a50f8a29aa55f3a0235ac67ec076d50",
-      "bytes": 228639
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_L0_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "75233c85ee881ad5e72c48e934943b5a9fccca9b",
-      "bytes": 228296
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_L1_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "67fc871f6b530d60236424dfe86a3803484db365",
-      "bytes": 228444
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_L1_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "fbaeb3c4f32124e74a610132a84bdaee81af0daa",
-      "bytes": 228094
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "4c2755fda84c06cf79349f9d7b86f9ea9833feab",
-      "bytes": 232023
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "5e2117bb64ed9e528084ce472fceb3e1991d328b",
-      "bytes": 231690
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_authored_full.png",
-      "mode": "100644",
-      "sha": "563ea8c43aac438ff1f3b9a558a28b3625e18bac",
-      "bytes": 1677593
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_features_hidden.png",
-      "mode": "100644",
-      "sha": "a525ab01e926f97dbd74f4ff2f73e8d081b5aec9",
-      "bytes": 217909
-    },
-    {
-      "path": "assets/parts/v15/previews/surprised_state_contact_sheet.png",
-      "mode": "100644",
-      "sha": "6b79882e7b0e424cfdcb416b2dc8e9273731d4a6",
-      "bytes": 488575
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "3a51519096f80f0756af4e16df21fcfe6df1c8a5",
-      "bytes": 225647
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "cd4afaffec568d17307aa308971642da6140211a",
-      "bytes": 225907
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_L0_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "1a172b32a0fe58a9737eb5ff8b4ffa619158d63d",
-      "bytes": 228485
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_L0_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "7137c1c4d1fc7c7cf8f47bf1a861adc16b2e835a",
-      "bytes": 228729
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_L1_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "8d72d6260b35c67006fa76623288defcd1a4d4d0",
-      "bytes": 227847
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_L1_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "b91d1b5c264e7b83e3d20dc43824d5527d42a40e",
-      "bytes": 228097
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "255cbbe1eaacd4a146f97a47c3e7df4e65a544fa",
-      "bytes": 230674
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "2a4a29a638bc241fab12c2ac53b1aa60134d66dc",
-      "bytes": 230938
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_authored_full.png",
-      "mode": "100644",
-      "sha": "c84452e489f0dbbc14bb893be3a22ad5237b7fae",
-      "bytes": 1676841
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_features_hidden.png",
-      "mode": "100644",
-      "sha": "1041fe32b1563e6819a1aea10bdc881a291b2363",
-      "bytes": 219300
-    },
-    {
-      "path": "assets/parts/v15/previews/thinking_state_contact_sheet.png",
-      "mode": "100644",
-      "sha": "717b3dc1eeb6be3d0a34086c3cbd718121ff2ae2",
-      "bytes": 484515
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "ec7c65fc07bab4b830cdd604d815d73f2d1c33b0",
-      "bytes": 225744
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "03fa46f420d0214785b376a7d96b719983b90ed0",
-      "bytes": 226089
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_L0_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "18ac97931800922d586874beed60e1e59936c16d",
-      "bytes": 228145
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_L0_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "158c59bdee63faa4b8ddc1b0efbb5c4fca9a0405",
-      "bytes": 228496
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_L1_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "43b8207c5091caf62c4891848d1d52600280f48f",
-      "bytes": 228331
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_L1_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "98e44e1115573c3526fb1be2d6a167ac7e982ba8",
-      "bytes": 228698
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "bf15a140406e2339932f8a8fcb4a44e61c73dce7",
-      "bytes": 230703
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "55ee59c90d94cb60bb1e509a659e285390814bed",
-      "bytes": 231084
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_authored_full.png",
-      "mode": "100644",
-      "sha": "1dc23829d5acb6ca4581606de154e92722fb43b0",
-      "bytes": 1676682
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_features_hidden.png",
-      "mode": "100644",
-      "sha": "9b9a67d401d1d92c3b32842b33d2c48eabba8673",
-      "bytes": 219156
-    },
-    {
-      "path": "assets/parts/v15/previews/worried_state_contact_sheet.png",
-      "mode": "100644",
-      "sha": "2d9aad5e4fb439fbf5bcc57628b37c9e56d14577",
-      "bytes": 482190
-    },
-    {
-      "path": "assets/parts/v17/previews/surprised_L0_R0_M0_face.png",
-      "mode": "100644",
-      "sha": "1da194826bc6d12171a6e45394e7f85019bb85a0",
-      "bytes": 224296
-    },
-    {
-      "path": "assets/parts/v17/previews/surprised_L0_R0_M1_face.png",
-      "mode": "100644",
-      "sha": "fb7c1cb049a13b83a2ad0f5af58b57d10fe4eef8",
-      "bytes": 224705
-    },
-    {
-      "path": "assets/parts/v17/previews/surprised_L1_R1_M0_face.png",
-      "mode": "100644",
-      "sha": "6810c54f51548ee04e5bedfa9a6adab0f3a170fa",
-      "bytes": 231268
-    },
-    {
-      "path": "assets/parts/v17/previews/surprised_L1_R1_M1_face.png",
-      "mode": "100644",
-      "sha": "5e2117bb64ed9e528084ce472fceb3e1991d328b",
-      "bytes": 231690
-    },
-    {
       "path": "assets/parts/v17/review/surprised-before-after.png",
       "mode": "100644",
       "sha": "9edc1f0921bd1d39c8ee1b03bb89615d95edcb36",
@@ -1082,12 +430,6 @@
       "mode": "100644",
       "sha": "013e114bdaa1942ce6b60517040a180ddc30cead",
       "bytes": 230208
-    },
-    {
-      "path": "assets/parts/v17/review/surprised_skin_mask.png",
-      "mode": "100644",
-      "sha": "3bc92611235fccb79655d5ae0e4dd54664bdee4f",
-      "bytes": 393
     },
     {
       "path": "assets/parts/v18/review/final-encoded-wrist-hem-sheet.png",
@@ -1112,54 +454,6 @@
       "mode": "100644",
       "sha": "d9fbd17ad942b3204b9c3fbb6840bc9d2039617f",
       "bytes": 391028
-    },
-    {
-      "path": "assets/parts/v19/review/arm_screen_left_mask.png",
-      "mode": "100644",
-      "sha": "c01c49cea50607a34dd24dc378a500fbb37ec3cb",
-      "bytes": 5733
-    },
-    {
-      "path": "assets/parts/v19/review/arm_screen_right_mask.png",
-      "mode": "100644",
-      "sha": "a5643f1e5a55316c3c215ccd5e4da17f710e0d02",
-      "bytes": 5416
-    },
-    {
-      "path": "assets/parts/v19/review/hair_back_mask.png",
-      "mode": "100644",
-      "sha": "21e6e9b006d04f9c9931e90feca5997be5edf22b",
-      "bytes": 3252
-    },
-    {
-      "path": "assets/parts/v19/review/head_hair_front_mask.png",
-      "mode": "100644",
-      "sha": "cfcde31514f21b025ac514261e62d8e17339187c",
-      "bytes": 4439
-    },
-    {
-      "path": "assets/parts/v19/review/legs_static_mask.png",
-      "mode": "100644",
-      "sha": "3ee1103d8743c899a9ba74d78e93dba77b67f054",
-      "bytes": 2941
-    },
-    {
-      "path": "assets/parts/v19/review/ownership_contact_sheet.png",
-      "mode": "100644",
-      "sha": "1552e5f6c0f03d682b0abb9e160e23503eb65675",
-      "bytes": 232656
-    },
-    {
-      "path": "assets/parts/v19/review/skirt_mask.png",
-      "mode": "100644",
-      "sha": "98e9eef8fc93d22396be6e8ab9b68551bfd8e1e5",
-      "bytes": 5173
-    },
-    {
-      "path": "assets/parts/v19/review/torso_clothing_mask.png",
-      "mode": "100644",
-      "sha": "6ad6b2a7eaafb5822d7b79256675969ca81001c9",
-      "bytes": 6826
     },
     {
       "path": "assets/parts/v22/environment-review/RESTORED-v19-baseline-NOT-v22.webm",
@@ -1742,12 +1036,6 @@
       "mode": "100644",
       "sha": "70bee4fdce3aa262360a248b0c532525d9bcad4a",
       "bytes": 688933
-    },
-    {
-      "path": "assets/parts/v22/motion-review/hair-alpha-v19-reference.png",
-      "mode": "100644",
-      "sha": "46ab24d3096b001996a1dc4967f996a366596a36",
-      "bytes": 689593
     },
     {
       "path": "assets/parts/v22/motion-review/hair-deep-gap-diagnostic.png",
@@ -5062,12 +4350,6 @@
       "bytes": 1757262
     },
     {
-      "path": "assets/parts/v29/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "ce9e14633659ad86ee57db58a704ba030a2b4f25",
-      "bytes": 1757834
-    },
-    {
       "path": "assets/parts/v29/review/arm-0.6.png",
       "mode": "100644",
       "sha": "882b1c670d2d42490bb62304334fa3d8da63d06b",
@@ -6440,12 +5722,6 @@
       "mode": "100644",
       "sha": "28ef31d9726693544422583849ac88d619bd796e",
       "bytes": 1753642
-    },
-    {
-      "path": "assets/parts/v30/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "9fabf2c2e6f866c11b4b977d63bd16c69da2f66d",
-      "bytes": 1753769
     },
     {
       "path": "assets/parts/v30/review/arm-0.6.png",
@@ -9596,12 +8872,6 @@
       "mode": "100644",
       "sha": "5caacf73f771c69df126fcae611e07f02015574e",
       "bytes": 1752908
-    },
-    {
-      "path": "assets/parts/v31/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "ef00459fe24252045b42b11a1093ca330698c999",
-      "bytes": 1753055
     },
     {
       "path": "assets/parts/v31/review/arm-0.6.png",
@@ -34036,12 +33306,6 @@
       "bytes": 1752556
     },
     {
-      "path": "assets/parts/v32/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "8c388771d6b1fb3ad8a118cd34e26db286530d19",
-      "bytes": 1753460
-    },
-    {
       "path": "assets/parts/v32/review/arm-0.6.png",
       "mode": "100644",
       "sha": "785706834cee30889bfe4f8fdc1b34d263d137da",
@@ -37036,12 +36300,6 @@
       "bytes": 944742
     },
     {
-      "path": "assets/parts/v35/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "4ec1737474bf56a5dab7079476f190b758e5135b",
-      "bytes": 1762478
-    },
-    {
       "path": "assets/parts/v35/review/expressions-contact.jpg",
       "mode": "100644",
       "sha": "06c29d2d01f2fd91428a189ba3d3ee38d5b27e05",
@@ -37118,12 +36376,6 @@
       "mode": "100644",
       "sha": "d4befcb9a39cc819f0875be6dc391d6a8a6988d9",
       "bytes": 941644
-    },
-    {
-      "path": "assets/parts/v36/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "bcae3039ebd49fe1ad5c8df9f7a60751dfc6124c",
-      "bytes": 1762346
     },
     {
       "path": "assets/parts/v36/review/expressions-contact.jpg",
@@ -37238,12 +36490,6 @@
       "mode": "100644",
       "sha": "a826f08401fe4a170203fa61c1c14f3e438fb4d2",
       "bytes": 2877865
-    },
-    {
-      "path": "assets/parts/v37/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "bd2d561ca652daaeb85047f7ef4b95f7e5c52ff6",
-      "bytes": 1761633
     },
     {
       "path": "assets/parts/v37/review/expressions-contact.jpg",
@@ -37486,12 +36732,6 @@
       "bytes": 10627082
     },
     {
-      "path": "assets/parts/v40/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "04a7b7bbe77be690964f8ebf9ae25ca0a1800606",
-      "bytes": 1762421
-    },
-    {
       "path": "assets/parts/v40/review/extreme-bashful--1.png",
       "mode": "100644",
       "sha": "a1c08ce14b510a6bb65afa301492ff7c4fe4bb68",
@@ -37724,12 +36964,6 @@
       "mode": "100644",
       "sha": "2db87c0ad5f85213b4202e89a568aa1a923fd82a",
       "bytes": 10829246
-    },
-    {
-      "path": "assets/parts/v41/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "63ec87e9bf1e7561e55a64e8c882dca2dd9fd299",
-      "bytes": 1763188
     },
     {
       "path": "assets/parts/v41/review/extreme-bashful--1.png",
@@ -38212,12 +37446,6 @@
       "bytes": 1778010
     },
     {
-      "path": "assets/parts/v43/review/arm-0.5.png",
-      "mode": "100644",
-      "sha": "125d490fdb910be7daa102331b5754c9e2a11e41",
-      "bytes": 1762760
-    },
-    {
       "path": "assets/parts/v43/review/extreme-bashful--1.png",
       "mode": "100644",
       "sha": "daa0719dc8647c6ad6530b869cf75eba1c127cb1",
@@ -38408,30 +37636,6 @@
       "mode": "100644",
       "sha": "99d9f68e044d143f579ae89c5edc11a485c093ab",
       "bytes": 5517660
-    },
-    {
-      "path": "assets/parts/v43/runtime-face-final-review/nose-materials/down.png",
-      "mode": "100644",
-      "sha": "21f6f4963e1475b7c2bceebf8c2a476d7dd5d40f",
-      "bytes": 5744
-    },
-    {
-      "path": "assets/parts/v43/runtime-face-final-review/nose-materials/left.png",
-      "mode": "100644",
-      "sha": "14b7941bf58a7e359894e302a53833becfb4360c",
-      "bytes": 6135
-    },
-    {
-      "path": "assets/parts/v43/runtime-face-final-review/nose-materials/right.png",
-      "mode": "100644",
-      "sha": "6eb40de1463f34d04e3dd01f494ad872f34793a6",
-      "bytes": 6072
-    },
-    {
-      "path": "assets/parts/v43/runtime-face-final-review/nose-materials/up.png",
-      "mode": "100644",
-      "sha": "da47b2978772881d57c2bcb4928f8f85e4e34d81",
-      "bytes": 5691
     },
     {
       "path": "assets/parts/v43/runtime-face-final-review/stills/black-x-15-y10-blink1.png",
@@ -40700,5 +39904,800 @@
     "V50_SNAPSHOT.md added",
     "snapshot-v50-manifest.json added",
     "README.md gains a snapshot notice; original text follows unchanged"
-  ]
+  ],
+  "retained_build_input_media": [
+    {
+      "path": "assets/parts/v14/previews/bashful_face.png",
+      "mode": "100644",
+      "sha": "4c99ad642c05e7417eeeaaa377988b8c54caf454",
+      "bytes": 231095
+    },
+    {
+      "path": "assets/parts/v14/previews/bashful_full.png",
+      "mode": "100644",
+      "sha": "3ed8c91c36ab9685a70dc95fd635a9cf4aaae610",
+      "bytes": 1677201
+    },
+    {
+      "path": "assets/parts/v14/previews/big_smile_face.png",
+      "mode": "100644",
+      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
+      "bytes": 227807
+    },
+    {
+      "path": "assets/parts/v14/previews/big_smile_full.png",
+      "mode": "100644",
+      "sha": "5c1dcb89dccb6c5a54a27ff0dfcf11e2e49e8daa",
+      "bytes": 1673875
+    },
+    {
+      "path": "assets/parts/v14/previews/displeased_face.png",
+      "mode": "100644",
+      "sha": "8d9eaaea6ce06ecbd632e418927bd3235acd5b50",
+      "bytes": 229720
+    },
+    {
+      "path": "assets/parts/v14/previews/displeased_full.png",
+      "mode": "100644",
+      "sha": "824a28bdca760cd9dd7b7d1e4db0ef86d0dacae2",
+      "bytes": 1675406
+    },
+    {
+      "path": "assets/parts/v14/previews/neutral_face.png",
+      "mode": "100644",
+      "sha": "973188e039b14be213da1d77c4a4a17d16e67860",
+      "bytes": 230036
+    },
+    {
+      "path": "assets/parts/v14/previews/neutral_full.png",
+      "mode": "100644",
+      "sha": "5210069c09e1866c48cf462de032edab5f539410",
+      "bytes": 1676150
+    },
+    {
+      "path": "assets/parts/v14/previews/soft_smile_face.png",
+      "mode": "100644",
+      "sha": "7a9737c2c3b3d9b39dc9d835e524aa9920248ec3",
+      "bytes": 231445
+    },
+    {
+      "path": "assets/parts/v14/previews/soft_smile_full.png",
+      "mode": "100644",
+      "sha": "98b9b674793f64185e8572e4b32aa1b5362a1811",
+      "bytes": 1677736
+    },
+    {
+      "path": "assets/parts/v14/previews/surprised_face.png",
+      "mode": "100644",
+      "sha": "5e2117bb64ed9e528084ce472fceb3e1991d328b",
+      "bytes": 231690
+    },
+    {
+      "path": "assets/parts/v14/previews/surprised_full.png",
+      "mode": "100644",
+      "sha": "563ea8c43aac438ff1f3b9a558a28b3625e18bac",
+      "bytes": 1677593
+    },
+    {
+      "path": "assets/parts/v14/previews/thinking_face.png",
+      "mode": "100644",
+      "sha": "255cbbe1eaacd4a146f97a47c3e7df4e65a544fa",
+      "bytes": 230674
+    },
+    {
+      "path": "assets/parts/v14/previews/thinking_full.png",
+      "mode": "100644",
+      "sha": "c84452e489f0dbbc14bb893be3a22ad5237b7fae",
+      "bytes": 1676841
+    },
+    {
+      "path": "assets/parts/v14/previews/worried_face.png",
+      "mode": "100644",
+      "sha": "bf15a140406e2339932f8a8fcb4a44e61c73dce7",
+      "bytes": 230703
+    },
+    {
+      "path": "assets/parts/v14/previews/worried_full.png",
+      "mode": "100644",
+      "sha": "1dc23829d5acb6ca4581606de154e92722fb43b0",
+      "bytes": 1676682
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "048572471ca26489fbb37aa88fcf96a2dcaf1f69",
+      "bytes": 227305
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "05e3aa725c4188615d85b2c6a8b82a84f121b88e",
+      "bytes": 227858
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_L0_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "15c18e03cc1549effe65179243115a201a7a4eee",
+      "bytes": 229146
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_L0_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "41879f9de932788727ab5ccabc3ada441174745f",
+      "bytes": 229679
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_L1_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "195f33d56f6c56f61c9e88bfd0fecc2ac2d33923",
+      "bytes": 229266
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_L1_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "6c459b00affd58f33a97c8b75829920c40a4359a",
+      "bytes": 229793
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "4c99ad642c05e7417eeeaaa377988b8c54caf454",
+      "bytes": 231095
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "b188501823247d71be9f77c5a71cdefec64ba128",
+      "bytes": 231619
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_authored_full.png",
+      "mode": "100644",
+      "sha": "3ed8c91c36ab9685a70dc95fd635a9cf4aaae610",
+      "bytes": 1677201
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_features_hidden.png",
+      "mode": "100644",
+      "sha": "d2b36d5be978e46beb8be0c4aeef929d04fec6eb",
+      "bytes": 220091
+    },
+    {
+      "path": "assets/parts/v15/previews/bashful_state_contact_sheet.png",
+      "mode": "100644",
+      "sha": "28a01e4656c8a53945b29951b40f5adb023a2853",
+      "bytes": 484092
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "5f86382703bad20dfd1759dcb5392a8f064e8cdb",
+      "bytes": 226367
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
+      "bytes": 227807
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_L0_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "5f86382703bad20dfd1759dcb5392a8f064e8cdb",
+      "bytes": 226367
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_L0_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
+      "bytes": 227807
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_L1_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "5f86382703bad20dfd1759dcb5392a8f064e8cdb",
+      "bytes": 226367
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_L1_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
+      "bytes": 227807
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "5f86382703bad20dfd1759dcb5392a8f064e8cdb",
+      "bytes": 226367
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "8062df70397577413c3bb7e7ebe1485638dd0909",
+      "bytes": 227807
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_authored_full.png",
+      "mode": "100644",
+      "sha": "5c1dcb89dccb6c5a54a27ff0dfcf11e2e49e8daa",
+      "bytes": 1673875
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_features_hidden.png",
+      "mode": "100644",
+      "sha": "0646ffb47efea2eaf9794603f593154095b0f5e5",
+      "bytes": 218692
+    },
+    {
+      "path": "assets/parts/v15/previews/big_smile_state_contact_sheet.png",
+      "mode": "100644",
+      "sha": "e37880e5386012cd375915e565a5c58376f104c8",
+      "bytes": 461126
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "75f308aa27e2b3980d74c71008da1f9d6a7bcf88",
+      "bytes": 224921
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "404bc2be51d97cfe201e12661170b9af53146e33",
+      "bytes": 225564
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_L0_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "c3ab71b0e39bb78eb929f67c73438a259470facd",
+      "bytes": 227342
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_L0_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "18a36c0ee47c1dd504d349b03964cf1791b041d7",
+      "bytes": 227979
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_L1_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "3768524d11bdde32a982095a929fa515da6c5812",
+      "bytes": 227306
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_L1_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "3b2ba928a8389953df77ddfde32bf491c33b783b",
+      "bytes": 227933
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "8d9eaaea6ce06ecbd632e418927bd3235acd5b50",
+      "bytes": 229720
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "c883e2fcbda17b5df049dbc31a36455a18a7616c",
+      "bytes": 230333
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_authored_full.png",
+      "mode": "100644",
+      "sha": "824a28bdca760cd9dd7b7d1e4db0ef86d0dacae2",
+      "bytes": 1675406
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_features_hidden.png",
+      "mode": "100644",
+      "sha": "ad21c94e6aed619b62eb569eb4824ac41f45bfb8",
+      "bytes": 218912
+    },
+    {
+      "path": "assets/parts/v15/previews/displeased_state_contact_sheet.png",
+      "mode": "100644",
+      "sha": "741b5e96190b8c0ac3e5382ce83084c0298d1059",
+      "bytes": 480877
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "b6a078528056229753b83f82f20da972fd561e78",
+      "bytes": 223260
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "65f6828af53d3075650877cef646b4d8c4116e75",
+      "bytes": 223093
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_L0_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "250f6cb657a16f294a2733fa1356ad9ba6213cd6",
+      "bytes": 227101
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_L0_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "8e5b81abb7c72494bc25bdfede710be421a71bdd",
+      "bytes": 226844
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_L1_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "081978dc58521ce09d79654a8915c9c460f2ebcd",
+      "bytes": 226517
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_L1_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "dd9bc139f11c545b96b9ff99f67ccb7f6cfc8887",
+      "bytes": 226319
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "a7255fc9df5e1d21c453a6f0072b7439e0effe0f",
+      "bytes": 230369
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "973188e039b14be213da1d77c4a4a17d16e67860",
+      "bytes": 230036
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_authored_full.png",
+      "mode": "100644",
+      "sha": "5210069c09e1866c48cf462de032edab5f539410",
+      "bytes": 1676150
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_features_hidden.png",
+      "mode": "100644",
+      "sha": "d919e344fb0d368cacc3f942c0172ce815d527c4",
+      "bytes": 215812
+    },
+    {
+      "path": "assets/parts/v15/previews/neutral_state_contact_sheet.png",
+      "mode": "100644",
+      "sha": "a908324c28a986011a1c25f2e7322e12910b1af2",
+      "bytes": 570019
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "b66c4d0c796d9ec2b6feef42dd5f0c7eff46600a",
+      "bytes": 226284
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "1068870e120cd25f0f2a41d58e0348182a7c0756",
+      "bytes": 226795
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_L0_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "b1c11a42da2596cfe3132da6f825d5f23ccb6a55",
+      "bytes": 228610
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_L0_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "a4494235097689b325ffbf0c01860033c012ce88",
+      "bytes": 229113
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_L1_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "fe34bba0b115c43e51023321fbb113677ad0433c",
+      "bytes": 229114
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_L1_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "70398bed54a2850102849e5616db14cf7562abec",
+      "bytes": 229625
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "7a9737c2c3b3d9b39dc9d835e524aa9920248ec3",
+      "bytes": 231445
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "b8bd4e1f16e992b644b7fdb63fc30ae91d797e2d",
+      "bytes": 231933
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_authored_full.png",
+      "mode": "100644",
+      "sha": "98b9b674793f64185e8572e4b32aa1b5362a1811",
+      "bytes": 1677736
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_features_hidden.png",
+      "mode": "100644",
+      "sha": "0abf770ce3a45a7d4c2d06bcf65beb17aa420c42",
+      "bytes": 219285
+    },
+    {
+      "path": "assets/parts/v15/previews/soft_smile_state_contact_sheet.png",
+      "mode": "100644",
+      "sha": "ef3c310b9ad6d558cb98ecfd3eb9097af5dbba78",
+      "bytes": 483966
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "2ebb0c604dd43919578732f353f67d62c6ae4965",
+      "bytes": 225056
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "fb7c1cb049a13b83a2ad0f5af58b57d10fe4eef8",
+      "bytes": 224705
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_L0_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "e45bd8c93a50f8a29aa55f3a0235ac67ec076d50",
+      "bytes": 228639
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_L0_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "75233c85ee881ad5e72c48e934943b5a9fccca9b",
+      "bytes": 228296
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_L1_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "67fc871f6b530d60236424dfe86a3803484db365",
+      "bytes": 228444
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_L1_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "fbaeb3c4f32124e74a610132a84bdaee81af0daa",
+      "bytes": 228094
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "4c2755fda84c06cf79349f9d7b86f9ea9833feab",
+      "bytes": 232023
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "5e2117bb64ed9e528084ce472fceb3e1991d328b",
+      "bytes": 231690
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_authored_full.png",
+      "mode": "100644",
+      "sha": "563ea8c43aac438ff1f3b9a558a28b3625e18bac",
+      "bytes": 1677593
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_features_hidden.png",
+      "mode": "100644",
+      "sha": "a525ab01e926f97dbd74f4ff2f73e8d081b5aec9",
+      "bytes": 217909
+    },
+    {
+      "path": "assets/parts/v15/previews/surprised_state_contact_sheet.png",
+      "mode": "100644",
+      "sha": "6b79882e7b0e424cfdcb416b2dc8e9273731d4a6",
+      "bytes": 488575
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "3a51519096f80f0756af4e16df21fcfe6df1c8a5",
+      "bytes": 225647
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "cd4afaffec568d17307aa308971642da6140211a",
+      "bytes": 225907
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_L0_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "1a172b32a0fe58a9737eb5ff8b4ffa619158d63d",
+      "bytes": 228485
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_L0_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "7137c1c4d1fc7c7cf8f47bf1a861adc16b2e835a",
+      "bytes": 228729
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_L1_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "8d72d6260b35c67006fa76623288defcd1a4d4d0",
+      "bytes": 227847
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_L1_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "b91d1b5c264e7b83e3d20dc43824d5527d42a40e",
+      "bytes": 228097
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "255cbbe1eaacd4a146f97a47c3e7df4e65a544fa",
+      "bytes": 230674
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "2a4a29a638bc241fab12c2ac53b1aa60134d66dc",
+      "bytes": 230938
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_authored_full.png",
+      "mode": "100644",
+      "sha": "c84452e489f0dbbc14bb893be3a22ad5237b7fae",
+      "bytes": 1676841
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_features_hidden.png",
+      "mode": "100644",
+      "sha": "1041fe32b1563e6819a1aea10bdc881a291b2363",
+      "bytes": 219300
+    },
+    {
+      "path": "assets/parts/v15/previews/thinking_state_contact_sheet.png",
+      "mode": "100644",
+      "sha": "717b3dc1eeb6be3d0a34086c3cbd718121ff2ae2",
+      "bytes": 484515
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "ec7c65fc07bab4b830cdd604d815d73f2d1c33b0",
+      "bytes": 225744
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "03fa46f420d0214785b376a7d96b719983b90ed0",
+      "bytes": 226089
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_L0_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "18ac97931800922d586874beed60e1e59936c16d",
+      "bytes": 228145
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_L0_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "158c59bdee63faa4b8ddc1b0efbb5c4fca9a0405",
+      "bytes": 228496
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_L1_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "43b8207c5091caf62c4891848d1d52600280f48f",
+      "bytes": 228331
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_L1_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "98e44e1115573c3526fb1be2d6a167ac7e982ba8",
+      "bytes": 228698
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "bf15a140406e2339932f8a8fcb4a44e61c73dce7",
+      "bytes": 230703
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "55ee59c90d94cb60bb1e509a659e285390814bed",
+      "bytes": 231084
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_authored_full.png",
+      "mode": "100644",
+      "sha": "1dc23829d5acb6ca4581606de154e92722fb43b0",
+      "bytes": 1676682
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_features_hidden.png",
+      "mode": "100644",
+      "sha": "9b9a67d401d1d92c3b32842b33d2c48eabba8673",
+      "bytes": 219156
+    },
+    {
+      "path": "assets/parts/v15/previews/worried_state_contact_sheet.png",
+      "mode": "100644",
+      "sha": "2d9aad5e4fb439fbf5bcc57628b37c9e56d14577",
+      "bytes": 482190
+    },
+    {
+      "path": "assets/parts/v17/previews/surprised_L0_R0_M0_face.png",
+      "mode": "100644",
+      "sha": "1da194826bc6d12171a6e45394e7f85019bb85a0",
+      "bytes": 224296
+    },
+    {
+      "path": "assets/parts/v17/previews/surprised_L0_R0_M1_face.png",
+      "mode": "100644",
+      "sha": "fb7c1cb049a13b83a2ad0f5af58b57d10fe4eef8",
+      "bytes": 224705
+    },
+    {
+      "path": "assets/parts/v17/previews/surprised_L1_R1_M0_face.png",
+      "mode": "100644",
+      "sha": "6810c54f51548ee04e5bedfa9a6adab0f3a170fa",
+      "bytes": 231268
+    },
+    {
+      "path": "assets/parts/v17/previews/surprised_L1_R1_M1_face.png",
+      "mode": "100644",
+      "sha": "5e2117bb64ed9e528084ce472fceb3e1991d328b",
+      "bytes": 231690
+    },
+    {
+      "path": "assets/parts/v17/review/surprised_skin_mask.png",
+      "mode": "100644",
+      "sha": "3bc92611235fccb79655d5ae0e4dd54664bdee4f",
+      "bytes": 393
+    },
+    {
+      "path": "assets/parts/v19/review/arm_screen_left_mask.png",
+      "mode": "100644",
+      "sha": "c01c49cea50607a34dd24dc378a500fbb37ec3cb",
+      "bytes": 5733
+    },
+    {
+      "path": "assets/parts/v19/review/arm_screen_right_mask.png",
+      "mode": "100644",
+      "sha": "a5643f1e5a55316c3c215ccd5e4da17f710e0d02",
+      "bytes": 5416
+    },
+    {
+      "path": "assets/parts/v19/review/hair_back_mask.png",
+      "mode": "100644",
+      "sha": "21e6e9b006d04f9c9931e90feca5997be5edf22b",
+      "bytes": 3252
+    },
+    {
+      "path": "assets/parts/v19/review/head_hair_front_mask.png",
+      "mode": "100644",
+      "sha": "cfcde31514f21b025ac514261e62d8e17339187c",
+      "bytes": 4439
+    },
+    {
+      "path": "assets/parts/v19/review/legs_static_mask.png",
+      "mode": "100644",
+      "sha": "3ee1103d8743c899a9ba74d78e93dba77b67f054",
+      "bytes": 2941
+    },
+    {
+      "path": "assets/parts/v19/review/ownership_contact_sheet.png",
+      "mode": "100644",
+      "sha": "1552e5f6c0f03d682b0abb9e160e23503eb65675",
+      "bytes": 232656
+    },
+    {
+      "path": "assets/parts/v19/review/skirt_mask.png",
+      "mode": "100644",
+      "sha": "98e9eef8fc93d22396be6e8ab9b68551bfd8e1e5",
+      "bytes": 5173
+    },
+    {
+      "path": "assets/parts/v19/review/torso_clothing_mask.png",
+      "mode": "100644",
+      "sha": "6ad6b2a7eaafb5822d7b79256675969ca81001c9",
+      "bytes": 6826
+    },
+    {
+      "path": "assets/parts/v22/motion-review/hair-alpha-v19-reference.png",
+      "mode": "100644",
+      "sha": "46ab24d3096b001996a1dc4967f996a366596a36",
+      "bytes": 689593
+    },
+    {
+      "path": "assets/parts/v29/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "ce9e14633659ad86ee57db58a704ba030a2b4f25",
+      "bytes": 1757834
+    },
+    {
+      "path": "assets/parts/v30/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "9fabf2c2e6f866c11b4b977d63bd16c69da2f66d",
+      "bytes": 1753769
+    },
+    {
+      "path": "assets/parts/v31/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "ef00459fe24252045b42b11a1093ca330698c999",
+      "bytes": 1753055
+    },
+    {
+      "path": "assets/parts/v32/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "8c388771d6b1fb3ad8a118cd34e26db286530d19",
+      "bytes": 1753460
+    },
+    {
+      "path": "assets/parts/v35/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "4ec1737474bf56a5dab7079476f190b758e5135b",
+      "bytes": 1762478
+    },
+    {
+      "path": "assets/parts/v36/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "bcae3039ebd49fe1ad5c8df9f7a60751dfc6124c",
+      "bytes": 1762346
+    },
+    {
+      "path": "assets/parts/v37/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "bd2d561ca652daaeb85047f7ef4b95f7e5c52ff6",
+      "bytes": 1761633
+    },
+    {
+      "path": "assets/parts/v40/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "04a7b7bbe77be690964f8ebf9ae25ca0a1800606",
+      "bytes": 1762421
+    },
+    {
+      "path": "assets/parts/v41/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "63ec87e9bf1e7561e55a64e8c882dca2dd9fd299",
+      "bytes": 1763188
+    },
+    {
+      "path": "assets/parts/v43/review/arm-0.5.png",
+      "mode": "100644",
+      "sha": "125d490fdb910be7daa102331b5754c9e2a11e41",
+      "bytes": 1762760
+    },
+    {
+      "path": "assets/parts/v43/runtime-face-final-review/nose-materials/down.png",
+      "mode": "100644",
+      "sha": "21f6f4963e1475b7c2bceebf8c2a476d7dd5d40f",
+      "bytes": 5744
+    },
+    {
+      "path": "assets/parts/v43/runtime-face-final-review/nose-materials/left.png",
+      "mode": "100644",
+      "sha": "14b7941bf58a7e359894e302a53833becfb4360c",
+      "bytes": 6135
+    },
+    {
+      "path": "assets/parts/v43/runtime-face-final-review/nose-materials/right.png",
+      "mode": "100644",
+      "sha": "6eb40de1463f34d04e3dd01f494ad872f34793a6",
+      "bytes": 6072
+    },
+    {
+      "path": "assets/parts/v43/runtime-face-final-review/nose-materials/up.png",
+      "mode": "100644",
+      "sha": "da47b2978772881d57c2bcb4928f8f85e4e34d81",
+      "bytes": 5691
+    }
+  ],
+  "build_input_audit": "Keep all generated previews and authored/editing context media named mask, material, ownership, reference, anchor, landmark, arm-0.5.png, and nose-materials. Existing builders/exporters consume some of these outputs as inputs; they are retained rather than requiring regeneration."
 }

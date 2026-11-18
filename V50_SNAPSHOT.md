@@ -1,6 +1,6 @@
 # Portable v50 development snapshot
 
-This branch contains the v50 runtime and development sources, based on main with one new snapshot commit. It does not merge or update main. The original Dell v50 checkout remains untouched.
+This branch contains the v50 runtime and development sources, based on main with a small snapshot-only commit series. It does not merge or update main. The original Dell v50 checkout remains untouched.
 
 ## What is preserved
 
@@ -8,10 +8,11 @@ This branch contains the v50 runtime and development sources, based on main with
 - All source code, scripts, tests, config, original artwork, imported/reference artwork, and all 27 tracked PSD files are retained.
 - The v48, v49 and v50 delivered/review MP4 pairs are retained for comparison.
 - Historical reports and written diagnoses remain.
+- Generated previews and mask/material/reference inputs consumed by older builders/exporters are retained; the manifest lists them explicitly.
 
 ## What is omitted
 
-Only generated image/video files in identified review and preview directories are omitted. No PSD or runtime file is omitted. The exact 6,712 paths, object hashes and sizes are listed in snapshot-v50-manifest.json. Some old review scripts or documentation links need those generated outputs to be regenerated. This is a filtered development snapshot, not a byte-identical copy of the full 4.48 GB v50 tree.
+Only generated image/video files in identified review directories are omitted. No PSD or runtime file is omitted. The exact 6,580 paths, object hashes and sizes are listed in snapshot-v50-manifest.json. Some old review scripts or documentation links need those generated outputs to be regenerated. This is a filtered development snapshot, not a byte-identical copy of the full 4.48 GB v50 tree.
 
 ## Start without Dell
 
